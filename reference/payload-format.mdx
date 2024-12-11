@@ -1,0 +1,53 @@
+---
+title: Payload Format
+description: "All webhook payloads are JSON data sent via POST and conform to the following format:"
+---
+
+```json
+// Example of a Job Updated event payload
+
+{
+  "object_type": "Job",
+  "event": "updated",
+  "object": {
+    "job_id": 23425235,
+    "name": "Toilet So Broken",
+    "state_id": 14,
+    "created_at: "2019-08-22T14:15:22Z",
+    "updated_at: "2019-08-24T14:15:22Z",
+    ...
+  },
+  "updated": {
+    "state_id": 14,
+    "updated_at: "2019-08-24T14:15:22Z"
+  },
+  "secret": "your_webhook_secret_uuid",
+  "platform": "LATCHEL"
+}
+```
+
+
+
+* `object_type` \- The type of Object that triggered the webhook, such as Job, Invoice, etc
+* `event` \- The event that triggered the webhook, always `created` or `updated`
+* `object` \- The current representation of the object in Latchel
+* `updated` List of properties that were updated, and what their new values are (for the `updated` event type only)
+
+Our documentation below will omit this payload information, because it is the same for all webhooks. The webhooks below will simply include the object payload that will be included with each webhook request.
+
+## Authentication
+
+Webhook bodies include a property named secret, and the header includes a property called `x-api-key`. Both the secret value and the x-api-key header contain a UUID that is unique to your account. Please contact Latchel Engineering to obtain your UUID codes for production and staging environments.
+
+The platform property is always `LATCHEL`. This is available for partners who wish to use one endpoint to receive data from multiple platforms.
+
+## What Triggers an Updated Webhook
+
+An `updated` webhook will be triggered when one or more of the properties listed in the object's schema is changed. For convenience, the `updated` property of the webhook payload will contain which of the object's properties have changed, and what the new values are.
+
+It should be noted that changes to related records will not trigger an object's webhook. Examples:
+
+* a Job's updated webhook **will** be triggered if the job's description changed (because `job.description` has changed)
+* a Job's updated webhook **will** be triggered if the vendor for a job is changed (because `job.vendor_id` will change)
+* a Job's updated webhook **will not** be triggered if the phone number for the vendor on the job is changed.
+

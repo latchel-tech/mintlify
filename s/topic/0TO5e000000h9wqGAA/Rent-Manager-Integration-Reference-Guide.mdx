@@ -1,0 +1,102 @@
+---
+title: Rent Manager Integration Reference Guide
+mode: wide
+---
+
+**This Integration Accomplishes the Following:**
+
+* New Properties/Units added to Rent Manager will push to Latchel but **not** vice versa.
+    * **Previously created Properties:**  will only update the active status (from active to inactive only and not vice versa). This means if a customer activates an in-active property in the platform, this change will not propagate to Latchel.
+* New Residents added to Rent Manager will push to Latchel but **not** vice versa.
+* Service Issues that have the **\[Latchel\] Maintenance Category** in Rent Manager **AND** a property or unit assigned to the Service Issue will push to Latchel.
+* Work orders created in Latchel will push to Rent Manager with the following information:
+    * The Job Title
+    * The Job Status
+    * The Job Description
+    * The time it was last updated
+    * Job Priority (Emergency, Urgent, Normal)
+    * Files
+* Service Issues created in Rent Manager will push to Latchel with the following information:
+    * The Job Title
+    * The Job Description
+    * Property Unit
+    * Resident
+    * Job Priority
+
+<Tip>
+**Tips**
+
+1.  Notes are not updated in the Rent Manager as a work order progresses through Latchel. Once a Service Issue is created in the Rent Manager, the only things that continue to synchronize would be the **Complete** or **Canceled** status.
+2.  A problem occurs when a work order already exists in one system and then is manually created in the other system. If a work order is created in one system, the integration will automatically create it in the other system, so there’s no need to create it manually, and doing so will create two duplicates when the integration is run: one in Latchel and one in Rent Manager.
+3.  Owner data and preferred service providers do not transfer via the integration. This data will have to be emailed to [onboarding@latchel.com](mailto:onboarding@latchel.com).
+4.  **DO NOT** create properties or residents in Latchel. We look at Rent Manager for this data.
+5.  Service Issues in Rent Manager can have several properties and units. If this happens, Latchel only takes the first one. We recommend only having a single property or unit on a Service Issue.
+6.  Resident & property/unit data will sync from Rent Manager to Latchel when the integration is initially activated. After the initial activation, only **NEW** residents, properties, and units in Rent Manager will be synced to Latchel. You will need to deactivate residents, properties, and units in Latchel.
+</Tip>
+
+**Work Orders/Service Issues**
+
+The Rent Manager equivalent to Latchel’s **work orders** is called **Service Manager Issues**. You can find them in the **Services** tab.
+
+<Frame>
+  <img src="/images/rtaImage-255.webp"/>
+</Frame>
+
+* For a Service Issues to be synced from Rent Manager to Latchel, it has to have the **\[Latchel\] Maintenance** **Category AND** a property or unit assigned to it.
+* The sync occurs every hour.
+* Any update to a Service Issue in Rent Manager won’t be reflected in Latchel.
+
+<Frame>
+  <img src="/images/rtaImage-256.jpg"/>
+</Frame>
+**Residents**
+
+**Tenants** in Rent Manager work the same way **Residents** work in Latchel. You can find them in the **Home** tab under **Tenants**.
+
+
+**Please note**: If you disable a Resident in Latchel and the Resident is still active in Rent Manager, the Resident profile will remain disabled in Latchel and the Resident status in Rent Manager will remain unaffected.
+
+
+<Frame>
+  <img src="/images/rtaImage-257.jpg"/>
+</Frame>
+**Properties**
+
+We create a **Property** in Latchel for every **Unit** on a property on Rent Manager. If a **Property** on Rent Manager has no units, we create a **Property** in Latchel for that Rent Manager property. Both Units and Properties can be found on the **Home** tab.
+
+
+<Frame>
+  <img src="/images/rtaImage-248.png"/>
+</Frame>
+<Frame>
+  <img src="/images/rtaImage-249.webp"/>
+</Frame>
+
+**Categories, Priorities, and Statuses**
+
+
+Special **Categories**,**Priorities,** and **Statuses** are created on Rent Manager when activating the integration to Latchel. This can be found on the **Admin** tab, **Setup** menu, and **Service Manager** submenu.
+
+
+**Please note:** We use these special “labels” to keep track of everything in both systems, please don’t edit them or delete these in Rent Manager. Doing that will break the sync and will require a need for manual reconfiguration.
+
+
+<Frame>
+  <img src="/images/rtaImage-260.jpg"/>
+</Frame>
+<Frame>
+  <img src="/images/rtaImage-261.jpg"/>
+</Frame>
+<Frame>
+  <img src="/images/rtaImage-262.jpg"/>
+</Frame>
+
+**File Sync:**
+
+Latchel will automatically sync files (such as pictures and invoices) to Rent Manager when the work order moves to a completed state (Cancelled, Completed, or Forwarded to PM).
+
+
+**Another helpful related topic:**
+
+* **[How Latchel Integration Works](/s/topic/0TO5e000000h9wqGAA/How-Latchel-Integration-Works)**
+* **[Integrating Rent Manager into Latchel](/s/topic/0TO5e000000h9wqGAA/Integrating-Rent-Manager-into-Latchel)**

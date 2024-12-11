@@ -1,0 +1,182 @@
+---
+title: "Portfolio Created & Updated"
+description: "The following data is sent when a Portfolio is created or updated in Latchel. (See Payload Format, above)"
+---
+
+## Request Body schema: application/json
+
+
+<ParamField body="portfolio_id" type="integer" default="null">
+  Unique ID for Portfolio
+</ParamField>
+
+<ParamField body="owner_id" type="integer" default="null">
+  Unique ID for Portfolio Owner
+</ParamField>
+
+<ParamField body="pm_id" type="integer" default="null">
+  ID of Manager User in organization responsible for the Property. This will automatically be set to the primary user of the organization if left null.
+</ParamField>
+
+<ParamField body="name" type="string" default="null">
+  Name of Portfolio
+</ParamField>
+
+<ParamField body="created_at" type="string" format="date-time">
+  string \<date-time>
+</ParamField>
+
+<ParamField body="updated_at" type="string" format="date-time">
+  string \<date-time>
+</ParamField>
+
+<ParamField body="pm_company_id" type="integer">
+  Unique ID for property manager company of portfolio
+</ParamField>
+
+<ParamField body="escalation_contact_list" type="array" default="null">
+  List of names and contact methods for people to contact for maintenance escalation. [INHERITABLE]
+</ParamField>
+
+<ParamField body="escalation_failed_email_list" type="string" default="null">
+  List of email addresses to contact in event of failed escalation (unable to reach a member of escalation_contact_list). [INHERITABLE]
+</ParamField>
+
+<ParamField body="job_contact_group" type="string" default="null">
+  Pre-dispatch instructions [INHERITABLE]
+</ParamField>
+
+<ParamField body="emergency_max_cost_soft" type="number" default="null">
+  Soft maximum cost for emergency Jobs. [INHERITABLE]
+</ParamField>
+
+<ParamField body="emergency_max_cost_hard" type="number" default="null">
+  Hard maximum cost for emergency Jobs. [INHERITABLE]
+</ParamField>
+
+<ParamField body="lcn_payment_method_id" type="integer" default="null">
+  ID of Payment Method to be used to pay LCN service providers for Jobs at this Property. [INHERITABLE]
+</ParamField>
+
+<ParamField body="max_cost_soft" type="number" default="null">
+  Soft maximum cost for non-emergency Jobs. [INHERITABLE]
+</ParamField>
+
+<ParamField body="max_cost_hard" type="number" default="null">
+  Hard maximum cost for non-emergency Jobs. [INHERITABLE]
+</ParamField>
+
+<ParamField body="default_access_instructions" type="string" default="null">
+  Description of how to gain access to the Property if the Tenant is not present. [INHERITABLE]
+</ParamField>
+
+<ParamField body="no_access_instructions" type="integer" default="0">
+  1 or 0 representing if the Property has access instructions (helpful for overriding Company or Portfolio access instructions) [INHERITABLE]
+</ParamField>
+
+<ParamField body="default_notification_group_id" type="integer" default="null">
+  ID of User group to which notifications about this Property should be sent. [INHERITABLE]
+</ParamField>
+
+<ParamField body="use_default_automation" type="integer" default="1">
+  1 or 0 representing if the system should use Default Action Set Groups
+</ParamField>
+
+<ParamField body="inherits_vendor_priorities" type="integer" default="1">
+  Inherit Vendor prioritization from Company
+</ParamField>
+
+<ParamField body="lcn_opt_out" type="integer" default="0">
+  1 or 0 representing if the Property should be opted out of using service providers in the LCN network. [INHERITABLE]
+</ParamField>
+
+<ParamField body="troubleshooting_flow_id" type="integer" default="null">
+  ID of Troubleshooting Workflow to use with Property
+</ParamField>
+
+<ParamField body="emergency_temp_high" type="number" default="null">
+  High temperature (fahrenheit) used to indicate emergency conditions. Temperatures at or above this value indicate emergency conditions for maintenance coordination. [INHERITABLE]
+</ParamField>
+
+<ParamField body="emergency_temp_low" type="number" default="null">
+  Low temperature (fahrenheit) used to indicate emergency conditions. Temperatures at or below this value indicate emergency conditions for maintenance coordination. [INHERITABLE]
+</ParamField>
+
+<ParamField body="emergency_temp_high_disabilities" type="number" default="null">
+  High temperature (fahrenheit) used to indicate emergency conditions if one or more Tenants are disabled. Temperatures at or above this value indicate emergency conditions for maintenance coordination. [INHERITABLE]
+</ParamField>
+
+<ParamField body="emergency_temp_low_disabilities" type="number" default="null">
+  Low temperature (fahrenheit) used to indicate emergency conditions if one or more Tenants are disabled. Temperatures at or below this value indicate emergency conditions for maintenance coordination. [INHERITABLE]
+</ParamField>
+
+<ParamField body="review_url" type="string" default="null">
+  URL for tenants to leave reviews
+</ParamField>
+
+<ParamField body="subscription_payment_method_id" type="integer">
+  ID of payment method used to pay subscription fees
+</ParamField>
+
+<ParamField body="pre_dispatch_user_group_id" type="integer" default="null">
+  User Group used for Pre-Dispatch
+</ParamField>
+
+<ParamField body="emergency_escalation_user_group_id" type="integer" default="null">
+  User Group used for Emergency Escalations
+</ParamField>
+
+<ParamField body="invoice_notification_user_group_id" type="integer" default="null">
+  User Group used for Invoice Notifications
+</ParamField>
+
+<ParamField body="integration_sync_method" type="string" default="null">
+  Determines which work orders should be synced into Latchel from a third party integration for properties in this portfolio
+</ParamField>
+
+## Response
+
+<ResponseField
+  name="200"
+>
+Return a 200 status to indicate that the data was received successfully
+</ResponseField>
+
+<RequestExample>
+  ```json  Request samples
+{
+  "portfolio_id": null,
+  "owner_id": null,
+  "pm_id": null,
+  "name": null,
+  "created_at": "2019-08-24T14:15:22Z",
+  "updated_at": "2019-08-24T14:15:22Z",
+  "pm_company_id": 1234,
+  "escalation_contact_list": null,
+  "escalation_failed_email_list": null,
+  "job_contact_group": null,
+  "emergency_max_cost_soft": 400,
+  "emergency_max_cost_hard": 600,
+  "lcn_payment_method_id": null,
+  "max_cost_soft": 400,
+  "max_cost_hard": 600,
+  "default_access_instructions": "Key is hidden under 174th stone in 12th row of cobblestone driveway",
+  "no_access_instructions": 0,
+  "default_notification_group_id": null,
+  "use_default_automation": 1,
+  "inherits_vendor_priorities": 1,
+  "lcn_opt_out": 0,
+  "troubleshooting_flow_id": null,
+  "emergency_temp_high": 92,
+  "emergency_temp_low": 40,
+  "emergency_temp_high_disabilities": 92,
+  "emergency_temp_low_disabilities": 40,
+  "review_url": null,
+  "subscription_payment_method_id": 0,
+  "pre_dispatch_user_group_id": null,
+  "emergency_escalation_user_group_id": null,
+  "invoice_notification_user_group_id": null,
+  "integration_sync_method": null
+}
+  ```
+</RequestExample>

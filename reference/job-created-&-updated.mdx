@@ -1,0 +1,226 @@
+---
+title: Job Created & Updated
+description: "The following data is sent when a Job is created or updated in Latchel. (See Payload Format, above)"
+---
+
+## Request Body schema:  application/json
+
+<ParamField body="job_id" type="integer">
+  Unique ID for Job
+</ParamField>
+
+<ParamField body="slug" type="string">
+  Unique 5 digit string used to identify Job
+</ParamField>
+
+<ParamField body="source" type="string">
+  Source of the Job, such as Tenant Web Form, Appfolio Plugin, Internal Web Form, Tenant Call, or API Request
+</ParamField>
+
+<ParamField body="created_at" type="string" format="date-time">
+  string \<date-time>
+</ParamField>
+
+<ParamField body="updated_at" type="string" format="date-time">
+  string \<date-time>
+</ParamField>
+
+<ParamField body="state_id" type="integer">
+  ID of current Job State
+</ParamField>
+
+<ParamField body="state" type="object">
+  State object (schemas)
+</ParamField>
+
+<ParamField body="state_updated_at" type="string" format="date-time">
+  string \<date-time>
+
+  Date and time of the last state change
+</ParamField>
+
+<ParamField body="scheduled_start" type="string" format="date-time" default="null">
+  Date and time the work is scheduled to start. This, combined with scheduled_end, creates the arrival window for the Vendor.
+</ParamField>
+
+<ParamField body="scheduled_end" type="string" format="date-time" default="null">
+  Date and time the work is scheduled to end. This, combined with scheduled_start, creates the arrival window for the Vendor.
+</ParamField>
+
+<ParamField body="is_urgent" type="integer" default="0">
+  1 or 0 representing if the Job is Urgent severity
+</ParamField>
+
+<ParamField body="is_emergency" type="integer" default="0">
+  1 or 0 representing if the Job is Emergency severity
+</ParamField>
+
+<ParamField body="job_rating" type="integer" default="null">
+  Rating (by Tenant) of the service received
+</ParamField>
+
+<ParamField body="job_rated_at" type="string" format="date-time" default="null">
+  Date and time the Tenant left a Job rating
+</ParamField>
+
+<ParamField body="rating_comments" type="string" default="null">
+  Comments added by Tenant with Job rating
+</ParamField>
+
+<ParamField body="order_number" type="string">
+  Mutable identifier for the Job
+</ParamField>
+
+<ParamField body="name" type="string">
+  Human readable name (title)
+</ParamField>
+
+<ParamField body="description" type="string">
+  Long description of the problem to be solved
+</ParamField>
+
+<ParamField body="vendor_description" type="string">
+  Description of problem and work to performed, specifically for the Vendor
+</ParamField>
+
+<ParamField body="vendor_rating" type="integer">
+  Vendor rating given by the tenant for this job
+</ParamField>
+
+<ParamField body="access_instructions" type="string" default="null">
+  Instructions for entering the Property if the Tenant is not present. Access instructions are required to set enter_permission = 1 (see enter_permission for more information).
+</ParamField>
+
+<ParamField body="max_cost" type="float" default="null">
+  Cost Vendor not to exceed for the Job
+</ParamField>
+
+<ParamField body="estimate" type="float" default="null">
+  Estimate amount provided by the vendor
+</ParamField>
+
+<ParamField body="estimate_note" type="string" default="null">
+  Note provided by the vendor explaining the estimate amount
+</ParamField>
+
+<ParamField body="enter_permission" type="integer" default="0">
+  1 or 0 representing if the Vendor has permission to enter the Property if the Tenant is not present. To set enter_permission = 1, access instructions must be included with the request, OR default_access_instructions must be set for the Job's property (an [INHERITABLE] field).
+</ParamField>
+
+<ParamField body="is_vacant" type="integer" default="0">
+  1 or 0 representing if the Property is vacant
+</ParamField>
+
+<ParamField body="is_mandatory" type="integer" default="0">
+  1 or 0 representing if the Job is mandatory (i.e., the Tenant cannot cancel the Job)
+</ParamField>
+
+<ParamField body="is_tenant_caused" type="integer" default="0">
+  1 or 0 representing if the issue needing repairs was caused by the Tenant
+</ParamField>
+
+<ParamField body="is_resident_responsible" type="integer" default="0">
+  1 or 0 representing if the Tenant is responsible for payment of the Job's Invoice
+</ParamField>
+
+<ParamField body="is_archived" type="integer" default="0">
+  1 or 0 representing if the Job is archived. While archived, the Job will not show up in search results in the UI
+</ParamField>
+
+<ParamField body="managed_by" type="string" default="latchel">
+  The party currently managing the Job ("latchel" or "pm")
+</ParamField>
+
+<ParamField body="vendor_locked_in" type="integer" default="0">
+  1 or 0 representing if the Vendor currently assigned to the Job can be changed
+</ParamField>
+
+<ParamField body="tenant_id" type="integer" default="null">
+  ID referencing Tenant the Job is for
+</ParamField>
+
+<ParamField body="pm_id" type="integer">
+  ID referencing the PropertyManager in charge of Job (defaults to primary User in Property Manager Company)
+</ParamField>
+
+<ParamField body="ref_job_id" type="string" default="null">
+  Reference ID for the Job; use this field to reference the ID of a Job within a 3rd party system (with which you may be integrating).
+</ParamField>
+
+<ParamField body="ref_service_request_id" type="string" default="null">
+  Additional reference ID for the Job used by integrations that implement the concept of service requests
+</ParamField>
+
+<ParamField body="severity" type="string" default="normal">
+  String representing Job severity. Enum: "emergency" "urgent" "normal"
+</ParamField>
+
+<ParamField body="issue_id" type="integer" default="null">
+  ID referencing Issue for Job
+</ParamField>
+
+<ParamField body="vendor_id" type="integer" default="null">
+  ID referencing Vendor assigned to Job
+</ParamField>
+
+<ParamField body="property_id" type="integer">
+  ID referencing the Property the Job is for
+</ParamField>
+
+## Response
+
+<ResponseField
+  name="200"
+>
+Return a 200 status to indicate that the data was received successfully
+</ResponseField>
+
+<RequestExample>
+  ```json  Request samples
+  {
+  "job_id": 6903,
+  "slug": "few3z",
+  "source": "API Request",
+  "created_at": "2019-08-24T14:15:22Z",
+  "updated_at": "2019-08-24T14:15:22Z",
+  "state_id": 3,
+  "state": {
+    "state_id": 3,
+    "name": "Finding Service Provider"
+  },
+  "state_updated_at": "2019-08-24T14:15:22Z",
+  "scheduled_start": null,
+  "scheduled_end": null,
+  "is_urgent": 0,
+  "is_emergency": 0,
+  "job_rating": null,
+  "job_rated_at": null,
+  "rating_comments": null,
+  "order_number": "32423-394823",
+  "name": "Toilet not flushing",
+  "description": "Toilet does not seem to get the poops down, no matter how many times it is flushed. Each flush is small; very little water is emitted.",
+  "vendor_description": "Use your biggest plunger, do not use little plunger.",
+  "vendor_rating": 5,
+  "access_instructions": "Look under the door mat; there is a secret entrance.",
+  "max_cost": 120,
+  "estimate": 120,
+  "estimate_note": "Additional parts are needed",
+  "enter_permission": 0,
+  "is_vacant": 0,
+  "is_mandatory": 0,
+  "is_tenant_caused": 0,
+  "is_resident_responsible": 0,
+  "is_archived": 0,
+  "managed_by": "latchel",
+  "vendor_locked_in": 0,
+  "tenant_id": 978,
+  "pm_id": 0,
+  "ref_job_id": 2938,
+  "ref_service_request_id": 2938,
+  "severity": "normal",
+  "issue_id": 723,
+  "vendor_id": 454,
+  "property_id": 2345
+}
+  ```
+</RequestExample>

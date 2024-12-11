@@ -1,0 +1,122 @@
+---
+title: "Tenant Created & Updated"
+description: "The following data is sent when a Tenant is created or updated in Latchel. (See Payload Format, above)"
+---
+
+## Request Body schema: application/json
+
+<ParamField body="user_id" type="integer">
+  Unique ID for Resident
+</ParamField>
+
+<ParamField body="user_type" type="string">
+  Type of user (in the case of residents, this is always "Tenant")
+</ParamField>
+
+<ParamField body="name" type="string">
+  The user's name
+</ParamField>
+
+<ParamField body="created_at" type="string" format="date-time">
+  string \<date-time>
+</ParamField>
+
+<ParamField body="updated_at" type="string" format="date-time">
+  string \<date-time>
+</ParamField>
+
+<ParamField body="sms_enabled" type="integer">
+  Boolean to describe whether the user has opted into SMS text messaging communication
+</ParamField>
+
+<ParamField body="email_enabled" type="integer">
+  Boolean to describe whether the user has opted into email communication
+</ParamField>
+
+<ParamField body="critical_note" type="string">
+  Critical note to provide context for Latchel operations response
+</ParamField>
+
+<ParamField body="role_id" type="integer">
+  Unique ID for user role
+</ParamField>
+
+<ParamField body="availability" type="array">
+  A list of available times the resident has indicated availability
+</ParamField>
+
+<ParamField body="pw_id" type="integer" default="null">
+  The resident's PropertyWare ID (if exists)
+</ParamField>
+
+<ParamField body="avatar_url" type="string" default="null">
+  URL for the resident's avatar
+</ParamField>
+
+<ParamField body="ref_user_id" type="string" default="null">
+  Tenant's reference user ID
+</ParamField>
+
+<ParamField body="is_active" type="integer">
+  Boolean to describe whether the user is active in Latchel or not
+</ParamField>
+
+<ParamField body="company_id" type="integer" default="null">
+  Unique ID for PM Company who manages this resident
+</ParamField>
+
+<ParamField body="st_cid" type="integer" default="null">
+  Unique ID for resident's Stripe account
+</ParamField>
+
+<ParamField body="st_status" type="integer" default="null">
+  Status of resident's Stripe account
+</ParamField>
+
+<ParamField body="integration_data" type="json" default="null">
+  Data corresponding to resident's third party integrations
+</ParamField>
+
+<ParamField body="slug" type="string">
+  A human-readable unique identifier for the resident
+</ParamField>
+
+## Response
+
+<ResponseField
+  name="200"
+>
+Return a 200 status to indicate that the data was received successfully
+</ResponseField>
+
+<RequestExample>
+  ```json  Request samples
+ {
+  "user_id": 35,
+  "user_type": "tenant",
+  "name": "George Washington",
+  "created_at": "2019-08-24T14:15:22Z",
+  "updated_at": "2019-08-24T14:15:22Z",
+  "sms_enabled": 1,
+  "email_enabled": 1,
+  "critical_note": "Do not call - only text",
+  "role_id": 5,
+  "availability": [
+    {
+      "date": "2019-08-24T14:15:22Z",
+      "scheduled_start": "2019-08-24T14:15:22Z",
+      "scheduled_end": "2019-08-24T14:15:22Z"
+    }
+  ],
+  "pw_id": null,
+  "avatar_url": null,
+  "ref_user_id": null,
+  "is_active": 1,
+  "company_id": null,
+  "st_cid": null,
+  "st_status": null,
+  "integration_data": null,
+  "slug": "d53u2"
+}
+  ```
+</RequestExample>
