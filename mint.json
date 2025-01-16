@@ -19,8 +19,10 @@
   "modeToggle": {
     "default": "light"
   },
-  "background": { "style": "grid" },
-  "font":{
+  "background": {
+    "style": "grid"
+  },
+  "font": {
     "headings": {
       "family": "GT Walsheim",
       "url": "https://latchel.com/wp-content/uploads/2022/01/GT-Walsheim-Regular.woff2",
@@ -69,17 +71,21 @@
       "icon": "newspaper",
       "url": "https://latchel.com/blog/"
     },
-{
-    "name": "Case Studies",
-    "icon": "books",
-    "url": "https://latchel.com/case-studies/"
-  }
+    {
+      "name": "Case Studies",
+      "icon": "books",
+      "url": "https://latchel.com/case-studies/"
+    }
   ],
-  "primaryTab": { "name": "Home" },
+  "primaryTab": {
+    "name": "Home"
+  },
   "navigation": [
     {
       "group": "Home",
-      "pages": ["home"]
+      "pages": [
+        "home"
+      ]
     },
     {
       "group": "Top Service Provider Articles",
@@ -298,7 +304,8 @@
         "s/topic/0TO5e000000h9wqGAA/How-to-Add-a-Service-Provider-to-a-Portfolio",
         "s/topic/0TO5e000000h9wqGAA/How-to-Disable-Automatic-Invoice-Collection-from-Preferred-Service-Providers",
         "s/topic/0TO5e000000h9wqGAA/Rent-Manager-Integration-Troubleshooting",
-        "s/topic/0TO5e000000h9wqGAA/Integrating-Rent-Manager-into-Latchel"
+        "s/topic/0TO5e000000h9wqGAA/Integrating-Rent-Manager-into-Latchel",
+        "s/topic/0TO5e000000h9wqGAA/top-property-manager-articles"
       ]
     },
     {
