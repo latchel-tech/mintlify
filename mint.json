@@ -82,6 +82,10 @@
       "pages": ["home"]
     },
     {
+      "group": "Sample Group",
+      "pages": ["s/topic/0TO5e000000h9wqGAA/Test/sample1"]
+    },
+    {
       "group": "Top Service Provider Articles",
       "pages": [
         "s/topic/0TO5e000000h9wqGAA/Test/sample1"
