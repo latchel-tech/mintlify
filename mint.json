@@ -310,6 +310,13 @@
         "reference/tenant-created-&-updated",
         "reference/portfolio-created-&-updated"
       ]
+    },
+    {
+      "group": "Sample Grouping",
+      "pages": [
+        "s/topic/0TO5e000000h9wqGAA/Test/sample1"
+      ]
+      
     }
   ],
   "footerSocials": {
