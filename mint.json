@@ -84,6 +84,7 @@
     {
       "group": "Top Service Provider Articles",
       "pages": [
+        "s/topic/0TO5e000000h9wqGAA/Test/sample1"
         "s/topic/0TO5e000000h9wpGAA/top-service-provider-articles",
         "s/topic/0TO5e000000h9wpGAA/How-to-Reject-a-Work-Order-Service-Provider",
         "s/topic/0TO5e000000h9wpGAA/Comprehensive-Service-Provider-Guides",
@@ -131,6 +132,7 @@
     {
       "group": "Top Property Manager Articles",
       "pages": [
+        "s/topic/0TO5e000000h9wqGAA/Test/sample1"
         "s/topic/0TO5e000000h9wqGAA/top-property-manager-articles",
         "s/topic/0TO5e000000h9wqGAA/How-to-Approve-or-Deny-a-Duplicate-Work-Order",
         "s/topic/0TO5e000000h9wqGAA/Emergency-Outbound-Communication-Process",
@@ -299,7 +301,7 @@
         "s/topic/0TO5e000000h9wqGAA/How-to-Disable-Automatic-Invoice-Collection-from-Preferred-Service-Providers",
         "s/topic/0TO5e000000h9wqGAA/Rent-Manager-Integration-Troubleshooting",
         "s/topic/0TO5e000000h9wqGAA/Integrating-Rent-Manager-into-Latchel"
-      ]
+      ],
     },
     {
       "group": "API Documentation",
@@ -311,13 +313,7 @@
         "reference/portfolio-created-&-updated"
       ]
     },
-    {
-      "group": "Sample Grouping",
-      "pages": [
-        "s/topic/0TO5e000000h9wqGAA/Test/sample1"
-      ]
-      
-    }
+    
   ],
   "footerSocials": {
     "facebook": "https://www.facebook.com/latchel",
