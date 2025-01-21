@@ -311,8 +311,9 @@
         "reference/tenant-created-&-updated",
         "reference/portfolio-created-&-updated"
       ]
-    },
-  {
+    }
+    
+  ],
   "footerSocials": {
     "facebook": "https://www.facebook.com/latchel",
     "instagram": "https://www.instagram.com/latchel_inc/",
