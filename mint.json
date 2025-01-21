@@ -81,12 +81,8 @@
       "group": "Home",
       "pages": ["home"]
     },
-    {
-      "group": "Sample Group",
-      "pages": [
-        "s/topic/0TO5e000000h9wqGAA/Test/sample1"
       ]
-      
+    {
       "group": "Top Service Provider Articles",
       "pages": [
         "s/topic/0TO5e000000h9wqGAA/Test/sample1"
@@ -137,7 +133,6 @@
     {
       "group": "Top Property Manager Articles",
       "pages": [
-        "s/topic/0TO5e000000h9wqGAA/Test/sample1"
         "s/topic/0TO5e000000h9wqGAA/top-property-manager-articles",
         "s/topic/0TO5e000000h9wqGAA/How-to-Approve-or-Deny-a-Duplicate-Work-Order",
         "s/topic/0TO5e000000h9wqGAA/Emergency-Outbound-Communication-Process",
