@@ -81,7 +81,6 @@
       "group": "Home",
       "pages": ["home"]
     },
-      ]
     {
       "group": "Top Service Provider Articles",
       "pages": [
@@ -300,7 +299,7 @@
         "s/topic/0TO5e000000h9wqGAA/How-to-Disable-Automatic-Invoice-Collection-from-Preferred-Service-Providers",
         "s/topic/0TO5e000000h9wqGAA/Rent-Manager-Integration-Troubleshooting",
         "s/topic/0TO5e000000h9wqGAA/Integrating-Rent-Manager-into-Latchel"
-      ],
+      ]
     },
     {
       "group": "API Documentation",
@@ -312,7 +311,6 @@
         "reference/portfolio-created-&-updated"
       ]
     }
-    
   ],
   "footerSocials": {
     "facebook": "https://www.facebook.com/latchel",
