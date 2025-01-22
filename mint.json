@@ -125,7 +125,7 @@
             "s/topic/0TO5e000000h9wrGAA/Rating-Completed-Maintenance-Request-Service",
             "s/topic/0TO5e000000h9wrGAA/How-can-a-Resident-Generate-Work-Order-Details-in-PDF"
           ]
-        }
+        },
         {
           "group": "Resident Benefits Guides",
           "pages": [
@@ -134,11 +134,12 @@
             "s/topic/0TO5e000000h9wrGAA/Resident-Benefit-Lockout-Reimbursement",
             "s/topic/0TO5e000000h9wrGAA/ACH-Setup-Through-Ramp",
             "s/topic/0TO5e000000h9wrGAA/Resident-Benefit-Drain-Pack-Instructions",
-            "s/topic/0TO5e000000h9wrGAA/FAQ-Air-Filters-for-Residents",
+            "s/topic/0TO5e000000h9wrGAA/FAQ-Air-Filters-for-Residents"
           ]
         }
       ]
     }
+  ] 
     {
       "group": "Top Property Manager Articles",
       "pages": [
