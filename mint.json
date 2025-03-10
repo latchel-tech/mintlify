@@ -146,7 +146,6 @@
       "group": "Top Property Manager Articles",
       "pages": [
         "s/topic/0TO5e000000h9wqGAA/top-property-manager-articles",
-        "s/topic/0TO5e000000h9wqGAA/Account-Settings-Overview",
         "s/topic/0TO5e000000h9wqGAA/How-to-Approve-or-Deny-a-Duplicate-Work-Order",
         "s/topic/0TO5e000000h9wqGAA/Emergency-Outbound-Communication-Process",
         "s/topic/0TO5e000000h9wqGAA/How-to-Set-up-an-On-Call-Rotation",
@@ -296,6 +295,7 @@
         {
           "group": "Account Settings",
           "pages": [
+             "s/topic/0TO5e000000h9wqGAA/Account-Settings-Overview",
             "s/topic/0TO5e000000h9wqGAA/How-to-Add-a-Property",
             "s/topic/0TO5e000000h9wqGAA/How-to-Re-Enable-a-property",
             "s/topic/0TO5e000000h9wqGAA/How-to-Remove-Properties",
