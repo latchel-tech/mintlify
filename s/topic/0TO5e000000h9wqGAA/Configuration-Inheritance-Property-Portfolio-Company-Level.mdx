@@ -1,58 +1,51 @@
 ---
 title: "Configuration Inheritance (Property, Portfolio, & Company Level)"
-description: "Latchel gives you many customization options for dispatching. Each of these configurations can be done at the **Company Level (highest),** **Portfolio Level (lower), **or** Property Level (lowest). **Configurations set at the Company Level are automatically applied to lower levels (**Portfolio & Property**)."
-mode: wide
+description: "Latchel gives you many customization options for dispatching. Each of these configurations can be done at the Company Level (highest), Portfolio Level (lower), or Property Level (lowest). Configurations set at the Company Level are automatically applied to lower levels (Portfolio & Property)."
+mode: "wide"
 ---
 
-
-You can then use the inherited configurations of the level above or **override** the inherited configurations. As we discussed, Latchel has 3 tiers- Property Level configurations will always override Portfolio Level & Company Level configurations. Portfolio Level configurations will always override the Company Level configurations. Please see the diagram below to learn about these inheritance rules (_Budget Limits were used as an example_):
+You can then use the inherited configurations of the level above or **override** the inherited configurations. As we discussed, Latchel has 3 tiers- Property Level configurations will always override Portfolio Level & Company Level configurations. Portfolio Level configurations will always override the Company Level configurations. Please see the diagram below to learn about these inheritance rules (*Budget Limits were used as an example*):
 
 <Frame>
-  <img src="/images/rtaImage-775.jpg"/>
+  <img src="/images/rtaImage-775.jpg" />
 </Frame>
 
-
-## Service Provider Inheritance
-
+### **Service Provider Inheritance**
 
 Service Provider inheritance is a special case. When you turn Service Provider inheritance ON, you have the option to ADD Service Providers to the top of your preferred Service Provider list AND inherit the parent level.
 
 * For example, if you create a portfolio, this portfolio can inherit the Service Provider rules from the company AND add a few Service Providers on top to be called first. The Service Providers added to the portfolio take precedence over the inherited Service Providers from the company level.
 
-
 You can choose to override inheritance (e.g. don’t inherit at all) and turn this feature OFF for your portfolio and/or property.
 
 * This means we will only look to dispatch Service Providers that are prioritized for that portfolio or property. We will NOT look at parent-level Service Provider prioritization.
 
-
 You can also “copy” the parent-level preferred Service Provider list to re-arrange priorities entirely (this overrides inheritance and makes it easier to start with a pre-existing list).
 
 <Note>
-  Please note: The “**copy**” must be maintained separately from the company or portfolio levels. You will have 2 independent lists to manage. Preferences updates and the level that was copied will NOT transfer to the level that received the copied priorities.
+  **The “copy” must be maintained separately from the company or portfolio levels. You will have 2 independent lists to manage. Preferences updates and the level that was copied will NOT transfer to the level that received the copied priorities.**
 </Note>
-
 
 Here's an example of how a service provider could possibly work on a job order for a certain property depending on the inheritance set for the service provider.
 
-
 <Frame>
-  <img src="/images/rtaImage-776.jpg"/>
+  <img src="/images/rtaImage-776.jpg" />
 </Frame>
-
 
 The below diagram describes how configuration inheritance affects the emergency escalation contacts.
 
 <Frame>
-  <img src="/images/rtaImage-777.jpg"/>
+  <img src="/images/rtaImage-777.jpg" />
 </Frame>
 
+### **Links to Step-by-Step Guides**
 
-## Links to Step-by-Step Guides
+* [How to Create User Groups](/s/topic/0TO5e000000h9wqGAA/How-to-Create-User-Groups)
 
-[How to Create User Groups](/s/topic/0TO5e000000h9wqGAA/How-to-Create-User-Groups)
+* [How to Send Latchel Pre-dispatch Instructions](/s/topic/0TO5e000000h9wqGAA/How-to-Send-Latchel-Pre-Dispatch-Instructions)
 
-[How to Send Latchel Pre-dispatch Instructions](/s/topic/0TO5e000000h9wqGAA/How-to-Send-Latchel-Pre-Dispatch-Instructions)
+* [How to Configure a Property with Default Access Instructions  ](/s/topic/0TO5e000000h9wqGAA/How-to-Update-Your-Escalation-Contacts)
 
-[How to Configure a Property with Default Access Instructions  <br/>How to Update Your Escalation Contacts](/s/topic/0TO5e000000h9wqGAA/How-to-Update-Your-Escalation-Contacts)
+* [How to Update Your Escalation Contacts](/s/topic/0TO5e000000h9wqGAA/How-to-Update-Your-Escalation-Contacts)
 
-[How to Customize Work Order Budget Limits](/s/topic/0TO5e000000h9wqGAA/How-to-Customize-Work-Order-Budget-Limits)
+* [How to Customize Work Order Budget Limits](/s/topic/0TO5e000000h9wqGAA/How-to-Customize-Work-Order-Budget-Limits)
