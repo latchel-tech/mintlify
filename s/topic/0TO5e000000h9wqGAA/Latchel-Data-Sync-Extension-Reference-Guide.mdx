@@ -1,90 +1,89 @@
 ---
-title: Latchel Data Sync Extension Reference Guide
+title: "Latchel Data Sync Extension Reference Guide"
 description: "Unlike our integrations for other platforms, the **Chrome Plugin** doesn’t have the concept of an initial sync. Therefore every sync can be considered a subsequent sync, which will look for any data that was created or updated within the last 72 hours."
 ---
 
-
-#### **Two Directions of Data Desynchronization After the Initial Sync**
+### **Two Directions of Data Desynchronization After the Initial Sync**
 
 We refer to sync events after the initial sync as “subsequent” syncs. Subsequent syncs will look for any data that was created or updated within the last 72 hours. Subsequent property updates can be organized into two categories **(1) Newly created Data,** and **(2) Existing or Previously Created Data.**
 
-
-**A.Platform → Latchel**
+### **Platform → Latchel**
 
 **I. Newly Created Data**
 
-1.  **Properties -** Properties are created/updated in Latchel when one of the following conditions are met:
+1. **Properties -** Properties are created/updated in Latchel when one of the following conditions are met:
 
-* The property does not exist in Latchel
-* The property is active in Latchel
+- The property does not exist in Latchel
+- The property is active in Latchel
 
-2.  **Residents -** residents are updated in Latchel if the following is true:
+2. **Residents -** residents are updated in Latchel if the following is true:
 
-* The resident doesn't exist in Latchel yet, OR
-* The sync date is before the move-out date, and the resident is active in Latchel
+- The resident doesn't exist in Latchel yet, OR
+- The sync date is before the move-out date, and the resident is active in Latchel
 
-3.  **Work Order (WO) -** work orders that will sync to and from the platform to Latchel is governed by a special setting in Latchel called, the **Integration Sync Method**.
+3. **Work Order (WO) -** work orders that will sync to and from the platform to Latchel is governed by a special setting in Latchel called, the **Integration Sync Method**.
 
 <Frame>
-  <img src="/images/rtaImage-343.jpg"/>
+  ![](/images/rtaImage-343.jpg)
 </Frame>
 
 Here is how each setting option impacts which work orders sync from your platform to Latchel:
 
-* **Assigned Work Orders:** Only WOs assigned to a user with the name that includes **“Latchel”** will sync from your platform to Latchel. All Latchel work orders will be created in your property maintenance system (PMS) but only WOs that are assigned to the Latchel user in your PMS will be updated from your platform. This is used by some customers who want the work order created but subsequently want to make changes without them being overwritten but a future update.
-* **All Work Orders:** All WOs in your PMS account will sync to Latchel, and vice versa.
-* **No Work Orders:** No WOs in your PMS account will sync to Latchel, and vice versa.
+- **Assigned Work Orders:** Only WOs assigned to a user with the name that includes **“Latchel”** will sync from your platform to Latchel. All Latchel work orders will be created in your property maintenance system (PMS) but only WOs that are assigned to the Latchel user in your PMS will be updated from your platform. This is used by some customers who want the work order created but subsequently want to make changes without them being overwritten but a future update.
+- **All Work Orders:** All WOs in your PMS account will sync to Latchel, and vice versa.
+- **No Work Orders:** No WOs in your PMS account will sync to Latchel, and vice versa.
 
-**NOTE:** _Users can stop WOs from updating by using the Assigned Work Orders setting and unassigning the Latchel user in your PMS._
+<Note>
+  Users can stop WOs from updating by using the Assigned Work Orders setting and unassigning the Latchel user in your PMS.
+</Note>
 
-**To know more about the Integration Sync Method and set which option works best for your company, please contact Latchel.**
-
-
-4.  **Leases -** currently, lease integration is not supported by Latchel Chrome Plugin.
-
+4. **Leases -** currently, lease integration is not supported by Latchel Chrome Plugin.
 
 **II. Existing or Previously Created Data**
 
-1.  **Properties -** status of previously created properties synchronizes _**only from active to inactive.**_ This means that if you activates a previously inactive property from your PMS, **this change will not propagate to Latchel.**
+1. **Properties -** status of previously created properties synchronizes **_only from active to inactive._** This means that if you activates a previously inactive property from your PMS, **this change will not propagate to Latchel.**
 
-**NOTE:** _Chrome plugin users can influence the "is_active" field of a property by hiding or unhiding the object in your PMS._
+<Note>
+  Chrome plugin users can influence the **"is_active"** field of a property by hiding or unhiding the object in your PMS.
+</Note>
 
-2.  **Residents -** the integration **do not currently update contact information nor the name of the resident**. Once residents are existing or created the only things that would potentially change are:
+2. **Residents -** the integration **do not currently update contact information nor the name of the resident**. Once residents are existing or created the only things that would potentially change are:
 
-* move in date
-* move out date
-* is_active in Latchel (based on the residents move in and move out date)
-* the property unit they are associated with
+- move in date
+- move out date
+- is_active in Latchel (based on the residents move in and move out date)
+- the property unit they are associated with
 
-3.  **Work Order (WO) -** the integration do not update any fields on previously created work orders.
+3. **Work Order (WO) -** the integration do not update any fields on previously created work orders.
 
-#### **B. Latchel → Platform**
+### **Latchel → Platform**
 
-1.  **Properties and Residents -** Manually created properties and residents in Latchel will not sync to your platform. Hence, the option to create new properties and residents in the Latchel console is unavailable.
-2.  **Work orders -** Work orders are created/updated in Platform or Latchel when the following are true:
+1. **Properties and Residents -** Manually created properties and residents in Latchel will not sync to your platform. Hence, the option to create new properties and residents in the Latchel console is unavailable.
+2. **Work orders -** Work orders are created/updated in Platform or Latchel when the following are true:
 
-* The work order created date is after the Platform sync date.
-* The work order can be matched to a property in Platform.
-* The property associated with the work order has an integration sync method of all or assigned and the property is assigned to the Latchel user in the Platform
-
-* When new created work orders sync to the platform, they are automatically assigned to the Latchel Team user. Which sets their status as **Assigned**. 
-* For previously created work orders in the platform, subsequent updated in Latchel will update the status field. The status field will be updated to **Complete** or **Cancelled** based on the corresponding Latchel status. The integration do not update the status in the Platform when the work order moves to **Forwarded to PM**.
-* On the first successful sync following the creation of a WO, the integration updates the Latchel WO number to match the WO number in the Platform.
+- The work order created date is after the Platform sync date.
+- The work order can be matched to a property in Platform.
+- The property associated with the work order has an integration sync method of all or assigned and the property is assigned to the Latchel user in the Platform
+- When new created work orders sync to the platform, they are automatically assigned to the Latchel Team user. Which sets their status as **Assigned**. 
+- For previously created work orders in the platform, subsequent updated in Latchel will update the status field. The status field will be updated to **Complete** or **Cancelled** based on the corresponding Latchel status. The integration do not update the status in the Platform when the work order moves to **Forwarded to PM**.
+- On the first successful sync following the creation of a WO, the integration updates the Latchel WO number to match the WO number in the Platform.
 
 **WO Sync Status**
 
-When a customer is on an _active_ integration, an indication will show at the top of each work order whether or not the WO was successfully sync’d with the customer’s PMS. Example below.
-
+When a customer is on an **_active_** integration, an indication will show at the top of each work order whether or not the WO was successfully sync’d with the customer’s PMS. Example below.
 
 <Frame>
-  <img src="/images/rtaImage-344.jpg"/>
+  ![](/images/rtaImage-344.jpg)
 </Frame>
 
 **Manually Sync WO**
 
 To manually sync WO using the Chrome plugin data sync, you can initiate a re-sync of all data by opening up the Chrome plugin UI and clicking **Sync All Data**.
 
-3.  **File Sync** \- This feature is not currently supported for the Platform. 
+3. **File Sync** - This feature is not currently supported for the Platform. 
 
+<Tip>
+  To learn more about Latchel integration please visit: [How Latchel Integration Works](/s/topic/0TO5e000000h9wqGAA/How-Latchel-Integration-Works).
 
-**To learn more about Latchel integration please visit:** **[How Latchel Integration Works](/s/topic/0TO5e000000h9wqGAA/How-Latchel-Integration-Works)
+  You may also contact Latchel to know which option works best for your company.
+</Tip>
