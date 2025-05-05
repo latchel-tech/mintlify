@@ -1,0 +1,71 @@
+---
+title: "Buildium Integration Reference Guide"
+description: "This Building reference guide provides a comprehensive overview of how Latchel’s integration with Buildium functions. This guide is intended as a resource to help you understand how data flows between the two systems, what information is synced, and the timing and behavior of that syncing. It outlines the structure of the integration, including how properties, residents, and work orders are shared, as well as what happens when data changes in either platform. Use this guide as a reference to better understand the integration's functionality and ensure alignment between Buildium and Latchel."
+---
+
+### **Integration Requirements**
+
+1. Must be on Buildium’s **Premium** plan (includes Open API access).
+2. API access must be enabled manually through Buildium’s developer portal.
+
+### **Activate the API and Obtain API Keys**
+
+1. Property managers should activate the API and obtain API keys as instructed in this [page](https://developer.buildium.com/#section/Getting-Started). 
+2. API keys should be passed to Latchel's engineering team for activation. You may email [team@latchel.com](mailto:team@latchel.com) or [success@latchel.com](mailto:success@latchel.com) for more details.
+
+### **Export Property and Resident Report from Buildium**
+
+<Note>
+  This step is only necessary for property managers with existing data in Latchel. If you are a new Latchel customer, you can skip this step.
+</Note>
+
+<Warning>
+  This step is critical to avoid creating duplicate property or resident records in Latchel.
+</Warning>
+
+Request a CSV export of the **“Current Tenants”** report by going to **Reports**, then **Current Tenants** from the Buildium Web App.
+
+<Frame>
+  ![Image 20241209 192550 05 05 2025 06 39 AM Pn](/images/image-20241209-192550-05-05-2025_06_39_AM.png)
+</Frame>
+
+Save the CSV report to your computer when prompted. Then, forward the report to Latchel along with your API keys to begin activating your Buildium integration.
+
+### **What happens when a customer first activates their integration?**
+
+<Check>
+  When an admin initially activates the customer’s Buildium integration, no immediate changes occur. The integration will be active and scheduled for hourly imports, but it currently lacks an 'initial sync' feature, unlike Propertyware and Rent Manager. The customer does not need to take any further action once Buildium is activated to sync data.
+</Check>
+
+### **Features of the Buildium Integration**
+
+<Accordion title="Two-Way Sync Feature" icon="rotate-reverse" iconType="duotone">
+  The two-way sync between Buildium and Latchel ensures that key data—like properties, residents, and work orders—automatically flows between both systems. Updates made in one platform are reflected in the other, keeping everything aligned and up to date.
+
+  1. **Buildium <Icon icon="arrow-right-long" iconType="sharp-duotone-solid" color="#ff9b8a" /> Latchel**
+
+  - **Properties:** The complete property address, along with the property ID, unit ID, and status, is brought over to Latchel. During subsequent synchronizations of the same property, both the address and integration data are interpreted to prevent duplicate property entries in Latchel.
+  - **Residents: **Latchel syncs all eligible residents from Buildium every hour. Unlike other integrations that only sync recently added or edited residents, Buildium syncs all current (non-"Past") residents at a property so they can submit work orders in Latchel.
+
+    Key resident fields mapped from Buildium to Latchel include name, email, phone numbers (prioritizing cell \> home \> work \> fax), property/unit IDs, and move-in/move-out dates. A primary phone number is required and is selected based on priority.
+
+    Once a resident is created in Latchel, only specific fields are updated during future syncs—such as property/unit associations and move-in/move-out dates. Residents are marked inactive in Latchel after their move-out date.
+  - **Work Orders:** The Buildium integration syncs work orders that have been created in the last 72 hours. 
+
+  2. **Latchel <Icon icon="arrow-right-long" iconType="sharp-duotone-solid" color="#ff9b8a" /> Buildium**
+
+  - **Work Orders: **Work orders are synced to Buildium a few seconds after they are created in Latchel. Unfortunately, the Buildium API currently doesn’t allow Latchel to retrieve the Buildium work order number or update the status of tasks or work orders. 
+  - **Files:** Syncing files to Buildium is currently unsupported.
+</Accordion>
+
+<Accordion title="Automatic Property Reconciliation" defaultOpen icon="timer" iconType="duotone">
+  To ensure accurate customer billing, Latchel runs an automated process each month to deactivate any active units in Latchel that no longer exist in Buildium. This process currently occurs on the **27th at 3 AM PST**. When a property is deactivated through this process, it will be logged in Latchel.
+
+  <Note>
+    Buildium allows PM’s to toggle active status by property, but these status affects all units within that property. As such, for now Latchel ignores that field and import all properties that the API returns.
+  </Note>
+</Accordion>
+
+<Tip>
+  To know more about Latchel integration, please visit the help guide, [How Latchel Integration Works](https://help.latchel.com/s/topic/0TO5e000000h9wqGAA/How-Latchel-Integration-Works).
+</Tip>
