@@ -1,6 +1,6 @@
 ---
 title: "How Emergency Temperature and Severity Settings Work Together"
-description: "In the Latchel console, the **Emergency Temperature Settings** can be found under the **Details** tab, these settings are available in the **Company**, **Portfolio**, and **Property** views."
+description: "Latchel uses both temperature thresholds and severity levels to determine when an HVAC issue qualifies as an emergency. This guide explains how these two settings interact to ensure urgent situations are handled appropriately without unnecessary escalations."
 mode: "wide"
 ---
 
@@ -10,14 +10,14 @@ The temperature settings will act as a threshold for determining if the temperat
   ![](/images/rtaImage-903.jpg)
 </Frame>
 
-### **For AC Issues**
+### **For Air Conditioning Issues**
 
-When a high temperature over 90 degrees is listed in the Emergency Temperature Settings for **_Insufficient cooling (high temperature)_**, it will be classified as an emergency according to the Severity Settings.
+When a high temperature over 90 degrees is listed in the Emergency Temperature Settings for **_Insufficient cooling (high outside temperature)_**, it will be classified as an emergency according to the Severity Settings.
 
-On the other hand, when a normal temperature ranging from 50 to 90 degrees is listed in the Emergency Temperature Settings for \*\*_Insufficient cooling (normal temperature)_ \*\*, it will be considered for approval based on the Severity Settings.
+On the other hand, when a normal temperature ranging from 50 to 90 degrees is listed in the Emergency Temperature Settings for **_Insufficient cooling (normal outside temperature)_**, it will be considered for approval based on the Severity Settings.
 
 <Frame>
-  ![](/images/rtaImage-904.jpg)
+  ![Latchel 05 15 2025 11 38 PM Pn](/images/Latchel-05-15-2025_11_38_PM.png)
 </Frame>
 
 ### **For Heating Issues**
@@ -27,5 +27,9 @@ When a low temperature below 50 degrees is listed in the Emergency Temperature S
 Similarly, when a low temperature below 50 degrees is listed in the Emergency Temperature Settings for the **_Heater not running (low temperature)_**, it will also be considered an emergency based on the Severity Settings.
 
 <Frame>
-  ![](/images/rtaImage-905.jpg)
+  ![Latchel 05 15 2025 11 40 PM Pn](/images/Latchel-05-15-2025_11_40_PM.png)
 </Frame>
+
+<Tip>
+  Check [How to Add Emergency Temperature Thresholds](/s/topic/0TO5e000000h9wqGAA/How-to-Add-Emergency-Temperature-Thresholds) to learn how to set up these temperature settings\!
+</Tip>
