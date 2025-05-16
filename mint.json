@@ -198,7 +198,6 @@
         "s/topic/0TO5e000000h9wqGAA/How-To-Send-SMS-Messages-From-Latchel",
         "s/topic/0TO5e000000h9wqGAA/How-to-Add-Move-In-Move-Out-Dates",
         "s/topic/0TO5e000000h9wqGAA/How-to-Create-User-Groups",
-        
         "s/topic/0TO5e000000h9wqGAA/How-to-Download-a-Work-Order-Invoice-New-Experience",
         "s/topic/0TO5e000000h9wqGAA/How-to-Add-or-Update-Service-Provider-Instructions-on-a-Work-Order-New-Experience",
         "s/topic/0TO5e000000h9wqGAA/How-to-Add-a-Special-Note-to-a-Work-Order-New-Experience",
@@ -232,7 +231,6 @@
         "s/topic/0TO5e000000h9wqGAA/How-to-Assign-LCN-Service-Provider-New-Experience",
         "s/topic/0TO5e000000h9wqGAA/How-to-Change-Reset-the-Password-of-a-Latchel-User-s-Login",
         "s/topic/0TO5e000000h9wqGAA/How-to-Update-a-Company-User-s-Contact-Information",
-        "s/topic/0TO5e000000h9wqGAA/How-to-Report-Bugs-and-Issues-with-our-Tools",
         "s/topic/0TO5e000000h9wqGAA/How-to-Create-New-Resident-Benefit",
         "s/topic/0TO5e000000h9wqGAA/How-to-Prioritize-a-Preferred-Service-Provider-for-Multiple-Skills",
         "s/topic/0TO5e000000h9wqGAA/How-to-View-the-Service-Provider-s-Calendar",
@@ -328,9 +326,7 @@
             "s/topic/0TO5e000000h9wqGAA/How-Emergency-Temperature-and-Severity-Settings-Work-Together",
             "s/topic/0TO5e000000h9wqGAA/How-to-Add-Emergency-Temperature-Thresholds",
             "s/topic/0TO5e000000h9wqGAA/Managing-Severity-and-Responsibility-Settings",
-            "s/topic/0TO5e000000h9wqGAA/How-to-Apply-Existing-Severity-and-Responsibility-Preset",
             "s/topic/0TO5e000000h9wqGAA/How-to-Edit-Existing-Severity-and-Responsibility-Preset",
-            "s/topic/0TO5e000000h9wqGAA/Saving-Existing-Severity-Responsibility-Presets",
             "s/topic/0TO5e000000h9wqGAA/Export-Severity-Settings-as-a-CSV-File"
             
           ]
