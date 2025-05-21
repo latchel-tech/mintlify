@@ -1,0 +1,120 @@
+---
+title: "Rentvine Integration Reference Guide"
+description: "Latchel’s integration with Rentvine makes property maintenance easier by syncing work orders, tenant info, and property details between both systems. This means no more double entry—just smooth, automatic updates so you can focus on managing properties while Latchel handles the maintenance coordination. Use this guide to help you understand how the integration works and make sure Rentvine and Latchel stay in sync."
+---
+
+### **Integration Requirements**
+
+To begin your Rentvine integration with Latchel, you'll need to obtain your Rentvine credentials or API keys. Please follow the steps below to retrieve this essential information.
+
+The Latchel engineering team will need 3 pieces of data: 
+
+1. API key
+2. API secret
+3. Customer subdomain. This subdomain is found in the URL of your portal. It is the first bit after "https://".  In the screenshot below, the subdomain is "demopm5".
+
+<Frame>
+  ![Screenshot2025 05 21114010 Pn](/images/Screenshot2025-05-21114010.png)
+</Frame>
+
+### **Obtaining the Rentvine Credentials**
+
+Follow these steps to setup an API Key.
+
+Login to Rentvine, navigate to Settings\>Account\>User, Roles and API Keys, then go to **Api **tab.
+
+<Frame>
+  ![Image 20250514 201545 05 21 2025 11 46 AM Pn](/images/image-20250514-201545-05-21-2025_11_46_AM.png)
+</Frame>
+
+Click **New API Key**, then enter **“Latchel”** as the **Name** and select **“Administration”** as the **Role**.
+
+<Frame>
+  ![Image 20250514 201602 05 21 2025 11 50 AM Pn](/images/image-20250514-201602-05-21-2025_11_50_AM.png)
+</Frame>
+
+**Copy and paste the text** (do not take a screenshot) of the of the returned API Key and API Secret and send it to your Customer Success Manager, or Latchel product support contact. 
+
+<Frame>
+  ![Image 20250514 201526 05 21 2025 11 58 AM Pn](/images/image-20250514-201526-05-21-2025_11_58_AM.png)
+</Frame>
+
+### **Get Property and Resident Data from Rentvine**
+
+This step is only necessary if you already have existing property and resident records in Latchel. To avoid creating duplicate records when activating your Rentvine integration, it's essential for the Latchel Data Support Team to obtain the Property ID/Unit ID and Tenant ID from your Rentvine account. Please follow the steps below to retrieve this data.
+
+Request a CSV export of the “Lease Tenant” report by navigating to: **Reports \> Lease Tenants** in the Rentvine web app. Ensure that the Property ID and Unit ID columns are included, then click **Export** to download the report.
+
+<Frame>
+  ![Image 05 21 2025 12 17 PM Pn](/images/image-05-21-2025_12_17_PM.png)
+</Frame>
+
+Next, obtain the Tenant ID by going to: **Tenant Reports \> Tenants**. Make sure the Tenant ID column is selected, then click **Export** to download the report.
+
+<Frame>
+  ![Screenshot 2025 05 21 At 10 27 29 AM 05 21 2025 12 24 PM Pn](/images/Screenshot-2025-05-21-at-10-27-29-AM-05-21-2025_12_24_PM.png)
+</Frame>
+
+Finally, forward both of these reports to your Customer Success Manager or the Latchel Product Support team by emailing [team@latchel.com](mailto:team@latchel.com) or [success@latchel.com](mailto:success@latchel.com). You may include your API keys in the same email for convenience.
+
+### **What happens when a customer first activates their integration?**
+
+When an admin first activates the customer’s Rentvine integration nothing happens immediately. The integration will be active and will be scheduled for hourly imports.
+
+**A. Properties**
+
+The following Property fields are brought over from Buildium to Latchel. 
+
+| **Buildium Field** | **Value/Interpretation in Latchel** |
+| :----------------- | :---------------------------------- |
+| PropertyId         | ref_property_id                     |
+| UnitId             | ref_unit_id                         |
+| address            | address1                            |
+| address2           | address2                            |
+| city               | city                                |
+| stateID            | state                               |
+| postcalCode        | zip                                 |
+| blank              | criticalNote                        |
+| unit.isActive      | property.is_active                  |
+| {name: unit.name}  | integration_data                    |
+
+<Check>
+  **Automatic Property Reconcillation**
+
+  To ensure accurate customer billing Latchel runs on automated process each month to de-activate any active units in Latchel that no longer exist in Buildium. This process currently happens on the 27th at 3am PST. Learn more of how this works by going to [How Latchel Integration Works](/s/topic/0TO5e000000h9wqGAA/How-Latchel-Integration-Works).
+</Check>
+
+<Note>
+  When a property is **deactivated** through the reconcillation process, it will be logged to the property in Latchel as: 
+
+  ![Image 20231219 185054 05 21 2025 12 39 PM Pn](/images/image-20231219-185054-05-21-2025_12_39_PM.png)
+</Note>
+
+**B. Residents**
+
+The following resident fields are synced from Rentvine to Latchel. Currently, we sync all eligible residents during each sync. All residents on a property are included to ensure that any of them can submit a work order in Latchel.
+
+| **Rentvine Field** | **Value/Interpretation in Latchel** |
+| :----------------- | :---------------------------------- |
+| contactID          | ref_user_id                         |
+| name               | name                                |
+| email              | email                               |
+| phone              | Primary phone number\*              |
+| propertyId         | ref_property_id                     |
+| unitId             | ref_unit_id                         |
+| Move In Date       | move_in_date                        |
+| Move Out Date      | move_out_date                       |
+
+<Note>
+  **Previously-created residents**
+
+  Once a resident is created we only change a few things on subsequent syncs:
+
+  - Property/unit associations
+  - Move in / move out dates
+    - When a resident is passed their move-out date, we’ll mark them **inactive** at the relevant property in Latchel.
+</Note>
+
+<Info>
+  Latchel work orders and files do not sync to Rentvine at this time.
+</Info>
