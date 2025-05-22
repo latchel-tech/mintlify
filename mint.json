@@ -335,6 +335,16 @@
             "s/topic/0TO5e000000h9wqGAA/The-Webhook-Subscription",
             "s/topic/0TO5e000000h9wqGAA/How-to-Terminate-the-Gmail-Integration"
           ]
+        },
+        {
+          "group": "Resident Benefits Guides",
+          "pages": [
+            "s/topic/0TO5e000000h9wqGAA/Resident-Benefits-Guides",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Give-Your-Residents-Direct-Access-to-Their-Benefits-Dashboard",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Create-New-Resident-Benefit",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Modify-Custom-Resident-Benefit",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Embed-Your-Resident-Benefits-Dashboard-Directly-on-to-Your-Website"
+          ]
         }
       ]
     },  
