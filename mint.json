@@ -330,7 +330,33 @@
             "s/topic/0TO5e000000h9wqGAA/Managing-Severity-and-Responsibility-Settings",
             "s/topic/0TO5e000000h9wqGAA/How-to-Edit-Existing-Severity-and-Responsibility-Preset",
             "s/topic/0TO5e000000h9wqGAA/Export-Severity-Settings-as-a-CSV-File"
-            
+          ]
+        },
+        {
+          "group": "Integrations",
+          "pages": [
+            "s/topic/0TO5e000000h9wqGAA/Comprehensive-Integration-Guides",
+            "s/topic/0TO5e000000h9wqGAA/How-Latchel-Integration-Works",
+            "s/topic/0TO5e000000h9wqGAA/Latchel-Data-Sync-Extension-Reference-Guide",
+            "s/topic/0TO5e000000h9wqGAA/The-New-Latchel-Data-Sync-Extension",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Download-and-Activate-the-Latchel-Data-Sync",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Install-the-Latchel-Data-Sync-Extension",
+            "s/topic/0TO5e000000h9wqGAA/Updating-the-Latchel-Data-Sync-Extension",
+            "s/topic/0TO5e000000h9wqGAA/Navigating-the-Latchel-Data-Sync-Extension-New-Version",
+            "s/topic/0TO5e000000h9wqGAA/Navigating-the-Latchel-Data-Sync-Extension",
+            "s/topic/0TO5e000000h9wqGAA/Rent-Manager-Integration-Reference-Guide",
+            "s/topic/0TO5e000000h9wqGAA/Integrating-Rent-Manager-into-Latchel",
+            "s/topic/0TO5e000000h9wqGAA/Rent-Manager-Integration-Troubleshooting",
+            "s/topic/0TO5e000000h9wqGAA/Propertyware-Integration-Reference-Guide",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Activate-the-Client-Propertyware-Integration",
+            "s/topic/0TO5e000000h9wqGAA/Rentcheck-Integration",
+            "s/topic/0TO5e000000h9wqGAA/Yardi-Voyager-Standard-Interfaces-Setup",
+            "s/topic/0TO5e000000h9wqGAA/Buildium-Integration-Reference-Guide",
+            "s/topic/0TO5e000000h9wqGAA/Rentvine-Integration-Reference-Guide",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Generate-an-API-Key",
+            "s/topic/0TO5e000000h9wqGAA/API-Docs",
+            "s/topic/0TO5e000000h9wqGAA/The-Webhook-Subscription",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Terminate-the-Gmail-Integration"
           ]
         }
       ]
