@@ -143,6 +143,51 @@ The following resident fields are synced from Rentvine to Latchel. Currently, we
     - When a resident is passed their move-out date, we’ll mark them **inactive** at the relevant property in Latchel.
 </Note>
 
+**C. Work Orders**
+
+Unlike properties and residents, which only sync from Rentvine to Latchel, work orders sync both ways—Rentvine to Latchel and Latchel to Rentvine.
+
+- **Rentvine → Latchel**
+
+The Rentvine integration syncs work orders that have been created in the last 72 hours.
+
+| **Platform field**               | **Field/Interpretation in Latchel**                                                                                                                                                                                                   |
+| :------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Work order Number                | order_number                                                                                                                                                                                                                          |
+| Id                               | ref_job_id                                                                                                                                                                                                                            |
+| Description: first 50 characters | name                                                                                                                                                                                                                                  |
+| Description                      | Description                                                                                                                                                                                                                           |
+| scheduled Start Date             | scheduled_start                                                                                                                                                                                                                       |
+| Status                           | If the work order is for a vacant unit, set the status to “Scheduling with Vendor.” For occupied units, set it to “Diagnosing Issue.”  The platform’s status does not influence the initial status Latchel assigns to the work order. |
+| Priority                         | is_urgent is true if Priority is “High”                                                                                                                                                                                               |
+| ContactID or tenant ID           | ref_user_id                                                                                                                                                                                                                           |
+
+<Frame>
+  ![Maintenance Work Orders 05 22 2025 12 44 PM Pn](/images/Maintenance-Work-orders-05-22-2025_12_44_PM.png)
+</Frame>
+
+- **Latchel → Rentvine**
+
+Work orders are synced to Rentvine a few seconds after they are created in Latchel.
+
+| **Field in Latchel**    | **Field/Interpretation in Platform**                                                                  |
+| :---------------------- | :---------------------------------------------------------------------------------------------------- |
+| order_number            | Order number is synced back to Latchel and updated in Latchel to reflect the order number in Rentvine |
+| name \+ description     | description                                                                                           |
+| vendor_instructions     | Vendor Instructions                                                                                   |
+| is Shared With Tenant   | Entry Notes                                                                                           |
+| is Shared With Owner    | Vendor Id  Latchel vendor - we create and add a “Latchel Vendor” for this purpose                     |
+| priority ID             | if is_emergency: 3, else 2                                                                            |
+| work Orde Status ID     | always closed for now                                                                                 |
+| is Vacant               | is_vacant                                                                                             |
+| requested By Contact ID | tenant_id                                                                                             |
+| ref_property_id         | property ID                                                                                           |
+| ref_unit_id             | unit ID                                                                                               |
+
+<Frame>
+  ![Latchel 05 22 2025 12 45 PM Pn](/images/Latchel-05-22-2025_12_45_PM.png)
+</Frame>
+
 <Info>
-  Latchel work orders and files do not sync to Rentvine at this time.
+  Latchel files do not sync to Rentvine at this time.
 </Info>
