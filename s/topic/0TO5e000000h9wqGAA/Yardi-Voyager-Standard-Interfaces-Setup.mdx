@@ -1,62 +1,79 @@
 ---
-title: Yardi Voyager Standard Interfaces Setup
-description: "This help guide will provide you with the basic steps to set up your **Yardi Voyager interface with Latchel**. As an approved Yardi standard interfaces vendor, Latchel ensures that your property and resident data are always up-to-date, making your service requests seamless and organized. To learn more about how Latchel's interface works, visit our overview page for **[how Latchel keeps your data in sync](/s/topic/0TO5e000000h9wqGAA/How-Latchel-Integration-Works)**."
+title: "Yardi Voyager Standard Interfaces Setup"
+description: "This help guide will provide you with the basic steps to set up your **Yardi Voyager interface with Latchel**. As an approved Yardi standard interfaces vendor, Latchel ensures that your property and resident data are always up-to-date, making your service requests seamless and organized."
 ---
 
-Before proceeding, _it is critically important that the steps are conducted in the order defined below. Going out of order could cause syncing issues with your data in Latchel and/or Yardi_.
+
+<Warning>
+  Before proceeding, it is critically important that the steps are conducted in the order defined below. Going out of order could cause syncing issues with your data in Latchel and/or Yardi.
+</Warning>
 
 #### **Step 1 - Configuring the Vendor Options for Latchel**
 
-_**Menu Path:**_ _Basic iData Menu > Interfaces > Configuration > Review Interface Vendors > Interface Configuration_
+<Check>
+  **Menu Path:** Basic iData Menu \> Interfaces \> Configuration \> Review Interface Vendors \> Interface Configuration
+</Check>
 
-1.  **Confirm the vendor name appears in Voyager** under the appropriate Interface configuration. If vendor is not present, contact Yardi Technical Support to load the vendor package.
-2.  Select the **vendor name**.
-3.  Select the **options desired on the vendor configuration screen**. These options are based on client preferences and vendor requirements. The available options vary depending on the interface type.
-4.  **Save** the configuration options.
+1. **Confirm the vendor name appears in Voyager** under the appropriate Interface configuration. If vendor is not present, contact Yardi Technical Support to load the vendor package.
+2. Select the **vendor name**.
+3. Select the **options desired on the vendor configuration screen**. These options are based on client preferences and vendor requirements. The available options vary depending on the interface type.
+4. **Save** the configuration options.
 
 #### **Step 2 - Configure the Property or Property List**
 
-**For a Single Property** - _**Menu Path:** Setup > Property > Find Property > \[property code\] > Submit._
+<Check>
+  **<u>For a Single Property:</u>**
 
-1.  Click on **Functions** drop down menu. Click on **Interface Configuration**.
-2.  Click the appropriate **Interface type** under Interface Configuration (i.e. Vendor Invoicing).
-3.  **Highlight Latchel** under Available Agencies. Click **Select** and **Save**.
+  **Menu Path:** Setup \> Property \> Find Property \> [property code] \> Submit
+</Check>
 
-**For a Property List** - _**Menu Path:** Interfaces > Configuration > Bulk Property Configuration._
+1. Click on **Functions** drop down menu. Click on **Interface Configuration**.
+2. Click the appropriate **Interface type** under Interface Configuration (i.e. Vendor Invoicing).
+3. **Highlight Latchel** under Available Agencies. Click **Select** and **Save**.
 
-1.  Enter **property list** **code**.
-2.  Select **Interface Type** from drop down.
-3.  Select **Configure**.
-4.  **Highlight Latchel** from list of Available Agencies and click **Save**.
+<Check>
+  **<u>For a Property List:</u>**
+
+  **Menu Path:** Interfaces \> Configuration \> Bulk Property Configuration
+</Check>
+
+1. Enter **property list** **code**.
+2. Select **Interface Type** from drop down.
+3. Select **Configure**.
+4. **Highlight Latchel** from list of Available Agencies and click **Save**.
 
 #### **Step 3 - Configure the Interface User**
 
-_**Menu Path:** System Administration >Security > Add User_
+<Check>
+  **Menu Path:** System Administration \>Security \> Add User
+</Check>
 
-1.  Create a **new interface user** and link to a security group for the specific Interface Type. The security group should have **Read or Read/Write access** for appropriate web services permission(s). (e.g. Interfaces: Web Service – Common Data)
-2.  Enter the **property code** or **property list code** in the property field to allow interface user access to properties configured for Latchel.
-3.  Click on **Privileges** tab and select **Interface User**. This will give user access through the web services, but not the Voyager front end.
-4.  Click **Save**.
+1. Create a **new interface user** and link to a security group for the specific Interface Type. The security group should have **Read or Read/Write access** for appropriate web services permission(s). (e.g. Interfaces: Web Service – Common Data)
+2. Enter the **property code** or **property list code** in the property field to allow interface user access to properties configured for Latchel.
+3. Click on **Privileges** tab and select **Interface User**. This will give user access through the web services, but not the Voyager front end.
+4. Click **Save**.
 
 #### **Step 4 - Provide Access Information to Latchel**
 
-1.  Voyager URL (vendor will append the appropriate web services endpoint).
-2.  Interface username and password.
-3.  Database Name
-4.  Server Name (will always be the same as Database Name)
+1. Voyager URL (vendor will append the appropriate web services endpoint).
+2. Interface username and password.
+3. Database Name
+4. Server Name (will always be the same as Database Name)
 
-<Info>
-  **NOTE:** _You should always notify the third-party vendor of any changes to Voyager URL, database server or database name._
-</Info>
+<Note>
+  You should always notify the third-party vendor of any changes to Voyager URL, database server or database name.
+</Note>
 
 #### **Compatibility Requirements**
 
 To use Latchel as a Yardi standard interfaces vendor, customers **must have Voyager 7S** with the following **minimum plug-in versions**:
 
-* Interfaces PIv22
-* Common Data PIv19
-* Service Requests PIv15
+- Interfaces PIv22
+- Common Data PIv19
+- Service Requests PIv15
 
 If you have an earlier plug-in version, enter a support ticket to your Yardi Account Manager or team to request the vendor package for Latchel to be loaded to your database. This will make Latchel appear in your Yardi Voyager environment for configuration.
 
-_**For other questions about compatibility, and/or if assistance is needed with any step in this help article, please enter a support ticket to your Yardi Account Manager or team.**_
+<Tip>
+  For other questions about compatibility, and/or if assistance is needed with any step in this help article, please enter a support ticket to your Yardi Account Manager or team.
+</Tip>
