@@ -341,6 +341,27 @@
             "s/topic/0TO5e000000h9wqGAA/How-to-Modify-Custom-Resident-Benefit",
             "s/topic/0TO5e000000h9wqGAA/How-to-Embed-Your-Resident-Benefits-Dashboard-Directly-on-to-Your-Website"
           ]
+        },
+        {
+          "group": "Invoice and Payments",
+          "pages": [
+            "s/topic/0TO5e000000h9wqGAA/How-to-View-and-Search-for-Invoices",
+            "s/topic/0TO5e000000h9wqGAA/Understanding-the-Invoice-Auto-Approval-Threshold",
+            "s/topic/0TO5e000000h9wqGAA/Managing-the-Invoice-Auto-Approval-Threshold",
+            "s/topic/0TO5e000000h9wqGAA/Taking-Action-on-Needs-Approval-Invoices",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Add-Invoices-New-Experience",
+            "s/topic/0TO5e000000h9wqGAA/Invoicing-Preferred-Service-Provider-vs-LCN",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Set-the-Require-Detailed-Invoice-Setting",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Disable-Automatic-Invoice-Collection-from-Preferred-Service-Providers",
+            "s/topic/0TO5e000000h9wqGAA/How-to-update-your-Subscription-Payment-Method",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Update-the-Service-Provider-Payment-Method-on-File",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Turn-on-preferred-service-provider-payments",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Schedule-Service-Provider-Payments-in-Future-Date",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Override-Change-Service-Provider-Payment-Method-in-Property",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Override-Change-Service-Provider-Payment-Method-in-Portfolio",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Export-Your-Invoice-Data-to-a-CSV",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Download-a-Work-Order-Invoice-New-Experience"
+          ]
         }
       ]
     },  
