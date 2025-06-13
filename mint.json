@@ -147,13 +147,10 @@
       "group": "Property Managers Help Guides",
       "pages": [
         "s/topic/0TO5e000000h9wqGAA/top-property-manager-articles",
-        "s/topic/0TO5e000000h9wqGAA/Emergency-Outbound-Communication-Process",
-        "s/topic/0TO5e000000h9wqGAA/How-to-Set-up-an-On-Call-Rotation",
         "s/topic/0TO5e000000h9wqGAA/How-to-Opt-Into-the-Latchel-Contractor-Network",
         "s/topic/0TO5e000000h9wqGAA/How-to-Opt-Out-of-Latchel-Contractor-Network",
         "s/topic/0TO5e000000h9wqGAA/Latchel-Guarantee-and-Refund-Request-Policy",
         "s/topic/0TO5e000000h9wqGAA/How-to-Add-a-New-Company-User",
-        "s/topic/0TO5e000000h9wqGAA/Emergency-Escalations-Property-Damaging-and-Extreme-Habitability-Situations",
         "s/topic/0TO5e000000h9wqGAA/How-to-View-Resident-Work-Order-Links-New-Experience",
         "s/topic/0TO5e000000h9wqGAA/How-to-Upload-Files-to-a-Work-Order-for-Property-Manager-New-Experience",
         "s/topic/0TO5e000000h9wqGAA/How-to-Defer-a-Task-New-Experience",
@@ -168,9 +165,6 @@
         "s/topic/0TO5e000000h9wqGAA/How-to-Create-User-Groups",
         "s/topic/0TO5e000000h9wqGAA/How-to-Add-or-Update-Service-Provider-Instructions-on-a-Work-Order-New-Experience",
         "s/topic/0TO5e000000h9wqGAA/Self-Signup-Latchel-Standard",
-        "s/topic/0TO5e000000h9wqGAA/Emergency-Process-Quick-Guide",
-        "s/topic/0TO5e000000h9wqGAA/How-to-Contact-Latchel",
-        "s/topic/0TO5e000000h9wqGAA/Maintenance-Automation-Emergency-Vs-Non-Emergency",
         "s/topic/0TO5e000000h9wqGAA/How-to-Set-Service-Provider-as-a-VIP-Preferred-Service-Provider",
         "s/topic/0TO5e000000h9wqGAA/How-to-Remove-a-Preferred-Service-Provider-Priority-List",
         "s/topic/0TO5e000000h9wqGAA/How-to-Assign-LCN-Service-Provider-New-Experience",
@@ -188,7 +182,6 @@
         "s/topic/0TO5e000000h9wqGAA/How-to-Edit-Service-Provider-Skills",
         "s/topic/0TO5e000000h9wqGAA/How-to-Download-a-Work-Order-History-New-Experience",
         "s/topic/0TO5e000000h9wqGAA/How-To-Blacklist-a-Service-Provider",
-        "s/topic/0TO5e000000h9wqGAA/How-to-Restrict-Evening-Availability-for-Non-Emergency-Work-Orders",
         "s/topic/0TO5e000000h9wqGAA/How-to-Add-Manage-Service-Providers",
         "s/topic/0TO5e000000h9wqGAA/How-to-Add-a-Service-Provider-to-a-Property-that-is-Outside-of-Assigned-Territory-Zip-Code",
         "s/topic/0TO5e000000h9wqGAA/How-To-Specify-If-Your-Service-Provider-Handles-Emergencies-Non-Emergencies-Or-Both",
@@ -242,8 +235,6 @@
             "s/topic/0TO5e000000h9wqGAA/Adding-Your-Company-Address",
             "s/topic/0TO5e000000h9wqGAA/How-to-view-your-Latchel-Assigned-Phone-Number",
             "s/topic/0TO5e000000h9wqGAA/How-to-Manage-My-Own-Invoice-Notification-Settings",
-            "s/topic/0TO5e000000h9wqGAA/How-to-Send-Latchel-Pre-Dispatch-Instructions",
-            "s/topic/0TO5e000000h9wqGAA/How-to-Update-Your-Escalation-Contacts",
             "s/topic/0TO5e000000h9wqGAA/How-to-Configure-a-Property-with-Default-Access-Instructions",
             "s/topic/0TO5e000000h9wqGAA/Configuring-Portal-Settings",
             "s/topic/0TO5e000000h9wqGAA/Customize-Resident-Review-URL",
@@ -368,6 +359,20 @@
             "s/topic/0TO5e000000h9wqGAA/How-to-Update-the-Work-Order-Status-i-e-to-Scheduling-Pending-Completed-Canceled-New-Experience",
             "s/topic/0TO5e000000h9wqGAA/How-to-Update-the-Work-Order-Summary",
             "s/topic/0TO5e000000h9wqGAA/How-to-Set-Work-Order-Appointments-New-Experience"
+          ]
+        },
+        {
+          "group": "Emergency & Escalation Settings",
+          "pages": [
+            "s/topic/0TO5e000000h9wqGAA/Emergency-Escalations-Property-Damaging-and-Extreme-Habitability-Situations",
+            "s/topic/0TO5e000000h9wqGAA/Emergency-Outbound-Communication-Process",
+            "s/topic/0TO5e000000h9wqGAA/Emergency-Process-Quick-Guide",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Contact-Latchel",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Restrict-Evening-Availability-for-Non-Emergency-Work-Orders",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Set-up-an-On-Call-Rotation",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Update-Your-Escalation-Contacts",
+            "s/topic/0TO5e000000h9wqGAA/Maintenance-Automation-Emergency-Vs-Non-Emergency",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Send-Latchel-Pre-Dispatch-Instructions"
           ]
         }
       ]
