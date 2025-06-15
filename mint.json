@@ -147,27 +147,6 @@
       "group": "Property Managers Help Guides",
       "pages": [
         "s/topic/0TO5e000000h9wqGAA/top-property-manager-articles",
-        "s/topic/0TO5e000000h9wqGAA/Latchel-Guarantee-and-Refund-Request-Policy",
-        "s/topic/0TO5e000000h9wqGAA/How-to-View-Resident-Work-Order-Links-New-Experience",
-        "s/topic/0TO5e000000h9wqGAA/How-to-Add-Move-In-Move-Out-Dates",
-        "s/topic/0TO5e000000h9wqGAA/Self-Signup-Latchel-Standard",
-        "s/topic/0TO5e000000h9wqGAA/Managing-Latchel-Maintenance-Projects",
-        "s/topic/0TO5e000000h9wqGAA/How-to-Add-a-Property",
-        "s/topic/0TO5e000000h9wqGAA/How-to-Re-Enable-a-property",
-        "s/topic/0TO5e000000h9wqGAA/How-to-Remove-Properties",
-        "s/topic/0TO5e000000h9wqGAA/How-to-Add-Warranty-Information",
-        "s/topic/0TO5e000000h9wqGAA/How-to-Add-Manage-Residents",
-        "s/topic/0TO5e000000h9wqGAA/How-to-Enable-or-Disable-a-Resident-in-Latchel",
-        "s/topic/0TO5e000000h9wqGAA/How-to-Update-the-Resident-s-Availability",
-        "s/topic/0TO5e000000h9wqGAA/How-to-Create-Manage-Portfolios",
-        "s/topic/0TO5e000000h9wqGAA/How-to-Delete-a-Portfolio",
-        "s/topic/0TO5e000000h9wqGAA/How-to-Multi-Select-Portfolios",
-        "s/topic/0TO5e000000h9wqGAA/Configuration-Inheritance-Property-Portfolio-Company-Level",
-        "s/topic/0TO5e000000h9wqGAA/How-to-Copy-Company-or-Portfolio-Service-Provider-Prioritization",
-        "s/topic/0TO5e000000h9wqGAA/How-to-Approve-or-Deny-an-Estimate-or-a-Bid",
-        "s/topic/0TO5e000000h9wqGAA/How-to-Create-an-Owner-Profile-and-Assign-Property-Ownership",
-        "s/topic/0TO5e000000h9wqGAA/How-to-set-up-owners-who-manage-their-own-maintenance",
-        "s/topic/0TO5e000000h9wqGAA/How-to-Create-and-View-a-Bid-Request-for-a-Property",
         {
           "group": "Getting Started",
           "pages": [
@@ -198,6 +177,7 @@
           "pages": [
             "s/topic/0TO5e000000h9wqGAA/Account-Settings-Overview",
             "s/topic/0TO5e000000h9wqGAA/Adding-Your-Company-Address",
+            "s/topic/0TO5e000000h9wqGAA/Self-Signup-Latchel-Standard",
             "s/topic/0TO5e000000h9wqGAA/How-to-view-your-Latchel-Assigned-Phone-Number",
             "s/topic/0TO5e000000h9wqGAA/How-to-Manage-My-Own-Invoice-Notification-Settings",
             "s/topic/0TO5e000000h9wqGAA/How-to-Configure-a-Property-with-Default-Access-Instructions",
@@ -209,6 +189,28 @@
             "s/topic/0TO5e000000h9wqGAA/Set-Up-Non-Emergency-Schedule",
             "s/topic/0TO5e000000h9wqGAA/Managing-Severity-and-Responsibility-Settings",
             "s/topic/0TO5e000000h9wqGAA/How-to-Edit-Existing-Severity-and-Responsibility-Preset"
+          ]
+        },
+        {
+          "group": "Data Management & Configurations",
+          "pages": [
+            "s/topic/0TO5e000000h9wqGAA/How-to-Add-a-Property",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Re-Enable-a-property",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Remove-Properties",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Add-Warranty-Information",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Create-and-View-a-Bid-Request-for-a-Property",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Add-Manage-Residents",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Enable-or-Disable-a-Resident-in-Latchel",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Update-the-Resident-s-Availability",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Add-Move-In-Move-Out-Dates",
+            "s/topic/0TO5e000000h9wqGAA/How-to-View-Resident-Work-Order-Links-New-Experience",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Create-Manage-Portfolios",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Delete-a-Portfolio",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Multi-Select-Portfolios",
+            "s/topic/0TO5e000000h9wqGAA/Configuration-Inheritance-Property-Portfolio-Company-Level",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Copy-Company-or-Portfolio-Service-Provider-Prioritization",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Create-an-Owner-Profile-and-Assign-Property-Ownership",
+            "s/topic/0TO5e000000h9wqGAA/How-to-set-up-owners-who-manage-their-own-maintenance"
           ]
         },
         {
@@ -253,6 +255,7 @@
           "group": "Invoice and Payments",
           "pages": [
             "s/topic/0TO5e000000h9wqGAA/Invoice-and-Payments",
+            "s/topic/0TO5e000000h9wqGAA/Latchel-Guarantee-and-Refund-Request-Policy",
             "s/topic/0TO5e000000h9wqGAA/How-to-View-and-Search-for-Invoices",
             "s/topic/0TO5e000000h9wqGAA/Understanding-the-Invoice-Auto-Approval-Threshold",
             "s/topic/0TO5e000000h9wqGAA/Managing-the-Invoice-Auto-Approval-Threshold",
@@ -301,6 +304,7 @@
             "s/topic/0TO5e000000h9wqGAA/How-to-Use-the-Filter-Options-in-the-Work-Order-Tab-Page",
             "s/topic/0TO5e000000h9wqGAA/Work-Order-Status-Definitions-Maintenance-Page-Overview-New-Experience",
             "s/topic/0TO5e000000h9wqGAA/Duplicate-vs-Recall-Work-Order-Know-their-Difference",
+            "s/topic/0TO5e000000h9wqGAA/Self-Signup-Latchel-Standard",
             "s/topic/0TO5e000000h9wqGAA/How-to-Approve-or-Deny-a-Duplicate-Work-Order",
             "s/topic/0TO5e000000h9wqGAA/How-to-Add-a-New-Problem-Location-Setting-From-the-Work-Order-Page-New-Experience",
             "s/topic/0TO5e000000h9wqGAA/How-to-Cancel-a-Work-Order-New-Experience",
@@ -323,7 +327,8 @@
             "s/topic/0TO5e000000h9wqGAA/How-to-Update-the-Skill-Required-on-a-Work-Order-New-Experience",
             "s/topic/0TO5e000000h9wqGAA/How-to-Update-the-Work-Order-Status-i-e-to-Scheduling-Pending-Completed-Canceled-New-Experience",
             "s/topic/0TO5e000000h9wqGAA/How-to-Update-the-Work-Order-Summary",
-            "s/topic/0TO5e000000h9wqGAA/How-to-Set-Work-Order-Appointments-New-Experience"
+            "s/topic/0TO5e000000h9wqGAA/How-to-Set-Work-Order-Appointments-New-Experience",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Approve-or-Deny-an-Estimate-or-a-Bid"
           ]
         },
         {
