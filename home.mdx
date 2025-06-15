@@ -1,0 +1,81 @@
+---
+mode: 'custom'
+---
+
+export function openSearch() {
+  document.getElementById('search-bar-entry').click();
+}
+
+<div className="relative w-full flex items-center justify-center" style={{ height: '20rem', overflow: 'hidden'}}>
+  <div className="absolute inset-0 bg-primary dark:bg-primary-light" style={{opacity: 0.05 }}></div>
+  <div style={{ position: 'absolute', textAlign: 'center', padding: '0 1rem' }}>
+    <div
+      className="text-gray-900 dark:text-gray-200"
+      style={{
+       fontWeight: '600',
+       fontSize: '28px',
+       margin: '0',
+      }}
+    >
+      What can we help you with?
+    </div>
+    <div className="flex items-center justify-center">
+    <button
+      type="button"
+      className="hidden w-full lg:flex items-center text-sm leading-6 rounded-lg py-1.5 pl-2.5 pr-3 shadow-sm text-gray-400 dark:text-white/50 bg-background-light dark:bg-background-dark dark:brightness-[1.1] dark:ring-1 dark:hover:brightness-[1.25] ring-1 ring-gray-400/20 hover:ring-gray-600/25 dark:ring-gray-600/30 dark:hover:ring-gray-500/30 focus:outline-primary"
+      id="home-search-entry"
+      style={{
+        marginTop: '2rem',
+        maxWidth: '28rem',
+      }}
+      onClick={openSearch}
+    >
+      <svg
+        className="h-4 w-4 ml-1.5 mr-3 flex-none bg-gray-500 hover:bg-gray-600 dark:bg-white/50 dark:hover:bg-white/70"
+        style={{
+         maskImage:
+           'url("https://mintlify.b-cdn.net/v6.5.1/solid/magnifying-glass.svg")',
+         maskRepeat: 'no-repeat',
+         maskPosition: 'center center',
+        }}
+      />
+
+      Search the Help Center...
+    </button>
+    </div>
+  </div>
+</div>
+
+<div
+  style={{marginTop: '2rem', marginBottom: '8rem', maxWidth: '70rem', marginLeft: 'auto',
+   marginRight: 'auto', paddingLeft: '1.25rem',
+   paddingRight: '1.25rem' }}
+>
+
+<Card title="Property Manager Help Categories" icon="house-building" iconType="duotone" href="/s/topic/0TO5e000000h9wqGAA/property-manager-guides">
+   [Getting Started with Latchel](/s/topic/0TO5e000000h9wqGAA/Getting-Started)More actions
+  - [Dashboard Overview](/s/topic/0TO5e000000h9wqGAA/Dashboard-2-0)
+  - [Account Settings](/s/topic/0TO5e000000h9wqGAA/Account-Settings-Overview)
+  - [Data Management & Configurations](/s/topic/0TO5e000000h9wqGAA/Data-Management-Configurations)
+  - [Integrations](/s/topic/0TO5e000000h9wqGAA/Comprehensive-Integration-Guides)
+  - [Resident Benefits Guides](/s/topic/0TO5e000000h9wqGAA/Resident-Benefits-Guides)
+  - [Invoice & Payments](/s/topic/0TO5e000000h9wqGAA/Invoice-and-Payments)
+  - [Communications & Notifications](/s/topic/0TO5e000000h9wqGAA/Communications-and-Notifications)
+  - [Work Order Management](/s/topic/0TO5e000000h9wqGAA/Work-Order-Management)
+  - [Emergency & Escalation Settings](/s/topic/0TO5e000000h9wqGAA/Emergency-and-Escalation-Settings)
+  - [Preferred Service Provider Settings](/s/topic/0TO5e000000h9wqGAA/Preferred-Service-Provider-Settings)
+  - [Task Management](/s/topic/0TO5e000000h9wqGAA/Task-Management)
+  - [Users](/s/topic/0TO5e000000h9wqGAA/Users)
+  - [Files & Reports](/s/topic/0TO5e000000h9wqGAA/Files-and-Reports)
+</Card>
+
+<Card title="Resident Help Categories" icon="hand-holding-heart" iconType="duotone" href="/s/topic/0TO5e000000h9wrGAA/resident-help-guides">
+  - [Resident Dashboard Overview](/s/topic/0TO5e000000h9wrGAA/Resident-Dashboard-Overview)
+  - [Comprehensive Resident Help Guides](/s/topic/0TO5e000000h9wrGAA/Comprehensive-Resident-Help-Guides)
+  - [Maintenance Request Guides](/s/topic/0TO5e000000h9wrGAA/Maintenance-Request-Guides-Overview)
+  - [Resident Benefits Guides](/s/topic/0TO5e000000h9wrGAA/Resident-Benefits-Guides-Overview)
+</Card>
+
+<Card title="Service Provider Articles" icon="screwdriver-wrench" iconType="duotone" href="/s/topic/0TO5e000000h9wpGAA/service-provider-help-guides">
+
+</Card>
