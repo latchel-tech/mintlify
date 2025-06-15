@@ -148,19 +148,14 @@
       "pages": [
         "s/topic/0TO5e000000h9wqGAA/top-property-manager-articles",
         "s/topic/0TO5e000000h9wqGAA/Latchel-Guarantee-and-Refund-Request-Policy",
-        "s/topic/0TO5e000000h9wqGAA/How-to-Add-a-New-Company-User",
         "s/topic/0TO5e000000h9wqGAA/How-to-View-Resident-Work-Order-Links-New-Experience",
         "s/topic/0TO5e000000h9wqGAA/How-to-Upload-Files-to-a-Work-Order-for-Property-Manager-New-Experience",
         "s/topic/0TO5e000000h9wqGAA/How-to-Download-or-Manage-Files-from-Work-Orders-New-Experience",
         "s/topic/0TO5e000000h9wqGAA/How-to-Add-Move-In-Move-Out-Dates",
-        "s/topic/0TO5e000000h9wqGAA/How-to-Create-User-Groups",
         "s/topic/0TO5e000000h9wqGAA/Self-Signup-Latchel-Standard",
-        "s/topic/0TO5e000000h9wqGAA/How-to-Change-Reset-the-Password-of-a-Latchel-User-s-Login",
-        "s/topic/0TO5e000000h9wqGAA/How-to-Update-a-Company-User-s-Contact-Information",
         "s/topic/0TO5e000000h9wqGAA/How-to-Sync-Work-Order-Attachments-from-Latchel-to-PropertyWare-New-Experience",
         "s/topic/0TO5e000000h9wqGAA/How-to-Export-Properties",
         "s/topic/0TO5e000000h9wqGAA/How-to-Export-All-Work-Orders-New-Experience",
-        "s/topic/0TO5e000000h9wqGAA/How-to-Edit-Service-Provider-Skills",
         "s/topic/0TO5e000000h9wqGAA/How-to-Download-a-Work-Order-History-New-Experience",
         "s/topic/0TO5e000000h9wqGAA/Managing-Latchel-Maintenance-Projects",
         "s/topic/0TO5e000000h9wqGAA/How-to-Add-a-Property",
@@ -384,6 +379,15 @@
             "s/topic/0TO5e000000h9wqGAA/How-to-Defer-a-Task-New-Experience",
             "s/topic/0TO5e000000h9wqGAA/How-to-Create-a-Task-New-Experience",
             "s/topic/0TO5e000000h9wqGAA/How-to-Complete-a-Task-New-Experience"
+          ]
+        },
+        {
+          "group": "Users",
+          "pages": [
+            "s/topic/0TO5e000000h9wqGAA/How-to-Add-a-New-Company-User",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Create-User-Groups",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Change-Reset-the-Password-of-a-Latchel-User-s-Login",
+            "s/topic/0TO5e000000h9wqGAA/How-to-Update-a-Company-User-s-Contact-Information"
           ]
         }
       ]
