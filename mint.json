@@ -79,7 +79,7 @@
   "navigation": [
     {
       "group": "Home",
-      "pages": ["home"]
+      "pages": ["home-old"]
     },
     {
       "group": "Service Provider Help Guides",
