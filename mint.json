@@ -208,8 +208,7 @@
             "s/topic/0TO5e000000h9wqGAA/How-to-Add-Emergency-Temperature-Thresholds",
             "s/topic/0TO5e000000h9wqGAA/Set-Up-Non-Emergency-Schedule",
             "s/topic/0TO5e000000h9wqGAA/Managing-Severity-and-Responsibility-Settings",
-            "s/topic/0TO5e000000h9wqGAA/How-to-Edit-Existing-Severity-and-Responsibility-Preset",
-            "s/topic/0TO5e000000h9wqGAA/Export-Severity-Settings-as-a-CSV-File"
+            "s/topic/0TO5e000000h9wqGAA/How-to-Edit-Existing-Severity-and-Responsibility-Preset"
           ]
         },
         {
@@ -392,7 +391,8 @@
             "s/topic/0TO5e000000h9wqGAA/How-to-Download-or-Manage-Files-from-Work-Orders-New-Experience",
             "s/topic/0TO5e000000h9wqGAA/How-to-Export-Properties",
             "s/topic/0TO5e000000h9wqGAA/How-to-Export-All-Work-Orders-New-Experience",
-            "s/topic/0TO5e000000h9wqGAA/How-to-Download-a-Work-Order-History-New-Experience"
+            "s/topic/0TO5e000000h9wqGAA/How-to-Download-a-Work-Order-History-New-Experience",
+            "s/topic/0TO5e000000h9wqGAA/Export-Severity-Settings-as-a-CSV-File"
           ]
         }
       ]
