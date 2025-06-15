@@ -82,7 +82,7 @@
       "pages": ["home"]
     },
     {
-      "group": "Top Service Provider Articles",
+      "group": "Service Provider Help Guides",
       "pages": [
         "s/topic/0TO5e000000h9wpGAA/service-provider-help-guides",
         "s/topic/0TO5e000000h9wpGAA/How-to-Reject-a-Work-Order-Service-Provider",
@@ -146,7 +146,7 @@
     {
       "group": "Property Managers Help Guides",
       "pages": [
-        "s/topic/0TO5e000000h9wqGAA/top-property-manager-articles",
+        "s/topic/0TO5e000000h9wqGAA/property-manager-guides",
         {
           "group": "Getting Started",
           "pages": [
