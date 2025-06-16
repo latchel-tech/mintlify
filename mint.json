@@ -54,6 +54,10 @@
       "url": "s/topic/0TO5e000000h9wpGAA"
     },
     {
+      "name": "Product Updates",
+      "url": "s/topic/0TO5e000000h9wsGAA"
+    },
+    {
       "name": "API Reference",
       "url": "reference"
     }
@@ -80,6 +84,12 @@
     {
       "group": "Home",
       "pages": ["home"]
+    },
+    {
+      "group": "Latchel Newsletter",
+      "pages": [
+        "s/topic/0TO5e000000h9wsGAA/latchel-newsletter"
+      ]
     },
     {
       "group": "Service Provider Help Guides",
