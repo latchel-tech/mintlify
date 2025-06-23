@@ -106,25 +106,50 @@
       "group": "Service Provider Help Guides",
       "pages": [
         "s/topic/0TO5e000000h9wpGAA/service-provider-help-guides",
-        "s/topic/0TO5e000000h9wpGAA/A-Guide-in-Joining-Latchel-Contractor-Network",
-        "s/topic/0TO5e000000h9wpGAA/Accessing-your-Latchel-portal",
-        "s/topic/0TO5e000000h9wpGAA/An-Overview-of-the-Service-Provider-Log-In-Dashboard",
-        "s/topic/0TO5e000000h9wpGAA/Resetting-Your-Latchel-Password-Service-Provider",
-        "s/topic/0TO5e000000h9wpGAA/How-can-a-Service-Provider-Add-Their-Bank-Account-Information",
-        "s/topic/0TO5e000000h9wpGAA/Managing-Service-Provider-Users",
-        "s/topic/0TO5e000000h9wpGAA/Google-Calendar-Integration-Service-Provider",
-        "s/topic/0TO5e000000h9wpGAA/A-Service-Provider-s-Guide-in-Updating-a-Work-Order",
-        "s/topic/0TO5e000000h9wpGAA/How-to-Accept-and-Schedule-Work-Orders",
-        "s/topic/0TO5e000000h9wpGAA/How-can-a-VIP-Service-Provider-Accept-or-Schedule-a-Work-Order",
-        "s/topic/0TO5e000000h9wpGAA/How-Service-Providers-Reschedule-a-Work-Order-in-Latchel",
-        "s/topic/0TO5e000000h9wpGAA/Accepting-Scheduling-Work-Order-for-Another-Service-Provider-User-Within-the-Company",
-        "s/topic/0TO5e000000h9wpGAA/How-Service-Providers-View-their-Work-Order-Calendar",
-        "s/topic/0TO5e000000h9wpGAA/How-to-Move-Work-Orders-Forward-When-Your-Action-is-Required",
-        "s/topic/0TO5e000000h9wpGAA/How-to-Reject-a-Work-Order-Service-Provider",
-        "s/topic/0TO5e000000h9wpGAA/How-Can-a-Service-Provider-Submit-an-Estimate-or-a-Bid",
-        "s/topic/0TO5e000000h9wpGAA/How-to-Add-Images-Files-to-a-Work-Order",
-        "s/topic/0TO5e000000h9wpGAA/How-to-Create-an-Invoice",
-        "s/topic/0TO5e000000h9wpGAA/How-to-Upload-an-Invoice"
+        {
+          "group": "Getting Started",
+          "pages": [
+            "s/topic/0TO5e000000h9wpGAA/Get-Started-Service-Provider",
+            "s/topic/0TO5e000000h9wpGAA/A-Guide-in-Joining-Latchel-Contractor-Network",
+            "s/topic/0TO5e000000h9wpGAA/Accessing-your-Latchel-portal",
+            "s/topic/0TO5e000000h9wpGAA/An-Overview-of-the-Service-Provider-Log-In-Dashboard",
+            "s/topic/0TO5e000000h9wpGAA/Resetting-Your-Latchel-Password-Service-Provider"
+          ]
+        },
+        {
+          "group": "Managing Your Account",
+          "pages": [
+            "s/topic/0TO5e000000h9wpGAA/Managing-Your-Account-Service-Provider",
+            "s/topic/0TO5e000000h9wpGAA/How-can-a-Service-Provider-Add-Their-Bank-Account-Information",
+            "s/topic/0TO5e000000h9wpGAA/Managing-Service-Provider-Users",
+            "s/topic/0TO5e000000h9wpGAA/Google-Calendar-Integration-Service-Provider"
+          ]
+        },
+        {
+          "group": "Work Order Management",
+          "pages": [
+            "s/topic/0TO5e000000h9wpGAA/Work-Order-Management-Service-Providers",
+            "s/topic/0TO5e000000h9wpGAA/A-Service-Provider-s-Guide-in-Updating-a-Work-Order",
+            "s/topic/0TO5e000000h9wpGAA/How-to-Accept-and-Schedule-Work-Orders",
+            "s/topic/0TO5e000000h9wpGAA/How-can-a-VIP-Service-Provider-Accept-or-Schedule-a-Work-Order",
+            "s/topic/0TO5e000000h9wpGAA/How-Service-Providers-Reschedule-a-Work-Order-in-Latchel",
+            "s/topic/0TO5e000000h9wpGAA/Accepting-Scheduling-Work-Order-for-Another-Service-Provider-User-Within-the-Company",
+            "s/topic/0TO5e000000h9wpGAA/How-Service-Providers-View-their-Work-Order-Calendar",
+            "s/topic/0TO5e000000h9wpGAA/How-to-Move-Work-Orders-Forward-When-Your-Action-is-Required",
+            "s/topic/0TO5e000000h9wpGAA/How-to-Reject-a-Work-Order-Service-Provider"
+          ]
+        },
+        {
+          "group": "Estimates, Invoicing & Documentation",
+          "pages": [
+            "s/topic/0TO5e000000h9wpGAA/Estimates-Invoicing-Documentation-Service-Provider",
+            "s/topic/0TO5e000000h9wpGAA/How-Can-a-Service-Provider-Submit-an-Estimate-or-a-Bid",
+            "s/topic/0TO5e000000h9wpGAA/How-to-Add-Images-Files-to-a-Work-Order",
+            "s/topic/0TO5e000000h9wpGAA/How-to-Create-an-Invoice",
+            "s/topic/0TO5e000000h9wpGAA/How-to-Upload-an-Invoice"
+          ]
+        },
+        "s/topic/0TO5e000000h9wpGAA/Comprehensive-Service-Provider-Guides"
       ]
     },
     {
