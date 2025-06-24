@@ -1,56 +1,52 @@
 ---
-title: Propertyware Integration Reference Guide
+title: "Propertyware Integration Reference Guide"
 description: "Once the integration is active, it will allow groupings of properties. Latchel supports enterprise accounts as long as all the properties the property manager wants to sync with Latchel are in a single location. Latchel does not currently support syncing across multiple locations."
-mode: wide
 ---
 
-To learn more about activating the Propertyware integration with Latchel, please visit this link: [How to Activate the Client Propertyware Integration](/s/topic/0TO5e000000h9wqGAA/How-to-Activate-the-Client-Propertyware-Integration)**.**
+**First, you need to learn about activating Propertyware integration with Latchel. Please visit: **
 
-#### **This Integration Accomplishes the Following**
+<Card title="How to Activate the Client Propertyware Integration" icon="cloud-check" iconType="duotone" href="/s/topic/0TO5e000000h9wqGAA/How-to-Activate-the-Client-Propertyware-Integration">
+  Follow these instructions to turn on the Propertyware integration within your Latchel account.
+</Card>
+
+### **Propertyware Integration Accomplishes the Following**
 
 1. **Properties:** Property fields are automatically brought over from Propertyware to Latchel via initial sync with a two-hour interval.
-
 2. **Residents:** For both initial and regular sync, only residents with active leases are included on the imports for initial and ongoing sync. Much like properties, resident details are also synced with a two-hour interval
-
 3. **Work Orders:** Work orders are excluded from all syncs if the owner's email does not match the email used to access Propertyware (as supplied when setting up the integration).
 
-**Each work order is:**
+   <Check>
+     **Each work order is:**
+     - Assigned to a property manager based on the property manager user ID related to the property
+     - Linked to an existing property & unit in Latchel 
+     - If a resident's information is supplied, the work order will also be assigned to an existing resident in Latchel.
+     - Photos, Calls, SMS Logs, and Invoices are automatically uploaded when the work order is complete.
+   </Check>
+4. **Owners, and Service Providers:** These are not automatically synced but an option to upload a (.)csv file is available.
 
-* Assigned to a property manager based on the property manager user ID related to the property
+### **Two Directions of Data Desynchronization After the Initial Sync**
 
-* Linked to an existing property & unit in Latchel 
+Subsequent syncs will look for any data that was created or updated **within the last 72 hours**. The syncs run every hour, starting sometime in the first 5 minutes of the hour, and may take between 15-45 minutes to complete. 
 
-* If a resident's information is supplied, the work order will also be assigned to an existing resident in Latchel.
+- **Propertyware ----\> Latchel**
+- **Latchel ----\> Propertyware**
 
-* Photos, Calls, SMS Logs, and Invoices are automatically uploaded when the work order is complete.
-
-1. **Owners, and Service Providers:** These are not automatically synced but an option to upload a (.)csv file is available.
-
-#### **Two Directions of Data Desynchronization After the Initial Sync**
-
-#### Subsequent syncs will look for any data that was created or updated **within the last 72 hours**. The syncs run every hour, starting sometime in the first 5 minutes of the hour, and may take between 15-45 minutes to complete. 
-
-**A. Propertyware ----> Latchel**
+### **Propertyware ----\> Latchel**
 
 **I. Newly Created Data**
 
 1. **Properties and Residents -** New properties, and residents will sync all information to Latchel the same rule as the initial sync.
-
 2. **Work Order** - In order for new work orders to sync to Latchel, the “**Managed By**” field must be assigned to the Latchel user in Propertyware. There is no way to automatically have all of the “Managed By” fields filled out when a maintenance request is submitted. It has to be manually done by someone on the team. Normally:
+   - **When a resident submits the WO**, the Managed By field will be blank.
+   - **When a Propertyware user creates the WO**, the Managed By defaults to the user that created the WO.
 
-   * When a **resident submits the WO**, the Managed By field will be **blank**.
-
-   * When a **Propertyware user creates the WO**, the Managed By **defaults to the user that created the WO**.
-
-**To customize the "Managed By" field:**
-
-* Go to your Settings.
-
-* Go to Customize Maintenance/Maintenance Settings.
-
-* There should be a “Managed By” option where you can pick the default user (which could be the Latchel user).
-
-1. **Leases -** The lease sync runs at **11:30 pm UTC every night** and is thus synchronized from Propertyware to Latchel once a day.
+   <Check>
+     **To customize the "Managed By" field:**
+     - Go to your Settings.
+     - Go to Customize Maintenance/Maintenance Settings.
+     - There should be a “Managed By” option where you can pick the default user (which could be the Latchel user).
+   </Check>
+3. **Leases -** The lease sync runs at **11:30 pm UTC every night** and is thus synchronized from Propertyware to Latchel once a day.
 
 **II. Existing or Previously Created Data**
 
@@ -64,50 +60,40 @@ To ensure accurate customer billing Latchel runs on automated process each month
   ![](/images/Propertywareupdated.png)
 </Frame>
 
-Customers can view information about recently de-activated units on the Reports page. They can also export a list of the units deleted in the most recent snapshot.&#x20;
-
-<Frame>
-  ![](/images/rtaImage-346.jpg)
-</Frame>
-
 When a property is deactivated through this process. It will be logged to the property in Latchel.
 
 <Frame>
   ![](/images/rtaImage-347.jpg)
 </Frame>
 
-<Info>
-  **NOTE:** *Properties that were manually disabled in Latchel, whether requested or not, will not automatically reactivate, even if the status of the property in Propertyware is still active.*
-</Info>
+<Note>
+  Properties that were manually disabled in Latchel, whether requested or not, will not automatically reactivate, even if the status of the property in Propertyware is still active.
+</Note>
 
-1. **Residents -** The integration will not currently update contact information, name nor “**active**” status.Once a resident is created a two things will change on the subsequent sync:
-
-   * The property and unit the resident is associated with
-
-   * The move\_in and move\_out dates. Any issues with move in/out dates needs to be resolved in Propertyware when an integration is in place. These fields can be found on the tenant's lease.
+2. **Residents -** The integration will not currently update contact information, name nor “**active**” status.Once a resident is created a two things will change on the subsequent sync:
+   - The property and unit the resident is associated with
+   - The move_in and move_out dates. Any issues with move in/out dates needs to be resolved in Propertyware when an integration is in place. These fields can be found on the tenant's lease.
 
 <Frame>
   ![](/images/rtaImage-348.jpg)
 </Frame>
 
-1. **Work Orders (WO) -** The integration will not update any fields on previously created or existing work orders.
+3. **Work Orders (WO) -** The integration will not update any fields on previously created or existing work orders.
+4. **Leases -** We update all values if it is an existing lease. So whatever new values come in from the sync would override the old ones.
 
-2. **Leases -** We update all values if it is an existing lease. So whatever new values come in from the sync would override the old ones.
-
-**B. Latchel ----> Propertyware**
+### **Latchel ----\> Propertyware**
 
 1. **Properties and Residents -** Manually created properties and residents in Latchel will not sync to Propertyware. Hence, the option to create new properties and residents in the Latchel console is unavailable.
-
 2. **Work Orders -** If a work order (job) is created in the Latchel console it will automatically trigger a sync to also create it in Propertyware (PW). Updating that work order (job) in Latchel will automatically sync over the changes from Latchel to PW.
 
 **Work Order Sync Status**
 
-When a customer is on an *active* integration, an indication will show at the top of each work order whether or not the WO was successfully sync’d with the customer’s PMS. Example below.
+When a customer is on an _active_ integration, an indication will show at the top of each work order whether or not the WO was successfully sync’d with the customer’s PMS. Example below.
 
 <Frame>
-  <img src="/images/rtaImage-349.jpg" />
+  ![](/images/rtaImage-349.jpg)
 </Frame>
 
-#### **Manually Sync WO**
+### **Manually Sync WO**
 
-Customers can manually trigger a **Latchel ----> Platform** sync by going to the **Action** menu and clicking **Sync Now**. This will manually push the WO to the customer’s platform.
+Customers can manually trigger a **Latchel ----\> Platform** sync by going to the **Action** menu and clicking **Sync Now**. This will manually push the WO to the customer’s platform.
