@@ -1,10 +1,11 @@
 ---
 title: "Configuration Inheritance (Property, Portfolio, & Company Level)"
 description: "Latchel gives you many customization options for dispatching. Each of these configurations can be done at the Company Level (highest), Portfolio Level (lower), or Property Level (lowest). Configurations set at the Company Level are automatically applied to lower levels (Portfolio & Property)."
-mode: "wide"
 ---
 
-You can then use the inherited configurations of the level above or **override** the inherited configurations. As we discussed, Latchel has 3 tiers- Property Level configurations will always override Portfolio Level & Company Level configurations. Portfolio Level configurations will always override the Company Level configurations. Please see the diagram below to learn about these inheritance rules (_Budget Limits were used as an example_):
+You can then use the inherited configurations of the level above or **override** the inherited configurations. As we discussed, Latchel has 3 tiers- Property Level configurations will always override Portfolio Level & Company Level configurations. Portfolio Level configurations will always override the Company Level configurations. 
+
+**Please see the diagram below to learn about these inheritance rules (_Budget Limits were used as an example_):**
 
 <Frame>
   ![](/images/rtaImage-775.jpg)
@@ -20,7 +21,11 @@ You can choose to override inheritance (e.g. don’t inherit at all) and turn th
 
 - This means we will only look to dispatch Service Providers that are prioritized for that portfolio or property. We will NOT look at parent-level Service Provider prioritization.
 
-You can also “copy” the parent-level preferred Service Provider list to re-arrange priorities entirely (this overrides inheritance and makes it easier to start with a pre-existing list).
+You can also **“copy”** the parent-level preferred Service Provider list to re-arrange priorities entirely.
+
+<Warning>
+  Copying the parent-level preferred service provider list will override the inheritance and makes it easier to start with pre-existing list.
+</Warning>
 
 <Note>
   The **“copy”** must be maintained separately from the company or portfolio levels. You will have 2 independent lists to manage. Preferences updates and the level that was copied will NOT transfer to the level that received the copied priorities.
