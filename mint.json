@@ -163,14 +163,14 @@
           "pages": [
             "s/topic/0TO5e000000h9wrGAA/Maintenance-Request-Guides-Overview",
             "s/topic/0TO5e000000h9wrGAA/How-can-a-Resident-Submit-a-Maintenance-Request",
+            "s/topic/0TO5e000000h9wrGAA/Requesting-Assistance-from-Latchel-Via-Work-Order",
+            "s/topic/0TO5e000000h9wrGAA/How-can-a-Resident-Confirm-Completion-of-a-Work-Order",
+            "s/topic/0TO5e000000h9wrGAA/Rating-Completed-Maintenance-Request-Service",
+            "s/topic/0TO5e000000h9wrGAA/How-can-a-Resident-Report-an-Incomplete-Request",
             "s/topic/0TO5e000000h9wrGAA/How-can-a-Resident-View-or-Update-Work-Orders",
             "s/topic/0TO5e000000h9wrGAA/How-can-a-Resident-Update-Maintenance-Schedule-Availability",
-            "s/topic/0TO5e000000h9wrGAA/How-can-a-Resident-Report-an-Incomplete-Request",
-            "s/topic/0TO5e000000h9wrGAA/Requesting-Assistance-from-Latchel-Via-Work-Order",
             "s/topic/0TO5e000000h9wrGAA/How-can-a-Resident-Add-Images-and-Files-on-a-Work-Order",
-            "s/topic/0TO5e000000h9wrGAA/How-can-a-Resident-Confirm-Completion-of-a-Work-Order",
             "s/topic/0TO5e000000h9wrGAA/Cancelling-A-Work-Order-Resident",
-            "s/topic/0TO5e000000h9wrGAA/Rating-Completed-Maintenance-Request-Service",
             "s/topic/0TO5e000000h9wrGAA/How-can-a-Resident-Generate-Work-Order-Details-in-PDF"
           ]
         },
@@ -179,11 +179,11 @@
           "pages": [
             "s/topic/0TO5e000000h9wrGAA/Resident-Benefits-Guides-Overview",
             "s/topic/0TO5e000000h9wrGAA/Accessing-Your-Resident-Benefits-Hub",
-            "s/topic/0TO5e000000h9wrGAA/How-can-Residents-Submit-Benefits-Through-Latchel",
-            "s/topic/0TO5e000000h9wrGAA/Resident-Benefit-Lockout-Reimbursement",
-            "s/topic/0TO5e000000h9wrGAA/ACH-Setup-Through-Ramp",
             "s/topic/0TO5e000000h9wrGAA/Resident-Benefit-Drain-Pack-Instructions",
-            "s/topic/0TO5e000000h9wrGAA/FAQ-Air-Filters-for-Residents"
+            "s/topic/0TO5e000000h9wrGAA/How-can-Residents-Submit-Benefits-Through-Latchel",
+            "s/topic/0TO5e000000h9wrGAA/FAQ-Air-Filters-for-Residents",
+            "s/topic/0TO5e000000h9wrGAA/Resident-Benefit-Lockout-Reimbursement",
+            "s/topic/0TO5e000000h9wrGAA/ACH-Setup-Through-Ramp"
           ]
         }
       ]
