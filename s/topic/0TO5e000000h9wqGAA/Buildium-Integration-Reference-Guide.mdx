@@ -54,7 +54,13 @@ Save the CSV report to your computer when prompted. Then, forward the report to 
 
   2. **Latchel** <Icon icon="arrow-right-long" iconType="sharp-duotone-solid" color="#ff9b8a" /> **Buildium**
 
-  - **Work Orders:** Work orders are synced to Buildium a few seconds after they are created in Latchel. Unfortunately, the Buildium API currently doesn’t allow Latchel to retrieve the Buildium work order number or update the status of tasks or work orders.
+  - **Work Orders:** Work orders are typically synced to Buildium a few seconds after they are created. Unfortunately, the Buildium API currently doesn’t allow Latchel to retrieve the Buildium work order number or update the status of tasks or work orders.
+
+  <Note>
+    In Latchel, tasks are used to help property managers or admins stay on top of what needs to get done. In Buildium, tasks also refer to work that needs attention on a property—but they’re separate from Buildium’s actual work orders.
+
+    When a work order is created in Latchel, we also create a matching task in Buildium. So essentially, **a Latchel work order combines both a task and a work order from Buildium** to keep everything in sync.
+  </Note>
   - **Files:** Syncing files to Buildium is currently unsupported.
 </Accordion>
 
