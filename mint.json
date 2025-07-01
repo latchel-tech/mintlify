@@ -289,6 +289,13 @@
           ]
         },
         {
+          "group": "Projects & Inspections",
+          "pages": [
+            "s/topic/0TO5e000000h9wqGAA/Managing-Latchel-Maintenance-Projects",
+            "s/topic/0TO5e000000h9wqGAA/Managing-Latchel-Inspections"
+          ]
+        },
+        {
           "group": "Resident Benefits Guides",
           "pages": [
             "s/topic/0TO5e000000h9wqGAA/Resident-Benefits-Guides",
@@ -347,7 +354,6 @@
             "s/topic/0TO5e000000h9wqGAA/A-Property-Owner-s-Guide-in-Managing-Work-Orders",
             "s/topic/0TO5e000000h9wqGAA/Overview-of-Work-Order-Life-Cycle",
             "s/topic/0TO5e000000h9wqGAA/The-Work-Order-Page",
-            "s/topic/0TO5e000000h9wqGAA/Managing-Latchel-Maintenance-Projects",
             "s/topic/0TO5e000000h9wqGAA/How-to-Use-the-Filter-Options-in-the-Work-Order-Tab-Page",
             "s/topic/0TO5e000000h9wqGAA/Work-Order-Status-Definitions-Maintenance-Page-Overview-New-Experience",
             "s/topic/0TO5e000000h9wqGAA/Duplicate-vs-Recall-Work-Order-Know-their-Difference",
