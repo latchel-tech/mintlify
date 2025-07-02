@@ -430,6 +430,7 @@
         {
           "group": "Task Management",
           "pages": [
+            "s/topic/0TO5e000000h9wqGAA/Task-Management-Overview",
             "s/topic/0TO5e000000h9wqGAA/How-to-Defer-a-Task-New-Experience",
             "s/topic/0TO5e000000h9wqGAA/How-to-Create-a-Task-New-Experience",
             "s/topic/0TO5e000000h9wqGAA/How-to-Complete-a-Task-New-Experience"
@@ -438,6 +439,7 @@
         {
           "group": "Users",
           "pages": [
+            "s/topic/0TO5e000000h9wqGAA/User-Management-Overview",
             "s/topic/0TO5e000000h9wqGAA/How-to-Add-a-New-Company-User",
             "s/topic/0TO5e000000h9wqGAA/How-to-Create-User-Groups",
             "s/topic/0TO5e000000h9wqGAA/How-to-Change-Reset-the-Password-of-a-Latchel-User-s-Login",
@@ -447,6 +449,7 @@
         {
           "group": "Files & Reports",
           "pages": [
+            "s/topic/0TO5e000000h9wqGAA/Files-Reports-Overview",
             "s/topic/0TO5e000000h9wqGAA/How-to-Upload-Files-to-a-Work-Order-for-Property-Manager-New-Experience",
             "s/topic/0TO5e000000h9wqGAA/How-to-Download-or-Manage-Files-from-Work-Orders-New-Experience",
             "s/topic/0TO5e000000h9wqGAA/How-to-Export-Properties",
