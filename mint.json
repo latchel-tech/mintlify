@@ -159,7 +159,6 @@
       "pages": [
         "s/topic/0TO5e000000h9wrGAA/resident-help-guides",
         "s/topic/0TO5e000000h9wrGAA/Resident-Dashboard-Overview",
-        "s/topic/0TO5e000000h9wrGAA/Comprehensive-Resident-Help-Guides",
         {
           "group": "Maintenance Request Guides",
           "pages": [
@@ -188,7 +187,8 @@
             "s/topic/0TO5e000000h9wrGAA/Resident-Benefit-Lockout-Reimbursement",
             "s/topic/0TO5e000000h9wrGAA/ACH-Setup-Through-Ramp"
           ]
-        }
+        },
+        "s/topic/0TO5e000000h9wrGAA/Comprehensive-Resident-Help-Guides"
       ]
     },
     {
