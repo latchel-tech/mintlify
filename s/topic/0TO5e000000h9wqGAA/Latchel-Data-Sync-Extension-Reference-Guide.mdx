@@ -58,8 +58,9 @@ Here is how each setting option impacts which work orders sync from your platfor
 
 ### **Latchel → Platform**
 
-1. **Properties and Residents -** Manually created properties and residents in Latchel will not sync to your platform. Hence, the option to create new properties and residents in the Latchel console is unavailable.
-2. **Work orders -** Work orders are created/updated in Platform or Latchel when the following are true:
+**I. Properties and Residents -** Manually created properties and residents in Latchel will not sync to your platform. Hence, the option to create new properties and residents in the Latchel console is unavailable.
+
+**II. Work orders -** Work orders are created/updated in Platform or Latchel when the following are true:
 
 - The work order created date is after the Platform sync date.
 - The work order can be matched to a property in Platform.
@@ -68,7 +69,7 @@ Here is how each setting option impacts which work orders sync from your platfor
 - For previously created work orders in the platform, subsequent updated in Latchel will update the status field. The status field will be updated to **Complete** or **Cancelled** based on the corresponding Latchel status. The integration do not update the status in the Platform when the work order moves to **Forwarded to PM**.
 - On the first successful sync following the creation of a WO, the integration updates the Latchel WO number to match the WO number in the Platform.
 
-**WO Sync Status**
+1. **WO Sync Status**
 
 When a customer is on an **_active_** integration, an indication will show at the top of each work order whether or not the WO was successfully sync’d with the customer’s PMS. Example below.
 
@@ -76,14 +77,18 @@ When a customer is on an **_active_** integration, an indication will show at th
   ![](/images/rtaImage-344.jpg)
 </Frame>
 
-**Manually Sync WO**
+2. **Manually Sync WO**
 
 To manually sync WO using the Chrome plugin data sync, you can initiate a re-sync of all data by opening up the Chrome plugin UI and clicking **Sync All Data**.
 
-3. **File Sync** - This feature is not currently supported for the Platform. 
+**III. File Sync** - This feature is not currently supported for the Platform. 
+
+**To learn more about Latchel Integration, please visit:**
+
+<Card title="How Latchel Integration Works" icon="arrow-right-arrow-left" iconType="duotone" href="/s/topic/0TO5e000000h9wqGAA/How-Latchel-Integration-Works">
+  Get a high level view of how Latchel connects with your property management system to streamline operations.
+</Card>
 
 <Tip>
-  To learn more about Latchel integration please visit: [How Latchel Integration Works](/s/topic/0TO5e000000h9wqGAA/How-Latchel-Integration-Works).
-
-  You may also contact Latchel to know which option works best for your company.
+  You may also contact Latchel's Product Support via [team@latchel.com](mailto:team@latchel.com) to know which option works best for your company.
 </Tip>
