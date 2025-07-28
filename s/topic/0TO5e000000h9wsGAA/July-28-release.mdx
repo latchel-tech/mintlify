@@ -1,0 +1,158 @@
+---
+title: "July 28, 2025"
+description: "The following are the Latchel updates for the week of July 28, 2025."
+---
+
+### **New Features**
+
+1. **Residents Can Now Upload Photos ANYTIME\!**
+
+We’ve made it even easier for property managers to get full visibility into maintenance issues — **even after a work order is completed or cancelled. Residents can now** **add images and videos to a work order at any time.**
+
+Once a resident uploads a file, **you’ll automatically receive a task notification** letting you know that “**Work Order Images are Ready for Review**.”
+
+**Not Receiving These Notifications? Here’s How to Turn Them On:**
+
+<Card title="Task Notification Settings" icon="diagram-subtask" iconType="duotone" href="/s/topic/0TO5e000000h9wqGAA/Task-Notification-Settings">
+  Manage who gets notified and how for specific work orders.
+</Card>
+
+2. **No More “Unhandled Error” When Adding Existing Service Providers**
+
+Adding a service provider just got way smoother.
+
+Previously, when a property manager attempted to add a service provider that already existed in the Latchel system, they’d go through the entire setup process — only to be hit with a vague **“Unhandled Error”** at the end.
+
+**Now, that’s fixed\!**
+
+If the service provider already exists in Latchel, the platform will:
+
+- **Pre-populate the service provider’s existing information**
+- **Allow the PM to add them to their vendor list without errors**
+- **Save everyone time and confusion**
+
+<Frame>
+  ![S Pexists Pn](/images/SPexists.png)
+</Frame>
+
+If any contact or skill updates are needed, PMs can still reach out to Latchel Support for assistance — but they’ll no longer be blocked from adding providers due to email conflicts or duplicate entries.
+
+This update reduces friction and gives property managers a clearer, more efficient experience managing their vendor lists\!
+
+**To know more about how you can add and manage your preferred service providers, visit:**
+
+<Card title="How to Add & Manage Service Providers" icon="address-book" iconType="duotone" href="/s/topic/0TO5e000000h9wqGAA/How-to-Add-Manage-Service-Providers">
+  Step-by-step guide for onboarding and maintaining service provider profiles.
+</Card>
+
+3. **Latchel Data Sync Just Got Smarter — And Easier to Manage**
+
+We’ve made important updates to improve your **Latchel Data Sync** experience, giving you more control over manual syncs — and solving a common issue that may be stopping your auto sync from running in the background.
+
+<Check>
+  **New Manual Sync Options:**
+
+  When you perform a manual Latchel Data Sync, you’ll now see two clear options:
+
+  - Latchel → Platform
+  - Both Directions
+</Check>
+
+**To know more about this cool manual sync update, visit:**
+
+<Card title="Navigating the Latchel Data Sync Extension | How to Manually Sync Data" icon="plug-circle-check" iconType="duotone" href="https://help.latchel.com/s/topic/0TO5e000000h9wqGAA/Navigating-the-Latchel-Data-Sync-Extension-New-Version#how-to-manually-sync-data">
+  Learn to manually sync your data with just a few clicks\!
+</Card>
+
+This eliminates confusion about what data is being synced and helps ensure the right info is flowing between systems — whether you’re syncing work orders into your platform or refreshing data back into Latchel.
+
+**Chrome could be blocking your auto sync\!** Follow the steps from the help guide below to prevent Chrome from blocking your data to auto sync.
+
+<Card title="Prevent Chrome from Interrupting Your Auto Sync" icon="plug-circle-check" iconType="duotone" href="/s/topic/0TO5e000000h9wqGAA/Prevent-Chrome-from-Interrupting-Your-Auto-Sync">
+  This guide helps you adjust Chrome’s memory settings to prevent auto sync interruptions caused by inactive browser tabs.
+</Card>
+
+### **Resolved Bugs**
+
+**Estimates Within the Approved Budget Will No Longer Trigger “Needs Approval”**
+
+We’ve resolved an issue that was causing unnecessary delays for property managers when reviewing estimates — even when those estimates were well within the approved budget.
+
+<Warning>
+  **What was happening?**
+
+  Even when a **pre-approved budget** (e.g. \$550) was already set, the system was incorrectly flagging estimates that were **below that amount** (e.g. \$500) and moving the work order into a **“Needs Approval”** state.
+
+  This happened when the **approved budget** entered by the PM was _higher than the hard budget limit_ — and the system didn’t recognize the higher amount during review, causing confusion and requiring extra manual approvals.
+</Warning>
+
+<Check>
+  **What's New:**
+
+  We’ve updated the system logic so that it now checks both:
+
+  - The **hard budget limit**
+  - The **PM-approved budget**
+</Check>
+
+As long as the **estimate is below either of these two limits**, the work order will now **auto-approve as expected** — no more manual intervention needed. This fix helps reduce approval delays, eliminates unnecessary steps, and gives your team more confidence that budgets will behave as expected\!
+
+### **Key Process Changes**
+
+**New Workflow for PM Input on Work Orders**
+
+We’ve made an important update to how work orders are handled when they require **input or action from the Property Manager**. This change is designed to **reduce delays, improve clarity**, and **avoid unnecessary status transitions**.
+
+<Check>
+  **What's Changing:**
+
+  Previously, there were several scenarios where it was acceptable to move a work order to **“Waiting for PM”** status whenever additional input was needed.
+
+  Going forward, instead of changing the work order status, Latchel will:
+
+  - Keep the work order in its current state
+  - Create a task for the PM requesting the information or action needed
+    - To ensure urgency and consistency, Latchel will use this format when creating the task: **Action Required: PM Instructions or Information Needed**
+</Check>
+
+Moving a Work Order into a  **“Waiting for PM”** status will now only be used in the following, approved scenarios:
+
+1. The PM has explicitly requested that the work order be moved to “Waiting for PM.”
+2. A vendor cannot be sourced after reasonable attempts.
+3. PM coordination is required for unit access or resident/property involvement.
+4. The work order was created by the PM for a background task they are managing.
+5. The issue is property-damaging or habitability-related, and all escalation steps have already been taken.
+
+### **Special Announcements**
+
+**FREE Pest Control Pack for Residents\!**
+
+This new Latchel resident benefit allows residents to get a free pest control kit to help manage common pest issues in their home. It includes an easy-to-use general-purpose insect spray that targets ants, roaches, spiders, and scorpions.
+
+**To know more about this new resident benefits and how to get your Free Pest Control Pack, visit:**
+
+<Card title="Resident Benefits: Self-Serve Pest Control Kit" icon="bug" iconType="duotone" href="/s/topic/0TO5e000000h9wrGAA/Resident-Benefits-Pest-Control-Kit">
+  Follow the steps to request for a pest control kit for free\!
+</Card>
+
+### **We’re Building for You**
+
+Got 60 seconds? Help shape the future of Latchel. We want to hear from the people who matter most: **you**.
+
+**Tell us: What’s working? What’s missing? What would make your job easier?**
+
+<CardGroup cols={2}>
+  <Card title="Share your feedback here — it’s quick and impactful." icon="message-pen" iconType="duotone" color="#ff9b8a" horizontal href="https://forms.gle/fndzwWLczhkWjBQc8">
+    
+  </Card>
+</CardGroup>
+
+Your insight helps us build features that **_actually_** solve your problems. Let’s create the tools you’ve been waiting for.
+
+### **Interested in learning more about Latchel's products? Book a meeting with us.**
+
+<CardGroup cols={2}>
+  <Card title="Get a Demo" icon="comments-question-check" iconType="duotone" color="#ff9b8a" horizontal href="https://latchel.com/demo-request-releases/">
+    
+  </Card>
+</CardGroup>
