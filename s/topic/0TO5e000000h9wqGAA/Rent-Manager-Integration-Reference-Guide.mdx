@@ -92,4 +92,8 @@ Special **Categories**, **Priorities,** and **Statuses** are created on Rent Man
 
 ### **File Sync**
 
-Latchel will automatically sync files (such as pictures and invoices) to Rent Manager when the work order moves to a completed state (Cancelled, Completed, or Forwarded to PM).
+Latchel will automatically sync files (such as pictures and invoices) to Rent Manager when a work order is marked as Cancelled, Completed, or Forwarded to PM.
+
+<Danger>
+  Any attempt to attach files while the work order is **in a different status** will **fail to sync** with Rent Manager.
+</Danger>
