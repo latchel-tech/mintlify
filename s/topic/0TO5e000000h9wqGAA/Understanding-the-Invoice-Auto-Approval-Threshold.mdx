@@ -1,107 +1,122 @@
 ---
 title: "Understanding the Invoice Auto-Approval Threshold"
 description: "This guide offers insights into the **Invoice Auto-Approval Threshold** and its applicability. Let's explore this feature!"
-mode: wide
 ---
 
-Typically, an invoice will be paid after three days it was created; however, as a Property Manager, you have the option to pre-set an amount that enables an invoice to be approved without your direct involvement. To know how you can set this up, follow the steps in **[Managing the Invoice Auto-Approval Threshold](/s/topic/0TO5e000000h9wqGAA/Managing-the-Invoice-Auto-Approval-Threshold)**.
+Typically, an invoice will be paid **after three days** it was created; however, as a Property Manager, you have the option to pre-set an amount that enables an invoice to be approved without your direct involvement.
 
-In order for this feature to take effect, there are _**criteria**_ that your  _**Account Settings must meet**_ . Let's review each one.
+**To know how you can set this up, follow the steps in:**
 
-1.  **A service provider payment method must be set.** If it's not yet set up, please follow the instructions in this help guide: **[How to Update the Service Provider Payment Method on File](/s/topic/0TO5e000000h9wqGAA/How-to-Update-the-Service-Provider-Payment-Method-on-File)**
+<Card title="Managing the Invoice Auto-Approval Threshold." icon="money-check-dollar" iconType="duotone" href="/s/topic/0TO5e000000h9wqGAA/Managing-the-Invoice-Auto-Approval-Threshold">
+  How to set limits that determine which invoices are auto-approved or need manual review.
+</Card>
+
+### **Auto-Approval Threshold Criteria**
+
+In order for this feature to take effect, there are **criteria** that your  **Account Settings must meet** . Let's review each one.
+
+1. **A service provider payment method must be set.** If it's not yet set up, please follow the instructions in this help guide:
+
+<Card title="How to Update the Service Provider Payment Method on File" icon="money-check" iconType="duotone" href="/s/topic/0TO5e000000h9wqGAA/How-to-Update-the-Service-Provider-Payment-Method-on-File">
+  Instructions for updating payment details used to pay service providers.
+</Card>
 
 <Frame>
-  <img src="/images/rtaImage-232.jpg"/>
+  ![](/images/rtaImage-232.jpg)
 </Frame>
 
-2.  The **Service Provider Payment Settings** must be **ON** for **Preferred Service Provider** and **Latchel Service Provider**.
+2. The **Service Provider Payment Settings** must be **ON** for **Preferred Service Provider** and **Latchel Service Provider**.
 
 To enable this, go to **Account Settings**, click the **Payment Settings** tab, then **toggle the switch to the left** on **Preferred Service Provider Payments**, and **Latchel Service Provider Payments**. You will know that it's already on if the toggle becomes **blue**.
 
-
 <Frame>
-  <img src="/images/rtaImage-233.jpg"/>
+  ![](/images/rtaImage-233.jpg)
 </Frame>
 
-3.  Depending which Service Provider Payment Settings you turned on, **remember to make sure that it is also the type of service provider assigned in any of your work order**.
+3. Depending which Service Provider Payment Settings you turned on, **remember to make sure that it is also the type of service provider assigned in any of your work order**.
 
-For example, if you only activated payment settings for Preferred Service Providers, ensure that the service provider assigned to the work order is one of your Preferred Service Providers. _**Assigning the correct type of service provider based on the settings enabled will trigger the Invoice Auto-Approval Threshold to take effect.**_
+For example, if you only activated payment settings for Preferred Service Providers, ensure that the service provider assigned to the work order is one of your Preferred Service Providers.
+
+<Note>
+  Assigning the correct type of service provider based on the settings enabled will trigger the Invoice Auto-Approval Threshold to take effect.
+</Note>
 
 <Frame>
-  <img src="/images/rtaImage-234.jpg"/>
+  ![](/images/rtaImage-234.jpg)
 </Frame>
 
 Notice that the Service Provider Payment Method **enabled** is for **Preferred Service Provider**.
 
-
 <Frame>
-  <img src="/images/rtaImage-235.jpg"/>
+  ![](/images/rtaImage-235.jpg)
 </Frame>
 
-4.  **The Service Provider assigned in the work order must have their payment method activated in Latchel.** In addition, if you decide to use a Latchel Service Provider, **_they must be using direct deposit only_**, and a payment method must be activated in their account. Otherwise, the Invoice Auto-Approval Threshold will not work.
+4. **The Service Provider assigned in the work order must have their payment method activated in Latchel.** In addition, if you decide to use a Latchel Service Provider, **_they must be using direct deposit only_**, and a payment method must be activated in their account. Otherwise, the Invoice Auto-Approval Threshold will not work.
 
-A banner **"LCN Direct Deposit"** under the name of the Service Provider indicates that it receives payment via direct deposit only. To learn more on how you can assign Latchel Service Provider on work orders, follow the steps in **[How to Assign a Latchel Contracted Network Service Provider (New Experience)](/s/topic/0TO5e000000h9wqGAA/How-to-Assign-LCN-Service-Provider-New-Experience)**.
+A banner **"LCN Direct Deposit"** under the name of the Service Provider indicates that it receives payment via direct deposit only. To learn more on how you can assign Latchel Service Provider on work orders, follow the steps in [**How to Assign a Latchel Contracted Network Service Provider (New Experience)**](/s/topic/0TO5e000000h9wqGAA/How-to-Assign-LCN-Service-Provider-New-Experience).
 
+<Card title="How to Assign a Latchel Contracted Network Service Provider" icon="file-user" iconType="duotone" href="/s/topic/0TO5e000000h9wqGAA/How-to-Assign-LCN-Service-Provider-New-Experience">
+  Use Latchel's network to fill provider needs when your list is unavailable.
+</Card>
 
 <Frame>
-  <img src="/images/rtaImage-236.jpg"/>
+  ![](/images/rtaImage-236.jpg)
 </Frame>
 
 #### **Frequently Asked Questions**
 
-<AccordionGroup>
-  <Accordion title="What happens to the work order if the amount of invoice is more than the amount specified in the threshold?">
-  _The work order status will not be impacted_** and will still proceed as usual. However, the invoice status will be set to **"Needs Approval"**.The invoice will stay in this status until someone takes a manual action on it.
+<Icon icon="circle-1" iconType="solid" color="#ff9b8a" /> **What happens to the work order if the amount of invoice is more than the amount specified in the threshold?**
 
+_The work order status will not be impacted_\*\* and will still proceed as usual. However, the invoice status will be set to **"Needs Approval"**.The invoice will stay in this status until someone takes a manual action on it.
 
 Let's take a look at the example invoice below.
 
 In this scenario, the invoice automatically went to **"Needs Approval"** because the amount of the invoice is more than the threshold set in the account. The work order proceeded to **"Completed"** status.
 
-
 <Frame>
-  <img src="/images/rtaImage-237.jpg"/>
+  ![Rta Image 237 Jp](/images/rtaImage-237.jpg)
 </Frame>
 
 <Frame>
-  <img src="/images/rtaImage-238.jpg"/>
+  ![Rta Image 238 Jp](/images/rtaImage-238.jpg)
 </Frame>
-  </Accordion>
 
-  <Accordion title="What happens to the invoice if it the amount is more than the threshold limit and does not meet all of the criteria?">
+<Icon icon="circle-2" iconType="sharp-solid" color="#ff9b8a" /> **What happens to the invoice if it the amount is more than the threshold limit and does not meet all of the criteria?** 
+
 If the amount of the invoice is more than the threshold limit, but at least 1 of the criteria is not met, the invoice will go to **"Mark Paid"** status right away, and likewise, the work order will proceed to **"Completed"** status.
 
-Let's take a look at the example below.
+**Let's take a look at the example below.**
 
-In this scenario, the service provider who completed the job is preferred, and the invoice he submitted is for $300. The invoice immediately went to **"Mark Paid"** even though the invoice is more than the threshold set. Because, while the assigned service provider is preferred and the Service Provider Payment Method enabled is for a Preferred Service Provider, this _**preferred service provider does not have an active payment method set in his profile.**_
-
-
-<Frame>
-  <img src="/images/rtaImage-239.jpg"/>
-</Frame>
-<Frame>
-  <img src="/images/rtaImage-240.jpg"/>
-</Frame>
-
-  </Accordion>
-  <Accordion title="What happens if the amount of the invoice is less than the specified threshold, and the Account Settings have met all the criteria?">
-_The invoice is eligible for automatic processing._** This means that the invoice will be in **"Pending (unpaid)"** status and will **_automatically be completed after 3 days_** unless there is an intervention from the property manager.
-
-Let's take a look at the example below.
-
-As shown, the invoice is set to be paid on June 27, 3 days after it was created on June 24. Take note that the property management company's Invoice Auto-Approved Threshold set on their account is $1500. In this scenario, the property manager has until before June 27 to take manual action otherwise it will be automatically **"Mark Paid"** on the said date.
-
+In this scenario, the service provider who completed the job is preferred, and the invoice he submitted is for \$300. The invoice immediately went to **"Mark Paid"** even though the invoice is more than the threshold set. Because, while the assigned service provider is preferred and the Service Provider Payment Method enabled is for a Preferred Service Provider, this **preferred service provider does not have an active payment method set in his profile.**
 
 <Frame>
-  <img src="/images/rtaImage-241.jpg"/>
+  ![](/images/rtaImage-239.jpg)
 </Frame>
-  </Accordion>
-  <Accordion title="What happens if the budget limit on the work order is lower than the amount of threshold but the invoice created after the work is completed is more than the threshold?">
-  The **_Budget limit determines if a job can start_**, while the **_Invoice Auto-Approval Threshold controls automatic payments_**. If the budget limit is lower than the threshold, the work order will proceed, but the invoice will need approval. If the budget exceeds the limit, the work order needs approval. Any invoice above the threshold will require approval.
 
-**To learn more about budget limit, check this help guide: [How to Customize Work Order Budget Limits](/s/topic/0TO5e000000h9wqGAA/How-to-Customize-Work-Order-Budget-Limits)**
+<Frame>
+  ![](/images/rtaImage-240.jpg)
+</Frame>
 
-And that's all it is about Invoice Auto-Approval Threshold!
+<Icon icon="circle-3" iconType="sharp-solid" color="#ff9b8a" /> **What happens if the amount of the invoice is less than the specified threshold, and the Account Settings have met all the criteria?** 
 
-  </Accordion>
-</AccordionGroup>
+**The invoice is eligible for automatic processing.** This means that the invoice will be in **"Pending (unpaid)"** status and will **automatically be completed after 3 days** unless there is an intervention from the property manager.
+
+**Let's take a look at the example below.**
+
+As shown, the invoice is set to be paid on June 27, 3 days after it was created on June 24. Take note that the property management company's Invoice Auto-Approved Threshold set on their account is \$1500. In this scenario, the property manager has until before June 27 to take manual action otherwise it will be automatically **"Mark Paid"** on the said date.
+
+<Frame>
+  ![](/images/rtaImage-241.jpg)
+</Frame>
+
+<Icon icon="circle-4" iconType="sharp-solid" color="#ff9b8a" /> **What happens if the budget limit on the work order is lower than the amount of threshold but the invoice created after the work is completed is more than the threshold?** 
+
+The **Budget limit determines if a job can start**, while the **Invoice Auto-Approval Threshold controls automatic payments**. If the budget limit is lower than the threshold, the work order will proceed, but the invoice will need approval. If the budget exceeds the limit, the work order needs approval. Any invoice above the threshold will require approval.
+
+**To learn more about budget limit, check this help guide:**
+
+<Card title="How to Customize Work Order Budget Limits" icon="sparkles" href="/s/topic/0TO5e000000h9wqGAA/How-to-Customize-Work-Order-Budget-Limits">
+  Adjust the budget threshold that triggers approval requirements on work orders.
+</Card>
+
+And that's all it is about Invoice Auto-Approval Threshold\!
