@@ -1,0 +1,50 @@
+---
+title: "Work Order Processing with Intake Settings"
+description: "The **Work Order Processing** flow in Intake Settings determines how incoming maintenance requests are classified, routed, and resolved based on the rules you set. By using plain-language conditions, you control whether a work order is marked as **Emergency, Urgent, Normal, or Resident-Responsible.**"
+---
+
+### **How Work Orders are Processed**
+
+1. **Resident Submits a Request**
+
+- Residents enter issue details and answer any troubleshooting or follow-up questions configured in your Intake Settings.
+
+<Frame>
+  ![Latchel 08 22 2025 01 07 PM Pn](/images/Latchel-08-22-2025_01_07_PM.png)
+</Frame>
+
+2. **Troubleshooting Stage**
+
+- The resident is guided through step-by-step troubleshooting to rule out simple fixes (e.g., checking circuit breakers or filters).
+- Residents can provide plain-text responses, photos, and availability during this stage.
+
+3. **Rule Matching**
+
+- The request runs through your **custom Intake rules**, in order from top to bottom.
+- When a rule matches, the system applies the classification you defined (Emergency, Urgent, Normal, or Resident-Responsible).
+- If no rule matches, the request can be routed to a property manager for approval.
+
+<Frame>
+  ![Untitled 08 22 2025 01 46 PM Pn](/images/untitled-08-22-2025_01_46_PM.png)
+</Frame>
+
+4. **Classification Outcome**
+
+Based on the rule match, the work order is automatically categorized:
+
+- **Emergency** → Immediate action required; dispatched quickly.
+- **Urgent** → Prompt response, but not life-threatening.
+- **Normal** → Standard maintenance timeline.
+- **Resident-Responsible** → the work order is cancelled, the resident is informed they must coordinate and pay for the service themselves.
+
+<Frame>
+  ![Outcome Pn](/images/outcome.png)
+</Frame>
+
+5. **Activity Log Transparency**
+
+Each processed work order includes a log showing:
+
+- The resident’s answers to troubleshooting questions.
+- Which rule was applied and why.
+- Any skipped rules and the reason they did not apply.
