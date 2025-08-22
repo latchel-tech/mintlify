@@ -5,7 +5,7 @@ description: "This guide explains how to use Intake Settings to customize your w
 
 ### **Get Early Access to Intake Settings\!**
 
-Before you proceed, please make sure that the Intake Settings is activated on your account. 
+Before you proceed, please make sure that the Intake Settings is activated on your account.
 
 **Intake Settings is currently available by request as part of our initial launch.** If you’d like to gain access and experience it firsthand, please complete the form below\!
 
@@ -15,13 +15,15 @@ Before you proceed, please make sure that the Intake Settings is activated on yo
   </Card>
 </CardGroup>
 
+### <Icon icon="camera-movie" iconType="sharp-duotone-solid" color="#ff9b8a" size={25} /> **Quick Video Tutorial: Start Here\!**
+
+<iframe width="100%" height="420" src="https://www.loom.com/embed/c167115a48f54e5c81c68a6850bcc99f?sid=c7482d72-1fa2-4378-91fe-2ee1d96be727" title="Intake Settings Overview" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen />
+
 ### **Creating a New Rule Set**
 
 Access the **Intake Settings** via your **Account Settings** page. From there, click **Manage Rule Sets**.
 
 <Frame>
-  
-
   ![Latchel 08 20 2025 10 10 AM Pn](/images/Latchel-08-20-2025_10_10_AM.png)
 </Frame>
 
@@ -40,3 +42,90 @@ Next, click **Create New**.
 After this step, the system will take you to the new rule set page where you can create your first rule\!
 
 ### **Creating New Rules**
+
+Click **Create First Rule**.
+
+<Frame>
+  ![Latchel 08 22 2025 12 19 PM Pn](/images/Latchel-08-22-2025_12_19_PM.png)
+</Frame>
+
+Then, edit the rule by writing a plain-language rules that describe how the issue must be classified. **For example:** _"AC issues are only emergencies if outside temperature is above 90°F"_ or _"If the AC brand is LG, classify as emergency regardless of temperature."_
+
+<Frame>
+  ![Latchel 08 22 2025 12 26 PM Pn](/images/Latchel-08-22-2025_12_26_PM.png)
+</Frame>
+
+Next, select the **Outcome**. This sets the severity of the rule you determined. You can choose from the following options:
+
+- **Severity: Normal**
+- **Severity: Urgent**
+- **Severity: Emergency**
+- **State: Needs Approval** - When a rule is set to this state, the work order will require your approval as the property manager before it can proceed.
+- **Stop: Resident Responsible** - When a rule is set to this outcome, the job will be automatically canceled.
+
+<Frame>
+  ![Image 08 22 2025 12 27 PM Pn](/images/image-08-22-2025_12_27_PM.png)
+</Frame>
+
+Finally, click **Save** to complete.
+
+<Frame>
+  ![Latchel 08 22 2025 12 27 PM Pn](/images/Latchel-08-22-2025_12_27_PM.png)
+</Frame>
+
+### **Reorder Rules**
+
+Rules are processed in order, so place higher-priority rules at the top. You can adjust the order by clicking the up <Icon icon="arrow-up-long" iconType="solid" size={20} /> or down <Icon icon="arrow-down-long" iconType="solid" size={20} /> arrows next to a rule until the arrangement meets your preference.
+
+<Frame>
+  ![Latchel 08 22 2025 12 47 PM Pn](/images/Latchel-08-22-2025_12_47_PM.png)
+</Frame>
+
+**If no rule applies**, Latchel can create a task for your approval, though this can be customized. To set a fallback outcome when no rules match, scroll down to the **“If no rules match”** section and select the **desired outcome**.
+
+<Frame>
+  ![Latchel 08 22 2025 12 55 PM Pn](/images/Latchel-08-22-2025_12_55_PM.png)
+</Frame>
+
+<Tip>
+  Your rules can be **updated anytime**, giving you full flexibility.
+</Tip>
+
+### **Resident Experience**
+
+When a resident submits a maintenance request:
+
+- They’ll be guided through **dynamic troubleshooting questions** (e.g., checking a circuit breaker).
+- Their answers will determine how the issue is classified.
+- **Example:**
+  - A resident reports an electrical issue.
+  - They are asked when the issue started, the location within the home, and how many outlets are not working, among other details.
+  - Based on their answers, the system applies your custom rules to decide if it’s emergency, urgent, normal, or resident-responsible.
+
+### **Work Order Processing**
+
+- After submission, the work order goes through intake processing (a few seconds).
+- The system applies your rules and updates the work order classification.
+
+<Frame>
+  ![Latchel 08 22 2025 01 12 PM Pn](/images/Latchel-08-22-2025_01_12_PM.png)
+</Frame>
+
+- **Activity Log Transparency**:
+  - You can see all troubleshooting questions and answers.
+
+  <Frame>
+    ![Latchel 08 22 2025 01 07 PM Pn](/images/Latchel-08-22-2025_01_07_PM.png)
+  </Frame>
+  - The log shows which rule was matched and why (e.g., “Rule applied: Urgent, because temperature was below 90°F and brand was not LG”).
+
+  <Frame>
+    ![Latchel 08 22 2025 01 13 PM Pn](/images/Latchel-08-22-2025_01_13_PM.png)
+  </Frame>
+
+### **Things You Should Know**
+
+- Resident notifications and troubleshooting adapt based on your rules.
+- On Autopilot, once a rule is matched, the **dispatch process** automatically begins.
+- If no rule matches, a task can be routed for manager approval.
+- Currently, this feature is in **beta**, and Latchel welcomes feedback to improve customization further.
