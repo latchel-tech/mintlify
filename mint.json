@@ -294,7 +294,7 @@
           ]
         },
         {
-          "group": "Projects & Inspections",
+          "group": "Projects, Inspections",
           "pages": [
             "s/topic/0TO5e000000h9wqGAA/Projects-Inspections-Overview",
             "s/topic/0TO5e000000h9wqGAA/Managing-Latchel-Maintenance-Projects",
@@ -462,6 +462,8 @@
           "group": "Files & Reports",
           "pages": [
             "s/topic/0TO5e000000h9wqGAA/Files-Reports-Overview",
+            "s/topic/0TO5e000000h9wqGAA/Latchel-Analytics-Overview",
+            "s/topic/0TO5e000000h9wqGAA/Latchel-Analytics-Filters",
             "s/topic/0TO5e000000h9wqGAA/How-to-Upload-Files-to-a-Work-Order-for-Property-Manager-New-Experience",
             "s/topic/0TO5e000000h9wqGAA/How-to-Download-or-Manage-Files-from-Work-Orders-New-Experience",
             "s/topic/0TO5e000000h9wqGAA/How-to-Export-Properties",
