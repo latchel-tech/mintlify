@@ -11,7 +11,7 @@ The Latchel engineering team will need 3 pieces of data:
 
 1. API key
 2. API secret
-3. Customer subdomain. This subdomain is found in the URL of your portal. It is the first bit after "https://".  In the screenshot below, the subdomain is "demopm5".
+3. Customer subdomain. This subdomain is found in the URL of your portal. It is the first bit after **"https://"**.  In the screenshot below, the subdomain is "demopm5".
 
 <Frame>
   ![Screenshot2025 05 21114010 Pn](/images/Screenshot2025-05-21114010.png)
@@ -49,7 +49,7 @@ Go to Api tab, then click **New API Key**. Enter **“Latchel”** as the **Name
 
 ### **Get Property and Resident Data from Rentvine**
 
-This step is only necessary if you already have existing property and resident records in Latchel. 
+This step is only necessary if you already have existing property and resident records in Latchel.
 
 <Warning>
   To proceed with assigning reference IDs to your existing data in Latchel and avoid creating duplicate records, you must follow the steps below to export two CSV files:
@@ -106,7 +106,7 @@ When an admin first activates the customer’s Rentvine integration nothing happ
 
 The following Property fields are brought over from Buildium to Latchel.
 
-| **Buildium Field** | **Value/Interpretation in Latchel** |
+| **Rentvine Field** | **Value/Interpretation in Latchel** |
 | :----------------- | :---------------------------------- |
 | PropertyId         | ref_property_id                     |
 | UnitId             | ref_unit_id                         |
@@ -122,8 +122,16 @@ The following Property fields are brought over from Buildium to Latchel.
 <Check>
   **Automatic Property Reconcillation**
 
-  To ensure accurate customer billing Latchel runs on automated process each month to de-activate any active units in Latchel that no longer exist in Buildium. This process currently happens on the 27th at 3am PST. Learn more of how this works by going to [How Latchel Integration Works](/s/topic/0TO5e000000h9wqGAA/How-Latchel-Integration-Works).
+  To ensure accurate customer billing Latchel runs on automated process each month to de-activate any active units in Latchel that no longer exist in Rentvine. This process currently happens on the 27th at 3am PST. 
+
+  **\
+  Learn more of how this works by going here:**
+
+  <Card title="How Latchel Integration Works" icon="arrow-right-arrow-left" iconType="duotone" href="/s/topic/0TO5e000000h9wqGAA/How-Latchel-Integration-Works">
+    Get high-level view of how Latchel connects with your property management system to streamline operations.
+  </Card>
 </Check>
+
 
 <Note>
   When a property is **deactivated** through the reconcillation process, it will be logged to the property in Latchel as:
@@ -186,7 +194,7 @@ Work orders are synced to Rentvine a few seconds after they are created in Latch
 | **Field in Latchel**    | **Field/Interpretation in Platform**                                                                  |
 | :---------------------- | :---------------------------------------------------------------------------------------------------- |
 | order_number            | Order number is synced back to Latchel and updated in Latchel to reflect the order number in Rentvine |
-| name \+ description     | description                                                                                           |
+| name + description      | description                                                                                           |
 | vendor_instructions     | Vendor Instructions                                                                                   |
 | is Shared With Tenant   | Entry Notes                                                                                           |
 | is Shared With Owner    | Vendor Id  Latchel vendor - we create and add a “Latchel Vendor” for this purpose                     |
