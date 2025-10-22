@@ -53,7 +53,7 @@ Notice that the Service Provider Payment Method **enabled** is for **Preferred S
 
 4. **The Service Provider assigned in the work order must have their payment method activated in Latchel.** In addition, if you decide to use a Latchel Service Provider, **_they must be using direct deposit only_**, and a payment method must be activated in their account. Otherwise, the Invoice Auto-Approval Threshold will not work.
 
-A banner **"LCN Direct Deposit"** under the name of the Service Provider indicates that it receives payment via direct deposit only. To learn more on how you can assign Latchel Service Provider on work orders, follow the steps in [**How to Assign a Latchel Contracted Network Service Provider (New Experience)**](/s/topic/0TO5e000000h9wqGAA/How-to-Assign-LCN-Service-Provider-New-Experience).
+A banner **"LCN Direct Deposit"** under the name of the Service Provider indicates that it receives payment via direct deposit only. **To learn more on how you can assign Latchel Service Provider on work orders, follow the steps in:**
 
 <Card title="How to Assign a Latchel Contracted Network Service Provider" icon="file-user" iconType="duotone" href="/s/topic/0TO5e000000h9wqGAA/How-to-Assign-LCN-Service-Provider-New-Experience">
   Use Latchel's network to fill provider needs when your list is unavailable.
@@ -67,7 +67,7 @@ A banner **"LCN Direct Deposit"** under the name of the Service Provider indicat
 
 <Icon icon="circle-1" iconType="solid" color="#ff9b8a" /> **What happens to the work order if the amount of invoice is more than the amount specified in the threshold?**
 
-_The work order status will not be impacted_\*\* and will still proceed as usual. However, the invoice status will be set to **"Needs Approval"**.The invoice will stay in this status until someone takes a manual action on it.
+**_The work order status will not be impacted_** and will still proceed as usual. However, the invoice status will be set to **"Needs Approval"**.The invoice will stay in this status until someone takes a manual action on it.
 
 Let's take a look at the example invoice below.
 
@@ -81,7 +81,7 @@ In this scenario, the invoice automatically went to **"Needs Approval"** because
   ![Rta Image 238 Jp](/images/rtaImage-238.jpg)
 </Frame>
 
-<Icon icon="circle-2" iconType="sharp-solid" color="#ff9b8a" /> **What happens to the invoice if it the amount is more than the threshold limit and does not meet all of the criteria?** 
+<Icon icon="circle-2" iconType="sharp-solid" color="#ff9b8a" /> **What happens to the invoice if it the amount is more than the threshold limit and does not meet all of the criteria?**
 
 If the amount of the invoice is more than the threshold limit, but at least 1 of the criteria is not met, the invoice will go to **"Mark Paid"** status right away, and likewise, the work order will proceed to **"Completed"** status.
 
@@ -97,7 +97,7 @@ In this scenario, the service provider who completed the job is preferred, and t
   ![](/images/rtaImage-240.jpg)
 </Frame>
 
-<Icon icon="circle-3" iconType="sharp-solid" color="#ff9b8a" /> **What happens if the amount of the invoice is less than the specified threshold, and the Account Settings have met all the criteria?** 
+<Icon icon="circle-3" iconType="sharp-solid" color="#ff9b8a" /> **What happens if the amount of the invoice is less than the specified threshold, and the Account Settings have met all the criteria?**
 
 **The invoice is eligible for automatic processing.** This means that the invoice will be in **"Pending (unpaid)"** status and will **automatically be completed after 3 days** unless there is an intervention from the property manager.
 
@@ -109,14 +109,14 @@ As shown, the invoice is set to be paid on June 27, 3 days after it was created 
   ![](/images/rtaImage-241.jpg)
 </Frame>
 
-<Icon icon="circle-4" iconType="sharp-solid" color="#ff9b8a" /> **What happens if the budget limit on the work order is lower than the amount of threshold but the invoice created after the work is completed is more than the threshold?** 
+<Icon icon="circle-4" iconType="sharp-solid" color="#ff9b8a" /> **What happens if the budget limit on the work order is lower than the amount of threshold but the invoice created after the work is completed is more than the threshold?**
 
 The **Budget limit determines if a job can start**, while the **Invoice Auto-Approval Threshold controls automatic payments**. If the budget limit is lower than the threshold, the work order will proceed, but the invoice will need approval. If the budget exceeds the limit, the work order needs approval. Any invoice above the threshold will require approval.
 
 **To learn more about budget limit, check this help guide:**
 
-<Card title="How to Customize Work Order Budget Limits" icon="sparkles" href="/s/topic/0TO5e000000h9wqGAA/How-to-Customize-Work-Order-Budget-Limits">
+<Card title="How to Customize Work Order Budget Limits" icon="money-check-dollar" iconType="duotone" href="/s/topic/0TO5e000000h9wqGAA/How-to-Customize-Work-Order-Budget-Limits">
   Adjust the budget threshold that triggers approval requirements on work orders.
 </Card>
 
-And that's all it is about Invoice Auto-Approval Threshold\!
+And that's all it is about Invoice Auto-Approval Threshold!
