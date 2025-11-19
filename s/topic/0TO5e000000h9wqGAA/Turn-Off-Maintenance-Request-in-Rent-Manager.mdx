@@ -1,7 +1,9 @@
 ---
 title: "Turn Off Maintenance Requests in Rent Manager"
-description: "If Latchel is managing maintenance for all your units, you can prevent tenants from submitting service requests through their Rent Manager portal. Follow the steps below to disable this feature and ensure all maintenance requests are routed through Latchel."
+description: "If Latchel is managing maintenance for all your units, you can prevent tenants from submitting service requests through your Rent Manager portal. Follow the steps below to disable this feature and ensure all maintenance requests are routed through Latchel."
 ---
+
+### **Disabling Tenant to Create Service Issues**
 
 Go to your **Admin** page in your Rent Manager account. Then open **System Web Preferences**.
 
@@ -24,11 +26,48 @@ Select **Service Issues** from the options presented.
 Uncheck the box labeled **Allow Tenant to Create Service Issues** to disable this feature, then click **Save**.
 
 <Frame>
+  ![image.png](/images/image.png)
+</Frame>
+
+<Warning>
+  This option is only viable if Latchel is handling maintenance for **all units** in Rent Manager, as it applies a global change across the system.
+</Warning>
+
+### **Redirect Maintenance: Before Login to Rent Manager**
+
+After disabling tenant access to create maintenance requests in Rent Manager, add a login page banner to redirect residents to Latchel. This ensures requests are submitted directly through Latchel for proper tracking and faster service.
+
+Also under System Web Preferences, go to Tenant Web Access. Then click the pencil icon.
+
+<Frame>
   
 
   ![image.png](/images/image.png)
 </Frame>
 
-<Warning>
-  
-</Warning>
+Then **add your personalized banner** as shown below. You can customize your banner however you like. Click **OK** to save.
+
+<Tip>
+  Add your resident's work order URL by clicking **Insert Hyperlink**.
+</Tip>
+
+<Frame>
+  ![Desktop Screenshot 11 14 2025 12 50 PM Pn](/images/Desktop-screenshot-11-14-2025_12_50_PM.png)
+</Frame>
+
+<Tip>
+  **Sample Banner:**
+
+  Attention Residents! 
+
+  We’re excited to announce our new maintenance request website, ready to help you submit requests faster and more conveniently. 
+
+  - Visit: [RESIDENT WO URL] to submit all your maintenance requests anytime! 
+  - If it's an EMERGENCY, you can submit online or call [LATCHEL ASSIGNED PHONE] to speak to someone!"
+</Tip>
+
+Click **Apply and Save** once done.
+
+<Frame>
+  ![Desktop Screenshot 11 14 2025 12 51 PM Pn](/images/Desktop-screenshot-11-14-2025_12_51_PM.png)
+</Frame>
