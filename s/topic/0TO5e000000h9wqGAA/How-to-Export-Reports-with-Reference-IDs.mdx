@@ -32,6 +32,8 @@ If you are using the **Appfolio along with Latchel Chrome Plugin Extension,** fo
 
 ### **Propertyware**
 
+Reference IDs for residents and properties must be downloaded separately. Please follow the steps below to export each one.
+
 **A. Residents**
 
 Go to **Reports**. If you have existing report folders for **Contacts**, expand **Contact Reports**. Otherwise you can click **New Report** to create report for **Contacts**. Then click **View Report**.
@@ -46,14 +48,14 @@ Go to **Reports**. If you have existing report folders for **Contacts**, expand 
 
 Expand **Contact: Summary**. Make sure the **Entity ID** is selected. Also, check the boxes of the following:
 
-- Full Name
-- Email
-- Mobile #
-- Address
-- Address Cont.
-- City
-- State
-- Zip
+- **Full Name**
+- **Email**
+- **Mobile #**
+- **Address**
+- **Address Cont.**
+- **City**
+- **State**
+- **Zip**
 
 <Tip>
   **Entity ID** are your tenant's reference IDs which Latchel uses to identify tenants within the integration.
@@ -84,7 +86,7 @@ Go to **Reports**. If you have existing **Property Reports** within your report 
 Expand **Building Summary**, and make sure to check **Building Entity ID** **_<u>only</u>_** within this section.
 
 <Tip>
-  Building Entity ID is your property reference ID which Latchel uses to identify the property address with the integration.
+  The **Building Entity ID** serves as the property reference ID for integration with Latchel. The **Unit Entity ID** identifies the unit address for multi-unit properties.
 </Tip>
 
 <Frame>
@@ -113,3 +115,120 @@ Finally, click **Export/Print**, select **MS Excel**, and **save the file** to y
 <Frame>
   ![6image 12 08 2025 05 35 AM Pn](/images/6image-12-08-2025_05_35_AM.png)
 </Frame>
+
+### **Rent Manager**
+
+Exporting property and resident reports from Rent Manager is a simple two-step process: first, set up the report type, then export the report using that setup.
+
+**Creating the Report Type**
+
+<Check>
+  If this type of report with the necessary fields has not yet been created in your Rent Manager, follow these steps. If you have already created a Unit Export with reference IDs, you can skip this and directly download the Unit Export from your Report Writer.
+</Check>
+
+Log in to your Rent Manager dashboard. Navigate to **Reports**, expand **Report Writer**, and then select **Report Writer Manager**.
+
+<Frame>
+  ![1desktop Screenshot 12 08 2025 06 35 AM Pn](/images/1Desktop-screenshot-12-08-2025_06_35_AM.png)
+</Frame>
+
+From the **dropdown list** under Report Writer Manager, select **Unit**.
+
+<Frame>
+  ![2desktop Screenshot 12 08 2025 06 40 AM Pn](/images/2Desktop-screenshot-12-08-2025_06_40_AM.png)
+</Frame>
+
+In the new list on the left, click **Unit Export**, then select the **Edit** button at the top.
+
+<Frame>
+  ![3desktop Screenshot 12 08 2025 06 48 AM Pn](/images/3Desktop-screenshot-12-08-2025_06_48_AM.png)
+</Frame>
+
+Remove all formulas displayed under Report Columns by clicking the icon <Icon icon="circle-xmark" iconType="solid" color="#e40a0a" /> on each row. These columns are unnecessary for the Latchel integration.
+
+<Frame>
+  ![4desktop Screenshot 12 08 2025 06 54 AM Pn](/images/4Desktop-screenshot-12-08-2025_06_54_AM.png)
+</Frame>
+
+In the **Insertable Fields** section, expand **Units**, then expand Addresses. **Double click** the following to add the fields:
+
+- **Street 1**
+- **Street 2**
+- **City**
+- **State**
+- **Postal Code**
+
+Notice that each field adds to the Report Columns as you double click them.
+
+<Frame>
+  ![5desktop Screenshot 12 08 2025 07 01 AM Pn](/images/5Desktop-screenshot-12-08-2025_07_01_AM.png)
+</Frame>
+
+In the same Unit fields, scroll down to locate the **Unit ID**, then **double-click it** as well.
+
+<Frame>
+  ![6desktop Screenshot 12 08 2025 07 07 AM Pn](/images/6Desktop-screenshot-12-08-2025_07_07_AM.png)
+</Frame>
+
+Next, expand **Property**, then scroll to **Property ID**. **Double-click** it to add it to the report columns.
+
+<Frame>
+  ![7desktop Screenshot 12 08 2025 07 10 AM Pn](/images/7Desktop-screenshot-12-08-2025_07_10_AM.png)
+</Frame>
+
+Now, **add the tenants** details. Expand **Tenants**, then **locate and double-click** the following fields to add them:
+
+- **Full Name**
+- **Number**
+- **Email**
+- **Contact ID**
+
+<Tip>
+  Expand **User Defined Fields** to find **Full Name**, **Contact ID**, and **Email**. The **Number** field can be found under **Phone Numbers**.
+
+  The **Contact ID** serves as the **Reference User ID** that Latchel uses to identify residents in the integration.
+</Tip>
+
+<Frame>
+  ![5desktop Screenshot 12 09 2025 06 58 AM Pn](/images/5Desktop-screenshot-12-09-2025_06_58_AM.png)
+</Frame>
+
+**Rename **the report, then click **Save**. 
+
+<Frame>
+  ![6desktop Screenshot 12 09 2025 07 00 AM Pn](/images/6Desktop-screenshot-12-09-2025_07_00_AM.png)
+</Frame>
+
+This does not export your report yet. Continue with the steps below to export the new report type you just created.
+
+**Exporting the Reference ID Report**
+
+In the Reports tab, expand **Report Writer \> Units**, then select the **report you created** for reference IDs.
+
+<Frame>
+  ![1desktop Screenshot 12 08 2025 07 28 AM Pn](/images/1Desktop-screenshot-12-08-2025_07_28_AM.png)
+</Frame>
+
+In the Report Options window that appears, **check the top box** to include all properties. Also, select **Inactive Properties**, then click **View Report**.
+
+<Frame>
+  ![2desktop Screenshot 12 08 2025 07 34 AM Pn](/images/2Desktop-screenshot-12-08-2025_07_34_AM.png)
+</Frame>
+
+Once the generated report appears on your screen, click either **Export to Excel** or **Export to CSV**.
+
+<Frame>
+  ![3desktop Screenshot 12 08 2025 07 41 AM Pn](/images/3Desktop-screenshot-12-08-2025_07_41_AM.png)
+</Frame>
+
+Finally, click **Export** then **save on your computer** once prompted.
+
+<Frame>
+  ![4desktop Screenshot 12 09 2025 06 17 AM Pn](/images/4Desktop-screenshot-12-09-2025_06_17_AM.png)
+</Frame>
+
+<Tip>
+  You can also send the report directly to Latchel by selecting **Send As Email**!
+</Tip>
+
+### **Buildium**
