@@ -39,11 +39,11 @@ Save the CSV report to your computer when prompted. Then, forward the report to 
 
 ### **Features of the Buildium Integration**
 
-**<Icon icon="rotate-reverse" iconType="sharp-duotone-solid" color="#ff9b8a" size={20} /> Two-Way Sync Feature**
+<Icon icon="rotate-reverse" iconType="sharp-duotone-solid" color="#ff9b8a" size={20} /> **Two-Way Sync Feature**
 
 The two-way sync between Buildium and Latchel ensures that key data—like properties, residents, and work orders—automatically flows between both systems. Updates made in one platform are reflected in the other, keeping everything aligned and up to date.
 
-1. **Buildium <Icon icon="arrow-right-long" iconType="sharp-duotone-solid" color="#ff9b8a" size={20} /> Latchel**
+1. **Buildium  Latchel**
 
 - **Properties:** The complete property address, along with the property ID, unit ID, and status, is brought over to Latchel. During subsequent synchronizations of the same property, both the address and integration data are interpreted to prevent duplicate property entries in Latchel.
 - **Residents:** Latchel syncs all eligible residents from Buildium every hour. Unlike other integrations that only sync recently added or edited residents, Buildium syncs all current (non-"Past") residents at a property so they can submit work orders in Latchel.
@@ -51,13 +51,13 @@ The two-way sync between Buildium and Latchel ensures that key data—like prope
   Key resident fields mapped from Buildium to Latchel include name, email, phone numbers (prioritizing cell \> home \> work \> fax), property/unit IDs, and move-in/move-out dates. A primary phone number is required and is selected based on priority.
 
   Once a resident is created in Latchel, only specific fields are updated during future syncs—such as property/unit associations and move-in/move-out dates. Residents are marked inactive in Latchel after their move-out date.
-- **Work Orders:** The Buildium integration no longer imports work orders to Latchel by default. 
+- **Work Orders:** The Buildium integration no longer imports work orders to Latchel by default.
 
 <Tip>
   If you wish to enable this feature, email Latchel via [**team@latchel.com**](mailto:team@latchel.com)**.**
 </Tip>
 
-2. **Latchel <Icon icon="arrow-right-long" iconType="sharp-duotone-solid" color="#ff9b8a" size={20} /> Buildium**
+2. **Latchel  Buildium**
 
 - **Work Orders:** Work orders are typically synced to Buildium a few seconds after they are created. Unfortunately, the Buildium API currently doesn’t allow Latchel to retrieve the Buildium work order number or update the status of tasks or work orders.
 
