@@ -1,6 +1,6 @@
 ---
 title: "Buildium Integration Reference Guide"
-description: "This Building reference guide provides a comprehensive overview of how Latchel’s integration with Buildium functions. This guide is intended as a resource to help you understand how data flows between the two systems, what information is synced, and the timing and behavior of that syncing. It outlines the structure of the integration, including how properties, residents, and work orders are shared, as well as what happens when data changes in either platform. Use this guide as a reference to better understand the integration's functionality and ensure alignment between Buildium and Latchel."
+description: "This Buildium reference guide explains how Latchel’s integration works, including how data flows, what information syncs, and how updates are handled between both systems. Use it as a quick reference to understand properties, residents, and work orders syncing between Buildium and Latchel."
 ---
 
 ### **Integration Requirements**
@@ -39,39 +39,46 @@ Save the CSV report to your computer when prompted. Then, forward the report to 
 
 ### **Features of the Buildium Integration**
 
-<Accordion title="Two-Way Sync Feature" defaultOpen icon="rotate-reverse" iconType="duotone">
-  The two-way sync between Buildium and Latchel ensures that key data—like properties, residents, and work orders—automatically flows between both systems. Updates made in one platform are reflected in the other, keeping everything aligned and up to date.
+**<Icon icon="rotate-reverse" iconType="sharp-duotone-solid" color="#ff9b8a" size={20} /> Two-Way Sync Feature**
 
-  1. **Buildium** <Icon icon="arrow-right-long" iconType="sharp-duotone-solid" color="#ff9b8a" /> **Latchel**
+The two-way sync between Buildium and Latchel ensures that key data—like properties, residents, and work orders—automatically flows between both systems. Updates made in one platform are reflected in the other, keeping everything aligned and up to date.
 
-  - **Properties:** The complete property address, along with the property ID, unit ID, and status, is brought over to Latchel. During subsequent synchronizations of the same property, both the address and integration data are interpreted to prevent duplicate property entries in Latchel.
-  - **Residents:** Latchel syncs all eligible residents from Buildium every hour. Unlike other integrations that only sync recently added or edited residents, Buildium syncs all current (non-"Past") residents at a property so they can submit work orders in Latchel.
+1. **Buildium <Icon icon="arrow-right-long" iconType="sharp-duotone-solid" color="#ff9b8a" size={20} /> Latchel**
 
-    Key resident fields mapped from Buildium to Latchel include name, email, phone numbers (prioritizing cell \> home \> work \> fax), property/unit IDs, and move-in/move-out dates. A primary phone number is required and is selected based on priority.
+- **Properties:** The complete property address, along with the property ID, unit ID, and status, is brought over to Latchel. During subsequent synchronizations of the same property, both the address and integration data are interpreted to prevent duplicate property entries in Latchel.
+- **Residents:** Latchel syncs all eligible residents from Buildium every hour. Unlike other integrations that only sync recently added or edited residents, Buildium syncs all current (non-"Past") residents at a property so they can submit work orders in Latchel.
 
-    Once a resident is created in Latchel, only specific fields are updated during future syncs—such as property/unit associations and move-in/move-out dates. Residents are marked inactive in Latchel after their move-out date.
-  - **Work Orders:** The Buildium integration syncs work orders that have been created in the last 72 hours.
+  Key resident fields mapped from Buildium to Latchel include name, email, phone numbers (prioritizing cell \> home \> work \> fax), property/unit IDs, and move-in/move-out dates. A primary phone number is required and is selected based on priority.
 
-  2. **Latchel** <Icon icon="arrow-right-long" iconType="sharp-duotone-solid" color="#ff9b8a" /> **Buildium**
-
-  - **Work Orders:** Work orders are typically synced to Buildium a few seconds after they are created. Unfortunately, the Buildium API currently doesn’t allow Latchel to retrieve the Buildium work order number or update the status of tasks or work orders.
-
-  <Note>
-    In Latchel, tasks are used to help property managers or admins stay on top of what needs to get done. In Buildium, tasks also refer to work that needs attention on a property—but they’re separate from Buildium’s actual work orders.
-
-    When a work order is created in Latchel, we also create a matching task in Buildium. So essentially, **a Latchel work order combines both a task and a work order from Buildium** to keep everything in sync.
-  </Note>
-  - **Files:** Syncing files to Buildium is currently unsupported.
-</Accordion>
-
-<Accordion title="Automatic Property Reconciliation" defaultOpen icon="timer" iconType="duotone">
-  To ensure accurate customer billing, Latchel runs an automated process each month to deactivate any active units in Latchel that no longer exist in Buildium. This process currently occurs on the **27th at 3 AM PST**. When a property is deactivated through this process, it will be logged in Latchel.
-
-  <Note>
-    Buildium allows PM’s to toggle active status by property, but these status affects all units within that property. As such, for now Latchel ignores that field and import all properties that the API returns.
-  </Note>
-</Accordion>
+  Once a resident is created in Latchel, only specific fields are updated during future syncs—such as property/unit associations and move-in/move-out dates. Residents are marked inactive in Latchel after their move-out date.
+- **Work Orders:** The Buildium integration no longer imports work orders to Latchel by default. 
 
 <Tip>
-  To know more about Latchel integration, please visit the help guide, [How Latchel Integration Works](https://help.latchel.com/s/topic/0TO5e000000h9wqGAA/How-Latchel-Integration-Works).
+  If you wish to enable this feature, email Latchel via [**team@latchel.com**](mailto:team@latchel.com)**.**
 </Tip>
+
+2. **Latchel <Icon icon="arrow-right-long" iconType="sharp-duotone-solid" color="#ff9b8a" size={20} /> Buildium**
+
+- **Work Orders:** Work orders are typically synced to Buildium a few seconds after they are created. Unfortunately, the Buildium API currently doesn’t allow Latchel to retrieve the Buildium work order number or update the status of tasks or work orders.
+
+<Note>
+  In Latchel, tasks are used to help property managers or admins stay on top of what needs to get done. In Buildium, tasks also refer to work that needs attention on a property—but they’re separate from Buildium’s actual work orders.
+
+  When a work order is created in Latchel, we also create a matching task in Buildium. So essentially, **a Latchel work order combines both a task and a work order from Buildium** to keep everything in sync.
+</Note>
+
+- **Files:** Syncing files to Buildium is currently unsupported.
+
+<Icon icon="timer" iconType="sharp-duotone-solid" color="#ff9b8a" size={20} /> **Automatic Property Reconciliation**
+
+To ensure accurate customer billing, Latchel runs an automated process each month to deactivate any active units in Latchel that no longer exist in Buildium. This process currently occurs on the **27th at 3 AM PST**. When a property is deactivated through this process, it will be logged in Latchel.
+
+<Note>
+  Buildium allows PM’s to toggle active status by property, but these status affects all units within that property. As such, for now Latchel ignores that field and import all properties that the API returns.
+</Note>
+
+**To know more about Latchel integration, please visit:**
+
+<Card title="How Latchel Integration Works" icon="arrow-right-arrow-left" iconType="duotone" color="#ff9b8a" href="/s/topic/0TO5e000000h9wqGAA/How-Latchel-Integration-Works">
+  Get the high-level view of how Latchel connects with your property management system to streamline operations.
+</Card>
