@@ -1,0 +1,541 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Latchel",
+  "colors": {
+    "primary": "#ff9b8a",
+    "light": "#ff9b8a",
+    "dark": "#ff9b8a"
+  },
+  "favicon": "/favicon.webp",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Home",
+        "groups": [
+          {
+            "group": "Home",
+            "pages": [
+              "home"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Property Manager",
+        "groups": [
+          {
+            "group": "Property Managers Help Guides",
+            "pages": [
+              "s/topic/0TO5e000000h9wqGAA/property-manager-guides",
+              {
+                "group": "Getting Started",
+                "pages": [
+                  "s/topic/0TO5e000000h9wqGAA/Getting-Started",
+                  "s/topic/0TO5e000000h9wqGAA/Getting-Started-Approvals",
+                  "s/topic/0TO5e000000h9wqGAA/Getting-Started-Dispatching",
+                  "s/topic/0TO5e000000h9wqGAA/Getting-Started-Work-Order-Navigation",
+                  "s/topic/0TO5e000000h9wqGAA/Getting-Started-Team-User-Management",
+                  "s/topic/0TO5e000000h9wqGAA/Getting-Started-Projects-Unit-Turns",
+                  "s/topic/0TO5e000000h9wqGAA/Getting-Started-Inspections"
+                ]
+              },
+              {
+                "group": "Dashboard Overview",
+                "pages": [
+                  "s/topic/0TO5e000000h9wqGAA/Dashboard-2-0",
+                  "s/topic/0TO5e000000h9wqGAA/Latchel-Task-Page-Overview",
+                  "s/topic/0TO5e000000h9wqGAA/Latchel-Reports-Overview",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Access-and-View-a-Resident-Public-Dashboard",
+                  "s/topic/0TO5e000000h9wqGAA/Navigating-the-New-Tool-Tab-in-the-Latchel-Dashboard",
+                  "s/topic/0TO5e000000h9wqGAA/Quick-Search-Box-for-Work-Orders",
+                  "s/topic/0TO5e000000h9wqGAA/Customizable-Work-Order-Quick-View",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Access-the-Help-Center-through-Your-Latchel-Dashboard"
+                ]
+              },
+              {
+                "group": "Account Settings",
+                "pages": [
+                  "s/topic/0TO5e000000h9wqGAA/Account-Settings-Overview",
+                  "s/topic/0TO5e000000h9wqGAA/Adding-Your-Company-Address",
+                  "s/topic/0TO5e000000h9wqGAA/Self-Signup-Latchel-Standard",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-view-your-Latchel-Assigned-Phone-Number",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Manage-My-Own-Invoice-Notification-Settings",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Configure-a-Property-with-Default-Access-Instructions",
+                  "s/topic/0TO5e000000h9wqGAA/Configuring-Portal-Settings",
+                  "s/topic/0TO5e000000h9wqGAA/Customize-Resident-Review-URL",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Customize-Work-Order-Budget-Limits",
+                  "s/topic/0TO5e000000h9wqGAA/How-Emergency-Temperature-and-Severity-Settings-Work-Together",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Add-Emergency-Temperature-Thresholds",
+                  "s/topic/0TO5e000000h9wqGAA/Set-Up-Non-Emergency-Schedule",
+                  "s/topic/0TO5e000000h9wqGAA/Managing-Severity-and-Responsibility-Settings",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Edit-Existing-Severity-and-Responsibility-Preset"
+                ]
+              },
+              {
+                "group": "Data Management & Configurations",
+                "pages": [
+                  "s/topic/0TO5e000000h9wqGAA/Data-Management-Configurations",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Add-a-Property",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Re-Enable-a-property",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Remove-Properties",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Add-Warranty-Information",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Create-and-View-a-Bid-Request-for-a-Property",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Add-Manage-Residents",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Enable-or-Disable-a-Resident-in-Latchel",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Update-the-Resident-s-Availability",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Add-Move-In-Move-Out-Dates",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-View-Resident-Work-Order-Links-New-Experience",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Create-Manage-Portfolios",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Delete-a-Portfolio",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Multi-Select-Portfolios",
+                  "s/topic/0TO5e000000h9wqGAA/Configuration-Inheritance-Property-Portfolio-Company-Level",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Copy-Company-or-Portfolio-Service-Provider-Prioritization",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Create-an-Owner-Profile-and-Assign-Property-Ownership",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-set-up-owners-who-manage-their-own-maintenance"
+                ]
+              },
+              {
+                "group": "Integrations",
+                "pages": [
+                  "s/topic/0TO5e000000h9wqGAA/Comprehensive-Integration-Guides",
+                  "s/topic/0TO5e000000h9wqGAA/How-Latchel-Integration-Works",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Export-Reports-with-Reference-IDs",
+                  "s/topic/0TO5e000000h9wqGAA/Latchel-Data-Sync-Extension-Reference-Guide",
+                  "s/topic/0TO5e000000h9wqGAA/The-New-Latchel-Data-Sync-Extension",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Download-and-Activate-the-Latchel-Data-Sync",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Install-the-Latchel-Data-Sync-Extension",
+                  "s/topic/0TO5e000000h9wqGAA/Updating-the-Latchel-Data-Sync-Extension",
+                  "s/topic/0TO5e000000h9wqGAA/Navigating-the-Latchel-Data-Sync-Extension-New-Version",
+                  "s/topic/0TO5e000000h9wqGAA/Prevent-Chrome-from-Interrupting-Your-Auto-Sync",
+                  "s/topic/0TO5e000000h9wqGAA/Disable-Online-Maintenance-Requests",
+                  "s/topic/0TO5e000000h9wqGAA/Rent-Manager-Integration-Reference-Guide",
+                  "s/topic/0TO5e000000h9wqGAA/Integrating-Rent-Manager-into-Latchel",
+                  "s/topic/0TO5e000000h9wqGAA/Turn-Off-Maintenance-Request-in-Rent-Manager",
+                  "s/topic/0TO5e000000h9wqGAA/Rent-Manager-Integration-Troubleshooting",
+                  "s/topic/0TO5e000000h9wqGAA/Propertyware-Integration-Reference-Guide",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Activate-the-Client-Propertyware-Integration",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Sync-Work-Order-Attachments-from-Latchel-to-PropertyWare-New-Experience",
+                  "s/topic/0TO5e000000h9wqGAA/Turn-Off-Maintenance-Request-in-Propertyware",
+                  "s/topic/0TO5e000000h9wqGAA/Rentcheck-Integration",
+                  "s/topic/0TO5e000000h9wqGAA/Yardi-Voyager-Standard-Interfaces-Setup",
+                  "s/topic/0TO5e000000h9wqGAA/Buildium-Integration-Reference-Guide",
+                  "s/topic/0TO5e000000h9wqGAA/Rentvine-Integration-Reference-Guide",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Generate-an-API-Key",
+                  "s/topic/0TO5e000000h9wqGAA/API-Docs",
+                  "s/topic/0TO5e000000h9wqGAA/The-Webhook-Subscription",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Terminate-the-Gmail-Integration"
+                ]
+              },
+              {
+                "group": "Projects, Inspections",
+                "pages": [
+                  "s/topic/0TO5e000000h9wqGAA/Projects-Inspections-Overview",
+                  "s/topic/0TO5e000000h9wqGAA/Managing-Latchel-Maintenance-Projects",
+                  "s/topic/0TO5e000000h9wqGAA/Managing-Latchel-Inspections"
+                ]
+              },
+              {
+                "group": "Resident Benefits Guides",
+                "pages": [
+                  "s/topic/0TO5e000000h9wqGAA/Resident-Benefits-Guides",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Give-Your-Residents-Direct-Access-to-Their-Benefits-Dashboard",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Create-New-Resident-Benefit",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Modify-Custom-Resident-Benefit",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Embed-Your-Resident-Benefits-Dashboard-Directly-on-to-Your-Website"
+                ]
+              },
+              {
+                "group": "Invoice and Payments",
+                "pages": [
+                  "s/topic/0TO5e000000h9wqGAA/Invoice-and-Payments",
+                  "s/topic/0TO5e000000h9wqGAA/Latchel-Guarantee-and-Refund-Request-Policy",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-View-and-Search-for-Invoices",
+                  "s/topic/0TO5e000000h9wqGAA/Understanding-the-Invoice-Auto-Approval-Threshold",
+                  "s/topic/0TO5e000000h9wqGAA/Managing-the-Invoice-Auto-Approval-Threshold",
+                  "s/topic/0TO5e000000h9wqGAA/Taking-Action-on-Needs-Approval-Invoices",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Add-Invoices-New-Experience",
+                  "s/topic/0TO5e000000h9wqGAA/Invoicing-Preferred-Service-Provider-vs-LCN",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Set-the-Require-Detailed-Invoice-Setting",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Disable-Automatic-Invoice-Collection-from-Preferred-Service-Providers",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-update-your-Subscription-Payment-Method",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Update-the-Service-Provider-Payment-Method-on-File",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Turn-on-preferred-service-provider-payments",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Schedule-Service-Provider-Payments-in-Future-Date",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Override-Change-Service-Provider-Payment-Method-in-Property",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Override-Change-Service-Provider-Payment-Method-in-Portfolio"
+                ]
+              },
+              {
+                "group": "Communication & Notification Settings",
+                "pages": [
+                  "s/topic/0TO5e000000h9wqGAA/Communication-Notification-Settings-Overview",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Contact-Latchel",
+                  "s/topic/0TO5e000000h9wqGAA/Latchel-Phone-Numbers",
+                  "s/topic/0TO5e000000h9wqGAA/Property-Manager-360-Degree-Communication-View",
+                  "s/topic/0TO5e000000h9wqGAA/How-To-Send-SMS-Messages-From-Latchel",
+                  "s/topic/0TO5e000000h9wqGAA/End-SMS-Conversation-Without-Assigning-It-to-Property-Managers",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Filter-SMS-by-Portfolio",
+                  "s/topic/0TO5e000000h9wqGAA/SMS-Transcripts",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Ensure-an-SMS-Conversation-Has-the-Right-Tag",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Tag-SMS-Conversations-Started-by-a-Property-Manager",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Handle-Tags-for-Someone-Asking-About-Multiple-Work-Orders",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Tag-Video-Calls-to-a-Work-Order-New-Experience",
+                  "s/topic/0TO5e000000h9wqGAA/Customize-How-Long-Latchel-Waits-Before-Contacting-Your-Next-Service-Provider",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Setup-Owner-Communication",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-change-the-user-notification-group-via-work-order-New-Experience",
+                  "s/topic/0TO5e000000h9wqGAA/Task-Notification-Settings",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Access-Read-Call-Logs-New-Experience",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Add-a-Special-Note-to-a-Work-Order-New-Experience"
+                ]
+              },
+              {
+                "group": "Work Order Management",
+                "pages": [
+                  "s/topic/0TO5e000000h9wqGAA/Comprehensive-Work-Order-Guide-New-Experience",
+                  "s/topic/0TO5e000000h9wqGAA/A-Property-Owner-s-Guide-in-Managing-Work-Orders",
+                  "s/topic/0TO5e000000h9wqGAA/Overview-of-Work-Order-Life-Cycle",
+                  "s/topic/0TO5e000000h9wqGAA/The-Work-Order-Page",
+                  "s/topic/0TO5e000000h9wqGAA/Work-Order-Status-Definitions-Maintenance-Page-Overview-New-Experience",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Submit-a-New-Work-Order",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Use-the-Filter-Options-in-the-Work-Order-Tab-Page",
+                  "s/topic/0TO5e000000h9wqGAA/Merging-Work-Orders",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Update-the-Work-Order-Status-i-e-to-Scheduling-Pending-Completed-Canceled-New-Experience",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Update-the-Work-Order-Summary",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Update-a-Work-Order-Title-New-Experience",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Change-a-Work-Order-Number-New-Experience",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Change-the-Service-Provider-on-a-Work-Order-New-Experience",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Change-the-Property-on-a-Work-Order-New-Experience",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Change-the-Primary-Resident-on-a-Work-Order-New-Experience",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Change-the-Severity-Settings-on-a-Work-Order",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Update-the-Approved-Budget-on-an-Active-Work-Order-New-Experience",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Approve-or-Deny-an-Estimate-or-a-Bid",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Update-the-Skill-Required-on-a-Work-Order-New-Experience",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Place-a-Work-Order-On-Hold-New-Experience",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Set-Work-Order-Appointments-New-Experience",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Take-Action-When-a-Work-Order-Is-Pending-New-Experience",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Update-Status-of-Work-Orders-on-Waiting-for-PM",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Enable-Service-Provider-Locked-In-on-a-Work-Order-New-Experience",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Set-a-Work-Order-as-Mandatory-New-Experience",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Add-a-New-Problem-Location-Setting-From-the-Work-Order-Page-New-Experience",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Provide-Permission-for-Service-Provider-to-Access-Property-for-a-Work-Order-New-Experience",
+                  "s/topic/0TO5e000000h9wqGAA/Duplicate-vs-Recall-Work-Order-Know-their-Difference",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Approve-or-Deny-a-Duplicate-Work-Order",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Reopen-a-Work-Order-New-Experience",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Cancel-a-Work-Order-New-Experience",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Resend-the-Work-Order-Details-to-the-Service-Provider"
+                ]
+              },
+              {
+                "group": "Emergency & Escalation Settings",
+                "pages": [
+                  "s/topic/0TO5e000000h9wqGAA/Emergency-Escalation-Settings-Overview",
+                  "s/topic/0TO5e000000h9wqGAA/Emergency-Escalations-Property-Damaging-and-Extreme-Habitability-Situations",
+                  "s/topic/0TO5e000000h9wqGAA/Emergency-Outbound-Communication-Process",
+                  "s/topic/0TO5e000000h9wqGAA/Emergency-Process-Quick-Guide",
+                  "s/topic/0TO5e000000h9wqGAA/Introduction-to-Intake-Settings",
+                  "s/topic/0TO5e000000h9wqGAA/Managing-Intake-Settings",
+                  "s/topic/0TO5e000000h9wqGAA/How-Emergency-Temperature-Works-with-Intake-Settings",
+                  "s/topic/0TO5e000000h9wqGAA/Work-Order-Processing-With-Intake-Settings",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Contact-Latchel",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Restrict-Evening-Availability-for-Non-Emergency-Work-Orders",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Set-up-an-On-Call-Rotation",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Update-Your-Escalation-Contacts",
+                  "s/topic/0TO5e000000h9wqGAA/Maintenance-Automation-Emergency-Vs-Non-Emergency",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Send-Latchel-Pre-Dispatch-Instructions"
+                ]
+              },
+              {
+                "group": "Preferred Service Provider",
+                "pages": [
+                  "s/topic/0TO5e000000h9wqGAA/Preferred-Service-Providers-guides-overview",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Navigate-Preferred-Service-Providers-Profiles",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Add-Manage-Service-Providers",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Edit-Service-Provider-Skills",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Prioritize-Edit-Service-Providers-with-their-skills",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Prioritize-a-Preferred-Service-Provider-for-Multiple-Skills",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Add-a-Service-Provider-to-a-Portfolio",
+                  "s/topic/0TO5e000000h9wqGAA/Set-Up-Latchel-as-a-Service-Provider-in-Your-System",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Assign-and-Reassign-Service-Providers-on-Work-Order-New-Experience",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Assign-LCN-Service-Provider-New-Experience",
+                  "s/topic/0TO5e000000h9wqGAA/Enabling-Latchel-Vendor-Network-Via-Work-Order",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Add-or-Update-Service-Provider-Instructions-on-a-Work-Order-New-Experience",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Assign-Service-Provider-to-a-Territory-Zip-Code",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Add-a-Service-Provider-to-a-Property-that-is-Outside-of-Assigned-Territory-Zip-Code",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Set-Service-Provider-as-a-VIP-Preferred-Service-Provider",
+                  "s/topic/0TO5e000000h9wqGAA/How-To-Specify-If-Your-Service-Provider-Handles-Emergencies-Non-Emergencies-Or-Both",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-View-the-Service-Provider-s-Calendar",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Opt-Into-the-Latchel-Contractor-Network",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Opt-Out-of-Latchel-Contractor-Network",
+                  "s/topic/0TO5e000000h9wqGAA/Setting-Up-Latchel-Contracted-Network-LCN-Preferences",
+                  "s/topic/0TO5e000000h9wqGAA/How-To-Blacklist-a-Service-Provider",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Remove-a-Preferred-Service-Provider-Globally",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Remove-a-Preferred-Service-Provider-Priority-List"
+                ]
+              },
+              {
+                "group": "Task Management",
+                "pages": [
+                  "s/topic/0TO5e000000h9wqGAA/Task-Management-Overview",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Defer-a-Task-New-Experience",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Create-a-Task-New-Experience",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Complete-a-Task-New-Experience"
+                ]
+              },
+              {
+                "group": "User Management",
+                "pages": [
+                  "s/topic/0TO5e000000h9wqGAA/User-Management-Overview",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Add-a-New-Company-User",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Create-User-Groups",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Change-Reset-the-Password-of-a-Latchel-User-s-Login",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Update-a-Company-User-s-Contact-Information",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Change-the-Assigned-PM-User"
+                ]
+              },
+              {
+                "group": "Files & Reports",
+                "pages": [
+                  "s/topic/0TO5e000000h9wqGAA/Files-Reports-Overview",
+                  "s/topic/0TO5e000000h9wqGAA/Latchel-Analytics-Overview",
+                  "s/topic/0TO5e000000h9wqGAA/Latchel-Analytics-Filters",
+                  "s/topic/0TO5e000000h9wqGAA/Latchel-Analytics-Exporting-Reports",
+                  "s/topic/0TO5e000000h9wqGAA/Latchel-Analytics-Schedule-Exports",
+                  "s/topic/0TO5e000000h9wqGAA/Latchel-Analytics-Feedback",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Upload-Files-to-a-Work-Order-for-Property-Manager-New-Experience",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Download-or-Manage-Files-from-Work-Orders-New-Experience",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Export-Properties",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Export-All-Work-Orders-New-Experience",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Download-a-Work-Order-History-New-Experience",
+                  "s/topic/0TO5e000000h9wqGAA/Export-Severity-Settings-as-a-CSV-File",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Export-Your-Invoice-Data-to-a-CSV",
+                  "s/topic/0TO5e000000h9wqGAA/How-to-Download-a-Work-Order-Invoice-New-Experience"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Resident",
+        "groups": [
+          {
+            "group": "Resident Help Guides",
+            "pages": [
+              "s/topic/0TO5e000000h9wrGAA/resident-help-guides",
+              "s/topic/0TO5e000000h9wrGAA/Resident-Dashboard-Overview",
+              {
+                "group": "Maintenance Request Guides",
+                "pages": [
+                  "s/topic/0TO5e000000h9wrGAA/Maintenance-Request-Guides-Overview",
+                  "s/topic/0TO5e000000h9wrGAA/How-can-a-Resident-Submit-a-Maintenance-Request",
+                  "s/topic/0TO5e000000h9wrGAA/How-to-Submit-Maintenance-Request-through-your-portal-banner",
+                  "s/topic/0TO5e000000h9wrGAA/Requesting-Assistance-from-Latchel-Via-Work-Order",
+                  "s/topic/0TO5e000000h9wrGAA/How-can-a-Resident-Confirm-Completion-of-a-Work-Order",
+                  "s/topic/0TO5e000000h9wrGAA/Rating-Completed-Maintenance-Request-Service",
+                  "s/topic/0TO5e000000h9wrGAA/How-can-a-Resident-Report-an-Incomplete-Request",
+                  "s/topic/0TO5e000000h9wrGAA/How-can-a-Resident-View-or-Update-Work-Orders",
+                  "s/topic/0TO5e000000h9wrGAA/How-can-a-Resident-Update-Maintenance-Schedule-Availability",
+                  "s/topic/0TO5e000000h9wrGAA/How-can-a-Resident-Add-Images-and-Files-on-a-Work-Order",
+                  "s/topic/0TO5e000000h9wrGAA/Cancelling-A-Work-Order-Resident",
+                  "s/topic/0TO5e000000h9wrGAA/How-can-a-Resident-Generate-Work-Order-Details-in-PDF"
+                ]
+              },
+              {
+                "group": "Resident Benefits Guides",
+                "pages": [
+                  "s/topic/0TO5e000000h9wrGAA/Resident-Benefits-Guides-Overview",
+                  "s/topic/0TO5e000000h9wrGAA/Accessing-Your-Resident-Benefits-Hub",
+                  "s/topic/0TO5e000000h9wrGAA/Resident-Benefit-Drain-Pack-Instructions",
+                  "s/topic/0TO5e000000h9wrGAA/Resident-Benefits-Pest-Control-Kit",
+                  "s/topic/0TO5e000000h9wrGAA/How-can-Residents-Submit-Benefits-Through-Latchel",
+                  "s/topic/0TO5e000000h9wrGAA/FAQ-Air-Filters-for-Residents",
+                  "s/topic/0TO5e000000h9wrGAA/Resident-Benefit-Lockout-Reimbursement",
+                  "s/topic/0TO5e000000h9wrGAA/ACH-Setup-Through-Ramp"
+                ]
+              },
+              "s/topic/0TO5e000000h9wrGAA/Comprehensive-Resident-Help-Guides"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Service Provider",
+        "groups": [
+          {
+            "group": "Service Provider Help Guides",
+            "pages": [
+              "s/topic/0TO5e000000h9wpGAA/service-provider-help-guides",
+              {
+                "group": "Getting Started",
+                "pages": [
+                  "s/topic/0TO5e000000h9wpGAA/Get-Started-Service-Provider",
+                  "s/topic/0TO5e000000h9wpGAA/A-Guide-in-Joining-Latchel-Contractor-Network",
+                  "s/topic/0TO5e000000h9wpGAA/Accessing-your-Latchel-portal",
+                  "s/topic/0TO5e000000h9wpGAA/An-Overview-of-the-Service-Provider-Log-In-Dashboard",
+                  "s/topic/0TO5e000000h9wpGAA/Resetting-Your-Latchel-Password-Service-Provider",
+                  "s/topic/0TO5e000000h9wpGAA/A-Service-Provider-s-Guide-in-Updating-a-Work-Order"
+                ]
+              },
+              {
+                "group": "Managing Your Account",
+                "pages": [
+                  "s/topic/0TO5e000000h9wpGAA/Managing-Your-Account-Service-Provider",
+                  "s/topic/0TO5e000000h9wpGAA/How-can-a-Service-Provider-Add-Their-Bank-Account-Information",
+                  "s/topic/0TO5e000000h9wpGAA/Managing-Service-Provider-Users",
+                  "s/topic/0TO5e000000h9wpGAA/Google-Calendar-Integration-Service-Provider"
+                ]
+              },
+              {
+                "group": "Work Order Management",
+                "pages": [
+                  "s/topic/0TO5e000000h9wpGAA/Work-Order-Management-Service-Providers",
+                  "s/topic/0TO5e000000h9wpGAA/How-to-Accept-and-Schedule-Work-Orders",
+                  "s/topic/0TO5e000000h9wpGAA/How-can-a-VIP-Service-Provider-Accept-or-Schedule-a-Work-Order",
+                  "s/topic/0TO5e000000h9wpGAA/How-Service-Providers-Reschedule-a-Work-Order-in-Latchel",
+                  "s/topic/0TO5e000000h9wpGAA/Accepting-Scheduling-Work-Order-for-Another-Service-Provider-User-Within-the-Company",
+                  "s/topic/0TO5e000000h9wpGAA/How-Service-Providers-View-their-Work-Order-Calendar",
+                  "s/topic/0TO5e000000h9wpGAA/How-to-Move-Work-Orders-Forward-When-Your-Action-is-Required",
+                  "s/topic/0TO5e000000h9wpGAA/How-to-Reject-a-Work-Order-Service-Provider"
+                ]
+              },
+              {
+                "group": "Estimates, Invoicing & Documentation",
+                "pages": [
+                  "s/topic/0TO5e000000h9wpGAA/Estimates-Invoicing-Documentation-Service-Provider",
+                  "s/topic/0TO5e000000h9wpGAA/How-Can-a-Service-Provider-Submit-an-Estimate-or-a-Bid",
+                  "s/topic/0TO5e000000h9wpGAA/How-to-Add-Images-Files-to-a-Work-Order",
+                  "s/topic/0TO5e000000h9wpGAA/How-to-Create-an-Invoice",
+                  "s/topic/0TO5e000000h9wpGAA/How-to-Upload-an-Invoice"
+                ]
+              },
+              "s/topic/0TO5e000000h9wpGAA/Comprehensive-Service-Provider-Guides"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Product Updates",
+        "groups": [
+          {
+            "group": "What's New!",
+            "pages": [
+              "s/topic/0TO5e000000h9wsGAA/latchel-newsletter",
+              {
+                "group": "2026 Newsletters",
+                "pages": [
+                  "s/topic/0TO5e000000h9wsGAA/2026-newsletter-releases",
+                  "s/topic/0TO5e000000h9wsGAA/Jan-12-26-release"
+                ]
+              },
+              {
+                "group": "2025 Newsletters",
+                "pages": [
+                  "s/topic/0TO5e000000h9wsGAA/2025-newsletter-releases",
+                  "s/topic/0TO5e000000h9wsGAA/December-29-release",
+                  "s/topic/0TO5e000000h9wsGAA/December-15-release",
+                  "s/topic/0TO5e000000h9wsGAA/December-1-release",
+                  "s/topic/0TO5e000000h9wsGAA/November-17-release",
+                  "s/topic/0TO5e000000h9wsGAA/November-3-release",
+                  "s/topic/0TO5e000000h9wsGAA/October-20-release",
+                  "s/topic/0TO5e000000h9wsGAA/October-6-release",
+                  "s/topic/0TO5e000000h9wsGAA/Sept-22-release",
+                  "s/topic/0TO5e000000h9wsGAA/Sept-8-release",
+                  "s/topic/0TO5e000000h9wsGAA/August-25-release",
+                  "s/topic/0TO5e000000h9wsGAA/August-11-release",
+                  "s/topic/0TO5e000000h9wsGAA/July-28-release",
+                  "s/topic/0TO5e000000h9wsGAA/July-14-release",
+                  "s/topic/0TO5e000000h9wsGAA/June-30-release",
+                  "s/topic/0TO5e000000h9wsGAA/June-16-release",
+                  "s/topic/0TO5e000000h9wsGAA/June-2-release",
+                  "s/topic/0TO5e000000h9wsGAA/May-19-release",
+                  "s/topic/0TO5e000000h9wsGAA/May-5-release",
+                  "s/topic/0TO5e000000h9wsGAA/April-21-release",
+                  "s/topic/0TO5e000000h9wsGAA/April-7-release",
+                  "s/topic/0TO5e000000h9wsGAA/March-24-release",
+                  "s/topic/0TO5e000000h9wsGAA/March-10-release",
+                  "s/topic/0TO5e000000h9wsGAA/February-24-release",
+                  "s/topic/0TO5e000000h9wsGAA/February-10-release",
+                  "s/topic/0TO5e000000h9wsGAA/January-27-release"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "API Documentation",
+            "pages": [
+              "reference/introduction",
+              "reference/payload-format",
+              "reference/job-created-&-updated",
+              "reference/tenant-created-&-updated",
+              "reference/portfolio-created-&-updated"
+            ]
+          }
+        ]
+      }
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "FAQs",
+          "href": "https://latchel.com/faq/",
+          "icon": "person-circle-question"
+        },
+        {
+          "anchor": "Blog",
+          "href": "https://latchel.com/blog/",
+          "icon": "newspaper"
+        },
+        {
+          "anchor": "Case Studies",
+          "href": "https://latchel.com/case-studies/",
+          "icon": "books"
+        }
+      ]
+    }
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg",
+    "href": "https://latchel.com/"
+  },
+  "appearance": {
+    "default": "light"
+  },
+  "background": {
+    "decoration": "grid"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Login",
+        "href": "https://app.latchel.com/login"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Get a Demo",
+      "href": "https://latchel.com/demo-request-releases/"
+    }
+  },
+  "footer": {
+    "socials": {
+      "facebook": "https://www.facebook.com/latchel",
+      "instagram": "https://www.instagram.com/latchel_inc/",
+      "linkedin": "https://www.linkedin.com/company/latchel/"
+    }
+  },
+  "fonts": {
+    "heading": {
+      "family": "GT Walsheim",
+      "weight": 400,
+      "format": "woff2",
+      "source": "https://latchel.com/wp-content/uploads/2022/01/GT-Walsheim-Regular.woff2"
+    }
+  }
+}
