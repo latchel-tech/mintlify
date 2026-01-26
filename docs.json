@@ -9,6 +9,25 @@
   },
   "favicon": "/favicon.webp",
   "navigation": {
+    "global": {
+      "anchors": [
+        {
+          "anchor": "FAQs",
+          "icon": "person-circle-question",
+          "href": "https://latchel.com/faq/"
+        },
+        {
+          "anchor": "Blog",
+          "icon": "newspaper",
+          "href": "https://latchel.com/blog/"
+        },
+        {
+          "anchor": "Case Studies",
+          "icon": "books",
+          "href": "https://latchel.com/case-studies/"
+        }
+      ]
+    },
     "tabs": [
       {
         "tab": "Home",
@@ -425,6 +444,7 @@
                 "group": "2026 Newsletters",
                 "pages": [
                   "s/topic/0TO5e000000h9wsGAA/2026-newsletter-releases",
+                  "product-updates/whats-new/2026-newsletters/january-26-2026",
                   "s/topic/0TO5e000000h9wsGAA/Jan-12-26-release"
                 ]
               },
@@ -478,26 +498,7 @@
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "FAQs",
-          "href": "https://latchel.com/faq/",
-          "icon": "person-circle-question"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://latchel.com/blog/",
-          "icon": "newspaper"
-        },
-        {
-          "anchor": "Case Studies",
-          "href": "https://latchel.com/case-studies/",
-          "icon": "books"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
