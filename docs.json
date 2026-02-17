@@ -115,6 +115,10 @@
                 "group": "Latchel Analytics",
                 "pages": [
                   "s/topic/0TO5e000000h9wqGAA/Latchel-Analytics-Overview",
+                  {
+                    "group": "The Summary Section",
+                    "pages": []
+                  },
                   "s/topic/0TO5e000000h9wqGAA/Latchel-Analytics-Filters",
                   "s/topic/0TO5e000000h9wqGAA/Latchel-Analytics-Exporting-Reports",
                   "s/topic/0TO5e000000h9wqGAA/Latchel-Analytics-Schedule-Exports",
