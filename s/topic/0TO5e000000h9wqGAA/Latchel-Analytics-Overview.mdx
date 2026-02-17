@@ -3,58 +3,212 @@ title: "Latchel Analytics"
 description: "Latchel Analytics gives you a clear view of your maintenance operations through easy-to-read dashboards and reports. From tracking work order volume to identifying response time trends, this tool helps you make informed decisions and monitor performance—all in one place. Use this guide to explore how to access and get the most out of your analytics."
 ---
 
-### **Overview**
+### **The Expanded Analytics**
+
+Latchel Analytics has recently undergone a major update, including new functionality, UI changes, powered through Google Looker Studio. These changes significantly improve how property managers access, filter, and understand their data across their Latchel account.
 
 The Analytics dashboard is organized into different sections to help you monitor and evaluate your maintenance performance.
 
 <Frame>
-  ![Latchel 07 11 2025 11 20 AM Pn](/images/Latchel-07-11-2025_11_20_AM.png)
+  ![Analytics](/images/analytics.png)
 </Frame>
 
-Here's the breakdown of each sections that you can see in Analytics:
+### **The Summary Section**
 
-1. **Filters**
+1. **Days to Resolve WO**
 
-- **Data Range:** Allows users to filter analytics by a specific time period.
-- **Portfolio & Owner Filters:** Enable filtering data by specific property portfolios or owners to focus on subsets of data.
+This calculates the median number of days it takes to resolve work orders. The resolution occurs when work is complete, not necessarily when the work order itself is completed and invoiced.
 
-2. **Key Metrics**
+<Check>
+  **Why This Is Important:**
 
-These metric tiles provide high-level operational insights:
+  Work orders that stay open reduce the perceived value of a rental home. If work orders remain open and unresolved for too long then residents are more likely to move out when it's time for renewals.
+</Check>
 
-- **Work Orders Prevented**🛡️: Indicates the percentage of resident requests that were resolved without requiring a dispatched work order.
+2. **Work Orders Created vs. Completed**
 
+This tracks the count of work orders created and their final status (completed, cancelled, forwarded to PM) by day and month. It also allows for side-by-side comparison of created work orders versus their status breakdown.
 
-- **Emergencies De-escalated**🎉: Reflects the percentage of emergency tickets that were handled without escalating into an actual emergency response.
-- **Resident Review Score**⭐: Shows the average resident rating of the services provided, scored out of 5.
-- **Conversations Handled** ☎️: Displays the total number of interactions (calls, texts, etc.) Latchel handled during the selected period.
-- **Hours to Schedule** 🧮: Represents the average time in hours it took to schedule a job from creation.
-- **Days to Complete WO** ⏱️: Reflects the average number of days it took to complete a work order from the time it was created.
+<Check>
+  **Why This Is Important:**
+
+  This metric visually highlights your operational backlog. By comparing the total work orders created (the inflow) against those completed (the outflow), it pinpoints the exact volume of work orders that remain open and "in progress" each month.
+</Check>
+
+3. **Hours to Schedule**
+
+This metric calculates the median time in hours it takes from work order creation to reaching "Awaiting Work Date" state. It also measures scheduling efficiency.
+
+<Check>
+  **Why This Is Important:**
+
+  Latchel's data shows the most important factor to determine resident happiness with most maintenance is the time it takes to schedule work. The actual date of the appointment is less important. Think of it as shortening the amount of time the resident is sitting with uncertainty about how long it will take to address their issue. Uncertainty is worse than waiting.
+
+  **This is the most impactful metric to resident reviews assuming your service providers actually show up to scheduled appointments and are empowered to complete necessary repairs on that first visit.**
+</Check>
+
+4. **Work Order Prevented**
+
+This metrics tracks intake outcomes to identify when issues were resolved during intake without creating a work order versus when work orders were actually created.
+
+<Check>
+  **Why This Is Important:**
+
+  This shows how many initial work order requests Latchel fielded that did not ultimately result in a work order, either solving the issue or preventing a duplicate or a new work order from being created.
+</Check>
+
+5. **Resident Interactions Handled**
+
+This metric aggregates all customer conversations across SMS, call logs, Twilio calls, and intake sessions. Provides a comprehensive view of all interactions with residents.
+
+<Check>
+  **Why This Is Important:**
+
+  This shows how many interactions with your residents were handled by Latchel and did not have to be fielded by your team.
+</Check>
+
+6. **Emergencies De-escalated**
+
+This tracks potential emergency work orders and the percentage that did not result in immediate dispatch. This could be because they were resolved, deferred, cancelled as a duplicate or otherwise de-escalated.
+
+<Check>
+  **Why This Is Important:**
+
+  This shows the number of work orders that initially appeared like they matched your emergency criteria, but after deeper troubleshooting they were de-escalated or deferred, which saves your company and clients money.
+</Check>
+
+7. **Resident Review Score**
+
+This captures resident ratings/review scores for completed work orders. However, this only includes work orders that have received a rating.
+
+<Check>
+  **Why This Is Important:**
+
+  The number one reason residents choose to move out of a home is because of poor maintenance experiences. The benchmark is a **4.8 / 5.0 star** average rating.
+</Check>
+
+### **The Work Order Section**
+
+This section contains detailed work order queries and work order-specific metrics.
+
+1. **Work Order Details**
+
+This **provides comprehensive work order information** including property details, resident names, vendor information, problem/category, state, and creator information.
+
+2. **Median Speed to Schedule Appointment**
+
+This metric calculates the **median time** (in hours with decimal precision, e.g., 0.1 hours) **between when a job is first offered to a vendor** (or assigned if no offer exists) and **when the appointment is scheduled**. It also measures how quickly vendors schedule appointments after being offered/assigned.
+
+3. **Missed Appointment Rate**
+
+This calculates the percentage of work orders that had a confirmed appointment but had a **"no show"** reported. This metric identifies appointments where the service provider did not show up or where the resident reported issues with the appointment.
+
+4. **Average Work Order Review**
+
+This calculates the average work order review score. This is a repeat of the **"Resident Review Score"** metric from the main dashboard, but shown for reviews given each month based on when the work order was updated (since there is no specific review date field).
+
+5. **Median Work Order Resolution Time**
+
+This calculates the median time (in days) between work order creation and the visit time. This metric measures **how long it takes from when a work order is created until the service visit occurs.**
+
+### **The Vendor Insights Section**
+
+This section contains vendor performance metrics and insights. This section provides the top 10 best and worst service providers based on the following:
+
+1. **Vendor Scheduling Time**
+
+This identifies the **top 10 best-performing and top 10 worst-performing vendors** **<u>based on their speed to schedule appointments</u>**. This metric measures **how quickly vendors schedule appointments** after being offered/assigned work orders. The same query can be used to generate both rankings by sorting vendors by median hours_to_confirm in ascending order (best) or descending order (worst).
 
 <Tip>
-  Clicking the tile of any key metrics will show you the option at the corner of the tile to manage the data it can show. You can select **Filter**, **Show Underlying Data**, and even **Export** it!
+  **Dashboard Display:**
+
+  🚀 **Top Performing**: Vendors with the lowest median hours_to_confirm (fastest to schedule)
+
+  ⚠️ **Worst Performing**: Vendors with the highest median hours_to_confirm (slowest to schedule)
 </Tip>
 
-<Frame>
-  ![Key Metrics Options2 Gi](/images/KeyMetricsOptions2.gif)
-</Frame>
+2. **Vendor Missed Appointment Rate**
 
-3. **Graph: Work Orders Created vs. Completed**
+This metric identifies the **top 10 best-performing and top 10 worst-performing vendors** **<u>based on their missed appointment rate</u>** (percentage). It also measures what percentage of confirmed appointments were missed (no show) for each vendor. The same query can be used to generate both rankings by sorting vendors by missed appointment rate in ascending order (best = lowest rate) or descending order (worst = highest rate).
 
-This bar chart visually compares the number of work orders created (purple) versus completed (teal) per month. It allows users to track work order backlog and completion trends over time.
+<Tip>
+  **Dashboard Display:**
 
-4. **Export Analytics**
+  🚀 **Top Performing**: Vendors with the lowest missed appointment rate (best performance)
 
-This section will give you the option to export analytic reports in different file formats and save them for future use.
+  ⚠️ **Worst Performing**: Vendors with the highest missed appointment rate (worst performance)
+</Tip>
 
-5. **Comprehensive Reports**
+3. **Vendor Average Work Order Review**
 
-This section allows users to generate and download detailed datasets from Latchel Analytics. It’s useful for deeper analysis, internal reporting, or sharing insights with stakeholders. Users can typically export CSV files that include work order details, vendor performance, and more based on selected filters.
+Identifies the **top 10 best-performing and top 10 worst-performing vendors** **<u>based on their average work order review scores</u>**. This metric **measures customer satisfaction with vendor performance**. The same query can be used to generate both rankings by sorting vendors by average job_rating in descending order (best = highest rating) or ascending order (worst = lowest rating).
 
-6. **Manage Saved View**
+<Tip>
+  **Dashboard Display:**
 
-By adjusting the reports options, you can save the filtered views for a quick access later. This is especially helpful if you manage multiple portfolios or want to focus on specific data.
+  🚀 **Top Performing**: Vendors with the highest average job_rating (best customer satisfaction)
 
-7. **Feeback**
+  ⚠️ **Worst Performing**: Vendors with the lowest average job_rating (worst customer satisfaction)
+</Tip>
 
-Located in the top right, this section provides a direct channel for users to submit feedback about the analytics experience. Whether it’s a feature request, bug report, or suggestion, users can help shape future improvements by sharing their input here.
+4. **Vendor Median Work Order Resolution Time**
+
+Identifies the**top 10 best-performing and top 10 worst-performing vendors**  **<u>based on their median work order resolution time</u>**. This metric measures vendor-controllable time— **how quickly vendors resolve work orders from assignment/offer to visit time**. The same query can be used to generate both rankings by sorting vendors by median days_to_resolve in ascending order (best = fastest) or descending order (worst = slowest).
+
+<Tip>
+  **Dashboard Display:**
+
+  🚀 **Top Performing**: Vendors with the lowest median days_to_resolve (fastest to resolve)
+
+  ⚠️ **Worst Performing**: Vendors with the highest median days_to_resolve (slowest to resolve)
+</Tip>
+
+### **The Property Insights Section**
+
+This section contains property performance metrics and insights.
+
+1. **Properties with the Most Requests**
+
+This identifies properties with the highest number of work order requests. This also helps identify properties that require the most maintenance attention.
+
+2. **Top Recurring Issues**
+
+This identifies issues that repeated (more than once) at any property. This metric shows which issues are recurring problems, helping identify issues that need attention.
+
+3. **Types of Emergency Work Orders**
+
+This metric returns emergency work orders with their LLM-categorized types from the work_order_types table. This query uses **AI categorization** to group emergency work orders into predefined categories such as "Major Leaks and Flooding", "Heating/Cooling Issues", "Sewage/Drainage Backups", etc.
+
+<Check>
+  **Why This Is Important:**
+
+  Understanding the types of emergency work orders helps **identify patterns and prioritize resources**. For example, if "Major Leaks and Flooding" is the most common emergency type, you can focus on preventive maintenance, better vendor relationships, or resident education to reduce these incidents.
+</Check>
+
+### **The Resident Section**
+
+This section contains detailed resident information queries.
+
+1. **Resident Details**
+
+This provides detailed information about active residents, including their contact information, associated properties, and property owner details.
+
+### **The Properties Section**
+
+This section contains detailed property information queries.
+
+1. **Property Details**
+
+This provides comprehensive property information including address, owner details, active residents, and integration data. However, this only includes active properties.
+
+### **The Invoices Section**
+
+This section contains detailed invoice information queries.
+
+1. **Invoices Details**
+
+This provides detailed invoice information including line items, associated work orders, properties, and vendor details. It is useful for financial reporting and invoice tracking.
+
+<Warning>
+  This article is currently a work in progress.
+</Warning>

@@ -112,6 +112,16 @@
                 ]
               },
               {
+                "group": "Latchel Analytics",
+                "pages": [
+                  "s/topic/0TO5e000000h9wqGAA/Latchel-Analytics-Overview",
+                  "s/topic/0TO5e000000h9wqGAA/Latchel-Analytics-Filters",
+                  "s/topic/0TO5e000000h9wqGAA/Latchel-Analytics-Exporting-Reports",
+                  "s/topic/0TO5e000000h9wqGAA/Latchel-Analytics-Schedule-Exports",
+                  "s/topic/0TO5e000000h9wqGAA/Latchel-Analytics-Feedback"
+                ]
+              },
+              {
                 "group": "Integrations",
                 "pages": [
                   "s/topic/0TO5e000000h9wqGAA/Comprehensive-Integration-Guides",
@@ -313,11 +323,6 @@
                 "group": "Files & Reports",
                 "pages": [
                   "s/topic/0TO5e000000h9wqGAA/Files-Reports-Overview",
-                  "s/topic/0TO5e000000h9wqGAA/Latchel-Analytics-Overview",
-                  "s/topic/0TO5e000000h9wqGAA/Latchel-Analytics-Filters",
-                  "s/topic/0TO5e000000h9wqGAA/Latchel-Analytics-Exporting-Reports",
-                  "s/topic/0TO5e000000h9wqGAA/Latchel-Analytics-Schedule-Exports",
-                  "s/topic/0TO5e000000h9wqGAA/Latchel-Analytics-Feedback",
                   "s/topic/0TO5e000000h9wqGAA/How-to-Upload-Files-to-a-Work-Order-for-Property-Manager-New-Experience",
                   "s/topic/0TO5e000000h9wqGAA/How-to-Download-or-Manage-Files-from-Work-Orders-New-Experience",
                   "s/topic/0TO5e000000h9wqGAA/How-to-Export-Properties",
@@ -441,6 +446,7 @@
                 "group": "2026 Newsletters",
                 "pages": [
                   "s/topic/0TO5e000000h9wsGAA/2026-newsletter-releases",
+                  "s/topic/0TO5e000000h9wsGAA/february-9-2026",
                   "product-updates/whats-new/2026-newsletters/january-26-2026",
                   "s/topic/0TO5e000000h9wsGAA/Jan-12-26-release"
                 ]
