@@ -16,6 +16,10 @@ We refer to sync events after the initial sync as “subsequent” syncs. Subseq
 - The property does not exist in Latchel
 - The property is active in Latchel
 
+<Warning>
+  If a property does not have the **State** field filled out in AppFolio, it will not sync from AppFolio into Latchel. Make sure every property record includes a State value before syncing.
+</Warning>
+
 2. **Residents -** residents are updated in Latchel if the following is true:
 
 - The resident doesn't exist in Latchel yet, OR
@@ -110,4 +114,10 @@ To exclude a property, use the **Exclude from Property Sync** button found withi
 
 <Note>
   To re-include a property, simply remove the exclusion in your PMS. It will be picked up in the next sync.
+</Note>
+
+## Merging Properties
+
+<Note>
+  Planning to merge properties in your PMS? Please reach out to Product Support or your Customer Success Manager first so we can ensure the integration continues to sync correctly during and after the merge.
 </Note>
