@@ -963,7 +963,8 @@
                   "latchel-admin/Data-Support-Team/team-onboarding-plans",
                   "latchel-admin/Data-Support-Team/technical-success-team",
                   "latchel-admin/Data-Support-Team/weekly-meeting-notes"
-                ]
+                ],
+                "hidden": true
               },
               {
                 "dropdown": "Customer Success Team",
