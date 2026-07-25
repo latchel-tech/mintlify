@@ -581,7 +581,6 @@
           {
             "tab": "Latchel Admin",
             "icon": "house",
-            "hidden": true,
             "dropdowns": [
               {
                 "dropdown": "Latchel Admin Team Spaces",
