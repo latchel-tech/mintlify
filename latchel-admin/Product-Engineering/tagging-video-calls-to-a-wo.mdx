@@ -2,3 +2,66 @@
 title: "Tagging Video Calls to a WO"
 groups: ["latchel"]
 ---
+
+# **What is the Product Release?**
+
+We are introducing the ability to tag video calls to WOs. This allows Latchel Users to see a history of all video calls directly in the WO activity or call log.
+
+<Frame>
+  ![](images/Eng-45.png)
+</Frame>
+
+# **Who Is Impacted?**
+
+The following groups are impacted:
+
+- All Latchel Users can tag one or more WOs to a video call. This allows them to see what WO it’s a part of when deep diving previous video call recordings.
+
+# **When Is It Relevant?**
+
+When a Latchel User looks back at a video call recording, he/she can see what WO that it was a part of.
+
+# **What was the Previous State?**
+
+Prior to this release, there was no way to see what WO a video call recording was in relation to other than listening/watching the call.
+
+# **How Is It Used?**
+
+## **Video Call Auto-Tag Process**
+
+See demo in this <u>loom</u>. 
+
+<iframe src="https://www.loom.com/embed/3af2f1d42d404b9c8bc4ece6158ee6f6" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+- If a Latchel User starts a video call with a Resident/SP from a specific WO page, the video call will be automatically tagged to that WO.
+- The UI will show this tag. However, if the User would like to change the tag or add more, he/she can press the ellipses to do so.
+- Once the User is satisfied, he/she can press “Create Video Chat Room”.
+- Once the video call is ended, the User can see that the video call recording has been tagged to the WO(s). This shows under the the WO’s activity log abd under the specific “calls” tab.
+
+## **How to Manually Tag a Video Call to a WO**
+
+See demo in this <u>loom</u>. 
+
+<iframe src="https://www.loom.com/embed/fceadece8344409898de3b6a05fc08d8" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+For scenarios where the Latchel User tries to start a video call with a Resident/SP/Owner outside of the WO page (i.e. profile page, list view, etc.), he/she will need to choose one or more tags before being able to start the video chat.
+
+- Start a video call within the Latchel console that’s not the WO page.
+- There is now a new UI where it asks the User to tag it to a WO. He/she can choose one or more of the following:
+  - The User’s recently viewed WOs for the Resident/SP/Owner.
+  - A list of the Resident/SP/Owner’s recent WOs.
+  - Choose not to tag to a WO.
+- Once the User is satisfied, he/she can press “Create Video Chat Room”.
+- Once the video call is ended, the User can see that the video call recording has been tagged to the WO(s). This shows under the the WO’s activity log abd under the specific “calls” tab.
+
+# **What Are Some Risks or Ways Things Could Go Wrong?**
+
+There is little to no risk with this deployment. It is the same process that we currently have in place for tagging phone calls to WOs.
+
+# **When Will This Change Be Effective?**
+
+This was deployed on 12/23.
+
+# **As an Ops Manager, How Do I Measure Compliance?**
+
+Any user can look at past video calls to see if tags have been added to them.
