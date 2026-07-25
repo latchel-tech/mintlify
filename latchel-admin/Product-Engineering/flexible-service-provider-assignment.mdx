@@ -2,3 +2,155 @@
 title: "Flexible Service Provider Assignment"
 groups: ["latchel"]
 ---
+
+# **What is the Product Release?**
+
+There are two overall parts to this product release:
+
+- **Manual Flexible Service Provider Assignment** - This is a new feature that enables PMs and Latchel Ops to manually assign work orders to any user within a preferred service provider company, enhancing flexibility and streamlining both in-house and service provider dispatch services.<br />
+  <Frame>
+    ![](images/Eng-98.png)
+  </Frame>
+   
+- **Flexible Auto-Assignment Acceptance** - This is a new feature that enables the Primary Service Provider to accept and/or schedule the work order to any other user at their company.<br />
+  <Frame>
+    ![](images/Eng-99.png)
+  </Frame>
+
+# **What was the Previous State?**
+
+Previously, we only allowed PMs and Latchel Ops to only assign a WO to the Primary User within a Preferred SP Company. In addition, Service Provider companies could only accept auto-assignment offers to the primary user.
+
+# **Who Is Impacted?**
+
+- **PMs, Admins, and Latchel Ops** - These users will have the ability to assign to any user within the Service Provider when they choose to manually assign a Service Provider to a work order.
+- **Primary Service Providers** - They will now have the ability to choose any user within their company when accepting and/or scheduling an auto-assignment offer.
+
+# **When Is It Relevant?**
+
+This feature was launched to enhance flexibility and streamline both in-house and service provider dispatch processes.
+
+# **How Is It Used?**
+
+## **Manual Flexible Service Provider Assignment**
+
+See overall demo in this [<u>loom</u>](https://www.loom.com/share/f4e27c76eacc470ba35a9286f49dcffb "https://www.loom.com/share/f4e27c76eacc470ba35a9286f49dcffb").
+
+Please note that this feature works with the Service Provider Gmail Calendar Integration.
+
+### **Manually Assigning a Preferred Service Provider**
+
+This scenario is when a PM or Latchel Ops is manually assigning a Preferred Service Provider for the first time.
+
+- Work Order is in “Finding Service Provider” state. Press the “Take Action” drop down and choose “Find Service Provider”.
+- A modal will pop up with all Preferred Service Providers that are eligible for the work order. Choose the Preferred Service Provider company that you’d like to assign to the work order. <br />
+  <Frame>
+    ![](images/Eng-100.png)
+  </Frame>
+   
+- The next modal screen will show you the Preferred Service Provider company you’ve chosen with a drop down of users at the company. Click the drop down and choose whichever user you’d like to assign to the work order.<br />
+  <Frame>
+    ![](images/Eng-101.png)
+  </Frame>
+   
+- Press “Add to Work Order”.
+
+### **Manually Changing a Preferred Service Provider**
+
+This scenario is when a PM or Latchel Ops is manually changing a Preferred Service Provider on a work order.
+
+- When you want to change the Service Provider on a work order, go to the Service Provider section of the work order page and click the ellipses. It will drop down an option to “Edit SP”. Click that option.
+  <Frame>
+    ![](images/Eng-102.png)
+  </Frame>
+- You will then see a modal that lists the currently selected Preferred Service Provider company at the top with an orange label that says “This Service Provider is currently assigned to this work order”. In order to switch the User at the same Preferred Service Provider Company, select that Service Provider company (see blue arrow in screenshot below).<br />
+  <Frame>
+    ![](images/Eng-103.png)
+  </Frame>
+   
+- The next modal screen will show you that Preferred Service Provider company with a drop down of users at the company. Click the drop down and choose whichever user you’d like to assign to the work order.
+  <Frame>
+    ![](images/Eng-104.png)
+  </Frame>
+  <br />
+- Add a note summarizing why you are changing the Service Provider and then press “Add to Work Order”.
+
+## **Flexible Auto-Assignment Acceptance**
+
+This new feature allows Primary Service Providers to assign auto-assignment offers to any Service Provider user within their company.
+
+It’s important to note that with Flexible Auto-Assignment Acceptance, all auto-assignment offers will still go to the primary service provider to accept and/or schedule for themselves or other users at their company.
+
+### **Non-VIP Service Providers**
+
+This applies to most Service Providers, who are required to schedule a work order when they accept an auto-assignment offer. They do not have the ability to accept it and then schedule it at a later time.
+
+See the demo for non-VIP Service Providers in this [<u>loom</u>](https://www.loom.com/share/45038a2cdf134164a34157be62681495 "https://www.loom.com/share/45038a2cdf134164a34157be62681495").
+
+- The Primary Service Provider of a non-VIP Service Provider company receives an auto-assignment offer and decides to accept it by pressing the “Accept & Schedule Job” button at the top of the work order.
+  <Frame>
+    ![](images/Eng-105.png)
+  </Frame>
+   
+- The next screen will ask who the Primary Service Provider wants to assign to the work order. It will highlight the Primary Service Provider with a green label that says “Myself”.
+  <Frame>
+    ![](images/Eng-106.png)
+  </Frame>
+   
+- After the Primary Service Provider chooses a person to assign it to, it will prompt them to pick a time to schedule the appointment. All non-VIP Service Providers must have the primary Service Provider schedule the appointment at the time of acceptance.
+  <Frame>
+    ![](images/Eng-107.png)
+  </Frame>
+   
+- After the Primary Service Provider chooses a time, it’ll ask them to confirm and submit.
+  <Frame>
+    ![](images/Eng-108.png)
+  </Frame>
+   
+- After submitting the schedule, the work order will be in “Awaiting Work Date” state and:
+  - If the Primary Service Provider assigned the work order to themselves, the work order will remain on their own dashboard.
+  - If the Primary Service Provider assigned the work order to someone else at their company, the work order will be removed from their own dashboard and get added to the assigned Service Provider User’s dashboard.
+
+### **VIP Service Providers**
+
+VIP Service Providers are given the special ability to accept auto-assignment offers without scheduling them right away. As a result, their workflow gives them the option to schedule the work order in that moment or later.
+
+See the demo for VIP Service Providers in this [<u>loom</u>](https://www.loom.com/share/cfc9b6782e50419bb6ca1d9a9c6bca1b "https://www.loom.com/share/cfc9b6782e50419bb6ca1d9a9c6bca1b").
+
+- The Primary Service Provider of a non-VIP Service Provider company receives an auto-assignment offer and decides to accept it by pressing the “Accept & Schedule Job” button at the top of the work order.
+  <Frame>
+    ![](images/Eng-109.png)
+  </Frame>
+  <br />
+- The next screen will ask who the Primary Service Provider wants to assign to the work order. It will highlight the Primary Service Provider with a green label that says “Myself”.
+  <Frame>
+    ![](images/Eng-110.png)
+  </Frame>
+   
+  - If the Primary Service Provider chooses themselves:
+    - They will be asked when they’d like to schedule the work order.
+      <Frame>
+        ![](images/Eng-111.png)
+      </Frame>
+       
+      - **Now** - Choosing this option prompts the Primary Service Provider to choose a time to schedule the work order. Once the time is chosen, the work order goes into “Awaiting Work Date”. The work order will be assigned to them and remain on their dashboard.
+      - **Later** - Choosing this option assigns the work order to the Primary Service Provider and moves the work order into the “Schedule Service Provider” state. The work order will remain on the Primary Service Provider’s dashboard and they can schedule it at a later time.
+  - If the Primary Service Provider chooses another Service Provider user at their company:
+    - They will be asked when they’d like to schedule the work order:
+      <Frame>
+        ![](images/Eng-112.png)
+      </Frame>
+       
+      - **Now** - Choosing this option prompts the Primary Service Provider to choose a time to schedule the work order on the user’s behalf. Once the time is chosen, the work order goes into “Awaiting Work Date”. The work order will then be removed from the Primary Service Provider’s dashboard and get added to the assigned Service Provider User’s dashboard.
+      - **Send to Assigned Service Provider to Schedule** - Choosing this option,assigns the work order to the chosen other Service Provider user and moves the work order into the “Schedule Service Provider” state. The work order will then be removed from the Primary Service Provider’s dashboard and get added to the assigned Service Provider User’s dashboard. The Primary Service Provider will see this notification upon submitting this. Charles Woods in the screenshot below is the other non-primary service provider user that the work order was assigned to.
+        <Frame>
+          ![](images/Eng-113.png)
+        </Frame>
+
+# **What Are Some Risks or Ways Things Could Go Wrong?**
+
+None.
+
+# **When Will This Change Be Effective?**
+
+The flexible manual service provider assignment was deployed on 4/19. The flexible auto service provider assignment will be deployed on 5/3.

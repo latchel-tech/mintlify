@@ -2,3 +2,83 @@
 title: "Updated LCN Label Definition"
 groups: ["latchel"]
 ---
+
+# **What is the Product Release?**
+
+We have updated the logic for the LCN label so that Latchel Users can easily understand if LCN is enabled or not for the WO and where it’s enabled/disabled.
+
+<Frame>
+  ![](images/Eng-90.png)
+</Frame>
+
+# **What was the Previous State?**
+
+Previously, it was not easy for Latchel Users to understand if LCN was enabled or not.
+
+# **Who Is Impacted?**
+
+All Latchel Users.
+
+# **When Is It Relevant?**
+
+With this deployment, the LCN label only shows within the “Finding Service Provider” modal. We have removed it from the Service Provider section of the main WO page because the information was not needed to be referenced other than when someone is trying to find a Service Provider.
+
+# **How Is It Used?**
+
+This section explains the definitions behind the LCN label, which only lives in the Finding Service Provider modal.
+
+<Frame>
+  ![](images/Eng-91.png)
+</Frame>
+
+## **LCN is Active**
+
+<Frame>
+  ![](images/Eng-92.png)
+</Frame>
+
+- If LCN is active for a WO:
+  - The label will say Yes and show as green.
+  - The User will have the option to then assign to an LCN SP by pressing “Search for Latchel Service Provider”.
+- Reasons for LCN being active:
+  - **Via Company** - “Latchel Service Provider Dispatch & Payments” toggle is on at the company level.
+  - **Via Portfolio** - “Latchel Service Provider Dispatch & Payments” toggle is on at the portfolio level.
+  - **Via Property** - “Latchel Service Provider Dispatch & Payments” toggle is on at the property level.
+  - **Via Resident Responsible** - Resident Responsible WOs are always dispatched with LCN. As a result, the label will always show as Yes with via Resident Responsible as the reason.
+    <Frame>
+      ![](images/Eng-93.png)
+    </Frame>
+
+## **LCN is Not Active**
+
+<Frame>
+  ![](images/Eng-94.png)
+</Frame>
+
+- If LCN is not active for a WO:
+  - The label will say No and show as red.
+  - The User will have an option to send the issue to the PM.
+- Reasons for LCN not being active:
+  - **Via Company** - “Latchel Service Provider Dispatch & Payments” toggle is off at the company level.
+  - **Via Portfolio** - “Latchel Service Provider Dispatch & Payments” toggle is off at the portfolio level.
+  - **Via Property** - “Latchel Service Provider Dispatch & Payments” toggle is off at the property level.
+  - **Via Payment Method** - There is no active payment method for LCN at the company level. Please note that payment methods cannot be disabled at the portfolio or property levels.
+    <Frame>
+      ![](images/Eng-95.png)
+    </Frame>
+  - **Via Skill** - LCN has been turned off at the skill level. While skill can be turned off at different inheritance levels, we are unable to provide this level of detail at this time
+    <Frame>
+      ![](images/Eng-96.png)
+    </Frame>
+  - **Both Inheritance and Skill** - If LCN has been turned off at both the inheritance and skill level, it’ll denote both by saying “Via \[Inheritance Level\] and Skill. We included both this info so that the User can know exactly how to turn it back on.
+    <Frame>
+      ![](images/Eng-97.png)
+    </Frame>
+
+# **What Are Some Risks or Ways Things Could Go Wrong?**
+
+None.
+
+# **When Will This Change Be Effective?**
+
+This is ready to deploy. Just need to reach out to CS and Ops to see if they need to do any comms before deploying.

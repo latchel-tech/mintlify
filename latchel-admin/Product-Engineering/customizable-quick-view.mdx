@@ -2,3 +2,89 @@
 title: "Customizable Quick View"
 groups: ["latchel"]
 ---
+
+# **What is the Product Release?**
+
+Property Managers now are able to customize their default view for the work order detail page. They can choose which elements to show and the order that they want to see it in. Please note that this is on the specific PM User level.
+
+In addition to the customizable quick view, we’ve added the following new pieces of information with this deployment:
+
+- Owner
+- Property Management Company with Assigned Property Manager
+- Property Portfolio
+
+# **What was the Previous State?**
+
+Previously, we had given a pre-set default view based on product research. However, we made the decision to deploy this feature because every PM is different and wants a different default view based on how they handle their day to day.
+
+# **Who Is Impacted?**
+
+Only PMs have the ability to customize their default view for the work order detail page.
+
+# **When Is It Relevant?**
+
+This applies to any work order detail page for PMs.
+
+# **How Is It Used?**
+
+See overall demo in this [<u>video</u>](https://www.youtube.com/watch?v=Os89l4mVkYQ "https://www.youtube.com/watch?v=Os89l4mVkYQ"). Please note that the demo video is also embedded directly in the Latchel configure side panel and PMs can access at any time.
+
+- As a PM, open a work order page. PMs who have never set their default view will see a blank page as the default with instructions on how to configure their default page.<br />
+  <Frame>
+    ![](/images/Eng-115.png)
+  </Frame>
+   
+- Click on the “Configure” button. This will bring out a side panel that allows the PM to choose what to add to their default view and rearrange the order that they’d like to see it in.<br />
+  <Frame>
+    ![](/images/Eng-116.png)
+  </Frame>
+
+ 
+
+- In order to pick and choose which tiles to show, click on the eye icon within the rectangle (see orange arrow in the screenshot below).
+  <Frame>
+    ![](/images/Eng-117.png)
+  </Frame>
+   
+  - Clicking on an eye icon makes it visible on the WO quick view. In the screenshot below, you can see that we clicked the eye icon for Current State and it shows up on the quick view.
+    <Frame>
+      ![](/images/Eng-118.png)
+    </Frame>
+     
+- In order to move tiles around, click on the handlebars and drag the tile to the place you’d like it to be. See orange arrow in the screenshot below.
+  <Frame>
+    ![](/images/Eng-119.png)
+  </Frame>
+   
+- Once you’re done, click the x in the corner of the side panel. What you’ve chosen is now your default view for every WO.
+- If you’d like to change your default view at any time, click on the Configure button at the top right of the work order page. The side panel will then come out. See orange arrow in the screenshot below.
+  <Frame>
+    ![](/images/Eng-120.png)
+  </Frame>
+
+## **New Tiles**
+
+We added the following new pieces of information with this deployment. They all exist on the Details tab for the PM and are available to add as a custom tile in the customizable quick view.
+
+- Owner
+  <Frame>
+    ![](/images/Eng-121.png)
+  </Frame>
+   
+- Property Management Company with Assigned Property Manager
+  <Frame>
+    ![](/images/Eng-122.png)
+  </Frame>
+   
+- Portfolio - This was added to the existing Property tile and only shows up if it’s applicable.
+  <Frame>
+    ![](/images/Eng-123.png)
+  </Frame>
+
+# **What Are Some Risks or Ways Things Could Go Wrong?**
+
+There is a minor risk that the view that PMs see will be different from what Admins and Ops see. We are currently working on building a way for Admins and Ops to see any PM User’s default view.
+
+# **When Will This Change Be Effective?**
+
+We will deploy this on 6/14 at 9:00 AM ET.
