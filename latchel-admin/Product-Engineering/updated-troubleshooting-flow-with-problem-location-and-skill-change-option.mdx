@@ -1,3 +1,117 @@
 ---
 title: "Updated Troubleshooting Flow with Problem, Location, and Skill Change Option"
+groups: ["latchel"]
 ---
+
+# **What is the Product Release?**
+
+We have updated the Troubleshooting workflow so that Troubleshooters can change the problem, location, or skill for the work order. Our system will then automatically evaluate any updated Problem/Location Combination (PLC) against the PM’s severity settings to then determine what the new severity should be for the WO. Please note that this change is only for Emergency WOs
+
+# **What was the Previous State?**
+
+Previously, we did not have any way to change the problem or location on a WO. As a result, Troubleshooters would try to figure out what the actual PLC is, manually look up what the PM’s corresponding setting is for this new PLC, and determine whether to keep the WO as an emergency or de-escalate it. This was also problematic because there was no record of what PLC the Troubleshooter decided to use to determine if the WO is still an emergency or not. We have received escalations in the past from PMs about how Troubleshooters have not provided clear enough notes on why a WO was de-escalated.
+
+# **Who Is Impacted?**
+
+The following groups will be impacted:
+
+- **Troubleshooters** will have to learn a new troubleshooting workflow and how to choose the right problem, location, and/or skill.
+- **Property Managers** and **Residents** will see the following benefits:
+  - WOs will now display the proper PLC and/or skill right after the Troubleshooting state.
+  - We are mechanizing choosing the corresponding severity setting for the updating PLC.
+  - For SaaS customers, we’ve made sure that de-escalated WOs go through the proper automation (clean up from SaaS hangover).
+
+# **When Is It Relevant?**
+
+This will only impact WOs that first come in as Emergencies and Troubleshooters will only be able to change problem or location during the Troubleshooting state. They will still have the opportunity to change the skill at any time on the WO page.
+
+# **How Is It Used?**
+
+See demo of the overall troubleshooting workflow below.
+
+<iframe src="https://www.loom.com/embed/aabfbd4814034950b3dc073195bf0659" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+## **Updated Troubleshooting Flow**
+
+Choose “Troubleshoot” within the Take Action drop down for an Emergency WO. The first modal that you’ll be faced with is if Troubleshooting resolved the issue.
+
+![](images/Eng-65.png)
+
+From this modal, you can make the following choices:
+
+- **“Yes”** - This option is if you were able to help the Resident with their issue on the phone. Pressing this then leads you to the following options, which exist in the Troubleshooting workflow today.<br /> <img src="images/Eng-66.png" />  
+- **“Can’t Reach Resident”** - This option is for if you’re unable to contact the Resident on the phone. This workflow exists today and has not been changed.
+- **“No”** - This option is for if you are talking to the Resident and were unable to fix their issue over the phone. When you click this option, you will go through the following workflow. It’s recommended that you still have the Resident on the phone during this workflow so they can confirm your choices.
+  - It will first show you the problem category and problem that the WO was originally submitted with and then ask you if it’s accurate. <img src="images/Eng-67.png" /> <br />Based on what you determine with the Resident, you have the following options:
+    - **“Yes”** - This option is if the problem that’s on the WO is correct. Pressing this will take you to the next step (validating location).
+    - **“No”** - This option is if the problem that’s on the work order is incorrect. Pressing this will give you the following UI that is pre-populated with the problem category and problem that are currently on the WO. <img src="images/Eng-68.png" />
+      - Press “Change”. This will then, show you a list of all problem categories and problems that are in our system. Clicking on the problem category will show you problems with descriptions. <img src="images/Eng-69.png" />  
+      - Identify the actual problem for the WO and press “Choose”. <img src="images/Eng-70.png" />  
+      - This will then show you your newly chosen problem category and problem. If this looks right, press “Submit”. <img src="images/Eng-71.png" />  
+  - The workflow will then ask you if the location category and location that the WO was originally submitted with and then ask you if it’s accurate. <img src="images/Eng-72.png" /> <br />Based on what you determine with the Resident, you have the following options:
+    - **“Yes”** - This option is if the problem that’s on the WO is correct. Pressing this will take you to the next step (validating skill).
+    - **“No”** - This option is if the location that’s on the work order is incorrect. Pressing this will give you the following UI that is pre-populated with the location category and location that are currently on the WO. <img src="images/Eng-73.png" />  
+      - Press “Change”. This will then, show you a list of all location categories and locations that are in our system. Clicking on the location category will show you locations with descriptions. <img src="images/Eng-74.png" />  
+      - Identify the actual location for the WO and press “Choose”. <img src="images/Eng-75.png" />  
+      - This will then show you your newly chosen problem category and problem. If this looks right, press “Submit”. <img src="images/Eng-76.png" />  
+  - The workflow will then ask you if the skill category and skill that the WO was originally submitted with and then ask you if it’s accurate. <img src="images/Eng-77.png" /> <br />Based on what you determine with the Resident, you have the following options:
+    - **“Yes”** - This option is if the skill that’s on the WO is correct. Pressing this will take you to the next step (summary screen).
+    - **“No”** - This option is if the skill that’s on the work order is incorrect. Pressing this will give you the following UI that is pre-populated with the skill category and skill that are currently on the WO. <img src="images/Eng-78.png" />  
+      - Press “Change”. This will then, show you a list of all skill categories and skills that are in our system. Clicking on the skill category will show you skills with descriptions. <img src="images/Eng-79.png" />  
+      - Identify the actual skill for the WO and press “Choose”. <img src="images/Eng-80.png" />  
+      - This will then show you your newly chosen problem category and problem. If this looks right, press “Submit”. <img src="images/Eng-81.png" />  
+  - Once you’ve gone through the entire workflow of validating and/or changing the problem, location, and skill, you will be shown a summary of all three. Please look through these to validate these are correct (maybe even re-summarize with the Resident). <img src="images/Eng-82.png" />
+    - If any of them are not correct, feel free to press the corresponding button that says “Edit”. This will then take you directly to the workflow to change that item only. Pressing “Submit” there will lead you directly to this summary page so you don’t have to go through the workflow again.
+  - Once you validate that they are all correct, press “Submit”.
+  - The system will then automatically check the newly chosen Problem/Location combination against the PM’s severity settings (including inheritance checks) and determine what the work order’s new severity is. You will be shown a modal that tells you what the new severity is (example in screenshot below). <img src="images/Eng-83.png" /> <br />The different options you’ll see in this modal are:
+    - This work order remains an **Emergency**.
+    - This work order is de-escalated to **Normal**.
+    - This work order is de-escalated to **Urgent**.
+    - This work order now needs **PM approval**.
+    - This work order is de-escalated and now **Resident Responsible**. Please let the Resident know that they will be responsible for payment with the Service Provider.
+
+## **Work Order Remaining an Emergency**
+
+If the WO remains an emergency, you will go through your current options for emergency work orders.
+
+![](images/Eng-84.png)
+
+## **Work Order De-Escalating from Emergency**
+
+Automation will run as expected for non-emergency WOs based on the PM’s subscription and any warranty/owner approval checks. Please note that we did do some clean up to ensure the automation routes de-escalated work orders correctly.
+
+## **Activity Log Changes**
+
+With the introduction of this new Troubleshooting workflow, we’ve added activity log changes to ensure PMs are able to easily understand the changes that were made during the Troubleshooting process.
+
+### **Updating Problem, Location, and/or Skill**
+
+When a problem, location, and/or skill is updated during the Troubleshooting workflow, they will be logged in the activity log like this. Note that they will only show if you make a change.
+
+![](images/Eng-85.png)
+
+If you expand it, you can see what the problem, location, and/or skill was set to previously.
+
+![](images/Eng-86.png)
+
+### **Work Order Severity Change**
+
+If the WO is de-escalated from an Emergency, then it will add a log item indicating the severity change. Please note that the only two options here are decreasing from Emergency to Normal or Urgent. While we will change a WO to Needs Approval or Resident Responsibility, those technically aren’t severities. When a WO Needs Approval or Resident Responsibility, the severity is actually Normal.
+
+![](images/Eng-87.png)
+
+In addition, any time a work order is de-escalated from an Emergency, we will create this automated log item indicating that it was de-escalated due to a Troubleshooter changing the problem and/or location during the Troubleshooting workflow and automatically checked against the PM’s severity settings.
+
+![](images/Eng-88.png)
+
+When you expand the log item, it’ll summarize what items were changed (i.e. problem, location, and/or skill) and what it was previously. The screenshot below only includes problem and skill because those were the only things that were changed. This indicates that the location was left alone.
+
+![](images/Eng-89.png)
+
+# **What Are Some Risks or Ways Things Could Go Wrong?**
+
+We don’t anticipate too much risk around the feature itself. However, the introduction of this new workflow requires Troubleshooters to know how to choose the right problem, location, and/or skill without the use of a diagnostic workflow. This is a new concept and relies on the Troubleshooter really understanding the Resident’s issue and relaying it in the work order. Other than Resident Responsible and Needs Approval, de-escalations will lead to automated dispatch. If we get it wrong, then it could cost us an unnecessary Service Provider dispatch fee.
+
+# **When Will This Change Be Effective?**
+
+We are working with Service Ops to figure out the actual deployment date.
