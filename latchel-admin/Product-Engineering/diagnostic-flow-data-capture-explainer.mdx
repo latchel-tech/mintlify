@@ -2,3 +2,79 @@
 title: "Diagnostic Flow - Data Capture Explainer"
 groups: ["latchel"]
 ---
+
+We capture data every time a user clicks a diagnostic flow “tile.” This is a general explainer to help troubleshoot or research this data.
+
+# **Video Summary**
+
+Capture data the diagnostic flow!
+
+<iframe src="https://www.loom.com/embed/813310a4b7724e149bc8e109259dd95e" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+# **Highlights**
+
+1. Data is stored in the troubleshooting\_outcomes table
+2. Data is captured each time a user clicks a tile
+3. There are four troubleshooting outcomes (see below)
+
+# **Limitations**
+
+1. Actions like clicking “back up the flow” or “Previous” won’t be captured but the subsequent ‘tile clicked’ will be captured
+2. Data captured before 7/19/2022 has problems and should be filtered out of queries
+
+# **Fields**
+
+## **troubleshooting\_outcome\_id**
+
+Sequential ID of each troubleshooting _instance._ Contains all of the options a given user chose in a given diagnostic flow session.
+
+## **job\_id**
+
+If a job is created as a result of the diagnostic flow instance, the associated job id will be listed
+
+## **outcome**
+
+The most recent outcome of the diagnostic flow instance
+
+1. **troubleshooting\_started**
+   1. This is the default/starting state of each diagnostic flow. This diagnostic outcome means that a user has **started** but **has not completed** a diagnostic flow.
+      1. Entry Condition: User selects at least **one** answer in a diagnostic flow.
+      2. Exit Condition: User selects the **final** answer in a diagnostic flow. (A final answer is considered one with an action of “create\_work\_order” or “success\_outcome.”<br />
+2. **troubleshooting\_completed**
+   1. This diagnostic outcome means that a user has both **started and completed** a diagnostic flow.
+      1. Entry Condition: User selects the **final** answer in a diagnostic flow.
+      2. Exit Condition: User continues through the WO creation process (e.g. job details & job info) and **successfully** creates a WO.<br />
+3. **troubleshooting\_resolved**
+   1. This diagnostic outcome means that a user has **started** **and completed** a diagnostic flow, but **has not** created a WO.
+      1. Entry Condition: User selects a **final** answer in a diagnostic flow with the action **success\_outcome**.
+      2. Exit Condition: N/A<br />
+4. **wo\_created**
+   1. This diagnostic outcome means that a user has **started and completed** a diagnostic **and has created** a WO.
+      1. Entry Condition: User has **successfully completed** the WO creation process (diagnostic flow, job details, & job info).
+      2. Exit Condition: N/A
+
+## **questions**
+
+The names of the tiles the user selected in the diagnostic flow instance. They are listed in the order the user chose them. For example:
+
+"1: Leak or Flood\\n1: Successful outcome flow\\n2991: No"
+
+## **created\_at**
+
+The date/time the instance was created
+
+## **updated\_at**
+
+The date/time the instance was last updated
+
+## **metadata**
+
+The associated property\_id, pm\_company\_id and tenant\_id that is the subject of the diagnostic flow instance
+
+## **creator\_user\_id**
+
+The user that is creating the diagnostic flow (when we can derive it)
+
+## **creator\_user\_type**
+
+The user type of the creator\_user\_id

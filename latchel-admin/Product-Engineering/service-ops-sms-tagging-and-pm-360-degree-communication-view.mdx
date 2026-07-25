@@ -2,3 +2,134 @@
 title: "Service Ops SMS Tagging & PM 360 Degree Communication View"
 groups: ["latchel"]
 ---
+
+# **What is the Product Release?**
+
+SMS tagging is a way for PMs to have a 360 degree view of all SMS messages, including those that Latchel Operations is having on their behalf. It is also the stepping stone to unlock being able to see specific SMS conversations directly in a WO page.
+
+# **What was the Previous State?**
+
+Previously, PM users only had the ability to view SMS logs that they themselves were having with Residents, Service Providers, and Owners. They could not see any any SMS conversations that Latchel Operations was having.
+
+# **Who Is Impacted?**
+
+The following groups are impacted:
+
+- Latchel Operators will be tagging all SMS conversations to a WO or PM company.
+- PMs will now have the ability to see conversations that Latchel Operations has with their Residents and Service Providers.
+
+# **When Is It Relevant?**
+
+This applies to all SMS conversations that Latchel Operations is having.
+
+# **How Is It Used?**
+
+Please see loom [<u>here</u>](https://www.loom.com/share/4f15f69e92dc4f54ba29e0f0802b7b99 "https://www.loom.com/share/4f15f69e92dc4f54ba29e0f0802b7b99") for an overall explanation and demo of SMS Tagging. More granular details and exceptions will be explained in the videos within the sections below.
+
+## **Latchel Operations Guide to SMS Tagging**
+
+### **Auto-Tagging Logic for Incoming SMS**
+
+See demo below.
+
+<iframe src="https://www.loom.com/embed/695e8aa764944b76b380c6f6cf7f3f55" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+- All incoming SMS conversations will have logic where they will be automatically tagged to the same WO tag as the conversation right before it. We found in our research that many incoming SMS were in relation to the conversations before it.
+- Please note that if the conversation before it does not have a tag, then the incoming SMS will also not have a WO tag. However, Latchel Ops will always be warned if someone tries to end a conversation without tagging it.
+
+### **How Tags Work When Starting a New SMS Conversation**
+
+Latchel Ops has the following two experiences when starting a new SMS conversation through the SMS icon within the Latchel console.
+
+- Start an SMS Conversation from a Specific WO Page
+  - See demo <u>below</u>. 
+    <iframe src="https://www.loom.com/embed/cb85e5ecaadc415ba8c127268f623b7a" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+  - When Latchel Ops clicks on the SMS icon under a person within a WO page and sends an SMS, that newly started conversation will always automatically tag to that WO.
+
+However, please note that it does not automatically tag to that WO if you click on an SMS icon for a person within a task.
+
+- Start an SMS Conversation from a Non-WO Page (“General” Page)
+  - See demo <u>here</u>. 
+    <iframe src="https://www.loom.com/embed/1006043db5f44f518682370aded9a67b" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+  - For any other place within the Latchel console that has an SMS icon, Latchel Ops will need to choose the WO to tag it to before they start the conversation (see screenshot of UI below). It’s important to note that choosing a WO in this UI does not actually tag it to that WO until Latchel Ops sends an SMS to that person.
+  - If Latchel Ops would like to start a conversation with someone without tagging it to a WO, they can choose the “Not related to a recent Work Order” option (see orange arrow in the screenshot below). The intention of including this is to account for situations where Ops may want to ask about general account questions that may not tie to a specific WO.<br />
+    ![](images/Eng-37.png)
+     
+
+### **Viewing Tags on an SMS Conversation**
+
+See demo <u>here</u>. 
+
+<iframe src="https://www.loom.com/embed/2dc68a9096f34b2dbe38ca4aaef5e745" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+- Latchel Ops can know when a conversation is active when they see a tag icon in the header of the SMS window (see orange arrow in the screenshot below).
+  ![](images/Eng-38.png)
+- Clicking on the tag icon allows Latchel Ops to either view or edit the tags for that active conversation. They have the choice of doing this on the WO level or PM company level.
+  - If the SMS conversation already has a tag, the options will say “Edit Work Order Assignment(s)” or “Edit PM Company Assignment(s)”. Please note that you can only tag an SMS conversation to one or more WOs or one or more PM companies, but not both a PM company and a WO.
+  - If the SMS conversation does not have a tag, the options will say “Tag to Work Order(s)” or “Tag to PM Company”.
+- Once they click either the WO level or PM Company level tag, Latchel Ops can see the tags that are already on the SMS conversation by looking at the top section that says “Regarding Work Order(s):”. If the SMS conversation is already tagged to something, then it’ll show in a gray box. The orange arrow in the screenshot below shows that the SMS conversation is tagged to WO #98-35 with the title “Minor Water Leak”.
+  ![](images/Eng-39.png)
+
+### **Adding Tags to an SMS Conversation**
+
+See demo <u>here</u>. 
+
+<iframe src="https://www.loom.com/embed/864779ee293743979fd9442f7e129c9c" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+- Latchel Ops will need to choose whether or not they want to tag the conversation on the WO or PM level and then click the corresponding action within the tag icon in the SMS window.
+  - **WO Tags** - Latchel Ops can choose **one or more** WO tags from the list of most recent WOs for that user in the second half of the window or search for a specific WO. WOs are searchable by WO ID, WO Title, or Property Address.
+  - **PM Company Tags** - Latchel Ops can choose **one or more** PM companies by searching for their names. Since there are so many PM companies in our system, we do not provide a pre-populated list of them in this view.
+
+### **Removing Tags to an SMS Conversation**
+
+See demo <u>here</u>. 
+
+<iframe src="https://www.loom.com/embed/551594ce55b3439ebd47033e0de8b67d" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+- If Latchel Ops ever has to remove a tag, they can do this by looking at the active conversation’s tags and clicking the x within the gray box of the WO (see orange arrow in the screenshot below).
+  ![](images/Eng-40.png)
+   
+- Clicking the x will then give a confirmation notification of “Confirmation tags removed”.
+
+### **No Tag Warning**
+
+See demo <u>here</u>. 
+
+<iframe src="https://www.loom.com/embed/a777056dfe014d018ff71b8f0cd1b6d3" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+- If Latchel Ops tries to end an SMS conversation without tagging it to at least one WO or one PM Company, there will be the following warning.
+  ![](images/Eng-41.png)
+  - “Ignore” - Pressing this option means the Latchel Ops Agent is ignoring the warning and is ok with ending the conversation without any tag.
+  - “OK” - Pressing this option means the Latchel Ops Agent wants to tag the SMS conversation. It takes him/her back to the SMS conversation so he/she can tag it.
+
+There is no way to retroactively tag a conversation that has been ended. SMS conversations that are not tagged will not be visible to PMs or on WO pages (in the future).
+
+## **PM Guide to 360 Degree View of SMS Conversations**
+
+See demo <u>here</u>. 
+
+<iframe src="https://www.loom.com/embed/142f4177b1a8493c8df48c264fb36b81" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+- Click the ellipses menu in the header of the SMS window.
+  ![](images/Eng-42.png)
+   
+- Choose “Latchel Agent Conversations” in the drop down.
+  ![](images/Eng-43.png)
+   
+- This will then pull up a view only transcript of all SMS Conversations that Latchel Ops has had with that person. Please note that only conversations that have been tagged to a PM Company or a WO for the PM Company will show up in this transcript. If Latchel Ops forgets to tag a conversation, a PM will not be able to see it within this transcript.<br />
+  ![](images/Eng-44.png)
+
+# **What Are Some Risks or Ways Things Could Go Wrong?**
+
+- Latchel Ops cannot go back and tag SMS conversations that have been ended.
+- For P0, Latchel Ops will always have to check the tag icon before they end a conversation in order to validate that the tags on the SMS conversation are correct. While this will be a little time consuming to start, we will work to have immediate visibility to WO tags for a subsequent release.
+
+# **When Will This Change Be Effective?**
+
+We plan to deploy this together with the SMS Filter by Portfolio project. This will happen after all Ops training is completed on x date (DFD 1/31).
+
+# **As an Ops Manager, How Do I Measure Compliance?**
+
+You can access tags in our db through the conversation\_tags table, which allows you to see the tags created, what conversation it’s a part of, and who did the tagging.
+
+Please note that the conversation\_tags table only shows conversations that have been tagged. You could potentially measure compliance by seeing what conversation\_id’s do not have a tag assigned to it in the conversation\_tags table.
