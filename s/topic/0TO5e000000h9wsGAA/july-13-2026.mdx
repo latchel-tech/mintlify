@@ -1,0 +1,182 @@
+---
+title: "July 13, 2026"
+---
+
+The following are the Latchel updates for the week of July 13, 2026.
+
+<Callout icon="megaphone" iconType="duotone" color="#ff9b8a">
+  **Coming Soon: Outbound Voice Webinar (July 29)**
+
+  **From Answering Calls to Making Them: Latchel Voice Levels Up**
+
+  Latchel Voice already answers every maintenance call, troubleshoots issues, and creates work orders automatically.
+
+  Now it's taking the next step.
+
+  <iframe src="https://www.youtube.com/embed/HgAOH3cKmRg" title="YouTube video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+  Join us live on July 29 as we unveil Outbound Voice—our newest AI capability that proactively reaches out to service providers and residents instead of waiting for calls to come in.
+
+  Whether it's following up, collecting information, or handling outbound communication, AI Voice is becoming an even more powerful extension of your maintenance team. 
+
+  RSVP and you can win 3 free months of unlimited Automated Voice Outbound!
+
+  <Columns cols={2}>
+    <Column>
+      <Card title="Sign up here!" color="#ff9b8a" icon="file-arrow-up" iconType="duotone" horizontal href="https://latchel.com/waitlist-aivoice/">
+      </Card>
+    </Column>
+    <Column>
+    </Column>
+  </Columns>
+
+  <br />
+</Callout>
+
+### **New Features**
+
+1. **Create Work Orders with Your Voice**
+
+Creating work orders is now as simple as speaking. Property Managers can now create work orders hands-free using voice commands.
+
+Simply say something like:
+
+> "Create a work order for 2 Avery Street. Jenna is reporting an ant infestation."
+
+Watch demo below!
+
+<iframe src="https://www.loom.com/embed/71bc641859a049bea3027e81340509d6" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+Latchel captures the details and creates the work order for you—making it even faster to log new maintenance requests.
+
+2. **Notification Settings Are Now Live**
+
+Property Managers can now fully customize how they hear from Latchel.
+
+Go to Account Settings \> Notifications to choose which events you'd like to be notified about and how you'd like to receive them:
+
+- Email
+- SMS
+- In-app notifications (New! You’ll see a notification bell in the top right of Latchel)
+
+This gives every PM greater control over their workflow while reducing unnecessary interruptions.
+
+<Frame>
+  ![0713 Newsletter 1](/images/0713-Newsletter-1.png "0713 Newsletter 1")
+</Frame>
+
+<Callout icon="right-to-bracket" iconType="duotone" color="#ff9b8a">
+  **Coming soon: Control which specific task notifications you want to receive.**
+</Callout>
+
+3. **Visor Maintenance Report Cards**
+
+[Visor](https://propertymanagervisor.com/), Latchel’s Analytics and UI enhancement overlay for Appfolio users, now generates a personalized **Maintenance Report Card** every 30 days, giving you an executive summary of your maintenance operation before diving into the details. These insights are especially useful for emergency- and benefits-only customers who don’t have their full operation reflected in [Latchel Analytics.](https://help.latchel.com/s/topic/0TO5e000000h9wqGAA/Latchel-Analytics-Overview#latchel-analytics)
+
+**Each report includes:**
+
+- Executive summary of overall maintenance performance
+- Benchmarking against comparable Latchel portfolios
+- Vendor performance insights
+- Property risk assessments
+- Recommended next steps to improve operations
+
+The report serves as your starting point, with links directly into Visor's analytics so you can immediately investigate the areas that need attention. Reports can also be downloaded as PDFs for easy sharing.
+
+Using another PMS and interested in getting access to Visor?
+
+<Columns cols={2}>
+  <Column>
+    <Card title="Let us know here!" color="#ff9b8a" icon="pen-line" iconType="duotone" horizontal href="https://propertymanagervisor.com/#waitlist">
+    </Card>
+  </Column>
+  <Column>
+  </Column>
+</Columns>
+
+### **Resolved Bugs**
+
+1. **Smarter HVAC and More Emergency Detection Improvements**
+
+We've made several improvements to our Intake Settings emergency decision making.
+
+**What was happening:** Air conditioning requests could occasionally match appliance rules that were intended to exclude HVAC equipment. Additionally, if a key piece of information specified in an intake rule—like the indoor temperature—was missing, Intake could incorrectly assume the issue wasn't an emergency instead of asking the resident.
+
+<Check>
+  **What's fixed:**
+
+  - Air conditioners, furnaces, heaters, heat pumps, and thermostats are now correctly recognized as HVAC equipment.
+  - Intake now asks residents for missing information whenever it could change the emergency outcome instead of making assumptions.
+  - We've upgraded the underlying rule matching engine for improved accuracy across all intake scenarios.
+</Check>
+
+As always, your **custom Intake Settings** take priority if you've configured a different timeframe. **To know more about custom Intake Settings, visit:**
+
+<Card title="Managing Intake Settings" color="#ff9b8a" icon="arrows-from-line" iconType="duotone" href="/s/topic/0TO5e000000h9wqGAA/Managing-Intake-Settings#managing-intake-settings">
+  Manage rules for your work orders to match your team's preferences.
+</Card>
+
+<br />
+
+2. **Improved User Disable & Reassign Validation**
+
+<Warning>
+  **What was happening:**
+
+  When disabling a Property Manager users could encounter an unexpected error under certain circumstances.
+</Warning>
+
+<Check>
+  **What's fixed:**
+
+  The disable flow now consistently prompts for a replacement property manager whenever reassignment is required, creating a much smoother experience and preventing confusing error messages.
+</Check>
+
+### **Key Ops Process Changes**
+
+**Updated Emergency Guidance for Fire Hazards & Power Shutoffs**
+
+We've expanded our emergency diagnosis guidance to better handle electrical hazards while continuing to respect each property's configured Intake Settings.
+
+**What's changing:**
+
+- Burning smells, sparking, smoke, or visible electrical damage now qualify as potential property damage/emergency hazard situations.
+- Teams should always follow the property's Intake Settings when determining whether to dispatch immediately or escalate.
+- A hazard is only considered resolved once the affected breaker or disconnect has been confirmed off.
+- If electrical hazard signs occurred only in the past and are no longer present—with the breaker confirmed off—the issue should be handled according to the property's normal Intake Settings.
+
+<Check>
+  **What this means for you:**
+
+  Electrical hazards are handled more consistently while ensuring your customized emergency policies continue to drive dispatch decisions.
+
+  **Why this matters:**
+
+  It improves resident safety, creates more consistent emergency handling, and reduces unnecessary emergency dispatches when a hazard has already been resolved.
+</Check>
+
+### **One Click, 10 Seconds — Rate Our Newsletter**
+
+Only one question is required: how valuable is this newsletter to you? Click a number, hit submit. Everything else — favorite feature, what to build next — is optional if you've got more to say.
+
+<Columns cols={2}>
+  <Column>
+    <Card title="Rate it here!" color="#ff9b8a" icon="message-pen" iconType="duotone" horizontal href="https://forms.gle/AbUoieefga3azLmH7">
+    </Card>
+  </Column>
+  <Column>
+  </Column>
+</Columns>
+
+<br />
+
+We genuinely want to hear from you!
+
+### **Interested in learning more about Latchel's products? Book a meeting with us.**
+
+<Columns cols={2}>
+  <Column>
+    <Card title="Get a Demo" color="#ff9b8a" icon="comments-question-check" iconType="duotone" horizontal href="https://latchel.com/demo-request-releases/">
+    </Card>
+  </Column>
+</Columns>
