@@ -610,6 +610,7 @@
                       {
                         "group": "Quality Program",
                         "pages": [
+                          "latchel-admin/Service-Operations/Quality-Program/quality-program-overview",
                           {
                             "group": "Customer Experience Review",
                             "pages": [
