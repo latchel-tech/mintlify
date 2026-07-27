@@ -68,8 +68,25 @@
                       "s/topic/0TO5e000000h9wqGAA/Getting-Started-Team-User-Management",
                       "s/topic/0TO5e000000h9wqGAA/Getting-Started-Projects-Unit-Turns",
                       "s/topic/0TO5e000000h9wqGAA/Getting-Started-Inspections",
-                      "s/topic/0TO5e000000h9wqGAA/how-to-save-latchel-to-your-home-screen-i-phone-and-android",
-                      "s/topic/0TO5e000000h9wqGAA/meet-harphonia-ai-maintenance-call-intake"
+                      "s/topic/0TO5e000000h9wqGAA/how-to-save-latchel-to-your-home-screen-i-phone-and-android"
+                    ]
+                  },
+                  {
+                    "group": "AI Assistance Hub",
+                    "pages": [
+                      "s/topic/0TO5e000000h9wqGAA/latchel-mcp-ai-assistants",
+                      "s/topic/0TO5e000000h9wqGAA/meet-harphonia-ai-maintenance-call-intake",
+                      "s/topic/0TO5e000000h9wqGAA/24-7-ai-virtual-receptionist",
+                      "s/topic/0TO5e000000h9wqGAA/how-latchel-learns-from-your-feedback-reinforcement-learning",
+                      {
+                        "group": "Intake Settings",
+                        "pages": [
+                          "s/topic/0TO5e000000h9wqGAA/Introduction-to-Intake-Settings",
+                          "s/topic/0TO5e000000h9wqGAA/Managing-Intake-Settings",
+                          "s/topic/0TO5e000000h9wqGAA/intake-settings-rule-analyzer",
+                          "s/topic/0TO5e000000h9wqGAA/intake-conversation-settings"
+                        ]
+                      }
                     ]
                   },
                   {
@@ -184,8 +201,7 @@
                       "s/topic/0TO5e000000h9wqGAA/How-to-Generate-an-API-Key",
                       "s/topic/0TO5e000000h9wqGAA/API-Docs",
                       "s/topic/0TO5e000000h9wqGAA/The-Webhook-Subscription",
-                      "s/topic/0TO5e000000h9wqGAA/How-to-Terminate-the-Gmail-Integration",
-                      "s/topic/0TO5e000000h9wqGAA/latchel-mcp-ai-assistants"
+                      "s/topic/0TO5e000000h9wqGAA/How-to-Terminate-the-Gmail-Integration"
                     ]
                   },
                   {
@@ -302,19 +318,13 @@
                       "s/topic/0TO5e000000h9wqGAA/Emergency-Escalations-Property-Damaging-and-Extreme-Habitability-Situations",
                       "s/topic/0TO5e000000h9wqGAA/Emergency-Outbound-Communication-Process",
                       "s/topic/0TO5e000000h9wqGAA/Emergency-Process-Quick-Guide",
-                      "s/topic/0TO5e000000h9wqGAA/Introduction-to-Intake-Settings",
-                      "s/topic/0TO5e000000h9wqGAA/Managing-Intake-Settings",
-                      "s/topic/0TO5e000000h9wqGAA/intake-settings-rule-analyzer",
                       "s/topic/0TO5e000000h9wqGAA/How-Emergency-Temperature-Works-with-Intake-Settings",
                       "s/topic/0TO5e000000h9wqGAA/Work-Order-Processing-With-Intake-Settings",
                       "s/topic/0TO5e000000h9wqGAA/How-to-Contact-Latchel",
                       "s/topic/0TO5e000000h9wqGAA/How-to-Restrict-Evening-Availability-for-Non-Emergency-Work-Orders",
                       "s/topic/0TO5e000000h9wqGAA/How-to-Update-Your-Escalation-Contacts",
                       "s/topic/0TO5e000000h9wqGAA/Maintenance-Automation-Emergency-Vs-Non-Emergency",
-                      "s/topic/0TO5e000000h9wqGAA/How-to-Send-Latchel-Pre-Dispatch-Instructions",
-                      "s/topic/0TO5e000000h9wqGAA/24-7-ai-virtual-receptionist",
-                      "s/topic/0TO5e000000h9wqGAA/how-latchel-learns-from-your-feedback-reinforcement-learning",
-                      "s/topic/0TO5e000000h9wqGAA/how-latchel-learns-from-your-feedback-reinforcement-learning"
+                      "s/topic/0TO5e000000h9wqGAA/How-to-Send-Latchel-Pre-Dispatch-Instructions"
                     ]
                   },
                   {
