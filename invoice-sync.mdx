@@ -1,0 +1,88 @@
+---
+title: "How to: Verify if a Property Manager is using AppFolio Smart Bill"
+---
+
+## Purpose
+
+The purpose of this SOP is to provide team members with a clear process for verifying whether a Property Manager is using the AppFolio Smart Bill "workaround" for invoice syncing. This ensures that any troubleshooting or escalation is based on confirmed configuration data between Latchel and AppFolio.
+
+## Step by step
+
+### Step 1: Impersonate the Property Manager in Latchel
+
+_Ensure the customer is receiving invoice notifications. To do this, you must first access their account using the impersonation tool._<br /><br />a. Open the **Latchel Console** and search for the specific Property Manager's profile.<br />b. Navigate to the **Users** tab within their profile.
+
+<Frame>
+  ![Image (4)](/images/image-\(4\).png "Image (4)")
+</Frame>
+
+<br />c. Select any user from the list and click the **Impersonate User** button.<br />
+
+<Frame>
+  ![Image (5)](/images/image-\(5\).png "Image (5)")
+</Frame>
+
+<br />d. Once inside the PM's account, ensure they are opted-in to receive invoice data. In the top navigation menu, go to **Account Settings**.<br />e. Click on the **Notifications** tab.<br />f. Scroll down to the **Notification Preferences** section and locate **Payments & Invoices**.<br />g. Expand the category and verify that **Email, SMS, and In-App** checkboxes are all **selected/checked**.<br />
+
+<Frame>
+  ![Image (6)](/images/image-\(6\).png "Image (6)")
+</Frame>
+
+### Step 2: Check Latchel Console configuration
+
+Identify the email address currently configured in Latchel to send invoices.
+
+a. Open the Latchel Console and navigate to the specific Customer Profile. <br />b. Go to the **Details** tab. <br />c. Scroll down to the **Maint. Communication Settings** section. <br />d. Locate the **Send invoice notifications** box. <br />e. Verify the following:
+
+- The toggle is ON (blue).
+- Check the field **Additional, Specific Email Address (optional)**.
+- **Action:** Copy the email address shown (it should end in `@invoices.appfolio.com`).
+
+<img
+  src="/images/image-5.png"
+  alt="Image 5"
+  title="Image 5"
+  style={{ width:"51%" }}
+/>
+
+### Step 3: Cross-reference in AppFolio
+
+Next, confirm that the email found in Latchel matches the customer's unique AppFolio Smart Bill address.<br /><br />a. Log in to the customer's AppFolio account.<br />b. Navigate to **Accounting \> Payables** in the main menu. 
+
+<img
+  src="/images/image-(1).png"
+  alt="Image (1)"
+  title="Image (1)"
+  style={{ width:"22%" }}
+/>
+
+<img
+  src="/images/image-(2).png"
+  alt="Image (2)"
+  title="Image (2)"
+  style={{ width:"23%" }}
+/>
+
+c. In the right-hand **Tasks** pane, click **Smart Bill Entry**. <br />d. In the **Instructions For Uploading** section, find the email address provided by AppFolio. <br />e. **Comparison:** Ensure this email matches exactly the one you found in Latchel in Step 1.
+
+![Image (3)](/images/image-\(3\).png "Image (3)")
+
+### Step 4: Verify active usage status (optional)
+
+Once the configuration is confirmed, you can check whether the feature is actively being used.
+
+a. On the same **Smart Bill Entry** page in AppFolio, look at the **How it works** section. b. Check the progress bar (for example, "106/200 bills created"). If there is activity here, the PM is successfully using Smart Bill. <br />c. Scroll down to the **Invoices** list to see the history of recently synced files and their status.
+
+## Important notes
+
+- **Email mismatch:** If the email in Latchel does not match the one in AppFolio, the sync will fail. Update the Latchel Console with the correct AppFolio address immediately.
+- **One-way sync:** This setup only sends information from Latchel to AppFolio. It is a workaround because a direct, two-way sync is not currently supported.
+- **File constraints:** AppFolio Smart Bill primarily processes PDF files. If a PM reports missing invoices, check whether the original files in Latchel were JPEGs or too large (over 20 MB), as these often fail to sync.
+- **System sleep mode:** If AppFolio has been idle for an extended period, the Smart Bill page might take a few minutes to load while the system resumes.
+
+## Troubleshooting checklist
+
+- Is the **Send invoice notifications** toggle ON in Latchel?
+- Does the email in Latchel end in `@invoices.appfolio.com`?
+- Does the email match character-for-character with the AppFolio **Smart Bill Entry** email?
+- (Optional) Is there recent activity in the AppFolio **Invoices** list?

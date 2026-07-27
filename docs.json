@@ -755,6 +755,17 @@
                               "latchel-admin/Service-Operations/Ops-Integrations/recurring-work-orders-system",
                               "latchel-admin/Service-Operations/Ops-Integrations/how-the-recurring-work-order-request-process-works-beta"
                             ]
+                          },
+                          {
+                            "group": "Integrations",
+                            "pages": [
+                              {
+                                "group": "Appfolio",
+                                "pages": [
+                                  "invoice-sync"
+                                ]
+                              }
+                            ]
                           }
                         ]
                       }
