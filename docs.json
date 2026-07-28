@@ -784,9 +784,9 @@
                         "group": "Call Centers",
                         "pages": [
                           "latchel-admin/Service-Operations/Call-Centers/dueling-call-center-technical-guide",
-                          "latchel-admin/Service-Operations/Call-Centers/call-battle-flow-chart",
+                          "latchel-admin/Service-Operations/Call-Centers/investigating-dueling-call-center-call-records-in-latchel-via-twilio-and-pg-admin",
                           "latchel-admin/Service-Operations/Call-Centers/how-to-add-a-new-call-center-and-adjust-delays",
-                          "latchel-admin/Service-Operations/Call-Centers/investigating-dueling-call-center-call-records-in-latchel-via-twilio-and-pg-admin"
+                          "latchel-admin/Service-Operations/Call-Centers/call-battle-flow-chart"
                         ]
                       },
                       {
