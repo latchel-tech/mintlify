@@ -9,7 +9,7 @@ groups: ["latchel"]
 
 ### Report Names
 
-1. [**Calls**](https://lookerstudio.google.com/u/0/reporting/badff70a-ed59-424b-bf41-25dcc9834745/page/p_x5gdagqsbd)
+### [**Calls**](https://lookerstudio.google.com/u/0/reporting/badff70a-ed59-424b-bf41-25dcc9834745/page/p_x5gdagqsbd)
 
 |  | Calls References |
 | --- | --- |
@@ -20,7 +20,7 @@ groups: ["latchel"]
 | **Legacy Report (if applicable)** | [Team Calls Handled](https://docs.google.com/spreadsheets/d/1GkVMrKOoraOCCafuBIKxQka6kxDYex2-UVrAA1usFkc/edit#gid=1152056671&range=A1 "https://docs.google.com/spreadsheets/d/1GkVMrKOoraOCCafuBIKxQka6kxDYex2-UVrAA1usFkc/edit#gid=1152056671&range=A1") |
 | **Viewer Notes (Tips / Be Aware)** | Can view data from 48 hours ago |
 
-2. [Call Metrics](https://lookerstudio.google.com/u/0/reporting/badff70a-ed59-424b-bf41-25dcc9834745/page/p_jlxinapsbd "https://lookerstudio.google.com/u/0/reporting/badff70a-ed59-424b-bf41-25dcc9834745/page/p_jlxinapsbd")
+### [Call Metrics](https://lookerstudio.google.com/u/0/reporting/badff70a-ed59-424b-bf41-25dcc9834745/page/p_jlxinapsbd "https://lookerstudio.google.com/u/0/reporting/badff70a-ed59-424b-bf41-25dcc9834745/page/p_jlxinapsbd")
 
 |  | Call Metrics References |
 | --- | --- |
@@ -31,7 +31,7 @@ groups: ["latchel"]
 | **Legacy Report (if applicable)** | [Team Calls Handled](https://docs.google.com/spreadsheets/d/1GkVMrKOoraOCCafuBIKxQka6kxDYex2-UVrAA1usFkc/edit#gid=1152056671&range=A1) |
 | **Viewer Notes (Tips / Be Aware)** | Can view data from 48 hours ago |
 
-3. [CC Vol Histogram](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_zkehrx4vxc "https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_zkehrx4vxc")
+### [CC Vol Histogram](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_zkehrx4vxc "https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_zkehrx4vxc")
 
 |  | CC Vol Histogram References |
 | --- | --- |
@@ -42,7 +42,7 @@ groups: ["latchel"]
 | **Legacy Report (if applicable)** | [Call Center Roll Over 2022](https://docs.google.com/spreadsheets/d/1GkVMrKOoraOCCafuBIKxQka6kxDYex2-UVrAA1usFkc/edit#gid=8455115&range=A64) |
 | **Viewer Notes (Tips / Be Aware)** | This is the best report to see how many calls reached our database – actual calls handled by either the call center or Latchel. **Recommended call volume report for staffing.** |
 
-4. [Calls Heat Map](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_mh73mtrtbd "https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_mh73mtrtbd")
+### [Calls Heat Map](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_mh73mtrtbd "https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_mh73mtrtbd")
 
 |  | Calls Heat Map References |
 | --- | --- |
@@ -52,7 +52,7 @@ groups: ["latchel"]
 | **Query Used** | `SELECT c.phone_number, datetime(c.created_at,'America/Los_Angeles') as created_at, c.duration, c.hold_time, c.talk_time, c.wrap_up_time , c.completion_status,c.direction FROM data-analytics-warehouse.zendesk.call_metric c WHERE date(datetime(c.created_at,'America/Los_Angeles') ) between PARSE_DATE('%Y%m%d',@DS_START_DATE) AND PARSE_DATE('%Y%m%d',@DS_END_DATE)` |
 | **Viewer Notes (Tips / Be Aware)** | Live data from as recent as 30 minutes ago |
 
-6. [Today’s Roll Over Data](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/ncV0C "https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/ncV0C")
+### [Today’s Roll Over Data](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/ncV0C "https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/ncV0C")
 
 |  | Call Volume per Minute References |
 | :-- | :-- |
@@ -61,7 +61,7 @@ groups: ["latchel"]
 | **Dashboard Type** | Call Center Roll Over |
 | **Viewer Notes (Tips / Be Aware)** | Live data from as recent as 30 minutes ago |
 
-7. [Call Volume per Minute](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_3syuqgkt5c)
+### [Call Volume per Minute](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_3syuqgkt5c)
 
 |  | Call Volume per Minute References |
 | --- | --- |
@@ -70,7 +70,7 @@ groups: ["latchel"]
 | **Dashboard Type** | Call Center Roll Over |
 | **Viewer Notes (Tips / Be Aware)** | Live data from as recent as 30 minutes ago |
 
-8. [Historical Roll Over Data](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_daxgio06xc "https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_daxgio06xc")
+### [Historical Roll Over Data](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_daxgio06xc "https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_daxgio06xc")
 
 |  | Historical Roll Over Data References |
 | --- | --- |
@@ -79,7 +79,7 @@ groups: ["latchel"]
 | **Dashboard Type** | Call Center Roll Over |
 | **Viewer Notes (Tips / Be Aware)** | Last datapoint is from 7 days ago (not live) |
 
-9. [Calls Cost Call Center Calls Vol and Duration](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_1467ve32xc "https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_1467ve32xc")
+### [Calls Cost Call Center Calls Vol and Duration](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_1467ve32xc "https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_1467ve32xc")
 
 |  | Calls Cost Call Center Calls Vol and Duration References |
 | --- | --- |
@@ -88,7 +88,7 @@ groups: ["latchel"]
 | **Dashboard Type** | Call Center Roll Over |
 | **Viewer Notes (Tips / Be Aware)** | Last datapoint is from 7 days ago (not live) |
 
-10. [Team Metrics](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_fooiotrtbd "https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_fooiotrtbd")
+### [Team Metrics](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_fooiotrtbd "https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_fooiotrtbd")
 
 |  | Team Metrics References |
 | --- | --- |
@@ -97,7 +97,7 @@ groups: ["latchel"]
 | **Dashboard Type** | Call Center Roll Over |
 | **Viewer Notes (Tips / Be Aware)** | Data on this page is refreshed once a day<br />Real time data available |
 
-11. [% Roll Over Heat Map](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_34r1f1mmyc "https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_34r1f1mmyc")
+### [% Roll Over Heat Map](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_34r1f1mmyc "https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_34r1f1mmyc")
 
 |  | % Roll Over Heat Map References |
 | --- | --- |
@@ -106,7 +106,7 @@ groups: ["latchel"]
 | **Dashboard Type** | Call Center Roll Over |
 | **Viewer Notes (Tips / Be Aware)** | Last datapoint is frrom 24 hours ago (not live) |
 
-12. [RollOver Heat Map Count](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_blrvtpt52c "https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_blrvtpt52c")
+### [RollOver Heat Map Count](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_blrvtpt52c "https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_blrvtpt52c")
 
 |  | RollOver Heat Map Count References |
 | --- | --- |
@@ -114,14 +114,14 @@ groups: ["latchel"]
 | **Folder** | Miscellaneous Charts |
 | **Dashboard Type** | Call Center Roll Over |
 
-13. [Customer Experience Review Randomizer](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_6ikq0vts0c "https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_6ikq0vts0c")
+### [Customer Experience Review Randomizer](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_6ikq0vts0c "https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_6ikq0vts0c")
 
 |  | Customer Experience Review Randomizer References |
 | --- | --- |
 | **Folder** | Miscellaneous Charts |
 | **Dashboard Type** | Call Center Roll Over |
 
-14. [Last Year Call Volume Per Month](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_nnv0u8rtbd "https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_nnv0u8rtbd")
+### [Last Year Call Volume Per Month](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_nnv0u8rtbd "https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_nnv0u8rtbd")
 
 |  | Last Year Call Volume Per Month References |
 | --- | --- |
@@ -130,7 +130,7 @@ groups: ["latchel"]
 | **Dashboard Type** | Call Center Roll Over |
 | **Viewer Notes (Tips / Be Aware)** | Calls completed by Latchel's call center (not partner call centers) |
 
-15. [Last Year Latchel AHT Per Month](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_w1ehz8rtbd "https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_w1ehz8rtbd")
+### [Last Year Latchel AHT Per Month](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_w1ehz8rtbd "https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_w1ehz8rtbd")
 
 |  | Last Year Latchel AHT Per Month References |
 | --- | --- |
