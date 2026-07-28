@@ -1,0 +1,2336 @@
+---
+title: "Job-Aid: SQLs for Program Management"
+---
+
+This is a list of queries to be used by program managers for data collection.
+
+To run the query, use this SOP: [How to: Execute SQL Queries in Pg_Admin](https://latchel.atlassian.net/wiki/spaces/CS/pages/865536465)
+
+**Operations repository**: [Operations Query Repository](https://docs.google.com/spreadsheets/d/1US7njfleXbLcBhO4NQRI6sSZxBK-sdGoNtpWpz3p-hg/edit#gid=0)
+
+<AccordionGroup>
+<Accordion title="#">
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, (cont.), 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52
+</Accordion>
+
+<Accordion title="Purpose">
+1. Get data on Skill Categories and Skills being used in Emergency Jobs
+
+2. Emergency Work order information - data dump - including only our internal team
+
+3. Emergency Work order information - data dump - including only on-demand team
+
+4. Emergency SLAs failures
+
+5. Data on tasks – last 1 week of data - all users
+
+6. SMS data
+
+7. user actions every 15 minute interval -  1 week of data - includes only Latchel users who are assigned to user groups
+
+8. Call Center Duel - data
+
+9. Call Center Duel - data - just won
+
+10. Emergency Call Back Times
+
+11. Source of Work Orders - grouped by day - form used and creator
+
+   (cont.) Source of Work Orders - grouped by hour - form used and creator ---> UTC time zone
+
+12. Number of units per active PM on the day the query is run
+
+ 
+
+PM account creation date
+
+13. Unit count by company and subscription
+
+14. --count of all units by week
+
+15. Troubleshooter performance ratings
+
+16. Tasks creation, completion, type based on subject tile
+
+17. List of all properties
+
+18. user actions every 15 minute interval
+
+19. Appt Confirmed Time (excluding deferred emergencies)
+
+20. 2+ week old queue for jobs that have never been scheduled
+
+21. Skills changes
+
+22. Jobs 2+ week old queue for jobs that have never been scheduled
+
+23. S&R Audits - Work order Skills
+
+24. Task Deferrals
+
+25. Task backlog
+
+26. Tasks completed by hour
+
+27. Count of messages replied to in the last hour, by agent
+
+28. --user Efective actions every 2 weeks
+
+29. Webchat inbound
+
+30. SMS inbound
+
+31. Inbound tasks
+
+32. Tasks created
+
+33. All action sets triggered for a job
+
+34. Actions that were run as the result of an action set instance
+
+35. This will pull the top 3 oldest tasks overall and top 3 latchel tasks - resolved by the team
+
+36. Weekly Activity Summary
+
+37. Task has been deferred 3+ times
+
+38. Time to schedule (p90) – get a list of WOs that missed the SLA → 
+
+Report that shows job details and the length of time it took to schedule every emergency job over the past 12 weeks.
+
+ 
+
+ 
+
+Note from Will – With a random spot check, the outliers are driven by residents not answering our emergency callback and the work order dropping to "Waiting for PM"
+
+39. Report showing all LCN jobs (issued cards and LCN) and how long it took to get the job scheduled
+
+40. Troubleshooting Should call back outcomes  aside from "could not connect to resident"
+
+41. Time to Schedule emergency WO – P90
+
+42. All LCN (Job Not Resolved) reports
+
+43. Report showing all LCN jobs (issued cards and LCN) and how long it took to get the job scheduled
+
+44. SMS conversation
+
+ 
+
+timestamp
+
+user ID
+
+contact type (who)
+
+reply minutes
+
+percentile
+
+duration
+
+45. Webchat conversation
+
+ 
+
+timestamp
+
+user ID
+
+contact type (who)
+
+reply minutes
+
+percentile
+
+duration
+
+46. Want an easy way to see which zip codes a service provider covers (based on existing portfolio settings?) Here's the query, right now it's set for Great Jones
+
+47. So I used the above base query to see -- how many work orders are these customers submitting? 41% of the work orders created in the last 30 days have come from 3 customers.
+
+48. I also thought to myself: not all work orders are created equal--so, who's creating the biggest amount of 'problem' work orders.I sliced one way, looking at all work orders that aren't yet closed and have been updated within the last 30 days.  60% come from the same 3 customers listed above
+
+49. but maybe that's unfair, since it's overly weighting the companies that submit a lot of work orders. so let's exclude the work orders that have been created within the last 2 weeks (since that's more than enough time to resolve most jobs)
+
+50. Query WO cancelled
+
+51. Web Chat Missed SLA Intervals (BigQuery query)
+
+52. 
+</Accordion>
+
+<Accordion title="Query">
+**1**
+
+```sql
+SELECT c.name, i.name, count(*) FROM public.job j
+	JOIN public.category c
+		ON j.category_id = c.category_id
+		AND j.is_emergency = 1
+	JOIN public.issue i
+		ON j.issue_id = i.issue_id
+GROUP BY 1, 2
+```
+
+**2**
+
+```sql
+SELECT u.name, cl.created_at as call_date, cl.duration as call_duration, cl.status as call_status, cl.recording_url, j.name as job_name, concat('https://stage.latchel.com/admin/job/',j.slug) as job_url, * FROM public.call_log cl
+JOIN public.user u
+ON cl.initiated_by_user_id = u.user_id
+AND u.role_id IN (1,6)        LEFT JOIN public.call_log_job clj
+ON cl.call_log_id = clj.call_log_id
+LEFT JOIN public.job j
+ON clj.job_id = j.job_id
+and J.IS_EMERGENCY = 1
+ORDER BY 2 desc
+```
+
+**3**
+
+```sql
+SELECT u.name, cl.created_at as call_date, cl.duration as call_duration, cl.status as call_status, cl.recording_url, j.name as job_name, concat('https://stage.latchel.com/admin/job/',j.slug) as job_url, * FROM public.call_log cl
+JOIN public.user u
+ON cl.initiated_by_user_id = u.user_id
+AND u.role_id = 2     LEFT JOIN public.call_log_job clj
+ON cl.call_log_id = clj.call_log_id
+LEFT JOIN public.job j
+ON clj.job_id = j.job_id
+ORDER BY 2 desc
+```
+
+**4**
+
+```sql
+WITH e as (SELECT l.relation_id as job_id, l.created_at as create_date, * FROM public.log l
+WHERE l.type = 'state'
+AND l.loggable_id = 25
+AND l.relation_type = 'Latchel\Job'
+AND DATE_TRUNC('month',l.created_at) >= DATE_Trunc('month',now()-interval '12 months')), t as 
+(
+SELECT t.relation_id as job_id, min(t.created_at) as tshoot_complete_at 
+	FROM e
+	JOIN public.log t
+		ON e.job_id = t.relation_id
+		AND t.relation_type = 'Latchel\Job'
+		AND t.type = 'state'
+		AND t.created_at > e.create_date
+		AND t.loggable_id <> 25
+GROUP BY 1)
+SELECT em.job_id, em.create_date, t.tshoot_complete_at, u.user_id, u.name, r.name as user_type, EXTRACT(EPOCH FROM t.tshoot_complete_at-em.create_date)/60 as minutes_to_tshootFROM e as em
+	JOIN t 
+		ON em.job_id = t.job_id
+	JOIN public.log l
+		ON l.relation_id = t.job_id
+		AND l.relation_type = 'Latchel\Job'
+		AND l.created_at = t.tshoot_complete_at 
+		AND l.type = 'state'
+	JOIN public.user u
+		ON l.creator_id = u.user_id
+	JOIN public.role r
+		ON u.role_id = r.role_id
+```
+
+**5**
+
+```sql
+SELECT u.user_id, u.name, i.day_action_taken, d.tasks_deferred, c.tasks_created, co.tasks_completed, n.notes_created,
+l.status_updates, m.conversations_replied, j.wos_created, call.calls_placed
+FROM 
+(
+	SELECT u.user_id, u.name 
+	FROM public.user u
+	WHERE u.user_type = 'admin'
+	AND u.is_Active = 1
+	AND u.role_id in (1,6) -- admin/in-house
+	AND u.user_id <> 1
+	) u
+JOIN (
+select day_action_taken::date from generate_series(date_trunc('day', now() at time zone 'America/Los_Angeles' - interval '1 week'), 
+  now() at time zone 'America/Los_Angeles', '1 day'::interval) day_action_taken) i
+  ON 1=1
+LEFT JOIN 
+	 ( SELECT a.name, a.day_action_taken, count(*) as tasks_deferred
+	  FROM (
+		SELECT right(rtrim(l.note, '.'),-17) as name, DATE_trunc('day',l.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') as day_action_taken
+		FROM
+		public.log l
+		WHERE l.note LIKE '%Task deferred by %'
+		AND DATE_TRUNC('week',l.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') > DATE_trunc('week', now() at time zone 'America/Los_Angeles' - interval '1 week')
+		) a 
+	 	GROUP BY 1,2) d
+	ON u.name = d.name
+	AND i.day_action_taken = d.day_action_taken
+LEFT JOIN 
+(SELECT a.creator_id, a.day_action_taken, count(*) as tasks_created
+ FROM (
+	SELECT t.creator_id, DATE_trunc('day',t.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') as day_action_taken
+	FROM
+	public.task t
+	WHERE DATE_TRUNC('week',t.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') > DATE_trunc('week', now() at time zone 'America/Los_Angeles' - interval '1 week')
+	AND t.creator_id <> 1 ) a
+GROUP BY 1, 2) c
+	ON u.user_id = c.creator_id
+	AND i.day_action_taken = c.day_action_taken
+LEFT JOIN 
+(SELECT a.user_id, a.day_action_taken, count(*) as tasks_completed
+ FROM (
+	SELECT t.user_id, DATE_trunc('day',t.completed_at at time zone 'UTC' at time zone 'America/Los_Angeles') as day_action_taken
+	FROM
+	public.task t
+	WHERE DATE_TRUNC('week',t.completed_at at time zone 'UTC' at time zone 'America/Los_Angeles') > DATE_trunc('week', now() at time zone 'America/Los_Angeles' - interval '1 week')
+	 ) a
+GROUP BY 1, 2) co
+	ON u.user_id = co.user_id
+	AND i.day_action_taken = co.day_action_taken
+LEFT JOIN 
+(SELECT a.creator_id, a.day_action_taken, count(*) as notes_created
+ FROM (
+	SELECT n.creator_id, DATE_trunc('day',n.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') as day_action_taken
+	FROM
+	public.note n
+	WHERE DATE_TRUNC('week',n.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') > DATE_trunc('week', now() at time zone 'America/Los_Angeles' - interval '1 week')
+	 ) a
+GROUP BY 1, 2) n
+	ON u.user_id = n.creator_id
+	AND i.day_action_taken = n.day_action_taken
+LEFT JOIN 
+(SELECT a.creator_id, a.day_action_taken, count(*) as status_updates
+ FROM (
+	SELECT l.creator_id, DATE_trunc('day',l.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') as day_action_taken
+	FROM
+	public.log l
+	WHERE DATE_TRUNC('week',l.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') > DATE_trunc('week', now() at time zone 'America/Los_Angeles' - interval '2 weeks')
+	AND l.loggable_type = 'Latchel\State'
+	AND l.creator_id != 1
+	 ) a
+GROUP BY 1, 2) l
+	ON u.user_id = l.creator_id
+	AND i.day_action_taken = l.day_action_taken
+LEFT JOIN 
+(SELECT a.user_id, a.day_action_taken, count(*) as conversations_replied
+ FROM (
+	SELECT c.user_id, DATE_trunc('day',m.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') as day_action_taken
+	FROM
+	(
+SELECT m.conversation_id, min(m.created_at) as first_msg
+		FROM public.message m
+		WHERE DATE_TRUNC('week',m.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') > DATE_trunc('week', now() at time zone 'America/Los_Angeles' - interval '1 week')
+		GROUP BY 1 ) f
+	JOIN public.conversation c
+	ON f.conversation_id = c.conversation_id
+	JOIN public.message m
+	ON f.first_msg = m.created_at
+	AND f.conversation_id = m.conversation_id
+	AND c.conversable_id = m.messageable_id
+	 ) a
+GROUP BY 1, 2) m
+	ON u.user_id = m.user_id
+	AND i.day_action_taken = m.day_action_taken
+LEFT JOIN 
+(SELECT a.creator_id, a.day_action_taken, count(*) as wos_created
+ FROM (
+	SELECT j.creator_id, DATE_trunc('day',j.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') as day_action_taken
+	FROM
+	public.job j
+	WHERE DATE_TRUNC('week',j.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') > DATE_trunc('week', now() at time zone 'America/Los_Angeles' - interval '1 week')
+	AND j.creator_id <> 1 ) a
+GROUP BY 1, 2) j
+	ON u.user_id = j.creator_id
+	AND i.day_action_taken = j.day_action_taken
+LEFT JOIN 
+(SELECT a.initiated_by_user_id, a.day_action_taken, count(*) as calls_placed
+ FROM (
+	SELECT c.initiated_by_user_id, DATE_trunc('day',c.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') as day_action_taken
+	FROM
+	public.call_log c
+	WHERE DATE_TRUNC('week',c.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') > DATE_trunc('week', now() at time zone 'America/Los_Angeles' - interval '1 week')
+	) a
+GROUP BY 1, 2) call
+	ON u.user_id = call.initiated_by_user_id
+	AND i.day_action_taken = call.day_action_taken
+```
+
+**6**
+
+```sql
+SELECT
+     a.name
+    , a.messageable_id
+    , date_trunc('day',(a.created_at AT TIME ZONE 'UTC') AT TIME ZONE 'PDT') as "Date"   , a.count
+    , EXTRACT(EPOCH FROM percentile_cont(.9)  WITHIN GROUP (order by a.response_time asc))/60 as P90_completed
+    , EXTRACT(EPOCH FROM percentile_cont(.99)  WITHIN GROUP (order by a.response_time  asc))/60 as P99_completed
+   , extract(EPOCH from date_trunc('day',(a.created_at AT TIME ZONE 'UTC') AT TIME ZONE 'PDT')) as "DateTimeStamp"FROM (
+         SELECT
+             m1.conversation_id
+              , m1.messageable_id
+              , m1.name
+              , (m1.created_at - m1.created_at_prev_msg) AS response_time
+              , m1.created_at
+              , m1.created_at_prev_msg
+         FROM (
+                  SELECT m.conversation_id
+                       , m.messageable_id
+                       , u.name
+                       , m.message_id
+                       , m.messageable_type
+                       , LAG(m.created_at, 1) OVER (
+                      PARTITION BY m.conversation_id
+                      ORDER BY m.created_at
+                      ) AS created_at_prev_msg
+                       , m.created_at
+                  FROM message m
+                           JOIN public.user u
+                                ON m.messageable_id = u.user_id
+                                    AND u.user_type = 'admin'
+  AND u.is_active = 1
+--                                         AND  (date_trunc('day',(m.created_at AT TIME ZONE 'UTC') AT TIME ZONE 'PDT') >= date_trunc('day', (now() - interval '14 day') AT TIME ZONE 'PDT'))
+--                                         AND  (date_trunc('day',(m.created_at AT TIME ZONE 'UTC') AT TIME ZONE 'PDT') <= date_trunc('day', now() AT TIME ZONE 'PDT'))
+--                                         AND EXTRACT(hour FROM (m.created_at AT TIME ZONE 'UTC') AT TIME ZONE 'PDT') BETWEEN 5 AND 18                  WHERE M.messageable_id <> 1
+                  GROUP BY 1, 2, 3, 4
+              ) m1
+         WHERE created_at_prev_msg is not NULL
+    --     AND m1.messageable_id = 58697
+         ORDER BY m1.messageable_id
+     ) a
+GROUP BY 1,2,3
+ORDER BY "Date"
+--order by messageable_id --count desc
+--ORDER BY P90_completed --AND m1.messageable_id = 3
+        -- ORDER BY m1.messageable_id
+```
+
+**7**
+
+```sql
+SELECT u.user_id, u.name, i.time_action_taken, d.tasks_deferred, c.tasks_created, co.tasks_completed, n.notes_created,
+l.status_updates, m.conversations_replied, j.wos_created, call.calls_placed
+FROM 
+(
+	SELECT DISTINCT u.user_id, u.name 
+	FROM public.user u
+		JOIN public.user_group_user ugu
+		ON u.user_id = ugu.user_id
+	AND u.user_type = 'admin'
+	AND u.is_Active = 1
+	AND u.role_id in (1,6) -- admin/in-house
+	AND u.user_id <> 1
+	) u
+JOIN (
+select time_action_taken::timestamp from generate_series(date_trunc('hour', now() at time zone 'America/Los_Angeles' - interval '1 week'), 
+  now() at time zone 'America/Los_Angeles', '15 minutes'::interval) time_action_taken) i
+  ON 1=1
+LEFT JOIN 
+	 ( SELECT a.name, a.time_action_taken, count(*) as tasks_deferred
+	  FROM (
+		SELECT right(rtrim(l.note, '.'),-17) as name, date_trunc('hour', l.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') + date_part('minute', l.created_at at time zone 'UTC' at time zone 'America/Los_Angeles')::int / 15 * interval '15 min' as time_action_taken
+		FROM
+		public.log l
+		WHERE l.note LIKE '%Task deferred by %'
+		AND DATE_TRUNC('week',l.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') >= DATE_trunc('week', now() at time zone 'America/Los_Angeles' - interval '1 week')
+		) a 
+	 	GROUP BY 1,2) d
+	ON u.name = d.name
+	AND i.time_action_taken = d.time_action_taken
+LEFT JOIN 
+(SELECT a.creator_id, a.time_action_taken, count(*) as tasks_created
+ FROM (
+	SELECT t.creator_id, date_trunc('hour', t.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') + date_part('minute', t.created_at at time zone 'UTC' at time zone 'America/Los_Angeles')::int / 15 * interval '15 min' as time_action_taken
+	FROM
+	public.task t
+	WHERE DATE_TRUNC('week',t.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') > DATE_trunc('week', now() at time zone 'America/Los_Angeles' - interval '1 week')
+	AND t.creator_id <> 1 ) a
+GROUP BY 1, 2) c
+	ON u.user_id = c.creator_id
+	AND i.time_action_taken = c.time_action_taken
+LEFT JOIN 
+(SELECT a.user_id, a.time_action_taken, count(*) as tasks_completed
+ FROM (
+	SELECT t.user_id, date_trunc('hour', t.completed_at at time zone 'UTC' at time zone 'America/Los_Angeles') + date_part('minute', t.completed_at at time zone 'UTC' at time zone 'America/Los_Angeles')::int / 15 * interval '15 min' as time_action_taken
+	FROM
+	public.task t
+	WHERE DATE_TRUNC('week',t.completed_at at time zone 'UTC' at time zone 'America/Los_Angeles') >= DATE_trunc('week', now() at time zone 'America/Los_Angeles' - interval '1 week')
+	 ) a
+GROUP BY 1, 2) co
+	ON u.user_id = co.user_id
+	AND i.time_action_taken = co.time_action_taken
+LEFT JOIN 
+(SELECT a.creator_id, a.time_action_taken, count(*) as notes_created
+ FROM (
+	SELECT n.creator_id, date_trunc('hour', n.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') + date_part('minute', n.created_at at time zone 'UTC' at time zone 'America/Los_Angeles')::int / 15 * interval '15 min' as time_action_taken
+	FROM
+	public.note n
+	WHERE DATE_TRUNC('week',n.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') >= DATE_trunc('week', now() at time zone 'America/Los_Angeles' - interval '1 week')
+	 ) a
+GROUP BY 1, 2) n
+	ON u.user_id = n.creator_id
+	AND i.time_action_taken = n.time_action_taken
+LEFT JOIN 
+(SELECT a.creator_id, a.time_action_taken, count(*) as status_updates
+ FROM (
+	SELECT l.creator_id, date_trunc('hour', l.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') + date_part('minute', l.created_at at time zone 'UTC' at time zone 'America/Los_Angeles')::int / 15 * interval '15 min' as time_action_taken
+	FROM
+	public.log l
+	WHERE DATE_TRUNC('week',l.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') >= DATE_trunc('week', now() at time zone 'America/Los_Angeles' - interval '1 week')
+	AND l.loggable_type = 'Latchel\State'
+	AND l.creator_id != 1
+	 ) a
+GROUP BY 1, 2) l
+	ON u.user_id = l.creator_id
+	AND i.time_action_taken = l.time_action_taken
+LEFT JOIN 
+(SELECT a.user_id, a.time_action_taken, count(*) as conversations_replied
+ FROM (
+	SELECT c.user_id, date_trunc('hour', m.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') + date_part('minute', m.created_at at time zone 'UTC' at time zone 'America/Los_Angeles')::int / 15 * interval '15 min' as time_action_taken
+	FROM
+	(
+SELECT m.conversation_id, min(m.created_at) as first_msg
+		FROM public.message m
+		WHERE DATE_TRUNC('week',m.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') >= DATE_trunc('week', now() at time zone 'America/Los_Angeles' - interval '1 week')
+		GROUP BY 1 ) f
+	JOIN public.conversation c
+	ON f.conversation_id = c.conversation_id
+	JOIN public.message m
+	ON f.first_msg = m.created_at
+	AND f.conversation_id = m.conversation_id
+	AND c.conversable_id = m.messageable_id
+	 ) a
+GROUP BY 1, 2) m
+	ON u.user_id = m.user_id
+	AND i.time_action_taken = m.time_action_taken
+LEFT JOIN 
+(SELECT a.creator_id, a.time_action_taken, count(*) as wos_created
+ FROM (
+	SELECT j.creator_id, date_trunc('hour', j.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') + date_part('minute', j.created_at at time zone 'UTC' at time zone 'America/Los_Angeles')::int / 15 * interval '15 min' as time_action_taken
+	FROM
+	public.job j
+	WHERE DATE_TRUNC('week',j.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') >= DATE_trunc('week', now() at time zone 'America/Los_Angeles' - interval '1 week')
+	AND j.creator_id <> 1 ) a
+GROUP BY 1, 2) j
+	ON u.user_id = j.creator_id
+	AND i.time_action_taken = j.time_action_taken
+LEFT JOIN 
+(SELECT a.initiated_by_user_id, a.time_action_taken, count(*) as calls_placed
+ FROM (
+	SELECT c.initiated_by_user_id, date_trunc('hour', c.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') + date_part('minute', c.created_at at time zone 'UTC' at time zone 'America/Los_Angeles')::int / 15 * interval '15 min' as time_action_taken
+	FROM
+	public.call_log c
+	WHERE DATE_TRUNC('week',c.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') >= DATE_trunc('week', now() at time zone 'America/Los_Angeles' - interval '1 week')
+	) a
+GROUP BY 1, 2) call
+	ON u.user_id = call.initiated_by_user_id
+	AND i.time_action_taken = call.time_action_taken
+```
+
+**8**
+
+```sql
+select			queue_id as incoming_call_waiting_room_id, -- this ID groupd the call center calls with the single incoming call
+				call_sid as outgoing_call_center_call_sid, -- SID for the call to the call center
+				status, -- what ultimately happened with the call 
+				created_at -- what time the call was made
+from			dueling_call_center_call
+where			created_at >= NOW() - INTERVAL '3 weeks'
+order by	 	created_at desc
+;
+```
+
+**9**
+
+```sql
+select			queue_id as incoming_call_waiting_room_id, -- this ID groupd the call center calls with the single incoming call
+call_sid as outgoing_call_center_call_sid, -- SID for the call to the call center
+status, -- what ultimately happened with the call
+created_at -- what time the call was made
+from			dueling_call_center_call dcc
+where			created_at >= NOW() - INTERVAL '3 weeks'
+and			    dcc.status = ('won') 			
+order by	 	created_at desc
+```
+
+**10**
+
+```sql
+WITH e as (SELECT l.relation_id as job_id, l.created_at FROM public.log l
+WHERE l.type = 'state'
+AND l.loggable_id = 25
+AND l.relation_type = 'Latchel\Job'
+AND DATE_TRUNC('month',l.created_at) >= DATE_Trunc('month',now()-interval '12 months'))
+SELECT e.job_id, e.created_at at time zone 'utc' at time zone 'America/Los_Angeles' as created_at, c.first_call at time zone 'utc' at time zone 'America/Los_Angeles' as first_call, cl.initiated_by_user_id, u.name, r.name as user_type, GREATEST(EXTRACT(EPOCH FROM c.first_call-e.created_at)/60,0) as minutes_to_call
+FROM (
+	SELECT e.job_id, min(cl.created_at) as first_call FROM
+		e
+		JOIN public.call_log_job clj
+			ON e.job_id = clj.job_id
+		JOIN public.call_log cl
+			ON clj.call_log_id = cl.call_log_id
+			AND (cl.created_at + cl.duration * interval '1 second' ) >= e.created_at
+	GROUP BY 1) c
+	JOIN e
+		ON c.job_id = e.job_id
+	JOIN public.call_log cl
+		ON cl.created_at = c.first_call
+	JOIN public.call_log_job clj
+		ON clj.job_id = c.job_id
+		AND clj.call_log_id = cl.call_log_id
+	JOIN public.user u
+		ON cl.initiated_by_user_id = u.user_id
+	JOIN public.role r
+		ON u.role_id = r.role_id
+```
+
+**11**
+
+```sql
+WITH a as (SELECT * FROM generate_series(date_trunc('day',now()-interval '1 months'),
+                              date_trunc('day',now()), '1 day') as date)
+SELECT a.date, c.name, j.source, cr.user_type, count(*) 
+from a
+JOIN public.job j
+	ON date_trunc('day',j.created_at) = a.date
+	JOIN public.user pm
+		ON j.pm_id = pm.user_id
+	JOIN public.company c
+		ON pm.company_id = c.company_id
+	JOIN public.user cr
+		ON j.creator_id = cr.user_id
+GROUP BY 1,2,3,4
+ORDER BY 1,2,3,4
+```
+
+**(cont.)**
+
+```sql
+WITH a as (SELECT * FROM generate_series(date_trunc('day',now()-interval '1 months'),
+                              date_trunc('hour',now()), '1 hour') as hour)
+SELECT a.hour, c.name, j.source, cr.user_type, count(*)
+from a
+JOIN public.job j
+        ON date_trunc('hour',j.created_at) = a.hour
+        JOIN public.user pm
+                ON j.pm_id = pm.user_id
+        JOIN public.company c
+                ON pm.company_id = c.company_id
+        JOIN public.user cr
+                ON j.creator_id = cr.user_id
+GROUP BY 1,2,3,4
+ORDER BY 1,2,3,4
+```
+
+**12**
+
+```sql
+Select distinct (c.name), c.created_at, count (distinct pr.property_id)  from company c
+join public.user pm
+on c.company_id=pm.company_id
+join property pr on pr.pm_id=pm.user_id
+where c.company_type = 'pm'
+and c.is_active = '1'
+and pr.is_active = '1'
+group by 1,2
+order by 2 desc
+```
+
+**13**
+
+```sql
+--count by company
+With d as (
+select date_trunc('week', now() - interval '1 weeks') date_of_count),
+sub as (
+SELECT pp.product_id, s.relation_id, s.relation_type, s.started_at as sub_started_at, s.ended_at as sub_ended_at, pp.started_at as product_started_at, pp.ended_at as product_ended_at from public.subscription s
+JOIN public.package p
+	ON s.package_id = p.package_id
+	AND s.started_at is not null
+JOIN public.package_product pp
+	ON p.package_id = pp.package_id
+	AND pp.product_id in (1,2,3,4) ),
+propWS as (
+SELECT p.property_id, p.is_active, p.portfolio_id, p.created_at, p.updated_at, sub.* FROM public.property p
+	JOIN sub
+	ON p.property_id = sub.relation_id
+	AND sub.relation_type = 'Latchel\Property'),
+propPortWS as (
+SELECT p.property_id, p.is_active, p.portfolio_id, p.created_at, p.updated_at, sub.* FROM public.property p
+	JOIN sub
+	ON p.portfolio_id = sub.relation_id
+	AND sub.relation_type = 'Latchel\Portfolio'),
+propCompWS as (
+SELECT p.property_id, p.is_active, p.portfolio_id, p.created_at, p.updated_at, sub.* FROM public.property p
+	JOIN public.user pm
+		ON p.pm_id = pm.user_id
+	JOIN sub
+	ON pm.company_id = sub.relation_id
+	AND sub.relation_type = 'Latchel\Company'),
+prop as (
+SELECT distinct d.date_of_count, s.product_id, s.property_id
+from d
+JOIN propWS s
+	ON s.sub_started_at<= d.date_of_count
+	AND (s.sub_ended_at is null or s.sub_ended_at >= d.date_of_count)
+	AND s.is_active = 1
+	AND s.product_started_at <= d.date_of_count
+	AND (s.product_ended_at is null or s.product_ended_at >= d.date_of_count)
+	AND s.created_at <= d.date_of_count
+),
+port as (
+SELECT distinct d.date_of_count, s.product_id, s.property_id
+from d
+JOIN propPortWS s
+	ON s.sub_started_at<= d.date_of_count
+	AND (s.sub_ended_at is null or s.sub_ended_at >= d.date_of_count)
+	AND s.is_active = 1
+	AND s.product_started_at <= d.date_of_count
+	AND (s.product_ended_at is null or s.product_ended_at >= d.date_of_count)
+	AND s.created_at <= d.date_of_count
+LEFT JOIN prop p
+	ON d.date_of_count = p.date_of_count
+	AND s.property_id = p.property_id
+WHERE p.property_id is null ),
+comp as (
+SELECT distinct d.date_of_count, s.product_id, s.property_id
+from d
+JOIN propCompWS s
+	ON s.sub_started_at<= d.date_of_count
+	AND (s.sub_ended_at is null or s.sub_ended_at >= d.date_of_count)
+	AND s.product_started_at <= d.date_of_count
+	AND (s.product_ended_at is null or s.product_ended_at >= d.date_of_count)
+	AND s.is_active = 1
+	AND s.created_at <= d.date_of_count	
+LEFT JOIN prop p
+	ON d.date_of_count = p.date_of_count
+	AND s.property_id = p.property_id
+LEFT JOIN port po
+	ON d.date_of_count = po.date_of_count
+	AND s.property_id = po.property_id
+WHERE p.property_id is null
+AND po.property_id is null),
+agg as (SELECT * from comp
+		union
+	   SELECT * from port
+	   union
+	   SELECT * from prop)
+SELECT agg.date_of_count, c.company_id, c.name, p.name as product, count(*)
+FROM agg
+	JOIN public.product p
+	ON agg.product_id = p.product_id
+	JOIN public.property pr 
+	ON agg.property_id = pr.property_id
+	JOiN public.user u
+	ON pr.pm_id = u.user_id
+	JOIN public.company c
+	ON u.company_id = c.company_id
+GROUP BY 1,2,3,4
+ORDER BY 1,2,3,4
+```
+
+**14**
+
+```sql
+--p - Properties
+--pp - portfolios - properties
+--cpp - companies - (portfolios - properties) - properties (w/out portfolios)With d as (
+select generate_series(date_trunc('week', date_trunc('year',now())),now(),'1 week')  date_of_count),
+sub as (
+SELECT s.company_id, s.started_at as sub_started_at, s.ended_at as sub_ended_at,
+s.relation_id, s.relation_type, pr.name as product, pp.started_at as prod_started_at, pp.ended_at as prod_ended_at
+from public.subscription s
+JOIN public.package p
+	ON s.package_id = p.package_id
+JOIN public.package_product pp	
+	ON p.package_id = pp.package_id
+JOIN public.product pr
+	ON pp.product_id = pr.product_id
+	AND pr.type = 'base'
+WHERE s.ended_at is null or date_part('year',s.ended_at) = 2021 ),
+prop_list as (
+SELECT distinct sub.relation_id as property_id, p.portfolio_id, c.company_id from sub
+	JOIN public.property p
+		ON sub.relation_id = p.property_id
+		AND p.is_active = 1
+	JOIN public.user u	
+		ON p.pm_id = u.user_id
+	JOIN public.company c
+		ON u.company_id = c.company_id
+WHERE sub.relation_type = 'Latchel\Property'),
+port_list as (
+SELECT distinct sub.relation_id as portfolio_id, p.pm_company_id as company_id from sub
+	JOIn public.portfolio p	
+		ON sub.relation_id = p.portfolio_id
+WHERE sub.relation_type = 'Latchel\Portfolio'),
+comp_list as (
+SELECT distinct sub.relation_id as company_id from sub
+WHERE sub.relation_type = 'Latchel\Company'),
+pp as (
+SELECT port_list.company_id, port_list.portfolio_id, count(*) from port_list
+JOIN public.property p
+	ON port_list.portfolio_id = p.portfolio_id
+	AND p.is_active = 1
+LEFT JOIN prop_list
+	ON p.property_id = prop_list.property_id
+WHERE prop_list.portfolio_id is null
+GROUP BY 1,2), cpp as (
+SELECT comp_list.company_id, count(*)
+FROM comp_list
+	JOIN public.user u
+		ON comp_list.company_id = u.company_id
+	JOIN public.property p
+		ON u.user_id = p.pm_id
+		and p.is_active = 1
+	LEFT JOIN pp
+		ON p.portfolio_id = pp.portfolio_id
+	LEFT JOIN prop_list
+		ON p.property_id = prop_list.property_id
+WHERE pp.portfolio_id is null
+AND prop_list.property_id is null
+group by 1), sub_count as (
+SELECT sub.*, COALESCE(cpp.count, 0)+coalesce(pp.count,0) + case when sub.relation_type = 'Latchel\Property' THEN 1 else 0 end  as prop_count from sub
+	LEFT JOIN cpp 
+		ON sub.relation_id = cpp.company_id
+		AND sub.relation_type = 'Latchel\Company'
+	LEFT JOIN pp
+		ON sub.relation_id = pp.portfolio_id
+		AND sub.relation_type = 'Latchel\Portfolio')
+SELECT d.date_of_count, sub_count.product, sum(sub_count.prop_count) as prop_count from d
+	LEFT JOIN sub_count
+		ON d.date_of_count >= sub_count.sub_started_at
+		AND (sub_count.sub_ended_at is null or sub_count.sub_ended_at > d.date_of_count)
+		AND d.date_of_count >= sub_count.prod_started_at
+		AND (sub_count.prod_ended_at is null or sub_count.prod_ended_at > d.date_of_count)
+GROUP BY 1,2
+ORDER BY 1 desc, 2
+```
+
+**15**
+
+```sql
+SELECT u.name, r.rating, r.comments, r.created_at from public.rating r
+	JOIN public.troubleshooting t
+		ON r.rateable_id = t.troubleshooting_id
+		AND r.rateable_type = 'Latchel\Troubleshooting'
+	JOIN public.user u
+		ON t.troubleshooter_id = u.user_id
+ORDER BY 1,4
+```
+
+**16**
+
+```sql
+Select distinct (c.name), c.created_at, count (distinct pr.property_id), c.state  from company c
+join public.user pm
+on c.company_id=pm.company_id
+join property pr on pr.pm_id=pm.user_id
+where c.company_type = 'pm'
+and c.is_active = '1'
+and pr.is_active = '1'
+group by 1,2,4
+order by 2 desc
+```
+
+**17**
+
+```sql
+SELECT p.*
+FROM public.property p
+WHERE p.is_active = 1
+```
+
+**18**
+
+```sql
+SELECT u.user_id, u.name, i.time_action_taken, d.tasks_deferred, c.tasks_created, co.tasks_completed, n.notes_created,
+l.status_updates, m.conversations_replied, j.wos_created, call.calls_placed, sms.sms_sent
+FROM 
+(
+	SELECT DISTINCT u.user_id, u.name 
+	FROM public.user u
+		JOIN public.user_group_user ugu
+		ON u.user_id = ugu.user_id
+	AND u.user_type = 'admin'
+	AND u.is_Active = 1
+	AND u.role_id in (1,6) -- admin/in-house
+	AND u.user_id <> 1
+	) u
+JOIN (
+select time_action_taken::timestamp from generate_series(date_trunc('day', now() at time zone 'America/Los_Angeles' - interval '2 weeks'), 
+  now() at time zone 'America/Los_Angeles', '15 minutes'::interval) time_action_taken) i
+  ON 1=1
+LEFT JOIN 
+	 ( SELECT a.user_id, a.time_action_taken, count(*) as tasks_deferred
+	  FROM (
+		SELECT l.user_id, date_trunc('hour', l.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') + date_part('minute', l.created_at at time zone 'UTC' at time zone 'America/Los_Angeles')::int / 15 * interval '15 min' as time_action_taken
+		FROM
+		public.task_deferral l
+		WHERE DATE_TRUNC('day',l.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') >= DATE_trunc('day', now() at time zone 'America/Los_Angeles' - interval '2 weeks')
+		) a 
+	 	GROUP BY 1,2) d
+	ON u.user_id = d.user_id
+	AND i.time_action_taken = d.time_action_taken
+LEFT JOIN 
+(SELECT a.creator_id, a.time_action_taken, count(*) as tasks_created
+ FROM (
+	SELECT t.creator_id, date_trunc('hour', t.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') + date_part('minute', t.created_at at time zone 'UTC' at time zone 'America/Los_Angeles')::int / 15 * interval '15 min' as time_action_taken
+	FROM
+	public.task t
+	WHERE DATE_TRUNC('day',t.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') > DATE_trunc('day', now() at time zone 'America/Los_Angeles' - interval '2 weeks')
+	AND t.creator_id <> 1 ) a
+GROUP BY 1, 2) c
+	ON u.user_id = c.creator_id
+	AND i.time_action_taken = c.time_action_taken
+LEFT JOIN 
+(SELECT a.user_id, a.time_action_taken, count(*) as tasks_completed
+ FROM (
+	SELECT t.user_id, date_trunc('hour', t.completed_at at time zone 'UTC' at time zone 'America/Los_Angeles') + date_part('minute', t.completed_at at time zone 'UTC' at time zone 'America/Los_Angeles')::int / 15 * interval '15 min' as time_action_taken
+	FROM
+	public.task t
+	WHERE DATE_TRUNC('day',t.completed_at at time zone 'UTC' at time zone 'America/Los_Angeles') >= DATE_trunc('day', now() at time zone 'America/Los_Angeles' - interval '2 weeks')
+	 ) a
+GROUP BY 1, 2) co
+	ON u.user_id = co.user_id
+	AND i.time_action_taken = co.time_action_taken
+LEFT JOIN 
+(SELECT a.creator_id, a.time_action_taken, count(*) as notes_created
+ FROM (
+	SELECT n.creator_id, date_trunc('hour', n.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') + date_part('minute', n.created_at at time zone 'UTC' at time zone 'America/Los_Angeles')::int / 15 * interval '15 min' as time_action_taken
+	FROM
+	public.note n
+	WHERE DATE_TRUNC('day',n.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') >= DATE_trunc('day', now() at time zone 'America/Los_Angeles' - interval '2 weeks')
+	 ) a
+GROUP BY 1, 2) n
+	ON u.user_id = n.creator_id
+	AND i.time_action_taken = n.time_action_taken
+LEFT JOIN 
+(SELECT a.creator_id, a.time_action_taken, count(*) as status_updates
+ FROM (
+	SELECT l.creator_id, date_trunc('hour', l.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') + date_part('minute', l.created_at at time zone 'UTC' at time zone 'America/Los_Angeles')::int / 15 * interval '15 min' as time_action_taken
+	FROM
+	public.log l
+	WHERE DATE_TRUNC('day',l.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') >= DATE_trunc('day', now() at time zone 'America/Los_Angeles' - interval '2 weeks')
+	AND l.loggable_type = 'Latchel\State'
+	AND l.creator_id != 1
+	 ) a
+GROUP BY 1, 2) l
+	ON u.user_id = l.creator_id
+	AND i.time_action_taken = l.time_action_taken
+LEFT JOIN 
+(SELECT a.user_id, a.time_action_taken, count(*) as conversations_replied
+ FROM (
+	SELECT c.user_id, date_trunc('hour', m.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') + date_part('minute', m.created_at at time zone 'UTC' at time zone 'America/Los_Angeles')::int / 15 * interval '15 min' as time_action_taken
+	FROM
+	(
+SELECT m.conversation_id, min(m.created_at) as first_msg
+		FROM public.message m
+		WHERE DATE_TRUNC('day',m.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') >= DATE_trunc('day', now() at time zone 'America/Los_Angeles' - interval '2 weeks')
+		GROUP BY 1 ) f
+	JOIN public.conversation c
+	ON f.conversation_id = c.conversation_id
+	JOIN public.message m
+	ON f.first_msg = m.created_at
+	AND f.conversation_id = m.conversation_id
+	AND c.conversable_id = m.messageable_id
+	 ) a
+GROUP BY 1, 2) m
+	ON u.user_id = m.user_id
+	AND i.time_action_taken = m.time_action_taken
+LEFT JOIN 
+(SELECT a.creator_id, a.time_action_taken, count(*) as wos_created
+ FROM (
+	SELECT j.creator_id, date_trunc('hour', j.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') + date_part('minute', j.created_at at time zone 'UTC' at time zone 'America/Los_Angeles')::int / 15 * interval '15 min' as time_action_taken
+	FROM
+	public.job j
+	WHERE DATE_TRUNC('day',j.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') >= DATE_trunc('day', now() at time zone 'America/Los_Angeles' - interval '2 weeks')
+	AND j.creator_id <> 1 ) a
+GROUP BY 1, 2) j
+	ON u.user_id = j.creator_id
+	AND i.time_action_taken = j.time_action_taken
+LEFT JOIN 
+(SELECT a.initiated_by_user_id, a.time_action_taken, count(*) as calls_placed
+ FROM (
+	SELECT c.initiated_by_user_id, date_trunc('hour', c.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') + date_part('minute', c.created_at at time zone 'UTC' at time zone 'America/Los_Angeles')::int / 15 * interval '15 min' as time_action_taken
+	FROM
+	public.call_log c
+	WHERE DATE_TRUNC('day',c.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') >= DATE_trunc('day', now() at time zone 'America/Los_Angeles' - interval '2 weeks')
+	) a
+GROUP BY 1, 2) call
+	ON u.user_id = call.initiated_by_user_id
+	AND i.time_action_taken = call.time_action_taken
+LEFT JOIN (SELECT u.user_id, u.name, date_trunc('hour', m.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') + date_part('minute', m.created_at at time zone 'UTC' at time zone 'America/Los_Angeles')::int / 15 * interval '15 min' as time_action_taken
+	, count(*) as sms_sent
+	from public.message m
+	JOIN public.user u
+		ON m.messageable_id = u.user_id
+		AND m.messageable_type = 'Latchel\User'
+		AND m.messageable_id <> 1
+		AND u.user_type = 'admin'
+		AND DATE_TRUNC('day',m.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') >= DATE_trunc('day', now() at time zone 'America/Los_Angeles' - interval '2 weeks')
+	GROUP BY 1,2,3) sms
+	ON u.user_id = sms.user_id
+	AND i.time_action_taken = sms.time_action_taken
+```
+
+**19**
+
+```sql
+SELECT a.failed_2hr_sla::float/a.count_appt_set::float as pct_fail_2hr, 
+a.failed_4hr_sla::float/a.count_appt_set::float as pct_fail_4hr, 
+a.failed_24hr_sla::float/a.count_appt_set::float as pct_fail_24hr,
+* FROM (
+SELECT date_trunc('week',j.created_at) as week, COUNT(*) as count_appt_set, 
+sum(case when l.created_at - j.created_at > 2* interval '1 hour' then 1 else 0 end) as failed_2hr_SLA, 
+sum(case when l.created_at - j.created_at > 4* interval '1 hour' then 1 else 0 end) as failed_4hr_SLA,
+sum(case when l.created_at - j.created_at > 24* interval '1 hour' then 1 else 0 end) as failed_24hr_SLA,
+EXTRACT(EPOCH FROM percentile_disc(.5) WITHIN GROUP (ORDER BY l.created_at - j.created_at))/(60*60) as P50_hrs_to_set_appt,
+EXTRACT(EPOCH FROM percentile_disc(.75) WITHIN GROUP (ORDER BY l.created_at - j.created_at))/(60*60) as P75_hrs_to_set_appt,
+EXTRACT(EPOCH FROM percentile_disc(.9) WITHIN GROUP (ORDER BY l.created_at - j.created_at))/(60*60) as P90_hrs_to_set_appt,
+EXTRACT(EPOCH FROM percentile_disc(.95) WITHIN GROUP (ORDER BY l.created_at - j.created_at))/(60*60) as P95_hrs_to_set_appt,
+EXTRACT(EPOCH FROM percentile_disc(.99) WITHIN GROUP (ORDER BY l.created_at - j.created_at))/(60*60) as P99_hrs_to_set_apptFROM public.job j
+	join (SELECT l.relation_id, min(l.created_at) as created_at
+		  FROM public.log l		WHERE l.loggable_type = 'Latchel\State'
+			AND l.loggable_id = 4
+		  AND l.relation_type = 'Latchel\Job'
+		GROUP BY l.relation_id  ) l
+		ON j.job_id = l.relation_id
+		AND j.is_emergency = 1
+			LEFT JOIN public.log dl
+				ON l.relation_id = dl.relation_id
+				AND dl.relation_type = 'Latchel\Job'
+				AND lower(dl.subject) like '%dispatch defer%'WHERE date_trunc('week',j.created_at) >= date_trunc('week',now() - 12*interval '1 week')
+													  AND dl.log_id IS NULL
+GROUP BY 1 ) a
+ORDER BY 4 desc
+```
+
+**20**
+
+```sql
+WITH raw as (
+SELECT vaq.updated_at as created_at, j.job_id, j.vendor_id, EXTRACT(EPOCH FROM min(l.created_at)-vaq.updated_at)/(60*60) as hours_to_schedule from public.job j
+	LEFT JOIN public.user v
+		ON j.vendor_id = v.user_id
+	JOIN public.user pm
+		ON j.pm_id = pm.user_id
+	LEFT JOIN public.vendor_pm_access vpa
+		on v.company_id = vpa.vendor_company_id
+		AND pm.company_id = vpa.pm_company_id
+	JOIN public.vendor_auto_queue vaq 
+		ON j.job_id = vaq.job_id 
+		AND vaq.status = 'exhausted-complete' -- 5 types: active, exhausted-complete, canceled, exhausted, successful
+		AND j.state_id not in (14,16,17,20,24,19) -- adding 16: completed
+	LEFT JOIN public.log l 
+		ON l.relation_id = j.job_id
+		AND l.relation_type = 'Latchel\Job' 
+		AND l.loggable_id = 4 
+		AND l.type = 'state'
+		AND l.created_at > vaq.updated_at
+JOIN public.property p
+	ON j.property_id = p.property_id
+LEFT JOIN public.portfolio po
+	ON p.portfolio_id = po.portfolio_id
+JOIN public.pm_company_settings pcs
+	ON pm.company_id = pcs.pm_company_id
+WHERE vpa.pm_company_id is null
+AND COALESCE(p.lcn_payment_method_id,po.lcn_payment_method_id,pcs.lcn_payment_method_id,0) > 1
+AND COALESCE(p.lcn_opt_out,po.lcn_opt_out,0) = 0
+GROUP BY 1,2,3)
+SELECT s.name,CONCAt(') as job_url, * from raw
+JOIN public.job j
+	ON raw.job_id = j.job_id
+JOIN public.state s
+	ON j.state_id = s.state_id 
+WHERE raw.created_at < NOW() - INTERVAL '2 weeks'
+```
+
+**21**
+
+```sql
+/*
+-code: records of job with audit code and in the considered states (check state table)
+- min, max, skill: finding the origin and update skills per WO
+*/
+WITH 
+code AS(
+    SELECT j.job_id,
+    CONCAT(') AS job_url, 
+    s.name AS status, 
+    j.name as job_description, 
+    j.created_at, 
+    ARRAY(SELECT array_to_string(regexp_matches(j.description, '-([a-z]*)[:,;]', 'g'),'')) AS audit_code,
+    j.description,
+    j.max_cost,
+    pm.name AS pm_name, 
+    v.name AS vendor_name,
+    i.issue_id,
+    i.name as issue_name
+    FROM public.job j
+    LEFT JOIN public.user v -- for vendor
+        ON j.vendor_id = v.user_id
+    JOIN public.user pm -- for PM
+        ON j.pm_id = pm.user_id
+    JOIN public.issue i
+        ON j.issue_id = i.issue_id
+    JOiN public.state s
+        ON j.state_id = s.state_id
+    LEFT JOIN public.problem p
+        ON j.problem_id = p.problem_id
+    WHERE j.state_id NOT IN (4,6,9,14,16,25,26,24) --24 = forwarded to PM; maybe add back later
+        AND j.description LIKE '%[-%'
+    ORDER BY j.created_at DESC
+),
+min_tab AS(
+    SELECT l.relation_id, l.created_at, l.note AS origin_note
+    FROM public.log l INNER JOIN 
+    (SELECT relation_id, MIN(created_at) AS first_date
+    FROM public.log l WHERE relation_type = 'Latchel\Job' AND note ILIKE '%skill%'
+    GROUP BY relation_id) a ON (l.relation_id = a.relation_id  AND  l.created_at = a.first_date) AND note ILIKE '%skill%' 
+    order by 1), 
+max_tab AS (
+    SELECT l.relation_id, l.created_at, l.note as update_note
+    FROM public.log l INNER JOIN 
+    (SELECT relation_id, MAX(created_at) AS update_date
+    FROM public.log l WHERE relation_type = 'Latchel\Job' AND note ILIKE '%skill%'
+    GROUP BY relation_id) a ON (l.relation_id = a.relation_id  AND  l.created_at = a.update_date)  AND note ILIKE '%skill%' 
+    order by 1),
+skill_tab AS(
+    SELECT mi.relation_id, mi.origin_note, ma.update_note 
+    FROM min_tab mi JOIN max_tab ma ON mi.relation_id = ma.relation_id
+    ORDER BY 1)
+---Adding origin skills and update skills     
+SELECT c.job_id, c.job_url, c.status, c.job_description, c.audit_code, c.pm_name, c.vendor_name, c.issue_id, c.issue_name, c.max_cost, 
+        sk.origin_note, sk.update_note -- Some note is missing 
+FROM code c 
+LEFT JOIN skill_tab sk 
+ON c.job_id = sk.relation_id
+--- Getting the top 3 issues
+-- SELECT c.issue_id, c.issue_name, COUNT(c.issue_id),
+--         ((COUNT(c.issue_id)::float/(SELECT COUNT(*) FROM code c WHERE c.audit_code = '{ck}'))::float)*100 as percentage
+--         FROM code c 
+--         WHERE c.audit_code = '{ck}'
+--         GROUP BY 1,2
+--         ORDER BY 3 DESC 
+--         LIMIT 3
+```
+
+**22**
+
+```sql
+WITH raw as (
+SELECT vaq.updated_at as created_at, j.job_id, j.vendor_id, EXTRACT(EPOCH FROM min(l.created_at)-vaq.updated_at)/(60*60) as hours_to_schedule from public.job j
+	LEFT JOIN public.user v
+		ON j.vendor_id = v.user_id
+	JOIN public.user pm
+		ON j.pm_id = pm.user_id
+	LEFT JOIN public.vendor_pm_access vpa
+		on v.company_id = vpa.vendor_company_id
+		AND pm.company_id = vpa.pm_company_id
+	JOIN public.vendor_auto_queue vaq 
+		ON j.job_id = vaq.job_id 
+		AND vaq.status = 'exhausted-complete' -- 5 types: active, exhausted-complete, canceled, exhausted, successful
+		AND j.state_id not in (14,16,17,20,24,19) -- adding 16: completed
+	LEFT JOIN public.log l 
+		ON l.relation_id = j.job_id
+		AND l.relation_type = 'Latchel\Job' 
+		AND l.loggable_id = 4 
+		AND l.type = 'state'
+		AND l.created_at > vaq.updated_at
+JOIN public.property p
+	ON j.property_id = p.property_id
+LEFT JOIN public.portfolio po
+	ON p.portfolio_id = po.portfolio_id
+JOIN public.pm_company_settings pcs
+	ON pm.company_id = pcs.pm_company_id
+WHERE vpa.pm_company_id is null
+AND COALESCE(p.lcn_payment_method_id,po.lcn_payment_method_id,pcs.lcn_payment_method_id,0) > 1
+AND COALESCE(p.lcn_opt_out,po.lcn_opt_out,0) = 0
+GROUP BY 1,2,3)
+SELECT s.name,CONCAt(') as job_url, * from raw
+JOIN public.job j
+	ON raw.job_id = j.job_id
+JOIN public.state s
+	ON j.state_id = s.state_id 
+WHERE raw.created_at < NOW() - INTERVAL '2 weeks' 
+	AND raw.vendor_id is null OR raw.hours_to_schedule is null;
+```
+
+**23**
+
+```sql
+/*
+-code: records of job with audit code and in the considered states (check state table)
+- min, max, skill: finding the origin and update skills per WO
+*/WITH
+code AS(
+	SELECT j.job_id,
+	CONCAT(') AS job_url,
+	s.name AS status,
+	j.name as job_description,
+	j.created_at,
+	ARRAY(SELECT array_to_string(regexp_matches(j.description, '-([a-z]*)[:,;]', 'g'),'')) AS audit_code,
+	j.description,
+	j.max_cost,
+	pm.name AS pm_name,
+	v.name AS vendor_name,
+	j.problem_id,
+	p.name AS problem_name,
+	i.issue_id,
+	i.name as issue_name
+	FROM public.job j
+	LEFT JOIN public.user v -- for vendor
+		ON j.vendor_id = v.user_id
+	JOIN public.user pm -- for PM
+		ON j.pm_id = pm.user_id
+	JOIN public.issue i
+		ON j.issue_id = i.issue_id
+	JOiN public.state s
+		ON j.state_id = s.state_id
+	LEFT JOIN public.problem p
+		ON j.problem_id = p.problem_id
+	WHERE j.state_id NOT IN (4,6,9,14,16,25,26,24) --24 = forwarded to PM; maybe add back later
+		AND j.description LIKE '%[-%'
+	ORDER BY j.created_at DESC
+),min_tab AS(
+	SELECT l.relation_id, l.created_at, origin_note
+	FROM (SELECT l.relation_id, l.created_at, l.note AS origin_note,
+	 ROW_NUMBER() OVER (PARTITION BY  l.relation_id ORDER BY l.created_at ) as mi
+	  FROM log l
+	  WHERE l.relation_type = 'Latchel\Job'
+	 ) l
+	WHERE mi = 1),
+max_tab AS (
+	SELECT l.relation_id, l.created_at, update_note
+	FROM (SELECT l.relation_id, l.created_at, l.note AS update_note,
+	ROW_NUMBER() OVER (PARTITION BY  l.relation_id ORDER BY l.created_at desc) as ma
+	 FROM log l
+	 WHERE l.relation_type = 'Latchel\Job'
+	 ) l
+WHERE ma = 1),
+skill_tab AS(
+	SELECT mi.relation_id, mi.origin_note, ma.update_note
+	FROM min_tab mi JOIN max_tab ma ON mi.relation_id = ma.relation_id
+	ORDER BY 1)SELECT c.job_id, c.job_url, c.status, c.job_description, c.audit_code, c.issue_id, c.issue_name,
+		c.problem_id, c.problem_name,
+		mi.created_at as start_date, sk.origin_note, ma.created_at as last_date, sk.update_note -- Some note is missing
+FROM code c
+LEFT JOIN min_tab mi 
+ON c.job_id = mi.relation_id
+LEFT JOIN max_tab ma
+ON c.job_id = ma.relation_id
+LEFT JOIN skill_tab sk
+ON c.job_id = sk.relation_id
+```
+
+**24**
+
+```sql
+SELECT t.task_id, count(*) as deferrals, t.created_at, t.subject, CONCAT('https://app.latchel.com/admin/job/', j.slug) as job_url from public.task t
+     JOIN public.task_deferral td
+         ON t.task_id = td.task_id
+         AND t.is_resolved = 0
+     JOIN public.job j
+         ON t.relation_id = j.job_id
+         AND t.relation_type = 'Latchel\Job'
+     LEFT JOIN public.user_group ug
+         ON t.user_group_id = ug.user_group_id
+ WHERE ug.company_id is null
+ GROUP BY 1,3,4,5
+ HAVING COUNT(*) >2
+ ORDER BY 2 desc
+```
+
+**25**
+
+```sql
+ITH a as (SELECT j.order_number, CONCAT('https://app.latchel.com/admin/job/', j.slug) as job_url, st.name as job_status, t.subject as task_subject, t.scheduled_for as task_due_date, g.name as assigned_group, a.name as assigned_user, s.name as subject_user_name, s.user_type as subject_user_type,
+ v.name as vendor_name, vc.name as company_name,
+ t.created_at as task_created_at, t.updated_at as task_updated_at, j.name as job_title, j.state_updated_at as job_status_updated_at, j.created_at as job_created_at,
+ po.name as portfolio, p.address1, p.address2, p.city, p.state, p.zip, p.timezone, p.property_id, j.job_id, j.is_urgent, j.is_emergency
+ ,s.user_type, s.user_id, s.name  as task_subject_user
+ from public.task t
+ JOIN public.user_group g
+     ON t.user_group_id = g.user_group_id
+     AND g.company_id is null
+     AND t.is_resolved = 0
+     AND t.scheduled_for <= now()
+ LEFT JOIN public.user s
+     ON t.subject_user_id = s.user_id
+ JOIN public.job j
+     ON t.relation_type = 'Latchel\Job'
+     AND t.relation_id = j.job_id
+            AND j.is_archived=0
+ LEFT JOIN public.user a
+     ON t.user_id = a.user_id
+ JOIN public.state st
+     ON j.state_id = st.state_id
+ JOIN public.property p
+     ON j.property_id = p.property_id
+ LEFT JOIN public.portfolio po
+     ON p.portfolio_id = po.portfolio_id
+ LEFT JOIN public.user v
+     ON j.vendor_id = v.user_id
+ LEFT JOIN public.company vc
+     ON v.company_id = vc.company_id
+ ORDER BY t.scheduled_for asc)
+ SELECT a.user_id, a.task_subject_user,CONCAT('https://app.latchel.com/admin/',CASE a.user_type WHEN 'vendor' THEN 'contractor' WHEN 'tenant' THEN 'resident' WHEN 'pm' THEN 'property-manager' ELSE 'property' END,'/',CASE WHEN a.user_id IS NOT NULL THEN a.user_id ELSE a.property_id END,'/jobs') as relevant_jobs_link, a.order_number, a.job_title, a.job_url, a.job_status, CASE WHEN a.is_emergency = 1 THEN 'emergency' WHEN a.is_urgent = 1 THEN 'urgent' ELSE 'normal' END as severity, 
+ a.task_subject, a.user_type,  a.property_id, a.address1, a.address2, a.city, a.task_due_date  
+ from a
+ ORDER BY min(a.task_due_date) OVER (PARTITION BY a.user_id) asc, a.user_id asc, min(a.task_due_date) OVER (PARTITION BY a.property_id) asc
+```
+
+**26**
+
+```sql
+WITH hr as
+(SELECT GENERATE_series(date_trunc('week',now() at time zone 'America/Los_Angeles'-interval '2 weeks'),now(),'1 hour')::timestamp as hour)
+SELECT hr.hour, ug.name as user_group, count(*)
+FROM hr
+ LEFT JOIN public.task t
+ ON hr.hour = date_trunc('hour',t.completed_at at time zone 'utc' at time zone 'America/Los_Angeles')
+ JOIN public.user_group ug
+ ON t.user_group_id = ug.user_group_id
+WHERE ug.company_id is null
+GROUP BY 1,2
+ORDER BY 1,2
+```
+
+**27**
+
+```sql
+WITH c as (
+SELECT * from public.conversation c
+WHERE c.created_at > now() - interval '6 hours'
+AND (c.ended_at is null OR c.ended_at > now() - interval '1 hour')
+AND c.company_id is null
+AND c.type in ('sms','web')
+AND c.automated = 0),
+first_msg as (
+SELECT c.conversation_id, min(m.message_id) as first_msg_id
+FROM c
+	JOIN public.message m
+	ON c.conversation_id = m.conversation_id
+GROUP BY 1), outbound as (
+SELECT m.message_id from public.message m
+JOIN first_msg 
+	ON m.message_id = first_msg.first_msg_id
+JOIN public.conversation_member cm
+	ON m.conversation_member_id = cm.conversation_member_id
+JOIN public.user u
+	ON cm.user_id = u.user_id
+WHERE u.user_type = 'admin'),
+inbound as (
+SELECT * from first_msg
+WHERE first_msg.first_msg_id not in (SELECT * from outbound)),
+first_reply as (
+SELECT inbound.conversation_id, min(m2.message_id) first_reply_msg_id
+FROM inbound
+	JOIN public.message m
+		ON inbound.first_msg_id = m.message_id
+	JOIN public.message m2
+		ON inbound.conversation_id = m2.conversation_id
+		AND m.conversation_member_id <> m2.conversation_member_id
+GROUP BY 1)
+SELECT u.user_id, u.name, count(*) from public.message m
+	JOIN first_reply
+		ON first_reply.first_reply_msg_id = m.message_id
+		AND m.created_at > now() - interval '1 hour'
+	JOIN public.conversation_member cm
+		ON m.conversation_member_id = cm.conversation_member_id
+	JOIN public.user u
+		ON cm.user_id = u.user_id
+GROUP BY 1,2
+```
+
+**28**
+
+```sql
+SELECT u.user_id, u.name, u.user_added, i.time_action_taken, d.tasks_deferred, c.tasks_created, co.tasks_completed, n.notes_created,
+l.status_updates, m.conversations_replied, j.wos_created, call.calls_placed, sms.sms_sent
+FROM 
+(
+	SELECT DISTINCT u.user_id, u.name, u.created_at at time zone 'utc' at time zone 'America/Los_Angeles' as user_added
+	FROM public.user u
+		JOIN public.user_group_user ugu
+		ON u.user_id = ugu.user_id
+		AND ugu.user_group_id in (134,135) --ops assoc/troubleshooter
+	AND u.user_type = 'admin'
+	AND u.is_Active = 1
+	AND u.role_id in (1,6) -- admin/in-house
+	AND u.user_id <> 1
+	) u
+JOIN (
+select time_action_taken::timestamp from generate_series(date_trunc('day', now() at time zone 'America/Los_Angeles' - interval '2 weeks'), 
+  now() at time zone 'America/Los_Angeles', '1 day'::interval) time_action_taken) i
+  ON 1=1
+LEFT JOIN 
+	 ( SELECT a.user_id, a.time_action_taken, count(*) as tasks_deferred
+	  FROM (
+		SELECT l.user_id, date_trunc('day', l.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') time_action_taken
+		FROM
+		public.task_deferral l
+		WHERE DATE_TRUNC('day',l.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') >= DATE_trunc('day', now() at time zone 'America/Los_Angeles' - interval '2 weeks')
+		) a 
+	 	GROUP BY 1,2) d
+	ON u.user_id = d.user_id
+	AND i.time_action_taken = d.time_action_taken
+LEFT JOIN 
+(SELECT a.creator_id, a.time_action_taken, count(*) as tasks_created
+ FROM (
+	SELECT t.creator_id, date_trunc('day', t.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') as time_action_taken
+	FROM
+	public.task t
+	WHERE DATE_TRUNC('day',t.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') > DATE_trunc('day', now() at time zone 'America/Los_Angeles' - interval '2 weeks')
+	AND t.creator_id <> 1 ) a
+GROUP BY 1, 2) c
+	ON u.user_id = c.creator_id
+	AND i.time_action_taken = c.time_action_taken
+LEFT JOIN 
+(SELECT a.user_id, a.time_action_taken, count(*) as tasks_completed
+ FROM (
+	SELECT t.user_id, date_trunc('day', t.completed_at at time zone 'UTC' at time zone 'America/Los_Angeles')  as time_action_taken
+	FROM
+	public.task t
+	WHERE DATE_TRUNC('day',t.completed_at at time zone 'UTC' at time zone 'America/Los_Angeles') >= DATE_trunc('day', now() at time zone 'America/Los_Angeles' - interval '2 weeks')
+	 ) a
+GROUP BY 1, 2) co
+	ON u.user_id = co.user_id
+	AND i.time_action_taken = co.time_action_taken
+LEFT JOIN 
+(SELECT a.creator_id, a.time_action_taken, count(*) as notes_created
+ FROM (
+	SELECT n.creator_id, date_trunc('day', n.created_at at time zone 'UTC' at time zone 'America/Los_Angeles')  as time_action_taken
+	FROM
+	public.note n
+	WHERE DATE_TRUNC('day',n.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') >= DATE_trunc('day', now() at time zone 'America/Los_Angeles' - interval '2 weeks')
+	 ) a
+GROUP BY 1, 2) n
+	ON u.user_id = n.creator_id
+	AND i.time_action_taken = n.time_action_taken
+LEFT JOIN 
+(SELECT a.creator_id, a.time_action_taken, count(*) as status_updates
+ FROM (
+	SELECT l.creator_id, date_trunc('day', l.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') as time_action_taken
+	FROM
+	public.log l
+	WHERE DATE_TRUNC('day',l.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') >= DATE_trunc('day', now() at time zone 'America/Los_Angeles' - interval '2 weeks')
+	AND l.loggable_type = 'Latchel\State'
+	AND l.creator_id != 1
+	 ) a
+GROUP BY 1, 2) l
+	ON u.user_id = l.creator_id
+	AND i.time_action_taken = l.time_action_taken
+LEFT JOIN 
+(SELECT a.user_id, a.time_action_taken, count(*) as conversations_replied
+ FROM (
+	SELECT c.user_id, date_trunc('day', m.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') as time_action_taken
+	FROM
+	(
+SELECT m.conversation_id, min(m.created_at) as first_msg
+		FROM public.message m
+		WHERE DATE_TRUNC('day',m.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') >= DATE_trunc('day', now() at time zone 'America/Los_Angeles' - interval '2 weeks')
+		GROUP BY 1 ) f
+	JOIN public.conversation c
+	ON f.conversation_id = c.conversation_id
+	JOIN public.message m
+	ON f.first_msg = m.created_at
+	AND f.conversation_id = m.conversation_id
+	JOIN public.conversation_member cm
+	 	ON m.conversation_member_id = cm.conversation_member_id
+	JOIN public.user u
+	 	ON cm.user_id = u.user_id
+	 	AND u.user_type <> 'admin'
+	 --AND c.conversable_id = m.messageable_id --this was the hack
+	 ) a
+GROUP BY 1, 2) m
+	ON u.user_id = m.user_id
+	AND i.time_action_taken = m.time_action_taken
+LEFT JOIN 
+(SELECT a.creator_id, a.time_action_taken, count(*) as wos_created
+ FROM (
+	SELECT j.creator_id, date_trunc('day', j.created_at at time zone 'UTC' at time zone 'America/Los_Angeles')  as time_action_taken
+	FROM
+	public.job j
+	WHERE DATE_TRUNC('day',j.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') >= DATE_trunc('day', now() at time zone 'America/Los_Angeles' - interval '2 weeks')
+	AND j.creator_id <> 1 ) a
+GROUP BY 1, 2) j
+	ON u.user_id = j.creator_id
+	AND i.time_action_taken = j.time_action_taken
+LEFT JOIN 
+(SELECT a.initiated_by_user_id, a.time_action_taken, count(*) as calls_placed
+ FROM (
+	SELECT c.initiated_by_user_id, date_trunc('day', c.created_at at time zone 'UTC' at time zone 'America/Los_Angeles')  as time_action_taken
+	FROM
+	public.call_log c
+	WHERE DATE_TRUNC('day',c.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') >= DATE_trunc('day', now() at time zone 'America/Los_Angeles' - interval '2 weeks')
+	) a
+GROUP BY 1, 2) call
+	ON u.user_id = call.initiated_by_user_id
+	AND i.time_action_taken = call.time_action_taken
+LEFT JOIN (SELECT u.user_id, u.name, date_trunc('day', m.created_at at time zone 'UTC' at time zone 'America/Los_Angeles')  as time_action_taken
+	, count(*) as sms_sent
+	from public.message m
+		   JOIN public.conversation_member cm
+		   	ON m.conversation_member_id = cm.conversation_member_id
+		   AND DATE_TRUNC('day',m.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') >= DATE_trunc('day', now() at time zone 'America/Los_Angeles' - interval '2 weeks')
+	JOIN public.user u
+		ON cm.user_id = u.user_id
+		AND cm.user_id <> 1
+		AND u.user_type = 'admin'
+			GROUP BY 1,2,3) sms
+	ON u.user_id = sms.user_id
+	AND i.time_action_taken = sms.time_action_taken
+```
+
+**29**
+
+```sql
+WITH f as (SELECT c.conversation_id, c.created_at, min(m.message_id) as first_msg from public.conversation c
+JOIN public.message m
+	ON c.conversation_id = m.conversation_id
+	AND date_trunc('quarter',c.created_at at time zone 'utc' at time zone 'America/Los_Angeles') >= date_trunc('quarter',now() at time zone 'America/Los_Angeles'- interval '3 months') 
+	AND c.type = 'web'
+JOIN public.conversation_member cm
+		   ON c.conversation_id = cm.conversation_id
+		   AND m.conversation_member_id = cm.conversation_member_id
+JOIN public.user u
+	ON cm.user_id = u.user_id
+		   AND u.user_type = 'pm'
+GROUP BY 1,2), pmc as 
+(SELECT f.conversation_id, f.created_at
+	FROM public.message m
+	JOIN f
+	ON f.first_msg = m.message_id
+ JOIN public.conversation_member cm
+ 	ON f.conversation_id = cm.conversation_id
+ 	AND m.conversation_member_id = cm.conversation_member_id
+	JOIN public.user u
+		ON cm.user_id = u.user_id
+		AND u.user_type = 'pm'),
+raw as (
+SELECT pmc.conversation_id, pmc.created_at, EXTRACT(EPOCH FROM (min(m.created_at) - pmc.created_at))/60 as reply_minutes
+FROM pmc
+	JOIN public.message m
+		ON pmc.conversation_id = m.conversation_id
+	JOIN public.conversation_member cm
+		ON pmc.conversation_id = cm.conversation_id
+		AND m.conversation_member_id = cm.conversation_member_id
+		JOIN public.user u
+		on cm.user_id = u.user_id
+		AND u.user_type = 'admin'
+AND u.user_id <> 1
+GROUP BY 1,2)
+SELECT  date_trunc('quarter',raw.created_at  at time zone 'utc' at time zone 'America/Los_Angeles') as quarter,
+date_trunc('month',raw.created_at  at time zone 'utc' at time zone 'America/Los_Angeles') as month,
+date_trunc('week',raw.created_at  at time zone 'utc' at time zone 'America/Los_Angeles') as week, date_trunc('day',raw.created_at  at time zone 'utc' at time zone 'America/Los_Angeles') as day, extract('hour' from raw.created_at  at time zone 'utc' at time zone 'America/Los_Angeles') as hour,
+percentile_disc(.5) within group (order by raw.reply_minutes) as p50,
+percentile_disc(.75) within group (order by raw.reply_minutes) as p75,
+percentile_disc(.90) within group (order by raw.reply_minutes) as p90,
+count(*) as conv_count
+FROM raw
+GROUP BY 1,2,3,4,5
+```
+
+**30**
+
+```sql
+WITH f as (SELECT c.conversation_id, c.created_at, min(m.message_id) as first_msg from public.conversation c
+JOIN public.message m
+	ON c.conversation_id = m.conversation_id
+	AND date_trunc('quarter',c.created_at at time zone 'utc' at time zone 'America/Los_Angeles') >= date_trunc('quarter',now() at time zone 'America/Los_Angeles'- interval '3 months') 
+	AND c.type = 'sms'
+	AND c.company_id is null
+GROUP BY 1,2), pmc as 
+(SELECT f.conversation_id, f.created_at
+	FROM public.message m
+	JOIN f
+	ON f.first_msg = m.message_id
+ 	JOIN public.conversation_member cm
+ 		ON m.conversation_member_id = cm.conversation_member_id
+		AND cm.contact_id is not null),
+raw as (
+SELECT pmc.conversation_id, pmc.created_at, EXTRACT(EPOCH FROM (min(m.created_at) - pmc.created_at))/60 as reply_minutes
+FROM pmc
+	JOIN public.message m
+		ON pmc.conversation_id = m.conversation_id
+	JOIN public.conversation_member cm
+		ON m.conversation_member_id = cm.conversation_member_id
+	JOIN public.user u
+		ON cm.user_id = u.user_id
+		AND u.user_type = 'admin'
+		AND u.user_id <> 1
+GROUP BY 1,2)
+SELECT  date_trunc('quarter',raw.created_at  at time zone 'utc' at time zone 'America/Los_Angeles') as quarter,
+date_trunc('month',raw.created_at  at time zone 'utc' at time zone 'America/Los_Angeles') as month,
+date_trunc('week',raw.created_at  at time zone 'utc' at time zone 'America/Los_Angeles') as week, date_trunc('day',raw.created_at  at time zone 'utc' at time zone 'America/Los_Angeles') as day, extract('hour' from raw.created_at  at time zone 'utc' at time zone 'America/Los_Angeles') as hour,
+percentile_disc(.5) within group (order by raw.reply_minutes) as p50,
+percentile_disc(.75) within group (order by raw.reply_minutes) as p75,
+percentile_disc(.90) within group (order by raw.reply_minutes) as p90,
+count(*) as conv_count
+FROM raw
+GROUP BY 1,2,3,4,5
+```
+
+**31**
+
+```sql
+SELECT a.*, b.count as count_today
+FROM (
+SELECT date_part('hour',(t.created_at AT TIME ZONE 'UTC') AT TIME ZONE 'America/Los_Angeles') as hour, count(*), (COUNT(*) / (SUM(COUNT(*)) OVER() ))*100 as task_pct
+FROM public.task t
+	JOIN public.user_group g
+	ON t.user_group_id = g.user_group_id
+	AND g.company_id is null
+	AND t.created_at > now()- 3*interval '1 month'
+	GROUP BY 1																												  ) a
+LEFT JOIN
+		( SELECT date_part('hour',(t.created_at AT TIME ZONE 'UTC') AT TIME ZONE 'America/Los_Angeles') as hour, count(*)
+		FROM public.task t
+		JOIN public.user_group g
+		ON t.user_group_id = g.user_group_id
+		AND g.company_id is null
+		AND date_trunc('day',(t.created_at AT TIME ZONE 'UTC') AT TIME ZONE 'America/Los_Angeles') = 
+				date_trunc('day',now() AT TIME ZONE 'America/Los_Angeles')
+		GROUP BY 1) b
+on a.hour = b.hour																										   
+ORDER BY 1
+```
+
+**32**
+
+```sql
+SELECT a.*, b.count as count_today
+FROM (
+SELECT date_trunc('hour',(t.created_at AT TIME ZONE 'UTC') AT TIME ZONE 'America/Los_Angeles') as hour, count(*), (COUNT(*) / (SUM(COUNT(*)) OVER() ))*100 as task_pct
+FROM public.task t
+        JOIN public.user_group g
+        ON t.user_group_id = g.user_group_id
+        AND g.company_id is null
+        AND t.created_at > now()- 3*interval '1 month'
+        GROUP BY 1                                                                                                                                                                                                                                  ) a
+LEFT JOIN
+                ( SELECT date_trunc('hour',(t.created_at AT TIME ZONE 'UTC') AT TIME ZONE 'America/Los_Angeles') as hour, count(*)
+                FROM public.task t
+                JOIN public.user_group g
+                ON t.user_group_id = g.user_group_id
+                AND g.company_id is null
+                AND date_trunc('day',(t.created_at AT TIME ZONE 'UTC') AT TIME ZONE 'America/Los_Angeles') = 
+                                date_trunc('day',now() AT TIME ZONE 'America/Los_Angeles')
+                GROUP BY 1) b
+on a.hour = b.hour
+```
+
+**33**
+
+```sql
+SELECT *
+FROM action_set_instance 
+LEFT JOIN action_set ON action_set.action_set_id = action_set_instance.action_set_id
+WHERE relation_id = (SELECT job_id FROM job WHERE slug = 'JOB SLUG HERE') /* relation_id should equal a job_id, i just added the ability to search by slug here since #tech-escalations usually only has the slug*/
+ORDER BY action_set_instance.started_at ASC;
+```
+
+**34**
+
+```sql
+SELECT * 
+FROM action_instance 
+LEFT JOIN action ON action_instance.action_id = action.action_id
+WHERE action_set_instance_id = /*action_set_instance_id here*/
+ORDER BY action_instance.created_at ASC;
+```
+
+**35**
+
+```sql
+(SELECT CONCAT(') as job_url, t.completed_at - t.scheduled_for as age, u.name as agent, ug.name as user_group, t.subject as task_title, 'Oldest Latchel Task' as category
+FROM public.task t
+JOIN public.user u
+	ON t.user_id = u.user_id
+	AND u.user_type = 'admin'
+JOIN public.user_group ug
+	ON t.user_group_id = ug.user_group_id
+	AND ug.company_id is null 
+JOIN public.job j
+	ON t.relation_id = j.job_id
+	AND t.relation_type = 'Latchel\Job'
+WHERE t.completed_at > now() - interval '7 days'
+ORDER BY 2 desc
+limit 3)
+UNION
+(
+SELECT CONCAT(') as job_url, t.completed_at - t.scheduled_for as age, u.name as agent, CONCAT(ug.name,'PM Task') as user_group, t.subject as task_title, 'Oldest Task Overall' as category
+FROM public.task t
+JOIN public.user u
+	ON t.user_id = u.user_id
+	AND u.user_type = 'admin'
+JOIN public.job j
+	ON t.relation_id = j.job_id
+	AND t.relation_type = 'Latchel\Job'
+LEFT JOIN public.user_group ug
+	ON t.user_group_id = ug.user_group_id
+WHERE t.completed_at > now() - interval '7 days'
+ORDER BY 2 desc
+limit 3)
+ORDER BY 2 desc
+```
+
+**36**
+
+```sql
+WITH a as  (SELECT u.user_id, u.name, i.time_action_taken, d.tasks_deferred, c.tasks_created, co.tasks_completed, n.notes_created,
+l.status_updates, m.conversations_replied, j.wos_created, call.calls_placed/*, sms.sms_sent*/
+FROM 
+(
+	SELECT DISTINCT u.user_id, u.name 
+	FROM public.user u
+		JOIN public.user_group_user ugu
+		ON u.user_id = ugu.user_id
+	AND u.user_type = 'admin'
+	AND u.is_Active = 1
+	AND u.role_id in (1,6) -- admin/in-house
+	AND u.user_id <> 1
+	) u
+JOIN (
+select time_action_taken::timestamp from generate_series(date_trunc('week', now() at time zone 'America/Los_Angeles' - interval '7 weeks'), 
+  now() at time zone 'America/Los_Angeles', '1 week'::interval) time_action_taken) i
+  ON 1=1
+LEFT JOIN 
+	 ( SELECT a.user_id, a.time_action_taken, count(*) as tasks_deferred
+	  FROM (
+		SELECT l.user_id, date_trunc('week', l.created_at at time zone 'UTC' at time zone 'America/Los_Angeles')  as time_action_taken
+		FROM
+		public.task_deferral l
+		WHERE DATE_TRUNC('week',l.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') >= DATE_trunc('week', now() at time zone 'America/Los_Angeles' - interval '7 weeks')
+		) a 
+	 	GROUP BY 1,2) d
+	ON u.user_id = d.user_id
+	AND i.time_action_taken = d.time_action_taken
+LEFT JOIN 
+(SELECT a.creator_id, a.time_action_taken, count(*) as tasks_created
+ FROM (
+	SELECT t.creator_id, date_trunc('week', t.created_at at time zone 'UTC' at time zone 'America/Los_Angeles')  as time_action_taken
+	FROM
+	public.task t
+	WHERE DATE_TRUNC('week',t.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') > DATE_trunc('week', now() at time zone 'America/Los_Angeles' - interval '7 weeks')
+	AND t.creator_id <> 1 ) a
+GROUP BY 1, 2) c
+	ON u.user_id = c.creator_id
+	AND i.time_action_taken = c.time_action_taken
+LEFT JOIN 
+(SELECT a.user_id, a.time_action_taken, count(*) as tasks_completed
+ FROM (
+	SELECT t.user_id, date_trunc('week', t.completed_at at time zone 'UTC' at time zone 'America/Los_Angeles') as time_action_taken
+	FROM
+	public.task t
+	WHERE DATE_TRUNC('week',t.completed_at at time zone 'UTC' at time zone 'America/Los_Angeles') >= DATE_trunc('week', now() at time zone 'America/Los_Angeles' - interval '7 weeks')
+	 ) a
+GROUP BY 1, 2) co
+	ON u.user_id = co.user_id
+	AND i.time_action_taken = co.time_action_taken
+LEFT JOIN 
+(SELECT a.creator_id, a.time_action_taken, count(*) as notes_created
+ FROM (
+	SELECT n.creator_id, date_trunc('week', n.created_at at time zone 'UTC' at time zone 'America/Los_Angeles')  as time_action_taken
+	FROM
+	public.note n
+	WHERE DATE_TRUNC('week',n.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') >= DATE_trunc('week', now() at time zone 'America/Los_Angeles' - interval '7 weeks')
+	 ) a
+GROUP BY 1, 2) n
+	ON u.user_id = n.creator_id
+	AND i.time_action_taken = n.time_action_taken
+LEFT JOIN 
+(SELECT a.creator_id, a.time_action_taken, count(*) as status_updates
+ FROM (
+	SELECT l.creator_id, date_trunc('week', l.created_at at time zone 'UTC' at time zone 'America/Los_Angeles')  as time_action_taken
+	FROM
+	public.log l
+	WHERE DATE_TRUNC('week',l.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') >= DATE_trunc('week', now() at time zone 'America/Los_Angeles' - interval '7 weeks')
+	AND l.loggable_type = 'Latchel\State'
+	AND l.creator_id != 1
+	 ) a
+GROUP BY 1, 2) l
+	ON u.user_id = l.creator_id
+	AND i.time_action_taken = l.time_action_taken
+LEFT JOIN 
+(SELECT a.user_id, a.time_action_taken, count(*) as conversations_replied
+ FROM (
+	SELECT c.user_id, date_trunc('week', m.created_at at time zone 'UTC' at time zone 'America/Los_Angeles')  as time_action_taken
+	FROM
+	(
+SELECT m.conversation_id, min(m.created_at) as first_msg
+		FROM public.message m
+		WHERE DATE_TRUNC('week',m.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') >= DATE_trunc('week', now() at time zone 'America/Los_Angeles' - interval '7 weeks')
+		GROUP BY 1 ) f
+	JOIN public.conversation c
+	ON f.conversation_id = c.conversation_id
+	JOIN public.message m
+	ON f.first_msg = m.created_at
+	AND f.conversation_id = m.conversation_id
+	JOIN public.conversation_member cm
+	 	ON m.conversation_member_id = cm.conversation_member_id
+	JOIN public.user u
+	 	ON cm.user_id = u.user_id
+	 	AND u.user_type <> 'admin'
+	 ) a
+GROUP BY 1, 2) m
+	ON u.user_id = m.user_id
+	AND i.time_action_taken = m.time_action_taken
+LEFT JOIN 
+(SELECT a.creator_id, a.time_action_taken, count(*) as wos_created
+ FROM (
+	SELECT j.creator_id, date_trunc('week', j.created_at at time zone 'UTC' at time zone 'America/Los_Angeles')  as time_action_taken
+	FROM
+	public.job j
+	WHERE DATE_TRUNC('week',j.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') >= DATE_trunc('week', now() at time zone 'America/Los_Angeles' - interval '7 weeks')
+	AND j.creator_id <> 1 ) a
+GROUP BY 1, 2) j
+	ON u.user_id = j.creator_id
+	AND i.time_action_taken = j.time_action_taken
+LEFT JOIN 
+(SELECT a.initiated_by_user_id, a.time_action_taken, count(*) as calls_placed
+ FROM (
+	SELECT c.initiated_by_user_id, date_trunc('week', c.created_at at time zone 'UTC' at time zone 'America/Los_Angeles')  as time_action_taken
+	FROM
+	public.call_log c
+	WHERE DATE_TRUNC('week',c.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') >= DATE_trunc('week', now() at time zone 'America/Los_Angeles' - interval '7 weeks')
+	) a
+GROUP BY 1, 2) call
+	ON u.user_id = call.initiated_by_user_id
+	AND i.time_action_taken = call.time_action_taken
+/*LEFT JOIN (SELECT u.user_id, u.name, date_trunc('day', m.created_at at time zone 'UTC' at time zone 'America/Los_Angeles')  as time_action_taken
+	, count(*) as sms_sent
+	from public.message m
+	JOIN public.user u
+		ON m.messageable_id = u.user_id
+		AND m.messageable_type = 'Latchel\User'
+		AND m.messageable_id <> 1
+		AND u.user_type = 'admin'
+		AND DATE_TRUNC('day',m.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') >= DATE_trunc('day', now() at time zone 'America/Los_Angeles' - interval '2 weeks')
+	GROUP BY 1,2,3) sms
+	ON u.user_id = sms.user_id
+	AND i.time_action_taken = sms.time_action_taken */)
+, b as (
+SELECT ug.user_group_id, ug.name as user_group, a.user_id, a.name, SUM(COALESCE(a.tasks_completed,0)) + SUM(COALESCE(a.status_updates,0)) + SUM(COALESCE(a.wos_created,0)) as effective_actions_last_7weeks,
+SUM(COALESCE(a.tasks_completed,0)) + SUM(COALESCE(a.status_updates,0)) + SUM(COALESCE(a.wos_created,0))+SUM(COALESCE(a.tasks_created,0))+
+SUM(COALESCE(a.notes_created,0))+SUM(COALESCE(a.calls_placed,0))+SUM(COALESCE(a.conversations_replied,0)) as measured_actions,
+SUM(CASE WHEN a.time_action_taken = date_trunc('week', now() at time zone 'America/Los_Angeles') THEN COALESCE(a.tasks_completed,0) ELSE 0 END ) + SUM(CASE WHEN a.time_action_taken = date_trunc('week', now() at time zone 'America/Los_Angeles') THEN COALESCE(a.status_updates,0) ELSE 0 END) + SUM(CASE WHEN a.time_action_taken = date_trunc('week', now() at time zone 'America/Los_Angeles') THEN COALESCE(a.wos_created,0) ELSE 0 END) as effective_actions_this_week,
+SUM(CASE WHEN a.time_action_taken = (date_trunc('week', now() at time zone 'America/Los_Angeles') - interval '1 week') THEN COALESCE(a.tasks_completed,0) ELSE 0 END ) + SUM(CASE WHEN a.time_action_taken = (date_trunc('week', now() at time zone 'America/Los_Angeles') - interval '1 week') THEN COALESCE(a.status_updates,0) ELSE 0 END) + SUM(CASE WHEN a.time_action_taken = (date_trunc('week', now() at time zone 'America/Los_Angeles') - interval '1 week') THEN COALESCE(a.wos_created,0) ELSE 0 END) as effective_actions_last_weeks,
+SUM(CASE WHEN a.time_action_taken = (date_trunc('week', now() at time zone 'America/Los_Angeles') - 2*interval '1 week') THEN COALESCE(a.tasks_completed,0) ELSE 0 END ) + SUM(CASE WHEN a.time_action_taken = (date_trunc('week', now() at time zone 'America/Los_Angeles') - 2*interval '1 week') THEN COALESCE(a.status_updates,0) ELSE 0 END) + SUM(CASE WHEN a.time_action_taken = (date_trunc('week', now() at time zone 'America/Los_Angeles') - 2*interval '1 week') THEN COALESCE(a.wos_created,0) ELSE 0 END) as effective_actions_2weeksago,
+SUM(CASE WHEN a.time_action_taken = (date_trunc('week', now() at time zone 'America/Los_Angeles') - 3*interval '1 week') THEN COALESCE(a.tasks_completed,0) ELSE 0 END ) + SUM(CASE WHEN a.time_action_taken = (date_trunc('week', now() at time zone 'America/Los_Angeles') - 3*interval '1 week') THEN COALESCE(a.status_updates,0) ELSE 0 END) + SUM(CASE WHEN a.time_action_taken = (date_trunc('week', now() at time zone 'America/Los_Angeles') - 3*interval '1 week') THEN COALESCE(a.wos_created,0) ELSE 0 END) as effective_actions_3weeksago,
+SUM(CASE WHEN a.time_action_taken = (date_trunc('week', now() at time zone 'America/Los_Angeles') - 4*interval '1 week') THEN COALESCE(a.tasks_completed,0) ELSE 0 END ) + SUM(CASE WHEN a.time_action_taken = (date_trunc('week', now() at time zone 'America/Los_Angeles') - 4*interval '1 week') THEN COALESCE(a.status_updates,0) ELSE 0 END) + SUM(CASE WHEN a.time_action_taken = (date_trunc('week', now() at time zone 'America/Los_Angeles') - 4*interval '1 week') THEN COALESCE(a.wos_created,0) ELSE 0 END) as effective_actions_4weeksago,
+SUM(CASE WHEN a.time_action_taken = (date_trunc('week', now() at time zone 'America/Los_Angeles') - 5*interval '1 week') THEN COALESCE(a.tasks_completed,0) ELSE 0 END ) + SUM(CASE WHEN a.time_action_taken = (date_trunc('week', now() at time zone 'America/Los_Angeles') - 5*interval '1 week') THEN COALESCE(a.status_updates,0) ELSE 0 END) + SUM(CASE WHEN a.time_action_taken = (date_trunc('week', now() at time zone 'America/Los_Angeles') - 5*interval '1 week') THEN COALESCE(a.wos_created,0) ELSE 0 END) as effective_actions_5weeksago,
+SUM(CASE WHEN a.time_action_taken = (date_trunc('week', now() at time zone 'America/Los_Angeles') - 6*interval '1 week') THEN COALESCE(a.tasks_completed,0) ELSE 0 END ) + SUM(CASE WHEN a.time_action_taken = (date_trunc('week', now() at time zone 'America/Los_Angeles') - 6*interval '1 week') THEN COALESCE(a.status_updates,0) ELSE 0 END) + SUM(CASE WHEN a.time_action_taken = (date_trunc('week', now() at time zone 'America/Los_Angeles') - 6*interval '1 week') THEN COALESCE(a.wos_created,0) ELSE 0 END) as effective_actions_6weeksago,
+SUM(CASE WHEN a.time_action_taken = (date_trunc('week', now() at time zone 'America/Los_Angeles') - 7*interval '1 week') THEN COALESCE(a.tasks_completed,0) ELSE 0 END ) + SUM(CASE WHEN a.time_action_taken = (date_trunc('week', now() at time zone 'America/Los_Angeles') - 7*interval '1 week') THEN COALESCE(a.status_updates,0) ELSE 0 END) + SUM(CASE WHEN a.time_action_taken = (date_trunc('week', now() at time zone 'America/Los_Angeles') - 7*interval '1 week') THEN COALESCE(a.wos_created,0) ELSE 0 END) as effective_actions_7weeksago
+FROM a
+JOIN public.user_group_user ugu
+	ON a.user_id = ugu.user_id
+	AND ugu.user_group_id in (131,133,134,135,1261,1381) -- important user groups
+JOIN public.user_group ug
+	ON ugu.user_group_id = ug.user_group_id
+GROUP BY 1,2,3,4)
+SELECT b.*, SUM(b.effective_actions_last_7weeks) OVER (partition by b.user_group_id) as total_group_actions
+FROM b
+ORDER BY 15 desc, 5 desc
+```
+
+**37**
+
+```sql
+SELECT t.task_id, count(*) as deferrals, t.created_at, t.subject, CONCAT('', j.slug) as job_url from public.task t
+	JOIN public.task_deferral td
+		ON t.task_id = td.task_id
+		AND t.is_resolved = 0
+	JOIN public.job j
+		ON t.relation_id = j.job_id
+		AND t.relation_type = 'Latchel\Job'
+	LEFT JOIN public.user_group ug
+		ON t.user_group_id = ug.user_group_id
+WHERE ug.company_id is null
+GROUP BY 1,3,4,5
+HAVING COUNT(*) >2
+ORDER BY 2 desc
+```
+
+**38**
+
+```sql
+SELECT date_trunc('week',j.created_at + interval '1 day')-interval '1 day' as week,
+EXTRACT(EPOCH FROM l.created_at - j.created_at)/(60*60) as hrs_to_sched, j.name as job_title, CONCAT('', j.slug) as job_url
+FROM public.job j
+        join (SELECT l.relation_id, min(l.created_at) as created_at
+                  FROM public.log l
+                WHERE l.loggable_type = 'Latchel\State'
+                        AND l.loggable_id = 4
+                  AND l.relation_type = 'Latchel\Job'
+                GROUP BY l.relation_id  ) l
+                ON j.job_id = l.relation_id
+                AND j.is_emergency = 1
+                        LEFT JOIN public.log dl
+                                ON l.relation_id = dl.relation_id
+                                AND dl.relation_type = 'Latchel\Job'
+                                AND lower(dl.subject) like '%dispatch defer%'
+WHERE date_trunc('week',j.created_at) >= date_trunc('week',now() - 12*interval '1 week')
+AND dl.log_id IS NULL
+ORDER BY 1 desc, 2 desc
+```
+
+**39**
+
+```sql
+WITH raw as (
+SELECT j.job_id, j.vendor_id, v.company_id as vendor_company_id, l.created_at, MIN(l2.created_at) as min_scheduled from public.log l
+	JOIN public.job j
+		ON l.relation_id = j.job_id
+		AND l.relation_type = 'Latchel\Job'
+	JOIN public.user u
+		ON j.pm_id = u.user_id
+		--AND u.company_id = 12196
+	JOIN public.user vu
+		ON j.vendor_id = vu.user_id
+	JOIN public.company v
+		ON vu.company_id = v.company_id
+	LEFT JOIN public.vendor_pm_access vpm
+		ON v.company_id = vpm.vendor_company_id
+		AND vpm.pm_company_id = u.company_id
+	LEFT JOIN public.log l2
+		ON l.relation_id = l2.relation_id
+		AND l2.relation_type = 'Latchel\Job'
+		AND l2.type = 'state'
+		AND l2.loggable_id = 4
+		AND l.created_at < l2.created_at
+WHERE l.type = 'state'
+AND l.loggable_id = 2
+AND date_trunc('quarter',l.created_at at time zone 'utc' at time zone 'America/Los_Angeles') >= date_trunc('quarter',now() at time zone 'America/Los_Angeles'- interval '3 months')
+AND vpm.pm_company_id is null
+AND j.state_id NOT IN (14,19,24)
+GROUP BY 1,2,3,4 )
+SELECT date_trunc('week', raw.created_at) as week, EXTRACT(EPOCH FROM coalesce(raw.min_scheduled,now())-raw.created_at)/(60*60*24) as duration_days, CASE when raw.min_scheduled is null then 1 else 0 end as unscheduled, j.name as job_title, CONCAT('https://app.latchel.com/admin/job/', j.slug) as job_url, j.created_at, c.name as vendor_co
+from raw
+JOIN public.job j
+	ON raw.job_id = j.job_id
+JOIN public.company c
+	ON raw.vendor_Company_id = c.company_id
+ORDER BY 1 desc, 2 desc
+```
+
+**40**
+
+```sql
+SELECT date_trunc('day', l.created_at), right(l.subject, length(l.subject) - position('over the phone' in l.subject) - 13), count(*) from public.log l
+	WHERE l.subject like '% was able to troubleshoot the request over the phone%'
+	GROUP BY 1,2
+	ORDER BY 1 desc, 2 desc
+	LIMIT 1000
+```
+
+**41**
+
+```sql
+SELECT date_trunc('week',j.created_at + interval '1 day')-interval '1 day' as week,
+EXTRACT(EPOCH FROM l.created_at - j.created_at)/(60*60) as hrs_to_sched, j.name as job_title, CONCAT('', j.slug) as job_url
+FROM public.job j
+        join (SELECT l.relation_id, min(l.created_at) as created_at
+                  FROM public.log l
+                WHERE l.loggable_type = 'Latchel\State'
+                        AND l.loggable_id = 4
+                  AND l.relation_type = 'Latchel\Job'
+                GROUP BY l.relation_id  ) l
+                ON j.job_id = l.relation_id
+                AND j.is_emergency = 1
+                        LEFT JOIN public.log dl
+                                ON l.relation_id = dl.relation_id
+                                AND dl.relation_type = 'Latchel\Job'
+                                AND lower(dl.subject) like '%dispatch defer%'
+WHERE date_trunc('week',j.created_at) >= date_trunc('week',now() - 12*interval '1 week')
+AND dl.log_id IS NULL
+ORDER BY 1 desc, 2 desc
+```
+
+**42**
+
+```sql
+WITH raw as (
+SELECT v.company_id, v.name, l.created_at, j.job_id from public.log l
+	JOIN public.job j
+		ON l.relation_type = 'Latchel\Job'
+		AND l.relation_id = j.job_id
+	JOIN public.user u
+		ON j.pm_id = u.user_id
+		--AND u.company_id = 12196
+	JOIN public.user vu
+		ON j.vendor_id = vu.user_id
+	JOIN public.company v
+		ON vu.company_id = v.company_id
+	LEFT JOIN public.vendor_pm_access vpm
+		ON v.company_id = vpm.vendor_company_id
+		AND vpm.pm_company_id = u.company_id
+WHERE l.subject = 'Task Created: Resident Says Issue is Not Resolved'
+	AND vpm.pm_company_id is null
+	AND date_trunc('quarter',l.created_at at time zone 'utc' at time zone 'America/Los_Angeles') >= date_trunc('quarter',now() at time zone 'America/Los_Angeles'- interval '3 months') 
+)
+SELECT raw.*, concat('', j.slug) as job_url FROM raw
+JOIN public.job j
+	ON raw.job_id = j.job_id
+ORDER BY 3 desc
+```
+
+**43**
+
+```sql
+WITH raw as (
+SELECT j.job_id, j.vendor_id, v.company_id as vendor_company_id, l.created_at, MIN(l2.created_at) as min_scheduled from public.log l
+	JOIN public.job j
+		ON l.relation_id = j.job_id
+		AND l.relation_type = 'Latchel\Job'
+	JOIN public.user u
+		ON j.pm_id = u.user_id
+		--AND u.company_id = 12196
+	JOIN public.user vu
+		ON j.vendor_id = vu.user_id
+	JOIN public.company v
+		ON vu.company_id = v.company_id
+	LEFT JOIN public.vendor_pm_access vpm
+		ON v.company_id = vpm.vendor_company_id
+		AND vpm.pm_company_id = u.company_id
+	LEFT JOIN public.log l2
+		ON l.relation_id = l2.relation_id
+		AND l2.relation_type = 'Latchel\Job'
+		AND l2.type = 'state'
+		AND l2.loggable_id = 4
+		AND l.created_at < l2.created_at
+WHERE l.type = 'state'
+AND l.loggable_id = 2
+AND date_trunc('quarter',l.created_at at time zone 'utc' at time zone 'America/Los_Angeles') >= date_trunc('quarter',now() at time zone 'America/Los_Angeles'- interval '3 months')
+AND vpm.pm_company_id is null
+AND j.state_id NOT IN (14,19,24)
+GROUP BY 1,2,3,4 )
+SELECT date_trunc('week', raw.created_at) as week, EXTRACT(EPOCH FROM coalesce(raw.min_scheduled,now())-raw.created_at)/(60*60*24) as duration_days, CASE when raw.min_scheduled is null then 1 else 0 end as unscheduled, j.name as job_title, CONCAT('', j.slug) as job_url, j.created_at, c.name as vendor_co
+from raw
+JOIN public.job j
+	ON raw.job_id = j.job_id
+JOIN public.company c
+	ON raw.vendor_Company_id = c.company_id
+ORDER BY 1 desc, 2 desc
+```
+
+**44**
+
+```sql
+WITH f as (SELECT c.conversation_id, c.created_at, min(m.message_id) as first_msg from public.conversation c
+JOIN public.message m
+ON c.conversation_id = m.conversation_id
+AND date_trunc('week',c.created_at at time zone 'utc' at time zone 'America/Los_Angeles') >= date_trunc('week',now() at time zone 'America/Los_Angeles'- interval '2 weeks')
+AND c.type = 'sms'
+AND c.company_id is null
+GROUP BY 1,2), pmc as
+(SELECT f.conversation_id, f.created_at, COALESCE(u.user_type, 'unknown') as contact_type
+FROM public.message m
+JOIN f
+ON f.first_msg = m.message_id
+JOIN public.conversation_member cm
+ON m.conversation_member_id = cm.conversation_member_id
+AND cm.contact_id is not null
+LEFT JOIN public.user u
+ON cm.user_id = u.user_id),
+raw as (
+SELECT pmc.conversation_id, pmc.created_at  at time zone 'utc' at time zone 'America/Los_Angeles' as created_at_pacific, u.user_id, u.name as latchel_user, pmc.contact_type, EXTRACT(EPOCH FROM (min(m.created_at) - pmc.created_at))/60 as reply_minutes
+, percent_rank() over (PARTITION BY date_trunc('week',pmc.created_at at time zone 'utc' at time zone 'America/Los_Angeles') ORDER BY EXTRACT(EPOCH FROM (min(m.created_at) - pmc.created_at))/60) as pctile
+FROM pmc
+JOIN public.message m
+ON pmc.conversation_id = m.conversation_id
+JOIN public.conversation_member cm
+ON m.conversation_member_id = cm.conversation_member_id
+JOIN public.user u
+ON cm.user_id = u.user_id
+AND u.user_type = 'admin'
+AND u.user_id <> 1
+GROUP BY 1,2,3,4,5, pmc.created_at)
+SELECT  raw.*, extract(epoch from c.ended_at - c.created_at)/60 as duration_min
+FROM raw
+JOIN public.conversation c
+ON raw.conversation_id = c.conversation_id
+```
+
+**45**
+
+```sql
+WITH f as (SELECT c.conversation_id, c.created_at, min(m.message_id) as first_msg from public.conversation c
+JOIN public.message m
+ON c.conversation_id = m.conversation_id
+AND date_trunc('week',c.created_at at time zone 'utc' at time zone 'America/Los_Angeles') >= date_trunc('week',now() at time zone 'America/Los_Angeles'- interval '2 weeks')
+AND c.type = 'web'
+JOIN public.conversation_member cm
+ON c.conversation_id = cm.conversation_id
+AND m.conversation_member_id = cm.conversation_member_id
+JOIN public.user u
+ON cm.user_id = u.user_id
+AND u.user_type = 'pm'
+GROUP BY 1,2), pmc as
+(SELECT f.conversation_id, f.created_at, COALESCE(u.user_type, 'unknown') as contact_type
+FROM public.message m
+JOIN f
+ON f.first_msg = m.message_id
+JOIN public.conversation_member cm
+ON m.conversation_member_id = cm.conversation_member_id
+JOIN public.user u
+ON cm.user_id = u.user_id),
+raw as (
+SELECT pmc.conversation_id, pmc.created_at  at time zone 'utc' at time zone 'America/Los_Angeles' as created_at_pacific, u.user_id, u.name as latchel_user, pmc.contact_type, EXTRACT(EPOCH FROM (min(m.created_at) - pmc.created_at))/60 as reply_minutes
+, percent_rank() over (PARTITION BY date_trunc('week',pmc.created_at at time zone 'utc' at time zone 'America/Los_Angeles') ORDER BY EXTRACT(EPOCH FROM (min(m.created_at) - pmc.created_at))/60) as pctile
+FROM pmc
+JOIN public.message m
+ON pmc.conversation_id = m.conversation_id
+JOIN public.conversation_member cm
+ON m.conversation_member_id = cm.conversation_member_id
+JOIN public.user u
+ON cm.user_id = u.user_id
+AND u.user_type = 'admin'
+AND u.user_id <> 1
+GROUP BY 1,2,3,4,5, pmc.created_at)
+SELECT  raw.*, extract(epoch from c.ended_at - c.created_at)/60 as duration_min
+FROM raw
+JOIN public.conversation c
+ON raw.conversation_id = c.conversation_id
+```
+
+**46**
+
+```sql
+WITH z as
+(SELECT DISTINCT p.portfolio_id, left(p.zip,5) as zip
+from public.property p
+	JoiN public.portfolio pp
+		ON p.portfolio_id = pp.portfolio_id
+WHERE p.pm_company_id = 12196
+AND p.is_active = 1
+ORDER BY 1,2)
+SELECT DISTINCT c.company_id as vendor_company_id, c.name, z.zip from public.vendor_relation vr
+JOIN z
+	ON vr.relation_id = z.portfolio_id
+	AND vr.relation_type = 'Latchel\Portfolio'
+JOIN public.company c
+	ON vr.vendor_company_id = c.company_id
+```
+
+**47**
+
+```sql
+with pkg as (
+SELECT distinct j.job_id, p.property_id, p.portfolio_id, p.pm_company_id,
+COALESCE(sp.package_id, spo.package_id, sc.package_id) as package_id
+FROM public.property p
+	JOIN public.job j
+		ON p.property_id = j.property_id
+		AND j.created_at > now() - interval '30 days'
+LEFT JOIN public.subscription sp
+	ON p.property_id = sp.relation_id
+	AND sp.relation_type = 'Latchel\Property'
+	AND sp.ended_at is null
+	AND sp.started_at is not null
+LEFT JOIN public.subscription spo
+	ON p.portfolio_id = spo.relation_id
+	AND spo.relation_type = 'Latchel\Portfolio'
+	AND spo.ended_at is null
+	AND spo.started_at is not null
+LEFT JOIN public.subscription sc
+	ON p.pm_company_id = sc.relation_id
+	AND sc.relation_type = 'Latchel\Company'
+	AND sc.ended_at is null
+	AND sc.started_at is not null
+WHERE p.is_active = 1
+AND p.pm_company_id not in (2,557) -- dummy/test companies
+) 
+SELECT pkg.pm_company_id,c.name,
+SUM(CASE WHEN pp.product_id in (1,2) THEN 1 ELSE 0 END ) AS premium,
+SUM(CASE WHEN pp.product_id in (3,4) THEN 1 ELSE 0 END) AS emergency,
+SUM(CASE WHEN pp.product_id in (5) THEN 1 ELSE 0 END) AS basic,
+SUM(CASE WHEN pp.product_id in (6,7) THEN 1 ELSE 0 END) AS HA,
+SUM(CASE WHEN pp.product_id in (8) THEN 1 ELSE 0 END) AS SaaS
+FROM pkg
+JOIN public.package_product pp
+ON pkg.package_id = pp.package_id
+AND pp.started_at <= now()
+AND (pp.ended_at is null or pp.ended_at >= now())
+JOIN public.company c
+	ON pkg.pm_company_id = c.company_id
+	AND c.is_active = 1 -- i don't love having this, since we shouldn't have deactivated companies with active subscriptions
+GROUP BY 1,2
+```
+
+**48**
+
+```sql
+SELECT distinct j.job_id, p.property_id, p.portfolio_id, p.pm_company_id,
+COALESCE(sp.package_id, spo.package_id, sc.package_id) as package_id
+FROM public.property p
+	JOIN public.job j
+		ON p.property_id = j.property_id
+		AND j.updated_at > now() - interval '30 days'
+		AND j.state_id not in (14,16,17,26,24) -- terminal states + diagnosing issue
+LEFT JOIN public.subscription sp
+	ON p.property_id = sp.relation_id
+	AND sp.relation_type = 'Latchel\Property'
+	AND sp.ended_at is null
+	AND sp.started_at is not null
+LEFT JOIN public.subscription spo
+	ON p.portfolio_id = spo.relation_id
+	AND spo.relation_type = 'Latchel\Portfolio'
+	AND spo.ended_at is null
+	AND spo.started_at is not null
+LEFT JOIN public.subscription sc
+	ON p.pm_company_id = sc.relation_id
+	AND sc.relation_type = 'Latchel\Company'
+	AND sc.ended_at is null
+	AND sc.started_at is not null
+WHERE p.is_active = 1
+AND p.pm_company_id not in (2,557) -- dummy/test companies
+) 
+SELECT pkg.pm_company_id,c.name,
+SUM(CASE WHEN pp.product_id in (1,2) THEN 1 ELSE 0 END ) AS premium,
+SUM(CASE WHEN pp.product_id in (3,4) THEN 1 ELSE 0 END) AS emergency,
+SUM(CASE WHEN pp.product_id in (5) THEN 1 ELSE 0 END) AS basic,
+SUM(CASE WHEN pp.product_id in (6,7) THEN 1 ELSE 0 END) AS HA,
+SUM(CASE WHEN pp.product_id in (8) THEN 1 ELSE 0 END) AS SaaS
+FROM pkg
+JOIN public.package_product pp
+ON pkg.package_id = pp.package_id
+AND pp.started_at <= now()
+AND (pp.ended_at is null or pp.ended_at >= now())
+JOIN public.company c
+	ON pkg.pm_company_id = c.company_id
+	AND c.is_active = 1 -- i don't love having this, since we shouldn't have deactivated companies with active subscriptions
+GROUP BY 1,2
+```
+
+**49**
+
+```sql
+with pkg as (
+SELECT distinct j.job_id, p.property_id, p.portfolio_id, p.pm_company_id,
+COALESCE(sp.package_id, spo.package_id, sc.package_id) as package_id
+FROM public.property p
+	JOIN public.job j
+		ON p.property_id = j.property_id
+		AND j.updated_at > now() - interval '30 days'
+		AND j.state_id not in (14,16,17,26,24) -- terminal states + diagnosing issue
+		AND j.created_at < now() - interval '2 weeks'
+LEFT JOIN public.subscription sp
+	ON p.property_id = sp.relation_id
+	AND sp.relation_type = 'Latchel\Property'
+	AND sp.ended_at is null
+	AND sp.started_at is not null
+LEFT JOIN public.subscription spo
+	ON p.portfolio_id = spo.relation_id
+	AND spo.relation_type = 'Latchel\Portfolio'
+	AND spo.ended_at is null
+	AND spo.started_at is not null
+LEFT JOIN public.subscription sc
+	ON p.pm_company_id = sc.relation_id
+	AND sc.relation_type = 'Latchel\Company'
+	AND sc.ended_at is null
+	AND sc.started_at is not null
+WHERE p.is_active = 1
+AND p.pm_company_id not in (2,557) -- dummy/test companies
+) 
+SELECT pkg.pm_company_id,c.name,
+SUM(CASE WHEN pp.product_id in (1,2) THEN 1 ELSE 0 END ) AS premium,
+SUM(CASE WHEN pp.product_id in (3,4) THEN 1 ELSE 0 END) AS emergency,
+SUM(CASE WHEN pp.product_id in (5) THEN 1 ELSE 0 END) AS basic,
+SUM(CASE WHEN pp.product_id in (6,7) THEN 1 ELSE 0 END) AS HA,
+SUM(CASE WHEN pp.product_id in (8) THEN 1 ELSE 0 END) AS SaaS
+FROM pkg
+JOIN public.package_product pp
+ON pkg.package_id = pp.package_id
+AND pp.started_at <= now()
+AND (pp.ended_at is null or pp.ended_at >= now())
+JOIN public.company c
+	ON pkg.pm_company_id = c.company_id
+	AND c.is_active = 1 -- i don't love having this, since we shouldn't have deactivated companies with active subscriptions
+GROUP BY 1,2
+```
+
+**50**
+
+```sql
+SELECT date_trunc('quarter',j.created_at), s.name, count(*), avg(extract('epoch' from j.updated_at - j.created_at)/(60*60*24)) avg_days_to_status
+FROM public.job j
+JOIN public.state s
+          ON j.state_id = s.state_id
+GROUP BY 1,2
+```
+
+**51**
+
+```sql
+WITH f AS (
+  SELECT
+    c.conversation_id,
+    DATETIME(CAST(c.created_at AS TIMESTAMP), 'America/Los_Angeles') AS created_at_pacific
+  FROM `rt_sms_web_public.conversation` AS c
+  WHERE
+    c.type = 'web'
+      AND DATE(DATETIME(CAST(c.created_at AS TIMESTAMP), 'America/Los_Angeles')) BETWEEN PARSE_DATE('%Y%m%d', '20251026') AND PARSE_DATE('%Y%m%d', '20251101') --<------------------- CHANGE DATE HERE
+),
+pmc AS (
+  SELECT
+    f.conversation_id,
+    f.created_at_pacific,
+    COALESCE(u.user_type, 'unknown') AS contact_type
+  FROM f
+  INNER JOIN `rt_sms_web_public.conversation_member` AS cm
+    ON f.conversation_id = cm.conversation_id
+  LEFT JOIN `emergency_dataset_public.user` AS u
+    ON cm.user_id = u.user_id
+),
+raw AS (
+  SELECT 
+    pmc.conversation_id,
+    pmc.created_at_pacific,
+    u.user_id,
+    u.name AS latchel_user,
+    pmc.contact_type,
+    TIMESTAMP_DIFF(
+      DATETIME(CAST(MIN(m.created_at) AS TIMESTAMP), 'America/Los_Angeles'),
+      pmc.created_at_pacific,
+      MINUTE
+    ) AS reply_minutes
+  FROM pmc
+  INNER JOIN `rt_sms_web_public.message` AS m 
+    ON pmc.conversation_id = m.conversation_id
+  INNER JOIN `rt_sms_web_public.conversation_member` AS cm 
+    ON m.conversation_member_id = cm.conversation_member_id
+  INNER JOIN `emergency_dataset_public.user` AS u 
+    ON cm.user_id = u.user_id
+    AND u.user_type = 'admin'
+    AND u.user_id <> 1
+GROUP BY 1,2,3,4,5
+)
+SELECT
+  DATETIME_TRUNC(DATETIME(raw.created_at_pacific), QUARTER) AS quarter,
+  DATETIME_TRUNC(DATETIME(raw.created_at_pacific), MONTH) AS month,
+  EXTRACT(ISOWEEK FROM DATETIME(raw.created_at_pacific)) AS week,
+  DATETIME_TRUNC(DATETIME(raw.created_at_pacific), DAY) AS day,
+  CAST(EXTRACT(HOUR FROM DATETIME(raw.created_at_pacific)) AS FLOAT64) AS hour,
+  APPROX_QUANTILES(raw.reply_minutes, 100)[OFFSET(50)] AS p50,
+  APPROX_QUANTILES(raw.reply_minutes, 100)[OFFSET(75)] AS p75,
+  APPROX_QUANTILES(raw.reply_minutes, 100)[OFFSET(90)] AS p90,
+  COUNT(DISTINCT raw.conversation_id) AS conv_count
+FROM 
+  raw
+GROUP BY 
+  quarter,
+  month,
+  week,
+  day,
+  hour
+ORDER BY 
+  day DESC,
+  hour ASC;
+```
+
+**52**
+
+```sql
+
+```
+</Accordion>
+</AccordionGroup>

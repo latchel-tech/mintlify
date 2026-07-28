@@ -1,0 +1,96 @@
+---
+title: "How to Download Historical Inbound Call Recordings Using Twilio and Google Drive"
+---
+
+## 🧠 What This Process Is Trying to Solve
+
+<Info>
+Retrieving historical call data can be crucial for compliance, training, and account management. You can access and download historical inbound call recordings by following the detailed steps below. This process involves using both Twilio and Google Drive.
+</Info>
+
+## 📋 Step-by-Step Process
+
+**Step 1**: To begin, log into your Twilio account. Visit [Twilio’s website](https://www.twilio.com/login) and enter your credentials.
+
+#### Step 2: Locate the Monitor Tab
+
+Once logged in, navigate to the left side panel and click on the **Monitor** tab. This section allows you to view and analyze different types of communication data.
+
+#### Step 3: Accessing Calls Data
+
+Under the Monitor options, select **Calls**. This will take you to the call logs page to search for specific call recordings.
+
+#### Step 4: Search for the Call
+
+To find a specific inbound call, you can use the below options:
+
+Option 1: Obtain the caller’s phone number or verify the number on file. Enter the number in the **From** field and specify the date and time of the call.
+
+Option 2: Input the recipient's phone number in the **To** field and specify the date and time of the call.
+
+The above processes helps narrow the search results to the relevant calls.
+
+#### Step 5: Note Down Important Information (Call SID)
+
+Once you locate the call, it is essential to note down the **Call SID** (a unique string that identifies the call) and the date of the call. This information is crucial for the next steps.
+
+<Frame>
+  <img src="/images/reporting-15.png" alt="Logs-Calls-Twilio (3).png" />
+</Frame>
+
+#### Step 6: Navigate to Google Drive
+
+Open the [Twillio Recording Google Drive](https://drive.google.com/drive/folders/0AAJz98Y6rQMWUk9PVA) and go to the **Twilio Recording** directory. This is organized by year, month, and date.
+
+#### Step 7: Find the Year and Month Folders
+
+Within the Twilio Recording directory, find and open the folder for the year when the call was made. Inside this folder, locate the month folder corresponding to the date of the call.
+
+<Frame>
+  <img src="/images/reporting-16.png" alt="Twilio-Recordings-Google-Drive.png" />
+</Frame>
+
+#### Step 8: Open the Date Folder
+
+Open the folder labeled with the specific date of the call. Here, the recordings are stored and should be titled using the Call SID.
+
+#### Step 9: Locate the Recording
+
+In the date folder, look for the file with a name that includes the Call SID you noted earlier. The recording files are usually named according to the Call SID for easy identification.
+
+#### Step 10: Download the Recording
+
+Once you find the correct recording file, click on it to open or preview. To download the file, click the **Download** option, usually represented by a downward arrow icon. Save the file to your desired location on your computer or network.
+
+<Frame>
+  <img src="/images/reporting-17.png" alt="14-Twilio-Recordings-Google-Drive.png" />
+</Frame>
+
+---
+
+**Tips & Remarks**
+
+- Each call recording file will be named following the convention:
+
+  - `[CallID]-[Date Created].mp3`
+
+    - Date Created is the creation date of the `Recording` in EDT Timezone.
+
+    - For example, a call recorded on March 15, 2024, with a Call ID of 123456 would be named `123456-2024-03-15 11H-30M-34S.mp3`.
+
+    - This naming scheme facilitates quick identification of the recording date and the specific call, aiding in efficient search and retrieval.
+
+- You can also search for the right call in the linked sheet if you don’t have access to Twilio or cannot locate the call in Twilio: [Recording Data](https://docs.google.com/spreadsheets/d/1s8KnyH9TfgH0keejk8NvGb5T6hIzVeyTNR76vK1tUfM/edit)
+
+- This drive will only show recordings that can be found on Twilio. If the call is not in Twilio, it will not be in the drive.
+
+- Deletion from Twilio: After verification of successful migration, recordings will be deleted from Twilio to avoid redundant storage costs.
+
+<Warning>
+_Only the recordings of inbound calls that have a **duration greater than 1 second **are stored in the drive _
+</Warning>
+
+## **💡 If You Think This SOP Could Be Improved...**
+
+Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work?
+ 👉 Share your suggestion in the[ SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**

@@ -1,0 +1,265 @@
+---
+title: "Service Ops Call Reports"
+---
+
+<Info>
+**Purpose**: This Job Aid serves as a comprehensive list of all available call reports that the Service Operations Team can use for reference, analysis, and managing daily functions.
+</Info>
+
+<AccordionGroup>
+<Accordion title="Dashboard">
+1. Productivity
+
+2. Productivity
+
+3. Call Center Roll Over
+
+4. Call Center Roll Over
+
+5. Call Center Roll Over
+
+6. Call Center Roll Over
+
+7. Call Center Roll Over
+
+8. Call Center Roll Over
+
+9. Call Center Roll Over
+
+10. Call Center Roll Over
+
+11. Call Center Roll Over
+
+12. Call Center Roll Over
+
+13. Call Center Roll Over
+
+14. Call Center Roll Over
+</Accordion>
+
+<Accordion title="Folder">
+1. Calls
+
+2. Calls
+
+3. Histograms
+
+4. Miscellaneous Charts
+
+5. Roll Over
+
+6. Roll Over
+
+7. Roll Over
+
+8. Cost
+
+9. Miscellaneous Charts
+
+10. Miscellaneous Charts
+
+11. Miscellaneous Charts
+
+12. Miscellaneous Charts
+
+13. LY Data
+
+14. LY Data
+</Accordion>
+
+<Accordion title="Report Name">
+1. [Calls](https://lookerstudio.google.com/u/0/reporting/badff70a-ed59-424b-bf41-25dcc9834745/page/p_x5gdagqsbd)
+
+2. [Call Metrics](https://lookerstudio.google.com/u/0/reporting/badff70a-ed59-424b-bf41-25dcc9834745/page/p_jlxinapsbd)
+
+3. [CC Vol Histogram ](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_zkehrx4vxc)
+
+4. [Calls Heat Map](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_mh73mtrtbd)
+
+5. [Today’s Roll Over Data](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/ncV0C)
+
+6. C[all Volume per Minute](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_3syuqgkt5c)
+
+7. [Historical Roll Over Data](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_daxgio06xc)
+
+8. [Calls Cost Call Center Calls Vol and Duration ](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_1467ve32xc)
+
+9. [Team Metrics](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_fooiotrtbd)
+
+10. [% Roll Over Heat Map](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_34r1f1mmyc)
+
+11. [RollOver Heat Map Count](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_blrvtpt52c)
+
+12. [Customer Experience Review Randomizer ](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_6ikq0vts0c)
+
+13. [Last Year Call Volume Per Month](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_nnv0u8rtbd)
+
+14. [Last Year Latchel AHT Per Month](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_w1ehz8rtbd)
+</Accordion>
+
+<Accordion title="Description">
+**1.** This Report queries the calls received in ZenDesk- Direction Inbound
+- Status: Completed & Handled (cases where there is a hold time, duration, talk time)
+
+**2.** Contain metrics related to each taken call- Duration (includes hold time, talk time, and wrap up) 
+- Hold Time
+- Talk Time
+- Wrap up Time 
+- Agent Name
+
+**3.** This report helps us determine which Call Center won the call. - It joins the Twillio table to understand who won the call using the SID and the Phone Number.
+This query uses our call_dueling table and filters out only those with status won (this filtering is done in the report, not in the query).  We’ll see a difference in this report versus the productivity call report because this is filtering out calls that are “abandoned throughout the path”.
+
+**4.** This report uses the same tables as the one above (calls and call metrics), however, it has a filter to only include completed and inbound calls (excludes outbound calls).This is to understand all calls hitting ZenDesk.
+
+**5.** This report is designed to track today's roll over data. It features a pie chart illustrating the proportion and number of calls completed by Latchel and each call center partner. Additionally, a graph is included to depict current call volume trends, with separate lines indicating the volume of calls handled by the Latchel call center versus calls that have rolled over to our partner call centers.
+
+**6.** The table presents the distribution of incoming calls on an hourly and minute basis, along with the corresponding tally of distinct calls received during each hour. For instance: If the "Total Calls" value displays 10 in the row labelled 9 AM, this signifies that we received 10 unique calls spanning from 9:00 AM to 9:59 AM, encompassing the full hour of 9 AM.
+
+**7.** This report is designed to track historical roll over data. It features a pie chart illustrating the proportion and number of calls completed by Latchel and call center partners. Additionally, a graph is included to depict current call volume trends, with separate lines indicating the volume of calls handled by the Latchel call center versus calls that have rolled over to our partner call centers.
+
+**8.** The projected total cost for Latchel on call center invoices is estimated in this report. It's based on the duration of calls (in minutes), the cost per minute charged by call center partners, and the total number of calls managed by each partner call center.
+
+**9.** This report contains the talk time, hold time, and wrap-up time per agent, as well as the total of these times for all team members handling calls.
+
+**10.** This report displays the percentage of calls that are transferred to partner call centers during each day, broken down into hourly intervals (hourly roll over percentage).
+
+**11.** This report displays the number of calls that are transferred to partner call centers during each day, broken down into hourly intervals (hourly roll over percentage).
+
+**12.** 
+
+**13.** This report displays monthly calls completed.
+
+**14.** This report displays Latchel’s average handling time per month.
+</Accordion>
+
+<Accordion title="Query Used">
+**1.**
+
+```sql
+SELECT c.phone_number, datetime(c.created_at,'America/Los_Angeles') as created_at, u.name,  c.duration, c.hold_time,  c.talk_time, c.wrap_up_time , c.completion_status,c.direction
+FROM `data-analytics-warehouse.zendesk.call_metric` c
+LEFT JOIN `data-analytics-warehouse.zendesk.user` u
+ on c.agent_id=u.id 
+ where u.name is not null
+and direction='inbound' and completion_status='completed'
+```
+
+**2.**
+
+```sql
+SELECT c.phone_number, datetime(c.created_at,'America/Los_Angeles') as created_at, u.name,  c.duration, c.hold_time,  c.talk_time, c.wrap_up_time , c.completion_status,c.direction
+FROM `data-analytics-warehouse.zendesk.call_metric` c
+LEFT JOIN `data-analytics-warehouse.zendesk.user` u
+ on c.agent_id=u.id 
+ where u.name is not null
+and direction='inbound' and completion_status='completed'
+```
+
+**3.**
+
+```sql
+SELECT d.call_sid,
+d.created_at, 
+d.outbound_phone, 
+d.status,
+c.duration,
+c.price ,
+c.direction
+FROM `data-analytics-warehouse.duelling_real_time_public.dueling_call_center_call` d
+LEFT JOIN `data-analytics-warehouse.twilio.call` c
+ON d.call_sid=c.id
+WHERE DATETIME(cast(d.created_at as timestamp), 'America/Los_Angeles') BETWEEN  PARSE_DATE('%Y%m%d',@DS_START_DATE) AND  PARSE_DATE('%Y%m%d',@DS_END_DATE)
+ORDER BY created_at DESC
+```
+
+**4.**
+
+```sql
+SELECT c.phone_number, datetime(c.created_at,'America/Los_Angeles') as created_at,  c.duration, c.hold_time,  c.talk_time, c.wrap_up_time , c.completion_status,c.direction
+FROM `data-analytics-warehouse.zendesk.call_metric` c
+WHERE date(datetime(c.created_at,'America/Los_Angeles') ) between PARSE_DATE('%Y%m%d',@DS_START_DATE) AND  PARSE_DATE('%Y%m%d',@DS_END_DATE)
+```
+
+**5.** N/A
+
+**6.** N/A
+
+**7.** N/A
+
+**8.** N/A
+
+**9.** N/A
+
+**10.** N/A
+
+**11.** N/A
+
+**12.** N/A
+
+**13.** N/A
+
+**14.** N/A
+</Accordion>
+
+<Accordion title="Legacy Report (if applicable)">
+**1.** [Team Calls Handled](https://docs.google.com/spreadsheets/d/1GkVMrKOoraOCCafuBIKxQka6kxDYex2-UVrAA1usFkc/edit)
+
+**2.** [Team Calls Handled](https://docs.google.com/spreadsheets/d/1GkVMrKOoraOCCafuBIKxQka6kxDYex2-UVrAA1usFkc/edit)
+
+**3.** [Call Center Roll Over 2022](https://docs.google.com/spreadsheets/d/1GkVMrKOoraOCCafuBIKxQka6kxDYex2-UVrAA1usFkc/edit)
+
+**4.** 
+
+**5.** 
+
+**6.** 
+
+**7.** 
+
+**8.** 
+
+**9.** 
+
+**10.** 
+
+**11.** 
+
+**12.** 
+
+**13.** 
+
+**14.** 
+</Accordion>
+
+<Accordion title="Viewer Notes (Tips / Be Aware)">
+**1.** - Can view data from 48 hours ago
+
+**2.** - Can view data from 48 hours ago
+
+**3.** This is the best report to see how many calls reached our database – actual calls handled by either the call center or Latchel. **Recommended call volume report for staffing. **
+
+**4.** - You can view data from 24 hours ago
+
+**5.** - Live data from as recent as 30 minutes ago
+
+**6.** - Live data from as recent as 30 minutes ago
+
+**7.** - Last datapoint is from 7 days ago (not live)
+
+**8.** - Last datapoint is from 7 days ago (not live)
+
+**9.** - Data on this page is refreshed once a day
+- Real time data available
+
+**10.** - Last datapoint is frrom 24 hours ago (not live)
+
+**11.** 
+
+**12.** 
+
+**13.** - Calls completed by Latchel’s call center (not partner call centers)
+
+**14.** - Calls handled by Latchel’s call center (not partner call centers)
+</Accordion>
+</AccordionGroup>
