@@ -773,10 +773,10 @@
                         "group": "Reporting",
                         "pages": [
                           "latchel-admin/Service-Operations/Reporting/service-ops-call-reports",
-                          "latchel-admin/Service-Operations/Reporting/job-aid-sqls-for-program-management",
                           "latchel-admin/Service-Operations/Reporting/service-ops-email-reports",
-                          "latchel-admin/Service-Operations/Reporting/how-to-download-historical-inbound-call-recordings-using-twilio-and-google-drive",
+                          "latchel-admin/Service-Operations/Reporting/job-aid-sqls-for-program-management",
                           "latchel-admin/Service-Operations/Reporting/how-to-supervisors-metrics",
+                          "latchel-admin/Service-Operations/Reporting/how-to-download-historical-inbound-call-recordings-using-twilio-and-google-drive",
                           "latchel-admin/Service-Operations/Reporting/understanding-p90-p75-and-p50-performance-metrics"
                         ]
                       },
