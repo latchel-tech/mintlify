@@ -13,11 +13,8 @@ group: ["latchel"]
 ## **Dueling call center directive**
 
 - Webhook:  <br />[https://app.latchel.com/ext/dueling-call-centers/twiml-begin-duel?call\_center%5B%5D=](https://app.latchel.com/ext/dueling-call-centers/twiml-begin-duel?call_center%5B%5D= "https://app.latchel.com/ext/dueling-call-centers/twiml-begin-duel?call_center%5B%5D=")`[number_1]`&call\_center%5B%5D=`[number_2]`&`[...]`&call\_center%5B%5D=`[number_n]`
-
-| **Name** | **Webhook** |
-| :-- | :-- |
-| **_Call Center English Battle_** | [<u>https://app.latchel.com/ext/dueling-call-centers/twiml-begin-duel?call\_center%5B%5D=9785772018&call\_center%5B%5D=9034377682&call\_center%5B%5D=8335484312</u>](https://app.latchel.com/ext/dueling-call-centers/twiml-begin-duel?call_center%5B%5D=9785772018&call_center%5B%5D=9034377682&call_center%5B%5D=8335484312 "https://app.latchel.com/ext/dueling-call-centers/twiml-begin-duel?call_center%5B%5D=9785772018&call_center%5B%5D=9034377682&call_center%5B%5D=8335484312") |
-| **_Call Center Spanish Battle Webhook_** | [_<u>https://app.latchel.com/ext/dueling-call-centers/twiml-begin-duel?call\_center%5B%5D=8005814136&call\_center%5B%5D=2063330590&call\_center%5B%5D=8596961888&call\_center%5B%5D=9894877465</u>_](https://app.latchel.com/ext/dueling-call-centers/twiml-begin-duel?call_center%5B%5D=8005814136&call_center%5B%5D=2063330590&call_center%5B%5D=8596961888&call_center%5B%5D=9894877465 "https://app.latchel.com/ext/dueling-call-centers/twiml-begin-duel?call_center%5B%5D=8005814136&call_center%5B%5D=2063330590&call_center%5B%5D=8596961888&call_center%5B%5D=9894877465") |
+- [Call Center English Battle](https://app.latchel.com/ext/dueling-call-centers/twiml-begin-duel?call_center%5B%5D=9785772018&call_center%5B%5D=9034377682&call_center%5B%5D=8335484312)
+- [Call Center Spanish Battle Webhook](https://app.latchel.com/ext/dueling-call-centers/twiml-begin-duel?call_center%5B%5D=8005814136&call_center%5B%5D=2063330590&call_center%5B%5D=8596961888&call_center%5B%5D=9894877465)
 
 ## Call Center Partner Numbers
 
@@ -51,13 +48,9 @@ group: ["latchel"]
 
 ```sql lines
 <?xml version="1.0" encoding="UTF-8"?>
-
 <Response>
-
  <Pause length="43"/>
-
  <Dial>INSERTDIRECTDIALNUMBER</Dial>
-
 </Response>
 ```
 
