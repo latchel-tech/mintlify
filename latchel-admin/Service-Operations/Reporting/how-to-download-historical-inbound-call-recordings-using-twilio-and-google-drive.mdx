@@ -6,7 +6,7 @@ groups: ["latchel"]
 ## 🧠 What This Process Is Trying to Solve
 
 <Info>
-Retrieving historical call data can be crucial for compliance, training, and account management. You can access and download historical inbound call recordings by following the detailed steps below. This process involves using both Twilio and Google Drive.
+  Retrieving historical call data can be crucial for compliance, training, and account management. You can access and download historical inbound call recordings by following the detailed steps below. This process involves using both Twilio and Google Drive.
 </Info>
 
 ## 📋 Step-by-Step Process
@@ -36,7 +36,7 @@ The above processes helps narrow the search results to the relevant calls.
 Once you locate the call, it is essential to note down the **Call SID** (a unique string that identifies the call) and the date of the call. This information is crucial for the next steps.
 
 <Frame>
-  <img src="/images/reporting-15.png" alt="Logs-Calls-Twilio (3).png" />
+  ![Logs-Calls-Twilio (3).png](/images/reporting-15.png)
 </Frame>
 
 #### Step 6: Navigate to Google Drive
@@ -48,7 +48,7 @@ Open the [Twillio Recording Google Drive](https://drive.google.com/drive/folders
 Within the Twilio Recording directory, find and open the folder for the year when the call was made. Inside this folder, locate the month folder corresponding to the date of the call.
 
 <Frame>
-  <img src="/images/reporting-16.png" alt="Twilio-Recordings-Google-Drive.png" />
+  ![Twilio-Recordings-Google-Drive.png](/images/reporting-16.png)
 </Frame>
 
 #### Step 8: Open the Date Folder
@@ -64,34 +64,24 @@ In the date folder, look for the file with a name that includes the Call SID you
 Once you find the correct recording file, click on it to open or preview. To download the file, click the **Download** option, usually represented by a downward arrow icon. Save the file to your desired location on your computer or network.
 
 <Frame>
-  <img src="/images/reporting-17.png" alt="14-Twilio-Recordings-Google-Drive.png" />
+  ![14-Twilio-Recordings-Google-Drive.png](/images/reporting-17.png)
 </Frame>
-
----
 
 **Tips & Remarks**
 
 - Each call recording file will be named following the convention:
-
   - `[CallID]-[Date Created].mp3`
-
     - Date Created is the creation date of the `Recording` in EDT Timezone.
-
     - For example, a call recorded on March 15, 2024, with a Call ID of 123456 would be named `123456-2024-03-15 11H-30M-34S.mp3`.
-
     - This naming scheme facilitates quick identification of the recording date and the specific call, aiding in efficient search and retrieval.
-
 - You can also search for the right call in the linked sheet if you don’t have access to Twilio or cannot locate the call in Twilio: [Recording Data](https://docs.google.com/spreadsheets/d/1s8KnyH9TfgH0keejk8NvGb5T6hIzVeyTNR76vK1tUfM/edit)
-
 - This drive will only show recordings that can be found on Twilio. If the call is not in Twilio, it will not be in the drive.
-
 - Deletion from Twilio: After verification of successful migration, recordings will be deleted from Twilio to avoid redundant storage costs.
 
 <Warning>
-_Only the recordings of inbound calls that have a **duration greater than 1 second **are stored in the drive _
+  Only the recordings of inbound calls that have a **duration greater than 1 second** are stored in the drive.
 </Warning>
 
 ## **💡 If You Think This SOP Could Be Improved...**
 
-Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work?
- 👉 Share your suggestion in the[ SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**
+Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work? 👉 Share your suggestion in the[ SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**

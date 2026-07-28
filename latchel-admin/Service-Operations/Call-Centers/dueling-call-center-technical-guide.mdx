@@ -49,7 +49,7 @@ group: ["latchel"]
 
 ## **Twiml for delay**
 
-```text
+```sql lines
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Response>
@@ -65,7 +65,7 @@ group: ["latchel"]
 
 **Time to Answer**
 
-```text
+```sql lines
 SELECT 
 date_trunc('week',d.created_at + interval '1 day') - interval '1 day' as week ,
 percentile_disc(.9) within group (order by EXTRACT(EPOCH FROM d.updated_at - d.created_at))
@@ -78,7 +78,7 @@ GROUP BY 1
 
 **Calls won**
 
-```text
+```sql lines
 SELECT count (distinct dccc.call_sid)
 FROM dueling_call_center_call DCCC
 WHERE DCCC.created_at >now()-interval '3 hours'

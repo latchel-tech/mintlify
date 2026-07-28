@@ -76,7 +76,7 @@ Example:
 
 Replace `'6869baedee29b'` with your queue ID:
 
-```text
+```sql lines
 SELECT *
 FROM dueling_call_center_call
 WHERE queue_id = '6869baedee29b'
@@ -97,7 +97,7 @@ LIMIT 1000;
 
 This query will return up to 1000 records from `date`, where the `outbound_phone` matches either of the specified numbers.
 
-```text
+```sql lines
 SELECT *
 FROM dueling_call_center_call
 WHERE DATE(created_at) = '2025-07-05'
@@ -108,7 +108,7 @@ LIMIT 1000;
 
 This query will return records from `date`.
 
-```text
+```sql lines
 SELECT *
 FROM dueling_call_center_call
 WHERE DATE(created_at) = '2025-07-05'
@@ -128,7 +128,7 @@ It works in three steps:
 
 The output includes call identifiers, queue details, timestamps, calculated durations, P90 thresholds, and how many seconds each qualifying call exceeded the target.
 
-```text
+```sql lines
 WITH call_durations AS (
   SELECT 
     dcs.dueling_call_center_call_id,
