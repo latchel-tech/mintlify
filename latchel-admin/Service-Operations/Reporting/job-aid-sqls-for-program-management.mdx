@@ -5,167 +5,13 @@ groups: ["latchel"]
 
 This is a list of queries to be used by program managers for data collection.
 
-To run the query, use this SOP: [How to: Execute SQL Queries in Pg_Admin](https://latchel.atlassian.net/wiki/spaces/CS/pages/865536465)
+To run the query, use this SOP: [How to: Execute SQL Queries in Pg\_Admin](https://latchel.atlassian.net/wiki/spaces/CS/pages/865536465)
 
 **Operations repository**: [Operations Query Repository](https://docs.google.com/spreadsheets/d/1US7njfleXbLcBhO4NQRI6sSZxBK-sdGoNtpWpz3p-hg/edit#gid=0)
 
-<AccordionGroup>
-<Accordion title="#">
-1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, (cont.), 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52
-</Accordion>
+### 1 - Get data on Skill Categories and Skills being used in Emergency Jobs
 
-<Accordion title="Purpose">
-1. Get data on Skill Categories and Skills being used in Emergency Jobs
-
-2. Emergency Work order information - data dump - including only our internal team
-
-3. Emergency Work order information - data dump - including only on-demand team
-
-4. Emergency SLAs failures
-
-5. Data on tasks – last 1 week of data - all users
-
-6. SMS data
-
-7. user actions every 15 minute interval -  1 week of data - includes only Latchel users who are assigned to user groups
-
-8. Call Center Duel - data
-
-9. Call Center Duel - data - just won
-
-10. Emergency Call Back Times
-
-11. Source of Work Orders - grouped by day - form used and creator
-
-   (cont.) Source of Work Orders - grouped by hour - form used and creator ---> UTC time zone
-
-12. Number of units per active PM on the day the query is run
-
- 
-
-PM account creation date
-
-13. Unit count by company and subscription
-
-14. --count of all units by week
-
-15. Troubleshooter performance ratings
-
-16. Tasks creation, completion, type based on subject tile
-
-17. List of all properties
-
-18. user actions every 15 minute interval
-
-19. Appt Confirmed Time (excluding deferred emergencies)
-
-20. 2+ week old queue for jobs that have never been scheduled
-
-21. Skills changes
-
-22. Jobs 2+ week old queue for jobs that have never been scheduled
-
-23. S&R Audits - Work order Skills
-
-24. Task Deferrals
-
-25. Task backlog
-
-26. Tasks completed by hour
-
-27. Count of messages replied to in the last hour, by agent
-
-28. --user Efective actions every 2 weeks
-
-29. Webchat inbound
-
-30. SMS inbound
-
-31. Inbound tasks
-
-32. Tasks created
-
-33. All action sets triggered for a job
-
-34. Actions that were run as the result of an action set instance
-
-35. This will pull the top 3 oldest tasks overall and top 3 latchel tasks - resolved by the team
-
-36. Weekly Activity Summary
-
-37. Task has been deferred 3+ times
-
-38. Time to schedule (p90) – get a list of WOs that missed the SLA → 
-
-Report that shows job details and the length of time it took to schedule every emergency job over the past 12 weeks.
-
- 
-
- 
-
-Note from Will – With a random spot check, the outliers are driven by residents not answering our emergency callback and the work order dropping to "Waiting for PM"
-
-39. Report showing all LCN jobs (issued cards and LCN) and how long it took to get the job scheduled
-
-40. Troubleshooting Should call back outcomes  aside from "could not connect to resident"
-
-41. Time to Schedule emergency WO – P90
-
-42. All LCN (Job Not Resolved) reports
-
-43. Report showing all LCN jobs (issued cards and LCN) and how long it took to get the job scheduled
-
-44. SMS conversation
-
- 
-
-timestamp
-
-user ID
-
-contact type (who)
-
-reply minutes
-
-percentile
-
-duration
-
-45. Webchat conversation
-
- 
-
-timestamp
-
-user ID
-
-contact type (who)
-
-reply minutes
-
-percentile
-
-duration
-
-46. Want an easy way to see which zip codes a service provider covers (based on existing portfolio settings?) Here's the query, right now it's set for Great Jones
-
-47. So I used the above base query to see -- how many work orders are these customers submitting? 41% of the work orders created in the last 30 days have come from 3 customers.
-
-48. I also thought to myself: not all work orders are created equal--so, who's creating the biggest amount of 'problem' work orders.I sliced one way, looking at all work orders that aren't yet closed and have been updated within the last 30 days.  60% come from the same 3 customers listed above
-
-49. but maybe that's unfair, since it's overly weighting the companies that submit a lot of work orders. so let's exclude the work orders that have been created within the last 2 weeks (since that's more than enough time to resolve most jobs)
-
-50. Query WO cancelled
-
-51. Web Chat Missed SLA Intervals (BigQuery query)
-
-52. 
-</Accordion>
-
-<Accordion title="Query">
-**1**
-
-```sql
+```sql lines wrap
 SELECT c.name, i.name, count(*) FROM public.job j
 	JOIN public.category c
 		ON j.category_id = c.category_id
@@ -175,13 +21,13 @@ SELECT c.name, i.name, count(*) FROM public.job j
 GROUP BY 1, 2
 ```
 
-**2**
+### **2 - 	Emergency Work order information - data dump - including only our internal team**
 
-```sql
+```sql lines wrap
 SELECT u.name, cl.created_at as call_date, cl.duration as call_duration, cl.status as call_status, cl.recording_url, j.name as job_name, concat('https://stage.latchel.com/admin/job/',j.slug) as job_url, * FROM public.call_log cl
 JOIN public.user u
 ON cl.initiated_by_user_id = u.user_id
-AND u.role_id IN (1,6)        LEFT JOIN public.call_log_job clj
+AND u.role_id IN (1,6)        LEFT JOIN public.call_log_job clj
 ON cl.call_log_id = clj.call_log_id
 LEFT JOIN public.job j
 ON clj.job_id = j.job_id
@@ -189,9 +35,9 @@ and J.IS_EMERGENCY = 1
 ORDER BY 2 desc
 ```
 
-**3**
+### 3 - Emergency Work order information - data dump - **including only on-demand team**
 
-```sql
+```sql lines wrap
 SELECT u.name, cl.created_at as call_date, cl.duration as call_duration, cl.status as call_status, cl.recording_url, j.name as job_name, concat('https://stage.latchel.com/admin/job/',j.slug) as job_url, * FROM public.call_log cl
 JOIN public.user u
 ON cl.initiated_by_user_id = u.user_id
@@ -202,9 +48,9 @@ ON clj.job_id = j.job_id
 ORDER BY 2 desc
 ```
 
-**4**
+### 4 - Emergency SLAs failures
 
-```sql
+```sql lines wrap
 WITH e as (SELECT l.relation_id as job_id, l.created_at as create_date, * FROM public.log l
 WHERE l.type = 'state'
 AND l.loggable_id = 25
@@ -234,9 +80,9 @@ SELECT em.job_id, em.create_date, t.tshoot_complete_at, u.user_id, u.name, r.nam
 		ON u.role_id = r.role_id
 ```
 
-**5**
+### 5 - Data on tasks – last 1 week of data - all users
 
-```sql
+```sql lines wrap
 SELECT u.user_id, u.name, i.day_action_taken, d.tasks_deferred, c.tasks_created, co.tasks_completed, n.notes_created,
 l.status_updates, m.conversations_replied, j.wos_created, call.calls_placed
 FROM 
@@ -354,9 +200,9 @@ GROUP BY 1, 2) call
 	AND i.day_action_taken = call.day_action_taken
 ```
 
-**6**
+### 6 - SMS data
 
-```sql
+```sql lines wrap
 SELECT
      a.name
     , a.messageable_id
@@ -403,9 +249,9 @@ ORDER BY "Date"
         -- ORDER BY m1.messageable_id
 ```
 
-**7**
+### 7 - `user actions every 15 minute interval` -  1 week of data - includes only Latchel users who are assigned to user groups
 
-```sql
+```sql lines wrap
 SELECT u.user_id, u.name, i.time_action_taken, d.tasks_deferred, c.tasks_created, co.tasks_completed, n.notes_created,
 l.status_updates, m.conversations_replied, j.wos_created, call.calls_placed
 FROM 
@@ -525,9 +371,9 @@ GROUP BY 1, 2) call
 	AND i.time_action_taken = call.time_action_taken
 ```
 
-**8**
+### 8 - Call Center Duel - data
 
-```sql
+```sql lines wrap
 select			queue_id as incoming_call_waiting_room_id, -- this ID groupd the call center calls with the single incoming call
 				call_sid as outgoing_call_center_call_sid, -- SID for the call to the call center
 				status, -- what ultimately happened with the call 
@@ -538,9 +384,9 @@ order by	 	created_at desc
 ;
 ```
 
-**9**
+### 9 - Call Center Duel - data - just won
 
-```sql
+```sql lines wrap
 select			queue_id as incoming_call_waiting_room_id, -- this ID groupd the call center calls with the single incoming call
 call_sid as outgoing_call_center_call_sid, -- SID for the call to the call center
 status, -- what ultimately happened with the call
@@ -551,9 +397,9 @@ and			    dcc.status = ('won')
 order by	 	created_at desc
 ```
 
-**10**
+### 10 - Emergency Call Back Times
 
-```sql
+```sql lines wrap
 WITH e as (SELECT l.relation_id as job_id, l.created_at FROM public.log l
 WHERE l.type = 'state'
 AND l.loggable_id = 25
@@ -582,9 +428,9 @@ FROM (
 		ON u.role_id = r.role_id
 ```
 
-**11**
+### 11 - Source of **Work Orders** - grouped by **day** - form used and creator
 
-```sql
+```sql lines wrap
 WITH a as (SELECT * FROM generate_series(date_trunc('day',now()-interval '1 months'),
                               date_trunc('day',now()), '1 day') as date)
 SELECT a.date, c.name, j.source, cr.user_type, count(*) 
@@ -601,9 +447,9 @@ GROUP BY 1,2,3,4
 ORDER BY 1,2,3,4
 ```
 
-**(cont.)**
+### 12 - Source of **Work Orders** - grouped by **hour** - form used and creator ---\> **UTC time zone**
 
-```sql
+```sql lines wrap
 WITH a as (SELECT * FROM generate_series(date_trunc('day',now()-interval '1 months'),
                               date_trunc('hour',now()), '1 hour') as hour)
 SELECT a.hour, c.name, j.source, cr.user_type, count(*)
@@ -620,9 +466,11 @@ GROUP BY 1,2,3,4
 ORDER BY 1,2,3,4
 ```
 
-**12**
+### 13 - Number of units per active PM on the day the query is run
 
-```sql
+- PM account creation date
+
+```sql lines wrap
 Select distinct (c.name), c.created_at, count (distinct pr.property_id)  from company c
 join public.user pm
 on c.company_id=pm.company_id
@@ -634,9 +482,9 @@ group by 1,2
 order by 2 desc
 ```
 
-**13**
+### 14 - Unit count by company and subscription
 
-```sql
+```sql lines wrap
 --count by company
 With d as (
 select date_trunc('week', now() - interval '1 weeks') date_of_count),
@@ -727,9 +575,10 @@ GROUP BY 1,2,3,4
 ORDER BY 1,2,3,4
 ```
 
-**14**
+### 15 - --count of all units by week
 
-```sql
+```sql lines wrap
+
 --p - Properties
 --pp - portfolios - properties
 --cpp - companies - (portfolios - properties) - properties (w/out portfolios)With d as (
@@ -804,9 +653,9 @@ GROUP BY 1,2
 ORDER BY 1 desc, 2
 ```
 
-**15**
+### 16 - Troubleshooter performance ratings
 
-```sql
+```sql lines wrap
 SELECT u.name, r.rating, r.comments, r.created_at from public.rating r
 	JOIN public.troubleshooting t
 		ON r.rateable_id = t.troubleshooting_id
@@ -816,13 +665,13 @@ SELECT u.name, r.rating, r.comments, r.created_at from public.rating r
 ORDER BY 1,4
 ```
 
-**16**
+### 17 - Tasks creation, completion, type based on subject tile
 
-```sql
-Select distinct (c.name), c.created_at, count (distinct pr.property_id), c.state  from company c
+```sql lines wrap
+Select distinct (c.name), c.created_at, count (distinct pr.property_id), c.state  from company c
 join public.user pm
 on c.company_id=pm.company_id
-join property pr on pr.pm_id=pm.user_id
+join property pr on pr.pm_id=pm.user_id
 where c.company_type = 'pm'
 and c.is_active = '1'
 and pr.is_active = '1'
@@ -830,17 +679,17 @@ group by 1,2,4
 order by 2 desc
 ```
 
-**17**
+### 18 - List of all properties
 
-```sql
+```sql lines wrap
 SELECT p.*
 FROM public.property p
 WHERE p.is_active = 1
 ```
 
-**18**
+### 19 - user actions every 15 minute interval
 
-```sql
+```sql lines wrap
 SELECT u.user_id, u.name, i.time_action_taken, d.tasks_deferred, c.tasks_created, co.tasks_completed, n.notes_created,
 l.status_updates, m.conversations_replied, j.wos_created, call.calls_placed, sms.sms_sent
 FROM 
@@ -971,9 +820,9 @@ LEFT JOIN (SELECT u.user_id, u.name, date_trunc('hour', m.created_at at time zon
 	AND i.time_action_taken = sms.time_action_taken
 ```
 
-**19**
+### 20 - Appt Confirmed Time (excluding deferred emergencies)
 
-```sql
+```sql lines wrap
 SELECT a.failed_2hr_sla::float/a.count_appt_set::float as pct_fail_2hr, 
 a.failed_4hr_sla::float/a.count_appt_set::float as pct_fail_4hr, 
 a.failed_24hr_sla::float/a.count_appt_set::float as pct_fail_24hr,
@@ -1003,9 +852,9 @@ GROUP BY 1 ) a
 ORDER BY 4 desc
 ```
 
-**20**
+### 21 - 2\+ week old queue for jobs that have never been scheduled
 
-```sql
+```sql lines wrap
 WITH raw as (
 SELECT vaq.updated_at as created_at, j.job_id, j.vendor_id, EXTRACT(EPOCH FROM min(l.created_at)-vaq.updated_at)/(60*60) as hours_to_schedule from public.job j
 	LEFT JOIN public.user v
@@ -1040,12 +889,12 @@ JOIN public.job j
 	ON raw.job_id = j.job_id
 JOIN public.state s
 	ON j.state_id = s.state_id 
-WHERE raw.created_at < NOW() - INTERVAL '2 weeks'
+WHERE raw.created_at < NOW() - INTERVAL '2 weeks' 
 ```
 
-**21**
+### 22 - Skills changes
 
-```sql
+```sql lines wrap
 /*
 -code: records of job with audit code and in the considered states (check state table)
 - min, max, skill: finding the origin and update skills per WO
@@ -1113,9 +962,9 @@ ON c.job_id = sk.relation_id
 --         LIMIT 3
 ```
 
-**22**
+### 23 - Jobs 2\+ week old queue for jobs that have never been scheduled
 
-```sql
+```sql lines wrap
 WITH raw as (
 SELECT vaq.updated_at as created_at, j.job_id, j.vendor_id, EXTRACT(EPOCH FROM min(l.created_at)-vaq.updated_at)/(60*60) as hours_to_schedule from public.job j
 	LEFT JOIN public.user v
@@ -1154,9 +1003,9 @@ WHERE raw.created_at < NOW() - INTERVAL '2 weeks'
 	AND raw.vendor_id is null OR raw.hours_to_schedule is null;
 ```
 
-**23**
+### 24 - S&R Audits - Work order Skills
 
-```sql
+```sql lines wrap
 /*
 -code: records of job with audit code and in the considered states (check state table)
 - min, max, skill: finding the origin and update skills per WO
@@ -1221,66 +1070,111 @@ LEFT JOIN skill_tab sk
 ON c.job_id = sk.relation_id
 ```
 
-**24**
+### 25 - Task Deferrals
 
-```sql
+```sql lines wrap
 SELECT t.task_id, count(*) as deferrals, t.created_at, t.subject, CONCAT('https://app.latchel.com/admin/job/', j.slug) as job_url from public.task t
-     JOIN public.task_deferral td
-         ON t.task_id = td.task_id
-         AND t.is_resolved = 0
-     JOIN public.job j
-         ON t.relation_id = j.job_id
-         AND t.relation_type = 'Latchel\Job'
-     LEFT JOIN public.user_group ug
-         ON t.user_group_id = ug.user_group_id
- WHERE ug.company_id is null
- GROUP BY 1,3,4,5
- HAVING COUNT(*) >2
- ORDER BY 2 desc
+
+     JOIN public.task_deferral td
+
+         ON t.task_id = td.task_id
+
+         AND t.is_resolved = 0
+
+     JOIN public.job j
+
+         ON t.relation_id = j.job_id
+
+         AND t.relation_type = 'Latchel\Job'
+
+     LEFT JOIN public.user_group ug
+
+         ON t.user_group_id = ug.user_group_id
+
+ WHERE ug.company_id is null
+
+ GROUP BY 1,3,4,5
+
+ HAVING COUNT(*) >2
+
+ ORDER BY 2 desc
 ```
 
-**25**
+### 26 - Task backlog
 
-```sql
-ITH a as (SELECT j.order_number, CONCAT('https://app.latchel.com/admin/job/', j.slug) as job_url, st.name as job_status, t.subject as task_subject, t.scheduled_for as task_due_date, g.name as assigned_group, a.name as assigned_user, s.name as subject_user_name, s.user_type as subject_user_type,
- v.name as vendor_name, vc.name as company_name,
- t.created_at as task_created_at, t.updated_at as task_updated_at, j.name as job_title, j.state_updated_at as job_status_updated_at, j.created_at as job_created_at,
- po.name as portfolio, p.address1, p.address2, p.city, p.state, p.zip, p.timezone, p.property_id, j.job_id, j.is_urgent, j.is_emergency
- ,s.user_type, s.user_id, s.name  as task_subject_user
- from public.task t
- JOIN public.user_group g
-     ON t.user_group_id = g.user_group_id
-     AND g.company_id is null
-     AND t.is_resolved = 0
-     AND t.scheduled_for <= now()
- LEFT JOIN public.user s
-     ON t.subject_user_id = s.user_id
- JOIN public.job j
-     ON t.relation_type = 'Latchel\Job'
-     AND t.relation_id = j.job_id
-            AND j.is_archived=0
- LEFT JOIN public.user a
-     ON t.user_id = a.user_id
- JOIN public.state st
-     ON j.state_id = st.state_id
- JOIN public.property p
-     ON j.property_id = p.property_id
- LEFT JOIN public.portfolio po
-     ON p.portfolio_id = po.portfolio_id
- LEFT JOIN public.user v
-     ON j.vendor_id = v.user_id
- LEFT JOIN public.company vc
-     ON v.company_id = vc.company_id
- ORDER BY t.scheduled_for asc)
- SELECT a.user_id, a.task_subject_user,CONCAT('https://app.latchel.com/admin/',CASE a.user_type WHEN 'vendor' THEN 'contractor' WHEN 'tenant' THEN 'resident' WHEN 'pm' THEN 'property-manager' ELSE 'property' END,'/',CASE WHEN a.user_id IS NOT NULL THEN a.user_id ELSE a.property_id END,'/jobs') as relevant_jobs_link, a.order_number, a.job_title, a.job_url, a.job_status, CASE WHEN a.is_emergency = 1 THEN 'emergency' WHEN a.is_urgent = 1 THEN 'urgent' ELSE 'normal' END as severity, 
- a.task_subject, a.user_type,  a.property_id, a.address1, a.address2, a.city, a.task_due_date  
- from a
- ORDER BY min(a.task_due_date) OVER (PARTITION BY a.user_id) asc, a.user_id asc, min(a.task_due_date) OVER (PARTITION BY a.property_id) asc
+```sql lines wrap
+WITH a as (SELECT j.order_number, CONCAT('https://app.latchel.com/admin/job/', j.slug) as job_url, st.name as job_status, t.subject as task_subject, t.scheduled_for as task_due_date, g.name as assigned_group, a.name as assigned_user, s.name as subject_user_name, s.user_type as subject_user_type,
+
+ v.name as vendor_name, vc.name as company_name,
+
+ t.created_at as task_created_at, t.updated_at as task_updated_at, j.name as job_title, j.state_updated_at as job_status_updated_at, j.created_at as job_created_at,
+
+ po.name as portfolio, p.address1, p.address2, p.city, p.state, p.zip, p.timezone, p.property_id, j.job_id, j.is_urgent, j.is_emergency
+
+ ,s.user_type, s.user_id, s.name  as task_subject_user
+
+ from public.task t
+
+ JOIN public.user_group g
+
+     ON t.user_group_id = g.user_group_id
+
+     AND g.company_id is null
+
+     AND t.is_resolved = 0
+
+     AND t.scheduled_for <= now()
+
+ LEFT JOIN public.user s
+
+     ON t.subject_user_id = s.user_id
+
+ JOIN public.job j
+
+     ON t.relation_type = 'Latchel\Job'
+
+     AND t.relation_id = j.job_id
+
+            AND j.is_archived=0
+
+ LEFT JOIN public.user a
+
+     ON t.user_id = a.user_id
+
+ JOIN public.state st
+
+     ON j.state_id = st.state_id
+
+ JOIN public.property p
+
+     ON j.property_id = p.property_id
+
+ LEFT JOIN public.portfolio po
+
+     ON p.portfolio_id = po.portfolio_id
+
+ LEFT JOIN public.user v
+
+     ON j.vendor_id = v.user_id
+
+ LEFT JOIN public.company vc
+
+     ON v.company_id = vc.company_id
+
+ ORDER BY t.scheduled_for asc)
+
+ SELECT a.user_id, a.task_subject_user,CONCAT('https://app.latchel.com/admin/',CASE a.user_type WHEN 'vendor' THEN 'contractor' WHEN 'tenant' THEN 'resident' WHEN 'pm' THEN 'property-manager' ELSE 'property' END,'/',CASE WHEN a.user_id IS NOT NULL THEN a.user_id ELSE a.property_id END,'/jobs') as relevant_jobs_link, a.order_number, a.job_title, a.job_url, a.job_status, CASE WHEN a.is_emergency = 1 THEN 'emergency' WHEN a.is_urgent = 1 THEN 'urgent' ELSE 'normal' END as severity, 
+
+ a.task_subject, a.user_type,  a.property_id, a.address1, a.address2, a.city, a.task_due_date  
+
+ from a
+
+ ORDER BY min(a.task_due_date) OVER (PARTITION BY a.user_id) asc, a.user_id asc, min(a.task_due_date) OVER (PARTITION BY a.property_id) asc
 ```
 
-**26**
+### 27 - Tasks completed by hour
 
-```sql
+```sql lines wrap
 WITH hr as
 (SELECT GENERATE_series(date_trunc('week',now() at time zone 'America/Los_Angeles'-interval '2 weeks'),now(),'1 hour')::timestamp as hour)
 SELECT hr.hour, ug.name as user_group, count(*)
@@ -1294,9 +1188,9 @@ GROUP BY 1,2
 ORDER BY 1,2
 ```
 
-**27**
+### 28 - Count of messages replied to in the last hour, by agent
 
-```sql
+```sql lines wrap
 WITH c as (
 SELECT * from public.conversation c
 WHERE c.created_at > now() - interval '6 hours'
@@ -1341,9 +1235,9 @@ SELECT u.user_id, u.name, count(*) from public.message m
 GROUP BY 1,2
 ```
 
-**28**
+### 29 - --user Efective actions every 2 weeks
 
-```sql
+```sql lines wrap
 SELECT u.user_id, u.name, u.user_added, i.time_action_taken, d.tasks_deferred, c.tasks_created, co.tasks_completed, n.notes_created,
 l.status_updates, m.conversations_replied, j.wos_created, call.calls_placed, sms.sms_sent
 FROM 
@@ -1472,6 +1366,7 @@ LEFT JOIN (SELECT u.user_id, u.name, date_trunc('day', m.created_at at time zone
 		   JOIN public.conversation_member cm
 		   	ON m.conversation_member_id = cm.conversation_member_id
 		   AND DATE_TRUNC('day',m.created_at at time zone 'UTC' at time zone 'America/Los_Angeles') >= DATE_trunc('day', now() at time zone 'America/Los_Angeles' - interval '2 weeks')
+
 	JOIN public.user u
 		ON cm.user_id = u.user_id
 		AND cm.user_id <> 1
@@ -1481,9 +1376,9 @@ LEFT JOIN (SELECT u.user_id, u.name, date_trunc('day', m.created_at at time zone
 	AND i.time_action_taken = sms.time_action_taken
 ```
 
-**29**
+### 30 - Webchat inbound
 
-```sql
+```sql lines wrap
 WITH f as (SELECT c.conversation_id, c.created_at, min(m.message_id) as first_msg from public.conversation c
 JOIN public.message m
 	ON c.conversation_id = m.conversation_id
@@ -1495,6 +1390,7 @@ JOIN public.conversation_member cm
 JOIN public.user u
 	ON cm.user_id = u.user_id
 		   AND u.user_type = 'pm'
+		   
 GROUP BY 1,2), pmc as 
 (SELECT f.conversation_id, f.created_at
 	FROM public.message m
@@ -1530,9 +1426,9 @@ FROM raw
 GROUP BY 1,2,3,4,5
 ```
 
-**30**
+### 31 - SMS inbound
 
-```sql
+```sql lines wrap
 WITH f as (SELECT c.conversation_id, c.created_at, min(m.message_id) as first_msg from public.conversation c
 JOIN public.message m
 	ON c.conversation_id = m.conversation_id
@@ -1570,9 +1466,9 @@ FROM raw
 GROUP BY 1,2,3,4,5
 ```
 
-**31**
+### 32 - Inbound tasks
 
-```sql
+```sql lines wrap
 SELECT a.*, b.count as count_today
 FROM (
 SELECT date_part('hour',(t.created_at AT TIME ZONE 'UTC') AT TIME ZONE 'America/Los_Angeles') as hour, count(*), (COUNT(*) / (SUM(COUNT(*)) OVER() ))*100 as task_pct
@@ -1582,6 +1478,7 @@ FROM public.task t
 	AND g.company_id is null
 	AND t.created_at > now()- 3*interval '1 month'
 	GROUP BY 1																												  ) a
+																												 
 LEFT JOIN
 		( SELECT date_part('hour',(t.created_at AT TIME ZONE 'UTC') AT TIME ZONE 'America/Los_Angeles') as hour, count(*)
 		FROM public.task t
@@ -1592,12 +1489,13 @@ LEFT JOIN
 				date_trunc('day',now() AT TIME ZONE 'America/Los_Angeles')
 		GROUP BY 1) b
 on a.hour = b.hour																										   
+																													   
 ORDER BY 1
 ```
 
-**32**
+### 33 - Tasks created
 
-```sql
+```sql lines wrap
 SELECT a.*, b.count as count_today
 FROM (
 SELECT date_trunc('hour',(t.created_at AT TIME ZONE 'UTC') AT TIME ZONE 'America/Los_Angeles') as hour, count(*), (COUNT(*) / (SUM(COUNT(*)) OVER() ))*100 as task_pct
@@ -1607,6 +1505,7 @@ FROM public.task t
         AND g.company_id is null
         AND t.created_at > now()- 3*interval '1 month'
         GROUP BY 1                                                                                                                                                                                                                                  ) a
+                                                                                                                                                                                                                                 
 LEFT JOIN
                 ( SELECT date_trunc('hour',(t.created_at AT TIME ZONE 'UTC') AT TIME ZONE 'America/Los_Angeles') as hour, count(*)
                 FROM public.task t
@@ -1616,12 +1515,12 @@ LEFT JOIN
                 AND date_trunc('day',(t.created_at AT TIME ZONE 'UTC') AT TIME ZONE 'America/Los_Angeles') = 
                                 date_trunc('day',now() AT TIME ZONE 'America/Los_Angeles')
                 GROUP BY 1) b
-on a.hour = b.hour
+on a.hour = b.hour 
 ```
 
-**33**
+### 34 - All action sets triggered for a job
 
-```sql
+```sql lines wrap
 SELECT *
 FROM action_set_instance 
 LEFT JOIN action_set ON action_set.action_set_id = action_set_instance.action_set_id
@@ -1629,19 +1528,9 @@ WHERE relation_id = (SELECT job_id FROM job WHERE slug = 'JOB SLUG HERE') /* rel
 ORDER BY action_set_instance.started_at ASC;
 ```
 
-**34**
+### 35 - Actions that were run as the result of an action set instance
 
-```sql
-SELECT * 
-FROM action_instance 
-LEFT JOIN action ON action_instance.action_id = action.action_id
-WHERE action_set_instance_id = /*action_set_instance_id here*/
-ORDER BY action_instance.created_at ASC;
-```
-
-**35**
-
-```sql
+```sql lines wrap
 (SELECT CONCAT(') as job_url, t.completed_at - t.scheduled_for as age, u.name as agent, ug.name as user_group, t.subject as task_title, 'Oldest Latchel Task' as category
 FROM public.task t
 JOIN public.user u
@@ -1674,9 +1563,22 @@ limit 3)
 ORDER BY 2 desc
 ```
 
-**36**
+### 36 - This will pull the top 3 oldest tasks overall and top 3 latchel tasks - resolved by the team
 
-```sql
+```sql lines wrap
+SELECT u.name, cl.created_at as call_date, cl.duration as call_duration, cl.status as call_status, cl.recording_url, j.name as job_name, concat('https://stage.latchel.com/admin/job/',j.slug) as job_url, * FROM public.call_log cl
+JOIN public.user u
+ON cl.initiated_by_user_id = u.user_id
+AND u.role_id = 2     LEFT JOIN public.call_log_job clj
+ON cl.call_log_id = clj.call_log_id
+LEFT JOIN public.job j
+ON clj.job_id = j.job_id
+ORDER BY 2 desc
+```
+
+### 37 - Weekly Activity Summary
+
+```sql lines wrap
 WITH a as  (SELECT u.user_id, u.name, i.time_action_taken, d.tasks_deferred, c.tasks_created, co.tasks_completed, n.notes_created,
 l.status_updates, m.conversations_replied, j.wos_created, call.calls_placed/*, sms.sms_sent*/
 FROM 
@@ -1833,9 +1735,9 @@ FROM b
 ORDER BY 15 desc, 5 desc
 ```
 
-**37**
+### 38 - Task has been deferred 3\+ times
 
-```sql
+```sql lines wrap
 SELECT t.task_id, count(*) as deferrals, t.created_at, t.subject, CONCAT('', j.slug) as job_url from public.task t
 	JOIN public.task_deferral td
 		ON t.task_id = td.task_id
@@ -1851,9 +1753,11 @@ HAVING COUNT(*) >2
 ORDER BY 2 desc
 ```
 
-**38**
+### 39 - Time to schedule (p90) – get a list of WOs that missed the SLA →
 
-```sql
+Report that shows job details and the length of time it took to schedule every emergency job over the past 12 weeks.
+
+```sql lines wrap
 SELECT date_trunc('week',j.created_at + interval '1 day')-interval '1 day' as week,
 EXTRACT(EPOCH FROM l.created_at - j.created_at)/(60*60) as hrs_to_sched, j.name as job_title, CONCAT('', j.slug) as job_url
 FROM public.job j
@@ -1871,12 +1775,16 @@ FROM public.job j
                                 AND lower(dl.subject) like '%dispatch defer%'
 WHERE date_trunc('week',j.created_at) >= date_trunc('week',now() - 12*interval '1 week')
 AND dl.log_id IS NULL
-ORDER BY 1 desc, 2 desc
+ORDER BY 1 desc, 2 desc  
 ```
 
-**39**
+<Note>
+  Note from Will – With a random spot check, the outliers are driven by residents not answering our emergency callback and the work order dropping to "Waiting for PM"
+</Note>
 
-```sql
+### **40 - Report showing all LCN jobs (issued cards and LCN) and how long it took to get the job scheduled**
+
+```sql lines wrap
 WITH raw as (
 SELECT j.job_id, j.vendor_id, v.company_id as vendor_company_id, l.created_at, MIN(l2.created_at) as min_scheduled from public.log l
 	JOIN public.job j
@@ -1905,6 +1813,7 @@ AND vpm.pm_company_id is null
 AND j.state_id NOT IN (14,19,24)
 GROUP BY 1,2,3,4 )
 SELECT date_trunc('week', raw.created_at) as week, EXTRACT(EPOCH FROM coalesce(raw.min_scheduled,now())-raw.created_at)/(60*60*24) as duration_days, CASE when raw.min_scheduled is null then 1 else 0 end as unscheduled, j.name as job_title, CONCAT('https://app.latchel.com/admin/job/', j.slug) as job_url, j.created_at, c.name as vendor_co
+
 from raw
 JOIN public.job j
 	ON raw.job_id = j.job_id
@@ -1913,9 +1822,9 @@ JOIN public.company c
 ORDER BY 1 desc, 2 desc
 ```
 
-**40**
+### 41 - Troubleshooting Should call back outcomes  aside from "could not connect to resident"
 
-```sql
+```sql lines wrap
 SELECT date_trunc('day', l.created_at), right(l.subject, length(l.subject) - position('over the phone' in l.subject) - 13), count(*) from public.log l
 	WHERE l.subject like '% was able to troubleshoot the request over the phone%'
 	GROUP BY 1,2
@@ -1923,32 +1832,19 @@ SELECT date_trunc('day', l.created_at), right(l.subject, length(l.subject) - pos
 	LIMIT 1000
 ```
 
-**41**
+### 42 - Time to Schedule emergency WO – P90
 
-```sql
-SELECT date_trunc('week',j.created_at + interval '1 day')-interval '1 day' as week,
-EXTRACT(EPOCH FROM l.created_at - j.created_at)/(60*60) as hrs_to_sched, j.name as job_title, CONCAT('', j.slug) as job_url
-FROM public.job j
-        join (SELECT l.relation_id, min(l.created_at) as created_at
-                  FROM public.log l
-                WHERE l.loggable_type = 'Latchel\State'
-                        AND l.loggable_id = 4
-                  AND l.relation_type = 'Latchel\Job'
-                GROUP BY l.relation_id  ) l
-                ON j.job_id = l.relation_id
-                AND j.is_emergency = 1
-                        LEFT JOIN public.log dl
-                                ON l.relation_id = dl.relation_id
-                                AND dl.relation_type = 'Latchel\Job'
-                                AND lower(dl.subject) like '%dispatch defer%'
-WHERE date_trunc('week',j.created_at) >= date_trunc('week',now() - 12*interval '1 week')
-AND dl.log_id IS NULL
-ORDER BY 1 desc, 2 desc
+```sql lines wrap
+SELECT date_trunc('day', l.created_at), right(l.subject, length(l.subject) - position('over the phone' in l.subject) - 13), count(*) from public.log l
+	WHERE l.subject like '% was able to troubleshoot the request over the phone%'
+	GROUP BY 1,2
+	ORDER BY 1 desc, 2 desc
+	LIMIT 1000
 ```
 
-**42**
+### 43 - All LCN (Job Not Resolved) reports
 
-```sql
+```sql lines wrap
 WITH raw as (
 SELECT v.company_id, v.name, l.created_at, j.job_id from public.log l
 	JOIN public.job j
@@ -1968,15 +1864,16 @@ WHERE l.subject = 'Task Created: Resident Says Issue is Not Resolved'
 	AND vpm.pm_company_id is null
 	AND date_trunc('quarter',l.created_at at time zone 'utc' at time zone 'America/Los_Angeles') >= date_trunc('quarter',now() at time zone 'America/Los_Angeles'- interval '3 months') 
 )
+
 SELECT raw.*, concat('', j.slug) as job_url FROM raw
 JOIN public.job j
 	ON raw.job_id = j.job_id
 ORDER BY 3 desc
 ```
 
-**43**
+### 44 - Report showing all LCN jobs (issued cards and LCN) and how long it took to get the job scheduled
 
-```sql
+```sql lines wrap
 WITH raw as (
 SELECT j.job_id, j.vendor_id, v.company_id as vendor_company_id, l.created_at, MIN(l2.created_at) as min_scheduled from public.log l
 	JOIN public.job j
@@ -2005,6 +1902,7 @@ AND vpm.pm_company_id is null
 AND j.state_id NOT IN (14,19,24)
 GROUP BY 1,2,3,4 )
 SELECT date_trunc('week', raw.created_at) as week, EXTRACT(EPOCH FROM coalesce(raw.min_scheduled,now())-raw.created_at)/(60*60*24) as duration_days, CASE when raw.min_scheduled is null then 1 else 0 end as unscheduled, j.name as job_title, CONCAT('', j.slug) as job_url, j.created_at, c.name as vendor_co
+
 from raw
 JOIN public.job j
 	ON raw.job_id = j.job_id
@@ -2013,9 +1911,16 @@ JOIN public.company c
 ORDER BY 1 desc, 2 desc
 ```
 
-**44**
+### 45 - **SMS conversation**
 
-```sql
+- timestamp
+- user ID
+- contact type (who)
+- reply minutes
+- percentile
+- duration
+
+```sql lines wrap
 WITH f as (SELECT c.conversation_id, c.created_at, min(m.message_id) as first_msg from public.conversation c
 JOIN public.message m
 ON c.conversation_id = m.conversation_id
@@ -2051,9 +1956,16 @@ JOIN public.conversation c
 ON raw.conversation_id = c.conversation_id
 ```
 
-**45**
+### 46 - Webchat conversation
 
-```sql
+- timestamp
+- user ID
+- contact type (who)
+- reply minutes
+- percentile
+- duration
+
+```sql lines wrap
 WITH f as (SELECT c.conversation_id, c.created_at, min(m.message_id) as first_msg from public.conversation c
 JOIN public.message m
 ON c.conversation_id = m.conversation_id
@@ -2065,6 +1977,7 @@ AND m.conversation_member_id = cm.conversation_member_id
 JOIN public.user u
 ON cm.user_id = u.user_id
 AND u.user_type = 'pm'
+
 GROUP BY 1,2), pmc as
 (SELECT f.conversation_id, f.created_at, COALESCE(u.user_type, 'unknown') as contact_type
 FROM public.message m
@@ -2093,9 +2006,9 @@ JOIN public.conversation c
 ON raw.conversation_id = c.conversation_id
 ```
 
-**46**
+### 47 - Want an easy way to see which zip codes a service provider covers (based on existing portfolio settings?) Here's the query, right now it's set for Great Jones
 
-```sql
+```sql lines wrap
 WITH z as
 (SELECT DISTINCT p.portfolio_id, left(p.zip,5) as zip
 from public.property p
@@ -2112,9 +2025,9 @@ JOIN public.company c
 	ON vr.vendor_company_id = c.company_id
 ```
 
-**47**
+### 48 - So I used the above base query to see -- how many work orders are these customers submitting? 41% of the work orders created in the last 30 days have come from 3 customers.
 
-```sql
+```sql lines wrap
 with pkg as (
 SELECT distinct j.job_id, p.property_id, p.portfolio_id, p.pm_company_id,
 COALESCE(sp.package_id, spo.package_id, sc.package_id) as package_id
@@ -2157,9 +2070,9 @@ JOIN public.company c
 GROUP BY 1,2
 ```
 
-**48**
+### 49 - I also thought to myself: not all work orders are created equal--so, who's creating the biggest amount of 'problem' work orders.I sliced one way, looking at all work orders that aren't yet closed and have been updated within the last 30 days.  60% come from the same 3 customers listed above
 
-```sql
+```sql lines wrap
 SELECT distinct j.job_id, p.property_id, p.portfolio_id, p.pm_company_id,
 COALESCE(sp.package_id, spo.package_id, sc.package_id) as package_id
 FROM public.property p
@@ -2202,9 +2115,9 @@ JOIN public.company c
 GROUP BY 1,2
 ```
 
-**49**
+### 50 - but maybe that's unfair, since it's overly weighting the companies that submit a lot of work orders. so let's exclude the work orders that have been created within the last 2 weeks (since that's more than enough time to resolve most jobs)
 
-```sql
+```sql lines wrap
 with pkg as (
 SELECT distinct j.job_id, p.property_id, p.portfolio_id, p.pm_company_id,
 COALESCE(sp.package_id, spo.package_id, sc.package_id) as package_id
@@ -2249,19 +2162,23 @@ JOIN public.company c
 GROUP BY 1,2
 ```
 
-**50**
+### 51 - Query WO cancelled
 
-```sql
+```sql lines wrap
 SELECT date_trunc('quarter',j.created_at), s.name, count(*), avg(extract('epoch' from j.updated_at - j.created_at)/(60*60*24)) avg_days_to_status
+
 FROM public.job j
+
 JOIN public.state s
-          ON j.state_id = s.state_id
+
+          ON j.state_id = s.state_id
+
 GROUP BY 1,2
 ```
 
-**51**
+### 52 - Web Chat Missed SLA Intervals (BigQuery query)
 
-```sql
+```sql lines wrap
 WITH f AS (
   SELECT
     c.conversation_id,
@@ -2271,6 +2188,7 @@ WITH f AS (
     c.type = 'web'
       AND DATE(DATETIME(CAST(c.created_at AS TIMESTAMP), 'America/Los_Angeles')) BETWEEN PARSE_DATE('%Y%m%d', '20251026') AND PARSE_DATE('%Y%m%d', '20251101') --<------------------- CHANGE DATE HERE
 ),
+
 pmc AS (
   SELECT
     f.conversation_id,
@@ -2282,6 +2200,7 @@ pmc AS (
   LEFT JOIN `emergency_dataset_public.user` AS u
     ON cm.user_id = u.user_id
 ),
+
 raw AS (
   SELECT 
     pmc.conversation_id,
@@ -2327,11 +2246,3 @@ ORDER BY
   day DESC,
   hour ASC;
 ```
-
-**52**
-
-```sql
-
-```
-</Accordion>
-</AccordionGroup>
