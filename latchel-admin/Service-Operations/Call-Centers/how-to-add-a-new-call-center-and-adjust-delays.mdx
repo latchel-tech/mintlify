@@ -1,78 +1,53 @@
 ---
 title: "How to: Add a New Call Center & Adjust Delays"
-groups: ["latchel"]
+groups: ["la"]
 ---
 
 # Purpose
 
 <Info>
-**Purpose of this document**
+  **Purpose of this document**
 
-Provide instructions on how to add a new external call center to handle overflow calls
+  Provide instructions on how to add a new external call center to handle overflow calls
 </Info>
 
 ## Step-by-Step Guide
 
 <Info>
-**What happened prior to this step?**
+  **What happened prior to this step?**
 
-- Agree on Service and Pricing
-
-- Do a demo session and provide training materials
-
-- Get phone number they will be receiving our calls
+  - Agree on Service and Pricing
+  - Do a demo session and provide training materials
+  - Get phone number they will be receiving our calls
 </Info>
 
 ### 1 - How to add a Call Center to the English Call Battle
 
 1. Configuration Steps:[Console | Twilio](http://console.twilio.com) [**Console | Twilio**](https://console.twilio.com/us1/develop/twiml-bins/twiml-bins?frameUrl=/console/twiml-bins)Twilio Console[Console | Twilio](http://console.twilio.com) [**Console | Twilio**](https://console.twilio.com/us1/develop/phone-numbers/manage/active?frameUrl=/console/phone-numbers/incoming)Twilio Console
-
-1. Head over to Twilio's [TwiML Bins](https://console.twilio.com/us1/develop/twiml-bins/twiml-bins?frameUrl=/console/twiml-bins).
-
-2. Create a new TwiML Bin and copy over the TwiML from an existing Call Center Bin (e.g. `Voicelink Columbus (Delay)`). Give the new TwiML Bin a descriptive friendly name, such as `ABC Call Center - English (Delay)` . You will need to use this name later.
-
-3. Update the   `<Dial>xxxxxxxxxx</Dial>` command in the TwiML you copied over to be the new target call center number. Save your Bin.
-
-4. Head over to Twilio's [Active Numbers](https://console.twilio.com/us1/develop/phone-numbers/manage/active?frameUrl=/console/phone-numbers/incoming).
-
-5. Buy a new phone number (any local number will do). Store this phone number, since you will use it later.
-
-6. Update the friendly name for the number, e.g.  `ABC Call Center - English`
-
-7. For the new number, update "A Call Comes In" to use a TwiML Bin, and select the TwiML bin you created earlier. Save the number.
-
-8. Run a test -- call the number you just created. After an x second delay (set by your TwiML Bin) you should get connected to the call center.
-
-9. Go back to Twilio's [Active Numbers](https://console.twilio.com/us1/develop/phone-numbers/manage/active?frameUrl=/console/phone-numbers/incoming). Search for the "Call Center" in the friendly name. English Call Center Forward = [**(415) 340-7651**](#) Our Spanish Call Center Forward = [**(312) 477-2255**](#)
-
-1. Copy the Webhook for the call center forward
-
-10. Update the call center webhook to include the new call center proxy number you created above. `https://app.latchel.com/ext/dueling-call-centers/twiml-begin-duel?call_center%5B%5D=2245349923&call_center%5B%5D=9034377682&call_center%5B%5D=9036627380 `Save the number.
-
-1. `call_center%5B%5D=2245349923&call_center%5B%5D=9034377682&call_center%5B%5D=9036627380`&`call_center%5B%5D=`new number
-
-11. Update the [Dueling Calls Doc](https://docs.google.com/document/d/10FQvx7gFgrIQ6eqREEzAwfFIma45evxTG1Zv6NdVYVI/edit) with the reference numbers and the new ranking.
-
-12. Ask the Call Center to send a test email to [emergency@latchel.com](mailto:emergency@latchel.com) and check if that email is showing up in Freshdesk. If not, reach out to Joseph to adjust email forward rules in the [emergency@latchel.com](mailto:emergency@latchel.com) google account
+2. Head over to Twilio's [TwiML Bins](https://console.twilio.com/us1/develop/twiml-bins/twiml-bins?frameUrl=/console/twiml-bins).
+3. Create a new TwiML Bin and copy over the TwiML from an existing Call Center Bin (e.g. `Voicelink Columbus (Delay)`). Give the new TwiML Bin a descriptive friendly name, such as `ABC Call Center - English (Delay)` . You will need to use this name later.
+4. Update the   `<Dial>xxxxxxxxxx</Dial>` command in the TwiML you copied over to be the new target call center number. Save your Bin.
+5. Head over to Twilio's [Active Numbers](https://console.twilio.com/us1/develop/phone-numbers/manage/active?frameUrl=/console/phone-numbers/incoming).
+6. Buy a new phone number (any local number will do). Store this phone number, since you will use it later.
+7. Update the friendly name for the number, e.g.  `ABC Call Center - English`
+8. For the new number, update "A Call Comes In" to use a TwiML Bin, and select the TwiML bin you created earlier. Save the number.
+9. Run a test -- call the number you just created. After an x second delay (set by your TwiML Bin) you should get connected to the call center.
+10. Go back to Twilio's [Active Numbers](https://console.twilio.com/us1/develop/phone-numbers/manage/active?frameUrl=/console/phone-numbers/incoming). Search for the "Call Center" in the friendly name. English Call Center Forward = [**(415) 340-7651**](#) Our Spanish Call Center Forward = [**(312) 477-2255**](#)
+11. Copy the Webhook for the call center forward
+12. Update the call center webhook to include the new call center proxy number you created above. `https://app.latchel.com/ext/dueling-call-centers/twiml-begin-duel?call_center%5B%5D=2245349923&call_center%5B%5D=9034377682&call_center%5B%5D=9036627380 `Save the number.
+13. `call_center%5B%5D=2245349923&call_center%5B%5D=9034377682&call_center%5B%5D=9036627380`&`call_center%5B%5D=`new number
+14. Update the [Dueling Calls Doc](https://docs.google.com/document/d/10FQvx7gFgrIQ6eqREEzAwfFIma45evxTG1Zv6NdVYVI/edit) with the reference numbers and the new ranking.
+15. Ask the Call Center to send a test email to [emergency@latchel.com](mailto:emergency@latchel.com) and check if that email is showing up in Freshdesk. If not, reach out to Joseph to adjust email forward rules in the [emergency@latchel.com](mailto:emergency@latchel.com) google account
 
 ### 2 - How to add a delay to a Call Center to be added to the Battle and adjust delay times
 
 1. Go to Twillio’s page with the TwiML Bins for the call centers - [Console | Twilio](https://console.twilio.com/us1/develop/twiml-bins/twiml-bins?frameUrl=%2Fconsole%2Ftwiml-bins%3Fx-target-region%3Dus1)
-
 2. Access the TwiML Bins for the Call Center you want to add a delay
-
 3. Set the “length” to equal to when you want the call center to enter the battle.
-
-1. The delay time means the time that it takes for the battle to start since the call arrives to it. In other words, it means the call will be only available to our internal team for that number of seconds, then it will start being offered to that call center at the same time it is still being offered to our team, and potentially other call centers (depends on their own delay setting)
+4. The delay time means the time that it takes for the battle to start since the call arrives to it. In other words, it means the call will be only available to our internal team for that number of seconds, then it will start being offered to that call center at the same time it is still being offered to our team, and potentially other call centers (depends on their own delay setting)
 
 <Frame>
-  <img src="/images/cc-4.png" />
+  ![](/images/cc-4.png)
 </Frame>
 
-**This is the text for that coding:**
-
-<?xml version="1.0" encoding="UTF-8"?>
-<Response>
-<Pause length="37"/>
-<Dial>2535275002</Dial>
-</Response>
+**This is the text for that coding:** 2535275002

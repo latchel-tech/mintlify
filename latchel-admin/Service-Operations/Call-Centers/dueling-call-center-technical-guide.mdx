@@ -1,4 +1,115 @@
 ---
 title: "Dueling Call Center Technical Guide"
-groups: ["latchel"]
+group: ["latchel"]
 ---
+
+## **Dueling call center number**
+
+| **Friendly Name** | **Phone Number** | **Link** |
+| :-- | :-- | :-- |
+| <h4>**Spanish Call Center Forward**</h4> | (312) 477-2255 | [Console \| Twilio](https://console.twilio.com/us1/develop/phone-numbers/manage/incoming/PN0b97b5fd3b0b74b6dc0b4d8b6e428117/configure) |
+| <h4>**Call Center Forward(English)**</h4> | (415) 340-7651 | [Console \| Twilio](https://console.twilio.com/us1/develop/phone-numbers/manage/incoming/PN864f3dfe6ac2cb6decb8a30481a7254e/configure) |
+
+## **Dueling call center directive**
+
+- Webhook:  <br />[https://app.latchel.com/ext/dueling-call-centers/twiml-begin-duel?call\_center%5B%5D=](https://app.latchel.com/ext/dueling-call-centers/twiml-begin-duel?call_center%5B%5D= "https://app.latchel.com/ext/dueling-call-centers/twiml-begin-duel?call_center%5B%5D=")`[number_1]`&call\_center%5B%5D=`[number_2]`&`[...]`&call\_center%5B%5D=`[number_n]`
+
+| **Name** | **Webhook** |
+| :-- | :-- |
+| **_Call Center English Battle_** | [<u>https://app.latchel.com/ext/dueling-call-centers/twiml-begin-duel?call\_center%5B%5D=9785772018&call\_center%5B%5D=9034377682&call\_center%5B%5D=8335484312</u>](https://app.latchel.com/ext/dueling-call-centers/twiml-begin-duel?call_center%5B%5D=9785772018&call_center%5B%5D=9034377682&call_center%5B%5D=8335484312 "https://app.latchel.com/ext/dueling-call-centers/twiml-begin-duel?call_center%5B%5D=9785772018&call_center%5B%5D=9034377682&call_center%5B%5D=8335484312") |
+| **_Call Center Spanish Battle Webhook_** | [_<u>https://app.latchel.com/ext/dueling-call-centers/twiml-begin-duel?call\_center%5B%5D=8005814136&call\_center%5B%5D=2063330590&call\_center%5B%5D=8596961888&call\_center%5B%5D=9894877465</u>_](https://app.latchel.com/ext/dueling-call-centers/twiml-begin-duel?call_center%5B%5D=8005814136&call_center%5B%5D=2063330590&call_center%5B%5D=8596961888&call_center%5B%5D=9894877465 "https://app.latchel.com/ext/dueling-call-centers/twiml-begin-duel?call_center%5B%5D=8005814136&call_center%5B%5D=2063330590&call_center%5B%5D=8596961888&call_center%5B%5D=9894877465") |
+
+## Call Center Partner Numbers
+
+| **Call Center Name** | **Direct number** | \*\*twilio number \*\* |
+| :-- | :-- | :-- |
+| Sunshine (Spanish) | 2063330590 | (859) 696-1888 |
+| voicelink Columbus | 7372153142 | (903) 437-7682 |
+| TMP (English) | 5514440868 | **<u>978 577 2018</u>** |
+| TMP (Spanish) | 5514440867 | **<u>989 487 7465</u>** |
+| Amazon Connect English | 8335484312 | **224 993 9910** |
+| Amazon connect Spanish | 1-800-581-4136 | **Didn’t create one** |
+
+## **SOP to add new call centers**
+
+[How to: Add a New Call Center & Adjust Delays](/latchel-admin/Service-Operations/Call-Centers/how-to-add-a-new-call-center-and-adjust-delays)
+
+## **Active Studio Flows**
+
+- [Automated SMS Line Router](https://console.twilio.com/us1/service/studio/FWe250a5fb126c4508f09cd1da92b46b39/studio-flow-instance-canvas?frameUrl=%2Fconsole%2Fstudio%2Fflows%2FFWe250a5fb126c4508f09cd1da92b46b39%3Fx-target-region%3Dus1 "https://console.twilio.com/us1/service/studio/FWe250a5fb126c4508f09cd1da92b46b39/studio-flow-instance-canvas?frameUrl=%2Fconsole%2Fstudio%2Fflows%2FFWe250a5fb126c4508f09cd1da92b46b39%3Fx-target-region%3Dus1")
+- [Agressive Web Routing: Hotline IVR Flow](https://console.twilio.com/us1/service/studio/FW42d42dfbafd469ad8934b7e2dc4c61c2/studio-flow-instance-canvas?frameUrl=%2Fconsole%2Fstudio%2Fflows%2FFW42d42dfbafd469ad8934b7e2dc4c61c2%3Fx-target-region%3Dus1 "https://console.twilio.com/us1/service/studio/FW42d42dfbafd469ad8934b7e2dc4c61c2/studio-flow-instance-canvas?frameUrl=%2Fconsole%2Fstudio%2Fflows%2FFW42d42dfbafd469ad8934b7e2dc4c61c2%3Fx-target-region%3Dus1")
+- [\[Hemlane\] Chatbot Enabled Hotline IVR Flow](https://console.twilio.com/us1/service/studio/FW3877b87b6cbd782faf4495fb6fa50ceb/studio-flow-instance-canvas?frameUrl=%2Fconsole%2Fstudio%2Fflows%2FFW3877b87b6cbd782faf4495fb6fa50ceb%3Fx-target-region%3Dus1 "https://console.twilio.com/us1/service/studio/FW3877b87b6cbd782faf4495fb6fa50ceb/studio-flow-instance-canvas?frameUrl=%2Fconsole%2Fstudio%2Fflows%2FFW3877b87b6cbd782faf4495fb6fa50ceb%3Fx-target-region%3Dus1")
+- [Leonardo247 (on-call product) studio flow](https://console.twilio.com/us1/service/studio/FWb6ab7de4bedeeb6b95d83008dd630461/studio-flow-instance-canvas?frameUrl=%2Fconsole%2Fstudio%2Fflows%2FFWb6ab7de4bedeeb6b95d83008dd630461%3Fx-target-region%3Dus1 "https://console.twilio.com/us1/service/studio/FWb6ab7de4bedeeb6b95d83008dd630461/studio-flow-instance-canvas?frameUrl=%2Fconsole%2Fstudio%2Fflows%2FFWb6ab7de4bedeeb6b95d83008dd630461%3Fx-target-region%3Dus1")
+
+## **Call Battle Flow Chart**
+
+<Frame>
+  ![](/images/cc-5.png)
+</Frame>
+
+## **Twiml for delay**
+
+```text
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Response>
+
+ <Pause length="43"/>
+
+ <Dial>INSERTDIRECTDIALNUMBER</Dial>
+
+</Response>
+```
+
+## **Call Battle Queries**
+
+**Time to Answer**
+
+```text
+SELECT 
+date_trunc('week',d.created_at + interval '1 day') - interval '1 day' as week ,
+percentile_disc(.9) within group (order by EXTRACT(EPOCH FROM d.updated_at - d.created_at))
+from public.dueling_call_center_call d 
+where status = 'won'
+AND date_trunc('week',d.created_at + interval '1 day') - interval '1 day' = 
+'2022-02-20'::timestamp -- update to be week in question
+GROUP BY 1
+```
+
+**Calls won**
+
+```text
+SELECT count (distinct dccc.call_sid)
+FROM dueling_call_center_call DCCC
+WHERE DCCC.created_at >now()-interval '3 hours'
+and dccc.outbound_phone = '9034377682'
+and dccc.status ='lost'
+ORDER BY 1 DESC
+```
+
+**Call Centers No Longer In Use**
+
+| 1 | call center plus | 2535275002 | 1 903 662 7380 |
+| :-- | :-- | :-- | :-- |
+| 2 | AnswerPro (English) | 9136767166 | 206 737 7902 |
+| 3 | AnswerPro (Spanish) | 9136767000 | [**<u>(206) 533-3039</u>**](https://www.twilio.com/console/phone-numbers/incoming/PN5a8a8d0715384bb0c0b866b52e22b5fd "https://www.twilio.com/console/phone-numbers/incoming/PN5a8a8d0715384bb0c0b866b52e22b5fd") |
+| 4 | Arvig (English) | 6516022499 | **<u>903-326-2107</u>** |
+| 5 | Nexa (English) | 9894991564 | **<u>970 709 7985</u>** |
+
+## **Mapping table for Leonardo247**
+
+<Accordion title="Latchel On-Call - English">
+  - **Dueling CC→ TMP# (Direct number to call center):** (551) 444-0869
+  - **Intake form URL:** [https://on-call.latchel.com/call-center/start](https://on-call.latchel.com/call-center/start)
+  - **Twiml bin:** [Console | Twilio](https://console.twilio.com/us1/develop/twiml-bins/twiml-bins?frameUrl=%2Fconsole%2Ftwiml-bins%2FEHed732eee93db89c6ccabe3d53d40931b%3F__override_layout__%3Dembed%26bifrost%3Dtrue%26x-target-region%3Dus1&currentFrameUrl=%2Fconsole%2Ftwiml-bins%2FEHff630e8c272b3d53a8ccbb52be055160%3F__override_layout__%3Dembed%26bifrost%3Dtrue%26x-target-region%3Dus1)
+  - **Studio flow→DCC hook:** 18647774182
+</Accordion>
+
+<AccordionGroup>
+  <Accordion title="Latchel On-Call - Spanish">
+    - **Dueling CC→ TMP# (Direct number to call center):** (551) 444-0871
+    - **Intake form URL:** [https://on-call.latchel.com/call-center/start](https://on-call.latchel.com/call-center/start)
+    - **Twiml bin:** [Console | Twilio](https://console.twilio.com/us1/develop/twiml-bins/twiml-bins?frameUrl=%2Fconsole%2Ftwiml-bins%2FEHb7511e5f99e1313b7dd355032eeec6b3%3F__override_layout__%3Dembed%26bifrost%3Dtrue%26x-target-region%3Dus1&currentFrameUrl=%2Fconsole%2Ftwiml-bins%2FEHb7511e5f99e1313b7dd355032eeec6b3%3F__override_layout__%3Dembed%26bifrost%3Dtrue%26x-target-region%3Dus1)
+    - **Studio flow→DCC hook:** 12025179257
+  </Accordion>
+</AccordionGroup>

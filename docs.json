@@ -768,6 +768,42 @@
                             ]
                           }
                         ]
+                      },
+                      {
+                        "group": "Reporting",
+                        "pages": [
+                          "latchel-admin/Service-Operations/Reporting/how-to-download-historical-inbound-call-recordings-using-twilio-and-google-drive",
+                          "latchel-admin/Service-Operations/Reporting/how-to-supervisors-metrics",
+                          "latchel-admin/Service-Operations/Reporting/job-aid-sqls-for-program-management",
+                          "latchel-admin/Service-Operations/Reporting/service-ops-call-reports",
+                          "latchel-admin/Service-Operations/Reporting/service-ops-email-reports",
+                          "latchel-admin/Service-Operations/Reporting/understanding-p90-p75-and-p50-performance-metrics"
+                        ]
+                      },
+                      {
+                        "group": "Call Centers",
+                        "pages": [
+                          "latchel-admin/Service-Operations/Call-Centers/dueling-call-center-technical-guide",
+                          "latchel-admin/Service-Operations/Call-Centers/call-battle-flow-chart",
+                          "latchel-admin/Service-Operations/Call-Centers/how-to-add-a-new-call-center-and-adjust-delays",
+                          "latchel-admin/Service-Operations/Call-Centers/investigating-dueling-call-center-call-records-in-latchel-via-twilio-and-pg-admin"
+                        ]
+                      },
+                      {
+                        "group": "Training Documentation",
+                        "pages": [
+                          "latchel-admin/Service-Operations/Training-Documentation/how-to-check-for-updates-on-training-materials",
+                          "latchel-admin/Service-Operations/Training-Documentation/job-aid-shadowing-phases-and-expectations",
+                          "latchel-admin/Service-Operations/Training-Documentation/new-operations-associate-onboarding-plan"
+                        ]
+                      },
+                      {
+                        "group": "Labor Planning / COGS Processes",
+                        "pages": [
+                          "latchel-admin/Service-Operations/COGS/notifying-finance-of-service-ops-team-changes",
+                          "latchel-admin/Service-Operations/COGS/notifying-finance-of-variable-fixed-role-classifications",
+                          "latchel-admin/Service-Operations/COGS/reporting-discretionary-ops-spend-to-finance"
+                        ]
                       }
                     ]
                   }

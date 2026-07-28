@@ -4,37 +4,24 @@ groups: ["latchel"]
 ---
 
 <Info>
-<Info>
+  **Purpose**
 
-</Info>
-
-**Purpose**
-
-To determine which call center won or lost a dueling call using Twilio call logs and Latchel's database records. This SOP outlines how to retrieve the queue_id from Twilio and use it to investigate outcomes in PG Admin.
+  To determine which call center won or lost a dueling call using Twilio call logs and Latchel's database records. This SOP outlines how to retrieve the queue\_id from Twilio and use it to investigate outcomes in PG Admin.
 </Info>
 
 <Note>
-<Note>
+  **Tools Required**
 
-</Note>
-
-**Tools Required**
-
-- Twilio account access
-
-- PG Admin access
+  - Twilio account access
+  - PG Admin access
 </Note>
 
 ### **1. Identify the Three Twilio Records for the Dueling Call**
 
-
 When the Dueling Call Center is triggered, there will be **three** Twilio call records related to the event:
 
 1. **Original Call** – The resident’s incoming call to the emergency line.
-
-2. **Outgoing Call** – The system’s forwarded call to the third-party call center line:
-+1 (415) 340-7651
-
+2. **Outgoing Call** – The system’s forwarded call to the third-party call center line: \+1 (415) 340-7651
 3. **Incoming Rerouted Call** – If neither third-party center picks up, the call is routed back to Latchel’s Amazon Connect line.
 
 ### **2. Locate the Queue ID in Twilio**
@@ -42,36 +29,42 @@ When the Dueling Call Center is triggered, there will be **three** Twilio call r
 #### **2.1: Search for the Caller’s Phone Number**
 
 - Go to Twilio Call Logs.
-
 - Search using the resident’s **caller number**.
 
-- <Frame>
-  <img src="/images/cc-1.png" />
+<Frame>
+  ![](/images/cc-1.png)
 </Frame>
 
-#### **2.2: Find the Second Incoming Call to **+14153407651
+#### 2.2: Find the Second Incoming Call to \*\*\+14153407651
 
-- Identify the second **incoming call** to the dueling call center number: +1 (415) 340-7651.
+- Identify the second **incoming call** to the dueling call center number: \+1 (415) 340-7651.
 
-- <Frame>
-  <img src="/images/cc-2.png" />
+<Frame>
+  ![](/images/cc-2.png)
 </Frame>
 
-- Expand the POST request to:
-https://app.latchel.com/ext/dueling-call-centers/twiml-begin-duel
+- Expand the POST request to: [https://app.latchel.com/ext/dueling-call-centers/twiml-begin-duel](https://app.latchel.com/ext/dueling-call-centers/twiml-begin-duel)
 
-- <Frame>
-  <img src="/images/cc-3.png" />
+<Frame>
+  ![](/images/cc-3.png)
 </Frame>
 
 #### **2.3: Extract the Queue ID**
 
-- In the expanded POST body, locate the <Enqueue> XML block.
+- In the expanded POST body, locate the `<Enqueue>` XML block.
+- Copy the `queue` parameter value from the `waitUrl`.
 
-- Copy the queue parameter value from the waitUrl.
-Example:91234<?xml version="1.0" encoding="UTF-8"?><Response>    <Enqueue waitUrl="https://app.latchel.com/ext/dueling-call-centers/twmil-resident-wait?queue=6869baedee29b&amp;queue_sid=QU2d187f7a89b9bba78dad54deeedce81d&amp;incoming_call_sid=CA2d160d5a0ef6d5b77156844150422412" action="https://app.latchel.com/ext/dueling-call-centers/incoming-caller-queue-update?queue=6869baedee29b&amp;queue_sid=QU2d187f7a89b9bba78dad54deeedce81d&amp;incoming_call_sid=CA2d160d5a0ef6d5b77156844150422412">6869baedee29b</Enqueue></Response>​queue=6869baedee29b
+Example:
 
-- This string is your queue_id for use in the next step. Copy just the numbers.
+```text
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Enqueue waitUrl="https://app.latchel.com/ext/dueling-call-centers/twmil-resident-wait?queue=6869baedee29b&amp;queue_sid=QU2d187f7a89b9bba78dad54deeedce81d&amp;incoming_call_sid=CA2d160d5a0ef6d5b77156844150422412" action="https://app.latchel.com/ext/dueling-call-centers/incoming-caller-queue-update?queue=6869baedee29b&amp;queue_sid=QU2d187f7a89b9bba78dad54deeedce81d&amp;incoming_call_sid=CA2d160d5a0ef6d5b77156844150422412">6869baedee29b</Enqueue>
+</Response>
+```
+
+- `queue=6869baedee29b`
+- This string is your `queue_id` for use in the next step. Copy just the numbers.
 
 ### **3. Query the Dueling Call Outcome in PG Admin**
 
@@ -81,56 +74,96 @@ Example:91234<?xml version="1.0" encoding="UTF-8"?><Response>    <Enqueue waitUr
 
 #### **3.2: Run the Following Query**
 
-Replace '6869baedee29b' with your queue ID:
+Replace `'6869baedee29b'` with your queue ID:
 
-```
-912345SELECT *FROM dueling_call_center_callWHERE queue_id = '6869baedee29b'ORDER BY dueling_call_center_call_id DESCLIMIT 1000;​
+```text
+SELECT *
+FROM dueling_call_center_call
+WHERE queue_id = '6869baedee29b'
+ORDER BY dueling_call_center_call_id DESC
+LIMIT 1000;
 ```
 
 #### **3.3: Analyze the Results**
 
-- Look for the status column:
-
-- A status of won indicates the call center that successfully answered first.
-
+- Look for the `status` column:
+  - A status of `won` indicates the call center that successfully answered first.
 - Use the **outbound phone number** field to determine **which call center** it was (each vendor has a unique outbound number).
+  - For example:
+    - If the outbound phone number was 9785772018, and the status is `won`, then **TMP English won the call duel**.
+    - For the full list of call center numbers, refer to the table in ​[Dueling Call Center Technical Guide](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2900099095).
 
-- For example:
+**Misc. Queries:**
 
-- If the outbound phone number was 9785772018, and the status is won, then **TMP English won the call duel**.
+This query will return up to 1000 records from `date`, where the `outbound_phone` matches either of the specified numbers.
 
-- For the full list of call center numbers, refer to the table in ​[Dueling Call Center Technical Guide](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2900099095)Open .
-
-**Misc. Queries: **
-
-This query will return up to 1000 records from date, where the outbound_phone matches either of the specified numbers.
-
-```
-9123456SELECT *FROM dueling_call_center_callWHERE DATE(created_at) = '2025-07-05'  AND outbound_phone IN ('9785772018', '989 487 7465')ORDER BY dueling_call_center_call_id DESCLIMIT 1000;​
-```
-
-This query will return records from date.
-
-```
-91234SELECT *FROM dueling_call_center_callWHERE DATE(created_at) = '2025-07-05'ORDER BY dueling_call_center_call_id DESC​
+```text
+SELECT *
+FROM dueling_call_center_call
+WHERE DATE(created_at) = '2025-07-05'
+  AND outbound_phone IN ('9785772018', '989 487 7465')
+ORDER BY dueling_call_center_call_id DESC
+LIMIT 1000;
 ```
 
-This query analyzes call records from the dueling_call_center_call table to identify calls that both:
+This query will return records from `date`.
+
+```text
+SELECT *
+FROM dueling_call_center_call
+WHERE DATE(created_at) = '2025-07-05'
+ORDER BY dueling_call_center_call_id DESC
+```
+
+This query analyzes call records from the `dueling_call_center_cal`l table to identify calls that both:
 
 1. Exceed an 80-second duration target, and
-
 2. Fall within the top 10% of call durations for their respective week (Monday-starting weeks).
 
 It works in three steps:
 
-- call_durations** CTE** – Calculates the duration in seconds for each “won” call and determines the week start date.
-
-- weekly_p90** CTE** – Computes the 90th percentile (P90) call duration for each week.
-
+- `call_durations` CTE – Calculates the duration in seconds for each “won” call and determines the week start date.
+- `weekly_p90` CTE – Computes the 90th percentile (P90) call duration for each week.
 - **Final selection** – Joins the results to filter calls that breach the 80-second target and also meet or exceed that week’s P90 threshold, ordering them by most recent week and longest call first.
 
 The output includes call identifiers, queue details, timestamps, calculated durations, P90 thresholds, and how many seconds each qualifying call exceeded the target.
 
-```
-99123456789101112131415161718192021222324252627282930313233343536WITH call_durations AS (  SELECT     dcs.dueling_call_center_call_id,    dcs.call_sid,    dcs.queue_id,    dcs.outbound_phone,    dcs.created_at,    dcs.updated_at,    EXTRACT(EPOCH FROM (dcs.updated_at - dcs.created_at)) AS duration_seconds,    DATE_TRUNC('week', dcs.created_at)::date AS week  FROM public.dueling_call_center_call dcs  WHERE dcs.status = 'won'),weekly_p90 AS (  SELECT     week,    PERCENTILE_CONT(0.9) WITHIN GROUP (ORDER BY duration_seconds) AS p90_threshold  FROM call_durations  GROUP BY week)SELECT  cd.week,  cd.dueling_call_center_call_id,  cd.call_sid,  cd.queue_id,  cd.outbound_phone,  cd.created_at,  cd.updated_at,  cd.duration_seconds,  wp.p90_threshold,  cd.duration_seconds - 80 AS seconds_over_targetFROM call_durations cdJOIN weekly_p90 wp   ON cd.week = wp.weekWHERE cd.duration_seconds > 80  AND cd.duration_seconds >= wp.p90_threshold​
+```text
+WITH call_durations AS (
+  SELECT 
+    dcs.dueling_call_center_call_id,
+    dcs.call_sid,
+    dcs.queue_id,
+    dcs.outbound_phone,
+    dcs.created_at,
+    dcs.updated_at,
+    EXTRACT(EPOCH FROM (dcs.updated_at - dcs.created_at)) AS duration_seconds,
+    DATE_TRUNC('week', dcs.created_at)::date AS week
+  FROM public.dueling_call_center_call dcs
+  WHERE dcs.status = 'won'
+),
+weekly_p90 AS (
+  SELECT 
+    week,
+    PERCENTILE_CONT(0.9) WITHIN GROUP (ORDER BY duration_seconds) AS p90_threshold
+  FROM call_durations
+  GROUP BY week
+)
+SELECT
+  cd.week,
+  cd.dueling_call_center_call_id,
+  cd.call_sid,
+  cd.queue_id,
+  cd.outbound_phone,
+  cd.created_at,
+  cd.updated_at,
+  cd.duration_seconds,
+  wp.p90_threshold,
+  cd.duration_seconds - 80 AS seconds_over_target
+FROM call_durations cd
+JOIN weekly_p90 wp 
+  ON cd.week = wp.week
+WHERE cd.duration_seconds > 80
+  AND cd.duration_seconds >= wp.p90_threshold
+ORDER BY cd.week DESC, cd.duration_seconds DESC;
 ```
