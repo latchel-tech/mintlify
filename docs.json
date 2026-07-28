@@ -800,9 +800,9 @@
                       {
                         "group": "Labor Planning / COGS Processes",
                         "pages": [
+                          "latchel-admin/Service-Operations/COGS/reporting-discretionary-ops-spend-to-finance",
                           "latchel-admin/Service-Operations/COGS/notifying-finance-of-service-ops-team-changes",
-                          "latchel-admin/Service-Operations/COGS/notifying-finance-of-variable-fixed-role-classifications",
-                          "latchel-admin/Service-Operations/COGS/reporting-discretionary-ops-spend-to-finance"
+                          "latchel-admin/Service-Operations/COGS/notifying-finance-of-variable-fixed-role-classifications"
                         ]
                       }
                     ]
