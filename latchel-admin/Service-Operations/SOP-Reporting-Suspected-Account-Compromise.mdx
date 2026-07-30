@@ -1,0 +1,85 @@
+---
+title: "SOP: Reporting Suspected Account Compromise"
+groups: ["latchel"]
+---
+
+## 🧠 What This Process Is Trying to Solve
+
+<Note>
+We want to prevent security breaches, data loss, and unauthorized access that could harm customers, compromise sensitive information, or disrupt Latchel's operations. The goal is to ensure that any suspected account compromise is reported and contained immediately—by resetting passwords, notifying supervisors, escalating to the right teams, and documenting the incident—so that risks are minimized, affected parties are protected, and the company can respond quickly and transparently.
+</Note>
+
+<Warning>
+**‼️IMPORTANT**
+
+If you notice unauthorized or unintended messages sent to customers, such as those containing random characters like 'xx' or 'ysz,' it may indicate a potential account compromise. It's crucial to address these incidents as possible security breaches and follow the procedures outlined below.
+</Warning>
+
+## 📋 Step-by-Step Process
+
+#### Step 1: Reset Your Password
+
+- **Action**: Immediately reset your account password.
+- **Details**:
+  - Use a strong, unique password that is not used for any other accounts.
+  - Mixing upper and lower-case letters, numbers, and symbols
+  - At least 12-16 characters
+  - Avoid using easily guessed information, such as birthdays or common words
+  - [Use this free password generator tool](https://www.lastpass.com/features/password-generator)
+
+#### Step 2: Notify Your Supervisor
+
+- **Action**: Inform your direct supervisor about the suspected account compromise.
+- **Details**:
+  - Include any suspicious activity you have noticed.
+  - Describe any steps you have already undertaken.
+
+#### Step 3: Supervisor's Preliminary Investigation
+
+- **Action**: Supervisor conducts a preliminary investigation.
+- **Details**:
+  - Review recent outbound messages or activities from associate accounts to assess any potential impact.
+  - Document any findings and determine the need for further action.
+
+#### Step 4: Notify Operations Team for Visibility
+
+- **Action**: Post an alert in the operations-supervisors channel.
+- **Details**:
+  - Mention key stakeholders (e.g., Jen/Joseph) to ensure high visibility.
+  - Provide a brief summary of the suspected compromise and actions taken.
+
+#### Step 5: Escalate to Product Support
+
+- **Action**: Escalate the issue to the product support team if customers were potentially impacted.
+- **Details**:
+  - Compile a list of affected customers or parties.
+  - Provide product support with relevant details for customer outreach.
+  - [How to: Escalate to Product Support](https://latchel.atlassian.net/wiki/spaces/OPS/pages/1485373477/How+to+Escalate+to+Product+Support)
+
+#### Step 6: Security Measures and Follow-Up
+
+- **Action**: Ops Management will notify the supervisors if there is a need to implement additional security checks and training.
+
+#### Reporting and Documentation
+
+- **Action**: Ops Management will document the incident comprehensively and share with the leadership and engineering team within 24 hours.
+- **Details**:
+  - The leadership team will review the incident and recommend improvements.
+  - You may be required to participate in this review process.
+
+*For Management: Query for checking agent actions in the console for a specific interval period*
+
+```
+SELECT * from public.log l 
+where l.creator_id = 615060
+AND l.created_at > now() - interval '10 days'
+```
+
+## 🎯 When to Break This SOP
+
+**Do not break or deviate from this SOP on your own authority.** Always escalate to an Ops Support specialist or follow explicit instructions if you believe an exception is necessary.
+
+## 💡 If You Think This SOP Could Be Improved...
+
+Noticed something clunky or confusing in this process? Or had a situation that wasn't covered here? Or tried something new that didn't work?
+ 👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**

@@ -1,0 +1,125 @@
+---
+title: "Service Operations Change Management Process"
+groups: ["latchel"]
+---
+
+Document the Service Operations Change Management Process for external and internal Stakeholders.
+
+Note: Refer to this document for an overview of the change management process from the Product organization: [[Change Management] Product Process](https://latchel.atlassian.net/wiki/spaces/PROD/pages/2564915203/Change+Management+Product+Process)
+
+## Step by step guide
+
+1. **Getting Service Operations Involved**
+  1. The change could be initiated internally by Service Operations or an external department, for example: Product, CS, Finance, etc.
+  2. The Stakeholder driving the change needs to determine if it may impact Service Operations during the planning phase.
+    1. If one of the following questions is true, the Service Operations Change Management Program Manager (PM) should be involved:
+      1. Will Service Operations need to execute a new workflow as a result of this change?
+      2. Will Service Operations need to modify an existing workflow as a result of this change?
+      3. Is Service Operations staffing potentially affected as a result of this change?
+      4. Could customers reach out to Service Operations to request assistance related to this change?
+      5. Will this change require new or updated customer help guides?
+      6. Will this change affect account configuration?
+      7. Could this change increase the number of escalations to Product Support?
+        1. If in doubt, the Stakeholder can reach out to the Service Operations Change Management Program Manager for clarification.
+  3. The Stakeholder will contact the Service Operations Change Management PM.
+    1. The following information needs to be provided:
+      1. What the intended change is
+      2. Problem driving said change
+      3. Desired timeframe of implementation
+  4. The Service Operations Change Management PM will confirm if the issue in fact affects Service Operations.
+    1. Review that any of the questions from step 1.b.i are affirmative.
+    2. Determine what teams need to be involved.
+      1. Training Team:
+        1. Does the release involve modifying an existing behavior (outside of a guided workflow)?
+        2. Does the release involve adopting an entirely new behavior (outside of a guided workflow)?
+      2. Service Operations Manager:
+        1. Does the release impact workload distribution?
+        2. Does the release impact staff requirements?
+        3. Does the release impact role responsibilities?
+        4. Do we need any new blurbs?
+      3. Service Operations Business Intelligence
+        1. Do we need any report to be updated?
+        2. Do we need any dashboard to be updated?
+      4. Change Management:
+        1. Is there existing documentation that needs to be updated?
+        2. Does a new document need to be created?
+    3. Determine what’s the appropriate timeframe required to support the change.
+      1. Consider the following:
+        1. Training required
+        2. Updates required to documentation
+        3. Updates to reporting or dashboards
+        4. Labor planning
+2. **(Optional) Involve external departments**
+  1. If the change is driven by Service Operations:
+    1. The Stakeholder driving the change needs to answer the following questions to determine if there’s any impact to external departments.
+      1. Customer Success:
+        1. Does the change impact the PM’s expectations of the service received by Service Operations?
+        2. Could the change increase invoice charges to the PM?
+        3. Could the change increase escalations to the PM?
+      2. Finance:
+        1. Could the change increase Latchel’s expenses?
+        2. Does the change impact Finance tasks?
+      3. Product:
+        1. Can the change break the platform?
+        2. Can the change alter the product offering?
+    2. Contact the department’s manager to coordinate the change.
+3. **Preparing Service Operations Support**
+  1. (If needed) Success metrics and rollback thresholds need to be determined by the Stakeholder driving the change.
+  2. Track execution of any required tasks via the preferred project management tool.
+    1. In this case the [https://latchel.atlassian.net/jira/software/projects/PPB/boards/38](https://latchel.atlassian.net/jira/software/projects/PPB/boards/38) board in Jira.
+    2. Obtain any inputs necessary from the external department (Product/CS/Finance).
+      1. Product Input Template: [[Change Management] Product Input Template](AC_LINK_TITLE::[Change Management] Product Input Template)
+      2. There isn’t a template available from other departments.
+    3. Refer to* Table of responsibilities per stakeholder: Service Operations *to know who is responsible for executing the different activities.
+    4. Determine if Operations Support Specialists need to be informed before making the change to ensure that they can support the team with any questions.
+4. **Launching the Change**
+  1. Determine if a War Room channel is necessary to monitor the team.
+    1. War Room channels should not remain open more than 2 weeks after the implementation.
+  2. Communicate the change.
+    1. The communication needs to go out before or right after the change takes place, but it shouldn’t be delayed.
+      1. It’s best to avoid making changes on Fridays to be able to monitor the impact over the next day.
+        1. Exceptions can be made for things that are business critical.
+    2. Determine what is going to be the communication medium
+      1. Slack channel:
+        1. Usually the [https://latchel.slack.com/archives/C2R3MUKGT](https://latchel.slack.com/archives/C2R3MUKGT) channel.
+        2. If the issue affects multiple departments, also post in [https://latchel.slack.com/archives/GFK4DKP5Y](https://latchel.slack.com/archives/GFK4DKP5Y).
+      2. Ops/Troubleshooter All Hands.
+      3. Separate launch meeting.
+    3. Publish the change via the Weekly Newsletter
+      1. The Program Manager will publish a weekly newsletter with a compilation of the following as part of the change management process:
+        1. Service Operations' goals and objectives (this will not change frequently). (From Ops Leadership)
+        2. Discussion topics of the Ops All Hands. (Provided by Training and Quality Program Manager)
+        3. SOPs and Job-aids updated. (Collected by Change Management Program Manager)
+        4. Product releases impacting Service Operations. (Collected by Change Management Program Manager from #product-release Slack channel)
+5. **Post Launch Tracking**
+  1. Follow up with the Service Operations team after 24hrs and 48hrs.
+    1. Is the team having any issues?
+      1. **Serv Ops team to Conduct Audit**
+        1. Perform a change management audit to verify that all procedures and protocols are correctly followed.
+      2. **Store Audit Documentation**
+        1. Save all completed audits in the designated Google Drive folder: **“**[**Change Management Audits for Major Releases**](https://drive.google.com/drive/folders/1NFGd6jvepqXw60WjD-fCG_SBP7cqmQll?usp=sharing)**”**.
+        2. This ensures proper documentation, traceability, and compliance tracking.
+        3. Submit any feedback to svc-ops-feedback channel and follow-up on necessary coaching.
+  2. Gather feedback to iterate and communicate the feedback to the Stakeholder that drove the change.
+  3. Close war-room channel (if any) after two weeks.
+  4. The Stakeholder driving the change will determine if success metrics are met and execute:
+    1. If success metrics are not met, determine if rollback is necessary.
+      1. Conduct root cause analysis of why the change failed.
+
+
+## Table 1. Responsibilities per stakeholder: Service Operations
+
+| **Change Management Program Manager** | **Training and Quality Program Manager** | **Service Operations Manager or Supervisor** | **Data Support Team Leader** | **Product Support Manager** | **Heads of Service Service Operations** | **Business Intelligence** |
+| --- | --- | --- | --- | --- | --- | --- |
+| Coordinate change management process, including Product Support and Data Support.<br/>Compile a list of ongoing product developments that affect operations.<br/>Update or create any SOP (Refer to: [How to: Create a Latchel SOP](https://help.latchel.com/How-to-Create-a-Latchel-SOP)).<br/>Own the feature request intake process.<br/>Own the library request intake process.<br/>Provide feedback to any department post launch. | Training development to support change (if needed).<br/>Training planning and coordination with Service Operations Managers, Supervisors & Operations Support Specialists.<br/>Update or create any job-aid. | Associate workload balancing to support change.<br/>Staff balancing.<br/>Ops compliance with new processes. | Notify Data Support team members | Notify Product Support team members | Provide Service Operations Goals and Objectives. | Perform reporting or dashboard updates. |
+
+## Table 2. Cross-Team Change Management
+
+| | **Production Team** | **Product Support** | **Data Support** | **Customer Profitability** | **Training Team** |
+| --- | --- | --- | --- | --- | --- |
+| **Operational Processes** | | | | | |
+| **Latchel Benefits/Partnerships** | | | | | |
+| **Product Releases** | | | | | |
+| **Help Guide Releases** | | | | | |
+| **General Serv Ops Announcements** | | | | | |
+| **General Serv Ops Policies** | | | | | |

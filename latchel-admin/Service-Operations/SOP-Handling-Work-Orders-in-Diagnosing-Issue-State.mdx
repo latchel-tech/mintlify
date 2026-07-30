@@ -1,0 +1,139 @@
+---
+title: "SOP: Handling Work Orders in “Diagnosing Issue” State"
+groups: ["latchel"]
+---
+
+## 🧠 What This Process Is Trying to Solve
+
+<Note>
+Ensure WOs stuck in Diagnosing Issue progress efficiently with the right next step: complete diagnostics with the resident, skip diagnostics and schedule (if PM/Owner requests), or cancel. This reduces aging, duplicate work, and confusion across teams.
+</Note>
+
+## 📘 Definitions
+
+- **Diagnosing Issue:** Interim state indicating required diagnostic intake has not been completed.
+- **Diagnostic Flow:** The guided question path used during WO submission that determines details and severity.
+- **Emergency-only customers:** Accounts where non-emergency WOs are forwarded to PM, not worked by Ops.
+
+## 🔔 System Behavior and Notifications
+
+- When a WO is created in **Diagnosing Issue**, the system sends the resident a diagnostic intake request up to **3 times** in **24-hour** intervals.
+  - **Standard:** Close/cancel the WO.
+  - **Emergency-only customers:** Forward to PM for their action instead of closing.
+
+## Prerequisites
+
+- Confirm subscription type and customer model (e.g., emergency-only vs. full-service).
+- Verify there is no duplicate or related WO already in progress for the same issue.
+- Have resident or PM/Owner contact information ready if manual action is needed.
+
+## High-Level Pathways
+
+- Resident calls to complete diagnostics → Complete Diagnostics path.
+- PM/Owner instructs to proceed without diagnostics → Skip Diagnostics and proceed to Scheduling.
+- PM/Owner/Resident requests cancellation or no response after reminders → Cancel Work Order (or forward to PM for emergency-only customers).
+
+---
+
+## Step-by-Step Procedure
+
+### Step 1 — Open the WO and Confirm Current State
+
+Navigate to the WO and confirm it is in **Diagnosing Issue**.
+
+- Reference screenshot: "Current state of the WO"
+
+<Frame>
+  <img src="/images/SVC-35.png" />
+</Frame>
+
+<Note>
+Check for existing tasks, prior notes, and any PM instructions before taking action. Avoid duplicate outreach or conflicting updates.
+</Note>
+
+### Step 2 — Open the Action Menu and Select Diagnose Issue
+
+1. Click the **Action** button.
+2. Select **Diagnose Issue** from the menu.
+
+<Frame>
+  <img src="/images/SVC-36.png" />
+</Frame>
+
+### Step 3 — Choose How to Proceed
+
+In the Diagnose Issue modal, choose one of the three options based on the scenario.
+
+<Frame>
+  <img src="/images/SVC-37.png" />
+</Frame>
+
+#### Option A: Complete Diagnostics (Resident needs assistance, Owner/PM requests to diagnose with the resident)
+
+1. Click **Complete Diagnostics**.
+2. **Diagnostic Flow**
+   - Ask the resident the guided questions; capture details accurately.
+   - Confirm severity outcomes and any emergency triggers per standard emergency handling SOPs.
+3. **Proceed with WO submission**
+   - Update title/description with diagnostic details.
+   - Add necessary photos/attachments if provided by resident.
+   - Save and advance the WO to the appropriate next state (e.g., Scheduling).
+4. Document a brief summary note: "Diagnostics completed with resident on call; key findings: [summary]. Next step: [scheduling/approval/etc.]."
+
+<Tip>
+Best practice: Use clear, concise wording from the question prompts in your notes to improve downstream handoffs.
+</Tip>
+
+#### Option B: Skip Diagnostics and Proceed to Scheduling (PM/Owner directive)
+
+1. Click **Skip Diagnostics and Proceed to Scheduling**.
+2. Confirm you have PM/Owner direction to proceed without diagnostics (email/SMS/call note).
+   - Assign skill/category and any vendor preferences per PM settings.
+   - Create or update tasks for vendor outreach/resident coordination as needed.
+3. Add a note: "Per PM/Owner request, skipping diagnostics and proceeding to scheduling." Include the date/time and channel of the directive.
+
+<Note>
+If skipping diagnostics increases risk of misclassification or missed details (e.g., potential emergency), flag to the PM and consider a quick clarifying call with the resident before dispatch.
+</Note>
+
+#### Option C: Cancel Work Order
+
+1. Click **Cancel Work Order**.
+2. Select the appropriate cancel reason (e.g., no response after reminders, issue resolved, duplicate).
+   - "Resident did not complete diagnostics after 3 reminders; canceling per SOP."
+   - "Emergency-only customer: forwarding to PM instead of canceling."
+3. For **emergency-only customers**, do **not** cancel; instead forward to PM with a task and note to review/act.
+
+---
+
+## Operational Controls and Quality Checks
+
+- Verify subscription type and customer model before choosing Skip or Cancel.
+- Search for duplicates or related WOs to avoid double work or dispatch.
+- Use precise, actionable notes that reflect either the diagnostic outcome or the PM instruction.
+- If unsure of the appropriate path, escalate to Ops Support.
+
+## [❓](https://latchel.atlassian.net/wiki/spaces/OPS/pages/759332893/How+to+Handle+Emergency+Work+Orders) **Frequently Asked Questions**
+
+<AccordionGroup>
+<Accordion title="What if diagnostics reveal an emergency?">
+Follow emergency handling SOPs immediately, document findings, and proceed with appropriate dispatch/escalation. Ensure severity and EEC notifications align with standard emergency processes.
+</Accordion>
+
+<Accordion title="Can I skip diagnostics without explicit PM/Owner instruction?">
+No. Only skip when the PM/Owner directs proceeding without diagnostics, and document the instruction in the WO notes.
+</Accordion>
+
+<Accordion title="What if the resident begins diagnostics online after I start?">
+Continue through to completion with the resident on the call if that's faster. Avoid duplicate entries; ensure only one diagnostic path completes and notes are consolidated.
+</Accordion>
+</AccordionGroup>
+
+## **🎯 When to Break This SOP**
+
+**Do not break or deviate from this SOP on your own authority.** Always escalate to an Ops Support specialist or follow explicit instructions if you believe an exception is necessary.
+
+## **💡 If You Think This SOP Could Be Improved...**
+
+Noticed something clunky or confusing in this process? Or had a situation that wasn't covered here? Or tried something new that didn't work?
+ 👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**

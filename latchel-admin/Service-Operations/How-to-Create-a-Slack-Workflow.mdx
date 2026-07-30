@@ -1,0 +1,164 @@
+---
+title: "How to: Create a Slack Workflow"
+groups: ["latchel"]
+---
+
+# 🧠 What This Process Is Trying to Solve
+
+<Note>
+We want to prevent confusion, inefficiency, and errors that can occur when team members manually coordinate routine tasks or communications in Slack. The goal is to provide a clear, step-by-step process for creating Slack workflows, so teams can automate repetitive actions, reduce manual mistakes, and ensure consistent, timely communication—improving both internal operations and the service experience for Latchel's customers.
+
+What is a "Slack Workflow"?
+
+A Slack Workflow is a specific set of actions that happens whenever a trigger is selected. This is useful whenever you need someone to give repeated information in Slack in a uniform way.
+</Note>
+
+## What is a workflow?
+
+Workflows are simple to create if you have administrative access in Slack.
+
+### Types of "Workflows"
+
+1. **From a link in Slack**: To create a workflow triggered by a link in Slack
+2. **On a schedule:** To create a scheduled workflow in Slack
+3. **When an emoji reaction is used**: Someone loads an emoji onto the channel which triggers a set of actions.
+4. **When a person joins a channel**: This workflow is automatically triggered when a new member joins a channel. It can be used to welcome new members and provide them with important information.
+5. **When a list item is updated:** Slack's Workflow Builder does not natively support triggers based on list item updates. For such functionality, you would need to use integrations with project management tools or custom Slack apps.
+6. **From a webhook:** To create a workflow triggered by a webhook
+
+"**From a link in Slack**" is the most commonly used workflow trigger, and it operates as a basic macro.
+
+## How do I create a workflow?
+
+<Danger>
+Only a Slack Admin can create a workflow! If you do not see the option to build a workflow, reach out to your supervisor and they will assist you.
+</Danger>
+
+1. Open Slack: Log in to your Slack workspace.
+2. Click on the "+" button next to the message input field or click on "More" (three dots) in the left sidebar. Choose "Automations"
+
+   <Frame>
+     <img src="/images/SVC-11.png" />
+   </Frame>
+
+3. This will redirect you to another page. Click the "+ New Workflow" button at the top right corner. Then select "Build Workflow".
+
+   <Frame>
+     <img src="/images/SVC-12.png" />
+   </Frame>
+
+4. You will be directed to a new page to create the workflow. Click on "Untitled Workflow" to update the Workflow title and description.
+
+   <Frame>
+     <img src="/images/SVC-13.png" />
+   </Frame>
+
+5. Select the type of workflow you wish to create at the right side of the screen
+
+   <Frame>
+     <img src="/images/SVC-14.png" />
+   </Frame>
+
+6. Proceed to the appropriate selection.
+   1. **From a link in Slack**
+   2. **On a schedule**
+   3. **When an emoji reaction is used**
+   4. **When a person joins a channel**
+   5. **When a list item is updated**
+   6. **From a webhook**
+
+## Sample 1 - From a link in Slack
+
+1. Choose **"From a link in Slack"** as the trigger type. Click "Continue".
+
+   <Frame>
+     <img src="/images/SVC-15.png" />
+   </Frame>
+
+2. After setting up the trigger, you'll move on to adding actions to your workflow. Click **"Add Step"** to begin adding actions.
+
+   <Note>
+   Actions can include sending a message, creating a task, posting in a channel, or other custom actions available within Slack.
+   </Note>
+
+   <Frame>
+     <img src="/images/SVC-16.png" />
+   </Frame>
+
+3. For each step, you will need to configure details such as message content, channel selection, user assignments, etc. Ensure each step is configured to align with the goals of your workflow.
+   a. "**Messages**": This is if you would like the system to send an automatic message during this step, this can be sent to the channel, an admin, or the person who selected the action.
+
+   <Frame>
+     <img src="/images/SVC-17.png" />
+   </Frame>
+
+   b. "**Forms**": This is if you need to create a "macro" or select set of questions you require to have answered. Click "Save" once completed.
+
+   <Frame>
+     <img src="/images/SVC-18.png" />
+   </Frame>
+
+4. Click "Finish Up" to save all changes.
+
+   <Frame>
+     <img src="/images/SVC-19.png" />
+   </Frame>
+
+## Sample 2 - **When a person joins a channel**
+
+1. Select the Channel you wish to apply the workflow to then click "Continue".
+
+   <Frame>
+     <img src="/images/SVC-20.png" />
+   </Frame>
+
+2. For each step, you will need to configure details such as message content, channel selection, user assignments, etc. Ensure each step is configured to align with the goals of your workflow.
+   a. "**Messages**": This is if you would like the system to send an automatic message during this step, this can be sent to the channel, an admin, or the person who selected the action.
+
+   <Frame>
+     <img src="/images/SVC-21.png" />
+   </Frame>
+
+   b. "**Forms**": This is if you need to create a "macro" or select set of questions you require to have answered. Click "Save" once completed.
+
+   <Frame>
+     <img src="/images/SVC-22.png" />
+   </Frame>
+
+3. Click "Finish Up" to save all changes.
+
+   <Frame>
+     <img src="/images/SVC-23.png" />
+   </Frame>
+
+## Emoji Reaction
+
+1. You must select the channel you wish to have the emoji trigger in, and the emoji itself. This will trigger each time someone uses this specific emoji.
+
+   <Frame>
+     <img src="/images/SVC-24.png" />
+   </Frame>
+
+2. For each step, you will need to configure details such as message content, channel selection, user assignments, etc. Ensure each step is configured to align with the goals of your workflow.
+   a. "**Messages**": This is if you would like the system to send an automatic message during this step, this can be sent to the channel, an admin, or the person who selected the action.
+
+   <Frame>
+     <img src="/images/SVC-25.png" />
+   </Frame>
+
+   b. "**Forms**": This is if you need to create a "macro" or select set of questions you require to have answered. Click "Save" once completed.
+
+   <Frame>
+     <img src="/images/SVC-26.png" />
+   </Frame>
+
+3. Click "Finish Up" to save all changes.
+
+   <Frame>
+     <img src="/images/SVC-27.png" />
+   </Frame>
+
+# **💡 If You Think This SOP Could Be Improved...**
+
+Noticed something clunky or confusing in this process? Or had a situation that wasn't covered here? Or tried something new that didn't work?
+ 👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**
