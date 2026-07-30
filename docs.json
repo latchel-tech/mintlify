@@ -804,7 +804,43 @@
                           "latchel-admin/Service-Operations/COGS/notifying-finance-of-service-ops-team-changes",
                           "latchel-admin/Service-Operations/COGS/notifying-finance-of-variable-fixed-role-classifications"
                         ]
-                      }
+                      },
+                      {
+                        "group": "Announcements",
+                        "pages": [
+                          "latchel-admin/Service-Operations/Announcements/Announcements",
+                          "latchel-admin/Service-Operations/Announcements/Operations-Weekly-Newsletter-07-03-2026",
+                          "latchel-admin/Service-Operations/Announcements/Operations-Weekly-Newsletter-07-10-2026",
+                          "latchel-admin/Service-Operations/Announcements/Operations-Weekly-Newsletter-07-17-2026",
+                          "latchel-admin/Service-Operations/Announcements/Operations-Weekly-Newsletter-07-24-2026"
+                        ]
+                      },
+                      {
+                        "group": "Service Ops: Guidelines for Value-Packed Coaching Session",
+                        "pages": [
+                          "latchel-admin/Service-Operations/Service-Ops/Service-Ops-Guidelines-for-Value-Packed-Coaching-Session",
+                          "latchel-admin/Service-Operations/Service-Ops/Service-Ops-Coaches-Guidelines-in-Establishing-SMART-Action-Plans",
+                          "latchel-admin/Service-Operations/Service-Ops/Service-Ops-How-to-conduct-Full-Story-Review-for-coaching-sessions",
+                          "latchel-admin/Service-Operations/Service-Ops/Service-Ops-Pre-Coaching-Evaluation-Process",
+                          "latchel-admin/Service-Operations/Service-Ops/Service-Ops-Guidelines-in-Establishing-SMART-Goals",
+                          "latchel-admin/Service-Operations/Service-Ops/Service-Ops-Skill-Will-Matrix"
+                        ]
+                      },
+                      {
+                        "group": "Ops Associate Interview Guide",
+                        "pages": [
+                          "latchel-admin/Service-Operations/Ops-Associate-Interview-Guide/Ops-Associate-Interview-Guide",
+                          "latchel-admin/Service-Operations/Ops-Associate-Interview-Guide/Ops-Associate-Troubleshooter-Job-Description"
+                        ]
+                      },
+                      "latchel-admin/Service-Operations/2025-Winter-Peak-Associate-Incentive-Program",
+                      "latchel-admin/Service-Operations/How-to-Create-a-Latchel-SOP",
+                      "latchel-admin/Service-Operations/How-to-Create-a-Slack-Workflow",
+                      "latchel-admin/Service-Operations/How-to-Use-Slack-to-Shadow-Calls",
+                      "latchel-admin/Service-Operations/Ops-Associates-Troubleshooters-Onboarding-Checklist",
+                      "latchel-admin/Service-Operations/Service-Operations-Change-Management-Process",
+                      "latchel-admin/Service-Operations/SOP-Handling-Work-Orders-in-Diagnosing-Issue-State",
+                      "latchel-admin/Service-Operations/SOP-Reporting-Suspected-Account-Compromise"
                     ]
                   }
                 ]
@@ -2075,5 +2111,8 @@
   },
   "metadata": {
     "timestamp": true
+  },
+  "interaction": {
+    "drilldown": false
   }
 }
