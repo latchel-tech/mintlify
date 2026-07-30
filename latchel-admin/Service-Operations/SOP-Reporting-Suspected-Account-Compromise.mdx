@@ -6,13 +6,13 @@ groups: ["latchel"]
 ## 🧠 What This Process Is Trying to Solve
 
 <Note>
-We want to prevent security breaches, data loss, and unauthorized access that could harm customers, compromise sensitive information, or disrupt Latchel's operations. The goal is to ensure that any suspected account compromise is reported and contained immediately—by resetting passwords, notifying supervisors, escalating to the right teams, and documenting the incident—so that risks are minimized, affected parties are protected, and the company can respond quickly and transparently.
+  We want to prevent security breaches, data loss, and unauthorized access that could harm customers, compromise sensitive information, or disrupt Latchel's operations. The goal is to ensure that any suspected account compromise is reported and contained immediately—by resetting passwords, notifying supervisors, escalating to the right teams, and documenting the incident—so that risks are minimized, affected parties are protected, and the company can respond quickly and transparently.
 </Note>
 
 <Warning>
-**‼️IMPORTANT**
+  **‼️IMPORTANT**
 
-If you notice unauthorized or unintended messages sent to customers, such as those containing random characters like 'xx' or 'ysz,' it may indicate a potential account compromise. It's crucial to address these incidents as possible security breaches and follow the procedures outlined below.
+  If you notice unauthorized or unintended messages sent to customers, such as those containing random characters like 'xx' or 'ysz,' it may indicate a potential account compromise. It's crucial to address these incidents as possible security breaches and follow the procedures outlined below.
 </Warning>
 
 ## 📋 Step-by-Step Process
@@ -67,9 +67,9 @@ If you notice unauthorized or unintended messages sent to customers, such as tho
   - The leadership team will review the incident and recommend improvements.
   - You may be required to participate in this review process.
 
-*For Management: Query for checking agent actions in the console for a specific interval period*
+_For Management: Query for checking agent actions in the console for a specific interval period_
 
-```
+```sql lines
 SELECT * from public.log l 
 where l.creator_id = 615060
 AND l.created_at > now() - interval '10 days'
@@ -81,5 +81,4 @@ AND l.created_at > now() - interval '10 days'
 
 ## 💡 If You Think This SOP Could Be Improved...
 
-Noticed something clunky or confusing in this process? Or had a situation that wasn't covered here? Or tried something new that didn't work?
- 👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**
+Noticed something clunky or confusing in this process? Or had a situation that wasn't covered here? Or tried something new that didn't work? 👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**
