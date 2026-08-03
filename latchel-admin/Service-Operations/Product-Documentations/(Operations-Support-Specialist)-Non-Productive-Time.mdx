@@ -1,0 +1,76 @@
+---
+title: "(Operations Support Specialist) Non-Productive Time"
+groups: ["latchel"]
+---
+
+<Note>
+We want to make sure that agents are always productively engaged, even during non-busy hours, while maintaining sufficient coverage for emergency tasks, admin emails, and calls. By scheduling training, meetings, or coaching only when workload and staffing allow, we reduce idle time, prevent missed SLAs, and ensure our customers continue receiving timely service.
+</Note>
+
+**Who should read this document?**
+
+- Operations Support Specialist
+- Ops Supervisors
+- Ops Managers
+
+## 📋 Step-by-Step Process
+
+### Process Overview
+
+Although the expectation is for all Operations to be busy with a work order, there would be times when the workload is less than the agents currently logged in. During these non-busy hours, the Operations Support Specialist can schedule activities for agents to take in to lessen agents' idle time.
+
+### Verify if the non-emergency task queues are low.
+
+How to check non-emergency task queues:
+
+Go to Emergencies Real time Dashboard 2.0, then choose Tasks queue under the Real-Time dropdown.
+
+<Frame><img src="/images/SVC-130.png" alt="Tasks queue under the Real-Time dropdown" /></Frame>
+
+From there, you will see the total number of tasks that need to be addressed, the work queue, and the task Age. The highlighted work queues are the ones our Operations team is handling. Based on the example below, we only have a total of 10 tasks that Ops can work on, and all of which are <6hours aged.
+
+<Frame><img src="/images/SVC-131.png" alt="Total number of tasks needing to be addressed" /></Frame>
+
+### Verify if the emergency task queues and admin email queues are low.
+
+How to check emergency task queues:
+
+Go to [(Operations Support Specialist) Real-time Monitoring of Emergency Tasks](https://help.latchel.com/(Operations-Support-Specialist)-Real-time-Monitoring-of-Emergency-Tasks)
+
+How to check admin email queues:
+
+Go to [(Operations Support Specialist) Real-time Monitoring of Emergency Emails](https://help.latchel.com/(Operations-Support-Specialist)-Real-time-Monitoring-of-Emergency-Emails)
+
+### Verify if the Call Center team has enough staff to cover the incoming calls.
+
+For us to check how many call center agents we have, log in to [Amazon Connect](https://latchelphone.my.connect.aws/real-time-metrics). Here we are able to see how many agents we have on the phones and their current status, for example: On contact, Available, Wrap up, and Offline. We can also see how many calls we have had so far (Handled In), and this will help us know if it has been slow and if we can remove agents from calls.
+
+<Frame><img src="/images/SVC-132.png" alt="Amazon Connect agent status" /></Frame>
+
+### Verify if the number of staffed agents is enough.
+
+The last thing we need to check is the number of agents we have scheduled for the day/shift. We can start by going to [Zoltar](https://docs.google.com/spreadsheets/d/1S7ybxAhNH_JIMlYyV-zFLacL2bptWb9kWTjHPiWwDik/edit) to confirm who is scheduled at that time. We can cross-reference this with [Deputy](https://once.deputy.com/my/login). We also need to check the #status_updates channel on Slack to see if anyone called in.
+
+<Frame><img src="/images/SVC-133.png" alt="Zoltar schedule" /></Frame>
+<Frame><img src="/images/SVC-134.png" alt="Deputy schedule" /></Frame>
+<Frame><img src="/images/SVC-135.png" alt="Slack status_updates channel" /></Frame>
+
+When we know that there is enough coverage and that all the queues are up-to-date or manageable, we can proceed with assigning agents to do their training, meetings, or coaching if needed.
+
+## 🎯 When to Break This SOP
+
+<Note>
+This SOP should generally be followed to schedule activities during non-busy hours, but exceptions may apply in unique operational situations:
+
+- **Unexpected spikes in workload:** If emergency tasks, non-emergency queues, or call volume suddenly increase, pause all scheduled activities and reassign agents to handle live work.
+- **Staffing shortages:** If multiple agents call in or go on unplanned leave, prioritize coverage over scheduled activities.
+- **Critical operational priorities:** During urgent issues or high-priority escalations, such as prolonged outages or major resident emergencies, scheduled meetings or trainings should be delayed until the situation stabilizes.
+- **Real-time tool limitations:** If dashboards (Emergencies Real Time, Assembly, Amazon Connect, etc.) are temporarily unavailable, delay scheduling activities until coverage can be confirmed.
+
+This ensures that training, coaching, and meetings enhance productivity without compromising service quality or SLA compliance.
+</Note>
+
+## 💡 If You Think This SOP Could Be Improved...
+
+Noticed something clunky or confusing in this process? Or had a situation that wasn't covered here? Or tried something new that didn't work?
+👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— we want your input!

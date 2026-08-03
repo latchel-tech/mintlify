@@ -1,0 +1,241 @@
+---
+title: "(Operations Support Specialist) Bad Status/Too Old Report"
+groups: ["latchel"]
+---
+
+<Note>
+We want to prevent emergency work orders from getting stuck in incorrect or outdated statuses, which can lead to delays, missed follow-ups, and unresolved issues. The goal is to ensure every emergency work order is actively managed and in the correct status, so that urgent problems are addressed promptly, responsibilities are clear, and nothing falls through the cracks. This process helps us catch and correct work orders that might otherwise be overlooked, saving time, reducing risk, and improving service for residents and property managers alike.
+</Note>
+
+## ⬅️ What is happening prior to this process?
+
+Operations Support Specialist is working from the "Bad Status" on the Emergency Dashboard report. These are jobs which are showing a status that does not make sense for emergency Work Orders (e.g. scheduling status)
+
+## 📋 Step-by-Step Process
+
+### Step 1- Open the Emergency Dashboard
+
+1. The work orders can be opened directly from the [Emergency Dashboard](https://datastudio.google.com/reporting/d9160663-a5a3-4f78-936f-75d92cc93fb6/page/p_fxccpatrwc). It will show you the count and the age of these work orders which are color-coded.
+
+<Frame><img src="/images/SVC-292.png" alt="Emergency Dashboard count and age color-coded" /></Frame>
+
+2. Open the job URL
+
+<Frame><img src="/images/SVC-293.png" alt="Opening the job URL" /></Frame>
+
+3. The report itself does provide some insight, giving you the status
+
+<Frame><img src="/images/SVC-294.png" alt="Report showing the work order status" /></Frame>
+
+### Step 2- Research the Current Status
+
+- Identify the current status, either through the work order itself or through the spreadsheet
+- Verify the reason the work order is in its current status and verify that it makes sense.
+
+### Step 3- Determine the next action
+
+<Warning>
+Important: Never de-escalate a WO for the sole purpose of getting it out of this report; we should always be following the PM's severity settings to determine the severity of a WO.
+</Warning>
+
+- Determine if there is a pending task that may be holding up the work order
+- Determine if the work order is completely in the wrong status (e.g. in "Awaiting Invoice receipt" when there is no confirmed work date.)
+
+The following table provides further guidance:
+
+<Note>
+Note: The below guidance does not apply to On-call customers. Please refer to (Operations Support Specialist) Bad Status/Too Old Report | Bad Status WOs FAQ: for further instructions.
+</Note>
+
+<Tip>
+Refer to [(Operations Support Specialist) Job-Aid: Work Queues & Labor Management](https://help.latchel.com/(Operations-Support-Specialist)-Job-Aid-Work-Queues-and-Labor-Management) for how to create tasks for the emergency team.
+</Tip>
+
+| Status | Action | Why is this considered "bad status/too old"? |
+| --- | --- | --- |
+| Re/Scheduling with Tenant | Review the WO and create a task for the emergency team to schedule an appointment. | An emergency WO doesn't move from this status automatically. |
+| Scheduling with Vendor | Review the WO and create a task for the emergency team to schedule an appointment. | An emergency WO doesn't move from this status automatically. |
+| Finding Vendor | Don't do anything if it's been less than 1 hour since the WO was updated to this status. After 1 hour has passed since this WO was updated to Finding Vendor status, follow up with the troubleshooter working on this WO to check if the troubleshooter may require with the WO. If the WO is found abandoned and no one is working on it (e.g. the troubleshooter left), create a task for the emergency team so that another troubleshooter can pick up where the previous troubleshooter left off. Submit feedback to the agent who left without passing the WO off in #ops-feedback. | This would be considered an aging WO for emergency response standards. Exception: There will be instances where an emergency WO is left in this status for deferred dispatch and an automated task is created for troubleshooters by 9:00 AM property time. No action is required for these cases. |
+| Pending | The following are some situations of the pending status.<br/>- When the resident reports an issue with the WO: Review what is the issue and create a task for the emergency team to follow up with the resident. This is very common when the issue wasn't resolved.<br/>- When a RentRedi WO doesn't have an owner payment method: Review what is the issue and create a task for the emergency team so that the emergency team can follow up with the owner to request a payment method.<br/>- When we need to collect an estimate for approval: Review what is the issue and create a task for the emergency team so that the emergency team can follow up with the Service Provider for the estimate.<br/>- When the Service Provider reports an issue with the job, for example, work was denied on site, SP needs to provide an estimate, SP could not access the unit, SP missed the appointment: Review what is the issue and create a task for the emergency team so that the emergency team can follow up with the Service Provider. | An emergency WO in this status needs a manual follow up. |
+| Waiting for Materials | Review if any work was done to address the immediate emergency, if so, follow the PM severity settings to determine if the WO can be de-escalated or not.<br/>- If the WO can't be de-escalated: Create a task so that the emergency team can follow up with the service provider to get an ETA for the materials. If the SP can't confirm an ETA, follow up daily with the SP.<br/>- If the WO can be de-escalated: For a Premium Customer: Create a task for the non emergency team to follow up with the SP. For a Autopilot Customer: Create a task for the PM to let them know that the WO is Waiting for Materials and manual follow up is required to get an update from the SP. | An emergency WO in this status needs a manual follow up. |
+| Troubleshooting | After 13 mins has passed, follow up with the agent working on this WO to check if the troubleshooter may require assistance with the WO. Refer to [(Operations Support Specialist) Check-In Policy](https://help.latchel.com/(Operations-Support-Specialist)-Check-In-Policy). If the WO is found abandoned and no one is working on it (e.g. the troubleshooter left), trigger it out so that another agent can troubleshoot. Submit feedback to the agent who left without passing the WO off in #ops-feedback. | This would be considered an aging WO for emergency response standards. |
+| Diagnosing Issue | Create a task for the emergency team to reach out to the tenant to diagnose and troubleshoot. | An emergency WO doesn't move from this status automatically. |
+| Pending - Awaiting Payment Details | An emergency WO is never in this status automatically, this would most likely be the result of a human error if a resident responsible WO was escalated to emergency manually by an agent. Review the WO and de-escalate to the original severity. | This status in a emergency WO is not possible on its own without a human error. |
+
+<Note>
+NOTE: If you are not certain what is appropriate, escalate to your manager.
+</Note>
+
+## ❓ Frequently Asked Questions:
+
+**LVN Service Provider**
+
+For guidance on managing unresponsive LVN service providers or on acceptable scenarios for reassigning an LVN service provider (such as PM requests or missed appointments), refer to [Handling Work Orders Assigned to LVN Service Providers](https://help.latchel.com/Handling-Work-Orders-Assigned-to-LVN-Service-Providers).
+
+**The PM requested to assign and dispatch a specific SP, but the service provider was unresponsive or unable to schedule within the expected timeframe.**
+
+- If the issue is property-damaging or extreme habitability (refer to [How to: Identify Property Damage and Extreme Habitability Situations](https://help.latchel.com/How-to-Identify-Property-Damage-and-Extreme-Habitability-Situations)):
+  - Call the escalation contacts. Refer to [Job Aid: PM Outbound Communication for Emergency WOs](https://help.latchel.com/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs)
+- If the issue is not property-damaging or extreme habitability:
+  - Defer the task to the next day for another follow-up.
+  - If still unsuccessful after the second follow-up, complete the task and create a new task for the Property Manager
+  - Refer to the below task template.
+
+**The SP paid an initial visit to the property, but the issue wasn't fixed, and they are building an estimate. The SP has not provided a date when the estimate will be available or is unresponsive.**
+
+- If the issue is property-damaging or extreme habitability (refer to [How to: Identify Property Damage and Extreme Habitability Situations](https://help.latchel.com/How-to-Identify-Property-Damage-and-Extreme-Habitability-Situations)):
+  - Call the escalation contacts. Refer to [Job Aid: PM Outbound Communication for Emergency WOs](https://help.latchel.com/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs)
+- If the issue is not property-damaging or extreme habitability:
+  - Make up to 2 total contact attempts on consecutive days (no more than 24hrs apart) to ask the SP for the estimate.
+  - Create a task for the estimate follow-up.
+    - Refer to [(Operations Support Specialist) Job-Aid: Work Queues & Labor Management](https://help.latchel.com/(Operations-Support-Specialist)-Job-Aid-Work-Queues-and-Labor-Management) to know how to create the task.
+  - If the Service Provider advises that they must first check with a warehouse or supplier once it opens before providing an estimate:
+    - Do not defer the task at the start of operating hours.
+    - Allow sufficient time for the Service Provider to obtain required materials and pricing details.
+    - Schedule the estimate follow-up for 12:00 PM (or a reasonable mid-day time) to confirm whether materials, costs, and the estimate are available.
+  - If the Service Provider can't provide the estimate but can provide a date when the estimate will be sent:
+    - Schedule the estimate follow-up for that date and place the WO in Pending in the meantime.
+    - No additional follow ups are required until that date.
+  - If after a second attempt, the Service Provider is unresponsive, can't provide the estimate or can't provide a date when the estimate would be sent, complete the task and create a new task for the Property Manager
+    - Refer to the below task template.
+
+**The SP paid an initial visit to the property, but the issue wasn't fixed, and they are waiting for materials. The SP has not provided a date when the materials will be available or is unresponsive.**
+
+- If the issue is property-damaging or extreme habitability (refer to [How to: Identify Property Damage and Extreme Habitability Situations](https://help.latchel.com/How-to-Identify-Property-Damage-and-Extreme-Habitability-Situations)):
+  - Call the escalation contacts. Refer to [Job Aid: PM Outbound Communication for Emergency WOs](https://help.latchel.com/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs)
+- If the issue is not property-damaging or extreme habitability:
+  - Make up to 2 total contact attempts on consecutive days (no more than 24hrs apart) to ask the SP for the materials needed.
+  - Create a task for follow-up on materials.
+    - Refer to [(Operations Support Specialist) Job-Aid: Work Queues & Labor Management](https://help.latchel.com/(Operations-Support-Specialist)-Job-Aid-Work-Queues-and-Labor-Management) to know how to create the task.
+  - If the SP can't provide the estimated date of arrival:
+    - Confirm whether we can follow up the next day to check for any updates.
+    - Defer the task to the next day for another follow up
+  - If after a second attempt, the SP is unresponsive, can't provide the estimated date of arrival, complete the current task and create a new task for the Property Manager
+    - Refer to the below task template.
+
+**The resident has reported that the issue is unresolved but they have been unresponsive to our contacts to confirm what needs to be fixed. The SP has been unresponsive too.**
+
+- We should attempt to follow up once with the resident (all residents available in the property).
+- Attempt to get in contact as follows:
+  - Phone call.
+  - Send SMS and/or email.
+- If the Resident is unresponsive, attempt to contact the SP.
+- If both parties are unresponsive:
+  - If the issue is property damaging or extreme habitability, refer to [How to: Identify Property Damage and Extreme Habitability Situations](https://help.latchel.com/How-to-Identify-Property-Damage-and-Extreme-Habitability-Situations), contact the emergency escalation contacts.
+  - If the issue is not property damaging or extreme habitability:
+    - Defer the task to the next day for another follow up.
+    - If still unsuccessful after the second follow-up, complete the task and escalate to the Property Manager by creating a new task.
+    - Refer to the below task template.
+
+**The resident has reported that the appointment was missed.**
+
+- Contact the resident to confirm the report.
+- Inform the resident that we'll attempt to contact the SP provider assigned, but if the SP is unresponsive, we'll reassign to someone else.
+- Contact the SP to follow up on the missed appointment:
+  - If the SP is responsive, confirm a new appointment time.
+  - If the SP is unresponsive
+    - **Locked in and PM-assigned service providers**
+      - If the issue is property damaging or extreme habitability, refer to [How to: Identify Property Damage and Extreme Habitability Situations](https://help.latchel.com/How-to-Identify-Property-Damage-and-Extreme-Habitability-Situations), contact the emergency escalation contacts.
+      - If the issue is not property damaging or extreme habitability:
+        - Complete your current task and create a task for the Property Manager.
+        - Refer to the below task template.
+    - **Not Locked in**
+      - If the issue is property damaging or extreme habitability, reassign the WO to another SP.
+        - Refer to (EMERGENCY) How to: Assign a Preferred + Latchel Network Service Provider.
+      - If the issue is not property damaging or extreme habitability:
+        - Defer the task to the next day for another follow up.
+        - If still unsuccessful after the second follow-up, reassign the WO to another SP.
+        - Refer to (EMERGENCY) How to: Assign a Preferred + Latchel Network Service Provider.
+
+**The WO has been moved to Needs Owner Approval for the estimate approval request, then we received a follow-up request from the SP or the resident.**
+
+- You may inform the resident or service provider that the estimate is in the process of being reviewed by the Property Manager, and that we've sent a follow-up request regarding the status of the approval.
+- Then, create a task for the Property Manager using the template below:
+  - Subject: Estimate Approval Follow-Up Request
+  - Who is this task about? Select the PM
+  - Select a Date and Time: Leave as is
+  - Assign to a User Group: PM user group
+  - Assign to a User: Leave as is
+  - Priority: Leave as is
+  - Complete task only on Completed or Cancelled job States
+  - Description: The (service provider or resident) is following up on the estimate approval. The work order is currently in Needs Approval status after the service provider submitted the estimate. Please let us know if the estimate has been approved or declined, or if you need any assistance. else. Thank you!
+
+**The WO is in Scheduling with Service Provider / Scheduling with Resident status after the PM assigned a service provider and; There is a critical note that there is no need to contact the SP AND we can forward the WO to the PM. Do we still need to call the service provider and the escalation contacts?**
+
+<Frame><img src="/images/SVC-295.png" alt="Critical note example" /></Frame>
+
+No. Move the WO to "Waiting for PM."
+
+Do not contact the EEC, even for PD/EH issues. The PM has taken ownership of SP coordination and has requested that all requests be forwarded directly to them.
+
+**A WO was previously moved to "Waiting for PM" after the PM said they would handle it, but later someone moved it back into a Scheduling status after assigning a service provider. What should we do?**
+
+If the PM previously confirmed they would handle the WO (and the WO was moved to "Waiting for PM" for that reason), but the job is now in a Scheduling with Service Provider / Scheduling with Resident / Rescheduling with Tenant status after the PM assigned a service provider:
+
+- Move the WO back to "Waiting for PM."
+- In the task description, add a note: "We see that this work order was previously moved to 'Waiting for PM' after you confirmed you would handle it, and a service provider has now been assigned. Please let us know if you would like Latchel to coordinate the appointment, or if you prefer to keep managing scheduling directly on your end."
+
+This applies to both PD/EH and non‑PD/EH WOs. Only contact the EEC if:
+
+- If this has not already been done, AND
+- The PM does not confirm they are managing it, AND
+- The situation meets standard PD/EH escalation rules as outlined elsewhere in the following SOPs:
+  - Job Aid: PM Outbound Communication for Emergency WOs
+  - How to: Properly Diagnose Emergency Situations
+  - How to: Handle situations for WOs awaiting PM action
+
+**On-call customers-related tasks**
+
+*Task automatically created by the system*
+
+<Frame><img src="/images/SVC-296.png" alt="Task automatically created by the system" /></Frame>
+
+Check the notes that the resident left when they reported that there is an issue with the job. You can find this just below the automated task that was created:
+
+<Frame><img src="/images/SVC-297.png" alt="Notes left by the resident below the automated task" /></Frame>
+
+- Complete the automated task and create a new one with the information left by the resident, assigning it to the PM User Group.
+- Submit a report to the #bug-report channel
+
+**All other On-call customer related tasks manually assigned to the Latchel Ops team:**
+
+- Read the task description. If the task was created for Ops to follow up (except for reasons outlined here Follow Up Guidelines for On-Call Customers (app.latchel.com) | PM Communication), proceed to complete the task.
+- If an update to the PM is needed, create a new task and assign it to the PM User Group.
+- Submit a ticket to the svc-ops-feedback channel
+- For PG-admin query related concerns such as request to update the query, please post this on #data-reporting-help-requests.
+
+**Assigned Service Providers Also Listed as PM or EEC**
+
+In some cases, the assigned Service Provider on a Work Order may also be listed as the Property Manager or Emergency Escalation Contact. When this occurs do not assume that their dual role changes our obligation to verify scheduling, completion, or issue resolution.
+
+Ops team should:
+
+- Continue to treat the follow-up process as business as usual.
+- Follow all standard communication and update procedures as you would with any regular service provider.
+- Ensure all updates are clearly documented in the Work Order, and create or update related tasks as needed.
+- If there's any confusion about responsibilities or roles, escalate to Product support for correction.
+
+<Warning>
+‼️ IMPORTANT: When handling PD/EH issues, if you anticipate that you may need to escalate the case after calling the service provider, and the escalation contact is the same person as the service provider, address the potential escalation during that initial call.
+
+There is no need to call them a second time as an escalation contact—make sure to cover both aspects (service provider support and escalation) in your first conversation with them.
+</Warning>
+
+Say something like:
+
+> "Thanks for the update. Since you're also listed as the escalation contact for this work order, we'll consider this conversation as addressing both roles. I'll make sure your response is documented as the official direction moving forward."
+
+> "Just to confirm—we'd typically escalate this to the PM due to the nature of the issue, but as you're also the escalation contact, your response here will serve as the PM's direction. I'll make sure that's captured."
+
+## 📋 Task Template for Property Manager
+
+This task template should be used when we are awaiting the Property Manager's instructions in order to proceed with the work order.
+
+- Subject: Action Required: PM Instructions or Information Needed.
+- Who is this task about? Select the PM
+- Select a Date and Time: Leave as is
+- Assign to a User Group: PM user group
+- Assign to a User: Leave as is
+- Priority: Leave as is
+- Complete task on any job state change
+- Description: We've created this task for the Property Manager to [insert specific information or instructions needed]. The current status of the work order is [insert status]. Kindly provide the requested information or guidance at your earliest convenience to help ensure a smooth continuation of the process. If you have any questions or need further clarification, please don't hesitate to reach out. Thank you!

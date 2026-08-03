@@ -1,0 +1,141 @@
+---
+title: "How to: Research Local Property Managers"
+groups: ["latchel"]
+---
+
+<Note>
+We want to prevent wasted effort, inconsistent data, and missed sales opportunities by providing a clear process for researching and compiling information on local property managers near our existing clients. The goal is to ensure associates gather accurate, comprehensive, and well-organized data—such as company focus, vacancies, software used, key personnel, and reviews—so Latchel's sales and partnerships teams can efficiently identify and reach out to promising prospects.
+</Note>
+
+<Frame><img src="/images/SVC-225.png" alt="Process overview diagram" /></Frame>
+<Frame><img src="/images/SVC-226.png" alt="Process overview diagram" /></Frame>
+
+Proceed to [How to: Research Local Property Managers (Second Phase)](https://help.latchel.com/How-to-Research-Local-Property-Managers-(Second-Phase)) once you have completed the steps in the first phase.
+
+<Tip>
+For associates working on this task, ensure to enter your name in the "Associate Name" and the date you entered the information in the "Date of Entry" field.
+</Tip>
+
+<Tip>
+Additionally, when working on the "Sourced Companies" sheet and you sourced a new PM, always verify whether the PM is already listed in Column B. To do this, press CTRL+F, then paste the PM Company Name into the search bar to quickly check for an existing entry.
+</Tip>
+
+<Frame><img src="/images/SVC-227.png" alt="Sourced Companies sheet" /></Frame>
+
+## Objectives
+
+- Identify local property managers situated around our current clients.
+- Gather key data points to facilitate potential sales.
+- Ensure the data is organized, accurate, and comprehensive.
+
+## 📋 Step-by-Step Process
+
+### Step 1: Identifying Target Areas
+
+- Use [this spreadsheet](https://docs.google.com/spreadsheets/d/1l_b6h8a1sfz4f1kisH7aBmrj5JCnhdxkg7c51JMavIk/edit) to access the existing client list and determine their location.
+- Select the PM you want to research and change the "Researched by Ops?" column to Yes to prevent duplicated efforts.
+
+<Frame><img src="/images/SVC-228.png" alt="Researched by Ops column" /></Frame>
+
+- Define a 20-mile radius around each client to identify target zones for your research.
+  - Radius Mapping Tools: ([Draw a circle with a radius on a map](https://www.mapdevelopers.com/draw-circle-tool.php)) offers dedicated radius drawing tools that allow you to enter a zip code and specify a radius for quick visualization.
+  - This will help you determine specific towns within the major city which will be useful for step 2.
+
+<Frame><img src="/images/SVC-229.png" alt="Radius mapping tool" /></Frame>
+
+### Step 2: Research Methodology
+
+Use [Google](http://google.com) Search to identify property managers within the target area who are not already a Latchel client:
+
+- Search terms: "[City/Town] + Property Management Companies".
+- Visit their websites and collect the following information:
+  - Types of Properties Managed (e.g., residential, commercial, short term rentals, storage units)
+
+<Warning>
+When sourcing new companies, do not pursue or import leads if the company is exclusively focused on any of the following:
+
+- Commercial-only property management
+- Vacation rentals
+- Short-term rentals
+- Industrial management companies
+
+Please verify the company's focus (e.g., via website or business description) before importing or adding to the lead list. If the company falls into one of these ineligible categories, skip and move on to the next prospect.
+</Warning>
+
+- Current Number of Listed Vacancies
+  - Visit the Website: Start by accessing the property manager's official website.
+  - Navigate to Rental Listings or Properties Page: Look for a section of the website typically labeled "Available Rentals," "Vacancies," "Properties," or something similar. This is often found in the main navigation menu or under a "Rentals", "Vacancies", or "Tenants" tab.
+  - Use a Search or Filter Feature: If available, use any search tools or filters to view a comprehensive list of all available properties. Sometimes these pages provide the total count of available properties right at the top.
+  - Count the Listings Manually: If the total number isn't automatically displayed, you may need to manually count the number of listings. This is often necessary if listings are displayed in a list or grid format with individual property entries. You can count the number of listings per page and count the available pages to get an approximation.
+- Software/Tools Used (if listed)
+  - Explore the Website:
+    - Check for a resident/tenant or owner login portal. This almost always goes to the software landing page (e.g. Appfolio, ManageBuilding for Buildium, RentCafe for Yardi).
+    - Check for sections that might mention the software they use, such as "About Us," "Our Process," or specific sections dedicated to property management technology.
+    - Look for words like "technology," "platform," or "software partners."
+  - Services or Technology Page:
+    - Some property management websites have a dedicated page that describes the technology or services they offer, including any software tools they use.
+  - Blog Posts or News Section:
+    - Check for blog posts or news updates that might discuss the tools they implement, especially if they have recently updated or changed their software.
+  - Case Studies and Testimonials:
+    - Look for case studies or testimonials that might mention how they manage properties and what tools are involved in that process.
+  - Look for Logos or Badges:
+    - Some websites display logos or badges of software partners at the bottom of their page.
+- Key Personnel Information-- Include Contact Information if Available (e.g., CEO, property managers)
+
+<Tip>
+Helpful Tip: Check LinkedIn for staff details under the company's page.
+</Tip>
+
+- Google Review Data:
+  - Number of Reviews
+  - Average Rating
+
+<Frame><img src="/images/SVC-230.png" alt="Google Review Data example: 4.5 average rating & 941 total ratings" /></Frame>
+
+4.5 average rating & 941 total ratings
+
+### Step 3: Data Entry
+
+Open [this spreadsheet](https://docs.google.com/spreadsheets/d/1l_b6h8a1sfz4f1kisH7aBmrj5JCnhdxkg7c51JMavIk/edit) (tab name Sourced Companies) and fill out the table with the following data:
+
+- Near Existing Client Name (this is the name of the [Latchel client](https://docs.google.com/spreadsheets/d/1l_b6h8a1sfz4f1kisH7aBmrj5JCnhdxkg7c51JMavIk/edit) that is located near the new company you found)
+- Sourced Company Name
+- Types of Properties Managed
+- Number of Vacancies
+- Software Used
+- Key Personnel
+- Google Review Count
+- Google Rating
+
+<Frame><img src="/images/SVC-231.png" alt="Sourced Companies data entry columns" /></Frame>
+
+### Appendix (Support Use):
+
+See this [video](https://www.loom.com/share/a9008b184962474fa) for tutorial on how to update the "Existing Clients" sheet.
+
+Query Used to Populate Existing Clients:
+
+```sql
+SELECT c.company_id, c.name, count(distinct p.property_id) as property_count, c.address1, c.address2, c.city, c.zip, c.state, c.site_url
+FROM public.company c
+JOIN public.subscription s
+ON c.company_id = s.company_id
+AND s.started_at is not null
+AND s.ended_at is null
+JOIN public.property p
+ON c.company_id = p.pm_company_id
+WHERE c.name not ilike '%(test)%'
+AND p.is_active = 1
+AND p.pm_company_id <> 11367
+GROUP BY 1,2,4,5,6,7,8
+ORDER BY 3 desc
+```
+
+## 🎯 When to Break This SOP
+
+Do not break or deviate from this SOP on your own authority. Always escalate to an Ops Support specialist or follow explicit instructions if you believe an exception is necessary.
+
+## 💡 If You Think This SOP Could Be Improved...
+
+Noticed something clunky or confusing in this process? Or had a situation that wasn't covered here? Or tried something new that didn't work?
+👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— we want your input!

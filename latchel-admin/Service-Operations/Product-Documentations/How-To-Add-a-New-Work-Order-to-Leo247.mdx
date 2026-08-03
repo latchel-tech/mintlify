@@ -1,0 +1,179 @@
+---
+title: "How To: Add a New Work Order to Leo247"
+groups: ["latchel"]
+---
+
+<Note>
+We want to prevent errors, delays, and confusion when adding new work orders to the Leo247 system. The goal is to provide a clear, step-by-step process for accurately entering all required details—ensuring that each work order is created for the correct property, with the right resident and issue information, and properly documented in both Leo247 and Latchel's systems.
+</Note>
+
+## 📋 Step-by-Step Process
+
+Whenever a new work order is submitted, it will automatically trigger a notification in the #Ops-new-work-order channel in Slack with the following format:
+
+<Frame><img src="/images/SVC-167.png" alt="New work order Slack notification format" /></Frame>
+
+Once a new work order notification is received, acknowledge the post by reacting with a "heavy_check_mark" emoji. This will indicate that the work order has been picked up and is being handled, helping to prevent duplicate efforts when working alongside with others.
+
+<Frame><img src="/images/SVC-168.png" alt="Acknowledging the Slack post with a heavy_check_mark emoji" /></Frame>
+
+Using the Work Order ID, locate the work order in Console to review the details. This information will be needed for entry into Leo247 at a later stage.
+
+Navigate to [https://go.leonardo247.com/](https://go.leonardo247.com/) and login using your credentials.
+
+<Frame><img src="/images/SVC-169.png" alt="Leo247 login page" /></Frame>
+
+Once logged in, by default you will be presented with the "Property Workspace".
+
+Property Workspace is a dedicated section where users can manage and view property-related information as shown below.
+
+<Frame><img src="/images/SVC-170.png" alt="Property Workspace default view" /></Frame>
+
+When creating a new work order, you might want to go to the actual property's workspace first.
+
+Creating the work order when you are at the actual property workspace would ensure that you are creating the work order to the correct property.
+
+To begin, click on the 'Property Selector' dropdown at the top of the page. To find the property, use the property's "Portfolio" name from Latchel in your search.
+
+**What is a Portfolio?**
+
+At Latchel we use portfolios to organize groups of properties. A portfolio is a collection of properties that are subject to the same rules and configurations within our system. To get help in locating a property's portfolio, refer to [How to: Navigate Properties Tab in the Latchel Console](https://help.latchel.com/How-to-Navigate-Properties-Tab-in-the-Latchel-Console#details-tab).
+
+<Frame><img src="/images/SVC-171.png" alt="Property Selector dropdown" /></Frame>
+
+Type in the portfolio name in the "Enter Property Name" field.
+
+<Note>
+📝 NOTE: If the portfolio you're looking for appears in the pre-listed results, simply select it from the list.
+</Note>
+
+If you can't find the property that you are looking for, escalate it to the coaches. Refer to the section "Escalating to Operations Support Specialists" in [this page](https://help.latchel.com/How-to-Escalate-Between-Teams).
+
+<Frame><img src="/images/SVC-172.png" alt="Enter Property Name field" /></Frame>
+
+After selecting the portfolio, you will be directed to the actual property's workspace.
+
+In this example, we choose "The Commons" portfolio.
+
+In the property's workspace, you will see the following
+
+- Workspace Label - As shown in the image, this would be the portfolio name in Latchel.
+- Work Orders - This will provide you with the list of work orders for that portfolio
+
+In this example, as we chose "The Commons" portfolio, you'll see "Property-The Commons" on the left side of the page, indicating that you are in the correct property workspace. The name of the workspace shall vary depending on which portfolio you are viewing.
+
+<Frame><img src="/images/SVC-173.png" alt="Property workspace after selecting a portfolio" /></Frame>
+
+Click "Work Orders" to view the list of existing work orders for this portfolio and access the option to add a new work order.
+
+<Frame><img src="/images/SVC-174.png" alt="Work Orders list for the portfolio" /></Frame>
+
+Click "Add Work Order" in the top right corner to create a new request. Before filling out the fields, search for the Unit by clicking the "Select Unit" dropdown.
+
+<Frame><img src="/images/SVC-175.png" alt="Add Work Order button and Select Unit dropdown" /></Frame>
+
+### i. Property Details
+
+Enter the unit number of the property you're looking for. The dropdown menu will suggest matching results based on the information you enter. In the figure below, you'll see that the suggested results are formatted with the building number at the beginning of the unit number. (ex on the initial result below: 03-00-1702 where "03" is the building number and "00-1702" is the unit number)
+
+<Frame><img src="/images/SVC-176.png" alt="Unit number dropdown suggestions" /></Frame>
+
+### ii. Requestor Details
+
+a. Once you select the correct unit, the resident/requestor's information will automatically populate.
+
+1. Requested By - Name of the resident or the person who submitted the request.
+2. Requestor Phone - This is the phone number of the resident or the person who submitted the request.
+3. Requestor Email - This is the email address of the resident or the person who submitted the request.
+
+<Warning>
+Note that the requestor's information that is populated is editable. You can modify details such as the requestor's name, phone number, and email only in the following scenarios:
+
+- The person who submitted the work order was not the actual resident listed at the property.
+- The phone number provided in the populated information is not the best contact number available at the time of the request.
+- The requestor provided an email address that is not available in the system.
+</Warning>
+
+<Frame><img src="/images/SVC-177.png" alt="Requestor Details auto-populated fields" /></Frame>
+
+4. Created Date - This field will be grayed out because the system will automatically use the date when you submit the work order. There is no need for any admin access to change this date.
+5. Access Notes - In the Latchel console, this information is found under "Access Instructions". Refer to [this section](https://help.latchel.com/How-to-Navigate-the-Work-Order-Interface#property-access)
+6. Permission to Enter - Check the selection box for "Permission to Enter" if applicable.
+
+### iii. Repair Details
+
+<Frame><img src="/images/SVC-178.png" alt="Repair Details section" /></Frame>
+
+1. Brief Description - This is the same as the "Work Order Title" in Latchel console.
+
+<Warning>
+‼️ IMPORTANT: As part of distinction, we should always put "Latchel" at the beginning of the description when adding a work order. Example: Latchel Emergency Completely Broken Air Conditioner
+</Warning>
+
+2. Full Description - This should match the "Work Order Summary" in Latchel console. Refer to [this section](https://help.latchel.com/How-to-Navigate-the-Work-Order-Interface#summary) on how to find this information.
+3. Problem Description - Use the details of the "Problem and Location" of the work order. Refer to [this section](https://help.latchel.com/How-to-Navigate-the-Work-Order-Interface#problem-and-location) on how to find this information.
+
+Sample format below:
+
+*Problem*
+
+Air Conditioning > Completely Broken Air Conditioner (High Outside Temp)
+
+*Location*
+
+Indoors (in-residence) > In-Residence (not shared wall/ceiling/floor)
+
+4. Due Date - Leave it blank
+5. Assigned To - This field is optional. If the name of the service provider assigned to the work order is available, you may enter the details in this field.
+6. Attach a File - Use this feature to upload any relevant photos or documents for the work order.
+
+a. When adding a file to the work order, please follow the below steps.
+
+<Frame><img src="/images/SVC-179.png" alt="Attach a file section" /></Frame>
+
+Add the file by either dragging it in here or simply clicking the box to upload them.
+
+<Frame><img src="/images/SVC-180.png" alt="Dragging or clicking to upload a file" /></Frame>
+
+When prompted with the message box, select "FPI Management".
+
+Click "Submit" and the successfully attached file should show up as below.
+
+<Frame><img src="/images/SVC-181.png" alt="Selecting FPI Management when prompted" /></Frame>
+<Frame><img src="/images/SVC-182.png" alt="Successfully attached file" /></Frame>
+
+### iv. Additional Information
+
+1. Category - Choose the category that best matches the work order issue.
+2. Subcategory - The options in this field are dynamic and will vary based on the category you select.
+
+<Note>
+Note: If you can't find a suitable subcategory within 15 seconds, skip this step and proceed to the next field.
+</Note>
+
+3. Status -
+4. Priority -
+5. Building -
+6. Tenant Responsible - Only select this if the work order is "Resident Responsible".
+7. Technician Notes -
+
+Click "Save" to add the work order.
+
+Take the "External ID" of the new work order created in Leonardo247 as a reference.
+
+Leave notes on the Console Work Order that the information has been successfully added in Leonardo247 referencing the external ID.
+
+*Sample Note: Work order has been successfully created in Leonardo247 with external ID [external ID].*
+
+Return to the original Slack post thread in the #Ops-new-work-order and reply to confirm that the work order has been successfully added referencing the external ID.
+
+*Sample response: Work order has been successfully created in Leonardo247 with external ID [external ID].*
+
+## 🎯 When to Break This SOP
+
+Do not break or deviate from this SOP on your own authority. Always escalate to an Ops Support specialist or follow explicit instructions if you believe an exception is necessary.
+
+## 💡 If You Think This SOP Could Be Improved...
+
+Noticed something clunky or confusing in this process? Or had a situation that wasn't covered here? Or tried something new that didn't work?
+👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— we want your input!
