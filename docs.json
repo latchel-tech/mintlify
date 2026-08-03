@@ -28,6 +28,15 @@
           "anchor": "Case Studies",
           "icon": "books",
           "href": "https://latchel.com/case-studies/"
+        },
+        {
+          "anchor": "Latchel Admin",
+          "icon": "user-lock",
+          "color": {
+            "light": "#ff9b8a",
+            "dark": "#ff9b8a"
+          },
+          "href": "https://help.latchel.com/latchel-admin"
         }
       ]
     },
