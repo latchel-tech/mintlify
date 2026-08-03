@@ -175,3 +175,20 @@ Once authorized, you should be good to go!
     </Column>
   </Columns>
 </Warning>
+
+### Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Can I use a programmatic/non-interactive authentication method (like an API key or client credentials) to connect an autonomous agent to the Latchel MCP server?">
+    **Answer:** No — Latchel MCP currently only supports email-matching authentication (the same method used by Claude/ChatGPT desktop clients). There's no separate API key or client-credential auth route planned. If your agent can't replicate this email-matching flow, we recommend using PAPI instead:
+
+    <Columns cols={2}>
+      <Column>
+        <Card title="Latchel Partner API" color="#ff9b8a" icon="gear-complex-api" iconType="duotone" horizontal href="https://papi.latchel.com/api-docs/papi/">
+        </Card>
+      </Column>
+      <Column>
+      </Column>
+    </Columns>
+  </Accordion>
+</AccordionGroup>
