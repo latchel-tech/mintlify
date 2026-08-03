@@ -1,0 +1,69 @@
+---
+title: "Troubleshooters: Responding to Intake Processing Failures"
+groups: ["latchel"]
+---
+
+## 🧠 What This Process Is Trying to Solve
+
+<Info>
+We want to ensure that work orders are handled quickly and correctly when intake processing fails during custom emergency intake settings testing. The goal is to provide a clear process for Troubleshooters to follow when the system cannot automatically triage a work order—so that emergencies are not missed, residents receive prompt help, and operational errors are minimized, protecting both customer safety and Latchel’s service quality.
+</Info>
+
+<Info>
+## What to Expect
+
+- During the test, if **intake processing fails** for a work order, the system will **automatically create a task for Troubleshooters**.
+- These tasks require immediate action to ensure resident safety and proper escalation.
+</Info>
+
+## 📋 Step-by-Step Process
+
+### 1. Task Notification
+
+- Monitor for new tasks labeled as “Intake Processing Failed”
+- Review the work order details (including what the AI actually processed – see the “intake” page for this information) and the customer’s intake rules
+  - **Emergencies**- Proceed directly to **Step 2**.
+  - **Urgent / Normal** – Verify that the **Problem** and **Location** fields are updated.
+    - **If Yes:** Proceed to **Step 3**.
+    - **If No:** Call the resident first and troubleshoot.
+      - After the call, update the **Problem** and **Location** fields.
+      - Then proceed to **Step 3**.
+  - **On-call Work Orders -**cancel the work order and recreate the work order following the same flow the resident went through.
+
+### 2. Resident Troubleshooting Call
+
+- Call the resident as soon as possible.
+- Use the troubleshooting script or checklist provided for emergency situations.
+  - Refer to [How to: Handle Emergency Work Orders](https://latchel.atlassian.net/wiki/spaces/OPS/pages/759332893/How+to+Handle+Emergency+Work+Orders)
+
+### 3. Determine Next Steps
+
+Based on the outcome of the call, take one of the following actions:
+
+- **Dispatch a Service Provider:** If the issue is confirmed as an emergency or requires urgent attention.
+- **Forward to Property Manager:** If the situation requires PM approval or input.
+  - Refer to approved scenarios when a work order can be moved to Waiting for PM. [How to: Put a Job on Hold](https://latchel.atlassian.net/wiki/spaces/OPS/pages/766378165/How+to+Put+a+Job+on+Hold)
+- **De-escalate to Non-Emergency:** If the issue does not meet emergency criteria after troubleshooting.
+- **Other Actions:** Follow standard procedures for any other outcomes (e.g., resident unavailable, issue resolved, etc.).
+  - **Unresponsive residents -**move the work order to Pending with a task to the Property Manager
+
+### 4. Documentation
+
+- Document all actions taken in the work order notes.
+  - Refer to [How to: Write Effective Notes](https://latchel.atlassian.net/wiki/spaces/OPS/pages/1058211367/How+to+Write+Effective+Notes)
+
+---
+
+## 🎯 When to Break This SOP
+
+- If you make a mistake or cannot complete the required action or if you are unsure how to proceed, or if the scenario is not covered, escalate to Operations Support Specialists for guidance.
+
+---
+
+## 💡 If You Think This SOP Could Be Improved...
+
+Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work?
+
+ 👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**
+
+---
