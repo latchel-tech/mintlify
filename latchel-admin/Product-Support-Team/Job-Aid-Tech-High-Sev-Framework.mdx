@@ -1,6 +1,5 @@
 ---
 title: "Job Aid: Tech High Sev Framework"
-groups: ["latchel"]
 ---
 
 ### Channel Purpose
@@ -12,11 +11,11 @@ The `#tech-high-sev-escalations` channel is **only to be used for issues that bl
 - Incidents impacting **multiple customers** or Latchel’s **core operational workflows**
 
 <Warning>
-Non-critical issues, single-account errors, or UI bugs **do not** belong here and should follow the standard #bug-report process.
+  Non-critical issues, single-account errors, or UI bugs **do not** belong here and should follow the standard #bug-report process.
 </Warning>
 
 <Check>
-To ensure a successful `#tech-high-sev-escalations`  submission, reference [Tech High Severity Escalations Process](https://latchel.atlassian.net/wiki/x/AQDrog).
+  To ensure a successful `#tech-high-sev-escalations`  submission, reference [Tech High Severity Escalations Process](https://latchel.atlassian.net/wiki/x/AQDrog).
 </Check>
 
 ---
@@ -40,35 +39,46 @@ Before posting, PS **must confirm and document**:
 Documenting your troubleshooting steps gives Engineering immediate context, eliminates guesswork, and speeds up resolution.
 
 <Frame>
-  <img src="/images/PST-29.png" alt="Screenshot 2025-10-22 at 11.51.16 AM.png" />
+  ![Screenshot 2025-10-22 at 11.51.16 AM.png](/images/PST-29.png)
 </Frame>
 
 1. **Loom Recording**
-  - Record a short (under 2 min) repro walkthrough.
-  - Show the error behavior clearly.
-  - Highlight timestamps and key steps.
-2. **Short Title **
-  - Use the format: <System/Feature> - <Symptom>
-    - Example: Notification Dispatch — No Vendor SMS Sending
+
+- Record a short (under 2 min) repro walkthrough.
+- Show the error behavior clearly.
+- Highlight timestamps and key steps.
+
+2. **Short Title**
+
+- Use the format: `<System/Feature> - <Symptom>`
+  - Example: Notification Dispatch — No Vendor SMS Sending
+
 3. **What is the Problem?**
-  - Clearly describe **what broke** and **how it impacts customers in production**. Include:
-    - **Timestamps** — When the issue started and when it was reported.
-    - **System behavior** — What actually happened vs. what should have happened.
-    - **User path** — Outline the exact clicks or steps that led to the issue.
-    - **Sequence of events** — “X → Y → Z” format showing the straight path to failure.
-    - **Impact summary** — Who is affected, what’s blocked, and how critical it is.
-  - **Avoid assumptions.**
-4. **Example links or additional details. **
-  - WO, property, account URLs
-  - Activity Logs, screenshots, integration CSVs
-  - Twilio error codes
+
+- Clearly describe **what broke** and **how it impacts customers in production**. Include:
+  - **Timestamps** — When the issue started and when it was reported.
+  - **System behavior** — What actually happened vs. what should have happened.
+  - **User path** — Outline the exact clicks or steps that led to the issue.
+  - **Sequence of events** — “X → Y → Z” format showing the straight path to failure.
+  - **Impact summary** — Who is affected, what’s blocked, and how critical it is.
+- **Avoid assumptions.**
+
+4. **Example links or additional details.**
+
+- WO, property, account URLs
+- Activity Logs, screenshots, integration CSVs
+- Twilio error codes
+
 5. **How many users are impacted?**
-  - Check with the rest of PS team and Ops to confirm any additional reports.
+
+- Check with the rest of PS team and Ops to confirm any additional reports.
+
 6. **How would you categorize this request?**
-  - When selecting **“How would you categorize this request?”**, choose the option that best aligns with the **root system or workflow being impacted**, not just the symptom.
+
+- When selecting **“How would you categorize this request?”**, choose the option that best aligns with the **root system or workflow being impacted**, not just the symptom.
 
 | Category | Use When… | Example |
-|---|---|---|
+| --- | --- | --- |
 | **Integrations** | Failures or outages in external partner systems impacting workflows. | RentRedi sync failing, Propertyware API down, webhook delivery errors. |
 | **WO Creation (During or Immediately After)** | Issues during or immediately after work order creation. | WOs not generating, stuck in pending state, failing to hit vendor dispatch logic. |
 | **Researching Work Order** | Errors during data retrieval, WO lookups, or search functions. | WO not loading or retrieving, search queries failing, internal error when opening WO. |
@@ -80,4 +90,5 @@ Documenting your troubleshooting steps gives Engineering immediate context, elim
 | **Other** | For confirmed issues that do not fit any of the above but still block production. | Critical but rare or cross-functional issues that still meet High-Sev criteria. |
 
 1. **Who approved this escalation?**
-  - You will always select @maddie .
+
+- You will always select @maddie .

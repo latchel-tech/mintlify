@@ -893,10 +893,15 @@
                         "group": "Product Support ASM Ticket Management",
                         "pages": [
                           "latchel-admin/Product-Support-Team/Product-Support-ASM-Ticket-Management",
+                          "latchel-admin/Product-Support-Team/Job-Aid-Interaction-Tags-Explained",
                           {
                             "group": "Job Aid: Slack Channels & Escalation Workflows",
-                            "pages": []
-                          }
+                            "pages": [
+                              "latchel-admin/Product-Support-Team/Job-Aid-Slack-Channels-&-Escalation-Workflows",
+                              "latchel-admin/Product-Support-Team/Job-Aid-Tech-High-Sev-Framework"
+                            ]
+                          },
+                          "latchel-admin/Product-Support-Team/Job-Aid-Assembly-Case-Automation-Explained"
                         ]
                       },
                       {
