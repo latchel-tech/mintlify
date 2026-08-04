@@ -857,6 +857,17 @@
                     "group": "Product Support Team Pages",
                     "pages": [
                       "latchel-admin/Product-Support-Team/product-support-overview",
+                      "latchel-admin/Product-Support-Team/Product-Support-Customer-Tenets",
+                      {
+                        "group": "Product Support Team vs Customer Success Managers",
+                        "pages": [
+                          "latchel-admin/Product-Support-Team/Product-Support-Team-vs-Customer-Success-Managers",
+                          "latchel-admin/Product-Support-Team/How-to-Handle-Autopilot-PM-Explanation",
+                          "latchel-admin/Product-Support-Team/SOP-Escalating-Tickets-to-the-CSM",
+                          "latchel-admin/Product-Support-Team/SOP-Account-Termination-Steps",
+                          "latchel-admin/Product-Support-Team/How-to-Subscription-Upgrade"
+                        ]
+                      },
                       {
                         "group": "Product Support Deep Dive Management",
                         "pages": [
