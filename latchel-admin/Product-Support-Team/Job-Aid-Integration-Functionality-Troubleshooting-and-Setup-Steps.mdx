@@ -72,13 +72,367 @@ Before proceeding, ensure the following:
 
 ---
 
-### 3. Troubleshooting Guide
+## 3. Troubleshooting Guide
 
-### **3.1 Appfolio Troubleshooting**
+#### 3.1 Appfolio Troubleshooting
 
 - Refer to [(CS/Admin) How To: Troubleshoot the Latchel Plug-in](https://latchel.atlassian.net/wiki/spaces/CS/pages/795115811)
 
 **Appfolio Troubleshooting Based on Error in Question:**
+
+<AccordionGroup>
+  <Accordion title="Delayed Synchronization of Work Orders from Latchel to Appfolio">
+    **Description:** Work orders are experiencing significant delays, taking several hours or even days to synchronize from Latchel to Appfolio.
+
+    <Tabs>
+      <Tab title="Reconciliation Steps">
+        1. [Check Plugin Version via SQL Query](#5-troubleshooting-queries).
+           - Run query in pgAdmin to see what version the PM is on. Cross reference with Chrome store version.
+        2. Verify Permissions:
+           - Check if the customer has granted the necessary permissions to Latchel.
+           - Ensure that Latchel is set up as an On-Site Property Manager user in their software system.
+           - Confirm that the Latchel user has the following permissions:
+             - Work Order Report
+             - Tenant Directory Report
+             - Unit Directory Report
+             - Property Directory Report
+        3. Report a Problem:
+           - If the latest version is downloaded and the above settings/permissions are confirmed but the issue persists, have the PM use the "Report a Problem" feature in their plugin.
+        4. Escalate the Issue:
+           - If applicable, submit issue to the #tech-high-sev-escalation channel for urgent attention.
+      </Tab>
+      <Tab title="Suggested Scripting">
+        We have identified a couple of steps that may help resolve the current synchronization issues between Latchel and your Appfolio system. Please follow the steps below to ensure everything is set up correctly:
+
+        1. Verify Permissions:
+           - Please check that Latchel has been granted the necessary permissions in your software system:
+           - Ensure that Latchel is set up as an On-Site Property Manager user.
+           - Confirm that the Latchel user has access to the following reports:
+             - Work Order Report
+             - Tenant Directory Report
+             - Unit Directory Report
+             - Property Directory Report
+        2. If Plugin is out of date, include step 2 (remove this step if the most recent version is installed):
+           - Reinstall the Latest Version:
+             - Log out of AppFolio.
+             - Remove the current Latchel Data Sync extension and refresh the page.
+             - Reinstall the latest version using this guide: [How to Install the Latchel Data Sync Extension](https://help.latchel.com/s/topic/0TO5e000000h9wqGAA/How-to-Install-the-Latchel-Data-Sync-Extension#how-to-install-the-latchel-data-sync-extension).
+             - Log into the Latchel Data Sync extension using your Latchel credentials.
+             - Log back into AppFolio and try running the sync again.
+
+        If you need assistance with any of these steps or if the issue persists after making these changes, please let us know. We are here to help and can escalate the issue if necessary.
+      </Tab>
+    </Tabs>
+  </Accordion>
+
+  <Accordion title="Discrepancy of Work Orders Syncing from Appfolio to Latchel">
+    **Description:** Work orders are in Appfolio are not syncing into Latchel.
+
+    <Tabs>
+      <Tab title="Reconciliation Steps">
+        1. Identify Integration Sync Method:
+           - Review and confirm the Property Manager's Integration Sync Method under the Miscellaneous section in Account Settings.
+           - Here is how each setting option impacts which work orders sync from Appfolio to Latchel:
+             - **Assigned Work Orders:** Only WOs assigned to a user with the name that includes "Latchel" will sync from Appfolio to Latchel. All Latchel work orders will be created in Appfolio but only WOs that are assigned to the Latchel user in Appfolio will be updated from Appfolio. This is used by some customers who want the work order created but subsequently want to make changes without them being overwritten but a future update.
+             - **All Work Orders:** All WOs in the Appfolio account will sync to Latchel, all WOs in Latchel sync to Appfolio
+             - **No Work Orders:** No WOs in the Appfolio account will sync to Latchel, No WOs created in Latchel will sync to Appfolio
+        2. Check Last Sync:
+           - [Run the query outlined in the Standard Operating Procedure](#5-troubleshooting-queries) to determine when the last synchronization occurred.
+           - [Check Plugin Version via SQL Query](#5-troubleshooting-queries).
+           - Run query in pgAdmin to see whar version the PM is on. Cross reference with Chrome store version.
+        3. Report a Problem:
+           - If the version is up-to date, integration sync method setting is configured correctly, and last sync was recent but the issue persists, have the PM use the "Report a Problem" feature in their plugin.
+        4. Escalate the Issue:
+           - If applicable, submit issue to the #tech-high-sev-escalation channel for urgent attention.
+      </Tab>
+      <Tab title="Suggested Scripting">
+        **Assigned Work Orders Method Sync**
+
+        Hi \[PM\],
+
+        I hope you're doing well! I wanted to clarify how your current AppFolio-Latchel sync settings work to ensure everything is functioning as expected.
+
+        Your account is set to Assigned Work Orders Sync, which means:
+
+        - All work orders created in Latchel will sync to AppFolio.
+        - Only work orders assigned to a user with "Latchel" in the name will sync from AppFolio to Latchel.
+        - Once a work order is assigned to someone other than the Latchel user in AppFolio, it will no longer be updated in Latchel.
+
+        This setup allows you to have work orders created automatically but make changes in AppFolio without them being overwritten by future sync updates.
+
+        Could you let me know if this integration is operating as expected on your end, or if you're noticing any discrepancies?
+
+        If Plugin is out of date, include steps to reinstall below (remove this step if the most recent version is installed):
+
+        Lastly, I noticed you're on an old version of the plugin. Please reinstall the latest version by following these steps:
+
+        1. Log out of AppFolio.
+        2. Remove the current Latchel Data Sync extension and refresh the page.
+        3. Reinstall the latest version using this guide: [How to Install the Latchel Data Sync Extension](https://help.latchel.com/s/topic/0TO5e000000h9wqGAA/How-to-Install-the-Latchel-Data-Sync-Extension#how-to-install-the-latchel-data-sync-extension).
+        4. Log into the Latchel Data Sync extension using your Latchel credentials.
+        5. Log back into AppFolio and try running the sync again.
+
+        If you're experiencing any sync issues or need adjustments to this setting, please let me know! I'm happy to assist.
+      </Tab>
+    </Tabs>
+  </Accordion>
+
+  <Accordion title="Unexpected Property Reactivation During Synchronization">
+    **Description:**
+
+    - Property is manually deactivated.
+    - Synchronization process executes.
+    - Property is unexpectedly reactivated.
+
+    <Tabs>
+      <Tab title="Reconciliation Steps">
+        1. Check reports
+           - Access the Integration Report
+           - Navigate to the Customer's Integration Tab in Latchel.
+           - Download the property report.
+           - Locate the property in the report.
+           - If the property is marked as active (identified by a 1 integer), it should be active in Latchel.
+        2. If the Property or Resident is NOT in the Report:
+           - This indicates one of the following scenarios:
+             - Latchel doesn't have access to the record.
+             - The record is hidden in AppFolio (e.g., due to filters or permission settings).
+             - The property or resident is deactivated in AppFolio.
+
+        **Important Synchronization Limitation**
+
+        - Latchel only syncs status changes from active to inactive.
+        - If a previously inactive property is reactivated in AppFolio, this change will NOT be reflected in Latchel.
+        - In these cases, the property must be manually re-added or activated in Latchel if needed.
+
+        3. Next Steps Based on Findings:
+           - If the property should be active in Latchel but isn't: activate it.
+           - If the property should NOT be active in Latchel but is: disable it.
+           - If the record is missing from the report, instruct the PM to verify visibility and access settings in AppFolio.
+        4. Report a Problem:
+           - If the version is up-to date and the issue still persists, have the PM use the "Report a Problem" feature in their plugin.
+        5. Escalate the Issue:
+           - Submit issue to the #tech-high-sev-escalation channel for urgent attention.
+      </Tab>
+      <Tab title="Suggested Scripting">
+        I'm reaching out to address the issue with properties reactivating unexpectedly after being manually disabled.
+
+        We're providing a quick overview of how property status sync works to help you understand the current limitations and behavior of the system. This information is important because it explains why certain changes, like reactivating a property in your property management system, might not reflect in Latchel.
+
+        - Latchel can only change properties from active to inactive.
+        - If you reactivate a previously inactive property in Appfolio, this change won't be reflected in Latchel.
+        - When a property is manually disabled in Latchel, any activation changes made in AppFolio won't update in Latchel.
+
+        Thank you for your patience and understanding. I'm here to assist you every step of the way.
+      </Tab>
+    </Tabs>
+  </Accordion>
+
+  <Accordion title="Delay and Lack of Confirmation in Synchronization Process">
+    **Description:** The synchronization process is experiencing delays, with users not receiving confirmation upon completion, leading to uncertainty about the sync status.
+
+    <Tabs>
+      <Tab title="Reconciliation Steps">
+        1. Check Recent Export Date:
+           - Navigate to the Property Manager's page in Latchel. Navigate to the Integration section and check the date of the most recent export.
+           - If the date is the current day, the system should be functioning correctly.
+           - If the date is more than a few days old, request that the PM run the sync manually. If the sync does not go through, proceed to the next step.
+        2. Check Plugin Version via SQL Query.
+           - Run query in pgAdmin to see what version the PM is on. Cross reference with Chrome store version.
+        3. Report a Problem:
+           - If the version is up-to date but the issue persists, have the PM use the "Report a Problem" feature in their plugin.
+        4. Escalate the Issue:
+           - Submit issue to the #tech-high-sev-escalation channel for urgent attention.
+      </Tab>
+      <Tab title="Suggested Scripting">
+        **If integration exports are dated:**
+
+        Hi \[PM\],
+
+        We hope you're doing well. I sincerely apologize for any frustration or inconvenience this issue may have caused. I understand how important it is to have a seamless work order sync, and I appreciate your patience as we work through this together.
+
+        Upon review, it appears the sync has not been in run in a (few days/week). To ensure we have the most up to date information, please nvaigate to Appfolio and click the "Sync All Data" button in the Latchel extension.
+
+        Once you've confirmed completeion, if the issue still persists, please don't hesitate to reach back. I'll be happy to escalate this for further review and support if needed.
+
+        **If plugin is out of date:**
+
+        Hi \[PM\],
+
+        We hope you're doing well. I sincerely apologize for any frustration or inconvenience this issue may have caused. I understand how important it is to have a seamless work order sync, and I appreciate your patience as we work through this together.
+
+        AppFolio Plugin Update & Reinstallation – The most up to date version is X.XX.XX. It appears your version is out of date. To help resolve this, please complete the following:
+
+        1. Log out of AppFolio.
+        2. Remove the current Latchel Data Sync extension and refresh the page.
+        3. Reinstall the latest version using this guide: \[How to Install the Latchel Data Sync Extension\].
+        4. Log into the Latchel Data Sync extension using your Latchel credentials.
+        5. Log back into AppFolio and try running the sync again.
+
+        If you've confirmed both steps above and the issue persists, please don't hesitate to reach back. I'll be happy to escalate this for further review and support if needed.
+
+        **If BOTH:**
+
+        Hi \[PM\],
+
+        We hope you're doing well. I sincerely apologize for any frustration or inconvenience this issue may have caused. I understand how important it is to have a seamless work order sync, and I appreciate your patience as we work through this together.
+
+        AppFolio Plugin Update & Reinstallation – The most up to date version is X.XX.XX. It appears your version is out of date. To help resolve this, please complete the following:
+
+        1. Log out of AppFolio.
+        2. Remove the current Latchel Data Sync extension and refresh the page.
+        3. Reinstall the latest version using this guide: \[How to Install the Latchel Data Sync Extension\].
+        4. Log into the Latchel Data Sync extension using your Latchel credentials.
+        5. Log back into AppFolio.
+
+        Once you have the most up to date version, please nvaigate to Appfolio and click the "Sync All Data" button in the Latchel extension.
+
+        If you've confirmed both steps above and the issue persists, please don't hesitate to reach back. I'll be happy to escalate this for further review and support if needed.
+      </Tab>
+    </Tabs>
+  </Accordion>
+
+  <Accordion title="Unassigned Work Orders Syncing from Latchel to Appfolio">
+    **Description:** Work orders created in Latchel are syncing into Appfolio without being assigned, leading to potential delays and mismanagement in task allocation.
+
+    <Tabs>
+      <Tab title="Reconciliation Steps">
+        1. Check Plugin Version via SQL Query.
+           - Run query in pgAdmin to see whar version the PM is on. Cross reference with Chrome store version.
+        2. Report a Problem:
+           - If the version is up-to-date but the issue persists, have the PM use the "Report a Problem" feature in their plugin.
+        3. Escalate the Issue:
+           - Submit issue to the #tech-high-sev-escalation channel for urgent attention.
+      </Tab>
+      <Tab title="Suggested Scripting">
+        **If plugin is out of date:**
+
+        Hi \[PM\],
+
+        We hope you're doing well. I sincerely apologize for any frustration or inconvenience this issue may have caused. I understand how important it is to have a seamless work order sync, and I appreciate your patience as we work through this together.
+
+        AppFolio Plugin Update & Reinstallation – The most up to date version is X.XX.XX. It appears your version is out of date. To help resolve this, please complete the following:
+
+        1. Log out of AppFolio.
+        2. Remove the current Latchel Data Sync extension and refresh the page.
+        3. Reinstall the latest version using this guide: \[How to Install the Latchel Data Sync Extension\].
+        4. Log into the Latchel Data Sync extension using your Latchel credentials.
+        5. Log back into AppFolio and try running the sync again.
+
+        If you've confirmed both steps above and the issue persists, please don't hesitate to reach back. I'll be happy to escalate this for further review and support if needed.
+      </Tab>
+    </Tabs>
+  </Accordion>
+
+  <Accordion title="Incomplete Status Sync for Work Orders from Latchel to Appfolio">
+    **Description:** Work orders are not updating their status to 'Complete' or 'Canceled' in Appfolio after being updated in Latchel, resulting in discrepancies between the two systems.
+
+    <Tabs>
+      <Tab title="Reconciliation Steps">
+        1. Verify Integration Work Order Update Conditions:
+           - Go to the Property Manager account details page.
+           - Navigate to Miscellaneous Settings and check the Integration Work Order Update Conditions.
+        2. Check Update Preferences:
+           - Confirm the customer's preferences for work order updates. Options include:
+             - Update on complete and canceled states.
+             - Update on complete states only.
+             - Update on canceled states only.
+             - Never update.
+        3. Adjust Settings if Necessary:
+           - Ensure that the settings align with the desired update frequency and conditions to resolve discrepancies between Latchel and Appfolio.
+        4. Check Plugin Version via SQL Query.
+           - Run query in pgAdmin to see whar version the PM is on. Cross reference with Chrome store version.
+        5. Report a Problem:
+           - If the version is up-to date but the issue persists, have the PM use the "Report a Problem" feature in their plugin.
+        6. Escalate the Issue:
+           - Submit issue to the #tech-high-sev-escalation channel for urgent attention.
+      </Tab>
+      <Tab title="Suggested Scripting">
+        I hope you're doing well! I wanted to provide some clarity on the settings available for work order updates within your integration, so you can ensure everything is working as you need it to.
+
+        You have the flexibility to choose how often work order updates occur. Here are the options available:
+
+        - Update on Complete and Canceled States: Updates occur when a work order is marked as either complete or canceled.
+        - Update on Complete States: Updates occur only when a work order is marked as complete.
+        - Update on Canceled States: Updates occur only when a work order is canceled.
+        - Never Update: Work order updates are not triggered automatically.
+
+        Currently, your settings are configured to: XXX
+
+        If you need help adjusting these settings or have any questions, please feel free to reach out. I'm here to assist you in ensuring your integration operates smoothly.
+      </Tab>
+    </Tabs>
+  </Accordion>
+
+  <Accordion title="Data Formatting Differences: Latchel vs. AppFolio">
+    **Description:** Property and/or resident data discrepancies between Latchel and Appfolio.
+
+    <Tabs>
+      <Tab title="Reconciliation Steps">
+        1. Check reports:
+           - Navigate to the Customer's Integration Tab in Latchel.
+           - Download the Reconciliation Report, which contains data from the property management system (AppFolio).
+           - Compare the report with how data is displayed in Latchel.
+           - If a property manager (PM) inquires about why data appears a certain way in Latchel, review the report to show how it was formatted in AppFolio—Latchel displays the data exactly as it appears in AppFolio.
+        2. Identify any discrepancies in formatting or presentation.
+           - If discrepancies exist between the report and Latchel's display, document them and escalate as needed.
+      </Tab>
+      <Tab title="Suggested Scripting">
+        Hi \[PM\],
+
+        I hope this message finds you well. I wanted to provide some clarity regarding data formatting between Latchel and AppFolio.
+
+        As you on an active integration between Appfolio and Latchel, the data will sync into Latchel exactly matching how it appears in Appfolio.
+
+        If anything does not match, it may have been manually manipulated at some point in Latchel.
+
+        If this is the case, do you have examples you can share so we can further investigate?
+
+        We look forward to hearing from you!
+      </Tab>
+    </Tabs>
+  </Accordion>
+
+  <Accordion title="Duplicate Work Orders in Latchel and/or Appfolio">
+    **Description:** The system is generating duplicate work orders in both Latchel and Appfolio, causing confusion and inefficiencies in work order management.
+
+    <Tabs>
+      <Tab title="Reconciliation Steps">
+        1. Understand the PM's Process:
+           - Ask the PM how they currently handle work orders.
+           - Are WOs submitted directly into Latchel, AppFolio, or both?
+           - If using AppFolio, are WOs assigned to the Latchel user (if applicable)?
+        2. Identify the Source of Work Orders:
+           - Ensure that only work orders generated in AppFolio are assigned to Team Latchel.
+           - Avoid assigning Latchel-created work orders to Team Latchel to prevent duplication.
+        3. Check Plugin Version via SQL Query:
+           - Run a query in pgAdmin to determine the PM's plugin version.
+           - Cross-reference it with the latest version available in the Chrome Store.
+        4. Run SQL Query to flag duplicate WOs:
+           - Run a query in pgAdmin to determine duplicate WOs. The query should product zero results. If it outputs results, this is a big red flag to escalate to #tech-high-sev-escalation channel for urgent attention.
+        5. Report a Problem:
+           - If the version, source, and process are correct but the issue persists, have the PM use the "Report a Problem" feature in their plugin.
+        6. Escalate the Issue:
+           - If the issue remains unresolved, submit it to the #tech-high-sev-escalation channel for urgent attention.
+      </Tab>
+      <Tab title="Suggested Scripting">
+        Hi \[PM\],
+
+        I hope you're doing well! To ensure a smooth work order process and prevent any duplication, we'd like to review your current workflow. Please help us by answering the following:
+
+        Current Process:
+
+        - Are work orders (WOs) being submitted directly into Latchel, AppFolio, or both?
+        - For WOs in AppFolio, are they being assigned to the Latchel user (if applicable)?
+
+        Work Order Source: To prevent duplication, only AppFolio-generated WOs should be assigned to Team Latchel. Please confirm if this is the case.
+
+        Let us know your responses, and we'll take the next steps accordingly. Looking forward to your feedback!
+
+        Best,
+      </Tab>
+    </Tabs>
+  </Accordion>
+</AccordionGroup>
 
 #### 3.2 Rent Manager Troubleshooting
 
@@ -87,8 +441,13 @@ Before proceeding, ensure the following:
 #### 3.3 Propertyware Troubleshooting
 
 - [Propertyware Integration: Troubleshooting Invalid Building ID Errors](https://help.latchel.com/Propertyware-Integration-Troubleshooting-Invalid-Building-ID-Errors)
-- Assist assist a PM with pulling a property CSV from Propertyware to include the ref IDs
-  - [Propertyware - On Demand Real Estate Solution - 19 November 2025](https://www.loom.com/share/cca6e383bb294301be801e5e11d3528e)
+- Assist assist a PM with pulling a property CSV from Propertyware to include the ref IDs 
+  <iframe src="https://www.loom.com/embed/cca6e383bb294301be801e5e11d3528e" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+<Frame>
+  ![PST 108](/images/PST-108.png "PST 108")
+</Frame>
+
 - Multifamily buildings: Sometimes (but not always) fictitious units are created for multifamily buildings. If a customer reports this behavior, escalate to the CSM to propose a billing adjustment.
 
 ---
@@ -110,38 +469,37 @@ Before proceeding, ensure the following:
 
 SQL Query to see the last time the Integration (any integration) was run successfully:
 
-| select i.company\_id, c.name, i.type, i.status, i.total\_rows, i.created\_at, i.source FROM public.import i JOIN public.company c ON i.company\_id = c.company\_id WHERE i.company\_id = #### ORDER by i.created\_at desc
-
-| LIMIT 10 |
-| --- |
-
-| select i.company\_id, c.name, i.type, i.status, i.total\_rows, i.created\_at, i.source FROM public.import i JOIN public.company c ON i.company\_id = c.company\_id WHERE i.company\_id = #### ORDER by i.created\_at desc
-
-| LIMIT 10 |
-| --- |
+```sql lines
+select i.company_id, c.name, i.type, i.status, i.total_rows, i.created_at, i.source
+FROM public.import i
+JOIN public.company c
+ON i.company_id = c.company_id
+WHERE i.company_id = ####
+ORDER by i.created_at desc
+LIMIT 10
+```
 
 SQL Query to see what version of the Latchel plugin the PM is running (Appfolio clients):
 
-| SELECT al.created\_at, al.plugin\_version FROM appfolio\_log al WHERE al.pm\_company\_id = #### ORDER BY al.created\_at DESC
-
-| LIMIT 1 |
-| --- |
-
-| SELECT al.created\_at, al.plugin\_version FROM appfolio\_log al WHERE al.pm\_company\_id = #### ORDER BY al.created\_at DESC
-
-| LIMIT 1 |
-| --- |
+```sql lines
+SELECT al.created_at, al.plugin_version 
+FROM appfolio_log al 
+WHERE al.pm_company_id = #### 
+ORDER BY al.created_at DESC 
+LIMIT 1
+```
 
 SQL Query that shows big red flags for duplicate work orders. The query should produce zero results. If it outputs results, escalate to #tech-high-sev
 
-| `SELECT j.ref_job_id, j.created_at, i.settings->>'last_sync_time' as last_sync_time FROM job j ``JOIN property p ON p.property_id = j.property_id ``JOIN company c ON c.company_id = p.pm_company_id ``JOIN integration i ON i.pm_company_id = c.company_id ``JOIN pm_company_settings pcs ON pcs.pm_company_id = c.company_id ``WHERE c.company_id = 549 AND j.ref_job_id IS NULL AND j.created_at < DATE(i.settings->>'last_sync_time') AND j.created_at > pcs.integration_sync_date;` |
-| --- |
-
-| `SELECT j.ref_job_id, j.created_at, i.settings->>'last_sync_time' as last_sync_time FROM job j ``JOIN property p ON p.property_id = j.property_id ``JOIN company c ON c.company_id = p.pm_company_id ``JOIN integration i ON i.pm_company_id = c.company_id ``JOIN pm_company_settings pcs ON pcs.pm_company_id = c.company_id ``WHERE c.company_id = 549 AND j.ref_job_id IS NULL AND j.created_at < DATE(i.settings->>'last_sync_time') AND j.created_at > pcs.integration_sync_date;` |
-| --- |
+```sql lines wrap
+SELECT j.ref_job_id, j.created_at, i.settings->>'last_sync_time' as last_sync_time FROM job j 
+JOIN property p ON p.property_id = j.property_id 
+JOIN company c ON c.company_id = p.pm_company_id 
+JOIN integration i ON i.pm_company_id = c.company_id 
+JOIN pm_company_settings pcs ON pcs.pm_company_id = c.company_id 
+WHERE c.company_id = 549 AND j.ref_job_id IS NULL AND j.created_at < DATE(i.settings->>'last_sync_time') AND j.created_at > pcs.integration_sync_date;
+```
 
 ### **6. Appendix**
 
-- Additional resource: \[
-
-[https://latchel.atlassian.net/wiki/spaces/SR/pages/3072655391/Job\+Aid\+Suggested\+Templates\+Best\+Practices#Integration-Related-ConcernsCan't](https://latchel.atlassian.net/wiki/spaces/SR/pages/3072655391/Job+Aid+Suggested+Templates+Best+Practices#Integration-Related-ConcernsCan't) find link\]([https://help.latchel.com/Job-Aid-Suggested-Templates-Best-Practices](https://help.latchel.com/Job-Aid-Suggested-Templates-Best-Practices))
+- Additional resource: [https://latchel.atlassian.net/wiki/spaces/SR/pages/3072655391/Job\+Aid\+Suggested\+Templates\+Best\+Practices#Integration-Related-Concerns](https://latchel.atlassian.net/wiki/spaces/SR/pages/3072655391/Job+Aid+Suggested+Templates+Best+Practices#Integration-Related-ConcernsCan't)([https://help.latchel.com/Job-Aid-Suggested-Templates-Best-Practices](https://help.latchel.com/Job-Aid-Suggested-Templates-Best-Practices))
