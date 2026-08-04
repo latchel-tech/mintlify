@@ -4,7 +4,7 @@ groups: ["latchel"]
 ---
 
 <Note>
-**Internal use only — do not distribute externally.** This guide enables the Product Support team to answer customer API questions independently, without engineering escalation. Last updated: May 2026.
+  **Internal use only — do not distribute externally.** This guide enables the Product Support team to answer customer API questions independently, without engineering escalation. Last updated: May 2026.
 </Note>
 
 ## Part 1: How to Use This Guide
@@ -20,7 +20,7 @@ By the end, you should be able to:
 - Know exactly when something genuinely needs an engineer
 
 <Note>
-**How to use:** Read Parts 1–2 once to build your foundation. Use Parts 3–4 as an ongoing lookup reference. Keep Part 5 (the question framework) bookmarked — it’s your step-by-step process for any new scenario.
+  **How to use:** Read Parts 1–2 once to build your foundation. Use Parts 3–4 as an ongoing lookup reference. Keep Part 5 (the question framework) bookmarked — it’s your step-by-step process for any new scenario.
 </Note>
 
 ## Part 2: API 101 — Core Concepts
@@ -40,7 +40,7 @@ Latchel’s Partner API (PAPI) is how customers can access their Latchel data �
 Latchel’s PAPI is a REST API. This means requests are made over the web using standard HTTP calls — the same technology your browser uses to load a webpage. There are five types of actions (HTTP methods):
 
 | Method | What it does |
-|---|---|
+| --- | --- |
 | **GET** | Read data. Retrieve a list of vendors, look up a specific job, etc. GET requests never change data. |
 | **POST** | Create new data. Create a new job, add a new property, etc. |
 | **PUT** | Replace / fully update an existing record. |
@@ -48,7 +48,7 @@ Latchel’s PAPI is a REST API. This means requests are made over the web using 
 | **DELETE** | Remove a record permanently. |
 
 <Note>
-**Support tip:** Most customer questions are about GET requests — they want to read data out of Latchel. If a customer asks how to pull a list of something, it’s always a GET.
+  **Support tip:** Most customer questions are about GET requests — they want to read data out of Latchel. If a customer asks how to pull a list of something, it’s always a GET.
 </Note>
 
 ### 2.3 What is an Endpoint?
@@ -84,14 +84,14 @@ Important things to know:
 **600 requests per API key, per 10-minute window.** When the limit is hit, the API returns HTTP 429 (Too Many Requests).
 
 | Response Header | What it means |
-|---|---|
+| --- | --- |
 | `x-ratelimit-limit` | Total requests allowed in the window (600) |
 | `x-ratelimit-remaining` | Requests still available in the current window |
 | `Retry-After` | How many seconds to wait before retrying |
 | `X-RateLimit-Reset` | The exact timestamp when the window resets |
 
 <Note>
-**Support tip:** If a customer reports 429 errors, ask how many requests per minute they’re making. Advise them to add delays between batches or spread the sync over time.
+  **Support tip:** If a customer reports 429 errors, ask how many requests per minute they’re making. Advise them to add delays between batches or spread the sync over time.
 </Note>
 
 ### 2.7 Pagination
@@ -101,7 +101,7 @@ Most list endpoints return results in pages, not all records at once. If a custo
 ### 2.8 Environments: Production vs. Testing
 
 | Environment | Base URL | Notes |
-|---|---|---|
+| --- | --- | --- |
 | **Production (live)** | `https://papi.latchel.com/v1/` | Real account data. Use for actual integrations. |
 | **Testing / Sandbox** | `https://latchel-demo.com/v1/` | Demo data only. Requires a separate dev API key. Safe for testing. |
 
@@ -114,27 +114,27 @@ Some fields are marked `[INHERITABLE]`. They cascade down: **Company → Portfol
 ### 3.1 The Right URL
 
 <Warning>
-**Always use papi.latchel.com — never app.latchel.com.** The papi subdomain is the official, authoritative, up-to-date reference.
+  **Always use papi.latchel.com — never app.latchel.com.** The papi subdomain is the official, authoritative, up-to-date reference.
 </Warning>
 
 | Resource | URL |
-|---|---|
+| --- | --- |
 | Full API docs | [https://papi.latchel.com/api-docs/papi/](https://papi.latchel.com/api-docs/papi/) |
 | Production base URL | `https://papi.latchel.com/v1/` |
 | Sandbox/testing base URL | `https://latchel-demo.com/v1/` |
 | API key generation | [help.latchel.com — How to Generate an API Key](https://help.latchel.com/s/topic/0TO5e000000h9wqGAA/How-to-Generate-an-API-Key) |
 | Webhook docs | [help.latchel.com — search “Webhooks”](https://help.latchel.com/reference/introduction.md) |
-| Analytics+ | [https://latchel.com/analytics-plus/](https://latchel.com/analytics-plus/) |
+| Analytics\+ | [https://latchel.com/analytics-plus/](https://latchel.com/analytics-plus/) |
 | API technical issues | [tech@latchel.com](mailto:tech@latchel.com) |
 | Customer Success | [success@latchel.com](mailto:success@latchel.com) |
 
 ### 3.2 Anatomy of the Docs Page
 
 | Element | What it means |
-|---|---|
+| --- | --- |
 | Left sidebar | A list of all endpoint categories. Click any to jump to it. |
 | Colored method badges | Each endpoint shows its HTTP method (GET, POST, etc.) followed by the path. |
-| “+ Show” toggle | Expand an endpoint to see full details: parameters, request body, and example responses. |
+| “\+ Show” toggle | Expand an endpoint to see full details: parameters, request body, and example responses. |
 | Request Parameters table | Lists all query and path parameters, whether required or optional, and descriptions. |
 | Response schemas | Shows what fields the API returns, with descriptions. |
 | Example responses | Sample JSON showing what a real API response looks like. |
@@ -145,14 +145,14 @@ Some fields are marked `[INHERITABLE]`. They cascade down: **Company → Portfol
 2. Identify the data type the customer is asking about (vendors, jobs, properties, tenants, etc.)
 3. Click the matching category in the left sidebar
 4. Scan the endpoint list. Find the one matching the action (GET for reading, POST for creating, etc.)
-5. Click “+ Show” to expand it
+5. Click “\+ Show” to expand it
 6. Read the Parameters section to answer questions about filters, pagination, required fields
 7. Read the Response section to confirm what fields are returned
 8. Share the relevant endpoint URL with the customer
 
-<Note>
-**Pro tip:** Use Ctrl+F on the docs page and search for a keyword (e.g., “status”, “invoice”). The docs are one long scrollable page.
-</Note>
+<Tip>
+  **Pro tip:** Use Ctrl\+F on the docs page and search for a keyword (e.g., “status”, “invoice”). The docs are one long scrollable page.
+</Tip>
 
 ## Part 4: Full Endpoint Reference
 
@@ -163,12 +163,12 @@ Every endpoint category in the Latchel Partner API, with available endpoints and
 Endpoints about the API user’s company account and users within it.
 
 | Method | Endpoint | What it does |
-|---|---|---|
+| --- | --- | --- |
 | GET | `/me` | Returns details about the authenticated company. Use this to confirm API key is working. |
 | GET | `/company/users` | Lists all users within the company account. |
 
 <Note>
-**Common question:** “How can I confirm my API key is working?” — Have them call GET /me. A successful response confirms authentication.
+  **Common question:** “How can I confirm my API key is working?” — Have them call GET /me. A successful response confirms authentication.
 </Note>
 
 ### 4.2 Jobs (Work Orders)
@@ -176,7 +176,7 @@ Endpoints about the API user’s company account and users within it.
 Endpoints for creating, reading, and managing work orders (called Jobs in the API).
 
 | Method | Endpoint | What it does |
-|---|---|---|
+| --- | --- | --- |
 | GET | `/jobs` | List all jobs. Supports filters (status, date range, property, etc.) and pagination. |
 | POST | `/jobs` | Create a new job/work order. |
 | GET | `/jobs/{job_id}` | Get full details of a specific job. |
@@ -186,7 +186,7 @@ Endpoints for creating, reading, and managing work orders (called Jobs in the AP
 | POST | `/jobs/{job_id}/deny` | Deny a job approval request. |
 
 <Note>
-**Common question:** “Can I pull all our work orders via API?” — Yes, GET /jobs. Use pagination for large accounts and filters to narrow results.
+  **Common question:** “Can I pull all our work orders via API?” — Yes, GET /jobs. Use pagination for large accounts and filters to narrow results.
 </Note>
 
 ### 4.3 Job Files
@@ -194,7 +194,7 @@ Endpoints for creating, reading, and managing work orders (called Jobs in the AP
 Endpoints for uploading and retrieving files (photos, documents) attached to a work order.
 
 | Method | Endpoint | What it does |
-|---|---|---|
+| --- | --- | --- |
 | GET | `/jobs/{job_id}/files` | List all files attached to a specific job. |
 | POST | `/jobs/{job_id}/files` | Upload a new file to a job. |
 | GET | `/jobs/{job_id}/files/{file_id}` | Get a specific file attached to a job. |
@@ -205,24 +205,24 @@ Endpoints for uploading and retrieving files (photos, documents) attached to a w
 Endpoint for accessing the status change history (audit trail) of a work order.
 
 | Method | Endpoint | What it does |
-|---|---|---|
+| --- | --- | --- |
 | GET | `/jobs/{job_id}/history/state` | Returns a log of all status transitions for a specific job. |
 
 <Note>
-**Common question:** “Can we see the full timeline of a work order?” — Yes, GET /jobs/{job_id}/history/state returns the full state history.
+  **Common question:** “Can we see the full timeline of a work order?” — Yes, GET /jobs/{job_id}/history/state returns the full state history.
 </Note>
 
 ### 4.5 Locations
 
 | Method | Endpoint | What it does |
-|---|---|---|
+| --- | --- | --- |
 | GET | `/locations` | List all locations. |
 | GET | `/locations/{location_id}` | Get details of a specific location. |
 
 ### 4.6 Owners (Property Owners)
 
 | Method | Endpoint | What it does |
-|---|---|---|
+| --- | --- | --- |
 | GET | `/owners` | List all property owners. |
 | POST | `/owners` | Create a new property owner. |
 | GET | `/owners/{user_id}` | Get details of a specific owner. |
@@ -232,30 +232,30 @@ Endpoint for accessing the status change history (audit trail) of a work order.
 ### 4.7 Tenants (Residents)
 
 | Method | Endpoint | What it does |
-|---|---|---|
+| --- | --- | --- |
 | GET | `/tenants` | List all tenants/residents across the account. |
 | GET | `/tenants/{user_id}` | Get details of a specific tenant. |
 | PUT | `/tenants/{user_id}` | Update a tenant’s details. |
 
 <Note>
-**Common question:** “Can we sync our resident list to our CRM?” — Yes, GET /tenants returns all resident records.
+  **Common question:** “Can we sync our resident list to our CRM?” — Yes, GET /tenants returns all resident records.
 </Note>
 
 ### 4.8 Payment Methods
 
 | Method | Endpoint | What it does |
-|---|---|---|
+| --- | --- | --- |
 | GET | `/payment-methods/{payment_id}` | Get details of a specific payment method. |
 | DELETE | `/payment-methods/{payment_id}` | Remove a payment method. |
 
 <Warning>
-**Caution:** DELETE on payment methods is permanent and cannot be undone. Confirm the customer understands this before advising them to use this endpoint.
+  **Caution:** DELETE on payment methods is permanent and cannot be undone. Confirm the customer understands this before advising them to use this endpoint.
 </Warning>
 
 ### 4.9 Property Tenants
 
 | Method | Endpoint | What it does |
-|---|---|---|
+| --- | --- | --- |
 | GET | `/properties/{property_id}/tenants` | List all tenants linked to a specific property. |
 | POST | `/properties/{property_id}/tenants` | Add a tenant to a property. |
 | PUT | `/properties/{property_id}/tenants/{tenant_id}` | Update a tenant–property link. |
@@ -263,7 +263,7 @@ Endpoint for accessing the status change history (audit trail) of a work order.
 ### 4.10 Properties
 
 | Method | Endpoint | What it does |
-|---|---|---|
+| --- | --- | --- |
 | GET | `/properties` | List all properties. Supports filters and pagination. |
 | POST | `/properties` | Create a new property. |
 | GET | `/properties/{property_id}` | Get full details of a specific property. |
@@ -276,9 +276,9 @@ Endpoint for accessing the status change history (audit trail) of a work order.
 ### 4.11 Portfolios
 
 | Method | Endpoint | What it does |
-|---|---|---|
+| --- | --- | --- |
 | GET | `/portfolios` | List all portfolios. |
 | POST | `/portfolios` | Create a new portfolio. |
 | GET | `/portfolios/{portfolio_id}` | Get details of a specific portfolio. |
 | PUT | `/portfolios/{portfolio_id}` | Update a portfolio. |
-| POST | `/portfolios/{portfolio_id}/add-subscription` |
+| POST | `/portfolios/{portfolio_id}/add-subscription` |  |
