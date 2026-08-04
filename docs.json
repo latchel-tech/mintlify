@@ -871,7 +871,11 @@
                       {
                         "group": "Product Support Deep Dive Management",
                         "pages": [
-                          "latchel-admin/Product-Support-Team/Product-Support-Deep-Dive-Management"
+                          "latchel-admin/Product-Support-Team/Product-Support-Deep-Dive-Management",
+                          "latchel-admin/Product-Support-Team/Job-Aid-Deep-Dive-DD-Process",
+                          "latchel-admin/Product-Support-Team/Job-Aid-PS-DD-and-SDDI-Category-Matrix",
+                          "latchel-admin/Product-Support-Team/How-to-Submit-a-Deep-Dive-Request",
+                          "latchel-admin/Product-Support-Team/Job-Aid-Searching-and-Analyzing-Messaging-Logs-in-Twilio"
                         ]
                       },
                       {

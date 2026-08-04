@@ -1,26 +1,21 @@
----
-title: "Job Aid: PS DD and SDDI Category Matrix"
-groups: ["latchel"]
----
-
 <Note>
-This job aid provides guidance on how to categorize deep dive (DD) and SDDI investigations. It is designed to ensure consistency and accuracy in identifying and analyzing trends across customer complaints.
+  This job aid provides guidance on how to categorize deep dive (DD) and SDDI investigations. It is designed to ensure consistency and accuracy in identifying and analyzing trends across customer complaints.
 </Note>
 
-<Note>
-**DD vs. SDDI — What’s the Difference?**
+<Callout icon="notes" iconType="duotone" color="#b19cf8">
+  **DD vs. SDDI — What’s the Difference?**
 
-**DD (Deep Dive) → **Deep Dives are investigations **initiated by Property Managers or Customer Success Managers (CSMs)**.
+  **DD (Deep Dive) →** Deep Dives are investigations **initiated by Property Managers or Customer Success Managers (CSMs)**.
 
-- These typically involve escalated issues, complex scenarios, or process breakdowns that require root cause analysis and documentation.
+  - These typically involve escalated issues, complex scenarios, or process breakdowns that require root cause analysis and documentation.
 
-**SDDI (Survey & Review Deep Dive Investigation) → **SDDIs are **proactively initiated by the Product Support team** in response to **poor customer feedback** (ratings of 3 or below) captured through:
+  **SDDI (Survey & Review Deep Dive Investigation) →** SDDIs are **proactively initiated by the Product Support team** in response to **poor customer feedback** (ratings of 3 or below) captured through:
 
-- CSAT Surveys
-- Google Reviews
-- Work Order Resident Reviews
-  - These dives help uncover patterns that may not have been directly escalated but still impact customer experience.
-</Note>
+  - CSAT Surveys
+  - Google Reviews
+  - Work Order Resident Reviews
+    - These dives help uncover patterns that may not have been directly escalated but still impact customer experience.
+</Callout>
 
 ### **Complaint Category**
 
@@ -31,7 +26,7 @@ The **Complaint Category** is the **primary classification** used to group relat
 - Categorizing accurately is essential to ensure that patterns and pain points are correctly identified and addressed.
 
 | **Complaint Category** | **Definition** | **Example(s)** |
-|---|---|---|
+| --- | --- | --- |
 | **Poor Scheduling Experience** | The customer experienced scheduling or rescheduling issues that delayed or disrupted the work order. | The vendor rescheduled multiple times, pushing the repair back over a week. |
 | **Took Too Long to Complete** | The customer was dissatisfied with delays or the overall time it took to complete the work order. | An emergency took a week to resolve because the vendor accepted the job four days after it was assigned. |
 | **Double Dispatch** | Two service providers were dispatched unnecessarily for the same work order. | A preferred vendor accepted the job, but the PM also sent another vendor not logged on the WO, resulting in duplicate assignments. |
@@ -72,20 +67,19 @@ A Child Issue Ticket may highlight:
 Depending on the complexity of the case, a single deep dive may result in **multiple Child Issue Tickets**, each representing a distinct root cause.
 
 | **Child Issue Ticket Title** | **Definition** | **Example/s** |
-|---|---|---|
-| **LVN SP Feedback – SP Company Name** | The complaint was caused by an **LVN Service Provider’s actions**, behavior, or non-compliance with expected processes. | - LVN SP proceeded with the job without budget increase approval.<br/>- LVN SP attempted to collect payment directly from the resident for PM-responsible work.<br/> |
-| **Associate Feedback – Associate Name** | The complaint stemmed from an **agent not following SOPs, job aids, or established guidelines**. This may involve actions or communication that contributed to the issue. | - Agent completed the WO without securing tenant confirmation as required.<br/>- Agent posted in the Emergency Slack channel instead of creating a task.<br/>- Agent showed lack of empathy when speaking with the PM, escalating the situation.<br/>- Agent was rude or dismissive during the conversation.<br/>- Agent failed to actively listen to the customer.<br/> |
-| **Ops Request (SOP)** | The issue was caused by **gaps or outdated content in SOPs or job aids**, leading to confusion or inconsistent handling. | - SOP or job aid contains outdated steps.<br/>- SOP or job aid lacks critical information, resulting in errors or delays.<br/> |
-| **Ops Request (Help Guide)** | A **Help Guide update or creation** is needed to better support users and prevent similar issues in the future. | - A process wasn’t followed correctly because there’s no clear Help Guide to reference.<br/>- An existing Help Guide lacks the steps needed to complete the workflow accurately.<br/> |
-| **Product (Feature Request)** | A **new feature or functionality is needed** to improve workflows, support users, and reduce complaint drivers. | - PM requests the ability to customize SMS notifications sent to tenants.<br/>- Resident requests Spanish-language notification options.<br/> |
-| **Product (Bug)** | A **technical issue or system malfunction** occurred, disrupting the standard process and leading to a complaint. | - The WO landed on “Waiting for PM” upon creation without a logical trigger.<br/>- System failed to send the expected notification to the PM.<br/> |
+| --- | --- | --- |
+| **LVN SP Feedback – SP Company Name** | The complaint was caused by an **LVN Service Provider’s actions**, behavior, or non-compliance with expected processes. | - LVN SP proceeded with the job without budget increase approval.<br />- LVN SP attempted to collect payment directly from the resident for PM-responsible work.<br /> |
+| **Associate Feedback – Associate Name** | The complaint stemmed from an **agent not following SOPs, job aids, or established guidelines**. This may involve actions or communication that contributed to the issue. | - Agent completed the WO without securing tenant confirmation as required.<br />- Agent posted in the Emergency Slack channel instead of creating a task.<br />- Agent showed lack of empathy when speaking with the PM, escalating the situation.<br />- Agent was rude or dismissive during the conversation.<br />- Agent failed to actively listen to the customer.<br /> |
+| **Ops Request (SOP)** | The issue was caused by **gaps or outdated content in SOPs or job aids**, leading to confusion or inconsistent handling. | - SOP or job aid contains outdated steps.<br />- SOP or job aid lacks critical information, resulting in errors or delays.<br /> |
+| **Ops Request (Help Guide)** | A **Help Guide update or creation** is needed to better support users and prevent similar issues in the future. | - A process wasn’t followed correctly because there’s no clear Help Guide to reference.<br />- An existing Help Guide lacks the steps needed to complete the workflow accurately.<br /> |
+| **Product (Feature Request)** | A **new feature or functionality is needed** to improve workflows, support users, and reduce complaint drivers. | - PM requests the ability to customize SMS notifications sent to tenants.<br />- Resident requests Spanish-language notification options.<br /> |
+| **Product (Bug)** | A **technical issue or system malfunction** occurred, disrupting the standard process and leading to a complaint. | - The WO landed on “Waiting for PM” upon creation without a logical trigger.<br />- System failed to send the expected notification to the PM.<br /> |
 
 ### **Issue Found and Root Causes**
 
 **Root Causes** represent the **specific, underlying factors** within the _Issue Category_ that directly contributed to a customer complaint.
 
-They are the **core issues that Latchel can control, influence, or correct** through process improvements, coaching, or product enhancements.
-A well-defined root cause is:
+They are the **core issues that Latchel can control, influence, or correct** through process improvements, coaching, or product enhancements. A well-defined root cause is:
 
 - **Accurate** — clearly tied to the findings from the deep dive investigation.
 - **Actionable** — points to something that can be addressed or improved.
@@ -106,78 +100,101 @@ For **every root cause identified**, a **corresponding Child Issue Ticket** must
 - **Trend reporting remains clean, accurate, and actionable**
 
 | **Issue Found** | **Root Cause** |
-|---|---|
-| **LCN / LVN Issue ** | Did not get approval to go over budget |
-| Missed appointments |
-| Made residents pay out of pocket |
-| Took the wrong action in the dashboard |
-| Unresponsive to follow-ups (estimates/updates) |
-| Lack of professionalism |
-| Double Charge/Incorrect Charges |
-| Delay in Required Materials |
+| --- | --- |
+| LCN / LVN Issue | Did not get approval to go over budget |
+|  | Missed appointments |
+|  | Made residents pay out of pocket |
+|  | Took the wrong action in the dashboard |
+|  | Unresponsive to follow-ups (estimates/updates) |
+|  | Lack of professionalism |
+|  | Double Charge/Incorrect Charges |
+|  | Delay in Required Materials |
 | **Preferred SP Issue** | Did not get approval to go over budget |
-| Missed appointments |
-| Made residents pay out of pocket |
-| Unresponsive to followups (estimates/updates) |
-| Took the wrong action in the dashboard |
-| Lack of professionalism |
-| Double Charge/Incorrect Charges |
-| Delay in Required Materials |
+|  | Missed appointments |
+|  | Made residents pay out of pocket |
+|  | Unresponsive to followups (estimates/updates) |
+|  | Took the wrong action in the dashboard |
+|  | Lack of professionalism |
+|  | Double Charge/Incorrect Charges |
+|  | Delay in Required Materials |
 | **Owner Issue (RentRedi)** | Owner Miss - Inaccurate Action/Instruction |
-| Notifications lack clarity |
-| Invoice Dispute |
-| Severity Settings Issue |
-| Unaware of Latchel WO Process |
+|  | Notifications lack clarity |
+|  | Invoice Dispute |
+|  | Severity Settings Issue |
+|  | Unaware of Latchel WO Process |
 | **Owner Issue (NOMAD)** | Owner Miss - Inaccurate Action/Instruction |
-| Notifications lack clarity |
-| Invoice Dispute |
-| Severity Settings Issue |
-| Unaware of Latchel WO Process |
+|  | Notifications lack clarity |
+|  | Invoice Dispute |
+|  | Severity Settings Issue |
+|  | Unaware of Latchel WO Process |
 | **Resident Issue** | Unresponsive to scheduling |
-| Unresponsive to troubleshooting |
-| Canceled the WO |
-| Submitted Multiple WOs for Same Issue |
-| Incorrect WO submission - Wrong PLC |
-| Lack of Familiarity with Latchel and/or PM Process |
-| Unrealistic/Exaggerated expectations for the WO |
-| INVALID COMPLAINT |
-| Lack of Professionalism |
-| Inaccurate Troubleshooting Response |
+|  | Unresponsive to troubleshooting |
+|  | Canceled the WO |
+|  | Submitted Multiple WOs for Same Issue |
+|  | Incorrect WO submission - Wrong PLC |
+|  | Lack of Familiarity with Latchel and/or PM Process |
+|  | Unrealistic/Exaggerated expectations for the WO |
+|  | INVALID COMPLAINT |
+|  | Lack of Professionalism |
+|  | Inaccurate Troubleshooting Response |
 | **PM Issue** | Provided Conditional Instructions (Unclear Instructions) - Need to reset expectations |
-| Leveraging Notes for Latchel Action |
-| Delayed PM Action (Approvals) |
-| Wrongful PM Action (took action that resulted in not the desired outcome) |
-| Lack of Familiarity with Emg Escalation Process |
-| Lack of Familiarity with their vendor's list |
-| Lack of Familiarity with their Severity Settings |
-| Lack of Familiarity with their Subscription Coverage |
-| The PM had outdated/insufficient Resident/Property Profile Information |
-| Account Settings date discrepancy (different setting was applicable during the incident) |
-| Lack of Familiarity with WO Status |
-| Lack of Familiarity with task description |
-| Lack of Familiarity with Account Settings |
-| Unaware of VALID Charges |
-| **Latchel Agent Issue** | Did not follow Critical Notes/Pre-Dispatch Instructions<br/><br/>Reference: [How to Understand the Existing Work Order](https://help.latchel.com/How-to:-Understand-the-Existing-Work-Order)<br/>[How to Properly Diagnose Emergency Situations](https://help.latchel.com/How-to:-Properly-Diagnose-Emergency-Situations) [Job Aid: Critical, Pre-dispatch and Special Notes](https://help.latchel.com/Job-Aid:-Critical,-Pre-dispatch,-Warranty,-Special-Notes-&-Emergency-Escalation-Contacts) |
-| Did not share Approved Budget and Approval process with SP<br/><br/>Reference: [How to Assign a Preferred Latchel Network Service Provider](https://help.latchel.com/(EMERGENCY)-How-to:-Assign-a-Preferred-+-Latchel-Network-Service-Provider) |
-| Did not set proper expectations for the WO<br/><br/>Reference: [How to Assign a Preferred Latchel Network Service Provider](https://help.latchel.com/(EMERGENCY)-How-to:-Assign-a-Preferred-+-Latchel-Network-Service-Provider) [How to: Set expectations with Service Providers when dispatching](https://help.latchel.com/How-to:-Set-expectations-with-Service-Providers-when-dispatching) |
-| Did not review task description<br/><br/>Reference: [How to Understand the Existing Work Order](https://help.latchel.com/How-to:-Understand-the-Existing-Work-Order) |
-| Did not review CN/PD Instructions/Special Notes<br/><br/>Reference: [How to Understand the Existing Work Order](https://help.latchel.com/How-to:-Understand-the-Existing-Work-Order) [SOP: Pre-Dispatch Instructions & Critical Notes](https://help.latchel.com/SOP:-Pre-Dispatch-Instructions-&-Critical-Notes) |
-| Did not check WO skill<br/><br/>Reference: [How to Understand the Existing Work Order](https://help.latchel.com/How-to:-Understand-the-Existing-Work-Order)<br/>[How to Identify Trades or Skill Categories that Require Property Manager Approval](https://help.latchel.com/(PREMIUM)-How-to:-Identify-Trades-or-Skill-Categories-that-Require-Property-Manager-Approval) |
-| Did not review severity settings<br/><br/>Reference: [About Property Manager Severity Settings](https://help.latchel.com/About-Property-Manager's-Intake-Settings)<br/>[How to Understand the Existing Work Order](https://help.latchel.com/How-to:-Understand-the-Existing-Work-Order) |
-| Did not check the files tab<br/><br/>Referemce: [How to: Handle Invoices or Estimates Sent via Email](https://latchel.atlassian.net/l/cp/HRSNeJr7) |
-| Did not check related maintenance requests<br/><br/>Reference: [Job Aid: Finding an Existing Work Order vs. When to Create a new Work Order](https://help.latchel.com/Job-Aid:-Finding-an-Existing-Work-Order-vs.-When-to-Create-a-new-Work-Order) |
-| No SMS was sent to vendors when sourcing<br/><br/>Reference: [How to: Assign a Preferred + Latchel Network Service Provider](https://latchel.atlassian.net/l/cp/2v1rWJ4T)<br/>[Job Aid: Job Needs a Service Provider](https://latchel.atlassian.net/l/cp/u4iRbMLN) |
-| No email was sent to the failed escalation email<br/><br/>Reference: [How to: Access Property Manager Escalation Contacts](https://latchel.atlassian.net/l/cp/f5yrrj9q)<br/>[Job Aid: PM Outbound Communication for Emergency WOs](https://latchel.atlassian.net/l/cp/Y16LNUyj) |
-| No call was made to SP when scheduling<br/><br/>Reference: [(SOP) Handling 'Scheduling With Service Provider' Tasks](https://latchel.atlassian.net/l/cp/XfRWBnC1) |
-| No call to EEC list for PD/EH issue<br/><br/>Reference: [Job Aid: PM Outbound Communication for Emergency WOs](https://latchel.atlassian.net/l/cp/Y16LNUyj) |
-| Did not follow PM instructions<br/><br/>Reference: [How to: Handle SMS /Webchat Contacts](https://latchel.atlassian.net/l/cp/ioe0AcPT) |
-| Lack of empathy<br/><br/>Reference: [Latchel Customer Service Tenets - High 5 Your Customers Today!](https://latchel.atlassian.net/l/cp/zW0L7rAq)<br/>[Job-Aid: Blurbs or Templates to Communicate with Customers](https://latchel.atlassian.net/l/cp/zpMQgr5S) |
-| Did not complete SP Sourcing process (did not exhaust queue)<br/><br/>Reference: [Job Aid: Job Needs a Service Provider](https://help.latchel.com/Job-Aid:-Job-Needs-a-Service-Provider) [(EMERGENCY) How to: Assign a Preferred + Latchel Network Service Provider](https://help.latchel.com/(EMERGENCY)-How-to:-Assign-a-Preferred-+-Latchel-Network-Service-Provider) |
-| Applied the wrong WO state   Reference: [How to: Put a Job on Hold](https://help.latchel.com/How-to:-Put-a-Job-on-Hold) |
-| Did not ask probing questions/clarification   Reference: [Job Aid: Troubleshooter Question Bank](https://help.latchel.com/Job-Aid:-Troubleshooter-Question-Bank) |
-| Assigned SP without an appointment   Reference: [How to: Source a New Service Provider](https://help.latchel.com/(PREMIUM)-How-to:-Source-a-new-service-provider) |
-| Payment processed without approval   Reference: [How to: Handle Over Approved Budget (aka Estimate)](https://help.latchel.com/(Non-Emergency)-How-to:-Handle-Over-Approved-Budget-(aka-Estimate)) |
-| Failed to update approved budget   Reference: [How to: Handle Changes to the Approved Budget](https://help.latchel.com/(⛑EMERGENCY)-How-to:-Handle-Changes-to-the-Approved-Budget) |
-| SMS/Call tagged to the wrong WO   Reference: [Tagging Video Calls to a WO](https://latchel.atlassian.net/l/cp/1zSixfc6)<br/>[How to: Link Past Calls to a WO](https://latchel.atlassian.net/l/cp/kAYxsBVw)<br/>[Job Aid: Call Flow for Outbound Calls](https://latchel.atlassian.net/l/cp/Afwic3Cn) [How to: Use Text Message (SMS/Webchat) Functions (in Latchel Console)](https://help.latchel.com/How-to-Use-Text-Message-SMS-Webchat-Functions-in-Latchel-Console) |
-| Insufficient contact attempt   Reference: [Job Aid: PM Outbound Communication for Emergency WOs](https://help.latchel.com/Job-Aid:-PM-Outbound-Communication-for-Emergency-WOs) |
-| Failed to leave sufficient notes/descriptions on WO   Reference: [How to: Write Effective Notes](https://help.latchel.com/How-to:-Write-Effective-Notes) |
+|  | Leveraging Notes for Latchel Action |
+|  | Delayed PM Action (Approvals) |
+|  | Wrongful PM Action (took action that resulted in not the desired outcome) |
+|  | Lack of Familiarity with Emg Escalation Process |
+|  | Lack of Familiarity with their vendor's list |
+|  | Lack of Familiarity with their Severity Settings |
+|  | Lack of Familiarity with their Subscription Coverage |
+|  | The PM had outdated/insufficient Resident/Property Profile Information |
+|  | Account Settings date discrepancy (different setting was applicable during the incident) |
+|  | Lack of Familiarity with WO Status |
+|  | Lack of Familiarity with task description |
+|  | Lack of Familiarity with Account Settings |
+|  | Unaware of VALID Charges |
+| **Latchel Agent Issue** | Did not follow Critical Notes/Pre-Dispatch Instructions<br /><br />Reference: [How to Understand the Existing Work Order](https://help.latchel.com/How-to:-Understand-the-Existing-Work-Order)<br />[How to Properly Diagnose Emergency Situations](https://help.latchel.com/How-to:-Properly-Diagnose-Emergency-Situations) [Job Aid: Critical, Pre-dispatch and Special Notes](https://help.latchel.com/Job-Aid:-Critical,-Pre-dispatch,-Warranty,-Special-Notes-&-Emergency-Escalation-Contacts) |
+|  | Did not share Approved Budget and Approval process with SP<br /><br />Reference: [How to Assign a Preferred Latchel Network Service Provider](https://help.latchel.com/\(EMERGENCY\)-How-to:-Assign-a-Preferred-+-Latchel-Network-Service-Provider) |
+|  | Did not set proper expectations for the WO<br /><br />Reference: [How to Assign a Preferred Latchel Network Service Provider](https://help.latchel.com/\(EMERGENCY\)-How-to:-Assign-a-Preferred-+-Latchel-Network-Service-Provider) [How to: Set expectations with Service Providers when dispatching](https://help.latchel.com/How-to:-Set-expectations-with-Service-Providers-when-dispatching) |
+|  | Did not review task description<br /><br />Reference: [How to Understand the Existing Work Order](https://help.latchel.com/How-to:-Understand-the-Existing-Work-Order) |
+|  | Did not review CN/PD Instructions/Special Notes<br /><br />Reference: [How to Understand the Existing Work Order](https://help.latchel.com/How-to:-Understand-the-Existing-Work-Order) [SOP: Pre-Dispatch Instructions & Critical Notes](https://help.latchel.com/SOP:-Pre-Dispatch-Instructions-&-Critical-Notes) |
+|  | Did not check WO skill<br /><br />Reference: [How to Understand the Existing Work Order](https://help.latchel.com/How-to:-Understand-the-Existing-Work-Order)<br />[How to Identify Trades or Skill Categories that Require Property Manager Approval](https://help.latchel.com/\(PREMIUM\)-How-to:-Identify-Trades-or-Skill-Categories-that-Require-Property-Manager-Approval) |
+|  | Did not review severity settings<br /><br />Reference: [About Property Manager Severity Settings](https://help.latchel.com/About-Property-Manager's-Intake-Settings)<br />[How to Understand the Existing Work Order](https://help.latchel.com/How-to:-Understand-the-Existing-Work-Order) |
+|  | Did not check the files tab<br /><br />Referemce: [How to: Handle Invoices or Estimates Sent via Email](https://latchel.atlassian.net/l/cp/HRSNeJr7) |
+|  | Did not check related maintenance requests<br /><br />Reference: [Job Aid: Finding an Existing Work Order vs. When to Create a new Work Order](https://help.latchel.com/Job-Aid:-Finding-an-Existing-Work-Order-vs.-When-to-Create-a-new-Work-Order) |
+|  | No SMS was sent to vendors when sourcing<br /><br />Reference: [How to: Assign a Preferred \+ Latchel Network Service Provider](https://latchel.atlassian.net/l/cp/2v1rWJ4T)<br />[Job Aid: Job Needs a Service Provider](https://latchel.atlassian.net/l/cp/u4iRbMLN) |
+|  | No email was sent to the failed escalation email<br /><br />Reference: [How to: Access Property Manager Escalation Contacts](https://latchel.atlassian.net/l/cp/f5yrrj9q)<br />[Job Aid: PM Outbound Communication for Emergency WOs](https://latchel.atlassian.net/l/cp/Y16LNUyj) |
+|  | No call was made to SP when scheduling<br /><br />Reference: [(SOP) Handling 'Scheduling With Service Provider' Tasks](https://latchel.atlassian.net/l/cp/XfRWBnC1) |
+|  | No call to EEC list for PD/EH issue<br /><br />Reference: [Job Aid: PM Outbound Communication for Emergency WOs](https://latchel.atlassian.net/l/cp/Y16LNUyj) |
+|  | Did not follow PM instructions<br /><br />Reference: [How to: Handle SMS /Webchat Contacts](https://latchel.atlassian.net/l/cp/ioe0AcPT) |
+|  | Lack of empathy<br /><br />Reference: [Latchel Customer Service Tenets - High 5 Your Customers Today!](https://latchel.atlassian.net/l/cp/zW0L7rAq)<br />[Job-Aid: Blurbs or Templates to Communicate with Customers](https://latchel.atlassian.net/l/cp/zpMQgr5S) |
+|  | Did not complete SP Sourcing process (did not exhaust queue)<br /><br />Reference: [Job Aid: Job Needs a Service Provider](https://help.latchel.com/Job-Aid:-Job-Needs-a-Service-Provider) [(EMERGENCY) How to: Assign a Preferred \+ Latchel Network Service Provider](https://help.latchel.com/\(EMERGENCY\)-How-to:-Assign-a-Preferred-+-Latchel-Network-Service-Provider) |
+|  | Applied the wrong WO state   Reference: [How to: Put a Job on Hold](https://help.latchel.com/How-to:-Put-a-Job-on-Hold) |
+|  | Did not ask probing questions/clarification   Reference: [Job Aid: Troubleshooter Question Bank](https://help.latchel.com/Job-Aid:-Troubleshooter-Question-Bank) |
+|  | Assigned SP without an appointment   Reference: [How to: Source a New Service Provider](https://help.latchel.com/\(PREMIUM\)-How-to:-Source-a-new-service-provider) |
+|  | Payment processed without approval   Reference: [How to: Handle Over Approved Budget (aka Estimate)](https://help.latchel.com/\(Non-Emergency\)-How-to:-Handle-Over-Approved-Budget-\(aka-Estimate\)) |
+|  | Failed to update approved budget   Reference: [How to: Handle Changes to the Approved Budget](https://help.latchel.com/\(⛑EMERGENCY\)-How-to:-Handle-Changes-to-the-Approved-Budget) |
+|  | SMS/Call tagged to the wrong WO   Reference: [Tagging Video Calls to a WO](https://latchel.atlassian.net/l/cp/1zSixfc6)<br />[How to: Link Past Calls to a WO](https://latchel.atlassian.net/l/cp/kAYxsBVw)<br />[Job Aid: Call Flow for Outbound Calls](https://latchel.atlassian.net/l/cp/Afwic3Cn) [How to: Use Text Message (SMS/Webchat) Functions (in Latchel Console)](https://help.latchel.com/How-to-Use-Text-Message-SMS-Webchat-Functions-in-Latchel-Console) |
+|  | Insufficient contact attempt   Reference: [Job Aid: PM Outbound Communication for Emergency WOs](https://help.latchel.com/Job-Aid:-PM-Outbound-Communication-for-Emergency-WOs) |
+|  | Failed to leave sufficient notes/descriptions on WO   Reference: [How to: Write Effective Notes](https://help.latchel.com/How-to:-Write-Effective-Notes) |
+|  | PD/EH WO mishandled Reference: [<u>How to: Identify Property Damage and Extreme Habitability Situations</u>](https://latchel.atlassian.net/wiki/spaces/OPS/pages/745504771 "https://latchel.atlassian.net/wiki/spaces/OPS/pages/745504771") |
+|  | Did not check Home Warranty Reference: [<u>Handling Work Orders with Home Warranty Information</u>](https://latchel.atlassian.net/wiki/spaces/OPS/pages/759332893/How+to+Handle+Emergency+Work+Orders#%F0%9F%93%8BHandling-Work-Orders-with-Home-Warranty-Information "https://latchel.atlassian.net/wiki/spaces/OPS/pages/759332893/How+to+Handle+Emergency+Work+Orders#%F0%9F%93%8BHandling-Work-Orders-with-Home-Warranty-Information")<br />[<u>How to: Navigate the Work Order Interface</u>](https://latchel.atlassian.net/wiki/spaces/LTG/pages/440074480/How+to+Navigate+the+Work+Order+Interface#Warranty "https://latchel.atlassian.net/wiki/spaces/LTG/pages/440074480/How+to+Navigate+the+Work+Order+Interface#Warranty") |
+|  | Unnecessary action completed Reference: [<u>How to: Understand the Existing Work Order</u>](https://latchel.atlassian.net/l/cp/FWbLsBvo "https://latchel.atlassian.net/l/cp/FWbLsBvo")<br />[<u>Job Aid: Job Needs a Service Provider</u>](https://latchel.atlassian.net/l/cp/KAzKJ96j "https://latchel.atlassian.net/l/cp/KAzKJ96j")<br />[<u>How to Escalate to Product Support</u>](https://latchel.atlassian.net/l/cp/ZzfgLZzf "https://latchel.atlassian.net/l/cp/ZzfgLZzf") |
+|  | Praise Feedback |
+|  | Did not create necessary WO Task Reference: [<u>How to create a task</u>](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2528083973/Job+Aid+What+is+a+task#%F0%9F%9B%A0%EF%B8%8FHow-to-create-a-task%3F "https://latchel.atlassian.net/wiki/spaces/OPS/pages/2528083973/Job+Aid+What+is+a+task#%F0%9F%9B%A0%EF%B8%8FHow-to-create-a-task%3F") |
+|  | Did not review activity log/history of WO Reference: [<u>How to: Understand the Existing Work Order</u>](https://latchel.atlassian.net/wiki/spaces/OPS/pages/757170180 "https://latchel.atlassian.net/wiki/spaces/OPS/pages/757170180") [<u>How to: Navigate the Work Order Interface</u>](https://latchel.atlassian.net/wiki/spaces/LTG/pages/440074480/How+to+Navigate+the+Work+Order+Interface#Activity "https://latchel.atlassian.net/wiki/spaces/LTG/pages/440074480/How+to+Navigate+the+Work+Order+Interface#Activity") |
+|  | Assigned Task to wrong User Group Reference: [<u>Job Aid: What is a task?</u>](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2528083973/Job+Aid+What+is+a+task#%F0%9F%91%A5List-of-User-Groups-and-when-to-assign-them "https://latchel.atlassian.net/wiki/spaces/OPS/pages/2528083973/Job+Aid+What+is+a+task#%F0%9F%91%A5List-of-User-Groups-and-when-to-assign-them") |
+|  | Did not create PS Escalation ticket Reference: [<u>How to: Escalate to Product Support</u>](https://latchel.atlassian.net/wiki/spaces/OPS/pages/1485373477/How+to+Escalate+to+Product+Support#Examples-of-types-of-escalations "https://latchel.atlassian.net/wiki/spaces/OPS/pages/1485373477/How+to+Escalate+to+Product+Support#Examples-of-types-of-escalations") [<u>Product Support Team vs Ops Agents</u>](https://latchel.atlassian.net/wiki/spaces/SR/pages/2977234945 "https://latchel.atlassian.net/wiki/spaces/SR/pages/2977234945") |
+|  | Support did NOT provide correct instruction to agent |
+|  | Did not review Budget Limits Reference: [<u>How to: Navigate the Work Order Interface</u>](https://latchel.atlassian.net/wiki/spaces/LTG/pages/440074480/How+to+Navigate+the+Work+Order+Interface#Budget "https://latchel.atlassian.net/wiki/spaces/LTG/pages/440074480/How+to+Navigate+the+Work+Order+Interface#Budget") [<u>(⛑EMERGENCY) How to: Handle Changes to the Approved Budget</u>](https://latchel.atlassian.net/wiki/spaces/OPS/pages/797245658/EMERGENCY+How+to+Handle+Changes+to+the+Approved+Budget#Step-1---How-to-Handle-the-Service-Provider-Request-for-a-new-Cost "https://latchel.atlassian.net/wiki/spaces/OPS/pages/797245658/EMERGENCY+How+to+Handle+Changes+to+the+Approved+Budget#Step-1---How-to-Handle-the-Service-Provider-Request-for-a-new-Cost") [<u>(Non-Emergency) How to: Handle Over Approved Budget (aka Estimate)</u>](https://latchel.atlassian.net/wiki/spaces/OPS/pages/764313974/Non-Emergency+How+to+Handle+Over+Approved+Budget+aka+Estimate#PART-1---The-Service-Provider-is-requesting-a-%24-money-amount-that-is-under-the-%E2%80%9CHard-Budget%E2%80%9D "https://latchel.atlassian.net/wiki/spaces/OPS/pages/764313974/Non-Emergency+How+to+Handle+Over+Approved+Budget+aka+Estimate#PART-1---The-Service-Provider-is-requesting-a-%24-money-amount-that-is-under-the-%E2%80%9CHard-Budget%E2%80%9D") |
+| **Ops Request (SOP)** | Current SOP missing step /info |
+|  | Automated Notifications |
+|  | No SOP |
+| **Ops Request (Help Guide)** | No Help Guide |
+|  | Current Help Guide Outdated/Missing Info |
+| **Product  Issue** | Feature Request - New Functionality |
+|  | Feature Request - Improvement (Known Gap) |
+| **Call Center Issue** | Call Center Flow |
+|  | Wait Time |
+|  | Disconnected |
+|  | Lack of Professionalism |
+|  | Did not set proper expectations |
+| **Data Entry Error** | Data Entry Error |
