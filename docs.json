@@ -868,6 +868,8 @@
                           "latchel-admin/Product-Support-Team/How-to-Subscription-Upgrade"
                         ]
                       },
+                      "untitled-page",
+                      "latchel-admin/Product-Support-Team/Product-Support-PS-New-Hire-Setup",
                       {
                         "group": "Product Support Deep Dive Management",
                         "pages": [
@@ -875,13 +877,18 @@
                           "latchel-admin/Product-Support-Team/Job-Aid-Deep-Dive-DD-Process",
                           "latchel-admin/Product-Support-Team/Job-Aid-PS-DD-and-SDDI-Category-Matrix",
                           "latchel-admin/Product-Support-Team/How-to-Submit-a-Deep-Dive-Request",
-                          "latchel-admin/Product-Support-Team/Job-Aid-Searching-and-Analyzing-Messaging-Logs-in-Twilio"
+                          "latchel-admin/Product-Support-Team/Job-Aid-Searching-and-Analyzing-Messaging-Logs-in-Twilio",
+                          {
+                            "group": "Job Aid: SDDI Tickets",
+                            "pages": [
+                              "latchel-admin/Product-Support-Team/Job-Aid-SDDI-Tickets",
+                              "latchel-admin/Product-Support-Team/SOP-How-to-Deep-Dive-Google-Reviews"
+                            ]
+                          },
+                          "latchel-admin/Product-Support-Team/DD-Customer-Conclusion-Email-Framework-(ACE)"
                         ]
                       },
-                      {
-                        "group": "Job Aid: SDDI Tickets",
-                        "pages": []
-                      },
+                      "latchel-admin/Product-Support-Team/Job-Aid-Top-PM-Requested-Action-Sets",
                       {
                         "group": "Product Support ASM Ticket Management",
                         "pages": [
@@ -925,8 +932,7 @@
                         "pages": [
                           "latchel-admin/Product-Support-Team/Latchel-Resident-Benefits"
                         ]
-                      },
-                      "untitled-page"
+                      }
                     ]
                   }
                 ]

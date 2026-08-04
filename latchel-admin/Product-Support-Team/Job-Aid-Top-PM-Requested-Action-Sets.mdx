@@ -1,39 +1,44 @@
 ---
 title: "Job Aid: Top PM Requested Action Sets"
-groups: ["latchel"]
 ---
 
 <Note>
-This Job Aid is used to share the details of the top PM requested action sets. It will also to serve to share those that can be updated and changed based on the specific PM request.
+  This Job Aid is used to share the details of the top PM requested action sets. It will also to serve to share those that can be updated and changed based on the specific PM request.
 </Note>
 
 ### How to: Request New Action Sets
 
 1. Review the below table.
 2. Find the Action Set you would like model your request after.
-3. In the #pd_cn_actionset Slack Channel, fill out the Action Set Request workflow and submit:
+3. In the #pd\_cn\_actionset Slack Channel, fill out the Action Set Request workflow and submit:
 
 <Frame>
-  <img src="/images/PST-94.png" alt="Screenshot 2024-11-07 at 8.09.24 AM.png" />
+  ![Screenshot 2024-11-07 at 8.09.24 AM.png](/images/PST-94.png)
 </Frame>
 
 - **Company Name (as it appears in Latchel)**
   - Copy & paste the Company Name from Latchel database.
-- **PM Company ID **
-  - When on the PM Company page, the ID are the last digits found in the URL link.
-  - <Frame>
-  <img src="/images/PST-95.png" alt="Screenshot 2024-11-07 at 8.17.55 AM.png" />
-</Frame>
+- **PM Company ID**
+  - When on the PM Company page, the ID are the last digits found in the URL link. 
+    <Frame>
+      ![PST 120](/images/PST-120.png "PST 120")
+    </Frame>
 - **Action Set Group URL the request is based off of:**
   - Find the Action Set Group in the table below.
   - Click on the Action Set Group hyperlink to take you to page in Latchel.
   - Copy & paste the URL in this section.
   - [Video demo here.](https://www.loom.com/share/ba2a58e2f4b44d429a44f7823d2b4fcb?sid=11c814e9-65ab-48f1-ac78-1b17e7cb295d)
+
+<iframe src="https://www.loom.com/embed/ba2a58e2f4b44d429a44f7823d2b4fcb" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
 - **Specific Action Set URL the request is based off of:**
   - Find the Specific Action Set in the table below.
   - Click on the Specific Action Set hyperlink to take you to page in Latchel.
   - Copy & paste the URL in this section.
   - [Video demo here. ](https://www.loom.com/share/4955361b506c45e5a1a73ac14850bab6?sid=e2bf4a7f-512a-454d-bb3b-ebee85371f82)
+
+<iframe src="https://www.loom.com/embed/4955361b506c45e5a1a73ac14850bab6" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
 - **New Action Set Request:**
   - Share all the details for the new request, such as:
     - Emergency WOs, Nonemergency WOs, Both
@@ -43,264 +48,255 @@ This Job Aid is used to share the details of the top PM requested action sets. I
     - State changes for the WO
     - WO Problem(s)
 
-
-
 | Field | Details |
-|---|---|
+| --- | --- |
 | **Action Set Group** | [Auto-Close Work Order (Unresponsive Resident)](https://app.latchel.com/admin/action-set-group/118) |
 | **Action Sets Included** | [Auto-Close Work Order (Unresponsive Resident)](https://app.latchel.com/admin/action-sets/1015) |
-| **Details** | If WO in "Scheduling with Tenant" or "Rescheduling with Tenant", after 7 days of residnet not scheduling (unless mandatory, SP is assigned or an emergency) ---> Auto-Cancel the WO. |
-| **Notes** | *Length of time can be adjusted to X days based on PM Request - Request with [Madeleine Nylec](mailto:maddie@latchel.com) |
+| **Details** | If WO in "Scheduling with Tenant" or "Rescheduling with Tenant", after 7 days of residnet not scheduling (unless mandatory, SP is assigned or an emergency) -→ Auto-Cancel the WO. |
+| **Notes** | \*Length of time can be adjusted to X days based on PM Request - Request with [Madeleine Nylec](mailto:maddie@latchel.com) |
 
 | Field | Details |
-|---|---|
+| --- | --- |
 | **Action Set Group** | [Auto Fill SP Instructions with Owner Info](https://app.latchel.com/admin/action-set-group/110) |
 | **Action Sets Included** | [SP Instructions with Owner Contact Info](https://app.latchel.com/admin/action-sets/1047) |
-| **Details** | Provides SP instructions based on the assigned owner for the property. --> "RECOMMENDATIONS: If you have questions, here is the contact information" |
-| **Notes** | *If no owner assigned to the property, no addition to SP insturction will be made and a note will be logged on the WO that the Custom Automation was NOT applied. |
+| **Details** | Provides SP instructions based on the assigned owner for the property. --\> "RECOMMENDATIONS: If you have questions, here is the contact information" |
+| **Notes** | \*If no owner assigned to the property, no addition to SP insturction will be made and a note will be logged on the WO that the Custom Automation was NOT applied. |
 
 | Field | Details |
-|---|---|
-| **Action Set Group** | [Automatic Permission To Enter + AI](https://app.latchel.com/admin/action-set-group/12) |
+| --- | --- |
+| **Action Set Group** | [Automatic Permission To Enter \+ AI](https://app.latchel.com/admin/action-set-group/12) |
 | **Action Sets Included** | [Add Permission to Enter](https://app.latchel.com/admin/action-sets/49) |
 | **Details** | Add Permission To Enter to all WOs and logs note on the WO: "Per Property Manager, Permission to Enter is always granted." |
-| **Notes** | *Must add Default Access Instructions to Company Details |
+| **Notes** | Must add Default Access Instructions to Company Details |
 
 | Field | Details |
-|---|---|
+| --- | --- |
 | **Action Set Group** | [SMS for WOs that Need Approval](https://app.latchel.com/admin/action-set-group/73) |
 | **Action Sets Included** | [Needs PM Approval SMS](https://app.latchel.com/admin/action-sets/713) |
-| **Details** | If WO in Needs Approval ---> Sends SMS to User Group |
-| **Notes** | "Hi {{to.name}} the job, {{job.name}}, at the address, {{job.property.full_address}} requires your approval. For more details visit this link: {{job.url}}" |
+| **Details** | If WO in Needs Approval -→ Sends SMS to User Group |
+| **Notes** | "Hi to.name the job, job.name, at the address, job.property.full\_address requires your approval. For more details visit this link: job.url" |
 
 | Field | Details |
-|---|---|
+| --- | --- |
 | **Action Set Group** | [Delayed WOs and Urgent WO Notification](https://app.latchel.com/admin/action-set-group/43) |
 | **Action Sets Included** | [Urgent Job Notification](https://app.latchel.com/admin/action-sets/1135) |
-| **Details** | If WO is Urgent and in "Scheduling with Tenant", "Scheduling with Vendor", "Finding Vendor", or "Rescheduling with Tenant" for 3 Days ---> Task Created and Task Notification sent. |
+| **Details** | If WO is Urgent and in "Scheduling with Tenant", "Scheduling with Vendor", "Finding Vendor", or "Rescheduling with Tenant" for 3 Days -→ Task Created and Task Notification sent. |
 | **Notes** | "Urgent Work Order Stuck for 72 hours: This job has not been successfully scheduled for 72 hours and requires your attention." |
 
 | Field | Details |
-|---|---|
+| --- | --- |
 | **Action Set Group** | [Finding Vendor 3 Day Notice](https://app.latchel.com/admin/action-sets/543) |
-| **Action Sets Included** | WO in "Finding Vendor" ---> If no vendor assigned after 3 days, sends SMS to PM's phone number directly. Will only send between 8am-5pm property time. |
-| **Details** | "Work Order: SLA Breach - No vendor has accepted the job for 3 days. Property: , , , Resident: Vacant unit Job Link:"<br/>*PM Phone Number needs to be manually updated for PM request - Request update with Madeleine Nylec |
+| **Action Sets Included** | WO in "Finding Vendor" -→ If no vendor assigned after 3 days, sends SMS to PM's phone number directly. Will only send between 8am-5pm property time. |
+| **Details** | "Work Order: SLA Breach - No vendor has accepted the job for 3 days. Property: , , , Resident: Vacant unit Job Link:"<br />\*PM Phone Number needs to be manually updated for PM request - Request update with Madeleine Nylec |
 | **Notes** |  |
 
 | Field | Details |
-|---|---|
+| --- | --- |
 | **Action Set Group** | [Troubleshooting 24 hour Notice](https://app.latchel.com/admin/action-sets/544) |
-| **Action Sets Included** | WO in "Troubleshooting" ---> Still in "Troubleshooting" after 24 hours, sends SMS to PM's phone number directly. Will only send between 8am-5pm property time. |
-| **Details** | "Work Order: SLA Breach - Job in troubleshooting for 24 hours. Property: , , , Resident: Vacant unit Job Link:"<br/>*PM Phone Number needs to be manually updated for PM request - Request update with Madeleine Nylec |
+| **Action Sets Included** | WO in "Troubleshooting" ---\> Still in "Troubleshooting" after 24 hours, sends SMS to PM's phone number directly. Will only send between 8am-5pm property time. |
+| **Details** | "Work Order: SLA Breach - Job in troubleshooting for 24 hours. Property: , , , Resident: Vacant unit Job Link:"<br />PM Phone Number needs to be manually updated for PM request - Request update with Madeleine Nylec |
 | **Notes** |  |
 
 | Field | Details |
-|---|---|
+| --- | --- |
 | **Action Set Group** | [Custom Vendor Instructions - Portfolio Contact Information](https://app.latchel.com/admin/action-set-group/106) |
 | **Action Sets Included** | [Custom Vendor Instructions](https://app.latchel.com/admin/action-sets/956) |
-| **Details** | Provide customer vendor instructions based on the assigned PM for the portfolio. ---> "RECOMMENDATIONS: If you have questions, here is the contact information" |
-| **Notes** | *If property not assigned to a portfolio, no addition to SP insturction will be made and a note will be logged on the WO that the Custom Automation was NOT applied. |
+| **Details** | Provide customer vendor instructions based on the assigned PM for the portfolio. -→ "RECOMMENDATIONS: If you have questions, here is the contact information" |
+| **Notes** | \*If property not assigned to a portfolio, no addition to SP insturction will be made and a note will be logged on the WO that the Custom Automation was NOT applied. |
 
 | Field | Details |
-|---|---|
+| --- | --- |
 | **Action Set Group** | [Emergency Auto-Complete](https://app.latchel.com/admin/action-set-group/83) |
-| **Action Sets Included** | [AWD > Complete](https://app.latchel.com/admin/action-sets/816) |
-| **Details** | WO is Emergency and in "Awaiting work date" ---> Moves to "Completed" after 15 mins.<br/>Note is logged on the WO: "Per PM request, this job is being automatically closed out so residents do not receive further automated follow-up messaging." |
-| **Notes** | *Length of time can be adjusted to X mins (or hours/days) based on PM Request - Request with [Madeleine Nylec](mailto:maddie@latchel.com) |
+| **Action Sets Included** | [AWD \> Complete](https://app.latchel.com/admin/action-sets/816) |
+| **Details** | WO is Emergency and in "Awaiting work date" ---\> Moves to "Completed" after 15 mins.<br />Note is logged on the WO: "Per PM request, this job is being automatically closed out so residents do not receive further automated follow-up messaging." |
+| **Notes** | \*Length of time can be adjusted to X mins (or hours/days) based on PM Request - Request with [Madeleine Nylec](mailto:maddie@latchel.com) |
 
 | Field | Details |
-|---|---|
+| --- | --- |
 | **Action Set Group** | [Emergency Scheduled SMS](https://app.latchel.com/admin/action-set-group/24) |
 | **Action Sets Included** | [Emergency SMS Notification](https://app.latchel.com/admin/action-sets/359) |
 | **Details** | Sends SMS to User Group when Emergency WO is scheduled. |
 | **Notes** | "Hi , an emergency has been scheduled for , for work order . Vew job details:" |
 
 | Field | Details |
-|---|---|
+| --- | --- |
 | **Action Set Group** | [Emergency WO Gets "Stuck"](https://app.latchel.com/admin/action-set-group/93) |
 | **Action Sets Included** | [Emg WO "Stuck" - Send SMS](https://app.latchel.com/admin/action-sets/893) |
-| **Details** | When an Emergency WO gets "stuck" and moves into either a "Waiting for PM", "Forward to PM" or "Pending" state, send an SMS Notification to the PM User Group.<br/>If an Emergency WO gets deferred and Fwd to PM (and remains an Emergency severity), an SMS notification will be sent. |
-| **Notes** | *Note: If an Emergency WO gets de-escalated and Fwd to PM, NO SMS will be sent. |
+| **Details** | When an Emergency WO gets "stuck" and moves into either a "Waiting for PM", "Forward to PM" or "Pending" state, send an SMS Notification to the PM User Group.<br />If an Emergency WO gets deferred and Fwd to PM (and remains an Emergency severity), an SMS notification will be sent. |
+| **Notes** | \*Note: If an Emergency WO gets de-escalated and Fwd to PM, NO SMS will be sent. |
 
 | Field | Details |
-|---|---|
+| --- | --- |
 | **Action Set Group** | [Auto Cancel Normal WOs](https://app.latchel.com/admin/action-set-group/68) |
 | **Action Sets Included** | [Cancel "Normal" jobs in scheduling after 3 days](https://app.latchel.com/admin/action-sets/1016) |
-| **Details** | If WO is in "Scheduling with Tenant" or "Rescheduling with Tenant", and a non-emergency, and not urgent ---> Auto-cancel the WO after 3 days and log a note on the job. |
-| **Notes** | *Length of time can be adjusted to X mins (or hours/days) based on PM Request - Request with [Madeleine Nylec](mailto:maddie@latchel.com)<br/>"This property manager has a custom action set which closes any job which is not urgent, or an emergency after 3 days of resident inaction." |
+| **Details** | If WO is in "Scheduling with Tenant" or "Rescheduling with Tenant", and a non-emergency, and not urgent Auto-cancel the WO after 3 days and log a note on the job. |
+| **Notes** | \*Length of time can be adjusted to X mins (or hours/days) based on PM Request - Request with [Madeleine Nylec](mailto:maddie@latchel.com)<br />"This property manager has a custom action set which closes any job which is not urgent, or an emergency after 3 days of resident inaction." |
 
 | Field | Details |
-|---|---|
+| --- | --- |
 | **Action Set Group** | [Emergency Created/Scheduled Notification](https://app.latchel.com/admin/action-set-group/89) |
 | **Action Sets Included** | [Emergency Notification](https://app.latchel.com/admin/action-sets/849) |
-| **Details** | Sends SMS to User Group when Emergency WO is created and in "Troubleshooting".<br/>"Hi , a job "" has recently been classified an emergency for , for work order . The problem they are reporting is resulting in a Vew job details:" |
-| **Notes** | *This right at creation and therefore does not take into account troubleshooting. The WO has the potential to be de-escalated and/or deferred later in the WO process after troubleshooting is conducted. |
+| **Details** | Sends SMS to User Group when Emergency WO is created and in "Troubleshooting".<br />"Hi , a job "" has recently been classified an emergency for , for work order . The problem they are reporting is resulting in a Vew job details:" |
+| **Notes** | \*This right at creation and therefore does not take into account troubleshooting. The WO has the potential to be de-escalated and/or deferred later in the WO process after troubleshooting is conducted. |
 
 | Field | Details |
-|---|---|
+| --- | --- |
 | **Action Set Group** | [Emergency SMS Notification](https://app.latchel.com/admin/action-sets/359) |
 | **Action Sets Included** | Sends SMS to User Group when Emergency WO is scheduled. |
 | **Details** | "Hi , an emergency has been scheduled for , for work order . Vew job details:" |
 | **Notes** |  |
 
 | Field | Details |
-|---|---|
+| --- | --- |
 | **Action Set Group** | [Lockout Resident Responsible ONLY for: "Locked Out (Lost or Broken Key)"](https://app.latchel.com/admin/action-set-group/129) |
 | **Action Sets Included** | [Notification to Resident for Lockouts](https://app.latchel.com/admin/action-sets/1123) |
 | **Details** | Send SMS/Email notification to the resident when they submit a lockout WO that has the problem: "Locked Out (Lost or Broken Key)". This notification lets the resident know they are responsible for finding, calling, scheduling and paying for their own locksmith. |
 | **Notes** | "Hi ! We have received the job "" at , , . Residents are responsible for finding and contacting their own locksmith for lockouts. Please reach out to your property manager with any questions." |
 
 | Field | Details |
-|---|---|
+| --- | --- |
 | **Action Set Group** | [Lockouts: Always Resident's Responsibility Notification](https://app.latchel.com/admin/action-set-group/117) |
 | **Action Sets Included** | [Notification to Resident for Lockouts](https://app.latchel.com/admin/action-sets/1014) |
-| **Details** | Resident is always notified it is their responsibility to coordinate work for the following (ignores PM sev/responsibility settings):<br/>- "Locked Out (Lost or Broken Key)"<br/>- "Locked Out (Doorway Not Functioning)"<br/>- "Locked out (Electronic or Smart Lock Not Functioning)"<br/>- "Locked Out (Personal Keyless Entry Device Not Functioning)"<br/>- "New Resident Locked out (Key Not Working)" |
-| **Notes** | *This same logic can be applied for any problem ID in Latchel - Request with [Madeleine Nylec](mailto:maddie@latchel.com) |
+| **Details** | Resident is always notified it is their responsibility to coordinate work for the following (ignores PM sev/responsibility settings): <ul><li>"Locked Out (Lost or Broken Key)"</li><li>"Locked Out (Doorway Not Functioning)"</li><li>"Locked out (Electronic or Smart Lock Not Functioning)"</li><li>"Locked Out (Personal Keyless Entry Device Not Functioning)"</li><li>"New Resident Locked out (Key Not Working)"</li></ul> |
+| **Notes** | \*This same logic can be applied for any problem ID in Latchel - Request with [Madeleine Nylec](mailto:maddie@latchel.com) |
 
 | Field | Details |
-|---|---|
+| --- | --- |
 | **Action Set Group** | [Luna SMS Notification - Every WO](https://app.latchel.com/admin/action-set-group/80) |
 | **Action Sets Included** | [SMS WO Notification](https://app.latchel.com/admin/action-sets/1067) |
 | **Details** | Custom action set that sends a text message to the specified phone number on job creation for EVERY WO. |
-| **Notes** | *This same logic can be applied for other PMs with a designated textable number - Request with [Madeleine Nylec](mailto:maddie@latchel.com) |
+| **Notes** | \*This same logic can be applied for other PMs with a designated textable number - Request with [Madeleine Nylec](mailto:maddie@latchel.com) |
 
 | Field | Details |
-|---|---|
+| --- | --- |
 | **Action Set Group** | [Make ALL work orders Mandatory](https://app.latchel.com/admin/action-set-group/98) |
 | **Action Sets Included** | [Make Every New Work Order Mandatory (except res responsible)](https://app.latchel.com/admin/action-sets/940) |
-| **Details** | Makes ALL WOs (excepted resident responsible) MANDATORY ---> Meaning the Resident CANNOT Cancel the WO. |
+| **Details** | Makes ALL WOs (excepted resident responsible) MANDATORY ---\> Meaning the Resident CANNOT Cancel the WO. |
 | **Notes** | Note logged on WO: "Per property manager request, custom automation set this job to be "Mandatory". |
 
 | Field | Details |
-|---|---|
+| --- | --- |
 | **Action Set Group** | [Marble PM Custom Sets](https://app.latchel.com/admin/action-set-group/46) |
 | **Action Sets Included** | [Find Vendor - 3 Day Warning](https://app.latchel.com/admin/action-sets/470) |
-| **Details** | Sends email to User Group and SMS to specific number if WO statys in "Findings Vendor" for 72 hours.<br/>"This is a custom notification reminding you that a job has been in finding vendor for 72 hours." |
-| **Notes** | *This same logic can be applied for other PMs with a designated textable number - Request with [Madeleine Nylec](mailto:maddie@latchel.com) |
+| **Details** | Sends email to User Group and SMS to specific number if WO statys in "Findings Vendor" for 72 hours.<br />"This is a custom notification reminding you that a job has been in finding vendor for 72 hours." |
+| **Notes** | \*This same logic can be applied for other PMs with a designated textable number - Request with [Madeleine Nylec](mailto:maddie@latchel.com) |
 
 | Field | Details |
-|---|---|
-| **Action Set Group** | [Needs PM Approval > Needs Owner Approval](https://app.latchel.com/admin/action-set-group/85) |
-| **Action Sets Included** | [Move Needs PM Approval > Needs Owner Approval](https://app.latchel.com/admin/action-sets/1013) |
+| --- | --- |
+| **Action Set Group** | [Needs PM Approval \> Needs Owner Approval](https://app.latchel.com/admin/action-set-group/85) |
+| **Action Sets Included** | [Move Needs PM Approval \> Needs Owner Approval](https://app.latchel.com/admin/action-sets/1013) |
 | **Details** | Moves "Needs PM Approval" WOs into "Needs Owner Approval" |
 | **Notes** | Must have Default "Needs Owner Approval" action set modified to exclude any PM company this action set is applied to, otherwise it will create an infinite loop if owner settings are not perfectly structured. |
 
 | Field | Details |
-|---|---|
+| --- | --- |
 | **Action Set Group** | [Skip dupe check for non-emg, non-admin WOs](https://app.latchel.com/admin/action-set-group/86) |
 | **Action Sets Included** | [Move Pending Duplicate to Scheduling](https://app.latchel.com/admin/action-sets/829) |
-| **Details** | This skips the duplicate check when a new WO is submitted for the same property that already has an open WO. Moves WO from "Pending" ---> "Finding Vendor". |
-| **Notes** | **It is VERY important to explain this clearly to the PM as this does run the risk of a double dispatch situation. |
+| **Details** | This skips the duplicate check when a new WO is submitted for the same property that already has an open WO. Moves WO from "Pending" ---\> "Finding Vendor". |
+| **Notes** | \*\*It is VERY important to explain this clearly to the PM as this does run the risk of a double dispatch situation. |
 
 | Field | Details |
-|---|---|
+| --- | --- |
 | **Action Set Group** | [New Emg WO Created - Send SMS Notification](https://app.latchel.com/admin/action-set-group/92) |
 | **Action Sets Included** | [New Emg Work Order Created - SMS Notification](https://app.latchel.com/admin/action-sets/891) |
 | **Details** | When an emergency WO created, sends SMS notification to the User Group with WO details. |
-| **Notes** | **Does NOT account for the troubleshooting and potential of the WO being de-escalated and/or deferred. This is sent right at Creation. |
+| **Notes** | \*\*Does NOT account for the troubleshooting and potential of the WO being de-escalated and/or deferred. This is sent right at Creation. |
 
 | Field | Details |
-|---|---|
+| --- | --- |
 | **Action Set Group** | [Owner Notification - WO Cancelled/Completed](https://app.latchel.com/admin/action-set-group/95) |
 | **Action Sets Included** | [Owner Notification for Cancelled/Complete](https://app.latchel.com/admin/action-sets/925) |
 | **Details** | Sends email notification to the owner anytime a WO moves into "Canceled" or "Completed". |
-| **Notes** | *Sends from PM Gmail (if set up and available). |
+| **Notes** | \*Sends from PM Gmail (if set up and available). |
 
 | Field | Details |
-|---|---|
+| --- | --- |
 | **Action Set Group** | [Owner Notification - WO Completed](https://app.latchel.com/admin/action-set-group/104) |
 | **Action Sets Included** | [Owner Notification for Complete](https://app.latchel.com/admin/action-sets/952) |
 | **Details** | This sends a notification to the owner when a WO is completed and EXCLUDES a notification when a WO is canceled. |
-| **Notes** | *Sends from PM Gmail (if set up and available). |
+| **Notes** | \*Sends from PM Gmail (if set up and available). |
 
 | Field | Details |
-|---|---|
+| --- | --- |
 | **Action Set Group** | [(PM Notification) Non-Emergency Job Scheduled](https://app.latchel.com/admin/action-set-group/18) |
 | **Action Sets Included** | [Notification of job Scheduled](https://app.latchel.com/admin/action-sets/389) |
 | **Details** | Sends email notification to User Group when appointment is scheduled. |
 | **Notes** | Shares date/time of the appointment scheudled for nonemergency WOs. |
 
 | Field | Details |
-|---|---|
+| --- | --- |
 | **Action Set Group** | [Property Manager Emergency/Urgent Communication](https://app.latchel.com/admin/action-set-group/8) |
 | **Action Sets Included** | [Existing Work Order Updated](https://app.latchel.com/admin/action-sets/23) |
 | **Details** | If a work order is deemed emergency or urgent and then sent to “Forwarded to PM” or “Waiting on PM” status, send a text to the assigned PM (This does NOT respect notification groups). |
 | **Notes** | "Urgent work order updated to status. , , , ," |
 
 | Field | Details |
-|---|---|
+| --- | --- |
 | **Action Set Group** | [New Work Order Submitted](https://app.latchel.com/admin/action-sets/24) |
 | **Action Sets Included** | "New urgent work order created in status. , , , ," |
 | **Details** |  |
 | **Notes** |  |
 
 | Field | Details |
-|---|---|
+| --- | --- |
 | **Action Set Group** | [PRS Emergency WO Email Notification](https://app.latchel.com/admin/action-set-group/107) |
 | **Action Sets Included** | [PRS Emergency WO Created Email Notification](https://app.latchel.com/admin/action-sets/958) |
 | **Details** | Email notification to SPECIFIC PRS email address (not User Group) notifying them of an Emergency WO created. |
-| **Notes** | *This same logic can be applied for other specific PM emails in Latchel - Request with [Madeleine Nylec](mailto:maddie@latchel.com) |
+| **Notes** | \*This same logic can be applied for other specific PM emails in Latchel - Request with [Madeleine Nylec](mailto:maddie@latchel.com) |
 
 | Field | Details |
-|---|---|
+| --- | --- |
 | **Action Set Group** | [Remove Permission to Enter](https://app.latchel.com/admin/action-set-group/32) |
 | **Action Sets Included** | [No PTE](https://app.latchel.com/admin/action-sets/280) |
 | **Details** | If a resident provides PTE for a nonemergency - An SMS is sent to the resident that PTE is not allowed. It removes the PTE on the WO and also moves the WO back into "Rescheduling with Tenant" to get updated availability. |
 | **Notes** | "X does not allow permission to enter for maintenance requests. We will be following up momentarily to refresh up to 2 weeks of availability. You can also view job details and update availability here" |
 
 | Field | Details |
-|---|---|
+| --- | --- |
 | **Action Set Group** | [Remove Service Provider (Not Scheduled after 2 days)](https://app.latchel.com/admin/action-set-group/101) |
 | **Action Sets Included** | [Auto Remove SP when Unresponsive (2 Day Delay)](https://app.latchel.com/admin/action-sets/950) |
-| **Details** | Automatically removes a Service Provider if the job has been in Scheduling Service provider for 2+ days. The only conditions where they wouldn't be removed is if they're a) locked-in or b) provided an estimate on the job (via their dashboard)<br/>--If they provided an estimate verbally OR they're VIP, they'll still be removed using this action set. The key is they need to use Latchel to set an appointment. |
+| **Details** | Automatically removes a Service Provider if the job has been in Scheduling Service provider for 2\+ days. The only conditions where they wouldn't be removed is if they're a) locked-in or b) provided an estimate on the job (via their dashboard)<br />--If they provided an estimate verbally OR they're VIP, they'll still be removed using this action set. The key is they need to use Latchel to set an appointment. |
 | **Notes** | Use with care; as these service providers may have scheduled off-platform. Other action sets will notify them they have been removed, but they may not heed them or receive them (e.g. not textable/no email). |
 
 | Field | Details |
-|---|---|
+| --- | --- |
 | **Action Set Group** | [Move Emergency to Scheduling When Unable to Dispatch (De-escalate)](https://app.latchel.com/admin/action-set-group/105) |
 | **Action Sets Included** | [Emergency WO to Urgent and trigger Finding SP auto-queue](https://app.latchel.com/admin/action-sets/954) |
 | **Details** | This requires a change to the SaaS action set for moving Forwarded to PM emergency jobs to waiting for PM [https://app.latchel.com/admin/action-set-group/28](https://app.latchel.com/admin/action-set-group/28) |
 | **Notes** | This new automation makes it hard for there to be pre-dispatch instructions involving calling someone. The escalation contacts remains as is. |
 
 | Field | Details |
-|---|---|
+| --- | --- |
 | **Action Set Group** | [Auto-Fill SP Instructions with "Complete Repair" Instructions](https://app.latchel.com/admin/action-set-group/143) |
 | **Action Sets Included** | [Add "Complete Repair" Instructions](https://app.latchel.com/admin/action-sets/1242) |
 | **Details** | Adds "Please fix the main issue first, as long as it’s within budget. If you can, also repair any other damage caused by the main issue. If the total cost will go over budget, get approval before continuing." to the instructions on every work order. |
-| **Notes** | We can copy this action set and update the SP Instructions to be custom for a PM.<br/><br/>*Request with [Madeleine Nylec](mailto:maddie@latchel.com) |
+| **Notes** | We can copy this action set and update the SP Instructions to be custom for a PM.<br /><br />\*Request with [Madeleine Nylec](mailto:maddie@latchel.com) |
 
 | Field | Details |
-|---|---|
-| **Action Set Group** | [[DEFAULT] Core Work Order Action Sets](https://app.latchel.com/admin/action-set-group/3) |
-| **Action Sets Included** | *THERE ARE MULTIPLE AS THIS IS THE CORE WO ACTION SETS THAT PMs DEFAULT TO. Calling out specifically [[STATE] Confirming Completion.](https://app.latchel.com/admin/action-sets/1080) |
-| **Details** | There is branch off the action set that can be manipulated by adding a PM ID ---> This will remove the Auto-Completed function. If the WO is NOT confirmed completed, the WO will NOT auto-complete. A task with generated for the User Group saying the WO has not been confirmed complete. |
-| **Notes** | *Request additional PM ID with [Madeleine Nylec](mailto:maddie@latchel.com) |
+| --- | --- |
+| **Action Set Group** | [\[DEFAULT\] Core Work Order Action Sets](https://app.latchel.com/admin/action-set-group/3) |
+| **Action Sets Included** | \*THERE ARE MULTIPLE AS THIS IS THE CORE WO ACTION SETS THAT PMs DEFAULT TO. Calling out specifically [\[STATE\] Confirming Completion.](https://app.latchel.com/admin/action-sets/1080) |
+| **Details** | There is branch off the action set that can be manipulated by adding a PM ID ---\> This will remove the Auto-Completed function. If the WO is NOT confirmed completed, the WO will NOT auto-complete. A task with generated for the User Group saying the WO has not been confirmed complete. |
+| **Notes** | \*Request additional PM ID with [Madeleine Nylec](mailto:maddie@latchel.com) |
 
 | Field | Details |
-|---|---|
-| **Action Set Group** | [Auto-Fill SP instructions with Portfolio Name + Owner Info](https://app.latchel.com/admin/action-set-group/145) |
+| --- | --- |
+| **Action Set Group** | [Auto-Fill SP instructions with Portfolio Name \+ Owner Info](https://app.latchel.com/admin/action-set-group/145) |
 | **Action Sets Included** | [SP Instructions with Primary and Second Contact](https://app.latchel.com/admin/action-sets/1454) |
 | **Details** | Adds portfolio name (if available), owner name, and owner contact info, if available to the end of every work order's service provider instructions |
 | **Notes** | Property manager wants service providers to have owner name and contact info available |
 
 | Field | Details |
-|---|---|
+| --- | --- |
 | **Action Set Group** | [Auto-Assign Vendor for Non-Emergencies](https://app.latchel.com/admin/action-set-group/146) |
 | **Action Sets Included** | [Auto-Assign CityLight Commercial Services for Non-Emergencies](https://app.latchel.com/admin/action-sets/1416) |
 | **Details** | Property manager wants no troubleshooting, dispatching, or escalation to occur unless it's a weekend or holiday (or after 5pm the day before a weekend or holiday) |
-| **Notes** | *Request additional SP ID with [Madeleine Nylec](mailto:maddie@latchel.com) |
-
-
+| **Notes** | \*Request additional SP ID with [Madeleine Nylec](mailto:maddie@latchel.com) |
 
 ### Work Order State IDs
 
-| **State ID** | **WO Status ** |
-|---|---|
-
-
-
-| **State ID** | **WO Status ** |
-|---|---|
+| **State ID** | WO Status |
+| --- | --- |
 | 13 | Pending |
 | 14 | Cancelled |
 | 16 | Completed |
@@ -320,24 +316,12 @@ This Job Aid is used to share the details of the top PM requested action sets. I
 | 2 | Scheduling Service Provider |
 | 22 | Rescheduling Resident |
 
-
-
 ### WO Problem IDs
 
-`SELECT`
-`    p.problem_id,`
-`    p.category AS category,`
-`    p.name`
-`FROM public.problem p`
-`ORDER BY p.problem_id;`
+`SELECT` `    p.problem_id,` `    p.category AS category,` `    p.name` `FROM public.problem p` `ORDER BY p.problem_id;`
 
-| **Problem ID** | **Category ** | **Problem** |
-|---|---|---|
-
-
-
-| **Problem ID** | **Category ** | **Problem** |
-|---|---|---|
+| **Problem ID** | Category | **Problem** |
+| --- | --- | --- |
 | **1** | 911 Emergency | Carbon Monoxide Leak |
 | **2** | 911 Emergency | Constant Gas Leak |
 | **3** | 911 Emergency | Defective or False Alarm (Intermittent) |
@@ -598,8 +582,6 @@ This Job Aid is used to share the details of the top PM requested action sets. I
 | **259** | Doorways | Ripped Screen Door |
 | **260** | Windows | Ripped Window Screen |
 | **261** | Windows | Damaged Window Blinds or Shades |
-
-
 
 ### Action Sets Applied to PMs
 
