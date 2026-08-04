@@ -5,21 +5,13 @@ groups: ["latchel"]
 
 Latchel Contractor Network (LCN) is a network of service providers Property Managers can decide to opt into as a backup to their preferred vendors:
 
-- **Emergency Workflow: **You may opt-in to have Latchel source new service providers if nobody from your preferred network is available to accept the job. Our team may source a new provider on the spot or source someone that we have previously worked with in your area.
-- **Non-Emergency Workflow: **Get access to Latchel's service provider network when your preferred providers are not available to complete your non-emergency jobs. If you select to opt-in to have Latchel source new service providers for an emergency job, you’ll instantly gain access to a directory of service providers Latchel has previously worked with in your area.
-
-- 1 [How to: Blacklist an LCN Company ](#How-to%3A-Blacklist-an-LCN-Company)
-- 2 [How to: Enable LCN ](#How-to%3A-Enable-LCN)
-- 3 [How to: Disable LCN ](#How-to%3A-Disable-LCN)
-- 4 [How to: Handle SPs requesting to join LCN  ](#How-to%3A-Handle-SPs-requesting-to-join-LCN)
-- 5 [How to: Handle SPs requesting to be removed from WOs ](#How-to%3A-Handle-SPs-requesting-to-be-removed-from-WOs)
-
-#### How to: Blacklist an LCN Company
+- Emergency Workflow: You may opt-in to have Latchel source new service providers if nobody from your preferred network is available to accept the job. Our team may source a new provider on the spot or source someone that we have previously worked with in your area.
+- Non-Emergency Workflow: Get access to Latchel's service provider network when your preferred providers are not available to complete your non-emergency jobs. If you select to opt-in to have Latchel source new service providers for an emergency job, you’ll instantly gain access to a directory of service providers Latchel has previously worked with in your area.
 
 If a PM requests to blacklist an LCN Company so that they are NEVER assigned to their WOs, you will:
 
 1. Navigate to the LCN Company in Latchel.
-2. Under the Preferred PMs tab, you will click the “+ Add PM” button.
+2. Under the Preferred PMs tab, you will click the “\+ Add PM” button.
 3. From that pop-up, search the PM Company name and add them as a Preferred PM.
 4. Once added, then navigate to the PM Company in Latchel.
 5. From the PM Company page, click on the “Service Providers” tab.
@@ -45,12 +37,18 @@ Refer to: [How to Opt Out of the Latchel Contractor Network](https://help.latche
 
 If deletion fails, it means the payment method is **actively in use**.
 
-- Check portfolios and/or properties where LCN vendor payments are enabled. Queries to find where LCN is payment method is being used:`SELECT * from payment_method
-WHERE relation_id = 37645 -- replace with PM company Id
-AND relation_type = 'Latchel\Company'``SELECT * from portfolio -- this can be replaced by property as well
-where pm_company_id = 37645
-AND use_lcn_vendor_payments in (
-) -- list payment method ID's you want to find`
+- Check portfolios and/or properties where LCN vendor payments are enabled. Queries to find where LCN is payment method is being used:
+  ```sql lines
+  SELECT * from payment_method
+  WHERE relation_id = 37645 -- replace with PM company Id
+  AND relation_type = 'Latchel\Company'
+  ```
+  ```sql lines
+  SELECT * from portfolio -- this can be replaced by property as well
+  where pm_company_id = 37645
+  AND use_lcn_vendor_payments in (
+  ) -- list payment method ID's you want to find
+  ```
 
 - Remove Usage - Temporarily **activate LCN (if needed)** to allow edits.
 - Remove the LCN payment method from:
@@ -59,7 +57,7 @@ AND use_lcn_vendor_payments in (
 - **Deactivate LCN again fully.**
 
 <Note>
-- The PM only wants LCN for certain WO Problems? [Setting Up Latchel Contracted Network (LCN) Preferences](https://help.latchel.com/s/article/Setting-Up-Latchel-Contracted-Network-LCN-Preferences)
+  - The PM only wants LCN for certain WO Problems? [Setting Up Latchel Contracted Network (LCN) Preferences](https://help.latchel.com/s/article/Setting-Up-Latchel-Contracted-Network-LCN-Preferences)
 </Note>
 
 #### How to: Handle SPs requesting to join LCN

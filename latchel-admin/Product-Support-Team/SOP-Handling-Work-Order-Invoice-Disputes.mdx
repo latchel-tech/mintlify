@@ -4,68 +4,63 @@ groups: ["latchel"]
 ---
 
 <Note>
-**Objective**: Ensure proper handling of invoice disputes related to work orders, from initial review to final resolution, in alignment with Latchel’s Guarantee and Refund Request Policy.
+  **Objective**: Ensure proper handling of invoice disputes related to work orders, from initial review to final resolution, in alignment with Latchel’s Guarantee and Refund Request Policy.
 </Note>
 
 ---
 
-- 1 [Step-by-Step Process for Handling Invoice Disputes](#Step-by-Step-Process-for-Handling-Invoice-Disputes)
-- 2 [Eligibility Review Based on Invoice Submission Date](#Eligibility-Review-Based-on-Invoice-Submission-Date)
-- 3 [Next Steps for Eligible Invoice Disputes](#Next-Steps-for-Eligible-Invoice-Disputes)
-  - 3.1 [Scenario 1: Invalid Dispute (No Refund)](#Scenario-1%3A-Invalid-Dispute-(No-Refund))
-  - 3.2 [Scenario 2: Valid Dispute (Refund Eligible)](#Scenario-2%3A-Valid-Dispute-(Refund-Eligible))
-- 4 [Handling Client Pushback on Findings](#Handling-Client-Pushback-on-Findings)
-
 ### **Step-by-Step Process for Handling Invoice Disputes**
 
-1. **Initial Review of**[** Latchel Guarantee and Refund Request Policy**](https://help.latchel.com/s/article/Latchel-Guarantee-and-Refund-Request-Policy)
-  - Always review the policy to determine if the request is valid before initiating an investigation.
+1. **Initial Review of** [Latchel Guarantee and Refund Request Policy](https://help.latchel.com/s/article/Latchel-Guarantee-and-Refund-Request-Policy)
+
+- Always review the policy to determine if the request is valid before initiating an investigation.
+
 2. **Responding to a WO Invoice Dispute (via Salesforce Case)**
-  - **Action**: Reply to the Property Manager (PM) using the[ **Invoice Dispute Form Template**.](https://latchel1.lightning.force.com/lightning/r/EmailTemplate/00XUS00000BofOD2AZ/view?queryScope=userFolders)
-  - **Link**: Include the[ **Invoice Dispute Typeform**](https://latchel.typeform.com/to/iBtjvKHP) link in your reply.
-  - Once submitted, a notification will be sent to the `#invoice-dispute-form` Slack channel for review.
+
+- **Action**: Reply to the Property Manager (PM) using the[ **Invoice Dispute Form Template**.](https://latchel1.lightning.force.com/lightning/r/EmailTemplate/00XUS00000BofOD2AZ/view?queryScope=userFolders)
+- **Link**: Include the[ **Invoice Dispute Typeform**](https://latchel.typeform.com/to/iBtjvKHP) link in your reply.
+- Once submitted, a notification will be sent to the `#invoice-dispute-form` Slack channel for review.
+
 3. **Special Note for Nomad Owners**
-  - Follow the standard process by sending [**Nomad Support** ](https://latchel.atlassian.net/wiki/x/AgC6t)the [**Nomad Escalation Form Template**.](https://latchel1.lightning.force.com/lightning/r/EmailTemplate/00XUS00000BdCW12AN/view?queryScope=userFolders)
-  - If Nomad Support requests additional details, continue with the steps outlined below.
+
+- Follow the standard process by sending [**Nomad Support** ](https://latchel.atlassian.net/wiki/x/AgC6t)the [**Nomad Escalation Form Template**.](https://latchel1.lightning.force.com/lightning/r/EmailTemplate/00XUS00000BdCW12AN/view?queryScope=userFolders)
+- If Nomad Support requests additional details, continue with the steps outlined below.
 
 ### **Eligibility Review Based on Invoice Submission Date**
 
 Review the Invoice Submission Date to determine refund eligibility:
 
 | **Was the dispute reported within 72 Hours of the invoice being submitted?** | **Was the dispute reported within 45 Days of the invoice being submitted?** | **Was the dispute reported more than 45 days after the invoice date?** |
-|---|---|---|
-
-
-
-| **Was the dispute reported within 72 Hours of the invoice being submitted?** | **Was the dispute reported within 45 Days of the invoice being submitted?** | **Was the dispute reported more than 45 days after the invoice date?** |
-|---|---|---|
-| Full Refund Eligible | Partial Refund Eligible with the refund amount up to 50% or a maximum of $300 per invoice. | Not Eligible for a Refund. |
-
-
+| --- | --- | --- |
+| Full Refund Eligible | Partial Refund Eligible with the refund amount up to 50% or a maximum of \$300 per invoice. | Not Eligible for a Refund. |
 
 <Warning>
-If the dispute reported is 45+ days after the invoice was submitted, send [the Ineligible Invoice Dispute SF Template](https://latchel1.lightning.force.com/lightning/r/EmailTemplate/00XUS00000CW5452AD/view) to the client.
+  If the dispute reported is 45\+ days after the invoice was submitted, send [the Ineligible Invoice Dispute SF Template](https://latchel1.lightning.force.com/lightning/r/EmailTemplate/00XUS00000CW5452AD/view) to the client.
 </Warning>
 
 ### **Next Steps for Eligible Invoice Disputes**
 
 1. **Submit Deep Dive (DD) Request**
-  1. **Action**: Fill out the [**Invoice Dispute DD Request workflow**](https://latchel.atlassian.net/wiki/x/r4KTlw) in the `#ps-dd-requests` Slack channel.
-  2. Inform the client using the [**Submit for DD SF Template**](https://latchel1.lightning.force.com/lightning/r/EmailTemplate/00XUS00000Bccif2AB/view?queryScope=userFolders), which explains that the process may take up to seven business days.
+   1. **Action**: Fill out the [**Invoice Dispute DD Request workflow**](https://latchel.atlassian.net/wiki/x/r4KTlw) in the `#ps-dd-requests` Slack channel.
+   2. Inform the client using the [**Submit for DD SF Template**](https://latchel1.lightning.force.com/lightning/r/EmailTemplate/00XUS00000Bccif2AB/view?queryScope=userFolders), which explains that the process may take up to seven business days.
 2. **Keep the Client Updated**
-  - If the case remains active for 3-4 business days, send a status update using the [**Department Escalation - Touch Base SF Template**.](https://latchel1.lightning.force.com/lightning/r/EmailTemplate/00XUS00000CI7yb2AD/view?queryScope=userFolders)
+   1. If the case remains active for 3-4 business days, send a status update using the [**Department Escalation - Touch Base SF Template**.](https://latchel1.lightning.force.com/lightning/r/EmailTemplate/00XUS00000CI7yb2AD/view?queryScope=userFolders)
+
 3. **Investigation and Conclusion**
-  - Review the refund eligibility thoroughly in alignment with the policy before writing the final conclusion.
-  - Based on findings, the dispute will be marked as:
-    - **VALID**: Refund is approved.
-    - **INVALID**: Refund is denied.
-  - Share the conclusion by navigating to the **Case Link URL** and posting the **Jira Link URL**, **WO Link URL, **and **Conclusion **in the case thread as an internal comment.** **[(Example Here).](https://latchel1.lightning.force.com/lightning/r/Case/500US00000EpaB3YAJ/view)
-  - <Frame>
-  <img src="/images/PST-106.png" alt="Screenshot 2024-10-17 at 12.15.20 PM.png" />
-</Frame>
-  - Tag the Case Owner and set the Case to **Escalated**.
+
+- Review the refund eligibility thoroughly in alignment with the policy before writing the final conclusion.
+- Based on findings, the dispute will be marked as:
+  - **VALID**: Refund is approved.
+  - **INVALID**: Refund is denied.
+- Share the conclusion by navigating to the **Case Link URL** and posting the **Jira Link URL**, WO Link URL, and Conclusion **in the case thread as an internal comment.** [(Example Here)](https://latchel1.lightning.force.com/lightning/r/Case/500US00000EpaB3YAJ/view) 
+  <Frame>
+    ![PST 121](/images/PST-121.png "PST 121")
+  </Frame>
+- Tag the Case Owner and set the Case to **Escalated**.
+
 4. **Conclusion Review and Client Communication**
-  - In `#ps-team-chat`, submit a draft of the conclusion for review using the **DD Conclusion Workshop**. This helps ensure clear and professional communication with the PM.
+
+- In `#ps-team-chat`, submit a draft of the conclusion for review using the **DD Conclusion Workshop**. This helps ensure clear and professional communication with the PM.
 
 #### **Scenario 1: Invalid Dispute (No Refund)**
 
@@ -84,12 +79,12 @@ If the dispute reported is 45+ days after the invoice was submitted, send [the I
 - Once finalized, Finance will confirm in the thread, and PS should update the PM on:
   - Refund method
   - Processing timeline (5-10 business days)
-  - Refund amount ($)
+  - Refund amount (\$)
 
 ### **Handling Client Pushback on Findings**
 
 - **Action**: If the PM disputes the findings or compensation, escalate the case to the Product Support Manager (PSM).
 - **Steps**:
   - Escalate to PSM using the **PSM Case Escalation Workflow** in `#ps-case-review`.
-  - Assign the case to **@maddie **as Case Owner.
+  - Assign the case to @maddie as Case Owner.
   - Update the case state to **Escalated**.
