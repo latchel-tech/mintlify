@@ -1,0 +1,141 @@
+---
+title: "Job Aid: Assembly Case Automation Explained"
+groups: ["latchel"]
+---
+
+- 1 [Case Template Automation: ](#Case-Template-Automation%3A)
+  - 1.1 [New Cases:](#New-Cases%3A)
+  - 1.2 [Closed Cases: ](#Closed-Cases%3A)
+- 2 [Case State Automation: ](#Case-State-Automation%3A)
+
+### Case Template Automation:
+
+#### **New Cases:**
+
+As soon as a Case is created (Assembly receives the email to [success@latchel.com](mailto:success@latchel.com)), the sender will immediately receive this automatic response:
+
+<Frame>
+  <img src="/images/PST-30.png" alt="Screenshot 2025-12-17 075623.png" />
+</Frame>
+
+---
+
+#### **Closed Cases**:
+
+- Before moving a case to** **_**Closed**_** or **_**Closed – No Workflows**_, we manually send the follow-up templates below. A link to our **CSAT survey** will then be sent automatically **24 hours after** the case is moved to _**Closed**_.
+
+Explanation - Unresponsive Follow-Up:
+
+<Frame>
+  <img src="/images/PST-31.png" alt="Screenshot 2025-12-17 084326.png" />
+</Frame>
+
+Bias for Action - Unresponsive POC Follow-Up:
+
+<Frame>
+  <img src="/images/PST-32.png" alt="Screenshot 2025-12-17 084233.png" />
+</Frame>
+
+---
+
+### Case State Automation:
+
+| Field | Details |
+|---|---|
+| **Grouping Category ** | Active |
+| **Case State** | New |
+| **Description ** | Brand New Cases that have not been viewed or triaged by PS yet. |
+| **Goes back to Needs Response after 24 Hours (if no response from Customer or update from the escalated team).** |  |
+| **Goes back to Open after 48 Hours (if no response from Customer). ** |  |
+| **Goes to Needs Response when a new email response is received.** |  |
+| **Goes to Open.** |  |
+
+| Field | Details |
+|---|---|
+| **Grouping Category ** | Open |
+| **Case State** | Cases that have been responded to by PS and have an ongoing conversation happening. |
+| **Description ** |  |
+| **Goes back to Needs Response after 24 Hours (if no response from Customer or update from the escalated team).** |  |
+| **Goes back to Open after 48 Hours (if no response from Customer). ** |  |
+| **Goes to Needs Response when a new email response is received.** |  |
+| **Goes to Open.** |  |
+
+| Field | Details |
+|---|---|
+| **Grouping Category ** | Waiting for Customer |
+| **Case State** | Case that needs a response from the customer. PS sent the last reply and is waiting for a response. |
+| **Description ** |  |
+| **Goes back to Needs Response after 24 Hours (if no response from Customer or update from the escalated team).** |  |
+| **Goes back to Open after 48 Hours (if no response from Customer). ** |  |
+| **Goes to Needs Response when a new email response is received.** |  |
+| **Goes to Open.** |  |
+
+| Field | Details |
+|---|---|
+| **Grouping Category ** | Pending |
+| **Case State** | Escalated |
+| **Description ** | Cases that have actions in progress and a concern/question has been escalated to another Latchel Department. To be used with PS is waiting on a response/next steps from Latchel Department. |
+| **Goes back to Needs Response after 24 Hours (if no response from Customer or update from the escalated team).** |  |
+| **Goes back to Open after 48 Hours (if no response from Customer). ** |  |
+| **Goes to Needs Response when a new email response is received.** |  |
+| **Goes to Open.** |  |
+
+| Field | Details |
+|---|---|
+| **Grouping Category ** | *Cases moved to the CS Team bucket |
+| **Case State** | Cases that are escalated to the CSM or PSM based on the concern/issue in question. More details here: <br/>[SOP: Escalating Tickets to the CSM](https://latchel.atlassian.net/wiki/x/VoDpnQ) <br/>[Product Support Team vs Customer Success Managers](https://latchel.atlassian.net/wiki/x/VQDamw) |
+| **Description ** |  |
+| **Goes back to Needs Response after 24 Hours (if no response from Customer or update from the escalated team).** |  |
+| **Goes back to Open after 48 Hours (if no response from Customer). ** |  |
+| **Goes to Needs Response when a new email response is received.** |  |
+| **Goes to Open.** |  |
+
+| Field | Details |
+|---|---|
+| **Grouping Category ** | On Hold |
+| **Case State** | Cases that should not automatically go to Open but cannot be closed yet. |
+| **Description ** |  |
+| **Goes back to Needs Response after 24 Hours (if no response from Customer or update from the escalated team).** |  |
+| **Goes back to Open after 48 Hours (if no response from Customer). ** |  |
+| **Goes to Needs Response when a new email response is received.** |  |
+| **Goes to Open.** |  |
+
+| Field | Details |
+|---|---|
+| **Grouping Category ** | Scheduled Call |
+| **Case State** | Can be used when a meeting has been scheduled (if used, typically by the CSM). PS does **not** use this state. |
+| **Description ** |  |
+| **Goes back to Needs Response after 24 Hours (if no response from Customer or update from the escalated team).** |  |
+| **Goes back to Open after 48 Hours (if no response from Customer). ** |  |
+| **Goes to Needs Response when a new email response is received.** |  |
+| **Goes to Open.** |  |
+
+| Field | Details |
+|---|---|
+| **Grouping Category ** | Complete |
+| **Case State** | Closed - No Workflows |
+| **Description ** | Used when the case has no actions needed. Use this for PS Escalations from Ops or SPAM emails. |
+| **Goes back to Needs Response after 24 Hours (if no response from Customer or update from the escalated team).** |  |
+| **Goes back to Open after 48 Hours (if no response from Customer). ** |  |
+| **Goes to Needs Response when a new email response is received.** |  |
+| **Goes to Open.** |  |
+
+| Field | Details |
+|---|---|
+| **Grouping Category ** | Closed |
+| **Case State** | Use this when completing the case when the customer is unresponsive. PS has sent the **Explanation - Unresponsive Follow-Up** or **Bias for Action - Unresponsive POC Follow-Up** and have not gotten a response, use this close the case. |
+| **Description ** |  |
+| **Goes back to Needs Response after 24 Hours (if no response from Customer or update from the escalated team).** |  |
+| **Goes back to Open after 48 Hours (if no response from Customer). ** |  |
+| **Goes to Needs Response when a new email response is received.** |  |
+| **Goes to Open.** |  |
+
+| Field | Details |
+|---|---|
+| **Grouping Category ** | Merged |
+| **Case State** | Never move a case to this state manually. This only shows on the case state when merging cases together. |
+| **Description ** |  |
+| **Goes back to Needs Response after 24 Hours (if no response from Customer or update from the escalated team).** |  |
+| **Goes back to Open after 48 Hours (if no response from Customer). ** |  |
+| **Goes to Needs Response when a new email response is received.** |  |
+| **Goes to Open.** |  |

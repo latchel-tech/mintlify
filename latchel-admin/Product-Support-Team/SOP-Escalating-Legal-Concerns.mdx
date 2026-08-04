@@ -1,0 +1,92 @@
+---
+title: "SOP: Escalating Legal Concerns"
+groups: ["latchel"]
+---
+
+| As soon as the client makes any of the following remarks, please escalate the issue right away. This will be the next step in handling the case. You do not need to communicate with the client, as the Product Support Manager (PSM) will take care of it. |
+|---|
+
+| As soon as the client makes any of the following remarks, please escalate the issue right away. This will be the next step in handling the case. You do not need to communicate with the client, as the Product Support Manager (PSM) will take care of it. |
+|---|
+
+- 1 [Escalation Scenarios against Latchel: ](#Escalation-Scenarios-against-Latchel%3A)
+  - 1.1 [Step-by-Step Guide: ](#Step-by-Step-Guide%3A)
+- 2 [Escalation Scenarios against a Property Manager:](#Escalation-Scenarios-against-a-Property-Manager%3A)
+  - 2.1 [Step-by-Step Guide: ](#Step-by-Step-Guide%3A.1)
+
+### **Escalation Scenarios against Latchel: **
+
+1. **Threatening Legal Action**: If the client threatens to pursue legal action.
+2. **Filing a Police Report**: If the client mentions filing a police report.
+3. **Reporting to the BBB**: If the client threatens to report Latchel to the Better Business Bureau (BBB).
+4. **Other Legal Actions**: Any other scenarios that could result in legal action against the company.
+
+#### **Step-by-Step Guide: **
+
+1. **Assign **the case in Salesforce to your PSM (@maddie) and move the case status to **Escalated**.
+  1. NO Communication with the client is needed. The PSM will handle all correspondence.
+2. In the #ps-case-review Slack Channel, fill out the PSM Case Escalation workflow.
+
+<Frame>
+  <img src="/images/PST-48.png" alt="Screenshot 2024-09-26 at 9.29.36 AM.png" />
+</Frame>
+
+1. Follow these steps to complete the PSM Case Escalation workflow:
+
+<Frame>
+  <img src="/images/PST-49.png" alt="Screenshot 2024-09-26 at 9.34.12 AM.png" />
+</Frame>
+
+- **Assign Case to PSM**:
+  - Ensure the salesforce case is assigned to the PSM.
+  - The field within the workflow will automatically default to the PSM. This step serves as a reminder and confirmation step.
+- **Update Case State to Escalated**:
+  - This step serves as a reminder and confirmation step. Ensure the case state is set to "Escalated."
+  - The answer should always be YES. If you have not updated the case state inside of Salesforce, exit the workflow and return once this step is complete.
+- **Company Name**:
+  - Add the client name as it appears in Latchel.
+- **CASE URL**:
+  - Copy and paste the case link into this spot.
+- **WO LINK (if applicable)**:
+  - Copy and paste the work order link here. If there is none, simply put N/A.
+- **PM Profile URL**:
+  - Copy and paste the client profile link from Latchel.
+- **Case Escalation Details**:
+  - This is critical! Be thorough, provide context, and share all details as if the reader cannot access SF and cannot review the case thread.
+  - Share all communications with the client and explain WHY we think the client is making these threats.
+- **Relevant Slack Conversations**:
+  - Link any relevant Slack conversations related to this situation.
+  - If this situation was previously raised for clarity on settings, Ops team behavior, finance questions, etc., add all relevant links to these Slack conversations for review.
+
+1. The PSM will review the details and take over the next steps.
+2. Depending on the severity of the situation, the case may be escalated to Will Gordon.
+
+---
+
+### **Escalation Scenarios against a Property Manager:**
+
+- **Resident: **Instances where the resident reports they are going to sue their PM, report them to the Better Business Bureau (BBB), threatening legal action, etc.
+- **Service Provider: **Instances where a service provider threatens legal action against a PM, putting a lien on a PM property, report them to the Better Business Bureau (BBB), etc.
+
+#### **Step-by-Step Guide: **
+
+1. **Access the resident/service provider profile in Latchel.**
+  - Search for the profile in Latchel by using their email address.
+  - Ensure that the “Disabled” option is checked when performing the search to include deactivated accounts.
+2. **Once on the profile, identify the associated Property Management (PM) Company. **
+  - For Residents:
+    - Once on the Resident Profile, you will automatically be on the Details tab.
+    - Click on the Property listed below the Details tab.
+    - On the Property page, scroll down to the Details tab.
+    - Locate the Property Manager section to find the PM Company associated with the owner.
+  - For Service Providers:
+    - Once on the SP Profile, you will automatically be on the Details tab.
+    - Click on the “Preferred PMs tab”.
+    - Find the PM Company in question and click on the name to go to the PM Company page.
+3. **Find a PM Contact Email. **
+  - Identify the Primary User for the PM Company from the Property Manager information.
+  - Review the User Groups section for the Default User Group.
+  - Select the most appropriate email for reaching out to the PM, typically from the Primary User or Default User Group
+4. **Contact the PM Regarding the Legal Escalation.**
+  - Use the [**Escalate to PM - Legal Concern**](https://latchel1.lightning.force.com/lightning/r/EmailTemplate/00XUS00000Ct2K12AJ/view) in Salesforce to craft your email to the PM.
+  - Send the email to the selected PM contact to address the escalation.

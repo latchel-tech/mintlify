@@ -1,0 +1,162 @@
+---
+title: "Job Aid: Searching and Analyzing Messaging Logs in Twilio"
+groups: ["latchel"]
+---
+
+<Note>
+**Objective**: This job aid provides guidance on how to **search for messaging logs in Twilio** and **analyze message details** to support troubleshooting, track communication flow, and verify delivery outcomes.
+</Note>
+
+<Warning>
+You may receive feedback from property managers stating that they **attempted to call and were sent to voicemail without speaking to anyone**.
+This is due to Latchel’s **call routing logic**:
+
+- **Property Managers (PMs)** are **automatically directed to voicemail**.
+- **Residents or unidentified callers** are routed to the live call center, where they can speak with an agent.
+
+This routing is determined by **the caller’s phone number and user type**, ensuring efficient handling of inbound communication.
+</Warning>
+
+<Note>
+**Best Way for a PM to Contact Latchel**
+
+For the quickest support, PMs should use the designated Latchel phone numbers and channels:
+
+- 📞 [Latchel Phone Numbers](#)
+- 📩 [How to Contact Latchel](#)
+</Note>
+
+- 1 [Accessing Messaging Logs in Twilio](#Accessing-Messaging-Logs-in-Twilio)
+- 2 [Searching for Messaging Logs](#Searching-for-Messaging-Logs)
+  - 2.1 [1. Search by Date Range](#1.-Search-by-Date-Range)
+  - 2.2 [2. Search by Phone Number](#2.-Search-by-Phone-Number)
+  - 2.3 [3. Search by Message SID](#3.-Search-by-Message-SID)
+  - 2.4 [4. Search by Status](#4.-Search-by-Status)
+- 3 [Analyzing Messaging Logs](#Analyzing-Messaging-Logs)
+  - 3.1 [1. Key Log Fields to Review](#1.-Key-Log-Fields-to-Review)
+  - 3.2 [2. Delivery and Status Breakdown](#2.-Delivery-and-Status-Breakdown)
+  - 3.3 [3. Error Codes and Troubleshooting](#3.-Error-Codes-and-Troubleshooting)
+- 4 [Practical Example of Log Interpretation](#Practical-Example-of-Log-Interpretation)
+- 5 [PgAdmin Query for Latchel Messages](#PgAdmin-Query-for-Latchel-Messages)
+
+#### **Accessing Messaging Logs in Twilio**
+
+1. **Login**: Navigate to [https://www.twilio.com/console](https://www.twilio.com/console)  and log in using your credentials.
+2. **Navigate to Messaging Logs**:
+  - From the left-hand menu, click **“Monitor.”**
+  - Under **“Monitor,”** select **“Logs.”**
+  - Click **“Messaging”** to open the full list of message logs.
+
+<Frame>
+  <img src="/images/PST-20.png" alt="Logs-Messaging-Twilio-Console-10-16-2024_11_13_AM.png" />
+</Frame>
+
+---
+
+#### **Searching for Messaging Logs**
+
+You can filter and search messaging logs based on specific criteria to locate relevant message details quickly.
+
+<Frame>
+  <img src="/images/PST-21.png" alt="Logs-Messaging-Twilio-Console-10-16-2024_11_13_AM (1).png" />
+</Frame>
+
+##### **1. Search by Date Range**
+
+- Use the **date range picker** to specify the time frame for which you want to view logs.
+- Select the **start date** and **end date** in the **“Date Sent”** field.
+- This filter displays all messages sent within the selected date range.
+
+##### **2. Search by Phone Number**
+
+- In the **“To”** or **“From”** fields, enter the phone number (in E.164 format, e.g., +1xxxxxxxxxx) to locate messages sent to or from that number.
+
+##### **3. Search by Message SID**
+
+- If you have the unique **Message SID** (a unique identifier assigned to each message), enter it into the **Search** bar to locate the exact message.
+
+##### **4. Search by Status**
+
+- Filter messages based on their **delivery status**:
+
+| **Status** | **Meaning** |
+|---|---|
+| **Sent** | Message was successfully sent from Twilio but not yet delivered. |
+| **Delivered** | Message was successfully delivered to the recipient’s device. |
+| **Failed** | Message could not be sent due to an error (e.g., invalid number). |
+| **Undelivered** | Message was sent but was rejected or could not reach the recipient. |
+
+---
+
+#### **Analyzing Messaging Logs**
+
+Once the relevant logs are retrieved, you’ll be able to see detailed information for each message. Here’s how to dissect the key fields:
+
+##### **1. Key Log Fields to Review**
+
+| **Field** | **Description** | **Why It Matters** |
+|---|---|---|
+| **Message SID** | A unique identifier assigned to every message. Click the SID to view full message details, including status and error codes. | The SID is essential for escalation, documentation, or deeper troubleshooting. |
+| **Date Sent** | The exact timestamp when the message was sent from Twilio. | Helps align communication timing with other systems or reported issues. |
+| **From** | The phone number or sender ID used to send the message. | Useful for verifying which Latchel number or line was used. |
+| **To** | The recipient’s phone number. | Confirms the correct destination was used. |
+| **Status** | Indicates the message’s delivery state. | Helps determine whether additional investigation is needed. |
+
+**Message Status Definitions**:
+
+- **Sent**: The message has been successfully sent to the carrier.
+- **Delivered**: The message has been confirmed as delivered to the recipient’s phone.
+- **Failed**: The message was not sent due to an error (e.g., invalid phone number, carrier issues).
+- **Undelivered**: The message was sent but was not delivered, possibly due to carrier problems or filtering issues on the recipient’s end.
+
+##### **2. Delivery and Status Breakdown**
+
+- **Delivery Status**: This shows whether the message was delivered successfully or encountered issues.
+  - A **Delivered** status means the message reached the recipient.
+  - A **Failed** or **Undelivered** status requires further investigation (see Error Code analysis below).
+
+##### **3. Error Codes and Troubleshooting**
+
+- If the message failed or was undelivered, an **error code** will appear in the log. This code indicates why the message failed.
+  - **Click on the Message SID** to view the detailed error information.
+  - **Locate the Error Code and Error Message** fields.
+  - **Use Twilio’s Error Code Documentation** to identify the cause and recommended actions.
+
+| **Error Code** | **Meaning** | **Common Cause / Next Steps** |
+|---|---|---|
+| **21610** | Unsubscribed from receiving messages | The recipient opted out (e.g., replied “STOP”). |
+| **30007** | Carrier filtering | Message content may be flagged as spam — revise wording or formatting. |
+| **30003** | Unavailable or invalid destination number | The number may be inactive, disconnected, or formatted incorrectly. |
+
+---
+
+#### **Practical Example of Log Interpretation**
+
+<Frame>
+  <img src="/images/PST-22.png" alt="Logs-Messaging-Twilio-Console-10-16-2024_11_16_AM.png" />
+</Frame>
+
+Here’s an example of how you would interpret a messaging log:
+
+1. **Message SID**: `SMxxxxxxxxxxxxxxxxxxxxx`
+  - This is the unique identifier for the message. Click on the SID to get more details.
+2. **Date Sent**: `2024-10-15 14:22:45 UTC`
+  - This shows the exact time the message was sent.
+3. **From**: `+15551234567`
+  - The sender’s phone number (Twilio phone number used for sending).
+4. **To**: `+15559876543`
+  - The recipient’s phone number. Verify this to ensure it’s correct.
+5. **Status**: `Failed`
+  - The message was not delivered. Click on the **Message SID** to investigate further.
+6. **Error Code**: `30007`
+  - This indicates **carrier filtering**, which means the message may have been flagged as spam by the carrier. To resolve this, you may need to revise the message content to ensure it complies with carrier regulations.
+
+---
+
+#### **PgAdmin Query for Latchel Messages**
+
+<Note>
+If a message is not displaying in twilio, yet we have record of it in the Latchel console, we can execute the following database query to determine if the message we are seeing in Latchel (but not in twilio) failed or delivered. This could also help us track down delivery errors if we are unable to determine the root issue in Twilio.
+
+See this real life scenario as an example: [https://www.loom.com/share/e872a0325c5a461cb2d420abb4c01792?sid=51fd3aae-db65-4cb1-be97-97699495db76](https://www.loom.com/share/e872a0325c5a461cb2d420abb4c01792?sid=51fd3aae-db65-4cb1-be97-97699495db76) [https://latchel.slack.com/archives/C01SF43DPEE/p1729015050979409](https://latchel.slack.com/archives/C01SF43DPEE/p1729015050979409)
+</Note>

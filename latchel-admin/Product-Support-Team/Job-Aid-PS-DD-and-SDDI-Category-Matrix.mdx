@@ -1,0 +1,183 @@
+---
+title: "Job Aid: PS DD and SDDI Category Matrix"
+groups: ["latchel"]
+---
+
+<Note>
+This job aid provides guidance on how to categorize deep dive (DD) and SDDI investigations. It is designed to ensure consistency and accuracy in identifying and analyzing trends across customer complaints.
+</Note>
+
+<Note>
+**DD vs. SDDI — What’s the Difference?**
+
+**DD (Deep Dive) → **Deep Dives are investigations **initiated by Property Managers or Customer Success Managers (CSMs)**.
+
+- These typically involve escalated issues, complex scenarios, or process breakdowns that require root cause analysis and documentation.
+
+**SDDI (Survey & Review Deep Dive Investigation) → **SDDIs are **proactively initiated by the Product Support team** in response to **poor customer feedback** (ratings of 3 or below) captured through:
+
+- CSAT Surveys
+- Google Reviews
+- Work Order Resident Reviews
+  - These dives help uncover patterns that may not have been directly escalated but still impact customer experience.
+</Note>
+
+### **Complaint Category**
+
+The **Complaint Category** is the **primary classification** used to group related issues for reporting and trend analysis.
+
+- It is **found on the Parent Ticket** and automatically cascades to any associated **Child Tickets**.
+- This category reflects the **broader issue as perceived by the customer**, based on their experience and the specific complaint they submitted.
+- Categorizing accurately is essential to ensure that patterns and pain points are correctly identified and addressed.
+
+| **Complaint Category** | **Definition** | **Example(s)** |
+|---|---|---|
+| **Poor Scheduling Experience** | The customer experienced scheduling or rescheduling issues that delayed or disrupted the work order. | The vendor rescheduled multiple times, pushing the repair back over a week. |
+| **Took Too Long to Complete** | The customer was dissatisfied with delays or the overall time it took to complete the work order. | An emergency took a week to resolve because the vendor accepted the job four days after it was assigned. |
+| **Double Dispatch** | Two service providers were dispatched unnecessarily for the same work order. | A preferred vendor accepted the job, but the PM also sent another vendor not logged on the WO, resulting in duplicate assignments. |
+| **Disclosed PM Info** | Sensitive PM information was unintentionally shared with the resident or service provider. | The PM’s phone number was given to a vendor, leading them to contact the PM directly for payment. |
+| **Too Long to Call Back** | The customer complained about a delay in receiving a promised or expected callback. | More than 20 minutes passed between an emergency being reported and a troubleshooting call. A resident waited 2 hours with no contact. |
+| **No Job Submitted** | A maintenance issue was reported, but no work order was actually created. | No WO was created after a resident called in. A tenant submitted a request through the portal, but no WO was generated. |
+| **Latchel Team Unreachable** | The customer was unable to reach Latchel or did not receive a response. | A tenant repeatedly called and only heard hold music. SMS messages went unanswered. |
+| **Service Given Beyond Subscription** | The complaint involved actions taken outside the PM’s contracted service scope. | Latchel handled a non-emergency WO for a PM with an Emergency Only plan. |
+| **Lack of Escalation** | An issue went unnoticed or unresolved due to a missed or delayed escalation. | PM wasn’t contacted for a PD/EH issue. A resident update wasn’t posted in the channel, delaying action. |
+| **Poor Communication** | Critical details were missed or unclear messaging led to incorrect actions or confusion. | The resident wasn’t informed the WO was forwarded to PM. They were unaware the vendor appointment was rescheduled. |
+| **WO Landed on the Wrong State** | The WO automation placed the work order in the wrong status or severity. | The WO was forwarded to PM or held incorrectly, not aligning with Harmonia rules. |
+| **WO Wrongly Submitted** | The WO created didn’t match how the issue was reported or the actual problem. | A tenant used the plumbing flow to report a lawn issue, resulting in the wrong skill/vendor assignment. |
+| **General Inquiry** | The customer asked for clarification about the work order or its timeline. | “Who created the WO?” or “How was the severity determined?” |
+| **Issue Not Fixed** | The reported maintenance issue remains unresolved after service. | The sink continued leaking after the tech visit. Heating was still not working. |
+| **Dissatisfaction with the SP** | The complaint was about the service provider’s work quality, professionalism, or conduct. | The resident said the SP was rude and left trash behind. |
+| **Dissatisfaction with the PM** | The complaint directly concerns the PM’s handling or responsiveness. | The resident said their PM wasn’t responding or addressing the issue promptly. |
+| **Dissatisfaction with the Work Coordination** | The customer was dissatisfied with the overall coordination and handling of the work order. | The PM complained about delays in SP assignment and lack of updates for them and the resident. |
+| **Incorrect Dispatch** | The wrong type of service provider was assigned to the WO. | A roofer was dispatched for a plumbing leak instead of a plumber. |
+| **System Malfunction** | A technical/system issue occurred during work order coordination. | A resident couldn’t submit a WO due to a portal error. A vendor couldn’t upload an estimate. |
+| **Other Ongoing Issues** | An additional issue was discovered during or after the service. | A tile was damaged after the SP fixed the toilet plumbing issue. |
+| **Unhappy with Troubleshooting** | The customer was dissatisfied with the troubleshooting experience when submitting a request. | A resident complained the troubleshooting call repeated questions already answered online. |
+| **Disregarded PM Preferences** | The PM’s instructions or preferences were not followed during coordination. | Pre-dispatch notes were ignored. Latchel contacted the vendor network instead of the PM’s preferred vendor. |
+| **Invoice Dispute** | The customer raised a concern about the invoice for the WO. | The SP’s invoice exceeded the approved budget for the work order. |
+
+### **Child Issue Ticket Titles**
+
+**Child Issue Tickets** capture the **underlying issue(s) identified during a deep dive investigation** that contributed to the original complaint.
+
+These tickets are not a repeat of the customer’s experience — they **document the root causes, gaps, or contributing factors** uncovered through the investigation.
+
+A Child Issue Ticket may highlight:
+
+- **System deviations** or platform errors
+- **User actions** (PM, resident, vendor, or internal team) that impacted the flow
+- **Process breakdowns** or unclear workflows
+- **Potential feature requests** or product improvement opportunities
+
+Depending on the complexity of the case, a single deep dive may result in **multiple Child Issue Tickets**, each representing a distinct root cause.
+
+| **Child Issue Ticket Title** | **Definition** | **Example/s** |
+|---|---|---|
+| **LVN SP Feedback – SP Company Name** | The complaint was caused by an **LVN Service Provider’s actions**, behavior, or non-compliance with expected processes. | - LVN SP proceeded with the job without budget increase approval.<br/>- LVN SP attempted to collect payment directly from the resident for PM-responsible work.<br/> |
+| **Associate Feedback – Associate Name** | The complaint stemmed from an **agent not following SOPs, job aids, or established guidelines**. This may involve actions or communication that contributed to the issue. | - Agent completed the WO without securing tenant confirmation as required.<br/>- Agent posted in the Emergency Slack channel instead of creating a task.<br/>- Agent showed lack of empathy when speaking with the PM, escalating the situation.<br/>- Agent was rude or dismissive during the conversation.<br/>- Agent failed to actively listen to the customer.<br/> |
+| **Ops Request (SOP)** | The issue was caused by **gaps or outdated content in SOPs or job aids**, leading to confusion or inconsistent handling. | - SOP or job aid contains outdated steps.<br/>- SOP or job aid lacks critical information, resulting in errors or delays.<br/> |
+| **Ops Request (Help Guide)** | A **Help Guide update or creation** is needed to better support users and prevent similar issues in the future. | - A process wasn’t followed correctly because there’s no clear Help Guide to reference.<br/>- An existing Help Guide lacks the steps needed to complete the workflow accurately.<br/> |
+| **Product (Feature Request)** | A **new feature or functionality is needed** to improve workflows, support users, and reduce complaint drivers. | - PM requests the ability to customize SMS notifications sent to tenants.<br/>- Resident requests Spanish-language notification options.<br/> |
+| **Product (Bug)** | A **technical issue or system malfunction** occurred, disrupting the standard process and leading to a complaint. | - The WO landed on “Waiting for PM” upon creation without a logical trigger.<br/>- System failed to send the expected notification to the PM.<br/> |
+
+### **Issue Found and Root Causes**
+
+**Root Causes** represent the **specific, underlying factors** within the _Issue Category_ that directly contributed to a customer complaint.
+
+They are the **core issues that Latchel can control, influence, or correct** through process improvements, coaching, or product enhancements.
+A well-defined root cause is:
+
+- **Accurate** — clearly tied to the findings from the deep dive investigation.
+- **Actionable** — points to something that can be addressed or improved.
+- **Linked to both the problem and the solution** — serving as the bridge between what went wrong and how to prevent it in the future.
+
+Accurately identifying the root cause ensures proper corrective actions, reduces repeat issues, and strengthens overall service delivery.
+
+---
+
+### **Multiple Root Causes and Child Issue Ticket Creation**
+
+A **single Parent Ticket may have multiple root causes**, especially in more complex or layered complaints. Each root cause represents a **distinct contributing factor** that should be addressed individually.
+
+For **every root cause identified**, a **corresponding Child Issue Ticket** must be created. This ensures that:
+
+- Each factor is **clearly documented** and traceable
+- Follow-up actions can be **routed to the appropriate team** (e.g., coaching, SOP update, product escalation)
+- **Trend reporting remains clean, accurate, and actionable**
+
+| **Issue Found** | **Root Cause** |
+|---|---|
+| **LCN / LVN Issue ** | Did not get approval to go over budget |
+| Missed appointments |
+| Made residents pay out of pocket |
+| Took the wrong action in the dashboard |
+| Unresponsive to follow-ups (estimates/updates) |
+| Lack of professionalism |
+| Double Charge/Incorrect Charges |
+| Delay in Required Materials |
+| **Preferred SP Issue** | Did not get approval to go over budget |
+| Missed appointments |
+| Made residents pay out of pocket |
+| Unresponsive to followups (estimates/updates) |
+| Took the wrong action in the dashboard |
+| Lack of professionalism |
+| Double Charge/Incorrect Charges |
+| Delay in Required Materials |
+| **Owner Issue (RentRedi)** | Owner Miss - Inaccurate Action/Instruction |
+| Notifications lack clarity |
+| Invoice Dispute |
+| Severity Settings Issue |
+| Unaware of Latchel WO Process |
+| **Owner Issue (NOMAD)** | Owner Miss - Inaccurate Action/Instruction |
+| Notifications lack clarity |
+| Invoice Dispute |
+| Severity Settings Issue |
+| Unaware of Latchel WO Process |
+| **Resident Issue** | Unresponsive to scheduling |
+| Unresponsive to troubleshooting |
+| Canceled the WO |
+| Submitted Multiple WOs for Same Issue |
+| Incorrect WO submission - Wrong PLC |
+| Lack of Familiarity with Latchel and/or PM Process |
+| Unrealistic/Exaggerated expectations for the WO |
+| INVALID COMPLAINT |
+| Lack of Professionalism |
+| Inaccurate Troubleshooting Response |
+| **PM Issue** | Provided Conditional Instructions (Unclear Instructions) - Need to reset expectations |
+| Leveraging Notes for Latchel Action |
+| Delayed PM Action (Approvals) |
+| Wrongful PM Action (took action that resulted in not the desired outcome) |
+| Lack of Familiarity with Emg Escalation Process |
+| Lack of Familiarity with their vendor's list |
+| Lack of Familiarity with their Severity Settings |
+| Lack of Familiarity with their Subscription Coverage |
+| The PM had outdated/insufficient Resident/Property Profile Information |
+| Account Settings date discrepancy (different setting was applicable during the incident) |
+| Lack of Familiarity with WO Status |
+| Lack of Familiarity with task description |
+| Lack of Familiarity with Account Settings |
+| Unaware of VALID Charges |
+| **Latchel Agent Issue** | Did not follow Critical Notes/Pre-Dispatch Instructions<br/><br/>Reference: [How to Understand the Existing Work Order](https://help.latchel.com/How-to:-Understand-the-Existing-Work-Order)<br/>[How to Properly Diagnose Emergency Situations](https://help.latchel.com/How-to:-Properly-Diagnose-Emergency-Situations) [Job Aid: Critical, Pre-dispatch and Special Notes](https://help.latchel.com/Job-Aid:-Critical,-Pre-dispatch,-Warranty,-Special-Notes-&-Emergency-Escalation-Contacts) |
+| Did not share Approved Budget and Approval process with SP<br/><br/>Reference: [How to Assign a Preferred Latchel Network Service Provider](https://help.latchel.com/(EMERGENCY)-How-to:-Assign-a-Preferred-+-Latchel-Network-Service-Provider) |
+| Did not set proper expectations for the WO<br/><br/>Reference: [How to Assign a Preferred Latchel Network Service Provider](https://help.latchel.com/(EMERGENCY)-How-to:-Assign-a-Preferred-+-Latchel-Network-Service-Provider) [How to: Set expectations with Service Providers when dispatching](https://help.latchel.com/How-to:-Set-expectations-with-Service-Providers-when-dispatching) |
+| Did not review task description<br/><br/>Reference: [How to Understand the Existing Work Order](https://help.latchel.com/How-to:-Understand-the-Existing-Work-Order) |
+| Did not review CN/PD Instructions/Special Notes<br/><br/>Reference: [How to Understand the Existing Work Order](https://help.latchel.com/How-to:-Understand-the-Existing-Work-Order) [SOP: Pre-Dispatch Instructions & Critical Notes](https://help.latchel.com/SOP:-Pre-Dispatch-Instructions-&-Critical-Notes) |
+| Did not check WO skill<br/><br/>Reference: [How to Understand the Existing Work Order](https://help.latchel.com/How-to:-Understand-the-Existing-Work-Order)<br/>[How to Identify Trades or Skill Categories that Require Property Manager Approval](https://help.latchel.com/(PREMIUM)-How-to:-Identify-Trades-or-Skill-Categories-that-Require-Property-Manager-Approval) |
+| Did not review severity settings<br/><br/>Reference: [About Property Manager Severity Settings](https://help.latchel.com/About-Property-Manager's-Intake-Settings)<br/>[How to Understand the Existing Work Order](https://help.latchel.com/How-to:-Understand-the-Existing-Work-Order) |
+| Did not check the files tab<br/><br/>Referemce: [How to: Handle Invoices or Estimates Sent via Email](https://latchel.atlassian.net/l/cp/HRSNeJr7) |
+| Did not check related maintenance requests<br/><br/>Reference: [Job Aid: Finding an Existing Work Order vs. When to Create a new Work Order](https://help.latchel.com/Job-Aid:-Finding-an-Existing-Work-Order-vs.-When-to-Create-a-new-Work-Order) |
+| No SMS was sent to vendors when sourcing<br/><br/>Reference: [How to: Assign a Preferred + Latchel Network Service Provider](https://latchel.atlassian.net/l/cp/2v1rWJ4T)<br/>[Job Aid: Job Needs a Service Provider](https://latchel.atlassian.net/l/cp/u4iRbMLN) |
+| No email was sent to the failed escalation email<br/><br/>Reference: [How to: Access Property Manager Escalation Contacts](https://latchel.atlassian.net/l/cp/f5yrrj9q)<br/>[Job Aid: PM Outbound Communication for Emergency WOs](https://latchel.atlassian.net/l/cp/Y16LNUyj) |
+| No call was made to SP when scheduling<br/><br/>Reference: [(SOP) Handling 'Scheduling With Service Provider' Tasks](https://latchel.atlassian.net/l/cp/XfRWBnC1) |
+| No call to EEC list for PD/EH issue<br/><br/>Reference: [Job Aid: PM Outbound Communication for Emergency WOs](https://latchel.atlassian.net/l/cp/Y16LNUyj) |
+| Did not follow PM instructions<br/><br/>Reference: [How to: Handle SMS /Webchat Contacts](https://latchel.atlassian.net/l/cp/ioe0AcPT) |
+| Lack of empathy<br/><br/>Reference: [Latchel Customer Service Tenets - High 5 Your Customers Today!](https://latchel.atlassian.net/l/cp/zW0L7rAq)<br/>[Job-Aid: Blurbs or Templates to Communicate with Customers](https://latchel.atlassian.net/l/cp/zpMQgr5S) |
+| Did not complete SP Sourcing process (did not exhaust queue)<br/><br/>Reference: [Job Aid: Job Needs a Service Provider](https://help.latchel.com/Job-Aid:-Job-Needs-a-Service-Provider) [(EMERGENCY) How to: Assign a Preferred + Latchel Network Service Provider](https://help.latchel.com/(EMERGENCY)-How-to:-Assign-a-Preferred-+-Latchel-Network-Service-Provider) |
+| Applied the wrong WO state   Reference: [How to: Put a Job on Hold](https://help.latchel.com/How-to:-Put-a-Job-on-Hold) |
+| Did not ask probing questions/clarification   Reference: [Job Aid: Troubleshooter Question Bank](https://help.latchel.com/Job-Aid:-Troubleshooter-Question-Bank) |
+| Assigned SP without an appointment   Reference: [How to: Source a New Service Provider](https://help.latchel.com/(PREMIUM)-How-to:-Source-a-new-service-provider) |
+| Payment processed without approval   Reference: [How to: Handle Over Approved Budget (aka Estimate)](https://help.latchel.com/(Non-Emergency)-How-to:-Handle-Over-Approved-Budget-(aka-Estimate)) |
+| Failed to update approved budget   Reference: [How to: Handle Changes to the Approved Budget](https://help.latchel.com/(⛑EMERGENCY)-How-to:-Handle-Changes-to-the-Approved-Budget) |
+| SMS/Call tagged to the wrong WO   Reference: [Tagging Video Calls to a WO](https://latchel.atlassian.net/l/cp/1zSixfc6)<br/>[How to: Link Past Calls to a WO](https://latchel.atlassian.net/l/cp/kAYxsBVw)<br/>[Job Aid: Call Flow for Outbound Calls](https://latchel.atlassian.net/l/cp/Afwic3Cn) [How to: Use Text Message (SMS/Webchat) Functions (in Latchel Console)](https://help.latchel.com/How-to-Use-Text-Message-SMS-Webchat-Functions-in-Latchel-Console) |
+| Insufficient contact attempt   Reference: [Job Aid: PM Outbound Communication for Emergency WOs](https://help.latchel.com/Job-Aid:-PM-Outbound-Communication-for-Emergency-WOs) |
+| Failed to leave sufficient notes/descriptions on WO   Reference: [How to: Write Effective Notes](https://help.latchel.com/How-to:-Write-Effective-Notes) |

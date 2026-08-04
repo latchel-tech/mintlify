@@ -1,0 +1,63 @@
+---
+title: "SOP: Guidelines for Notifying Property Managers of Severe Weather Events"
+groups: ["latchel"]
+---
+
+<Note>
+The purpose of the Weather Advisory email to PMs is to acknowledge an upcoming extreme weather event, check in on our customers, and educate them on how they can best prepare in Latchel.
+</Note>
+
+### Review Process
+
+1. A bot monitors extreme weather events on a weekly basis and reports them in the [#svc-ops-sync](https://latchel.slack.com/archives/GK725P4H4) Slack channel. Ex:
+
+<Frame>
+  <img src="/images/PST-105.png" alt="ChatGPT Image 25 jun 2026, 04_46_32 p.m..png" />
+</Frame>
+2. The bot sends a notification to the Product Support Manager to review the post.
+3. If the Product Support Manager determines that the weather event is likely to have a major impact on our customers, the Product Support team will click **“Approve”** to indicate that the alert is valid and to follow the process outlined below for team visibility. If they click **“Decline,”** it indicates that the alert is not considered impactful enough to require further action, and no additional steps are needed.
+
+<Note>
+_Note: Our goal is to send no more than 4 Weather Advisory emails per year to avoid over-notification._
+</Note>
+
+<Check>
+To keep track of bot alerts, they are saved in the [Severe Weather Alerts doc](https://docs.google.com/spreadsheets/d/1vkH_hFJXRds0Nnw8xepKDrodU1wzOAp7LQOYy4matZ0/edit?gid=0#gid=0) for internal tracking and visibility.
+</Check>
+
+### Product Support Process
+
+Once the Product Support team has been notified by the Product Support Manager that we will alert affected PM customers about an upcoming extreme weather event:
+
+1. Determine which PMs are affected. The following pgAdmin query returns all active units for all active customers by state. [This Loom video](https://www.loom.com/share/938542f5564e478ba58d9e93eba04d6c) provides an overview of how to use it in conjunction with [this worksheet](https://docs.google.com/spreadsheets/d/1SbRD_K00to64JdUhnhOlofOEi6u0HLjM4Gaw2SQTtD4/edit#gid=0) to identify which PMs should receive an email.`SELECT p.address1, p.city, p.state, p.pm_company_id AS company_id, c.name
+FROM property p
+LEFT JOIN company c ON c.company_id = p.pm_company_id
+WHERE p.is_active = 1 AND c.is_active = 1`The following query retrieves a list of emails for property manager users whose companies are located in specific states (see states in line 15). You can change the state abbreviations in the query based on where you need to focus your attention, such as specific weather-related events.
+
+_Note: Some weather events (ex: a major winter storm) could be almost nationwide. In those cases, it would be appropriate to email all customers. Consult with the Product Support Manager if you’re unsure._
+
+1. Product Support sends the following email template with the list of affected PMsvia hubspot at least 48 hours before the weather event. Be sure to update the fields in [red] accordingly.
+
+### Email Template
+
+Dear [Customer Name],
+
+Latchel is actively monitoring [weather event] which is forecast to impact [geographic area] in the days ahead.
+
+_**How does Latchel prepare?**_ Our Service Operations team regularly monitors extreme weather events across the US and adjusts staffing to ensure continuity in intaking resident calls, troubleshooting and dispatching emergencies.
+
+_**What should you do in Latchel?**_
+
+- Review your [Severity Settings](https://help.latchel.com/s/article/Pre-Approval-Severity-and-Responsibility-Settings) and [Emergency Temperature Thresholds](https://help.latchel.com/s/article/How-to-Add-Emergency-Temperature-Thresholds) in Latchel and make updates if needed.
+- Verify your [Emergency Escalation Contacts in Latchel](https://help.latchel.com/s/article/How-to-Update-Your-Escalation-Contacts), then make sure they’re prepared for a potential increase in calls during the weather event. [Here](https://help.latchel.com/s/article/Emergency-Outbound-Communication-Process) is how Latchel communicates to Property Managers during emergencies.
+- Reach out to your Service Providers to understand if they’ll be working extra hours and able to reach property locations to handle additional volume if needed. Verify your [Service Provider prioritization in Latchel](https://help.latchel.com/s/article/How-to-Add-Manage-Service-Providers). Consider whether there are back-up Service Providers you wish to contact in the event your primary Service Providers become overwhelmed or are unable to reach an address.
+- Prepare for extreme weather and set resident and owner expectations. We recommend the following resources:
+  - US Department of Homeland Security: [https://www.ready.gov/](https://www.ready.gov/)
+  - CDC Natural Disasters and Severe Weather: [https://www.cdc.gov/disasters/index.html](https://www.cdc.gov/disasters/index.html)
+- During the event, check your [Latchel dashboard](https://help.latchel.com/s/article/Dashboard-2-0) frequently to monitor the number of emergencies Latchel is handling, how quickly your Service Providers are responding and determine whether circumstances require you to reach out to residents or owners with additional communication.
+
+If you need assistance completing any of these steps, don’t hesitate to reach out to your Product Support team at [success@latchel.com](mailto:success@latchel.com).
+
+Take care and stay safe!
+
+The Latchel Team
