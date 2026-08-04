@@ -865,7 +865,8 @@
                           "latchel-admin/Product-Support-Team/How-to-Handle-Autopilot-PM-Explanation",
                           "latchel-admin/Product-Support-Team/SOP-Escalating-Tickets-to-the-CSM",
                           "latchel-admin/Product-Support-Team/SOP-Account-Termination-Steps",
-                          "latchel-admin/Product-Support-Team/How-to-Subscription-Upgrade"
+                          "latchel-admin/Product-Support-Team/How-to-Subscription-Upgrade",
+                          "latchel-admin/Product-Support-Team/SOP-Escalating-Legal-Concerns"
                         ]
                       },
                       "untitled-page",
@@ -897,7 +898,7 @@
                           {
                             "group": "Job Aid: Slack Channels & Escalation Workflows",
                             "pages": [
-                              "latchel-admin/Product-Support-Team/Job-Aid-Slack-Channels-&-Escalation-Workflows",
+                              "latchel-admin/Product-Support-Team/Job-Aid-Slack-Channels-Escalation-Workflows",
                               "latchel-admin/Product-Support-Team/Job-Aid-Tech-High-Sev-Framework"
                             ]
                           },
@@ -918,38 +919,70 @@
                       },
                       {
                         "group": "SOP: PS CX Audit Process",
-                        "pages": []
+                        "pages": [
+                          "latchel-admin/Product-Support-Team/SOP-PS-CX-Audit-Process",
+                          "latchel-admin/Product-Support-Team/PS-CX-Audit-Guidelines"
+                        ]
                       },
+                      "latchel-admin/Product-Support-Team/SOP-Escalating-Legal-Concerns",
                       {
                         "group": "SOP: Pre-Dispatch Instructions & Critical Notes",
-                        "pages": []
+                        "pages": [
+                          "latchel-admin/Product-Support-Team/SOP-Pre-Dispatch-Instructions-Critical-Notes",
+                          "latchel-admin/Product-Support-Team/How-to-Request-Pre-Dispatch-Instruction-and-or-Critical-Note-Approval"
+                        ]
                       },
+                      "latchel-admin/Product-Support-Team/SOP-Guidelines-for-Notifying-Property-Managers-of-Severe-Weather-Events",
+                      "latchel-admin/Product-Support-Team/SOP-Handling-Work-Order-Invoice-Disputes",
                       {
                         "group": "Work Orders",
                         "pages": [
-                          "latchel-admin/Product-Support-Team/Work-Orders"
+                          "latchel-admin/Product-Support-Team/Work-Orders",
+                          "latchel-admin/Product-Support-Team/SOP-Handling-Outbound-Communication-Inquiries",
+                          "latchel-admin/Product-Support-Team/SOP-How-to-Handle-LVN-Escalations",
+                          "latchel-admin/Product-Support-Team/SOP-How-to-Handle-LCN-SPs-Escalations",
+                          "latchel-admin/Product-Support-Team/Job-Aid-Requesting-Clarification-Answering-General-Work-Order-Question",
+                          "latchel-admin/Product-Support-Team/SOP-Handling-Work-Order-Complaints-from-Property-Managers"
                         ]
                       },
                       {
                         "group": "Account Settings",
                         "pages": [
-                          "latchel-admin/Product-Support-Team/account-settings"
+                          "latchel-admin/Product-Support-Team/account-settings",
+                          "latchel-admin/Product-Support-Team/How-to-Report-Issues-with-the-Latchel-Help-Center",
+                          "latchel-admin/Product-Support-Team/How-to-Handle-Feature-Requests",
+                          "latchel-admin/Product-Support-Team/How-to-Handle-PM-Account-Updates",
+                          "latchel-admin/Product-Support-Team/How-to-Build-Reports-via-the-Analytics-Dashboard"
                         ]
                       },
                       {
                         "group": "Job Aid: Integration Functionality, Troubleshooting, and Setup Steps",
-                        "pages": []
+                        "pages": [
+                          "latchel-admin/Product-Support-Team/Job-Aid-Integration-Functionality-Troubleshooting-and-Setup-Steps",
+                          "latchel-admin/Product-Support-Team/Propertyware-Integration-Troubleshooting-Invalid-Building-ID-Errors",
+                          "latchel-admin/Product-Support-Team/SOP-Running-AppFolio-Sync-on-Behalf-of-Customers"
+                        ]
                       },
                       {
                         "group": "Portal Access",
-                        "pages": []
+                        "pages": [
+                          "latchel-admin/Product-Support-Team/Job-Aid-Handling-User-Login-Issues",
+                          "latchel-admin/Product-Support-Team/Job-Aid-How-to-Locate-Public-Dashboard-URLs"
+                        ]
                       },
                       {
                         "group": "Latchel Resident Benefits",
                         "pages": [
-                          "latchel-admin/Product-Support-Team/Latchel-Resident-Benefits"
+                          "latchel-admin/Product-Support-Team/Latchel-Resident-Benefits",
+                          {
+                            "group": "SOP: Benefits & Partnerships - How to Handle Customer Inquiries",
+                            "pages": [
+                              "latchel-admin/Product-Support-Team/SOP-Benefits-&-Partnerships-How-to-Handle-Customer-Inquiries"
+                            ]
+                          }
                         ]
-                      }
+                      },
+                      "latchel-admin/Product-Support-Team/Latchel-Partner-API-Fluency-Guide-for-Support-Teams"
                     ]
                   }
                 ]
