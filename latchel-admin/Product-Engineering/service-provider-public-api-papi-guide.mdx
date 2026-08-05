@@ -2,3 +2,61 @@
 title: "Service Provider Public API (PAPI) Guide"
 groups: ["latchel"]
 ---
+
+This guide covers the features currently available to service provider (SP) companies consuming Latchel's API and/or webhooks. Service provider partners use the Latchel API to drive better customer experiences by keeping all parties up to date on the latest information.
+
+## Tech docs
+
+[https://app.latchel.com/api-docs/vendor-papi/](https://app.latchel.com/api-docs/vendor-papi/)
+
+webhooks (to be added)
+
+## Latchel-facing features
+
+Features that Latchel users and customer's may be impacted by.
+
+### Update Schedule
+
+Service provider companies can update the SP arrival window on a work order
+
+<Frame>
+  ![Update schedule via PAPI](/images/Eng-273.png)
+</Frame>
+
+### When can an SP change the arrival window of a work order?
+
+The integration is designed to allow scheduling updates via API in the same circumstances that we would allow the SP to make updates via the Latchel UI. As of 8/15/2024 those conditions are:
+
+- The SP company is assigned to the work order in Latchel and
+- The work order is in one of the following states
+  - SCHEDULING\_TENANT,
+  - SCHEDULING\_VENDOR,
+  - AWAITING\_WORK\_DATE,
+  - CONFIRMING\_COMPLETION,
+  - AWAITING\_INVOICE\_RECEIPT,
+  - PENDING,
+  - WAITING\_MATERIALS,
+  - WAITING\_PM,
+  - RESCHEDULING\_TENANT,
+
+### How will this impact Latchel users and customers?
+
+When the arrival window is updated via PAPI the app should behave exactly as if the SP had updated the arrival window via their Latchel work order page with one exception\*. Three specific outcomes can be expected.
+
+- The SP arrival window will be updated
+- The job will update to state\_id = 4 "awaiting work date"
+- Any action sets (workflows) that listen for either of the events above will be triggered
+- A special note will be logged on the work order (see below)
+
+<Frame>
+  ![Special note logged on work order](/images/Eng-274.png)
+</Frame>
+
+### Any risks? What could go wrong?
+
+\*Currently, the API does not restrict the SP to choose from the resident's availability. This will mainly impact re-schedules, since SP customers still have to set the initial schedule by accepting the job through the Latchel portal. Since Puls is the only SP company currently using this feature and because part of their process is to gather resident availability, we consider this risk acceptable for now.
+
+## Suppport
+
+- submit a bug report in #bug-report
+- contact [taylor@latchel.com](mailto:taylor@latchel.com) directly!

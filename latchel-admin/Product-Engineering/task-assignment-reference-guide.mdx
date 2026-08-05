@@ -2,3 +2,30 @@
 title: "Task Assignment - Reference Guide"
 groups: ["latchel"]
 ---
+
+## **Purpose**
+
+Task assignment logic exists in order for us to accomplish the following business outcomes:
+
+- Latchel service operations fields all tasks on resident responsible WOs
+- Latchel service operations fields all tasks related to non-preferred service providers
+- PM's field tasks when the job is “managed\_by” the PM
+
+## **Logic**
+
+This is the logic that governs task assignment in both the action-set editor and hardcoded tasks
+
+- If the work order is resident responsible -\> Assign to Latchel
+- Else if the task subject is a non-preferred vendor - \> Assign to Latchel
+- Else If the work order is managed by PM -\> Assign to PM
+- Else If the task template has an auto\_assign\_group\_id -\> Assign to that group\_id
+- Else If the task template's auto\_assign\_user\_type is "pm" -\> Assign to PM
+- Else -\> Assign to no one
+
+<Frame>
+  ![Eng 291](/images/Eng-291.jpg)
+</Frame>
+
+## **Frequently Asked Questions**
+
+1. Placeholder

@@ -2,3 +2,103 @@
 title: "Message Resident and Service Provider on Work Order"
 groups: ["latchel"]
 ---
+
+## What is the Product Release?
+
+We are excited to announce a feature that makes it a lot easier for a property manager to reach out to the resident and/or service provider on a work order through email and/or SMS. The purpose of this feature is so that the property manager can quickly remind the resident or service provider on a work order when they need to do something to move it forward.
+
+This is also a pre-cursor to the 2 clicks or less project. We will have this as the top exception path option for many of our states, as it allows PMs to easily check in with the person who is responsible for the action that will move the work order forward.
+
+<Frame>
+  ![Message Resident and Service Provider feature overview](/images/Eng-251.png)
+</Frame>
+
+## What was the Previous State?
+
+Prior to this release, when property managers wanted to reach out to residents and/or service providers outside of the automated notifications, they'd have to click the SMS button and write out their own message to ask them whatever it is that they needed to ask. If they wanted to send an email, they would have to do this outside of Latchel.
+
+## Who Is Impacted?
+
+PMs now have the power to send the customized email and/or SMS to the resident and/or service provider on a work order (as long as they have a valid phone number and/or email address).
+
+## When Is It Relevant?
+
+Only PMs have this feature and it will be available on every state as long as there is a resident and/or service provider on the work order. If there isn't a resident, then the option to message resident will not appear (same with the service provider).
+
+## How Is It Used?
+
+See overall demo here.
+
+### Messaging Resident
+
+- Whenever there is a work order that has a resident, you will see this option to "Message Resident" within the action drop down.
+
+<Frame>
+  ![Message Resident option in action dropdown](/images/Eng-252.png)
+</Frame>
+
+- After you click "Message Resident", you will be shown the following modal. There will be a default message in the field that will be sent as an SMS and/or email, depending on what the resident has. You also have the option to edit the message content to whatever it is that you want.
+
+<Frame>
+  ![Message Resident modal](/images/Eng-253.png)
+</Frame>
+
+- After you hit send, the resident will be sent the message as an SMS and/or email. If they have both, then they'll receive both.
+  - You can validate the SMS and/or email in the activity log (see screenshot below for both).
+
+<Frame>
+  ![Activity log showing SMS and email](/images/Eng-254.png)
+</Frame>
+
+- You can also validate the SMS in the transcripts tab (note that transcripts don't include emails).
+
+<Frame>
+  ![Transcripts tab showing SMS](/images/Eng-255.png)
+</Frame>
+
+- Note that if a resident does not have an email address and a phone number, you will see this. Clicking on the word "here" will take you to the resident's profile for you to update their contact information.
+
+<Frame>
+  ![No email or phone number message for resident](/images/Eng-256.png)
+</Frame>
+
+### Message Service Provider
+
+- Whenever there is a work order that has a service provider, you will see this option to "Message Service Provider" within the action drop down.
+
+<Frame>
+  ![Message Service Provider option in action dropdown](/images/Eng-257.png)
+</Frame>
+
+- After you click "Message Service Provider", you will be shown the following modal. There will be a default message in the field that will be sent as an SMS and/or email, depending on what the service provider has. You also have the option to edit the message content to whatever it is that you want.
+
+<Frame>
+  ![Message Service Provider modal](/images/Eng-258.png)
+</Frame>
+
+- After you hit send, the service provider will be sent the message as an SMS and/or email. If they have both, then they'll receive both.
+  - You can validate the SMS and/or email in the activity log (see screenshot below for both).
+
+<Frame>
+  ![Activity log showing SMS and email for service provider](/images/Eng-259.png)
+</Frame>
+
+- You can also validate the SMS in the transcripts tab (note that transcripts don't include emails).
+
+<Frame>
+  ![Transcripts tab showing SMS for service provider](/images/Eng-260.png)
+</Frame>
+
+- Note that if a service provider does not have an email address and a phone number, you will see this. Clicking on the word "here" will take you to the service provider's profile for you to update their contact information.
+
+<Frame>
+  ![No email or phone number message for service provider](/images/Eng-261.png)
+</Frame>
+
+## What Are Some Risks or Ways Things Could Go Wrong?
+
+There are no anticipated technical risks with this feature. We do know that service providers have complained in the past that they receive too many notifications from Latchel. This would technically add to those notifications. However, we have only created this feature for PMs and we know that PMs are aware of these complaints from SPs.
+
+## When Will This Change Be Effective?
+
+We deployed this on 12/27.

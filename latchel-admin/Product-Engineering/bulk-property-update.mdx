@@ -2,3 +2,148 @@
 title: "Bulk Property Update"
 groups: ["latchel"]
 ---
+
+## What is the Product Release?
+
+A tool designed to help the data support team and eventually customers more easily align Latchel's records to their source-of-truth property data.
+
+<Frame>
+  ![Bulk property update tool overview](/images/Eng-275.png)
+</Frame>
+
+Our initial goal is to reduce the time the Data Support team spends on property/resident listing tasks from 5.5 hours to \<2.75 hours.
+
+<Frame>
+  ![Time savings goal](/images/Eng-276.png)
+</Frame>
+
+## Who Is Impacted?
+
+We expect that the Data Support team will be the only initial users of the tool. Admin users in Latchel have access to the tool.
+
+## When Is It Relevant?
+
+When performing a Property/Resident Listing update per Data Support team SOPs.
+
+## What was the Previous State?
+
+Data support team members would open potentially hundreds of individual property tabs in Latchel in order to execute changes.
+
+## How Is It Used?
+
+The tool can be accessed by going to a PM Company's profile page in Latchel → clicking on the "Properties" tab → clicking the three-dot "ellipsis" in the top right corner → select "Bulk Update Properties"
+
+<Frame>
+  ![Accessing the bulk update properties tool](/images/Eng-277.png)
+</Frame>
+
+### Features
+
+#### Bulk Create Properties
+
+Demo - Bulk create properties
+
+<iframe src="https://www.loom.com/embed/f1acfe8a0e434750b6046015159392dc" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+Similar to the existing "Import Properties" tool (bulk update will eventually replace this), users can create many properties at once. The fields you can set on creation are:
+
+- Address 1
+- Address 2
+- City
+- State
+- Zip
+- Is\_active (1/0)
+
+You must also include a blank column for "property\_id" - this is how the tool knows you are creating a new property vs. updating an old one.
+
+#### Bulk Update Properties
+
+Demo - Bulk update properties
+
+<iframe src="https://www.loom.com/embed/e9127f5d5f98493c9ecaec29c94b4528" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+You can also update many existing properties at once by specifying the property\_id you want to update. You can update these fields on the property:
+
+- Address 1
+- Address 2
+- City
+- State
+- Zip
+- Is\_active (1/0)
+
+##### Query to get existing Latchel records
+
+```sql
+SELECT p.property_id, p.address1, p.address2, p.city, p.state, p.zip, p.is_active
+FROM property p
+WHERE p.pm_company_id = [enter PM company ID here]
+```
+
+#### Email Summary of Updates
+
+Demo - Email summary
+
+<iframe src="https://www.loom.com/embed/23e6a2f40a5b4db8a0fe7a2cb181bc67" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+After successful submission, an email will be sent to the user who submitted the update. This can take a few minutes, especially if there are a lot of records being updated. The email will have the subject: "Bulk Update Properties Results" and will look like this:
+
+<Frame>
+  ![Bulk Update Properties Results email](/images/Eng-278.png)
+</Frame>
+
+#### Audit Visibility
+
+Changes made to properties by the 'bulk update' tool are visible on the property page in Latchel
+
+##### **Created**
+
+<Frame>
+  ![Audit visibility - created](/images/Eng-279.png)
+</Frame>
+
+##### **Updated**
+
+<Frame>
+  ![Audit visibility - updated](/images/Eng-280.png)
+</Frame>
+
+#### Duplicate Prevention
+
+Demo - Duplicate Prevention
+
+<iframe src="https://www.loom.com/embed/7f1295cfed874761896569b322a3d1ff" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+As long as you supply a property\_id, you will never create duplicates!
+
+If you leave the property\_id column blank, you will create a new property!
+
+The Bulk Update tool respects the "Property Modification" setting on the PM profile.
+
+## What Are Some Risks or Ways Things Could Go Wrong?
+
+The biggest risk is in accidental duplicate creation. We will work with Malen after the initial release to make sure we have guardrails in place to prevent this.
+
+## When Will This Change Be Effective?
+
+Live as of 10/7/2024!
+
+## Troubleshooting
+
+### I submitted awhile ago but I have not received an email yet
+
+You can check the status of your update request using this query
+
+```sql
+SELECT *
+FROM bulk_property_imports bpi
+WHERE bpi.company_id = [enter PM company ID you are working on here]
+ORDER BY bpi.created_at DESC
+```
+
+## Related artifacts
+
+- [https://latchel.atlassian.net/browse/LA-8089](https://latchel.atlassian.net/browse/LA-8089)
+- [https://docs.google.com/document/d/1mh-LbECYxVWMvX-4OzMYnbfRgfK1QXWwd1UY6j2NogE/edit#heading=h.qyh8vgqtg3oc](https://docs.google.com/document/d/1mh-LbECYxVWMvX-4OzMYnbfRgfK1QXWwd1UY6j2NogE/edit#heading=h.qyh8vgqtg3oc)
+- [https://docs.google.com/spreadsheets/d/1uGIb2R6Zfht7UuOrss67LXhdFLfvHgUa9w8G4EqCt4U/edit?gid=0#gid=0](https://docs.google.com/spreadsheets/d/1uGIb2R6Zfht7UuOrss67LXhdFLfvHgUa9w8G4EqCt4U/edit?gid=0#gid=0)
+- [https://docs.google.com/spreadsheets/d/1TdUvOM6pKSnhhvW4QkU6wv6q9wVR7GNL5kH-tBJnCY4/edit?gid=1736757187#gid=1736757187](https://docs.google.com/spreadsheets/d/1TdUvOM6pKSnhhvW4QkU6wv6q9wVR7GNL5kH-tBJnCY4/edit?gid=1736757187#gid=1736757187) - Malen source of truth
+- [https://docs.google.com/spreadsheets/d/1VrGafdI1HpAwj01AHWrIlwpZvgM9KpBaAZXIaqJmklo/edit?gid=1736757187#gid=1736757187](https://docs.google.com/spreadsheets/d/1VrGafdI1HpAwj01AHWrIlwpZvgM9KpBaAZXIaqJmklo/edit?gid=1736757187#gid=1736757187) - TW copy with adjusted pivot tables/formulas

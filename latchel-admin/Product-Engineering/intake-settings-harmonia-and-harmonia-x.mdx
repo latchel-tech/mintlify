@@ -2,3 +2,134 @@
 title: "Intake Settings (Harmonia & Harmonia X)"
 groups: ["latchel"]
 ---
+
+## What is the Product Release?
+
+We are excited to announce Latchel's brand new Intake Settings, powered by Harmonia and Harmonia X. Latchel now leverages AI to offer PMs increased customization of work order intake outcomes and residents a personalized intake experience.
+
+### Harmonia
+
+Features include:
+
+- Write custom rules in plain language to define what should be an emergency, non-emergency or require your approval before dispatching
+- Test your rules by entering any maintenance issue
+- Easily create, edit or delete rules based on your desired intake outcome
+- Apply custom rule sets at the company, portfolio or property-level for maximum customization
+
+<Frame caption="PM View: Account Settings > Intake Settings">
+  ![PM View: Account Settings \> Intake Settings](/images/Eng-283.png)
+</Frame>
+
+<Frame caption="PM View: Manage Rule Sets">
+  ![PM View: Manage Rule Sets](/images/Eng-284.png)
+</Frame>
+
+<Frame caption="Example rule set">
+  ![Example rule set](/images/Eng-285.png)
+</Frame>
+
+<Frame caption="Example log for a Work Order processed by Harmonia">
+  ![Example log for a Work Order processed by Harmonia](/images/Eng-286.png)
+</Frame>
+
+### Harmonia X
+
+Features include:
+
+- Residents enjoy an intuitive intake experience based on their PM's Intake Settings and the specific responses they provide at each step of the flow.
+- Residents are guided through basic troubleshooting aimed at de-escalating their work order severity.
+- Determines Work Order Skill.
+  - Note: Skill determination is technically part of the post-creation intake processing pipeline. Any job created without a skill and put into the Intake Processing state will have its skill determined by our new AI-powered technology.
+- Highly relevant work order title generation (currently only for tenant web form submissions)
+- Spanish language supported (residents just need to type a free-form response in Spanish to launch the Spanish experience).
+
+### Work Order Skill Verification
+
+When work order skill is determined by the system, it will be assigned a confidence rating: High, Medium or Low. In cases where:
+
+- Confidence = Low
+- Work order skill could not be determined
+
+A [task for low confidence](https://app.latchel.com/admin/task-templates/1500) or a [task for no skill match](https://app.latchel.com/admin/task-templates/1501) will be generated for Troubleshooters to review the work order and manually assign a skill. Ex:
+
+<Frame caption="Low confidence skill match task preview">
+  ![Low confidence skill match task preview](/images/Eng-287.png)
+</Frame>
+
+## What was the Previous State?
+
+### Harmonia
+
+Previously PMs had to configure 140\+ severity settings. They had to configure Emergency Temperature Settings in a different part of the app.
+
+<Frame caption="PM View: Severity/Responsibility Settings">
+  ![PM View: Severity/Responsibility Settings](/images/Eng-288.png)
+</Frame>
+
+<Frame caption="PM View: Emergency Temperature Settings">
+  ![PM View: Emergency Temperature Settings](/images/Eng-289.png)
+</Frame>
+
+### Harmonia X
+
+Residents' intake experience was limited by the options and paths available in our point-and-click diagnostic flow. Residents often reported that they couldn't find an option that fit the issue they were experiencing.
+
+## Who Is Impacted?
+
+**PM Companies with the Harmonia X Feature Flag toggled on:** The Intake Settings tab will appear in their account. Anywhere a Rule Set is applied, that rule set will be used to determine work order severity at the time of submission (rather than Severity/Responsibility Settings and Emergency Temperature Settings).
+
+<Note>
+  For work orders submitted by PM users, Harmonia does not determine severity. Instead, PMs select work order severity during work order creation.
+</Note>
+
+## When Is It Relevant?
+
+Whenever a PM Company has the Harmonia X feature flag turned on and a rule set applied. The list of PMs using Harmonia can be found [here](https://docs.google.com/spreadsheets/d/1OcEVYsHXoDSv2ikTMU7bpYrullmwFgYBTW0LkQo5Ja8/edit?gid=1561277376#gid=1561277376). We will soon have a Harmonia indicator visible on the WO Details page.
+
+## How Is It Used?
+
+Customer-facing overview: Intake Settings Overview - 22 August 2025
+
+<iframe src="https://www.loom.com/embed/c167115a48f54e5c81c68a6850bcc99f" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+### High-Level List of Changes and New Functionalities
+
+- Harmonia
+  - Replaces Severity/Responsibility Settings and Emergency Temperature Settings
+  - Summary of rules processed and their outcome logged on the work order in Intake Processing Details
+- Harmonia X
+  - Replaces point-and-click diagnostic flow
+  - Questions and troubleshooting suggestions are generated based on the PM's Intake Settings (Harmonia)
+  - Output fed to Harmonia to determine work order severity and skill
+
+## What Are Some Risks or Ways Things Could Go Wrong?
+
+Current limitations
+
+- Only some customers are on Intake Settings, so the Ops team must be aware of 2 different customer experiences.
+
+To mitigate these risks, Service Ops:
+
+- Prioritized a fast and condensed training focused on key aspects of Harmonia
+- Updated existing SOPs that reference Severity/Responsibility settings to provide parallel guidance for Intake Settings for PMs on Harmonia
+- Implemented Userpilot pop-ups for Severity/Responsibility and Emergency Temperature Settings. Ex:
+
+<Frame>
+  ![Userpilot pop-up example](/images/Eng-290.png)
+</Frame>
+
+- Set up a dedicated channel for the new feature where the trained Ops Support can handle escalations related to these new features
+- Provide follow up trainings and SOP updates as new features are released.
+
+Data Team:
+
+- Assembled a comprehensive list of customer help guides that reference Severity/Responsibility Settings and Emergency Temperature Settings, then updated them to provide parallel guidance on Intake Settings that Service Ops associates can share with PMs.
+
+Product will:
+
+- Prioritize a "Processed via Harmonia" indicator on the Work Order Details page.
+
+## When Will This Change Be Effective?
+
+- Harmonia: Beta testing by current customers began on July 8, 2025. Onboarding of new customers began on [July 28, 2025](https://latchel.slack.com/archives/C097ZNY2A3X/p1753818170204309). Intake Settings with this default rule set is the default experience for all new customers.
+- Harmonia X: Released to customers using Harmonia on August 13, 2025.

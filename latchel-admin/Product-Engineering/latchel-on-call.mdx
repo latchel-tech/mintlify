@@ -2,3 +2,79 @@
 title: "Latchel On-Call"
 groups: ["latchel"]
 ---
+
+## **Overview**
+
+This document describes the On-Call product, built to deliver a world-class maintenance intake experience for multi-family customers. It supports the product called “Connect247” being distributed by our partner, Leonardo247. For more context see this document: [Leo Pilot Strategy - Product & Engineering](https://docs.google.com/document/d/1yT3CT23Z287S-m8MYlb8UBJW8ToJLw2evRK3Lo_Zh2w/edit?tab=t.0)
+
+## **What is the Product Release?**
+
+There are four major epics being released, details below. This diagram describes the overall flow of the On-Call product.
+
+<Note>
+  For launch, we’re routing all Leo resident calls to an external call center (TMP) that offers English & Spanish support. Latchel Call Center Associates should not receive calls from Leo residents or need to use the Leo On Call environment.
+</Note>
+
+<Frame>
+  ![Eng 281](/images/Eng-281.jpg)
+</Frame>
+
+### **Call Routing & Intake (10/18)**
+
+- Product release: [Message from Product Release in #product-release](https://latchel.slack.com/archives/C038Z6M0T6H/p1729265148555659)
+- Demo: Leo call routing and intake
+
+<iframe src="https://www.loom.com/embed/f9848f400bdc45d9a6894ad923151bb5" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+#### **Intake Exception Management (11/7)**
+
+In On-Call, we do not create new property/resident information as part of the call center intake process. Instead, we respect the “source-of-truth” which is the upstream integration system. This is different than in traditional Latchel where, if we can’t find a given resident/property etc. we will try to create them. The only exception to this is that we will temporarily add a caller’s phone number to the resident record if the caller confirms they are calling on behalf of a tenant & unit that does exist in the system AND the caller indicates they want to receive notifications for the work order. The next time the sync happens (usually the next day) the secondary number will be removed from the tenant record.
+
+- Product release: [Message from Product Release in #product-release](https://latchel.slack.com/archives/C038Z6M0T6H/p1730995621290229)
+- Demo: Exception Handling in On-Call vs. Traditional Latchell Preview
+
+<iframe src="https://www.loom.com/embed/ccec0c2a37e74a619dc6d7c286460b9b" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+### **Communication & Workflow Automation (10/30)**
+
+- Product release: [Message from Product Release in #product-release](https://latchel.slack.com/archives/C038Z6M0T6H/p1730333420592379)
+- Demo: On-call Comms & Workflow Preview
+
+<iframe src="https://www.loom.com/embed/8c2d66ba11eb47aeb7cd938ceb0c800d" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+### **Public Screens Protection (10/31)**
+
+Product release: [Message from Product Release in #product-release](https://latchel.slack.com/archives/C038Z6M0T6H/p1730992041671099)
+
+Demo: Security Requirements Demo 👩‍💻
+
+<iframe src="https://www.loom.com/embed/5d5c3cc0307945b8a83a2666eb7652a8" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+#### **Call-center PIN code: 9768**
+
+<Frame>
+  ![Eng 282](/images/Eng-282.png)
+</Frame>
+
+### **Latchel\<\>Leo Integration (10/31)**
+
+- Product release: [Message from Product Release in #product-release](https://latchel.slack.com/archives/C038Z6M0T6H/p1730398706603389)
+- Demo: [Screen Recording 2024-10-30 at 7.40.29 ](https://drive.google.com/file/d/1rj10StR_6X8PBl2oYQrUOIV_-ln9fkB8/view?usp=sharing)[PM.mov](http://PM.mov)
+
+<iframe src="https://drive.google.com/file/d/1rj10StR_6X8PBl2oYQrUOIV_-ln9fkB8/preview" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+## **When Will This Change Be Effective?**
+
+Leo/Roers pilot goes live on October 1, 2025!
+
+## **Frequently Asked Questions**
+
+✅**Start asking!** Post your question in the #on-call-beta or #product Slack channels or dm @Jordan Caley
+
+### **FAQ 1: Will Latchel Call Center Associates receive calls from Leo residents?**
+
+(10/01/2025) No. For now, we’re routing all Leo resident calls to an external call center (TMP) that offers English & Spanish support.
+
+### **FAQ 2: Can On-Call clients outside of the Leo partnership use this?**
+
+(10/31/2024) In general, yes! For some clients, a traditional Latchel setup might be better. For example, features like the benefits hub and some workflow customizations are not currently available in the Latchel On-Call product. Check with @Jordan Caley  if you’re not sure.

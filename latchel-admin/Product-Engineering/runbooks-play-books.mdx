@@ -2,3 +2,309 @@
 title: "Runbooks/Play books"
 groups: ["latchel"]
 ---
+
+1. `php artisan update:tenant-refds {path}`
+
+## **How to diagnose action sets**
+
+- See when an action set was run
+- See how many times it was run
+
+## **Fix a queue Backlog**
+
+What to do when the queue is backed up
+
+If more than 20k messages are in the same message group SQS will stop exposing other messages until less enough are consumed that less than 20k remain in the queue from one channel. <br />[Prevent an increase of backlog messages in your Amazon SQS queue](https://repost.aws/knowledge-center/sqs-message-backlog)
+
+In this situation, the best resolution is to identify the job that is backing up the queue and early return it so that it is doing no work. Then you can run through many of these jobs quickly without any effects and clear the queue.
+
+## **Incident Response**
+
+Incident response plan [Latchel Incident Response Plan](https://docs.google.com/document/d/1V8ofrN0V3t34dGkCdpLlINJQCz1nim9nFhR9lGlwMQY/edit)
+
+## **Restart Broadcast Server**
+
+The biggest issue broadcast encounters is a memory issue. You should check the memory usage on that server by running `free -m` or by checking the process in pm2 using `pm2 monit`, then looking at the memory usage at the bottom. There is a memory leak in the broadcast app that continues to track connections that are no longer connected, so over time, the performance gets worse and worse. Once the memory is using several gigs (it should be using 100mb - 2gb max), it's probably time to restart the server.
+
+**To restart the server us the command**
+
+`pm2 restart all`
+
+If the server will not restart, try starting a new one
+
+```sql
+pm2 start /var/www/latchel/server.js
+```
+
+## **Pause Integration Server queue**
+
+1. SSH into integrations
+2. `sudo supervisorctl stop laravel-worker:*`
+
+To restart the queue
+
+`sudo supervisorctl start laravel-worker:*`
+
+### **To restart the queue**
+
+`sudo supervisorctl restart laravel-worker:*`
+
+## **PAPI Errors**
+
+Due to PAPI still being on EC2 instead of ECS, on rare occasions after a deployment we will encounter errors caused by stale cache. This is because during the EC2 deployment the necessary files are built in the deployment pipeline (composer install, yarn, gulp, etc) and are then copied to the EC2 virtual machine that runs PAPI.
+
+An example of this error is: [<u>RuntimeException: Unable to detect application namespace.</u>](https://app.raygun.com/crashreporting/u0meet/errors/191572073481?correlationId=915199539438&occurredOn=2023-11-29T01:41:08.0049424Z#191566487288 "https://app.raygun.com/crashreporting/u0meet/errors/191572073481?correlationId=915199539438&occurredOn=2023-11-29T01:41:08.0049424Z#191566487288")
+
+To resolve this or similar errors you will need to SSH into PAPI and run:
+
+```sql
+php artisan optimize:clear
+php artisan route:cache
+```
+
+**Here is a quick way to test a PAPI endpoint**
+
+```sql
+curl --location 'https://papi.latchel.com/v1/jobs?api_key=622a9e2fb73e0d2c7bc0408edfc3f10c96d1a3ab'
+```
+
+## **Kill Long running Queries in RDS**
+
+Long running queries on RDS can cause gridlock because of the way RDS gets bottle-necked in disk I/O. Currently the only path to resolution is to kill long running queries.
+
+#### **Symptoms**
+
+1. errors like `current transaction is aborted` show up
+2. Ops will report the dial pad quits working.
+3. RDS disk queue depth sky rockets
+
+<Frame>
+  ![Eng 292](/images/Eng-292.png)
+</Frame>
+
+To see active running queries in RDS run this query with WRITE access
+
+```sql
+SELECT
+  pid,
+  now() - pg_stat_activity.query_start AS duration,
+  query ,
+  state
+FROM pg_stat_activity order by duration DESC ;
+```
+
+To kill specific queries run this command (use caution, prefer deleting read queries over writes)
+
+```sql
+SELECT pg_cancel_backend(<pid of the process>)
+```
+
+**To kill multiple queries**
+
+Use extreme caution with this! Make sure we don’t kill the replication process. Also make sure that you only kill queries that have run long enough to be worth dropping. 1\+ min is a good threshold.
+
+```sql
+select pg_cancel_backend(pid), pid, query, query_start, state from pg_stat_activity where query ilike '<query details>';
+```
+
+## **AWS Root Account Compromise Playbook**
+
+### **Objective**
+
+The objective of this runbook is to provide specific guidance on how to manage Root AWS account usage. This runbook is not a substitute for an in-depth Incident Response strategy. This runbook focuses on the IR lifecycle:
+
+- Establish control.
+- Determine impact.
+- Recover as needed.
+- Investigate the root cause.
+- Improve.
+
+The Indicators of Compromise (IOC), initial steps (stop the bleeding), and the detailed CLI commands needed to execute those steps are listed below.
+
+### **Assumptions**
+
+- CLI configured and installed.
+- Reporting process is already in place.
+- Trusted Advisor is active.
+- Security Hub is active.
+
+### **Indicators of Compromise**
+
+- Activity that is abnormal for the account.
+  - Creation of IAM users.
+  - CloudTrail turned off.
+  - Cloudwatch turned off.
+- Launching of new or unexpected AMIs.
+- Changes to the contacts on the account.
+
+### **Steps to Remediate – Establish Control**
+
+AWS documentation for a possible compromised account calls out the specific tasks listed below. The documentation for a possible compromised account can be found at: [What do I do if I notice unauthorized activity in my AWS account?](http://aws.amazon.com/premiumsupport/knowledge-center/potential-account-compromise/ "http://aws.amazon.com/premiumsupport/knowledge-center/potential-account-compromise/")
+
+1. Contact AWS Support and TAM as soon as possible.
+2. Change and rotate Root password and add an MFA device associated with Root.
+3. Rotate passwords, access/secret keys, and CLI commands relevant to remediation steps.
+4. Review actions taken by the root user.
+5. Close incident.
+6. Review the incident and understand what happened.
+7. Fix the underlying issues, implement improvements, and update the runbook as needed.
+
+### **Further Action Items – Determine Impact**
+
+Review created items and mutating calls. There are may be items that have been created to allow access in the future. Some things to look at:
+
+- IAM roles.
+- IAM Users.
+- S3 buckets.
+- EC2 instances.
+- ECS containers
+- RDS instances
+
+## **Build Pipeline Failures**
+
+### **No space left on device**
+
+1. SSH into staging
+2. Delete oldest builds to reclaim disk space
+
+Sample command:
+
+```sql
+sudo rm -R la-6*
+or
+sudo rm -R la-68*
+or
+find /var/www/builds -type d ! -newermt '2023-03-01' -exec rm -rf {} \;
+```
+
+**\[sudo\] password for bitbucket: dropdb: error: could not connect to database template1: could not translate host name "**[latchel-staging.c3jvgr6a8pgv.us-west-2.rds.amazonaws.com](http://latchel-staging.c3jvgr6a8pgv.us-west-2.rds.amazonaws.com/ "http://latchel-staging.c3jvgr6a8pgv.us-west-2.rds.amazonaws.com/")**" to address: Temporary failure in name resolution**
+
+1. Low on to AWS Console and navigate to EC2 instances
+2. Navigate to EC2 instance in question (Ex: Latchel - Staging)
+3. Reboot Instance from the Instance State dropdown menu
+
+### **Integrations ref id update**
+
+1. Get CSV from Malen
+2. Upload to scheduler `rsync -avP {local path}/{filename}.csv scheduler:/var/www/latchel/{filename}.csv`
+3. SSH into scheduler by running **ssh scheduler**
+4. Run **cd /var/www/latchel**
+5. Run appropriate artisan command
+   - `php artisan update:tenant-refds {filename}.csv`
+   - `php artisan update:property-refds {filename}.csv`
+
+ 
+
+## **Create PGSQL readonly user**
+
+CREATE USER '\[username\]' WITH PASSWORD '\[password\]';
+
+GRANT readaccess TO \[username\];
+
+ 
+
+# **Remove PGSQL user**
+
+List users with
+
+```sql
+SELECT usename AS role_name,
+  CASE
+     WHEN usesuper AND usecreatedb THEN
+	   CAST('superuser, create database' AS pg_catalog.text)
+     WHEN usesuper THEN
+	    CAST('superuser' AS pg_catalog.text)
+     WHEN usecreatedb THEN
+	    CAST('create database' AS pg_catalog.text)
+     ELSE
+	    CAST('' AS pg_catalog.text)
+  END role_attributes
+FROM pg_catalog.pg_user
+ORDER BY role_name desc;
+```
+
+Drop user with
+
+`DROP USER [username];`
+
+## **Blocking DB Transactions**
+
+This query outputs a list of all blocked queries and the pid and query causing the block
+
+```text
+SELECT
+  COALESCE(blockingl.relation::regclass::text,blockingl.locktype) as locked_item,
+  now() - blockeda.query_start AS waiting_duration, blockeda.pid AS blocked_pid,
+  blockeda.query as blocked_query, blockedl.mode as blocked_mode,
+  blockinga.pid AS blocking_pid, blockinga.query as blocking_query,
+  blockingl.mode as blocking_mode
+FROM pg_catalog.pg_locks blockedl
+JOIN pg_stat_activity blockeda ON blockedl.pid = blockeda.pid
+JOIN pg_catalog.pg_locks blockingl ON(
+  ( (blockingl.transactionid=blockedl.transactionid) OR
+  (blockingl.relation=blockedl.relation AND blockingl.locktype=blockedl.locktype)
+  ) AND blockedl.pid != blockingl.pid)
+JOIN pg_stat_activity blockinga ON blockingl.pid = blockinga.pid
+  AND blockinga.datid = blockeda.datid
+WHERE NOT blockedl.granted
+AND blockinga.datname = current_database();
+```
+
+In a situation where queries are being blocked, kill the processes that are blocking because they are going to just idle until timeout anyway.
+
+1. Run that query. Typically there will be about 1-4 culprit blocking queries.
+2. Grab the PIDs of those queries
+3. Kill them like this `SELECT pg_cancel_backend(<pid>);`
+
+## **Breached Admin Account**
+
+1. Check user activity log
+2. Check messages sent by user
+3. Check fullstory for user activity
+4. Check PM  activity log
+
+```sql
+SELECT * from public.log l 
+where l.creator_id = 615060
+AND l.created_at > now() - interval '5 days'
+```
+
+Set `force_password_reset` to true on the user table to flush sessions and require password reset.
+
+## **Boot new forge web server**
+
+1. Provision server in forge (us-west-c)
+2. Store sudo pwd
+3. Install [<u>app.latchel.com</u>](http://app.latchel.com/ "http://app.latchel.com") set with envoyer
+4. Save envoyer env
+5. sudo apt install `wkhtmltopdf`
+6. php.ini
+
+```text
+memory_limit = 512M
+; Maximum allowed size for uploaded files.
+; http://php.net/upload-max-filesize
+upload_max_filesize = 1024M
+; Sets max size of post data allowed.
+; http://php.net/post-max-size
+post_max_size = 1024M
+max_execution_time=600
+default_socket_timeout=3600
+request_terminate_timeout=600
+```
+
+8. Enable opcache in forge
+9. Generate ssh key name `ProdCompiling`, use `ssh-keygen -t rsa -b 4096`
+10. Add public key to ProdCompiling
+11. Add to ~/.ssh/config
+
+```sql
+Host ProdCompiling
+	User forge
+	Hostname 52.11.3.244
+	IdentitiesOnly yes
+	IdentityFile ~/.ssh/ProdCompiling
+```
+
+12. Deploy from envoyer
+13. Add to load balancer

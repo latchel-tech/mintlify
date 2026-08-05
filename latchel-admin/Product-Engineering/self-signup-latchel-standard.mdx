@@ -2,3 +2,80 @@
 title: "Self-Signup - Latchel Standard"
 groups: ["latchel"]
 ---
+
+## What is the Product Release?
+
+Latchel "Starter" is a product built for customers with fewer than 50 units. The goal of Latchel Starter is to provide these smaller customers a way to experience and evaluate if they want to buy Latchel without having to speak with a Latchel sales representative.
+
+<Frame>
+  ![Latchel Starter product overview](/images/Eng-269.png)
+</Frame>
+
+## What was the Previous State?
+
+Prior to this release, speaking with a Latchel sales representative was required to "buy" Latchel. While we want everyone to have Latchel, its not always worth a sales reps time to speak with \<50 unit customers because the associated revenue opportunity is small compared to other accounts they could be working on. Our goal is to eliminate the first couple of key steps in a very expensive process!
+
+<Frame>
+  ![Previous sales-led signup state](/images/Eng-270.png)
+</Frame>
+
+## Who Is Impacted?
+
+- Latchel prospects with less than 50 units
+- The Latchel sales team
+
+## When Is It Relevant?
+
+When a \<50 unit prospect discovers Latchel, this will be the primary path we direct them towards.
+
+## How Is It Used?
+
+### Overview
+
+See overall demo here:
+
+🌩️Self-Signup - Latchel Standard
+
+<iframe src="https://www.loom.com/embed/f7cc090d2f7d409bb51de9be2ab29036" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+**Production Link** (only for real \<50 prospects): [https://app.latchel.com/signup](https://app.latchel.com/signup)
+
+**Test Link** (feel free to play with this one): [https://master.latchel.com/signup](https://master.latchel.com/signup)
+
+Latchel Overview Video:
+
+Welcome to Latchel!
+
+<iframe src="https://www.youtube.com/embed/YmiUR5rQ8UQ" title="YouTube video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+### Frequently Asked Questions (FAQs)
+
+#### FAQ1: How can customers cancel their free trial?
+
+In their accounts settings, under "Subscription," a button exists to cancel the trial. This will automatically log the PM out of Latchel and confirm to the PM they won't be charged.
+
+<Frame>
+  ![Cancel free trial setting](/images/Eng-271.png)
+</Frame>
+
+#### FAQ2: How can I tell if a Latchel customer is on the self signup product?
+
+Self signup customers will have either the "Self Signup Basic" or "Self Signup Pro" Addons visible on any work order. You can also view these addons in the company settings page under "Product Packages."
+
+<Frame>
+  ![Self signup addons](/images/Eng-272.png)
+</Frame>
+
+#### FAQ3: Where can I ask other questions about the self signup product?
+
+Anywhere you'd normally ask questions about Latchel's other products! You can post in #ask-answer, #product, join product office hours. Be sure to tag @Taylor Wilson (Unlicensed) for a faster response if posting in Slack.
+
+## What Are Some Risks or Ways Things Could Go Wrong?
+
+- **Move problem to onboarding**: Its possible we'll get a bunch of customers through the flow who ultimately still have sales questions.
+- **Unqualified customers**: One of the main functions of the SDR process is to qualify customers. We're not replicating a lot of the qualification steps in this initial test so we may get some leads who are not qualified for Latchel (e.g. short term rentals).
+- **Prospects Chat with Latchel Support**: Its possible prospects who are not yet onboarded will find and use Latchel Support. This would be bad from a COGS perspective because we have not collected revenue from these customers yet. This is a risk we will monitor and partner with the svc ops team on.
+
+## When Will This Change Be Effective?
+
+Live as of 2/1/2023!

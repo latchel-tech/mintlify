@@ -2,3 +2,86 @@
 title: "Color-coded Work Order States"
 groups: ["latchel"]
 ---
+
+## What is the Product Release?
+
+Color-coded states provide simple visual clues to help new Latchel users understand Latchel's automation and WO state designations. This will be visible initially on the Board and List views of the Work Orders Overview page.
+
+<Frame>
+  ![Color-coded states example 1](/images/Eng-262.png)
+</Frame>
+
+<Frame>
+  ![Color-coded states example 2](/images/Eng-263.png)
+</Frame>
+
+## What was the Previous State?
+
+Prior to this release, WO state "tags" did not have any color associated with them.
+
+<Frame>
+  ![Previous state without color](/images/Eng-264.png)
+</Frame>
+
+## Who Is Impacted?
+
+Property Managers and Admin users will experience these updates!
+
+## When Is It Relevant?
+
+We think this will be particularly useful for users who are new to Latchel to help understand how Latchel works.
+
+## How Is It Used?
+
+See overall demo here:
+
+✅Color-coded WO States
+
+<iframe src="https://www.loom.com/embed/a0276b5ea43149f798acc9f9b450b730" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+## Colors de-coded
+
+The table below explains what each of the colors are intended to communicate.
+
+| Color Scheme | Intended Meaning | Example |
+| --- | --- | --- |
+| Yellow | Needs PM or owner attention |  |
+| Blue | Latchel's automation is running. Good outcomes are possible without PM intervention. |  |
+| Green | On track or done. No action needed. |  |
+| Gray | No action needed. |  |
+
+## State : Color Mapping
+
+Here is the definitive mapping of existing WO states and which color scheme they are tied to.
+
+| state\_id | Name | Color Code |
+| --- | --- | --- |
+| 1 | "Scheduling Resident" | Blue |
+| 2 | "Scheduling Service Provider" | Blue |
+| 3 | "Finding Service Provider" | Blue |
+| 4 | "Awaiting Work Date" | Green |
+| 5 | "Needs Owner Approval" | Yellow |
+| 6 | "Confirming Completion" | Blue |
+| 9 | "Awaiting Invoice" | Blue |
+| 13 | "Pending" | Yellow |
+| 14 | "Cancelled" | Gray |
+| 16 | "Completed" | Green |
+| 18 | "Waiting for Materials" | Yellow |
+| 19 | "Waiting for PM" | Yellow |
+| 20 | "Pending - Awaiting Payment Details" | Yellow |
+| 21 | "Awaiting Estimate" | Blue |
+| 22 | "Rescheduling Resident" | Blue |
+| 24 | "Forwarded to PM" | Gray |
+| 25 | "Troubleshooting" | Blue |
+| 26 | "Diagnosing Issue" | Blue |
+| 27 | "Needs Approval" | Yellow |
+
+## What Are Some Risks or Ways Things Could Go Wrong?
+
+Mapping states to colors is an imperfect approach: There are some instances where a simple state:color mapping will not perfectly match the actual real-world status of a work order. However we think this is close enough of a heuristic to be worth testing folks reaction to it.
+
+In-app guidance: We're not starting with any in-app guidance or language to explain the colors. Users could have questions about what the colors mean.
+
+## When Will This Change Be Effective?
+
+We're targeting wednesday January 24th
