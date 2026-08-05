@@ -72,61 +72,57 @@ State exactly what we're doing — not what's "being reviewed." Name the resolut
 
 _Complaint: A second estimate was auto-approved without PM authorization because it fell under the pre-approved budget threshold._
 
-<Columns cols={2}>
-  <Column>
-    #### ❌ Before (Investigation Report)
+<Accordion title="Auto-Approval System Gap">
+  <Tabs>
+    <Tab title="Before (Investigation Report)">
+      Hi Jennifer,
 
-    Hi Jennifer,
+      Thank you for flagging this on Work Order 15604-1. I've reviewed the full activity log and want to confirm what happened so we can make this right.
 
-    Thank you for flagging this on Work Order 15604-1. I've reviewed the full activity log and want to confirm what happened so we can make this right.
+      Here's what we found: On 4/29, PM Rhea approved Estimate #21466 for \$1,364.61 which covered the collars, dampers, and zone board. That work was completed on 5/4 (Invoice #41938)... \[4 more paragraphs of timeline\] ...We apologize for any confusion. Our Payments Team is currently reviewing the matter and will keep you informed.
 
-    Here's what we found: On 4/29, PM Rhea approved Estimate #21466 for \$1,364.61 which covered the collars, dampers, and zone board. That work was completed on 5/4 (Invoice #41938)... \[4 more paragraphs of timeline\] ...We apologize for any confusion. Our Payments Team is currently reviewing the matter and will keep you informed.
+      **Problems:** Opens with case number. Full timeline narrative. Vague resolution. No owner, no date.
+    </Tab>
+    <Tab title="After (ACE Framework)">
+      Hi Rhea,
 
-    **Problems:** Opens with case number. Full timeline narrative. Vague resolution. No owner, no date.
-  </Column>
-  <Column>
-    #### ✅ After (ACE Framework)
+      I understand your team didn't intend to approve the second estimate on this job — and we're owning that.
 
-    Hi Rhea,
+      Our system auto-approved the \$1,312.19 estimate because it came in under your existing approved budget. It treated a new scope of work as part of the original budget, when it should have required a separate approval. That's a gap in our system and we're working to fix it.
 
-    I understand your team didn't intend to approve the second estimate on this job — and we're owning that.
+      We're covering the full \$1,312.19 as a one-time exception — you won't be charged. Going forward, when there's a second scope on the same work order, the vendor will need to split it into a new WO so your team sees it for approval. I'll follow up by \[date\] to confirm the credit.
 
-    Our system auto-approved the \$1,312.19 estimate because it came in under your existing approved budget. It treated a new scope of work as part of the original budget, when it should have required a separate approval. That's a gap in our system and we're working to fix it.
-
-    We're covering the full \$1,312.19 as a one-time exception — you won't be charged. Going forward, when there's a second scope on the same work order, the vendor will need to split it into a new WO so your team sees it for approval. I'll follow up by \[date\] to confirm the credit.
-
-    **Why it works:** Leads with empathy. Root cause in 2 sentences. Concrete resolution \+ owner \+ timeline.
-  </Column>
-</Columns>
+      **Why it works:** Leads with empathy. Root cause in 2 sentences. Concrete resolution \+ owner \+ timeline.
+    </Tab>
+  </Tabs>
+</Accordion>
 
 ### Example 2 — Vendor Delays & Unresolved Repairs
 
 _Complaint: Resident reported ongoing issues, multiple vendors, delays. PM frustrated by lack of resolution and communication._
 
-<Columns cols={2}>
-  <Column>
-    #### ❌ Before (Investigation Report)
+<Accordion title="Vendor Delays & Unresolved Repairs">
+  <Tabs>
+    <Tab title="Before (Investigation Report)">
+      Hi C&C Property Management,
 
-    Hi C&C Property Management,
+      Good day! Thank you for your patience while we reviewed Work Orders 22359-1 and 22358-1 for 1188 Miller Ave... \[8 paragraphs of timeline detail\] ...please let us know how you would like to proceed, or if there is anything further we can do to assist.
 
-    Good day! Thank you for your patience while we reviewed Work Orders 22359-1 and 22358-1 for 1188 Miller Ave... \[8 paragraphs of timeline detail\] ...please let us know how you would like to proceed, or if there is anything further we can do to assist.
+      **Problems:** "Good day!" opener. Asks PM to tell us how to proceed. No clear ownership of what's unresolved. Timeline as the main body.
+    </Tab>
+    <Tab title="After (ACE Framework)">
+      Hi Ericka,
 
-    **Problems:** "Good day!" opener. Asks PM to tell us how to proceed. No clear ownership of what's unresolved. Timeline as the main body.
-  </Column>
-  <Column>
-    #### ✅ After (ACE Framework)
+      We know the resident has been without a fully working bathroom for several weeks, and we understand the frustration with how long this has taken.
 
-    Hi Ericka,
+      The burst pipe repair is complete, but water remediation is still pending owner/insurance approval — that's outside our hands. On WO 22358-1, the shower repair was completed April 24, but the resident reported it wasn't right. The vendor requested a callback with your team and we haven't gotten a response yet — can you connect us with your budget contact at (408) 599-8167?
 
-    We know the resident has been without a fully working bathroom for several weeks, and we understand the frustration with how long this has taken.
+      I'm following up with the vendor today on the revisit. You'll hear from me by \[date\] either way. The mold risk is time-sensitive — we want to help you move that forward.
 
-    The burst pipe repair is complete, but water remediation is still pending owner/insurance approval — that's outside our hands. On WO 22358-1, the shower repair was completed April 24, but the resident reported it wasn't right. The vendor requested a callback with your team and we haven't gotten a response yet — can you connect us with your budget contact at (408) 599-8167?
-
-    I'm following up with the vendor today on the revisit. You'll hear from me by \[date\] either way. The mold risk is time-sensitive — we want to help you move that forward.
-
-    **Why it works:** Names the resident's experience first. Clear on what's unresolved and who owns what. Asks one specific question.
-  </Column>
-</Columns>
+      **Why it works:** Names the resident's experience first. Clear on what's unresolved and who owns what. Asks one specific question.
+    </Tab>
+  </Tabs>
+</Accordion>
 
 ---
 
@@ -176,7 +172,7 @@ Use this prompt to validate any DD Conclusion draft before sending. Paste it int
   **How to use:** Copy the prompt below. Paste your draft email at the bottom where indicated. Run it in Claude or your AI tool. If the draft fails any ACE criteria, the model will return an improved version — review it, adjust for any case-specific details, then send.
 </Note>
 
-```text
+```text wrap
 You are a customer communication coach for Latchel, a property maintenance coordination company. Your job is to validate DD Conclusion emails against the ACE Framework before they go to customers.
 
 ## The ACE Framework
