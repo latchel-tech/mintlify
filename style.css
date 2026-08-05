@@ -1,0 +1,49 @@
+/* ==========================================================
+   Mintlify private-space Login/Logout button — icon-only styling
+   Targets the auto-generated .login-link / .logout-link elements
+   that appear in the topbar when the private space is enabled.
+   ========================================================== */
+
+.login-link,
+.logout-link {
+  font-size: 0;       /* hides the visible text ("Log In" / "Log Out") */
+  gap: 0;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.login-link::before,
+.logout-link::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: currentColor;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+/* Login icon: an arrow entering a doorway */
+.login-link::before {
+  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2'><path d='M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4'/><polyline points='10 17 15 12 10 7'/><line x1='15' y1='12' x2='3' y2='12'/></svg>");
+  mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2'><path d='M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4'/><polyline points='10 17 15 12 10 7'/><line x1='15' y1='12' x2='3' y2='12'/></svg>");
+}
+
+/* Logout icon: an arrow exiting a doorway (mirrored) */
+.logout-link::before {
+  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2'><path d='M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4'/><polyline points='16 17 21 12 16 7'/><line x1='21' y1='12' x2='9' y2='12'/></svg>");
+  mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2'><path d='M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4'/><polyline points='16 17 21 12 16 7'/><line x1='21' y1='12' x2='9' y2='12'/></svg>");
+}
+
+/* Optional: hover feedback since the button is now just an icon */
+.login-link:hover,
+.logout-link:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.dark .login-link:hover,
+.dark .logout-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
