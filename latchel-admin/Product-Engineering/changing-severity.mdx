@@ -2,3 +2,93 @@
 title: "Changing Severity"
 groups: ["latchel"]
 ---
+
+## What is the Product Release?
+
+There are three parts to this product release:
+
+- The main deployment is that we moved the change severity functionality from the "Action" drop down to the severity label.
+- We've disabled the ability to change severity for resident responsible work orders.
+- We are also introducing the change severity to PMs. This is so that they no longer have to rely on Ops to change the severity of the work order.
+
+<Frame>
+  ![Change severity product release overview](/images/Eng-168.png)
+</Frame>
+
+## What was the Previous State?
+
+Please see the corresponding previous state for the three parts of this deployment below:
+
+- Previously, change severity lived in the "Action" drop down. We changed this because we believed that the change severity functionality was a lot more intuitive directly in the severity label.
+- We also previously allowed resident responsible work orders to have their severity changed. However, after having spoken to Ops, there really wasn't a need to support this. The only time a resident responsible work order would need to have its severity changed was when a PM was not using the severity correctly. In these cases, it makes sense to just create a new work order with the updated severity.
+- PMs also did not have the ability to change severity directly and had to rely on Latchel Ops to change the severity of a work order. This was an unnecessary bottleneck.
+
+## Who Is Impacted?
+
+The following users are impacted:
+
+- **Latchel Ops** - Latchel Ops now have to change severity using the severity label rather than the "Action" drop down.
+- **PMs** - PMs now have the ability to change the severity of a work order themselves.
+
+## When Is It Relevant?
+
+Latchel Ops and PMs should use this any time they want to change the severity of a work order. Please note that work orders that are escalated to emergency after it's created do not go through the "Troubleshooting" state that emergency work orders typically go through.
+
+## How Is It Used?
+
+See overall demo for Ops release and overall demo for PM release.
+
+**Ops Release:**
+
+<iframe src="https://www.loom.com/embed/23db332ef18a42efadbd31cb27798095" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+**PM Release:**
+
+<iframe src="https://www.loom.com/embed/30795911856b45f1854cad49b550218d" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+- Go to a work order detail page and locate the severity label at the top left corner (see orange arrow below).
+
+<Frame>
+  ![Severity label location on work order detail page](/images/Eng-169.png)
+</Frame>
+
+- Click on the drop down arrow in the severity label and click on the severity you'd like to change the work order to.
+
+<Frame>
+  ![Severity dropdown menu](/images/Eng-170.png)
+</Frame>
+
+- **Changing Severity to Normal or Urgent** - When changing to one of these statuses, you will see a confirmation notification that the work order severity has been updated and the severity of the work order will change to the one you chose. In addition, you'll see a log item in the activity log indicating that you've changed the severity.
+- **Escalating to Emergency** - When you choose to escalate a work order to emergency state through the severity drop down, you will be taken through the following guided workflow:
+  - You'll be asked if you're able to set a work date for the work order now. This question is relevant because emergency work orders are ones that should have a Service Provider work on immediately.
+
+<Frame>
+  ![Prompt to set a work date for emergency work order](/images/Eng-171.png)
+</Frame>
+
+- **Yes** - Choosing Yes will prompt you to input the scheduled work date and a note explaining why you took this action. The work order will then:
+  - Be marked as an emergency
+  - Have a scheduled work date
+  - Send a message to the Service Provider and Resident with the newly set work date
+
+<Frame>
+  ![Message sent to Service Provider and Resident with new work date](/images/Eng-172.png)
+</Frame>
+
+- **No** - Choosing No will just update the severity label of the work order to emergency.
+
+<Warning>
+  It's important to note that escalating a work order to emergency using the severity label does not have the work order go through the thorough Troubleshooting state process that other emergency work orders do (i.e. work orders that initially come in with an emergency severity).
+</Warning>
+
+<Note>
+  Users will no longer have the ability to change severity for resident responsible work orders. We found that there weren't any valid scenarios where we needed to support this.
+</Note>
+
+## What Are Some Risks or Ways Things Could Go Wrong?
+
+None.
+
+## When Will This Change Be Effective?
+
+This feature is currently ready to deploy. We will deploy it to only Ops on 8/3 and then plan to deploy it for PMs on 8/8. We will send out a marketing email to PMs so they understand how to use it.

@@ -2,3 +2,106 @@
 title: "Updated SMS Tagging Designs for Ops"
 groups: ["latchel"]
 ---
+
+## What is the Product Release?
+
+We have updated the Ops SMS tagging UI to match the PM's. This makes the workflow a lot more user friendly and allows Ops to see what work order(s) the SMS conversation is tagged to at all times.
+
+<Frame>
+  ![Updated Ops SMS tagging UI overview](/images/Eng-173.png)
+</Frame>
+
+## What was the Previous State?
+
+The previous Ops SMS tagging UI was hidden behind an icon in the header. In addition, it was different from what the PMs were using. It's important that both groups have parity so that Ops can properly answer any technical support questions from PMs.
+
+## Who Is Impacted?
+
+Latchel Ops is the only group impacted with this deployment.
+
+## When Is It Relevant?
+
+The UI changes exist within an SMS window and are relevant when Latchel Ops wants to edit or add a tag to an SMS conversation.
+
+## How Is It Used?
+
+See the overall demo here.
+
+<iframe src="https://www.loom.com/embed/1c95f1e8b4cb44f0bc2b67ef7fe3133a" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+- Open any SMS window. You can now see that there is a header that shows what WO(s) the conversation is tagged to (see orange box in the screenshot below). This replaces the old SMS tag icon in the header.
+  - **Note:** The arrow link next to the WO name allows you to go directly to the WO page.
+
+<Frame>
+  ![New WO tag header](/images/Eng-174.png)
+</Frame>
+
+- If the SMS conversation does not have a WO tagged to it, it'll show as follows.
+
+<Frame>
+  ![SMS conversation with no WO tagged](/images/Eng-175.png)
+</Frame>
+
+- Press the link under the WO tag(s) that either says "Edit Tag" or "Assign a Tag" if you'd like to assign or edit.
+- This will then bring up a UI that allows you to edit the tags or add a tag. You have the option to either tag the SMS conversation to WO(s) or PM Company. Please note that you'll only be able to tag a single SMS conversation to one or more WO(s) or PM Company.
+
+Within each of those buckets, there are two components:
+
+- **List of Most Recent WOs** - The list on the bottom is the list of the most recent WOs that are associated with that person.
+
+<Frame>
+  ![List of most recent WOs](/images/Eng-176.png)
+</Frame>
+
+- **Search** - The search allows you to manually search against all WOs that are related to that person (as long as we recognize their profile in our system). They will also be able to search by WO #, WO title, or Property Address.
+
+<Frame>
+  ![Search for WOs](/images/Eng-177.png)
+</Frame>
+
+- Choose however many WOs that the SMS conversation is about and then click "Submit".
+
+<Frame>
+  ![Choosing WOs and submitting](/images/Eng-178.png)
+</Frame>
+
+- You will then be taken back to the SMS conversation and see your header updated with whatever WO(s) you tagged the SMS conversation to (see orange box in the screenshot below).
+
+<Frame>
+  ![Updated header with tagged WOs](/images/Eng-179.png)
+</Frame>
+
+- If the SMS conversation is tagged to a WO(s), and you try to tag a PM company, you are not allowed to do that and will be given the following warning. Please note that this also happens for when the SMS conversation is tagged to a PM Company and you try to tag it to a WO(s).
+
+<Frame>
+  ![Warning when tagging conflicting types](/images/Eng-180.png)
+</Frame>
+
+- In order to change the tag type, press Ok on the warning.
+- Untag the existing tags from the SMS conversation and press "Submit".
+
+<Frame>
+  ![Untagging existing tags](/images/Eng-181.png)
+</Frame>
+
+- You'll be taken back to the SMS conversation and should see that there is "No Tag" assigned to the SMS conversation (see orange box in the screenshot below).
+
+<Frame>
+  ![No Tag assigned to SMS conversation](/images/Eng-182.png)
+</Frame>
+
+- Click "Assign a Tag" and then click the other type of tag. In this scenario, you previously had work orders tagged and now want to tag a PM company. So you will now click the "PMs" tab.
+
+<Frame>
+  ![Assigning a PM company tag](/images/Eng-183.png)
+</Frame>
+
+- Choose your tags and then press "Submit".
+
+## What Are Some Risks or Ways Things Could Go Wrong?
+
+None.
+
+## When Will This Change Be Effective?
+
+This feature will deploy on xx/xx.

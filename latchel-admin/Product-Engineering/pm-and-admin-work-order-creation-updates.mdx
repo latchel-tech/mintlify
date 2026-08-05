@@ -2,3 +2,233 @@
 title: "PM & Admin Work Order Creation Updates"
 groups: ["latchel"]
 ---
+
+## What is the Product Release?
+
+We have simplified the work order creation workflow for PMs and Admins so that they are only asked necessary questions. We have also applied updated designs to this workflow. The biggest change with this update is that we removed the diagnostic workflow.
+
+<Frame>
+  ![Work order creation workflow overview](/images/Eng-184.png)
+</Frame>
+
+## What was the Previous State?
+
+The PM and Admin work order creation flow had a lot of unnecessary steps and questions that were never really used. There have been many escalations to simplify the workflow so that users can save time when creating a work order.
+
+## Who Is Impacted?
+
+The following groups are impacted:
+
+- PMs
+- Latchel Admins/Ops - If Ops needs the diagnostic workflow, they can use the call-center flow.
+
+## When Is It Relevant?
+
+These changes apply to the WO creation workflow for PMs and Latchel Admins on the PM dashboard page and /work-orders page.
+
+## How Is It Used?
+
+### PM User Experience
+
+See the overall demo for the PM user experience here.
+
+<iframe src="https://www.loom.com/embed/15eb328fb1054ac1b093d8acb74f4470" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+- Click "Create Work Order" in the top right corner of the dashboard or /work-orders page.
+
+<Frame>
+  ![Create Work Order button on dashboard](/images/Eng-185.png)
+</Frame>
+
+<Frame>
+  ![Create Work Order button on work orders page](/images/Eng-186.png)
+</Frame>
+
+- You will have the following options to find the property for the work order that you are creating:
+
+<Frame>
+  ![Options to find the property for the work order](/images/Eng-187.png)
+</Frame>
+
+- **Search by Resident Phone Number** - Select this option if you'd like to find the property by searching by the resident's phone number.
+  - You will be prompted to search by the resident's phone number.
+
+<Frame>
+  ![Search by resident's phone number](/images/Eng-188.png)
+</Frame>
+
+- Once you type in a phone number in the search bar, you'll have a list of matches. Select the resident that you are looking for.
+
+<Frame>
+  ![List of resident phone number matches](/images/Eng-189.png)
+</Frame>
+
+- Then you will be shown a list of properties that the selected resident is associated with. Choose the property that you want to create the work order for.
+
+<Frame>
+  ![List of properties associated with resident](/images/Eng-190.png)
+</Frame>
+
+- You will be prompted with a duplicate check to ensure you're not creating a duplicate work order.
+- For the next step, skip down to the Basic Details step below.
+- **Search by Property Address** - Select this option if you'd like to directly search for the property address.
+  - You will be prompted to search by the property address.
+
+<Frame>
+  ![Search by property address](/images/Eng-191.png)
+</Frame>
+
+- Once you type in an address in the search bar, you'll have a list of matches. Select the property that you're looking for.
+
+<Frame>
+  ![List of property address matches](/images/Eng-192.png)
+</Frame>
+
+- You will be prompted with a duplicate check to ensure you're not creating a duplicate work order.
+- You will then be shown a list of residents associated with that property. You have the following options:
+  - **Choose a Resident** - Select the Resident that you want to assign as the primary contact for the work order.
+
+<Frame>
+  ![Choose a resident as primary contact](/images/Eng-193.png)
+</Frame>
+
+- **Mark Property as Vacant** - Select this option if you don't want to assign a primary contact for the work order or if the property is vacant. This means that the service provider does not have to communicate with a resident or work with them to determine an appointment time that works for them (i.e. they can set it to any time they want).
+
+<Frame>
+  ![Mark property as vacant](/images/Eng-194.png)
+</Frame>
+
+- After identifying the property and resident/primary contact for the work order, you will be prompted to fill out **Basic Details**.
+
+<Frame>
+  ![Basic Details form](/images/Eng-195.png)
+</Frame>
+
+This form consists of the following:
+
+- **Work Order Name** - Title for the work order.
+- **Work Order Number \[OPTIONAL\]** - Optional field for typing in your own work order number to identify the work order. If you don't fill this out, Latchel will automatically assign a work order number once it's created.
+- **Description** - Description to explain the issue that the work order is for. This is important now that the diagnostic workflow has been removed from this workflow.
+- **Skill Required** - Choose the skill category and specific skill for this work order. This is what drives service provider assignment and dispatch.
+  - You also have the option to press "Ask resident to identify issue?". When you click this option, we will not assign the work order a skill to start and instead send an SMS and Email notification to the resident and ask them to fill out the diagnostic workflow themselves. Once they fill it out, the work order will be updated with the problem, location, and skill and then the work order will go through any corresponding automation.
+
+<Frame>
+  ![Ask resident to identify issue option](/images/Eng-196.png)
+</Frame>
+
+<Frame>
+  ![Ask resident to identify issue continued](/images/Eng-197.png)
+</Frame>
+
+- Please note that if you change your mind about asking the resident to identify the issue, you can press the "Assign skill manually" option to then select the skill yourself.
+
+<Frame>
+  ![Assign skill manually option](/images/Eng-198.png)
+</Frame>
+
+- **Max Budget** - Budget that you'd like to set for this work order. The field is automatically populated with the property's soft budget limit on default. We have also included the property's hard budget limit in the subheader to better inform your decision.
+- After filling out the Basic Details and then pressing "Next Step", you will then be prompted to fill out **Additional Details**.
+
+<Frame>
+  ![Additional Details form](/images/Eng-199.png)
+</Frame>
+
+This form consists of the following:
+
+- **Update Resident Availability** - This toggle should be used if the user has the resident's availability to fill out. It will be "No" on default, but switching this toggle to "Yes" will give them an option to choose resident availability. They can also choose pre-set or custom time slots.
+
+<Frame>
+  ![Update Resident Availability toggle](/images/Eng-200.png)
+</Frame>
+
+- **Can resident cancel this work order?** - This toggle is set to "Yes" by default and should be changed if the user wants to prevent residents from being able to cancel this work order.
+- **Does the service provider have permission to enter if the resident is not present?** - If the user has assigned a primary resident to the work order earlier in the workflow, this toggle will be set to "No" on default. The user may change the toggle to "Yes" if they'd like to give the service provider permission to enter. This toggle will also be set to "Yes" on default, if the user has chosen to mark the property as vacant. When this toggle is set to "Yes", it will be mandatory for the user to fill out property access instructions.
+
+<Frame>
+  ![Service provider permission to enter toggle](/images/Eng-201.png)
+</Frame>
+
+- **Assign a Service Provider manually** - The user should change this toggle to "Yes" if they'd like to manually assign a service provider to the work order rather than have it go through auto assign. The user will have the option to manually add a service provider once the work order is created.
+- **Do you have any files related to the work order?** - The user should press "Select File(s)" if they have any files or photos to attach to the work order.
+- **Instructions for Service Provider** - This is a mandatory field intended for any special instructions for the service provider.
+- After filling out the Additional Details and then pressing "Next Step", you will then be taken to a **Review Work Order** page to look over all your choices before submitting and creating the work order.
+
+<Frame>
+  ![Review Work Order page](/images/Eng-202.png)
+</Frame>
+
+- If all the fields look good in the Review Work Order page, press "Submit Work Order" in the top right. Then you will be taken to the newly created work order page.
+- Please note that the side panel allows you to move amongst the different sections of the work order creation workflow.
+  - Anything filled that is bolded and has a black circle next to it means that the section has been completed.
+  - The "less than sign" denotes which page you are currently on.
+
+<Frame>
+  ![Side panel showing work order creation progress](/images/Eng-203.png)
+</Frame>
+
+### Ops User Experience
+
+The Ops user experience is exactly the same as the PM user experience, but just has one more option to find the property for the work order. As a result, this section will only focus on that one additional option.
+
+See the overall demo for the Ops user experience here.
+
+<iframe src="https://www.loom.com/embed/18bccc700112447f87e9cf4a1412dddc" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+- Click "Create Work Order" in the top right corner of your Latchel homepage (/work-orders).
+
+<Frame>
+  ![Create Work Order button on Latchel homepage](/images/Eng-204.png)
+</Frame>
+
+- You will have the following options to find the property for the work order that you are creating:
+
+<Frame>
+  ![Options to find the property, Ops view](/images/Eng-205.png)
+</Frame>
+
+- **Search by Resident Phone Number** - See PM User Experience above.
+- **Search by Property Address** - See PM User Experience above.
+- **Search by Property Management Company** - Select this option if you'd like to find the property by searching by the property management company.
+  - You will be prompted to search by a property management company.
+
+<Frame>
+  ![Search by property management company](/images/Eng-206.png)
+</Frame>
+
+- Once you type in a property management company in the search bar, you'll have a list of matches. Select the company that you're looking for.
+
+<Frame>
+  ![List of property management company matches](/images/Eng-207.png)
+</Frame>
+
+- Then you will be shown a list of properties that are part of the property management company that you've chosen. Search and choose the property that you want to create the work order for.
+
+<Frame>
+  ![List of properties under property management company](/images/Eng-208.png)
+</Frame>
+
+- You will be prompted with a duplicate check to ensure you're not creating a duplicate work order.
+- You will then be shown a list of residents associated with that property. You have the following options:
+  - **Choose a Resident** - Select the Resident that you want to assign as the primary contact for the work order.
+
+<Frame>
+  ![Choose a resident, Ops view](/images/Eng-209.png)
+</Frame>
+
+- **Mark Property as Vacant** - Select this option if you don't want to assign a primary contact for the work order or if the property is vacant. This means that the service provider does not have to communicate with a resident or work with them to determine an appointment time that works for them (i.e. they can set it to any time they want).
+
+<Frame>
+  ![Mark property as vacant, Ops view](/images/Eng-210.png)
+</Frame>
+
+- After identifying the property and resident/primary contact for the work order, you will be prompted to fill out Basic Details. See the PM user experience section above for those steps.
+
+## What Are Some Risks or Ways Things Could Go Wrong?
+
+One of the biggest changes that we are making with this deployment is the removal of choosing the PLC while creating a WO. While this does not impact PMs, there was a call out that Ops may have certain situations where they may need to create a WO to assign a PLC that doesn't exist in the diagnostic workflow (through the call center flow). However, our research showed that 4% of all WOs are being created through the internal web form by Latchel Ops/Admins. From there, 15.7% of those WOs did not get created with the diagnostic workflow (either by the admin in the wo creation workflow or by the resident during diagnosing issue). Then, 7.7% of those did have a PLC assigned to them. This is 0.04% of all WOs. I shared this list of WOs with Ops to validate if they actually could not be created through the diagnostic workflow in the call-center flow and they confirmed that they could have been.
+
+Since our data shows that we don't really need Latchel Ops/Admins to choose a PLC, we decided to move forward without supporting adding a PLC for P0. We will instead closely watch out for this after we deploy and make a decision on if we need to support the custom PLC functionality for Latchel Ops.
+
+## When Will This Change Be Effective?
+
+This feature will deploy on xx/xx.

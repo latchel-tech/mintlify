@@ -2,3 +2,96 @@
 title: "PM Impersonation"
 groups: ["latchel"]
 ---
+
+## What is the Product Release?
+
+PM Impersonation allows Latchel Admins to see any specific PM User's view and be able to take most actions on their behalf.
+
+## What was the Previous State?
+
+Previously, there was no way to exactly see what a specific PM User saw on their end. With the introduction of customizable quick view, it's important that Latchel Admins can see what they see to help deep dive escalations/bugs and provide any technical support.
+
+## Who Is Impacted?
+
+The following users are impacted:
+
+- **Latchel Admins** - They are now able to impersonate a user and see what a specific PM is seeing.
+- **PMs** - While there technically isn't a new feature for PMs to use, they will benefit from Latchel Admins being able to see exactly what they see to help deep dive escalations/bugs and provide direct technical support.
+
+## When Is It Relevant?
+
+PM Impersonation should be used to deep dive any escalations/bugs and provide any technical support for PMs.
+
+## How Is It Used?
+
+See overall demo here.
+
+<iframe src="https://www.loom.com/embed/e7f99b44dd894e4cb768090661a33b15" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+- You must be logged in as a Latchel Admin user.
+- Go to a Latchel PM User profile page (not a PM Company profile page).
+- Click on the ellipses in the header and choose "Impersonate User" in the drop down (see orange arrow in the screenshot below).
+
+<Frame>
+  ![Impersonate User option in ellipses dropdown](/images/Eng-160.png)
+</Frame>
+
+- You will be faced with this warning that indicates that any action that you take while impersonating the PM User will be logged as that PM User.
+
+<Frame>
+  ![Impersonation warning message](/images/Eng-161.png)
+</Frame>
+
+- Once you press "OK", you will be taken to a view of the Latchel App as the impersonated PM User.
+
+<Frame>
+  ![View of app as impersonated PM User](/images/Eng-162.png)
+</Frame>
+
+- There are two ways that you can tell that you are impersonating a PM User.
+  - **Detective Icon in Header** - There will always be a red detective icon that's pulsing at the top right of the header.
+
+<Frame>
+  ![Detective icon in header](/images/Eng-163.png)
+</Frame>
+
+- **Banner at Bottom Left Corner** - There will be a banner that pops up at the bottom right corner every time a page is newly refreshed. You can choose to dismiss this banner if it's blocking your view. You also have the option to end the impersonation session through it.
+
+<Frame>
+  ![Impersonation banner](/images/Eng-164.png)
+</Frame>
+
+- You are then free to look at anything as the impersonated PM user. You are also able to do any actions as the impersonated PM within the Latchel App except for the following:
+  - **Sending an SMS or Webchat** - We did not find a use case where a Latchel Admin would have to send an SMS or Webchat as an impersonated PM User.
+  - **Creating a new WO** - We did not find a use case where a Latchel Admin would have to send an SMS or Webchat as an impersonated PM User. If you'd like to do this, you need to go back to your Admin account to create one.
+- For any action you take as an impersonated PM, the log will indicate that it was done by an impersonated user. This can be seen in two ways:
+  - **Detective Icon** - Every log item that has been done by an impersonated user will show a detective icon. When you click on the detective icon, it'll give details on who impersonated who.
+
+<Frame>
+  ![Mini detective icon in log entry](/images/Eng-165.png)
+</Frame>
+
+- **Impersonation Note Directly in Log** - In addition to the detective icon above, any log entry that has a log note will have an additional note saying that the change was made by \[Admin User\] on behalf of the \[PM User\]. This includes any place in the Latchel App that has recorded logs (i.e. WO detail page, invoice, resident profile page, company profile page, etc.).
+  - Important things to note for this are:
+    - This impersonation log note only shows up for log entries that have a log note. For example, state changes will not include this impersonation log note because there is no log note to add it to. You can tell these are done by an impersonated user by looking for the detective icon mentioned above.
+    - The impersonation log note is static. If the Admin User or PM User changes their name in Latchel after the log entry, this log entry will remain with the old user names. However, the detective icon information above will update to the new name.
+- Once you are done impersonating the PM user, you can end impersonation using one of the following ways:
+  - **Banner at Bottom Left Corner** - The impersonation banner at the bottom left corner has an "End Impersonation" option that you can choose.
+
+<Frame>
+  ![End Impersonation option in banner](/images/Eng-166.png)
+</Frame>
+
+- **PM Initial Drop Down in Header** - If you press the PM's initials at the top right of the header, there is an "End Impersonation" option.
+
+<Frame>
+  ![End Impersonation option in header dropdown](/images/Eng-167.png)
+</Frame>
+
+## What Are Some Risks or Ways Things Could Go Wrong?
+
+While we worked to include the impersonation note to every log entry, we could have missed a few places where we don't properly log that it was done by an impersonated user. If there are any places you find that is missing the detective icon in the log entry, please report it to product (@jackie).
+
+## When Will This Change Be Effective?
+
+This will be deployed on 7/13.

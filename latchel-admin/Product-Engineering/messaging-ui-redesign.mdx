@@ -2,3 +2,151 @@
 title: "Messaging UI Redesign"
 groups: ["latchel"]
 ---
+
+## What is the Product Release?
+
+We are excited to announce a significant enhancement to the communication user experience in Latchel. This update brings a more intuitive and modern interface, ensuring that Latchel users can effortlessly manage their SMS and Latchel Support conversations with ease on both mobile and desktop platforms.
+
+<Frame>
+  ![New messaging UI overview](/images/Eng-233.png)
+</Frame>
+
+## What was the Previous State?
+
+Prior to this release, Latchel users could not use the SMS functionality on mobile because the Latchel Support bar took up the entire screen. Any time a Latchel User opened an SMS, it would be cut off on the left side of the mobile screen (see screenshot below).
+
+<Frame>
+  ![Previous mobile SMS view cut off by Latchel Support bar](/images/Eng-234.png)
+</Frame>
+
+In addition, our previous design for managing comms was not intuitive. Many Latchel Users did not know you could access your conversation history, as it was hidden. They also did not know that you could see the history of conversations with other users at their company. Finally, it was very difficult to understand if any user had any open conversations. Keeping conversations open has negative impact because if the person sends in any new messages, it won't be flagged as a new incoming message.
+
+## Who Is Impacted?
+
+PMs, Latchel Ops, and Latchel Admins will benefit from these changes.
+
+## When Is It Relevant?
+
+This feature is relevant for any Latchel communication: SMS and Latchel Support chats. It applies to both mobile and desktop views.
+
+## How Is It Used?
+
+See overall demo here.
+
+<iframe src="https://www.loom.com/embed/1b1db856fccb4c69b013cf45bcaf9d76" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+### New Messaging UI Walkthrough
+
+This section will go through all the changes we made to the Latchel Messaging UI.
+
+- To access your messages, click on the chat icon in the main header.
+
+<Frame>
+  ![Chat icon in main header](/images/Eng-235.png)
+</Frame>
+
+- This will pull up the new comm UI.
+
+<Frame>
+  ![New comm UI](/images/Eng-236.png)
+</Frame>
+
+- **Filter and Notifications** - At the top of the new Messages UI, you will see the following two options:
+
+<Frame>
+  ![Filter and Notifications options](/images/Eng-237.png)
+</Frame>
+
+- **Filter SMS by Portfolio** - The filter icon on the left allows you to use the filter SMS by Portfolio feature. Once you click on the icon, you'll see the list of all your portfolios (see screenshot below). Choosing one of these will then filter what pending messages are shown to you. To see the full SOP for this, please [go here](https://latchel.atlassian.net/wiki/spaces/PROD/pages/2678947841/Filter+SMS+by+Portfolio+PM+SMS+Tagging#Filter-SMS-by-Portfolio).
+
+<Frame>
+  ![Filter SMS by Portfolio list](/images/Eng-238.png)
+</Frame>
+
+- **Notifications** - The alarm icon allows you to choose how often you want to see and hear your message notifications.
+
+<Frame>
+  ![Notification settings](/images/Eng-239.png)
+</Frame>
+
+- **Pending Messages** - This section is where all new incoming SMS live. It'll indicate how many pending messages there are. These messages have not been picked up by anybody and need to be responded to.
+
+<Frame>
+  ![Pending Messages section](/images/Eng-240.png)
+</Frame>
+
+- Click on Pending Messages to see all the individual incoming SMS. The blue line at the left of the conversation indicates that the message is unread.
+
+<Frame>
+  ![Pending Messages list with unread indicator](/images/Eng-241.png)
+</Frame>
+
+- To respond to a message, click on it and an SMS will pop up for you to read and respond to.
+- **My Messages** - The My Messages tab will have a list of of your messages. It will consist of your Latchel Support messages, any open SMS conversations that are assigned to you, and a history of your SMS conversations. Please see the bullets below for additional details on each one.
+
+<Frame>
+  ![My Messages tab](/images/Eng-242.png)
+</Frame>
+
+- **Latchel Support** - We've consolidated Latchel Support into one place to make it easier to manage all your messages in one place. Latchel Support will always be pinned to the top of your messages list for you to easily access any time you need to reach out to a Latchel team member.
+
+<Frame>
+  ![Latchel Support pinned in messages list](/images/Eng-243.png)
+</Frame>
+
+- **My SMS Conversations** - Under Latchel Support will be all of your SMS conversations. The different types are:
+  - **My Open Conversations** - If there are any conversations that are open and assigned to you, they will show at the top of the list and will have a blue line next to it (see orange arrow in screenshot below). Please note that the blue line will not go away until you End the SMS conversation (not just close the window).
+
+<Frame>
+  ![My Open Conversations](/images/Eng-244.png)
+</Frame>
+
+- **My Conversation History** - Any conversations under "My Messages" that do not have a blue line next to it are part of your conversation history (see conversations that are in the orange box in the screenshot below). These are in the order of most recent conversations at the top. The intent of putting these here are so that you can easily reference any conversations you had last.
+
+<Frame>
+  ![My Conversation History](/images/Eng-245.png)
+</Frame>
+
+- **My Team** - The My Team tab will have a list of your team's messages. This tab is intended for supervisors to monitor if there are any open/active conversations across your company.
+
+<Frame>
+  ![My Team tab](/images/Eng-246.png)
+</Frame>
+
+- This view shows who has active conversations at the top of the list in alphabetical order. It's important to know who has active conversations because if they are kept open for a long time, those people will be unable to send in new incoming SMS to your company.
+
+<Frame>
+  ![Active conversations list, alphabetical order](/images/Eng-247.png)
+</Frame>
+
+- Clicking on each person will show you their active chats with a blue bar at the top and then the rest of their SMS history below that in most recent order.
+
+<Frame>
+  ![Individual team member's active chats and SMS history](/images/Eng-248.png)
+</Frame>
+
+- After the initial list of those with active chats at the top, it lists the rest of your team members in alphabetical order below it. This is so that you can access their historical SMS conversations, if needed. Clicking on their name shows you their SMS history in the most recent order.
+
+### Mobile View
+
+We have improved the mobile view so that all SMS and/or Latchel Support conversations are shown in full screen view. The Latchel Support bar no longer prevents you from seeing any SMS conversations. The new Messages UI also makes it easier to go between different messages.
+
+<Frame>
+  ![Improved mobile view, full screen conversations](/images/Eng-249.jpg)
+</Frame>
+
+### Differences in Ops View
+
+The biggest and only difference with the Ops view is that there is no Latchel Support option pinned at the top of the Messages UI. See the Ops view without the Latchel Support option at the top.
+
+<Frame>
+  ![Ops view without Latchel Support option pinned](/images/Eng-250.png)
+</Frame>
+
+## What Are Some Risks or Ways Things Could Go Wrong?
+
+This launch is pretty low risk since we are not adding or removing any features and just rearranging them into a more user friendly design. However, there is one minor edge case that may confuse PMs when they're looking in a mobile view. If a PM has an SMS conversation in their full screen view and Latchel Support sends them a webchat, they will just receive a notification that says that they have a new Latchel Support message. They will then have to manually go into the Messages UI and click Latchel Support to see it. Please note that this will not impact desktop view.
+
+## When Will This Change Be Effective?
+
+We plan to deploy this on Thu 11/16 at 1:00 PM PST.

@@ -2,3 +2,83 @@
 title: "Work Order Transcripts"
 groups: ["latchel"]
 ---
+
+## What is the Product Release?
+
+Latchel Users can now see a transcript of all SMS and Latchel Web Support chats that are tagged to a work order on the work order detail page.
+
+<Frame>
+  ![Work order transcripts overview](/images/Eng-153.png)
+</Frame>
+
+## What was the Previous State?
+
+Previously, there was no way to reference historical SMS or Latchel Web Support chats related to a specific work order.
+
+## Who Is Impacted?
+
+PMs, Latchel Admins, and Latchel Ops can all access these transcripts.
+
+## When Is It Relevant?
+
+The transcripts can be accessed on a specific work order detail page. It's important to note that if an SMS or Latchel Web Support conversation is not tagged to a specific work order, it will not show up in the transcripts.
+
+## How Is It Used?
+
+See overall demo here.
+
+<iframe src="https://www.loom.com/embed/3dd52c31bde34691ba64c867547df39f" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+- Click on any work order. There is now a transcript option as a tab option on the left of the page. See orange arrow in the screenshot below.
+
+<Frame>
+  ![Transcripts tab on work order page](/images/Eng-154.png)
+</Frame>
+
+- Clicking on the Transcripts tab will then bring you to an organized view of all SMS and Latchel Web Support conversations that have been tagged to this work order.
+
+<Frame>
+  ![Organized view of tagged transcripts](/images/Eng-155.png)
+</Frame>
+
+- **SMS Conversations** - You will see different conversation formats based on who the conversation was between.
+  - **Your PM Company Conversations** - SMS conversations between someone at your PM company and Residents, Service Providers, Owners, or any other phone number will show up as just that person's name. Please see the orange box in the screenshot below for a conversation where someone in your PM company (Will Gordon) has had a conversation with Service Provider Larue Leffler.
+
+<Frame>
+  ![PM company conversation format](/images/Eng-156.png)
+</Frame>
+
+- **Latchel Conversations** - SMS conversations between Latchel agents and Residents, Service Providers, Owners, or any other phone number will show up with a header that says Latchel and also has the Latchel icon (see green boxes in the screenshot below). The screenshot shows that there is one SMS transcript between a Latchel agent (System) and Resident Harrison Abbott around this specific work order.
+
+<Frame>
+  ![Latchel conversation format](/images/Eng-157.png)
+</Frame>
+
+- **Latchel Web Support Conversations** - Work Order Transcripts also contain any tagged Latchel Web Support conversations, which are conversations between Latchel Agents and PMs. These transcripts are marked with Latchel Web Support and a headset icon (see yellow boxes in the screenshot below). The screenshot shows that there has been one Latchel Web Support transcript between a Latchel agent (System) and PM Will Gordon about this specific work order.
+
+<Frame>
+  ![Latchel Web Support conversation format](/images/Eng-158.png)
+</Frame>
+
+- **Filtering** - If you'd like to only see one type of transcript at a time, please use the drop down in the top left to filter for a specific type of conversation.
+
+<Frame>
+  ![Filtering transcripts by type](/images/Eng-159.png)
+</Frame>
+
+<Warning>
+  It's important to note that the transcripts are meant to be a historical reference and are read only. If you'd like to have a live SMS or Latchel Web Support conversation with somebody then you will need to start the SMS or Latchel Web Support using the existing methods today (i.e. SMS button on work order page/person's profile page/etc. or the messaging icon in the home navigation bar for Latchel Web Support).
+</Warning>
+
+## What Are Some Risks or Ways Things Could Go Wrong?
+
+SMS or Latchel Web Support conversations will not show up in the work order's transcripts unless it has been correctly tagged to that work order. In addition, if there are any conversations that are incorrectly tagged, then they will not make sense in relation to the work order.
+
+Please reference these articles for more details on how to correctly tag:
+
+- PM SMS Tagging - [Filter SMS by Portfolio & PM SMS Tagging](https://latchel.atlassian.net/wiki/spaces/PROD/pages/2678947841)
+- Service Ops SMS Tagging - [Service Ops SMS Tagging & PM 360 Degree Communication View](https://latchel.atlassian.net/wiki/spaces/PROD/pages/2613182465)
+
+## When Will This Change Be Effective?
+
+SMS transcripts was deployed on 6/27 and Latchel Web Support transcripts will be deployed on 11/30.
