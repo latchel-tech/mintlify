@@ -2102,7 +2102,8 @@
     "links": [
       {
         "label": "Login to Latchel",
-        "href": "https://app.latchel.com/login"
+        "href": "https://app.latchel.com/login",
+        "icon": "square-l"
       }
     ],
     "primary": {
