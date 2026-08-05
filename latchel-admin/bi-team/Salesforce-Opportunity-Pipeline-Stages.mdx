@@ -2,3 +2,217 @@
 title: "Salesforce Opportunity Pipeline Stages"
 groups: ["latchel"]
 ---
+
+<Note>
+  Pipeline Stages for Opportunities are called Stages and Substages.
+</Note>
+
+<Note>
+  Unlike the Account object, for the Opportunity we have 4 record types instead of just 1.
+</Note>
+
+## How to see and edit an Opportunity record stage and substage?
+
+<Tip>
+  You can open any Opportunity record page and you'll be able to see the stage in the path on top (1).
+</Tip>
+
+<Tip>
+  You can see the substage of an Opportunity record on the details layout (3).
+</Tip>
+
+<Tip>
+  In order to move a Stage or Substage click on the "Mark Stage as Complete" button (2), then edit the dependencies (4), and then click on Done.
+</Tip>
+
+<Frame caption="View of an Opportunity record page">
+  ![View of an Opportunity record page](/images/DA-9.png)
+</Frame>
+
+<Frame caption="View of the Stage and Substage editor">
+  ![View of the Stage and Substage editor](/images/DA-10.png)
+</Frame>
+
+## Opportunity Record Types:
+
+<Check>
+  For the purposes of this documentation, an Opportunity Record Type determines the specific stages of each of the pipelines in an Opportunity. Even though the stages and substages are added in the fields "Stage" and "Substage", a Record Type creates the space to define which stages will belong to each pipeline.
+</Check>
+
+<Check>
+  Go to Setup \> Object Manager \> Opportunity \> Record Types
+</Check>
+
+<Frame caption="List of the current active Record Types">
+  ![List of the current active Record Types](/images/DA-11.png)
+</Frame>
+
+## Sales Processes:
+
+<Check>
+  If the record type gives us the space to define the stages per each pipeline, a Sales Process difines the exact stages and order per each pipeline.
+</Check>
+
+<Check>
+  Go to Setup \> Search for "sales processes" in the Quick Find text box \> Click on Sales Processes \> Click on Edit on the "Account Lifecycle Sales" path. \> Click on Next
+</Check>
+
+<Frame caption="List of the current active Sales Processes">
+  ![List of the current active Sales Processes](/images/DA-12.png)
+</Frame>
+
+## Opportunity Stages
+
+<Check>
+  To edit the stages of these pipelines:
+
+  Go to Setup \> Object Manager \> Opportunity \> Fields & Relationships \> Stage
+</Check>
+
+### Sales Pipeline
+
+- Appointment Scheduled
+- Discovery Complete
+- Demo Complete
+- Closed Won
+- Closed Lost
+
+### Onboarding Pipeline
+
+- Need Sales Help - Client Disengaged
+- Need Sales Help - Product Fit/Expectations
+- Need Sales Help - Contract Questions/Concerns
+- Kickoff Scheduled
+- Onboard Scheduled
+- Configuring Account
+- Onboard Audit
+- Ready to Go Live
+- First 30 Days
+- Live
+- Dropout
+
+### Service Pipeline
+
+- Recently Launched (No Cadence)
+- Weekly
+- Monthly
+- Quarterly
+- No Cadence
+- Cancellation Scheduled
+- Fully Cancelled
+
+### Upgrade Pipeline
+
+- Not Ready
+- Expressed Interest
+- Exploratory Upgrade Meeting
+- Follow Up/Demo Upgrade
+- Upgraded
+- No Interest
+
+## Opportunity Substages:
+
+<Check>
+  The only pipeline that has substages is the "Sales Pipeline".
+
+  Go to Setup \> Object Manager \> Opportunity \> Fields & Relationships \> Substage
+</Check>
+
+<Frame caption="Stages and Substages in the Sales Pipeline">
+  ![Stages and Substages in the Sales Pipeline](/images/DA-13.png)
+</Frame>
+
+## Relationship between Stage and Substage:
+
+<Check>
+  There are dependencies for these two fields.
+
+  Go to Setup \> Object Manager \> Opportunity \> Fields & Relationships \> Field Dependencies \> Edit (Stage controlling field)
+</Check>
+
+Since the Sales Pipeline is the only one that has Substages assigned, we will configure dependencies on those stages only.
+
+<Frame caption="View of the Field Dependencies editor">
+  ![View of the Field Dependencies editor](/images/DA-14.png)
+</Frame>
+
+## How do I configure the Path?
+
+<Check>
+  Go to Setup \> Search for "path settings" in the Quick Find text box \> Click on Path Settings \> Click on Edit on the "Account Lifecycle Sales" path. \> Click on Next
+</Check>
+
+In order to configure the order of the stages, you will have to follow the Sales Processes instructions above.
+
+<Frame caption="List of active paths for the Opportunity object">
+  ![List of active paths for the Opportunity object](/images/DA-15.png)
+</Frame>
+
+<Frame caption="View of the edit screen of the Sales Pipeline path">
+  ![View of the edit screen of the Sales Pipeline path](/images/DA-16.png)
+</Frame>
+
+## Flows related to the Opp. stage pipeline:
+
+<Check>
+  To see Flows in Salesforce go to Setup \> Search for "flows" in the Quick Find text box. \> Click on Flows
+</Check>
+
+- FL - CS - OP - Create new Customer record
+- FL - CS - CU - Active Customer
+- FL - LA - OP - Onboarding Delay to Slack
+- FL - SA - OP - Closed Lost Redirects
+- Opportunity: Build Contract Screens
+- Opportunity: Furthest Stage & Opportunity Stage Updates
+- Opportunity: Onboarding Needs Sales Help
+- Opportunity: Stage Update Cancel Request - Schedule Cancellation Call Task
+- SLPlaybookaccess
+- SL Qualification Playbook | Create Opp
+- FL - SA - OP - Long-Term Nurture Task
+
+## Process builder automations:
+
+<Check>
+  To access the Process Builder automations in Salesforce go to Setup \> Search for "process builder" in the Quick Find text box. \> Click on Process Builder
+</Check>
+
+- Opportunity: Assign Launch Manager
+- Opportunity: Assign CSM
+- Opportunity Update CSM
+- Populate Primary Contact Opportunity Field from Contact Roles
+- Opportunity: Onboard Live; Move to Recently Launched Service Pipeline
+- Opportunity: Set SDR Owner
+- Opportunity: Update Closed Contract Date
+- Process Builder - Account: Opportunity Won, update Lifecycle
+- Send to Onboard Automation
+
+## Python Scripts related to the Opp. stage pipeline:
+
+<Check>
+  Go to Setup \> Object Manager
+</Check>
+
+- 2023-12-19 Long-Term Nurture 90-Days Cycle.ipynb
+
+## Other fields related to the Opp. stage pipeline:
+
+<Check>
+  Go to Setup \> Object Manager \> Opportunity \> Fields & Relationships
+</Check>
+
+- Current Opportunity Stage Update
+- Days Since Last Stage Change
+- Disco Completed Stage Report
+- Furthest Stage
+- Furthest Stage Number
+- Last Stage Change Date
+- Stage Number
+- Time Entered Current Stage
+
+## Other objects related to the Opp. stage pipeline:
+
+<Check>
+  Go to Setup \> Object Manager
+</Check>
+
+- Opportunity Stage Update
