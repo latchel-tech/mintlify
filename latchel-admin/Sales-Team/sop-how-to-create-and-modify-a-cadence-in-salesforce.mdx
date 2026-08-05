@@ -2,3 +2,255 @@
 title: "SOP - How to Create and Modify a Cadence in Salesforce"
 groups: ["latchel"]
 ---
+
+## Purpose
+
+<Note>
+  **Purpose of this document**
+
+  This page will provide guidance on how to create a sales cadence in Salesforce.
+
+  Sales Cadences are used to create a sequence of standard interactions with have with prospects or leads. A cadence can be a combination
+</Note>
+
+<Note>
+  **Who should read this document?**
+
+  Sales Manager and SDRs that have been assigned to create cadences
+</Note>
+
+---
+
+## Create the Templates
+
+When building a cadence, you will select calls and emails that will be sent to the lead. Emails can be sent manually or automatically. For both, calls and emails, you will have to select a template to be used in the cadence, therefore, unless those templates are already created, the first step is to create them.
+
+### Call Scripts Templates
+
+1. Go to the 9 dots on the top left side of the navigation bar, type "scripts", and click on "Call Scripts"
+
+<Frame>
+  ![](/images/Sales-88.png)
+</Frame>
+
+2. On the top right side, click on "New"
+
+<Frame>
+  ![](/images/Sales-89.png)
+</Frame>
+
+3. Fill up the form:
+   - Name of the Call Script – use the template: CT - SA - \[situation or cadence in which it will be used\]
+     - Note - CT stands for Call Template - using Call Template vs. Call Script verbiage to avoid confusion with the CS from Customer Success Team
+   - Description - include here when or which situation this script should be used
+   - Body - enter the script or the link to another place where scripts are being stored
+
+<Frame>
+  ![](/images/Sales-90.png)
+</Frame>
+
+<Note>
+  **Cloning current templates**
+
+  Instead of creating a new template from scratch, you can also create a clone, edit the content and Save! Just find the email template you want to clone and click on it. On the drop right side of the window, click on "clone".
+
+  <Frame>
+    ![](/images/Sales-91.png)
+  </Frame>
+</Note>
+
+---
+
+### Email Templates
+
+<Note>
+  **Cloning current templates**
+
+  Instead of creating a new template from scratch, you can also create a clone, save it to the right folder and edit the content! Just find the email template you want to clone, click on the drop down arrow on the right side and select "clone".
+</Note>
+
+<Frame>
+  ![](/images/Sales-92.png)
+</Frame>
+
+1. Search to email templates in the quick search box
+
+<Frame>
+  ![](/images/Sales-93.png)
+</Frame>
+
+2. Go to the SDR Cadences folder → Click on "All Folders" on the left panel and in the search bar, search for SDR cadences. Then click on the link to that folder
+
+<Frame>
+  ![](/images/Sales-94.png)
+</Frame>
+
+3. Click on "New Email Template"
+
+<Frame>
+  ![](/images/Sales-95.png)
+</Frame>
+
+4. Fill in the form:
+   - Enter email template name - Use this format: ET-SA-\[cadence will be used\] - \[Day of the cadence\] Note: ET means Email Template, SA means Sales Team Example: ETSA- Outbound Email - Day 1
+     <Frame>
+       ![](/images/Sales-96.png)
+     </Frame>
+   - Select the folder
+     <Frame>
+       ![](/images/Sales-97.png)
+     </Frame>
+   - Enter the Subject (email subject line) and click on save
+     <Frame>
+       ![](/images/Sales-98.png)
+     </Frame>
+5. To add the email content, edit the HTML value by clicking on the pencil icon
+
+<Frame>
+  ![](/images/Sales-99.png)
+</Frame>
+
+6. Enter the text and images of your email
+
+<Frame>
+  ![](/images/Sales-100.png)
+</Frame>
+
+- For images, you will need to have the image filed saved somewhere and upload it to the template
+
+7. To add fields to be automated filled when the email is sent out, like the name of the contact, first, you need to find the API name of the object that contains that information, then find the field API name.
+   - To find the Object API name,:
+     - Go to Set-up - [https://latchel1.lightning.force.com/lightning/setup/SetupOneHome/home](https://latchel1.lightning.force.com/lightning/setup/SetupOneHome/home)
+     - Click on Object Manager tab
+     - Search for the Object
+       <Frame>
+         ![](/images/Sales-101.png)
+       </Frame>
+     - Click on the object and then click on "Fields and Relationships"
+       <Frame>
+         ![](/images/Sales-102.png)
+       </Frame>
+     - Search for the field you are looking for, like name
+     - Then find the name you are looking for in and get the value of the second column (i.e. under Field Name)
+       <Frame>
+         ![](/images/Sales-103.png)
+       </Frame>
+     - Once you have the "Field Name", you will combine it with either Sender, Recipient or Organization using this syntax:
+       - `{{{Recipient.FIELD_NAME}}}`
+       - Example `{{{Recipient.FirstName}}}`
+   - Replace all customs fields with this syntax into your email template. With this, the automation will fill in the contact specific information in that field, or your own personal information, like your name and calendar link
+     - Some key syntaxes to use in your templates:
+
+- Pull lead name ---\> `{{{Recipient.FirstName}}}`
+- Include your calendar link ----\> `{{{Sender.Calendar_Link__c}}}`
+- Include your name ----\> `{{{Sender.FirstName}}} {{{Sender.LastName}}}`
+
+You may also add highlights, change font type and size, change background color, etc.
+
+Once you are done creating the template, click on Save
+
+<Frame>
+  ![](/images/Sales-104.png)
+</Frame>
+
+---
+
+## Create the Cadence
+
+1. To create a cadence, search for "Cadences"
+
+<Frame>
+  ![](/images/Sales-105.png)
+</Frame>
+
+2. Click on "New Cadence"
+
+<Frame>
+  ![](/images/Sales-106.png)
+</Frame>
+
+3. There are 3 types of cadences you can build:
+   - Quick cadence should be just a few actions, like make a call and send an email
+   - Cadence Builder 2.0 - It is a rule-based cadence, i.e.
+   - Cadence builder - It is a results-based cadence, i.e. the next step of the cadence depends on the result of the prior step
+
+<Frame>
+  ![](/images/Sales-107.png)
+</Frame>
+
+---
+
+### Quick Cadence
+
+Use this training video - [How Quick Cadences Help Sellers Automate the Mundane](https://www.youtube.com/watch?v=B6gdcbDimwg)
+
+---
+
+### Cadence Builder 2.0 - Rules Based Cadence
+
+1. Name the cadence Use this template: CA - SA - \[situation it should be used\] Example: CA - SA - Inbound Tier 1
+2. Add a description with more details on what the cadence includes, like calls and emails
+3. The Cadence has 3 tracks:
+   - **Main** - it will include all actions for the SDR to take until we either receive a positive or negative response from the lead, or the exit criteria is met. You will need to define the exit criteria
+   - **Positive** - it will include all actions for the SDR to take when there was a positive response from the lead. You will need to choose what defines a positive response or situation.
+   - **Negative** - it will include all actions for the SDR to take when there was a negative response from the lead. You will need to choose what defines a negative response or situation.
+4. Set the **Exit** criteria for the Main Track Exit criteria defines the situations in which the contact will reach the end of the cadence, i.e. the contact will not longer be a target of any action in the cadence. In the example below, the contact will remain in the cadence unless it is classified as unqualified.
+
+<Frame>
+  ![](/images/Sales-108.png)
+</Frame>
+
+5. Set the Entry criteria for the Positive Track The Entry criteria defines the rules that will be used to change the cadence track from the main track to the positive track. This means, for example, if the contact has a positive conversation with the SDR or replies to an email, or calls us and leave a voicemail, the main track actions will be interrupted and the actions from the positive track will start
+
+<Frame>
+  ![](/images/Sales-109.png)
+</Frame>
+
+6. Add the actions that we will take until either we get a positive or negative situation, or meets the exit criteria
+7. Set the Entry criteria for the Negative Track The Entry criteria defines the rules that will be used to change the cadence track from the main track to the negative track. This means, for example, if the contact has a negative conversation (not interested) with the SDR, the main track actions will be interrupted and the actions from the negative track will start
+
+<Frame>
+  ![](/images/Sales-110.png)
+</Frame>
+
+8. Add the actions that we will take until either we get a positive or negative situation, or meets the exit criteria. To add an action, first select the track you want to add the actions to Go to the actions list, click on the one you want to add, drag and drop in the center of the screen. Then you will need to configure the action. For example, if it is an email, select the email template to be used (if it is a call, select the call template), add a description, when the action will be triggered to start based on the prior step, and the due date when it needs to be completed by, or it will be marked as missed
+
+<Frame>
+  ![](/images/Sales-111.png)
+</Frame>
+
+---
+
+### Cadence Builder Classic - Results Based Branching
+
+<Danger>
+  **This Builder is Being Deprecated!**
+
+  [https://help.salesforce.com/s/articleView?id=001040170&type=1](https://help.salesforce.com/s/articleView?id=001040170&type=1)
+</Danger>
+
+This cadence builder allows for more granularity in creating customized actions for the positive or negative results of each step of the cadence.
+
+This [Salesforce video](https://www.youtube.com/watch?v=coiA_drr7H0) talks about cadences, how to create and use them, starting at the 1 min mark
+
+Note, the Sales Engagement Module (aka Cadences) used to be called HVS (High Velocity Sales) in Salesforce.
+
+---
+
+## Edit or Modify a Cadence
+
+To Edit or Modify a Cadence, go to the cadence you want to adjust and click on it
+
+1. Click on the nine dots icon in the navigation bar
+2. Type cadences
+3. Select All Cadences
+
+<Frame>
+  ![](/images/Sales-112.png)
+</Frame>
+
+You can edit the name and description by clicking on "Edit", or you can modify the content of the cadence, like steps, rules and templates being used, by clicking on "Modify Steps"
+
+<Frame>
+  ![](/images/Sales-113.png)
+</Frame>

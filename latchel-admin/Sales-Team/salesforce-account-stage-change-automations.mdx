@@ -17,10 +17,10 @@ groups: ["latchel"]
 
 ## Incoming Leads Account Stage Assignment
 
-| Initial Account Stage and Substage | Automation Rule | End Account Stage and Substage | Implementation Status BI team --- please write "Active" when you pushed it live |
+| Initial Account Stage <br />and Substage | Automation Rule | End Account Stage and Substage | Implementation Status BI team --- please write "Active" when you pushed it live |
 | --- | --- | --- | --- |
-| None | New inbound lead added to Salesforce that was assigned to SDR | Lifecycle Stage: Lead Assigned / Lifecycle Substage: Lead Assigned |  |
-| None | New inbound lead added to Salesforce that was NOT assigned to SDR | Lifecycle Stage: Prospecting / Lifecycle Substage: Inbound Unassigned | See assignment rules in this page: [Lead Assignment Rules & Notifications](https://latchel.atlassian.net/wiki/spaces/SAL/pages/2931032140) |
+| None | New inbound lead added <br />to Salesforce that was <br />assigned to SDR | Lifecycle Stage: Lead Assigned / Lifecycle Substage: Lead Assigned |  |
+| None | New inbound lead added <br />to Salesforce that was <br />NOT assigned to SDR | Lifecycle Stage: Prospecting / Lifecycle Substage: Inbound Unassigned | See assignment rules in this page: [Lead Assignment Rules & Notifications](https://latchel.atlassian.net/wiki/spaces/SAL/pages/2931032140) |
 
 See assignment rules in this page: [Lead Assignment Rules & Notifications](/latchel-admin/Sales-Team/lead-assignment-rules-and-notifications)
 
@@ -41,6 +41,8 @@ See assignment rules in this page: [Lead Assignment Rules & Notifications](/latc
 
 ## Account Stage Changes Throughout AE Lifecycle
 
-| Initial Account Stage and Substage | Automation Rule | End Account Stage and Substage | Implementation Status BI team --- please write "Active" when you pushed it live |
-| --- | --- | --- | --- |
-| Any Stage in the AE pipe | Account is not a customer and had an Closed Lost Opportunity (Current customer that had a closed lost opportunity, maybe an upsell opportunity, should not have their account status changed) | Lifecycle Stage: Prospecting / Lifecycle Substage: Lost Opportunities |  |
+| Initial Account Stage and Substage | Any Stage in the AE pipe |
+| --- | --- |
+| Automation Rule | Account is not a customer and had an Closed Lost Opportunity (Current customer that had a closed lost opportunity, maybe an upsell opportunity, should not have their account status changed) |
+| End Account Stage and Substage | Lifecycle Stage: Prospecting / Lifecycle Substage: Lost Opportunities |
+| Implementation Status BI Team<br />(Please write "Active" when you pushed it live) |  |

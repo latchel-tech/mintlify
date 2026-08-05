@@ -2,3 +2,233 @@
 title: "SOP - How to Make and Receive Calls in Salesforce"
 groups: ["latchel"]
 ---
+
+## Purpose
+
+<Note>
+  **Purpose of this document**
+
+  Provide guidance on how to use the dialer from within Salesforce. The dialer is powered by Amazon Connect and is called as CCP (Contact Control Panel)
+</Note>
+
+<Note>
+  **Who should read this document?**
+
+  Sales and CS teams
+</Note>
+
+---
+
+## Setting-up
+
+<Note>
+  **Verify you have access to the dialer**
+
+  1. From the Sales or Service Console in Salesforce, you should see a "Phone" icon at the bottom left of the screen
+
+  <Frame>
+    ![](/images/Sales-65.png)
+  </Frame>
+
+  2. Once you click on it, you should see a blue button to "Sign in to CCP"
+
+  <Frame>
+    ![](/images/Sales-66.png)
+  </Frame>
+
+  3. Once you click on it, another window will open for you to sign into Amazon Connect. Your login is your salesforce email address and the initial password should have been provided by an admin. At the bottom of this window, you can also click on "forgot password" and set-up your own password
+
+  <Frame>
+    ![](/images/Sales-67.png)
+  </Frame>
+
+  4. After you sign in, the dialer will open. Click on the Number Pad button to see the keyboard to dial the phone number
+
+  <Frame>
+    ![](/images/Sales-68.png)
+  </Frame>
+
+  <Frame>
+    ![](/images/Sales-69.png)
+  </Frame>
+
+  5. If you have any issue to access the dialer, please contact our admin.
+</Note>
+
+---
+
+## Dialer Walkthrough
+
+**A. Initial Page:**
+
+1. At the top of the window, you will see the agent status, that will be initially set to "offline"
+   - Offline - use it when you are not online and therefore unavailable to receive calls
+   - Available - you can accept calls
+   - Away – you are online, but cannot receive calls
+2. You will also see two tabs: (1) the phone (2) settings.
+3. At the bottom of the phone tab, you will see 2 buttons:
+   - (1) Quick Connects, which is used for internal transfers, if we have that set-up.
+   - (2) Number Pad, which is the digital numerical keyboard to dial phone numbers.
+
+<Frame>
+  ![](/images/Sales-70.png)
+</Frame>
+
+B. Number Pad - you can either type the phone number or use the keyboard to enter it
+
+<Frame>
+  ![](/images/Sales-71.png)
+</Frame>
+
+C. If you click on the "gear" icon, you can configure the devices you are going to use for audit and for the phone. It is recommended to use the softphone, which is the number pad described in the prior section. If you want to use another phone, the audio of that call will be forwarded to the phone, but the dialer is still in control about what happens to that call, like accepting or rejecting
+
+<Frame>
+  ![](/images/Sales-72.png)
+</Frame>
+
+---
+
+## Getting Ready to Make or Receive Calls
+
+1. Sign into the dialer
+2. Make yourself Available
+   - Available Status is a required status to be able to receive calls.
+   - To make calls, you can be in Away or Offline status as well, but it is best practice to do that from Available
+
+<Frame>
+  ![](/images/Sales-73.png)
+</Frame>
+
+---
+
+## Making Calls / Outbound Calls
+
+### Initiating the call
+
+1. There are a few ways to initial a call:
+   - Number Pad - Type the number in the top box of the pad; or Click on the numbers in the digital keyboard
+     <Frame>
+       ![](/images/Sales-74.png)
+     </Frame>
+   - Or use "Click to Call" - i.e. go to the account you want to contact and click on the phone icon
+     <Frame>
+       ![](/images/Sales-75.png)
+     </Frame>
+2. Once you initiate the call, the dialer will change to show the call is in the process of being connected. You have the option to end the call, in case you dialed someone by mistake:
+
+<Frame>
+  ![](/images/Sales-76.png)
+</Frame>
+
+3. Once the customer answers the call, they will listen to a message saying the call is going to be recorded. After that, the call will be connected and the dialer will change to show the call is connected. You will get the option to place the customer on hold, to mute the call, make transfers and end the call
+
+<Frame>
+  ![](/images/Sales-77.png)
+</Frame>
+
+4. When you or the customer disconnect, the call status will change from connected to "After Call Work" and it will stay in that status for 30 sec and close. Those 30 sec is a time buffer for you to make notes some notes before you are available to receive more calls. At this point, you can see the call transcript in the dialer.
+   - We can configure that to increase the time, if needed. As Sales will not receive much calls, we thought the 30 sec should be enough
+   - To be able to receive or make more calls, you need to close the contact. If the status is not back to available, you need to change it.
+     <Frame>
+       ![](/images/Sales-78.png)
+     </Frame>
+
+---
+
+## Receiving Calls / Inbound Calls
+
+1. To be able to receive an inbound call, you need to have your status set to "Available" in the dialer:
+
+<Frame>
+  ![](/images/Sales-79.png)
+</Frame>
+
+2. When the call comes in, you will see the green banner in the dialer showing the phone number and the call status as "incoming call"
+
+<Frame>
+  ![](/images/Sales-80.png)
+</Frame>
+
+3. Click "Accept call" to answer the call and talk to the caller
+
+---
+
+## Receiving a Call Back
+
+1. Call Backs is an option that we are offering the caller to select if the person they are calling is unavailable to take the call, instead of leaving a voicemail.
+   - This is currently active only for the Sales Team and it is presented after suggesting to schedule a demo in the website or send an email
+   - CS team didn't request this feature, instead, the caller is being referred to email [success@latchel.com](mailto:success@latchel.com)
+2. Call Backs will be routed and presented to you as it was an inbound call. You will see the phone number, but the call status will say "Call Back" instead of "incoming call"
+3. When going into available, the call backs that were placed in the call back queue while you were unavailable will start to ring
+4. If you know what the call is about, accept and go for it
+5. If you don't know what the call is about and want to research, you can:
+   - Reject the call and let the call go missed. At this point, if the account is in salesforce, it will open
+   - Once you are ready to talk to the person, you can close the contact that was missed, and the phone will ring again. Accept the call and have fun
+
+---
+
+## Looking at Call Records
+
+1. After a call is completed, in a couple of minutes, the call record will be created and can be accessed from two locations:
+   - In the profile of the team member that handled the call.
+     - To access that, go to your "Tasks" tab in the navigation bar, select "My Call List"
+       <Frame>
+         ![](/images/Sales-81.png)
+       </Frame>
+     - If you are unable to find your Tasks tab, you can edit your tab to add that by clicking on the pencil icon on the right side of the navigation bar
+       <Frame>
+         ![](/images/Sales-82.png)
+       </Frame>
+     - Then find "Tasks" in the list. If not there, click on "Add more items" to search for it. Select it and save
+       <Frame>
+         ![](/images/Sales-83.png)
+       </Frame>
+   - In the Contact → Activity Page:
+
+<Frame>
+  ![](/images/Sales-84.png)
+</Frame>
+
+2. Click on the call record you want to access and the call record page will open. There are 2 links with more details on the call:
+   - AC Contact Trace Record
+   - AC Contact Channel Analysis
+     <Frame>
+       ![](/images/Sales-85.png)
+     </Frame>
+   - AC Contact Trace Record - it has details on date, time stamps, call duration, etc. And other information on call routing and how the call records are being stored in the backend:
+     <Frame>
+       ![](/images/Sales-86.png)
+     </Frame>
+   - AC Contact Channel Analysis - Call Recording, Sentiment Analysis and Transcription. At this moment, Sentiment Analysis and Transcription are not loading yet, but call recording is already accessible:
+     - Note: To be able to see and play the call recording, you will need to be logged into Amazon Connect. If you are signed in into your dialer, you should be able to access that. If not, you can go to [this page](https://latchelphone.my.connect.aws/home) to verify if you are logged in, and if not, log in.
+       <Frame>
+         ![](/images/Sales-87.png)
+       </Frame>
+
+---
+
+## How to Practice using the Phone
+
+If you would like to practice making outbound calls or receiving inbound calls, as well as see what experience the caller has when calling you, you can place some test calls!
+
+**For Inbound / Receiving a Call**
+
+- Place yourself in Available
+- Use your cell phone to call the Latchel number: 866-906-0508
+- Listen the prompts and select the appropriated ones to route to your team, then to you
+- Make sure you mute your cell phone and the dialer to avoid the sound to loop and make a horrible noise! If you want to talk to yourself, unmute just one of the phones
+
+**For Outbound / Making a Call**
+
+- Place yourself in Available
+- Call your cell phone, or another person
+- If calling yourself, make sure you mute your cell phone and the dialer to avoid the sound to loop and make a horrible noise! If you want to talk to yourself, unmute just one of the phones
+
+---
+
+## Links to Amazon Connect Help Pages
+
+The Amazon Connect dialer has other functionalities that we haven't implemented yet. If you are curios to learn more about it, check out these pages:
+
+1. [What is Amazon Connect?](https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html)
+2. [Agent Training Guide](https://docs.aws.amazon.com/connect/latest/adminguide/agent-user-guide.html)
