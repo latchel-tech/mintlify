@@ -28,11 +28,31 @@ Once a valid season is detected, the script evaluates each PM row by row. It che
 
 Depending on the evaluation, **Column Z (Seasonal Reminder Sent)** is automatically updated with one of the following statuses:
 
-| **Evaluation Criteria** | **Outreach Action** | **Status Logged in Column Z** | **Next Steps** |
-| --- | --- | --- | --- |
-| PM is listed on the **PM Exclusions** tab. | **None.** The PM is bypassed. | `Exempt - Excluded from Outreach` | Skipped until removed from the exclusions list. |
-| Column R is marked as **"No"** (Settings not required). | **None.** The PM is bypassed. | `N/A - Settings Not Required` | Skipped. No outreach necessary. |
-| PM is not exempt, settings are required, and the email hasn't been sent yet for the current season. | **Email Sent.** The PM receives the seasonal reminder. | `Sent - [Current Season]` _(e.g., Sent - Spring 2026)_ | Automatically updates logging columns (AA  - AD).Last Reminder Sent DateEmail TimeStampEmail SubjectNext Reminder Date |
+<AccordionGroup>
+  <Accordion title="PM is listed on the PM Exclusions tab.">
+    |  | What to do |
+    | --- | --- |
+    | **Outreach Action** | **None.** The PM is bypassed. |
+    | **Status Logged in Column Z** | `Exempt - Excluded from Outreach` |
+    | **Next Steps** | Skipped until removed from the exclusions list. |
+  </Accordion>
+
+  <Accordion title='Column R is marked as "No" (Settings not required).'>
+    |  | What to do |
+    | :-- | :-- |
+    | **Outreach Action** | **None.** The PM is bypassed. |
+    | **Status Logged in Column Z** | `N/A - Settings Not Required` |
+    | **Next Steps** | Skipped. No outreach necessary. |
+  </Accordion>
+
+  <Accordion title="PM is not exempt, settings are required, and the email hasn't been sent yet for the current season.">
+    |  | What to do |
+    | :-- | :-- |
+    | **Outreach Action** | **Email Sent.** The PM receives the seasonal reminder. |
+    | **Status Logged in Column Z** | `Sent - [Current Season]` _(e.g., Sent - Spring 2026)_ |
+    | **Next Steps** | Automatically updates logging columns (AA  - AD).Last Reminder Sent DateEmail TimeStampEmail SubjectNext Reminder Date |
+  </Accordion>
+</AccordionGroup>
 
 ### **Step 3: Workflow Types & Messaging Logic**
 
@@ -40,7 +60,7 @@ If a PM qualifies for the seasonal reminder, an email is dispatched to the Prima
 
 **Email Template:**
 
-\*\*Subject: \*\*_<u>Action Required: Verify your Emergency Contact List settings for \[Upcoming Season\]</u>_
+Subject: _<u>Action Required: Verify your Emergency Contact List settings for \[Upcoming Season\]</u>_
 
 **Body:**
 
@@ -50,7 +70,7 @@ _As we approach \[Season\], which brings a higher volume of service requests, we
 
 **_To verify or update your settings, please follow these steps:_**
 
-1. _Log in to your [<u>Latchel Account</u>](https://app.latchel.com/admin/account)._
+1. _Log in to your [Latchel Account](https://app.latchel.com/admin/account)._
 2. _Click on your profile picture in the top right corner._
 3. _Navigate to Account Settings \> Details \> Maint. Communication Settings._
 4. _Scroll down to the Emergency Escalation Contacts List and update it accordingly. (Note: If you need to update your Pre-Dispatch Instructions, please contact your CSM via the Latchel Support Chat)._

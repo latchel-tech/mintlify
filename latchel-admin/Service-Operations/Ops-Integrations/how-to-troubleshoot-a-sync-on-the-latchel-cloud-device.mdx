@@ -14,11 +14,11 @@ groups: ["latchel"]
 ## Overview
 
 <Tip>
-  **TIP:** To identify the last sync date, open the [**Integration Health Metrics**](https://docs.google.com/spreadsheets/d/1lqN_yI3vZUehb9BZylCvXK0KU-PFfpJCkDvw1_sgWug/edit?gid=186001220#gid=186001220) dashboard, go to the **PM Metrics** tab, and filter column **Q — Is the integration run by Latchel?** to show only rows marked **Yes**. Then check column **J — Last import date**. **<u>If you don’t have editor access, you can review the [Latchel Internal Sync PMs list](https://docs.google.com/spreadsheets/d/1FZQ_gcofCAjOcqk4Sb9_lIKlRK_3zUIEAUon-PA40q0/edit?gid=0#gid=0) and compare it with the Integration Health Metrics Dashboard</u>** (_You can use CTRL \+ F to search for each PM_).
+  **TIP:** To identify the last sync date, open the [**Integration Health Metrics**](https://docs.google.com/spreadsheets/d/1lqN_yI3vZUehb9BZylCvXK0KU-PFfpJCkDvw1_sgWug/edit?gid=186001220#gid=186001220) dashboard, go to the **PM Metrics** tab, and filter column **Q — Is the integration run by Latchel?** to show only rows marked **Yes**. Then check column **J — Last import date**. **If you don’t have editor access, you can review the [Latchel Internal Sync PMs list](https://docs.google.com/spreadsheets/d/1FZQ_gcofCAjOcqk4Sb9_lIKlRK_3zUIEAUon-PA40q0/edit?gid=0#gid=0) and compare it with the Integration Health Metrics Dashboard** (_You can use CTRL \+ F to search for each PM_).
 </Tip>
 
 <Tip>
-  **Monitor the internal Latchel syncs daily.** The PM Metrics query runs every day between 7–8 a.m. and 7–8 p.m CST. If you notice a PM whose date isn’t updated to today’s date in the **Last import date** column, you will need to troubleshoot the sync. **<u>It’s best to troubleshoot the sync before the alerts are triggered in the #integration-sync-issues-internal channel</u>**.
+  **Monitor the internal Latchel syncs daily.** The PM Metrics query runs every day between 7–8 a.m. and 7–8 p.m CST. If you notice a PM whose date isn’t updated to today’s date in the **Last import date** column, you will need to troubleshoot the sync. **It’s best to troubleshoot the sync before the alerts are triggered in the #integration-sync-issues-internal channel**.
 </Tip>
 
 ## Step by step
@@ -36,7 +36,7 @@ a. If, for any reason, an alert notification for the following triggers in [#int
 - Integration hasn’t run in 2 days
 - Integration hasn’t run in 4 days
 
-you will need to acknowledge the notification and proceed to step 2. **<u>If this is not the case, please skip step 1 and proceed to step 2 if necessary.</u>**
+you will need to acknowledge the notification and proceed to step 2. **If this is not the case, please skip step 1 and proceed to step 2 if necessary.**
 
 <Frame>
   ![image-20251216-204807.png](/images/Intg-72.png)
@@ -49,15 +49,15 @@ you will need to acknowledge the notification and proceed to step 2. **<u>If thi
   - Data Sync Error: Properties, Tenant, Work Orders
   - Latchel Sync Request
 
-  **<u>are currently handled by Trisha. In the future, these will also be monitored by other team members.</u>**
+  **are currently handled by Trisha. In the future, these will also be monitored by other team members.**
 </Note>
 
-### \*\*Step 2: Log in to the Remote Server Cloud \*\*
+### Step 2: Log in to the Remote Server Cloud
 
 a. Log in to the designated **Latchel cloud account** where syncs are managed. b. Log in using the credentials provided
 
 <Tip>
-  Currently, only members of the **Latchel Integration Team and Ops Support** have access to the Latchel cloud account. If you have been approved for access, <u>reach out to **Trisha** to **request login credentials**.</u>
+  Currently, only members of the **Latchel Integration Team and Ops Support** have access to the Latchel cloud account. If you have been approved for access, reach out to Trisha to request login credentials.
 </Tip>
 
 ### **Step 3: Connect to the TeamViewer Virtual Desktop**
@@ -70,7 +70,7 @@ a. Once logged in, go to **Devices** and click **Connect**.
 
 ### **Step 4: Troubleshoot the Sync in the PM's Profile**
 
-a. A virtual desktop will load. **<u>Open the Chrome browser if the PMs tab isn’t already open.</u>** 
+a. A virtual desktop will load. **Open the Chrome browser if the PMs tab isn’t already open.**
 
 <Frame>
   ![image-20260603-212956.png](/images/Intg-74.png)
@@ -90,7 +90,7 @@ b. **Select the specific PM profile** you need to check and identify the issue:
 </Frame>
 
 3. To confirm the sync was completed successfully, go to Latchel and open the PM’s profile.
-4. Then, go to the Integrations tab and, under Latest CSVs received for import, **<u>check the syncs for Property and Tenant</u>**. **<u>The date should be updated to today’s date</u>**.
+4. Then, go to the Integrations tab and, under Latest CSVs received for import, **check the syncs for Property and Tenant**. **The date should be updated to today’s date**.
 
 <Warning>
   The sync for **owners** and **work orders (jobs)** doesn’t always run daily, as it depends on whether the PM has work orders to sync and on the subscription type. Also, _owner syncing is being enabled gradually by the Engineering team._
@@ -109,12 +109,12 @@ b. **Select the specific PM profile** you need to check and identify the issue:
 </Note>
 
 <Tip>
-  If, for any reason, the sync doesn’t go through, review whether the PM removed report access. You can check the following [job aid](https://help.latchel.com/how-to-grant-report-permissions-to-latchel-in-appfolio) to learn which reports are required for the sync. **<u>If this is the root cause of the sync issue, communicate it to Trisha</u>**. The alerts will continue to trigger, and once they reach **“Integration hasn’t run in \+4 days,”** the CSM will be notified.
+  If, for any reason, the sync doesn’t go through, review whether the PM removed report access. You can check the following [job aid](https://help.latchel.com/how-to-grant-report-permissions-to-latchel-in-appfolio) to learn which reports are required for the sync. **If this is the root cause of the sync issue, communicate it to Trisha**. The alerts will continue to trigger, and once they reach **“Integration hasn’t run in \+4 days,”** the CSM will be notified.
 </Tip>
 
 ### **Step 6: Keep the Session Active.**
 
-a. After troubleshooting, **<u>ensure ALL the client’s Chrome profile tabs remain open</u>** in the virtual desktop. This allows the syncs to continue running automatically.
+a. After troubleshooting, **ensure ALL the client’s Chrome profile tabs remain open** in the virtual desktop. This allows the syncs to continue running automatically.
 
 ### **Step 7: Close the Connection Correctly**
 

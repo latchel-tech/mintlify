@@ -16,7 +16,7 @@ groups: ["latchel"]
 
 **<u>Dashboard structure:</u>**
 
-#### \*\*a) Tab 1: \*\*[**Work Order Submission Monitoring**](https://docs.google.com/spreadsheets/d/1tUzHMzy3eJUZg_5orOYPnj4CNPtwgiMW89YPbt4Ccd4/edit?gid=111199548#gid=111199548)
+#### a) Tab 1: [**Work Order Submission Monitoring**](https://docs.google.com/spreadsheets/d/1tUzHMzy3eJUZg_5orOYPnj4CNPtwgiMW89YPbt4Ccd4/edit?gid=111199548#gid=111199548)
 
 This tab contains the source data from Latchel Console & [Looker Studio](https://lookerstudio.google.com/u/1/reporting/c1c949eb-4ba9-49ad-b180-9e4a9140357a/page/ZAOLF) for all PMs with less than 120 days on the platform. It is used to track the daily volume and origin of work orders and detect PMs who are not meeting the adoption target.
 
@@ -28,21 +28,21 @@ This tab contains the source data from Latchel Console & [Looker Studio](https:/
 
 | **Column** | **Description** |
 | --- | --- |
-| \*\*A: \*\*PM Company Name | Name of the property management company. |
-| \*\*B: \*\*Software Type | Type of PMS (Property Management Software) in use. |
-| \*\*C: \*\*Days Since Start | Days elapsed since the subscription start date. |
-| \*\*D: \*\*Total Work Order Submissions (Latest Daily Total) | Number of work orders received in the past 24 hours. |
-| \*\*E: \*\*Total Work Orders Created Through Latchel Intake (Latest Daily Total) | Number of work orders received via Latchel in the past 24 hours. |
-| \*\*F: \*\*Total Work Orders Created Via External Sources (Latest Daily Total) | Number of work orders received outside Latchel in the past 24 hours. |
-| \*\*G: \*\*Total Work Order Submissions (Total to Date) | Number of work orders received since the subscription start date. |
-| \*\*H: \*\*Total Work Orders Created Through Latchel Intake (Total to Date) | Number of work orders submitted via Latchel since the subscription start date. |
-| \*\*I: \*\*Total Work Orders Created Via External Sources (Total to Date) | Number of work orders received outside Latchel since the subscription start date. |
-| \*\*J: \*\*Total Submission Target Percentage | Target percentage of work orders submitted through Latchel. **Target = 90%\+.** |
-| \*\*K: \*\*Submission Target Status (Overall) | If a PM's percentage is below 90%, it will display **“Below target.”** For percentages of 90% or higher, it will display **“On target.”** |
-| \*\*L: \*\*Total Consecutive Days Below Target | Number of consecutive days below the target. Those who reach **15, 30, and 45 days** below target will be flagged in the PM Risk Alert Hub tab. |
-| \*\*M: \*\*Work Order Source | This indicates the source the PM used to submit work orders. |
+| A: PM Company Name | Name of the property management company. |
+| B: Software Type | Type of PMS (Property Management Software) in use. |
+| C: Days Since Start | Days elapsed since the subscription start date. |
+| D: Total Work Order Submissions (Latest Daily Total) | Number of work orders received in the past 24 hours. |
+| E: Total Work Orders Created Through Latchel Intake (Latest Daily Total) | Number of work orders received via Latchel in the past 24 hours. |
+| F: Total Work Orders Created Via External Sources (Latest Daily Total) | Number of work orders received outside Latchel in the past 24 hours. |
+| G: Total Work Order Submissions (Total to Date) | Number of work orders received since the subscription start date. |
+| H: Total Work Orders Created Through Latchel Intake (Total to Date) | Number of work orders submitted via Latchel since the subscription start date. |
+| I: Total Work Orders Created Via External Sources (Total to Date) | Number of work orders received outside Latchel since the subscription start date. |
+| J: Total Submission Target Percentage | Target percentage of work orders submitted through Latchel. **Target = 90%\+.** |
+| K: Submission Target Status (Overall) | If a PM's percentage is below 90%, it will display **“Below target.”** For percentages of 90% or higher, it will display **“On target.”** |
+| L: Total Consecutive Days Below Target | Number of consecutive days below the target. Those who reach **15, 30, and 45 days** below target will be flagged in the PM Risk Alert Hub tab. |
+| M: Work Order Source | This indicates the source the PM used to submit work orders. |
 
-#### \*\*b) \*\*[**Tab 2: PM Risk Alert Hub**](https://docs.google.com/spreadsheets/d/1tUzHMzy3eJUZg_5orOYPnj4CNPtwgiMW89YPbt4Ccd4/edit?gid=555935922#gid=555935922)
+#### b) [**Tab 2: PM Risk Alert Hub**](https://docs.google.com/spreadsheets/d/1tUzHMzy3eJUZg_5orOYPnj4CNPtwgiMW89YPbt4Ccd4/edit?gid=555935922#gid=555935922)
 
 This tab is dynamically populated using a script. **<u>It logs and updates alerts generated when a PM reaches 15, 30, or 45 consecutive days below the adoption target</u>**, enabling centralized tracking.
 
@@ -54,19 +54,19 @@ This tab is dynamically populated using a script. **<u>It logs and updates alert
 
 | **Column** | **Description** |
 | --- | --- |
-| \*\*A: \*\*PM Company Name | Name of the property management company. |
-| \*\*B: \*\*Software Type | Type of PMS in use. |
-| \*\*C: \*\*CSM | CSM assigned to the PM company. |
-| \*\*D: \*\*Days Since Start | Days elapsed since monitoring began. |
-| \*\*E: \*\*Total Submission Target Percentage | Target percentage of work orders submitted through Latchel. |
-| \*\*F: \*\*Submission Target Status (Overall) | Status: **"Below target"**, meaning below 90%. |
-| \*\*G: \*\*Total Days Below Target | Number of consecutive days below the target (15, 30, or 45 days). |
+| A: PM Company Name | Name of the property management company. |
+| B: Software Type | Type of PMS in use. |
+| C: CSM | CSM assigned to the PM company. |
+| D: Days Since Start | Days elapsed since monitoring began. |
+| E: Total Submission Target Percentage | Target percentage of work orders submitted through Latchel. |
+| F: Submission Target Status (Overall) | Status: **"Below target"**, meaning below 90%. |
+| G: Total Days Below Target | Number of consecutive days below the target (15, 30, or 45 days). |
 | **H:** Email Timestamp | Date/time when the alert email, including the help guides, was sent. |
-| \*\*I: \*\*Email Subject | Personalized email subject line sent to the PM. |
-| \*\*J: \*\*Issue flagged in Slack for stakeholders' review | Always displays **“Yes”** when a Slack alert is generated. |
-| \*\*K: \*\*Slack Timestamp | Date/time when the Slack alert was sent. |
-| \*\*L: \*\*Slack Link | Slack alert link. |
+| I: Email Subject | Personalized email subject line sent to the PM. |
+| J: Issue flagged in Slack for stakeholders' review | Always displays **“Yes”** when a Slack alert is generated. |
+| K: Slack Timestamp | Date/time when the Slack alert was sent. |
+| L: Slack Link | Slack alert link. |
 
 <Note>
-  You’ll need to monitor the dashboard whenever an AppFolio customer falls below target.\*\* If they reach 10 days below target, escalate to the assigned CSM \*\*<u>to determine whether automated notifications should be sent to the PM or if the PM should be exempt from outreach</u>. For more reference, see the SOP guide
+  You’ll need to monitor the dashboard whenever an AppFolio customer falls below target. If they reach 10 days below target, escalate to the assigned CSM <u>to determine whether automated notifications should be sent to the PM or if the PM should be exempt from outreach</u>. For more reference, see the SOP guide
 </Note>

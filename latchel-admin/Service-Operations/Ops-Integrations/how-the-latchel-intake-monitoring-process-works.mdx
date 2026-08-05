@@ -2,3 +2,93 @@
 title: "How: the Latchel Intake monitoring process works"
 groups: ["latchel"]
 ---
+
+<Note>
+  The purpose of this SOP is to detail the end-to-end automated process that detects, classifies, alerts, and helps resolve low Latchel Intake adoption by PMs, using automated emails and Slack notifications.
+</Note>
+
+<Tip>
+  A script monitors the [**Work Order Submission Monitoring**](https://docs.google.com/spreadsheets/d/1tUzHMzy3eJUZg_5orOYPnj4CNPtwgiMW89YPbt4Ccd4/edit?gid=111199548#gid=111199548) tab. **When a PM reaches 15, 30, or 45 consecutive days below the 90% adoption target**, the script creates an entry in the [PM Risk Alert Hub ](https://docs.google.com/spreadsheets/d/1tUzHMzy3eJUZg_5orOYPnj4CNPtwgiMW89YPbt4Ccd4/edit?gid=555935922#gid=555935922)tab and triggers email and Slack notifications to the appropriate stakeholders.
+</Tip>
+
+## Step by step
+
+### Step 1: Issue Detection
+
+a. Whenever a problem is identified in the **Work Order Submission Monitoring** tab, a matching row is created in the **PM Risk Alert Hub** tab.
+
+b. Columns **A – G** are automatically filled with the data pulled from **Work Order Submission Monitoring.**
+
+<Frame>
+  ![image-20250629-202019.png](/images/Intg-109.png)
+</Frame>
+
+c. For each issue, an email guide is sent to the PM and their team—except for **“15 days below target,”** which is sent to the Primary member only.
+
+d. Once the email is sent, **columns H and I** are updated automatically.
+
+<Frame>
+  ![image-20250629-202358.png](/images/Intg-110.png)
+</Frame>
+
+e. Slack workflows are triggered for stakeholders’ review after the email is sent to the Property Manager. **Columns J–L** are updated automatically.
+
+<Frame>
+  ![image-20250629-202644.png](/images/Intg-111.png)
+</Frame>
+
+### **Step 2: Notification Logic**
+
+a. Depending on the number of consecutive days a PM is below the 90% adoption target, the following actions will be triggered.
+
+**The issues currently flagged are:**
+
+| **Milestone** **(Days Below Target)** | **Email Recipients** | **Slack Notification** | **Slack Channel** |
+| --- | --- | --- | --- |
+| **15 days** | Primary email only | CSM (⚠️PM Risk Alert) | [#customer-success](https://latchel.slack.com/archives/CLB7U1KRC) |
+| **30 days** | Primary \+ Other member contacts | CSM (⚠️PM Risk Alert) | [#customer-success](https://latchel.slack.com/archives/CLB7U1KRC) |
+| **45 days** | Primary \+ Other member contacts | CSM (🚨PM Risk: Action Required) | [#customer-success](https://latchel.slack.com/archives/CLB7U1KRC) |
+
+<Note>
+  _The template email includes hyperlinks to job-aid guides for rerouting requests to Latchel and will be sent from [success@latchel.com](mailto:success@latchel.com). If a PM replies, the PS team should escalate the case to the CSM immediately._
+</Note>
+
+Below are the templates that will be sent to the PM and the relevant stakeholders:
+
+<Accordion title="Workflow Types & Messaging Logic:">
+  #### **Email Template (Sent to PMs)**
+
+  **_Subject:_** Latchel Submission Status Alert
+
+  **_Body:_**
+
+  _Hi \[PM Company Name\],_
+
+  Just wanted to let you know about your account. We're seeing quite a few work orders continue to be created through Appfolio. To keep things running smoothly and avoid delays, it's best if residents submit their requests directly through Latchel.
+
+  Here are a few quick guides to help you update your settings:
+
+  - [**Adding a banner**](https://docs.google.com/document/d/1DtHslx9TNsNsT2_P3BSR13GGudccR1CK6SgIX4y3ulM/edit?tab=t.0) in the Appfolio Tenant Portal to reroute your maintenance to Latchel. Banner Text: Banner Text: “Heads up for Residents: We've got a faster, easier maintenance request portal now. Please submit all requests here: [https://app.latchel.com/maintenance-request](https://app.latchel.com/maintenance-request) _. For EMERGENCIES, give us a call at (206) 717-8374.”_
+  - [**Submitting a support request**](https://docs.google.com/document/d/1eeRy0WLAibHU3c3rTHCUFNWiIYS-47TWz_S6ntuWhQo/edit?tab=t.0) in AppFolio to turn OFF maintenance requests. FYI: Appfolio might say you can't disable requests, but you actually can! If you're having trouble, we can set up an integration to automatically send Appfolio work orders to Latchel.
+  - [**Adding Online Maintenance Request Instructions**](https://docs.google.com/document/d/117qOtQIolwwjXMtj5ttJ7lvXRfBLZWCSGQkjlPNuQ4s/edit?tab=t.0) in AppFolio Use this: "For quick and easy maintenance requests, please use this link: [https://app.latchel.com/maintenance-request](https://app.latchel.com/maintenance-request) _. For EMERGENCIES, call: (206) 717-8374."_
+
+  _We're here to make things easier for you. If you've got any questions or need a hand, feel free to schedule a chat with your dedicated Customer Success Manager:_ \[_[https://calendly.com/](https://calendly.com/)[AssignedCSM](https://www.google.com/url?sa=E&q=https%3A%2F%2Fcalendly.com%2F%5BAssigned)_.
+
+  _Best Regards,_ _Product Support Team_
+
+  ---
+
+  #### **Slack Workflows (Internal Notifications)**
+
+  1. **15 & 30 days below target:**
+
+  > _⚠️ **PM Risk Alert**_ Hi \[CSM Slack ID\], \[PM Company Name\] has been below the 90% target for submitting work orders through Latchel for the past \[15/30\] days. They may benefit from a refresher on change management best practices. Please keep an eye on their progress and provide support as needed._Customer information:_ **_Software Type:_** \[Appfolio\] **_Days Below Target:_** \[Number of days\] **_Current % Submission:_** \[Percentage\] **_Reminder sent to:_** \[Email recipients\]
+
+  2. **45 days below target:**
+
+  > _🚨 **PM Risk: Action Required**_ Hi \[CSM Slack ID\], \[PM Company Name\] has consistently remained below the 90% target for Latchel work order submissions via Latchel for the past 45 days. This extended trend suggests there may be deeper adoption or change management issues. Please prioritize outreach and support to help get them back on track._Customer information:_ **_Software Type:_** \[Appfolio\] **_Days Below Target:_** \[Number of days\] **_Current % Submission:_** \[Percentage\] **_Reminder sent to:_** \[Email recipients\]
+</Accordion>
+
+<Note>
+  For more reference, see the SOP guide [Latchel Intake Monitoring Dashboard](https://help.latchel.com/latchel-intake-monitoring-dashboard)
+</Note>

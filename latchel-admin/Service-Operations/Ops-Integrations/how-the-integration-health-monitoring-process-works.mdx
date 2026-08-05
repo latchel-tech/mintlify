@@ -9,12 +9,12 @@ groups: ["latchel"]
 </Note>
 
 <Tip>
-  A Script monitors the **PM Metrics tab, displays the issues detected in the[<u> Integration Issue PMs </u>](https://docs.google.com/spreadsheets/d/1lqN_yI3vZUehb9BZylCvXK0KU-PFfpJCkDvw1_sgWug/edit?gid=2021689109#gid=2021689109)tab,** and sends email guides to the PM team and real-time alerts to the appropriate stakeholders team in Slack when a new issue is detected. **Currently, only PMs using AppFolio software are flagged when an issue is detected.**
+  A Script monitors the **PM Metrics tab, displays the issues detected in the[ Integration Issue PMs ](https://docs.google.com/spreadsheets/d/1lqN_yI3vZUehb9BZylCvXK0KU-PFfpJCkDvw1_sgWug/edit?gid=2021689109#gid=2021689109)tab,** and sends email guides to the PM team and real-time alerts to the appropriate stakeholders team in Slack when a new issue is detected. **Currently, only PMs using AppFolio software are flagged when an issue is detected.**
 </Tip>
 
 ## Step by step
 
-### \*\* Step 1: Issue Detection\*\*
+### Step 1: Issue Detection
 
 a. Whenever a problem is identified in the **PM Metrics** tab, a matching row is created in **Integration Issue PMs**.
 
@@ -40,13 +40,57 @@ e. Depending on the issue, Slack workflows are triggered either immediately or a
 
 ### Step 2: The issues currently flagged are:
 
-| **Issue Type** | **Email Sent To** | **Slack Notification** | **Slack channel** | **Workflow Owner** | **Next Step if Unresolved** |
-| --- | --- | --- | --- | --- | --- |
-| Integration not running - 4 days | PM **Primary Member** (step by step guide included) | CPT is alerted to monitor | [<u>#cpt-updates</u>](https://latchel.slack.com/archives/C04TZ3Y8ZLK) | CPT | Escalates to “7 days” state |
-| Integration not running - 7 days | PM **Primary \+ Additional Members** (step by step guide included) | CPT continues monitoring | [<u>#cpt-updates</u>](https://latchel.slack.com/archives/C04TZ3Y8ZLK) | CPT | Escalates to “\> 7 days” state |
-| Integration not running - \+7 days | PM **Primary \+ Additional Members** (step by step guide included) | PS team is alerted to intervene | [<u>#ps-escalation</u>](https://latchel.slack.com/archives/C08475CCBGR) | PS Team | PS provides hands-on assistance |
-| Missing import date | — (no email) | CPT investigates root cause | [<u>#cpt-updates</u>](https://latchel.slack.com/archives/C04TZ3Y8ZLK) | CPT | CPT contacts PM once cause is found |
-| Outdated AppFolio version | PM **Primary \+ Additional Members** (step by step guide included) | If unresolved after **5 days**, PS team is alerted | [<u>#ps-escalation</u>](https://latchel.slack.com/archives/C08475CCBGR) | PS Team | PS supports PM until version is updated |
+<AccordionGroup>
+  <Accordion title="Integration not running - 4 days">
+    |  | Alerts |
+    | --- | --- |
+    | **Email sent to** | PM **Primary Member** (step by step guide included) |
+    | **Slack Notification** | CPT is alerted to monitor |
+    | **Slack Channel** | [#cpt-updates](https://latchel.slack.com/archives/C04TZ3Y8ZLK) |
+    | **Workflow Owner** | CPT |
+    | **Next Step if unresolved** | Escalates to “7 days” state |
+  </Accordion>
+
+  <Accordion title="Integration not running - 7 days">
+    |  | Alerts |
+    | :-- | :-- |
+    | **Email sent to** | PM **Primary \+ Additional Members** (step by step guide included) |
+    | **Slack Notification** | CPT continues monitoring |
+    | **Slack Channel** | [#cpt-updates](https://latchel.slack.com/archives/C04TZ3Y8ZLK) |
+    | **Workflow Owner** | CPT |
+    | **Next Step if unresolved** | Escalates to “\> 7 days” state |
+  </Accordion>
+
+  <Accordion title="Integration not running - +7 days">
+    |  | Alerts |
+    | :-- | :-- |
+    | **Email sent to** | PM **Primary \+ Additional Members** (step by step guide included) |
+    | **Slack Notification** | PS team is alerted to intervene |
+    | **Slack Channel** | [#ps-escalation](https://latchel.slack.com/archives/C08475CCBGR) |
+    | **Workflow Owner** | PS Team |
+    | **Next Step if unresolved** | PS provides hands-on assistance |
+  </Accordion>
+
+  <Accordion title="Missing import date">
+    |  | Alerts |
+    | :-- | :-- |
+    | Email sent to | — (no email) |
+    | Slack Notification | CPT investigates root cause |
+    | Slack Channel | [#cpt-updates](https://latchel.slack.com/archives/C04TZ3Y8ZLK) |
+    | Workflow Owner | CPT |
+    | Next Step if unresolved | CPT contacts PM once cause is found |
+  </Accordion>
+
+  <Accordion title="Outdated AppFolio version">
+    |  | Alerts |
+    | :-- | :-- |
+    | **Email sent to** | PM **Primary \+ Additional Members** (step by step guide included) |
+    | **Slack Notification** | If unresolved after **5 days**, PS team is alerted |
+    | **Slack Channel** | [#ps-escalation](https://latchel.slack.com/archives/C08475CCBGR) |
+    | **Workflow Owner** | PS Team |
+    | **Next Step if unresolved** | PS supports PM until version is updated |
+  </Accordion>
+</AccordionGroup>
 
 <u>Depending on the issue type, a step-by-step email template and a Slack workflow will be triggered. </u>Below are the templates that will be sent to the PM and the relevant stakeholders.
 
@@ -57,7 +101,7 @@ e. Depending on the issue, Slack workflows are triggered either immediately or a
 
   **_a) 4 days:_**
 
-  - \*\*PM Company: \*\*Name of the PM company
+  - PM Company: Name of the PM company
   - **Software:** Type of PMS
   - **Issue:** Integration hasn’t run in 4 days.
   - **Risk Status:** 🔳  Low — Monitor, requires attention!
@@ -68,11 +112,11 @@ e. Depending on the issue, Slack workflows are triggered either immediately or a
 
   1. _Ensure that you (or someone on your team) has downloaded and activated the Latchel Data Sync extension._
   2. _Have that team member log in to their AppFolio dashboard._
-  3. \_Locate the floating Latchel logo on the right-hand side of your Appfolio screen. \_
+  3. _Locate the floating Latchel logo on the right-hand side of your Appfolio screen._
   4. _Hover over the logo to reveal a pop-up panel._
   5. _Select “Click Here” in the panel to reinitiate the sync._
 
-  _For full details, see the following [<u>article</u>](https://help.latchel.com/s/topic/0TO5e000000h9wqGAA/How-to-Download-and-Activate-the-Latchel-Data-Sync#how-to-download-and-activate-the-latchel-data-sync)._
+  _For full details, see the following [article](https://help.latchel.com/s/topic/0TO5e000000h9wqGAA/How-to-Download-and-Activate-the-Latchel-Data-Sync#how-to-download-and-activate-the-latchel-data-sync)._
 
   _If you have additional questions, please respond to this email. Thank you for helping us keep your data flowing smoothly._
 
@@ -80,22 +124,22 @@ e. Depending on the issue, Slack workflows are triggered either immediately or a
 
   **_b) 7 days:_**
 
-  - \*\*PM Company: \*\*Name of the PM company
+  - PM Company: Name of the PM company
   - **Software:** Type of PMS
   - **Issue:** The PM has been emailed, yet the Integration hasn’t run in 7 days.
   - **Risk Status:** 🔶 Medium — Should be addressed ASAP.
   - **Reminder successfully sent to:**  Email sent to the Primary member and Other company members to take action.
-  - \*\*Assigned to: \*\*CPT (The team will receive a notification in Slack every time a workflow is generated for a PM company)**Email Template:**_Hi \[PM Company\],_
+  - Assigned to: CPT (The team will receive a notification in Slack every time a workflow is generated for a PM company)**Email Template:**_Hi \[PM Company\],_
 
   _Our system shows that your integration has **not run for 7 days**. Extended downtime can lead to data gaps and missed updates, so we encourage you to restore the sync as soon as possible. Please follow these steps to resume the import:_
 
   1. _Ensure that you (or someone on your team) has downloaded and activated the Latchel Data Sync extension._
   2. _Have that team member log in to their AppFolio dashboard._
-  3. \_Locate the floating Latchel logo on the right-hand side of your Appfolio screen. \_
+  3. _Locate the floating Latchel logo on the right-hand side of your Appfolio screen._
   4. _Hover over the logo to reveal a pop-up panel._
   5. _Select “Click Here” in the panel to reinitiate the sync._
 
-  _For full details, see the following [<u>article</u>](https://help.latchel.com/s/topic/0TO5e000000h9wqGAA/How-to-Download-and-Activate-the-Latchel-Data-Sync#how-to-download-and-activate-the-latchel-data-sync)._
+  _For full details, see the following [article](https://help.latchel.com/s/topic/0TO5e000000h9wqGAA/How-to-Download-and-Activate-the-Latchel-Data-Sync#how-to-download-and-activate-the-latchel-data-sync)._
 
   _If you have additional questions, please respond to this email. Thank you for helping us keep your data flowing smoothly._
 
@@ -103,13 +147,13 @@ e. Depending on the issue, Slack workflows are triggered either immediately or a
 
   **_c) 7\+ days:_**
 
-  - \*\*PM Company: \*\*Name of the PM company
+  - PM Company: Name of the PM company
   - **Software:** Type of PMS
   - **Issue:** The PM has been emailed, yet the Integration hasn’t run in more than 7 days.
-  - \*\*Recommended action: \*\*Multiple step-by-step emails have been sent to the PM team to fix the issue, yet it persists. Please take the necessary actions to reach out and assist the PM team
+  - Recommended action: Multiple step-by-step emails have been sent to the PM team to fix the issue, yet it persists. Please take the necessary actions to reach out and assist the PM team
   - **Risk Status:** 🔴 High — Immediate attention required!
   - **Reminder successfully sent to:**  Email sent to the Primary member and Other company members to take action.
-  - \*\*Assigned to: \*\*PS Team (The team will receive a notification in Slack every time a workflow is generated for a PM company)
+  - Assigned to: PS Team (The team will receive a notification in Slack every time a workflow is generated for a PM company)
 
   **Email Template:**
 
@@ -119,11 +163,11 @@ e. Depending on the issue, Slack workflows are triggered either immediately or a
 
   1. _Ensure that you (or someone on your team) has downloaded and activated the Latchel Data Sync extension._
   2. _Have that team member log in to their AppFolio dashboard._
-  3. \_Locate the floating Latchel logo on the right-hand side of your Appfolio screen. \_
+  3. _Locate the floating Latchel logo on the right-hand side of your Appfolio screen._
   4. _Hover over the logo to reveal a pop-up panel._
   5. _Select “Click Here” in the panel to reinitiate the sync._
 
-  _For full details, see the following [<u>article</u>](https://help.latchel.com/s/topic/0TO5e000000h9wqGAA/How-to-Download-and-Activate-the-Latchel-Data-Sync#how-to-download-and-activate-the-latchel-data-sync)._
+  _For full details, see the following [article](https://help.latchel.com/s/topic/0TO5e000000h9wqGAA/How-to-Download-and-Activate-the-Latchel-Data-Sync#how-to-download-and-activate-the-latchel-data-sync)._
 
   _If you have additional questions, please respond to this email. Thank you for helping us keep your data flowing smoothly._
 
@@ -131,28 +175,28 @@ e. Depending on the issue, Slack workflows are triggered either immediately or a
 
   **2. ⏰ <u>Missing Import Date </u> (Slack workflow)**
 
-  - \*\*PM Company: \*\*Name of the PM company
+  - PM Company: Name of the PM company
   - **Software:** Type of PMS
-  - \*\*Issue: \*\*Last import date missing
+  - Issue: Last import date missing
   - **Recommended action:** Identify the root cause and send the PM the relevant article(s) to resolve it.
   - **Risk Status:** 🟠 Medium
-  - \*\*Assigned to:  \*\*CPT (The team will receive a notification in Slack every time a workflow is generated for a PM company)
+  - Assigned to:  CPT (The team will receive a notification in Slack every time a workflow is generated for a PM company)
 
-  \*\*       \*\* \*\* 3. <u>Outdated Appfolio integration version</u> (Email sent to the PM \+ Slack workflow **_sent after 5 days if the issue isn’t solved_**)\*\*
+  **3. <u>Outdated Appfolio integration version</u>** (Email sent to the PM \+ Slack workflow **_sent after 5 days if the issue isn’t solved_**)
 
-  - \*\*PM Company: \*\*Name of the PM company
+  - PM Company: Name of the PM company
   - **Software:** Type of PMS
-  - \*\*Issue: \*\*The property manager is using an outdated version of the AppFolio integration.
-  - \*\*Recommended action: \*\*Multiple step-by-step emails have been sent to the PM team to fix the issue, yet it persists. Please take the necessary actions to reach out and assist the PM team
+  - Issue: The property manager is using an outdated version of the AppFolio integration.
+  - Recommended action: Multiple step-by-step emails have been sent to the PM team to fix the issue, yet it persists. Please take the necessary actions to reach out and assist the PM team
   - **Risk Status:** 🟠 Medium
   - **Reminder successfully sent to**:  Email sent to the Primary member and Other company members to take action.
-  - \*\*Assigned to: \*\*PS Team (The team will receive a notification in Slack every time a workflow is generated for a PM company)
+  - Assigned to: PS Team (The team will receive a notification in Slack every time a workflow is generated for a PM company)
 
   **Email template:**
 
   _Hi \[PM Company\],_
 
-  \_We’ve detected you’re using an outdated AppFolio integration plugin. \_
+  We’ve detected you’re using an outdated AppFolio integration plugin.
 
   Your version: xxxx Updated version: xxxx
 
@@ -160,11 +204,11 @@ e. Depending on the issue, Slack workflows are triggered either immediately or a
 
   1. _Log out of AppFolio._
   2. _Remove the current Latchel Data Sync extension and refresh the page._
-  3. _Reinstall the latest version using this guide: [<u>How to Install the Latchel Data Sync</u>](https://help.latchel.com/s/topic/0TO5e000000h9wqGAA/How-to-Install-the-Latchel-Data-Sync-Extension) Extension._
+  3. _Reinstall the latest version using this guide: [How to Install the Latchel Data Sync](https://help.latchel.com/s/topic/0TO5e000000h9wqGAA/How-to-Install-the-Latchel-Data-Sync-Extension) Extension._
   4. _Log in to the Latchel Data Sync extension with your Latchel credentials._
   5. _Log back into AppFolio and run the sync again._
 
-  _For full details, see the following [<u>article</u>](https://help.latchel.com/s/topic/0TO5e000000h9wqGAA/Updating-the-Latchel-Data-Sync-Extension)._
+  _For full details, see the following [article](https://help.latchel.com/s/topic/0TO5e000000h9wqGAA/Updating-the-Latchel-Data-Sync-Extension)._
 
   _If you have additional questions, please respond to this email._
 
