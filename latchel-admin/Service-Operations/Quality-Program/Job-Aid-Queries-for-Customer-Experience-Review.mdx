@@ -19,8 +19,7 @@ groups: ["latchel"]
 
 #### Call Recording Sample
 
-```text
---random sample of calls this week
+```sql lines wrap
 WITH a as (SELECT u.user_id as agent_id, u.name, cl.recording_url, cl.duration, cl.created_at at time zone 'UTC' at time zone 'America/Los_Angeles' call_placed_latchel_time, CONCAT('', cl.call_log_id) as call_log_url from public.user_group ug
 	JOIN public.user_group_user ugu
 		ON ug.user_group_id = ugu.user_group_id
@@ -41,8 +40,7 @@ WHERE rn = 1;
 
 #### Webchat Sample
 
-```text
---webchats
+```sql lines wrap
 WITH a as (SELECT distinct ugu.user_id as agent_id, m.message_id 
 from public.user_group ug
 	JOIN public.user_group_user ugu
@@ -71,7 +69,7 @@ JOIN public.user pm
 
 #### Conversations from the last 7 days
 
-```text
+```sql lines wrap
 WITH Internal_Conversations AS (
 SELECT c.conversation_id
 FROM PUBLIC.conversation c 
