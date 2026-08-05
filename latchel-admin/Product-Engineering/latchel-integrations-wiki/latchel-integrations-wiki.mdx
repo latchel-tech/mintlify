@@ -8,15 +8,91 @@ This is a very high-level overview of Latchel’s integrations functionality. We
 
 ### What Features Are Available on Each Platform
 
-| **Feature** | **Appfolio** | **Buildium** | **Propertyware** | **Public API** | **Rent Manager** | **Rentvine** | **Yardi** |
-| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| **Property/Property/UnitProperty/UnitUnit** | Automatic, every 4 hours | Automatic, hourly | Automatic, every two hours | Available | Automatic, hourly | Automatic, hourly | Automatic, hourly |
-| **Resident** | Automatic, every 4 hours | Automatic, hourly | Automatic, every two hours | Available | Automatic, hourly | Automatic, hourly | Automatic, hourly |
-| **Vendor** | .csv upload available | .csv upload available | .csv upload available | Available | .csv upload available | .csv upload available | .csv upload available |
-| **Owner** | Automatic, every 4 hours | .csv upload available | .csv upload available | Available | .csv upload available | .csv upload available | .csv upload available |
-| **Work Order\*** | Automatic, every 4 hours | Automatic, hourly | Automatic, every two hours | Available | Automatic, hourly | Automatic, hourly | Automatic, hourly |
-| **Photos, Calls, SMS Logs** | manual download | manual download | Automatically uploaded when WO is completed | manual download | Automatically uploaded when WO is completed | manual download | manual download |
-| **Invoices** | manual download \+ email notification with invoice files | manual download \+ email notification with invoice files | Automatically uploaded when WO is completed | Available | Automatically uploaded when WO is completed | manual download \+ email notification with invoice files | manual download \+ email notification with invoice files |
+<AccordionGroup>
+  <Accordion title="Appfolio">
+    | **Feature** | **Sync Schedule** |
+    | :-- | :-- |
+    | **Property/Property/UnitProperty/Unit** | Automatic, every 4 hours |
+    | **Resident** | Automatic, every 4 hours |
+    | **Vendor** | .csv upload available |
+    | **Owner** | Automatic, every 4 hours |
+    | **Work Order** | Automatic, every 4 hours |
+    | **Photos, Calls, SMS Logs** | manual download |
+    | **Invoices** | manual download \+ email notification with invoice files |
+  </Accordion>
+
+  <Accordion title="Buildium">
+    | **Feature** | **Sync Schedule** |
+    | :-- | :-- |
+    | **Property/Property/UnitProperty/Unit** | Automatic, hourly |
+    | **Resident** | Automatic, hourly |
+    | **Vendor** | .csv upload available |
+    | **Owner** | .csv upload available |
+    | **Work Order\*** | Automatic, hourly |
+    | **Photos, Calls, SMS Logs** | manual download |
+    | **Invoices** | manual download \+ email notification with invoice files |
+  </Accordion>
+
+  <Accordion title="Propertyware">
+    | **Feature** | **Sync Schedule** |
+    | :-- | :-- |
+    | **Property/Property/UnitProperty/Unit** | Automatic, every two hours |
+    | **Resident** | Automatic, every two hours |
+    | **Vendor** | .csv upload available |
+    | **Owner** | .csv upload available |
+    | **Work Order\*** | Automatic, every two hours |
+    | **Photos, Calls, SMS Logs** | Automatically uploaded when WO is completed |
+    | **Invoices** | Automatically uploaded when WO is completed |
+  </Accordion>
+
+  <Accordion title="Public API">
+    | **Feature** | **Sync Schedule** |
+    | :-- | :-- |
+    | **Property/Property/UnitProperty/Unit** | Available |
+    | **Resident** | Available |
+    | **Vendor** | Available |
+    | **Owner** | Available |
+    | **Work Order\*** | Available |
+    | **Photos, Calls, SMS Logs** | manual download |
+    | **Invoices** | Available |
+  </Accordion>
+
+  <Accordion title="Rent Manager">
+    | **Feature** | **Sync Schedule** |
+    | :-- | :-- |
+    | **Property/Property/UnitProperty/Unit** | Automatic, hourly |
+    | **Resident** | Automatic, hourly |
+    | **Vendor** | .csv upload available |
+    | **Owner** | .csv upload available |
+    | **Work Order\*** | Automatic, hourly |
+    | **Photos, Calls, SMS Logs** | Automatically uploaded when WO is completed |
+    | **Invoices** | Automatically uploaded when WO is completed |
+  </Accordion>
+
+  <Accordion title="Rentvine">
+    | **Feature** | **Sync Schedule** |
+    | :-- | :-- |
+    | **Property/Property/UnitProperty/Unit** | Automatic, hourly |
+    | **Resident** | Automatic, hourly |
+    | **Vendor** | .csv upload available |
+    | **Owner** | .csv upload available |
+    | **Work Order\*** | Automatic, hourly |
+    | **Photos, Calls, SMS Logs** | manual download |
+    | **Invoices** | manual download \+ email notification with invoice files |
+  </Accordion>
+
+  <Accordion title="Yardi">
+    | **Feature** | **Sync Schedule** |
+    | :-- | :-- |
+    | **Property/Property/UnitProperty/Unit** | Automatic, hourly |
+    | **Resident** | Automatic, hourly |
+    | **Vendor** | .csv upload available |
+    | **Owner** | .csv upload available |
+    | **Work Order\*** | Automatic, hourly |
+    | **Photos, Calls, SMS Logs** | manual download |
+    | **Invoices** | manual download \+ email notification with invoice files |
+  </Accordion>
+</AccordionGroup>
 
 <Note>
   See the individual reference guide of each integration to learn the specific sync requirements

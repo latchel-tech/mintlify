@@ -72,7 +72,9 @@ In this step, the data support team will clean and prepare the customer’s data
 
 #### **<u>4 – Activate the integration</u>**
 
-Complete the form on the PM's Integrations tab: [https://www.loom.com/share/ec4a4183ca844d6b9b33565f11e9dea6](https://www.loom.com/share/ec4a4183ca844d6b9b33565f11e9dea6) 
+Complete the form on the PM's Integrations tab:
+
+<iframe src="https://www.loom.com/embed/ec4a4183ca844d6b9b33565f11e9dea6" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
 
 ### **What happens when a customer first activates their integration?**
 
@@ -141,7 +143,7 @@ The following resident fields are brought over from Rentvine to Latchel. Current
 | contactID | ref\_user\_id |
 | name | name |
 | email | email |
-| phone | Primary phone number\* |
+| phone | Primary phone number |
 | propertyId | ref\_property\_id |
 | unitId | ref\_unit\_id |
 | Move In Date | move\_in\_date |
@@ -169,7 +171,7 @@ By default, work orders are not imported from Rentvine to Latchel. If CS or PS r
 | Description (first 50 characters) | name |
 | Description | Description |
 | scheduledStartDate | scheduled\_start |
-| Status\* | If the work order is vacant, set to “Scheduling with Vendor,” otherwise set  to “Diagnosing Issue” \*We don’t take the platform’s status into account when deciding which Latchel status to set when the WO is created. See rules above. |
+| Status | If the work order is vacant, set to “Scheduling with Vendor,” otherwise set  to “Diagnosing Issue” \*We don’t take the platform’s status into account when deciding which Latchel status to set when the WO is created. See rules above. |
 | Priority | is\_urgent is true if Priority is “High” (3) |
 | ContactID (tenant ID) | ref\_user\_id |
 

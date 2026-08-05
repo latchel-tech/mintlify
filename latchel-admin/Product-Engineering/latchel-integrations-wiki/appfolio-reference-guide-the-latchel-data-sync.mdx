@@ -16,7 +16,7 @@ This guide helps customer support agents understand and use the Latchel Data Syn
 3. Copy/Paste the **App Slug** into the corresponding field, and set the **Starting Sync Date** as today’s date, then hit **Save**.
 4. Navigate to **Miscellaneous Settings**
    - Designate which **Integration Sync Method** the client prefers (most clients choose the default Assigned Work Orders). 
-     - Reference the [<u>Latchel Data Sync Extension Reference Guide</u>](https://help.latchel.com/s/topic/0TO5e000000h9wqGAA/Latchel-Data-Sync-Extension-Reference-Guide#latchel-data-sync-extension-reference-guide "https://help.latchel.com/s/topic/0TO5e000000h9wqGAA/Latchel-Data-Sync-Extension-Reference-Guide#latchel-data-sync-extension-reference-guide") for additional details on the Sync Methods. 
+     - Reference the [Latchel Data Sync Extension Reference Guide](https://help.latchel.com/s/topic/0TO5e000000h9wqGAA/Latchel-Data-Sync-Extension-Reference-Guide#latchel-data-sync-extension-reference-guide "https://help.latchel.com/s/topic/0TO5e000000h9wqGAA/Latchel-Data-Sync-Extension-Reference-Guide#latchel-data-sync-extension-reference-guide") for additional details on the Sync Methods. 
    - Disable **Property Modification** and **Resident Modification**.
 5. Loom Video for reference.
 
@@ -29,15 +29,15 @@ The following steps can be shared with the client. Please be sure to modify the 
 - Create a new user in AppFolio which will be used to activate the Latchel Data Sync using the following information:
   - Email Address:
     - No Access Required: This can be any email address that you manage that isn’t tied to an existing user in Appfolio.
-    - CPT Access Required: [<u>pmcompanyname@ledgering.com</u>](mailto:pmcompanyname@ledgering.com)
+    - CPT Access Required: [pmcompanyname@ledgering.com](mailto:pmcompanyname@ledgering.com)
   - **Recommended User Role:** On-Site Manager
   - **First Name:** Team
   - **Last Name:** Latchel 
-- Here are the[<u> </u>](https://help.latchel.com/s/article/How-to-Download-and-Activate-the-Latchel-Data-Sync "https://help.latchel.com/s/article/How-to-Download-and-Activate-the-Latchel-Data-Sync")steps to [<u>download and activate the Latchel data sync</u>](https://help.latchel.com/s/topic/0TO5e000000h9wqGAA/How-to-Install-the-Latchel-Data-Sync-Extension "https://help.latchel.com/s/topic/0TO5e000000h9wqGAA/How-to-Install-the-Latchel-Data-Sync-Extension"). Please make sure you are using a Chrome browser before executing the steps listed in this guide.
+- Here are the[ ](https://help.latchel.com/s/article/How-to-Download-and-Activate-the-Latchel-Data-Sync "https://help.latchel.com/s/article/How-to-Download-and-Activate-the-Latchel-Data-Sync")steps to [download and activate the Latchel data sync](https://help.latchel.com/s/topic/0TO5e000000h9wqGAA/How-to-Install-the-Latchel-Data-Sync-Extension "https://help.latchel.com/s/topic/0TO5e000000h9wqGAA/How-to-Install-the-Latchel-Data-Sync-Extension"). Please make sure you are using a Chrome browser before executing the steps listed in this guide.
 
 ### **Step 3: Force Run Property & Resident Sync - Property Manager**
 
-If the properties and residents do not begin syncing right away (i.e. do not see imports or properties populating in [<u>app.latchel.com</u>](http://app.latchel.com)) then direct the customer to run a forced property sync. Below are the steps
+If the properties and residents do not begin syncing right away (i.e. do not see imports or properties populating in [app.latchel.com](http://app.latchel.com)) then direct the customer to run a forced property sync. Below are the steps
 
 1. Have the property manager share their entire screen and open the Chrome Developer Console (right click \+ Inspect, or Ctrl/Cmd \+ Shift \+ I, or three dot menu on Chrome \> More Tools \> Developer Tools.)
 2. Go to the Console tab: First paste in “allow pasting”, you’ll see a warning telling you to type in “allow pasting” and hit enter/run. (yes, it’s a weird security measure)
@@ -51,7 +51,7 @@ If the sync does not begin within 1 minute, then troubleshoot the permissions gr
 
 ## **Activating Latchel Data Sync (Existing Customer)**
 
-For any existing customer that wish to activate the Latchel Data Sync for the first time, please also enter your request in the [<u>#account-update-request</u>](https://latchel.slack.com/archives/C05CGVC9FPV "https://latchel.slack.com/archives/C05CGVC9FPV") slack channel using the Account Update Request Workflow. 
+For any existing customer that wish to activate the Latchel Data Sync for the first time, please also enter your request in the [#account-update-request](https://latchel.slack.com/archives/C05CGVC9FPV "https://latchel.slack.com/archives/C05CGVC9FPV") slack channel using the Account Update Request Workflow. 
 
 ## **Data Synchronization Overview**
 
@@ -119,7 +119,7 @@ Upon customer request, Latchel can create common area units for PM’s to manage
 
 How it works:
 
-1. A PM (or Latchel team member on behalf of a PM) submits a one-off request for common area maintenance on a specific building(s) via this Typeform: [<u>https://latchel.typeform.com/to/P8jj3FBx</u>](https://latchel.typeform.com/to/P8jj3FBx)
+1. A PM (or Latchel team member on behalf of a PM) submits a one-off request for common area maintenance on a specific building(s) via this Typeform: [https://latchel.typeform.com/to/P8jj3FBx](https://latchel.typeform.com/to/P8jj3FBx)
    - Why one-off requests only? We only want to enable common areas on specific addresses for customers who are actually going to create building-level work orders due to billing implications (they will appear as active units in Latchel for billing purposes).
 2. Latchel creates the common area unit via API.
    - This results in a record with a building ID but no ref unit ID.
@@ -154,7 +154,7 @@ When a tenant is first synced from Appfolio to Latchel, the following fields are
 
 **Conditions for Sync**:
 
-- Work order must be assigned to a “Latchel” user. See “[<u>Integration Sync Method</u>](https://latchel.atlassian.net/wiki/spaces/PROD/pages/edit-v2/2608824321#Integration-Sync-Method "https://latchel.atlassian.net/wiki/spaces/PROD/pages/edit-v2/2608824321#Integration-Sync-Method").”
+- Work order must be assigned to a “Latchel” user. See “[Integration Sync Method](https://latchel.atlassian.net/wiki/spaces/PROD/pages/edit-v2/2608824321#Integration-Sync-Method "https://latchel.atlassian.net/wiki/spaces/PROD/pages/edit-v2/2608824321#Integration-Sync-Method").”
 
 When a work order is first synced from Appfolio to Latchel, the following fields are mapped:
 
@@ -167,7 +167,7 @@ When a work order is first synced from Appfolio to Latchel, the following fields
 | Description | description |
 | Instructions | vendor\_description |
 | Max Cost | max\_cost |
-| Tenant\* | tenant\_id \*ref\_user\_id on job import |
+| Tenant | tenant\_id \*ref\_user\_id on job import |
 
 #### **Work Order Update conditions**
 
@@ -269,5 +269,5 @@ Customers can download the Chrome extension here: [Property Manager Visor - Chro
 <iframe src="https://www.loom.com/embed/4a3179232fb341a08b02a5044dfb7cb4" title="Loom video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
 
 <Note>
-  Note: The [<u>Exclude from Property Sync feature</u>](https://latchel.atlassian.net/wiki/spaces/PROD/pages/2608824321/Appfolio+Reference+Guide+The+Latchel+Data+Sync#Exclude-properties-from-import "https://latchel.atlassian.net/wiki/spaces/PROD/pages/2608824321/Appfolio+Reference+Guide+The+Latchel+Data+Sync#Exclude-properties-from-import") has been moved over to the Latchel Overlay extension.
+  Note: The [Exclude from Property Sync feature](https://latchel.atlassian.net/wiki/spaces/PROD/pages/2608824321/Appfolio+Reference+Guide+The+Latchel+Data+Sync#Exclude-properties-from-import "https://latchel.atlassian.net/wiki/spaces/PROD/pages/2608824321/Appfolio+Reference+Guide+The+Latchel+Data+Sync#Exclude-properties-from-import") has been moved over to the Latchel Overlay extension.
 </Note>
