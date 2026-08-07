@@ -1,0 +1,80 @@
+---
+title: "How to: Handle Work Orders with Incomplete Information"
+groups: ["latchel"]
+---
+## 🧠 What This Process Is Trying to Solve
+
+
+<Note>
+We want to prevent delays, confusion, and dropped maintenance requests caused by missing or unclear details in work orders. The goal is to ensure that every work order contains enough actionable information by providing a clear process for associates to follow when information is incomplete—whether that means reaching out to the resident or property manager for clarification, or properly documenting and closing out un-actionable requests.
+</Note>
+
+
+## Content
+
+
+## 📋 Step-by-Step Process
+
+
+### Step 1: Assess if the work order was Resident or Property Manager requested.
+
+1. Check to see if the unit is vacant. If so, then skip to Step 2b: Send to the Property Manager.
+2. Most work orders are resident requested. But if you see language that indicates the work order was created by the property manager (example: "INSPECTION" or "unit turn" or "Make ready"), then skip to Step 2b: Send to the Property Manager. Otherwise, go to Step 2a: Send to the Resident.
+
+
+### Step 2a: Send to the Resident
+
+
+<Note>
+📝 **NOTE**: If the resident reached out via SMS and you are already mid-way through collecting their information via text, you do not need to redirect them to the portal or phone. Continue the intake via SMS. Once you have enough detail (minimum: address + issue description), create the work order via incognito mode. Document that the intake was completed via SMS.
+</Note>
+
+1. This work order was requested by the resident. We need to request more information from the resident. We are going to send a message to the resident and request that they re-submit the work order via their personal dashboard.
+2. Go to the Resident's profile by clicking on the Resident's name
+
+<Frame>
+  <img src="/images/SVC-370.png" alt="" />
+</Frame>
+
+
+3. On the Resident profile, scroll down to Miscellaneous and copy the resident's Dashboard URL
+
+<Frame>
+  <img src="/images/SVC-371.png" alt="" />
+</Frame>
+
+
+4. Send a text message to the resident saying the following: Text Message templateWe got your request for {{brief description}} but we need more info. Please go here to submit your request again: {{Public dashboard url}}
+5. If the resident does NOT have a textable phone number, send an email to the resident via Assembly. Refer to [How to: Ask for assistance in the Slack channels](https://help.latchel.com/how-to-ask-for-assistance-in-the-slack-channels).
+6. If the resident does NOT have a textable phone number and does not have an email, call the resident and attempt to take the request over the phone. If you leave a voicemail, ask them to resubmit their request by calling the Latchel phone number. (See: [Informational: Basic Service Ops Guidelines and Rules](https://help.latchel.com/informational-basic-service-ops-guidelines-and-rules) for the latest phone number.)Voicemail ScriptHi {{name}} we received your maintenance request for {{brief description}} but we need more info. Can you please call (Latchel Phone Number here) to re-submit your request? We have some additional questions that need to be answered before we can dispatch for you.
+7. Cancel the work order. Reason: Insufficient information from resident. Send message to resident requesting more information.
+If it was a Assembly request: Do not create the work order, send a reply to the property managerEmail copyThere was no enough information to create this work order. We are requesting more information from the resident before moving forward. If you have more information about this work order please send it to us and we can begin scheduling and coordination work.
+
+
+### Step 2b: Send to the Property Manager
+
+1. This work order is for a vacant unit or was requested by the Property Manager. We need to send it to the Property Manager to get more information before proceeding.
+  1. If this is a Assembly request: first create the work order in Latchel. Start in **Pending** status.
+
+2. Escalate to the Operations Support Specialists (refer to [How to: Escalate Between Teams](https://help.latchel.com/how-to-escalate-between-teams)) for them to place the WO in Waiting for PM as follows:
+3. Put the work order on hold: Waiting for PM
+
+<Frame>
+  <img src="/images/SVC-372.png" alt="" />
+</Frame>
+
+
+4. In the "Please summarize why this action was taken" section put in a description of why you believe this isn't actionable.
+5. Assign the PM as the contact, select tomorrow morning for the follow-up date and time, and summarize next steps as Collecting (brief description of required information) from property manager before moving forward with the work order.
+6. Submit and you are done!
+
+
+## **🎯 When to Break This SOP**
+
+**Do not break or deviate from this SOP on your own authority.** Always escalate to an Ops Support specialist or follow explicit instructions if you believe an exception is necessary.
+
+
+## 💡 If You Think This SOP Could Be Improved...
+
+Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work?
+ 👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**

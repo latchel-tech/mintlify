@@ -1,0 +1,170 @@
+---
+title: "Troubleshooters: Handling Skill Assignment Tasks in Work Order Intake (Low Confidence, No Skill Match, and No Skill Assigned)"
+groups: ["latchel"]
+---
+## 🧠 What This Process Is Trying to Solve
+
+We want to prevent delays and errors in work order processing when skill assignment issues occur during intake. The goal is to ensure that every work order has the correct skill assigned as quickly as possible, so automation can continue, residents receive timely service, and operational efficiency is maintained.
+
+
+## 📋 Step-by-Step Process
+
+
+<Note>
+If at any point you determine that the issue qualifies as an Emergency per the PM Intake settings or may be a [PD/EH situation](https://help.latchel.com/how-to-identify-property-damage-and-extreme-habitability-situations), please call the resident to gather additional details. Please refer to [How to: Properly Diagnose Emergency Situations](https://help.latchel.com/how-to-properly-diagnose-emergency-situations) for guidance.
+</Note>
+
+
+### Step 1 - **Identify the Task Type**
+
+1. Review the task notification to determine if it is:
+  - **Low Confidence Skill Match Review**
+    - 
+
+<Frame>
+  <img src="/images/SVC-373.png" alt="image-20250813-174105.png" />
+</Frame>
+
+
+
+  - **No Skill Match Found**
+    - 
+
+<Frame>
+  <img src="/images/SVC-374.png" alt="image-20250813-174051.png" />
+</Frame>
+
+
+
+  - **No Trade and Skill Assigned to Work Order**
+    - 
+
+<Frame>
+  <img src="/images/SVC-375.png" alt="image-20250813-174126.png" />
+</Frame>
+
+
+
+
+
+
+### **Step 2 - Review Work Order Details**
+
+1. Open the work order and review all available information, including resident description, photos, and previous notes.
+
+
+### **Step 3 - Take Action Based on Task Type**
+
+1. **Low Confidence Skill Match Review:**
+  1. **📝** **NOTE**: _The work order will continue on automation based on the skill that was matched at intake, but the goal is for Ops to review the skill ASAP to validate that it looks ok._
+  2. Check the skill assigned by automation.
+  3. If correct, no further action is needed. Proceed directly to Step 5.
+  4. If not, update to the correct skill.
+
+2. **No Skill Match Found / No Trade and Skill Assigned to Work Order**
+  - Assign the most appropriate skill based on the work order summary.
+    - Refer to [(Admins Only) ↔ Job Aid: Service Provider Skills and Definitions](https://help.latchel.com/admins-only-job-aid-service-provider-skills-and-definitions)
+
+  - If information is unclear or missing, call the resident for clarification.
+  - If the resident is unresponsive, assign the skill that most closely matches the available details.
+
+
+
+### **Step 4 - Update the Work Order**
+
+1. Enter the selected skill in the **Skill Required** section at the top left of the work order screen.
+  1. Click the 3 dots at the top right portion of the Skill Tab. Click on “Edit Skill”
+    1. 
+
+<Frame>
+  <img src="/images/SVC-376.png" alt="image-20250813-175149.png" />
+</Frame>
+
+
+
+  2. Choose the skill that best fit the work order
+    1. 
+
+<Frame>
+  <img src="/images/SVC-377.png" alt="image-20250813-174948.png" />
+</Frame>
+
+
+
+
+2. Document any outreach or rationale for your decision in the work order notes.
+
+
+### **Step 5 - Complete the Task**
+
+1. Mark the task as complete.
+  - Ensure the work order status is updated so that automation and scheduling can proceed before you leave the work order.
+
+
+
+## [**❓**](https://help.latchel.com/how-to-handle-emergency-work-orders)**Frequently Asked Questions**
+
+FAQ: What should I do if a noise complaint has no available skill match?
+
+During intake, the system first attempts to identify the source of the noise (e.g., animals, vehicles, HVAC), as this allows selection of the appropriate skill.
+
+- If information is unclear or missing, call the resident for clarification.
+- If the noise complaint involves situations such as **domestic violence, vandalism, or trespassing**, and **no applicable skill is available**:
+  - Leave the skill field **blank**
+  - Proceed with completing the **TS task** generated due to the no-skill match.
+
+
+
+<Note>
+**Important:**
+If the situation appears to be **crime-related or poses an immediate safety risk**, refer to [**How to: Handle 911-Severity Type Work Orders**](https://help.latchel.com/how-to-handle-911-severity-type-work-orders) and follow the required escalation procedures.
+</Note>
+
+What should I do if a work order is created and I think it might be non-maintenance?
+
+If you reviewed that a work order created is a non-maintenance request, follow the below steps:
+
+1. **Determine the nature of the request:**
+  1. If it is clear that the request is non-maintenance (e.g., questions about rent, lease, or other non-repair issues), move to **Step 2**.
+  2. If it’s **unclear** whether the issue is maintenance-related or not, **call the resident** to confirm.
+    1. If the resident confirms that the issue is maintenance related, keep the work order and proceed to handle the request.
+    2. If the resident confirms that the issue is non-maintenance related, proceed to Step 2.
+    3. If the resident is unresponsive, create a task to the Property Manager using the Action Required task guidelines.
+      1. Refer to [How to: Put a Job on Hold](https://help.latchel.com/how-to-put-a-job-on-hold)
+
+
+
+2. **Cancel the Work Order and resubmit the request following the correct path for non-maintenance requests.**
+  1. Cancel the work order that was created.
+  2. Proceed to re-submit the request following the “**Request Non-Maintenance Help**” path.
+
+3. **Notify the Resident (SMS):**
+  1. **Confirmed non-maintenance request:**_Hi [Resident Name], we are reaching out about your submitted work order for “[Title of the Work Order].” We reviewed your request and confirmed that it is non-maintenance, so we’ve cancelled the work order and resubmitted your request to your Property Manager. They’ll be handling this directly for you. Thank you and please let us know if we can help you with anything else._
+  2. **Vague or unconfirmed non-maintenance request:**_Hi [Resident Name], we are reaching out about your submitted work order for “[Title of the Work Order].” We tried calling to confirm whether this request involves a maintenance issue but weren’t able to connect with you. Since we couldn’t confirm that this is a maintenance-related request, we’ve notified your Property Manager so they can review and assist you with this request directly. If you still need help with a repair, please reply with more details about the problem so we can reopen this as a maintenance work order if needed._
+
+4. **Notify the Property Manager (if necessary):**
+  1. Only relay the request to the Property Manager if absolutely necessary and it does not fit the above scenarios.
+    1. For work orders in **“Needs Approval”** status, ensure that a notification is sent to the Property Manager once the work order is cancelled. If no automatic notification is triggered, follow the established process to email the Property Manager’s notification group manually.
+
+
+
+PGAdmin Query
+
+`SELECT * FROM task WHERE task_template_id IN (1500, 1501);`
+
+
+---
+
+
+## 🎯 When to Break This SOP
+
+- If you are unsure which skill to assign or encounter an unusual scenario, escalate to Operations Support Specialist for guidance.
+
+
+---
+
+
+## 💡 If You Think This SOP Could Be Improved...
+
+Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work?
+ 👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**

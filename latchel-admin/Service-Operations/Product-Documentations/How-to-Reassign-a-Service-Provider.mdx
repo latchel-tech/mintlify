@@ -1,0 +1,330 @@
+---
+title: "How to: Reassign a Service Provider"
+groups: ["latchel"]
+---
+## 🧠 What This Process Is Trying to Solve
+
+We want to prevent confusion, delays, and billing issues when a service provider is unavailable, unresponsive, or needs to be changed on a work order. The goal is to ensure that only one provider is assigned at a time, all changes are properly documented, and no provider is removed after visiting the property. This process protects against double-dispatching, maintains clear communication with property managers and residents, and ensures a smooth billing and warranty process for both customers and Latchel.
+
+
+<Note>
+### **⬅️**What is happening prior to this process?
+
+There is a provider already assigned to a work order, but for some reason they are no longer available or selected to complete the work order.
+</Note>
+
+
+<Note>
+**DO NOT REASSIGN THE VENDOR ONCE THEY HAVE GONE OUT TO THE PROPERTY:**
+Service Providers should never be removed from a work order once they've already been out to the property, regardless of whether the job is completed or not. A new work order must be created if we need to reassign.
+
+- PMs may cancel an appointment only if it is at least one hour before the scheduled time. If they insist on canceling or removing the service provider within that hour, they should be made aware of a potential trip charge.
+- If the PM requests reassignment after the service provider has already visited the property, inform the PM and proceed by creating a new work order to handle the reassignment. Refer to [https://latchel.atlassian.net/wiki/spaces/OPS/pages/786859062/How+to+Reassign+a+Service+Provider#What-happens-if-the-PM-asks-us-to-reassign-another-service-provider-due-to-the-original-service-provider-being-unresponsive%2Funable-to-confirm-an-appointment%3F](https://help.latchel.com/how-to-reassign-a-service-provider).
+</Note>
+
+
+<Note>
+**LVN Service Provider**
+
+For guidance on managing unresponsive LVN service providers or on acceptable scenarios for reassigning an LVN service provider (such as PM requests or missed appointments), refer to [Handling Work Orders Assigned to LVN Service Providers](https://help.latchel.com/handling-work-orders-assigned-to-lvn-service-providers).
+</Note>
+
+
+<Note>
+For LCN service providers exhibiting observable behaviors—such as missed appointments or unreasonable excuses—that result in scheduling delays, ensure to update their critical note to reflect the missed appointment or scenario encountered. Follow the format below, as it will be used in the future to determine whether we can continue offering jobs to the service provider.
+
+
+#### **Critical Note Format:**
+
+📌 _Date | WO# | Missed Appointment/Unreasonable Behavior_
+
+If they miss **three consecutive WO appointments or unacceptable behaviors**, their profile can be disabled. Associates are expected to check recent work orders to identify any recently completed WOs, which may indicate a successful appointment. Refer to the 3rd step in [How to: Navigate Service Provider Profiles](https://help.latchel.com/how-to-navigate-service-provider-profiles) to disable a service provider’s account. Ensure to leave notes as well why they were disabled.
+</Note>
+
+
+## 📋 Step-by-Step Process
+
+
+### **Step 1 - Review the Work Order**
+
+Before making any changes, review the work order notes to identify all Service Providers who have already been contacted. This prevents associates from calling providers who have already declined.
+
+1. Review the Work Order Notes for prior SP contact history — both Associate and System messages.
+  1. **Note** any SPs who declined, were unresponsive, or already visited the property.
+  2. **Remember**: Service Providers can communicate with Latchel through their Service Provider Interface. Check for any messages received via that channel.
+    1. [How to: Navigate Service Provider Profiles](https://help.latchel.com/how-to-navigate-service-provider-profiles)
+
+
+
+
+<Note>
+#### Locked-In Service Provider
+
+Service Providers may be locked in to a work order when a PM specifically requests them. If the SP is locked-in, you cannot change the SP without first contacting the PM.
+</Note>
+
+
+### **Step 2 - Reassign to a New Service Provider**
+
+From the existing Work Order interface, navigate to the Service Provider section.
+
+1. **If you already have a specific SP to assign:** select "Edit SP"
+  1. Click the three dots on the right side of the SP panel.
+    1. Select "Edit SP".
+      1. 
+
+<Frame>
+  <img src="/images/SVC-298.png" alt="image-20241104-182759.png" />
+</Frame>
+
+
+      2. Select the Service Provider from the displayed list. You can use the "Search by Company Name" field to quickly find the right SP.
+        1. 
+
+<Frame>
+  <img src="/images/SVC-299.png" alt="image-20241104-182928.png" />
+</Frame>
+
+
+
+
+    2. **If you do NOT have a specific SP to assign:** select "Remove SP"
+      1. Click the three dots on the right side of the SP panel
+      2. Select "Remove SP". The Work Order will automatically move to "Finding Service Provider" status.
+      3. 
+
+<Frame>
+  <img src="/images/SVC-300.png" alt="image-20241104-181928.png" />
+</Frame>
+
+
+      4. 
+
+<Frame>
+  <img src="/images/SVC-301.png" alt="image-20241104-181955.png" />
+</Frame>
+
+
+      5. Click "Action" > "Find Service Provider" to trigger outreach to available providers.
+        1. 
+
+<Frame>
+  <img src="/images/SVC-302.png" alt="image-20241104-182447.png" />
+</Frame>
+
+
+        2. If no more Preferred Service Providers are available, proceed to handle the Work Order per your job duties and other applicable SOPs.
+
+
+
+
+
+
+### Step 3 — Notify the Resident
+
+After assigning the new Service Provider, send the resident a brief status update so they are not left without information — especially if this is not the first reassignment. This should be done promptly after the reassignment is confirmed.
+
+**Standard reassignment (first time):**
+
+_💬  "Hi [Resident Name]! I wanted to give you a quick update on your [issue type — e.g., plumbing, HVAC] request (WO #[WO number]). We've assigned a new service provider to take care of this for you, and they will be reaching out to schedule an appointment. We appreciate your patience, and please don't hesitate to reach out if you have any questions in the meantime. Thank you!" _
+
+**If the work order has been reassigned more than once:**
+
+_💬  "Hi [Resident Name]! I wanted to give you a quick update on your [issue type] request (WO #[WO number]). We understand this has taken longer than expected, and we sincerely apologize for the delay. We've assigned a new service provider who will be reaching out to schedule an appointment. We're committed to getting this resolved for you as quickly as possible. Please don't hesitate to reach out if you need anything. Thank you for your patience!"_
+
+
+### **Step 4 - Write Effective Notes**
+
+Write a note in the existing Work Order that documents your actions. Effective notes protect the work order record and enable team members to understand context without needing to call anyone.
+
+Your note should include:
+
+- Summary of why the reassignment occurred (SP declined, unresponsive, locked-in situation resolved, etc.)
+- Name of the prior SP and the new SP assigned
+- Whether you left a voicemail or had a conversation with the prior SP
+- Any PM instructions or approvals received
+- If escalated or transferred: what led to that decision
+
+
+## ❓Frequently Asked Questions
+
+What happens if the PM asks us to reassign after the SP has been unresponsive / unable to confirm?
+
+1. Inform the PM that a different work order is needed to assign the new SP:
+  1. _ “Hi [PM’s Name]! We’ll need to proceed with a new work order to assign a different service provider to ensure a smooth billing process moving forward. Please note that warranties from the previous provider may no longer apply. The original work order will remain marked as completed. Let us know if we can assist with anything else. Have a great day!"_
+  2. If there's an existing open WO or the recall was triggered by a newly submitted WO:
+    1. Address the issue under the newly created WO and assign the SP requested by the PM.
+      1. _Emergency severity:_
+        1. Refer to [How to: Handle Emergency Work Orders](https://help.latchel.com/how-to-handle-emergency-work-orders)
+        2. Refer to [(🏡⛑EMERGENCY) How to: Assign a Preferred + Latchel Network Service Provider](https://help.latchel.com/emergency-how-to-assign-a-preferred-latchel-network-service-provider)
+
+      2. _Non-emergency severity:_
+        1. Let the automation of the system handle the Work Order.
+
+
+
+  3. If there is no open WO:
+    1. Create a new WO.
+      1. Refer to [(TECH 101) How to: Create a New Work Order from "Incognito Mode" (All Submissions)](https://help.latchel.com/how-to-create-a-new-work-order-from-incognito-mode-all-submissions)
+      2. Proceed to assign the service provider requested by the PM and schedule the work order.
+
+
+
+
+What if the PM reassigned a WO without notifying Latchel?
+
+1. Inform the PM that a different work order is needed to assign the new SP.
+  1. If the issue involves **property damage or extreme habitability concerns:**
+    1. Escalate to the PM via phone.
+      1. Refer to the [Job Aid: PM Outbound Communication for Emergency WOs](https://help.latchel.com/job-aid-pm-outbound-communication-for-emergency-wos).
+      2. If the PM is unresponsive to calls, send an **SMS **with the following suggested script.
+        1.   _Hi [PM’s Name]! We noticed that the work order has been reassigned to a different service provider. Since the original service provider has already visited the property, we will need to create a new work order to assign the new provider and ensure proper billing moving forward. Please note that any warranties from the previous service provider may no longer apply. The original work order will remain marked as completed, and we will continue coordinating with the newly assigned vendor under the newly created work order. Please let us know if we can assist with anything further. Have a great day._
+
+
+    2. Procedural steps after notifying PM:
+      1. Reassign the original work order to the original service provider.
+      2. Mark the original work order as completed.
+      3. Create a new work order and assign it to the Property Manager’s selected vendor to continue the process.
+
+
+  2. **If the issue is NOT Property-Damaging or Extreme Habitability:**
+    1. Reassign the original WO to the original SP.
+    2. Mark the original work order as completed.
+    3. On the newly created work order, assign the vendor selected by the Property Manager.
+    4. Create a task for the Property Manager to notify them of the reassignment and outline next steps, **without changing the work order status**, so scheduling can continue without interruption.
+      1. Subject: **Service Provider Reassignment – New Work Order Created**
+      2. Who is this task about? Select the PM
+      3. Select a Date and Time: Leave as is
+      4. Assign to a User Group: PM user group
+      5. Assign to a User: Leave as is
+      6. Priority: Leave as is
+      7. Complete task only on Completed or Cancelled job States
+      8. Description: “_We’ve created this task to notify you that a new work order is required for the service provider reassignment. A new request has been submitted (Work Order ##), and the vendor you added has been assigned to ensure a smooth billing process moving forward. The original work order will remain marked as completed, and we will continue coordinating with the newly assigned vendor under the newly created work order. If you have any questions or need further clarification, please don’t hesitate to reach out. Thank you.”_
+
+
+
+
+What to do when the Property Manager requests to blacklist a service provider?
+
+
+<Note>
+Blacklisting a service provider prevents them from being assigned to jobs for a specific PM company, while still allowing other PM companies to continue working with them.
+</Note>
+
+**Steps to Blacklist a Service Provider**
+
+1. Go to the Property Manager’s profile.
+2. Select the Service Providers tab.
+3. Under Service Provider Management, search for the service provider.
+4. Click the three-dot (⋯) menu on the right-hand side and select Blacklist Service Provider.
+
+
+<Note>
+Once a Service Provider is **blacklisted**, you can find them in the** Blacklisted Service Provider Management** tab. If you wish to undo the blacklist, simply click on the strike and select Undo Blacklist Service Provider.
+</Note>
+
+
+<Note>
+When a service provider is **blacklisted**, they are automatically removed from all lists and categories within the Property Manager company’s account and are no longer searchable. As a result, there is **no **need to separately remove them as a preferred vendor.
+</Note>
+
+What if the same (or previously rejected) Service Provider accepts a reassigned Work Order?
+
+This can occur when the SP receives the new WO through their portal and accepts it before a different provider has been assigned.
+
+**Steps:**
+
+1. Remove the Service Provider from the Work Order and inform them:
+  1. 🗨️Say something like: _"Hi [SP Name], thank you so much for accepting this work order — we really appreciate it! Unfortunately, the Property Manager/Owner has requested a different service provider for this particular job, so we'll need to reassign it. We truly value your partnership and look forward to connecting with you on future work orders. Thank you!"_
+
+2. Before reassigning, confirm with the PM/Owner:
+  1. 🗨️ Suggested Scripting: _"Hi [PM/Owner Name]! I wanted to confirm — do you have a preferred service provider you'd like us to assign for this work order, or would you like us to find a new one from the available queue?"_
+
+3. Assign the new Service Provider per **Step 2** of this SOP.
+4. Write an Effective Note documenting:
+  1. That the previous SP re-accepted the work order.
+  2. The reason for removal (e.g., estimate rejected, PM/owner requested a different provider).
+  3. The new SP assigned.
+
+
+⚠️ **Key Reminder:** If the PM/Owner's original request was specifically for a _different provider_ (not just a different technician from the same company), confirm this clearly before proceeding. Do not assume the owner will accept a different technician from the same company.
+
+What if the PM changes the scope of work without updating the Work Order?
+
+This occurs when a PM redirects an SP to complete different work than what is listed on the WO (e.g., WO says 'washing machine leak' but SP was instructed to do 'flooring repairs') without notifying Ops.
+
+**Steps:**
+
+1. **Verify with the Service Provider** what specific instructions they received.
+  - 🗨️ _"Hi [SP Name], I just want to confirm — can you describe the scope of work you were asked to complete? Was this communicated to you directly by the Property Manager?"_
+  - Document the SP's response in the Work Order Notes.
+  - Advise the SP to hold off on starting the new scope until we receive PM confirmation.
+
+2. **Contact the PM to confirm the scope change.**
+  - 🗨️ _"Hi [PM's Name]! The service provider assigned to Work Order [WO#] has let us know they were instructed to complete [new scope] instead of the originally listed [original scope]. Could you confirm the intended scope of work so we can update the work order accordingly? This will help us ensure accurate documentation, proper severity classification, and correct billing. Thank you!"_
+  - If the PM is unresponsive, follow the appropriate escalation path:
+    - **Property-damaging or extreme habitability issues:** Call the escalation contacts per the Escalation Contacts SOP.
+    - **Non-property-damaging issues:** Create a task for the PM with subject **"Action Required: Scope of Work Confirmation Needed"** and include the WO#, original scope, and reported new scope.
+
+
+3. **Once the PM confirms, update the Work Order:**
+  - Update the **Skill/Trade** to reflect the actual work being completed.
+  - Update the **Severity** if the new scope changes the urgency level.
+  - **Review the Budget** — if the new scope may exceed the approved budget, notify the PM and request updated approval before the SP proceeds.
+    - 🗨️ _"Hi [PM's Name]! Based on the updated scope of work ([new scope]), the estimated cost may differ from the originally approved budget of [amount]. Could you confirm an updated budget approval so we can proceed? Thank you!"_
+
+
+4. **If there are related or overlapping Work Orders:**
+  - Review all related WOs to ensure there is no duplication of scope.
+  - Coordinate with the PM on which WO to mark as completed if the scope change means the original WO's issue is now handled under a different WO.
+  - Do NOT close or complete a WO without PM confirmation when scope changes are involved.
+
+5. **Write an Effective Note:**
+  - 📌 _[Date] | WO# | Scope changed from [original] to [new scope] per PM [Name] confirmation on [date]. Severity updated from [old] to [new]. Budget [updated/unchanged]. SP [Name] proceeding with [new scope]._
+
+
+⚠️ **Important:** Do NOT proceed with the scope change on the work order until the PM has confirmed. If the work is urgent (property-damaging or extreme habitability), escalate immediately per the escalation protocol.
+
+What should I do if a resident requests to remove a Service Provider (SP) from a work order?
+
+**Steps:**
+
+**Suggested scripting to the resident:**
+
+_"Okay, I understand. While I'm unable to resolve this directly, I'll need to refer this matter to the appropriate team for further assistance."_
+
+**Then follow the appropriate path:**
+
+- **If the issue is property damaging or extreme habitability:**
+  - Call the escalation contacts. Refer to [Job Aid: PM Outbound Communication for Emergency WOs](https://help.latchel.com/job-aid-pm-outbound-communication-for-emergency-wos).
+
+- **If the issue is non-property damaging or extreme habitability:**
+  - Create a task to the Property Manager with the following details:
+    - **Subject:** Action Required: PM Instructions or Information Needed
+    - **Who is this task about?** Select the PM
+    - **Select a Date and Time:** Leave as is
+    - **Assign to a User Group:** PM user group
+    - **Assign to a User:** Leave as is
+    - **Priority:** Leave as is
+    - **Complete task only on:** Completed or Cancelled job States
+    - **Description:** _We've created this task for the Property Manager to [insert specific information or instructions needed]. The current status of the work order is [insert status]. Kindly provide the requested information or guidance at your earliest convenience to help ensure a smooth continuation of the process. If you have any questions or need further clarification, please don't hesitate to reach out. Thank you!_
+
+
+
+
+## 🎯 When to Break This SOP
+
+You should only break this SOP in rare situations where following the standard process would cause harm, violate company policy, or prevent urgent resolution. For example:
+
+- If the Property Manager refuses and insists not to create a new work order for reassignment, and shows signs of frustration or escalation - proceed to reassign as once off.
+- If the issue involves property damage or extreme habitability concerns, escalate immediately and follow emergency protocols.
+- If you encounter a scenario not covered by this SOP, or you are unsure how to proceed, always escalate for further direction.
+
+
+---
+
+
+## 💡 If You Think This SOP Could Be Improved...
+
+Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work?
+ 👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**
