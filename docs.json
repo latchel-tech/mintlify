@@ -78,9 +78,9 @@
                       "s/topic/0TO5e000000h9wqGAA/meet-harphonia-ai-maintenance-call-intake",
                       "s/topic/0TO5e000000h9wqGAA/24-7-ai-virtual-receptionist",
                       "s/topic/0TO5e000000h9wqGAA/how-latchel-learns-from-your-feedback-reinforcement-learning",
-                      "untitled-page-2",
-                      "untitled-page",
-                      "untitled-page-3",
+                      "s/topic/0TO5e000000h9wqGAA/voice-action",
+                      "s/topic/0TO5e000000h9wqGAA/clock-in-clock-out",
+                      "s/topic/0TO5e000000h9wqGAA/outbound-voice",
                       {
                         "group": "Intake Settings",
                         "pages": [
@@ -492,7 +492,8 @@
                       "s/topic/0TO5e000000h9wpGAA/Accepting-Scheduling-Work-Order-for-Another-Service-Provider-User-Within-the-Company",
                       "s/topic/0TO5e000000h9wpGAA/How-Service-Providers-View-their-Work-Order-Calendar",
                       "s/topic/0TO5e000000h9wpGAA/How-to-Move-Work-Orders-Forward-When-Your-Action-is-Required",
-                      "s/topic/0TO5e000000h9wpGAA/How-to-Reject-a-Work-Order-Service-Provider"
+                      "s/topic/0TO5e000000h9wpGAA/How-to-Reject-a-Work-Order-Service-Provider",
+                      "s/topic/0TO5e000000h9wpGAA/Clock-in-and-clock-out-on-work-orders"
                     ]
                   },
                   {
