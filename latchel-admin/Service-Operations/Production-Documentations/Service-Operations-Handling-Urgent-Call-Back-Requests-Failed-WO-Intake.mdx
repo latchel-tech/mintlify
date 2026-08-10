@@ -1,0 +1,146 @@
+---
+title: "Service Operations: Handling Urgent Call Back Requests (Failed WO Intake)"
+groups: ["latchel"]
+---
+
+## 🧠 What This Process Is Trying to Solve
+
+With the implementation of Harphonia automation, most callback scenarios (caller hang-ups, incomplete WO submissions) are now triggered automatically via SMS or alerts to the engineering team. This SOP covers the specific case where a caller **does not have a textable phone number** and requires a direct callback from the CC team. The goal is to ensure that residents without textable numbers receive timely follow-up assistance.
+
+---
+
+## 📋 Step-by-Step Process
+
+### Step 1 - Receiving the Alert
+
+When a Harphonia call ends because the caller hung up (Disconnection Reason = user_hangup) before a request is submitted, the system will automatically send an SMS to the resident. If the caller’s phone number is not textable, an alert will be posted in the **#cc-tasks** Slack channel. These alerts are the only case where associates need to take manual action (call back and/or create a WO). Each alert includes a link to the Retell call and the call summary for context.
+
+**Note:** Callback alerts for Spanish callers with non-textable phone numbers now include a **Spanish indicator** in the #cc-tasks alert. When this indicator is present, ensure a Spanish-speaking associate handles the callback.
+
+**Sample Alert**
+
+<Frame>
+  <img src="/images/SVC-450.png" alt="image-20260428-181315.png" />
+</Frame>
+
+Each alert includes:
+
+- Call Session ID (Retell Dashboard)
+- Caller’s phone number
+- Call Summary
+
+**Important Note:** Callbacks for callers WITH textable numbers are handled automatically by Harphonia (SMS to resident). You only need to act on alerts for residents with non-textable numbers.
+
+---
+
+### Step 2 – Acknowledging the Alert
+
+When an alert is received, an available associate must **acknowledge the alert immediately** to indicate to the rest of the team that someone is working on it.
+
+**Actions:**
+
+1. **React** to the alert message with an emoji (✅) to show that the alert is being handled.
+2. **Post a short comment** in the thread tagging support for visibility, such as “I’m taking this alert @support,” to provide additional clarity, especially that multiple associates are monitoring the channel.
+
+**Assignment Rules:**
+
+- Any associate who is **available and not on a call** when the alert is received is eligible to claim it.
+- Alerts are handled using a **"first to claim" approach**.
+- If multiple associates claim the alert simultaneously, they should **tag each other in the thread** and agree on who will take ownership.
+- **Operations Support Specialists** are responsible for monitoring alerts in real time to ensure these urgent requests are being addressed promptly.
+- **Supervisors** are responsible for monitoring claims per associate to ensure **fair distribution** of alerts across the team.
+
+---
+
+### Step 3 – Accessing Resident Information
+
+After acknowledging the alert, associates should navigate to the resident's profile using the provided contact information. This allows access to all relevant resident information needed if we need to address any issue.
+
+1. Manually search for the resident's profile.
+2. Review the resident's details to ensure all information is correct before contacting them.
+
+---
+
+### Step 4 – Calling the Resident and Taking Action
+
+<Note>
+**Before calling:**
+
+- **If the Retell recording shows that no conversation was established (caller never said anything / silence only), do not initiate a callback.**
+- **If a conversation was established (caller spoke or attempted to report an issue), call the resident once to provide assistance.**
+</Note>
+
+Call the resident **once** to provide assistance with their request.
+
+**Script:**
+
+*"Hello [Resident Name], this is [Your Name], calling from Latchel, the maintenance intake team for [PM Company Name]. We received your call but couldn't reach you by text. I'm here to help. What's the issue? Could you please tell me more about the issue so we can help you?"*
+
+**After confirmation:**
+
+1. Assist the resident with their concern
+2. Submit a Work Order if needed: [TECH 101 – How to Create a New Work Order](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Create-a-New-Work-Order-from-Incognito-Mode-All-Submissions)
+3. **If resident does not answer (voicemail):**
+  1. Leave a voicemail: *"Hi [Resident Name], this is [Your Name] with Latchel, the maintenance intake team for [PM Company Name]. We received your call but couldn’t reach you by text. Please call us back at [Callback Number] so we can help, or let us know the best time to reach you. Thank you and have a great day!"*
+4. Document the outcome in the **resident's profile and Slack thread**. Examples of notes may include, but are not limited to, the following:
+  1. WO Created
+  2. No Answer
+  3. Existing WO Follow-up
+  4. No conversation established
+  5. No details available
+  6. Non-maintenance
+  7. Others
+
+---
+
+## 🤖 What's Now Automated (You Don't Need to Do)
+
+Thanks to Harphonia automation, the following scenarios are now handled automatically:
+
+**Caller with textable number + call disconnected before WO submission:**
+
+- Harphonia automatically sends an SMS to the resident reminding them to complete their request
+
+**Caller with non-textable number + call disconnected before WO submission:**
+
+- An alert appears in #cc-tasks for you to handle (this is the scenario covered in this SOP)
+
+**System errors or bugs detected during calls:**
+
+- These are flagged in #harphonia-prod-feedback for the engineering team
+- Ops won't create callbacks for these (monitoring shows they're rare and generally don't require follow-up)
+
+**Frustrated residents or poor call experiences:**
+
+- Monitored weekly via sentiment analysis
+- If a pattern emerges, the team will implement a solution
+- No manual escalation needed at this time
+
+---
+
+## Operations Support Specialists Role
+
+Operations Support Specialists ensure non-textable number alerts are addressed promptly and efficiently.
+
+**Responsibilities:**
+
+1. **Monitor alerts in real time**
+  - Watch the **#cc-tasks** channel for new alerts
+  - Ensure each alert is acknowledged and claimed by an available associate
+2. **Escalate unclaimed alerts**
+  - If an alert remains unclaimed after 5 minutes, follow up with available associates
+3. **Ensure documentation**
+  - Confirm outcomes are documented in Slack threads and alert status is marked correctly
+
+---
+
+## 🎯 When to Break This SOP
+
+**Do not break or deviate from this SOP on your own authority.** Always escalate to an Ops Support specialist or follow explicit instructions if you believe an exception is necessary.
+
+---
+
+## 💡 If You Think This SOP Could Be Improved...
+
+Noticed something clunky or confusing in this process? Or had a situation that wasn't covered here? Or tried something new that didn't work?  
+👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**

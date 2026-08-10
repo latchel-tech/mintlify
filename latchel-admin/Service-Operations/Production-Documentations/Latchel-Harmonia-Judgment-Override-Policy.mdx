@@ -1,0 +1,226 @@
+---
+title: "Latchel Harmonia Judgment Override Policy"
+groups: ["latchel"]
+---
+
+# 🧠 What This Process Is Trying to Solve
+
+<Note>
+This policy establishes accountability standards for Service Operations agents who fail to apply their own judgment against Harmonia's severity classifications and dispatch recommendations. The intent is not to punish good-faith errors. The intent is to retain and grow a team that combines Harmonia with sound judgment—and to remove the systemic risk created when agents take Harmonia's word over policy and visible facts.
+</Note>
+
+# 🎯Scope
+
+<Note>
+This policy applies to all Service Operations agents who handle work-order intake, severity classification, dispatch decisions, and resident/PM-facing communications. It applies to all interactions with Harmonia (including any rebrand or successor AI tool) — severity outputs, matched-rule reasoning, and dispatch recommendations.
+
+**📌 Who "Associates" Means** For the purposes of this policy, "associate" refers to agents across all queues — TS, CC, and SMS/Webchat. The expectation to identify and act on a Harmonia severity misclassification applies to all queues, with the following distinctions:
+
+- An **SMS/Webchat agent** who, in the course of handling an inquiry, notices that a WO's Harmonia-assigned severity is clearly inconsistent with what the resident is describing — should act on it. This does not mean reviewing intake settings on every SMS interaction; it applies only when a misclassification is apparent from the information already in front of them. If the mismatch is clear from intake settings, correct it directly. If live troubleshooting or further assessment is needed, create a TS task — do not troubleshoot the situation yourself.
+- A **CC agent** who, in the course of submitting or reviewing a WO, notices that the Harmonia-assigned severity is clearly inconsistent with the PM's intake settings — should act on it. This does not mean auditing intake settings on every WO interaction; it applies only when a misclassification is apparent from what is already in front of them. If the mismatch is clear from intake settings, correct it directly. If live troubleshooting or further assessment is needed, create a TS task — do not manage the TS queue or troubleshoot the situation yourself.
+- **Cross-trained agents** follow the same rule regardless of which queue they are currently assigned to. Being cross-trained does not mean managing two queues simultaneously — if you are working CC or SMS, TS work belongs to the TS team. The expectation is to act when a misclassification is apparent from what is already in front of you, not to go looking for them across queues.
+</Note>
+
+## **🏛️The Core Standard**
+
+<Note>
+**Harmonia is a recommendation. Policy and the facts of the case are the rule. The agent is the decision-maker.**
+
+Every agent is expected to read what Harmonia recommends, compare its matched rule against the actual facts of the case and the PM's intake settings, and override Harmonia when the rule does not fit. Acting on a Harmonia output without that comparison is the violation this policy addresses.
+
+**Reference example (#svc-ops-feedback, Dec 16, 2025)**
+
+Harmonia flagged a missing smoke/CO detector as Severity: Emergency under Rule [1] (immediate threats to life). PM feedback was unambiguous: "Missing smoke/co detectors is not an emergency... our agents should be able to read the emergency rules and infer that the AI is wrong here." The miss was not the AI flag. The miss was accepting it without reading the rule.
+</Note>
+
+<Note>
+**📞 When a TS Call Is Required vs. When It Is Not for Harmonia Misclassification Scenarios**
+
+A TS call to the resident is **not required** when the severity mismatch can be confidently resolved through intake settings review alone. Any associate in any queue may correct the severity directly in those cases — without going offline, changing queues, or placing a resident call.
+
+However, if further assessment is needed — for example, the resident reports the issue has worsened, or there are active property-damaging (PD) or extreme habitability (EH) concerns — CC and SMS associates should **create a task for the TS team** rather than troubleshooting the situation themselves. The existing TS process applies in those cases.
+
+This draws a clear line:
+
+- **Intake-settings-clear mismatch** → any associate corrects directly, no TS call needed.
+- **Situation requires live assessment** → CC/SMS create a TS task; TS team handles.
+</Note>
+
+## **🆕 TS Task Conflict Handling**
+
+When a CC or SMS associate corrects a severity misclassification on a WO that already has a TS task, the following applies:
+
+| Scenario | Action |
+| --- | --- |
+| TS agent is **actively on a live call** for the WO | **Do not intervene.** TS retains full ownership and will handle the correction as part of their active workflow. |
+| TS task exists but **has not yet been worked** | Correct the severity, then cancel the TS task and notify the support in the #ops_info_center channel. |
+| **No TS task exists** | Correct the severity normally. |
+
+When cancelling an unworked TS task after a downgrade:
+
+1. Correct the WO severity.
+2. Cancel the TS task — it was created for an Emergency that no longer exists; leaving it open risks an unnecessary resident call.
+3. Notify support via the #ops_info_center that the severity has been corrected and the task cancelled.
+4. Document in the WO note (see Documentation Standard above).
+
+## 🔴 **What Counts as a Strike**
+
+<Note>
+**📋 Sources of Strike Review**
+Strike reviews can originate from any of the following sources — not solely from direct manager observation:
+
+- **Direct manager/lead review** — identified during routine case review or 1:1 coaching.
+- **QA audits** — flagged during quality assurance reviews of agent interactions.
+- **Escalations/feedback** — raised through feedback channels (e.g., #svc-ops-feedback) by any member of the Latchel team who identifies an opportunity for review, including but not limited to Property Managers, supervisors, QA, and support.
+
+Regardless of the originating source, all potential strikes follow the same confirmation process outlined in [<u>The Manager's Confirmation Process</u>](https://help.latchel.com/latchel-admin/Service-Operations/uThe-Managers-Confirmation-Process/u).
+</Note>
+
+A strike is recorded when a manager confirms all four of the following:
+
+1. Harmonia produced a severity classification or dispatch recommendation that the agent acted on.
+2. The matched rule did not fit the actual facts of the case per the PM's intake settings, or new information during troubleshooting should have changed the classification.
+3. The correct rule, SOP, or PM intake setting was reasonably accessible at the time and is in the agent's training scope.
+4. The agent did not document any check, verification, or judgment-based reasoning that overrode Harmonia.
+
+<Note>
+**📝 Documentation Standard — All Queues**
+
+Any severity correction (increase or decrease), by any associate in any queue, must include a WO note stating:
+
+1. Original Harmonia-assigned severity
+2. Intake setting reviewed
+3. Corrected severity and reason
+4. Associate name
+
+*Sample note:* "Harmonia assigned Emergency per Rule [1] — uncontained water leak. Reviewed intake settings; PM rules classify contained, intermittent leaks as Normal. No active flooding or damage confirmed. Correcting to Normal."
+</Note>
+
+### **🔎Examples that count as a strike (drawn from confirmed cases, Nov 2025 – Apr 2026):**
+
+- Accepting Harmonia's Emergency flag for a missing smoke/CO detector and proceeding to second-level emergency troubleshooting (Dec 16, 2025).
+- Dispatching a tenant lockout / lost-keys ticket because Harmonia classified it Emergency, when the PM's intake settings designate lockouts as tenant responsibility and the work order should have been canceled (Apr 27, 2026 — SureWay PM; Feb 20, 2026 — Rental Home Management Services).
+- Treating a contained, intermittent appliance leak as Emergency because Harmonia matched Rule [1] "any water leaks," when the actual condition was not active flooding or property damage (Mar 19, 2026 — Texas Prime Real Estate).
+- Failing to downgrade severity after troubleshooting confirmed there was no actual leak — leaving the work order at Emergency and dispatching anyway (Mar 19, 2026 — Texas Prime Real Estate).
+- Dispatching a licensed electrician for a burned-out light bulb because Harmonia misclassified it as a partial power outage (Feb 9, 2026 — PropertyWize).
+- Accepting Harmonia's Normal severity on a heating issue when the forecast clearly showed the temperature would drop below the emergency threshold within 24 hours and vulnerable tenants were affected (Mar 25, 2026 — Renters Warehouse Western WI).
+
+## 🛡️**What Does NOT Count as a Strike**
+
+- The agent overrode Harmonia, applied policy correctly, and the outcome still wasn't ideal. Judgment was applied; that is the behavior we are reinforcing.
+- The agent followed Harmonia, and Harmonia was correct per policy and the facts.
+- Harmonia produced a classification the agent had no reasonable way to evaluate (e.g., product fix not yet deployed). Manager files a clarification request; no strike to the agent.
+- The agent escalated to ops support with their tentative decision and rule reading attached, because the case had genuine ambiguity. Asking with the analysis already done is never a strike. (Asking without analysis, repeatedly, is a coaching topic — not a strike.)
+
+## **📅Strike Schedule**
+
+This policy uses a 90-day rolling window, modeled on the existing Latchel attendance policy. Strikes age off 90 days from the date of the incident.
+
+| **Strike** | **Action** | **Manager discretion?** |
+| --- | --- | --- |
+| Strike 1 | Documented coaching session with the agent's lead. Re-training on the specific rule/policy missed (30 minutes). Written acknowledgment by the agent that the policy was reviewed. | No. Strike 1 is mandatory once confirmed. |
+| Strike 2 | Formal written warning. Mandatory completion of the [Harmonia Judgment training program](https://app.heygen.com/videos/harmonia-judgment-training-certification-e1fd8288bfcb40d88e5a3c18f393778d). Performance Improvement Plan drafted; 30-day review. | No. Strike 2 is mandatory once confirmed. |
+| Strike 3 | Separation from Service Operations role. Standard termination process applies. | Yes (once). Manager may convert to a 60-day final PIP if Strike 2 had a documented mitigating circumstance — see [Section 7 -Manager Discretion (Third-Strike Conversion Only)](https://help.latchel.com/latchel-admin/Service-Operations/Section-7--Manager-Discretion-Third-Strike-Conversion-Only). |
+
+**Window mechanics:**
+
+- Strikes age off 90 days after the date of the incident, not the date of the manager's confirmation.
+- If an agent reaches Strike 2 on Day 30 and Day 31 produces a third confirmed incident, the third strike is in scope.
+- If Strike 1 ages off before Strike 2 occurs, the next confirmed incident counts as a fresh Strike 1.
+- Strikes are tracked per agent, recorded in the agent's HR file, and visible to the agent in their 1:1 dashboard.
+
+## **🗝️Manager Discretion (Third-Strike Conversion Only)**
+
+If a manager judges the second strike to have a mitigating circumstance, the manager may—at the time the third strike is confirmed—convert the third strike from separation to a 60-day final PIP. Discretion is exercised once per agent and must be documented with the third-strike confirmation.
+
+**Mitigating circumstances that may justify discretion (non-exhaustive):**
+
+- The second incident occurred during a documented Harmonia rule update or product change where the policy in effect was unclear.
+- The second incident involved a feature/change the agent had not yet been trained on, where training was the responsibility of Latchel and was overdue.
+- Harmonia's recommendation was so plausibly aligned with policy and the visible facts that a reasonable, well-trained agent could have made the same call (rare; should be reviewed by a second manager).
+
+**Circumstances that do NOT qualify as mitigating:**
+
+- "Harmonia told me it was an emergency." This is the exact behavior the policy addresses; it is never mitigation.
+- Heavy queue volume on the day of the incident.
+- The outcome happened to be acceptable to the customer.
+
+## **🔄The Manager's Confirmation Process**
+
+Before logging a strike, the agent's lead completes the following five-question check. All five must be answered "yes" for a strike to be logged.
+
+| **#** | **Question** | **Why it matters** |
+| --- | --- | --- |
+| 1 | Is there a published, current rule, SOP, or PM-confirmed standard that addresses this scenario? | If no policy exists, the issue is documentation, not judgment. |
+| 2 | Did Harmonia produce a severity output the agent followed? | Establishes the AI-override pattern. |
+| 3 | Would a fact-check against the rule have produced a different correct action (override, downgrade, cancel, or escalate up)? | Establishes the gap. |
+| 4 | Is there evidence the agent did NOT verify, document, or escalate? | Establishes the failure mode. |
+| 5 | Is the rule/policy in this agent's current training scope? | Protects against penalizing untrained agents. |
+
+**⚠️**If any answer is "**NO**," the manager addresses the underlying issue (training gap, missing rule, product fix needed) rather than logging a strike. This decision is itself documented.
+
+## **⬆️Escalation Behavior — Coaching, Not Strikes**
+
+Excessive escalation to ops support is not a strike under this policy, but it is a managed behavior. The training program (The Two-Question Check in this [training video](https://app.heygen.com/videos/harmonia-judgment-training-certification-e1fd8288bfcb40d88e5a3c18f393778d)) defines escalation as "surfacing a real ambiguity with your tentative decision attached," not "asking permission before I act."
+
+- Associates in any queue who identify a severity misclassification are expected to act directly — either by correcting the severity (if clear from intake settings) or by creating a TS task (if live assessment is needed). Routing to Support as the first response to a misclassification is no longer the expected path. Support escalation is reserved for genuine edge cases where severity cannot be determined and a TS task is also not appropriate.
+- Asking ops support with your best-attempted decision and your reading of the rule attached is never a strike.
+- Repeatedly escalating without doing the analysis first — especially on scenarios covered by the SOP, the PM's intake settings, or the Override Flag Library — becomes a coaching topic, tracked by the agent's supervisor in 1:1s.
+- Excessive escalation that follows a coaching conversation may be addressed under standard performance management — not under this policy's strike framework.
+
+## **✊Agent Rights and Appeal**
+
+- Agents are notified of any strike within 2 business days of confirmation.
+- The notification includes the date of incident, the Harmonia output (severity + matched rule + reason), the rule or fact that should have caused override, and the evidence reviewed.
+- Agents may appeal to the VP of Service Operations within 5 business days. The VP reviews the manager's confirmation against [Section 8 - The Manager's Confirmation Process](https://help.latchel.com/latchel-admin/Service-Operations/Section-8---The-Managers-Confirmation-Process).
+- Appeals do not pause aging—if the appeal is denied 30 days later, the strike's age-off clock continues from the original incident date.
+
+## **📩Hiring, Onboarding, and Certification**
+
+Selection criteria for new Service Operations agents will explicitly screen for AI-skeptical judgment. Hiring loops will include at least one scenario-based interview question where the candidate is presented with a plausible-but-wrong Harmonia classification (e.g., the smoke/CO scenario or a tenant lockout flagged emergency) and asked how they would handle it. Candidates who accept the AI recommendation without referencing policy or verification do not advance.
+
+Onboarding for new hires will include the Harmonia Judgment training program in the first 30 days, before the agent independently handles dispatch decisions. Agents must pass the Module 4 [Google Form assessment](https://forms.gle/RbxDqbn9UJwsAVHQ8) at 7/9 to certify.
+
+**Failed assessment path:**
+
+- Re-take permitted once after a 24-hour review period.
+- Failed re-take → 1:1 oral re-test by lead or ops support (3 randomized scenarios). Pass orally = certified.
+- Failed oral re-test → new hire does not pass probation. Tenured agent → escalation to leadership and case review call (possible outcomes: structured remediation or separation).
+
+## **♾️Continuous Improvement**
+
+- Every confirmed strike is shared back to the Harmonia product team. Repeated strikes against the same rule (e.g., the smoke/CO Rule [1] or the lockout tie-break) trigger an automatic Harmonia rule review.
+- The VP Service Operations reports strike volume and category breakdown to the leadership team monthly.
+- Escalation-rate metrics are reported alongside strike data so leadership can see if the team is shifting to over-escalation as a strike-avoidance strategy.
+- This policy is reviewed at six months and annually thereafter; thresholds and the strike window are adjusted based on observed volume.
+
+## **👥Roles and Responsibilities**
+
+| **Agent** | Read Harmonia outputs critically. Compare matched rule to the PM's intake settings and the actual facts. Document the override or the reason for accepting. Escalate only when the case has real ambiguity, with your tentative decision attached. |
+| --- | --- |
+| **Supervisor** | Coach, train, and confirm strikes per [Section 8 - The Manager's Confirmation Process](https://help.latchel.com/latchel-admin/Service-Operations/Section-8---The-Managers-Confirmation-Process). Surface rule gaps to the Harmonia product team. Coach before disciplining. Track each agent's escalation rate in 1:1s and address excessive non-analytical escalation as a coaching topic. Maintain strike record in HR file. Process PIPs and separations. |
+| **Ops Support** | Receive escalations that come with a tentative decision. Confirm or correct quickly. Surface patterns of low-quality escalation to the agent's lead. |
+| **Service Ops VP** | Hear appeals. Review monthly strike and escalation-rate data. Approve mitigating-circumstance conversions involving the third strike. Lead case review calls for failed oral re-test cases. |
+| **Harmonia Product Team** | Receive feedback when rules produce repeated agent-override conflicts. |
+
+## **📖Definitions**
+
+| **Harmonia** | Latchel's AI triage tool that classifies intake severity and recommends dispatch pathways. Includes any rebrand or successor tool. |
+| --- | --- |
+| **Severity Override** | Any agent action that changes Harmonia's recommended severity (down or up), cancels the work order, or routes it differently based on facts the AI did not weigh correctly. |
+| **Strike** | A formally confirmed incident under [Section 4 - What Counts as a Strike](https://help.latchel.com/latchel-admin/Service-Operations/Section-4---What-Counts-as-a-Strike) of this policy, recorded in the agent's HR file. |
+| **Rolling Window** | The 90-day period during which prior strikes remain active. Each strike ages off independently. |
+| **Tenant Responsibility** | Issues that the PM's intake settings designate as tenant-handled per the lease (often: tenant lockouts, lost keys, light bulbs, tenant-clogged drains — but coverage varies by PM). Read the intake settings for the property before deciding. |
+| **Mitigating Circumstance** | A documented condition that reasonably contributed to the second strike, qualifying the agent for manager discretion on the third strike per [Section 7 -Manager Discretion (Third-Strike Conversion Only)](https://help.latchel.com/latchel-admin/Service-Operations/Section-7--Manager-Discretion-Third-Strike-Conversion-Only). |
+| **Escalation (this policy)** | Surfacing a real ambiguity to ops support with the agent's tentative decision and rule reading attached. Not a permission slip; not a sanity check. |
+
+---
+
+# 🎯 When to Break This SOP
+
+**Do not break or deviate from this SOP on your own authority.**
+
+# 💡 If You Think This SOP Could Be Improved...
+
+Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work?
+ 👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**

@@ -1,0 +1,290 @@
+---
+title: "Job Aid: Handling Tasks assigned to the Resident Follow Up Group"
+groups: ["latchel"]
+---
+
+## **🧠 What This Process Is Trying to Solve**
+
+<Note>
+We want to prevent missed follow-ups, duplicate outreach, and unresolved resident issues when tasks are assigned to the Resident Follow Up Group. The goal is to ensure every resident concern—whether about missed appointments, unresolved repairs, or general help—is handled promptly, using the right communication method and with full visibility into all open tasks for that customer.
+</Note>
+
+<Note>
+For actions that require SMS as the initial point of contact, if the phone number is not enabled for text, send an email. If there is not an email, call the customer. If they don't answer, leave a voicemail.
+
+Additionally, if the task is created (usually by PSS Investigations team) ***due to a review left by the resident***, please ensure that **calling** the customer is always the initial communication method used.
+</Note>
+
+<Note>
+**Attention: **For agents handling tasks for both emergencies and non-emergencies.
+
+Before you begin working on any task, **ensure you view all open tasks for the customer you are following up on **(resident, service provider, owner). This step is crucial to avoid duplicating efforts and customers complaints, and to ensure we always get it right the first time.
+
+For detailed instructions on how to handle the tasks queue and view all open tasks, please refer to the following link: [How to: Work the Tasks Queue](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Work-the-Tasks-Queue)
+
+For information on the frequency and number of times you should contact customers, please refer to[Informational: Basic Service Ops Guidelines and Rules](https://help.latchel.com/latchel-admin/Service-Operations/Informational-Basic-Service-Ops-Guidelines-and-Rules)
+</Note>
+
+<Note>
+**LVN Service Provider**
+
+For guidance on managing unresponsive LVN service providers or on acceptable scenarios for reassigning an LVN service provider (such as PM requests or missed appointments), refer to [Handling Work Orders Assigned to LVN Service Providers](https://help.latchel.com/latchel-admin/Service-Operations/Handling-Work-Orders-Assigned-to-LVN-Service-Providers).
+</Note>
+
+## **What are the tasks assigned to the Resident Follow Up Group?**
+
+When a resident updated the work order via our online portal and reported that they need support or general help on their work order, the system generates a task assigned to this group. Latchel users can also create a task assigned to this group if something has to be followed up with the resident.
+
+## **📋 Standard Task Creation Template**
+
+When a scenario instructs you to close your current task and create a new one, follow this standard process. Each scenario will provide the specific values for the fields marked with *[Scenario-specific]* — only those values change from scenario to scenario.
+
+<Accordion title="Steps">
+1. Close the existing task that was initially assigned to you (Resident Follow Up).
+2. Click on the **"Action"** then choose **Create Task** in the Work Order.
+3. Fill out the New Task form with the following information:
+
+| Field | What to Enter |
+| --- | --- |
+| **Subject** | *[Provided by the scenario — examples: "Service Provider Follow Up," "Resident Follow Up," "Unresponsive Resident," or "A Message from the Resident"]* |
+| **Who is this task about?** | *[Provided by the scenario — select the person this task is about: the Resident, the Service Provider, or the Property Manager]* |
+| **Select Date and Time** | Defer the task for the **next business day at 9:00 AM local time** for the contact. A business day is defined as weekdays and does not include holidays. For example, if today is Friday, defer the task to Monday. ⚠️ **Exception:** Some scenarios instruct you to leave this blank so the task is sent immediately — if so, the scenario will say this explicitly. |
+| **Assign to User Group** | *[Provided by the scenario — examples: "Service Provider Follow Up," "Resident Follow Up," or "PM"]* |
+| **Assign to a User** | **Always leave this blank.** Leaving it blank sends the task to all users listed within the chosen user group, ensuring proper coverage and routing. |
+| **Task Priority Level** | Choose priority based on the work order severity: |
+|  | - Emergency Severity = **Highest** Priority |
+|  | - Urgent Severity = **High** Priority |
+|  | - Normal Severity = **Medium** Priority |
+| **Cancel Action** | **Default: "Cancel on any state change."** ⚠️ **Exception:** Some scenarios require "Cancel only on Completed or the Canceled States" instead — if so, the scenario will call this out explicitly with an override note. |
+| **Task Description** | *[Provided by the scenario — use the exact description text or template given. Include all relevant context so the next agent can act on the task without needing to re-research the work order.]* |
+</Accordion>
+
+<Note>
+⚠️ **Before proceeding, check the following:**
+
+- Does the message in the task actually relate to this work order?
+- If the message appears to reference a **different issue or a different work order**, do NOT proceed with creating a task on the current WO.
+- Close the task and update the correct WO.
+- Document in your notes (for both work orders) that the task was generated on an incorrect work order, your actions and outcomes.
+</Note>
+
+<Note>
+After completing any scenario, document your actions and outcomes in the work order notes per [How to: Write Effective Notes](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Write-Effective-Notes).
+</Note>
+
+## **Possible scenarios and next best action for Resident Follow Up tasks for non-emergency work orders**
+
+### **Scenario 1. **The resident reported the issue is not resolved with the following situations:
+
+#### **A. The resident said the service provider is a no-show and missed the appointment. **
+
+Check if the resident has his/her availability in the system.
+
+1. If there is a set of availability:
+  1. Apologize to the resident for the issue. Using the below template, send a text message to the resident:
+    - 💬 *"Hello [Resident's Name]! This is [Agent Name], calling from Latchel, the maintenance intake team for [PM Company Name]. I see that you appear to still be having issues with your maintenance request. I have moved your work order into our review process and you may be contacted soon for a follow-up. Let us know if you need anything else aside from the one initially reported. Thank you!"*
+  2. Contact the service provider to confirm what happened:
+    1. If another appointment is needed, request another schedule based on the resident's availability:
+      1. The service provider **can't** commit to a date and time → Reschedule the work order
+      2. The service provider **has confirmed** a schedule → Set the appointment
+      3. If the service provider is unresponsive and you reached voicemail, leave a message. If there is no option to leave a voicemail, send an SMS or email (whichever is available):
+        1. 💬 *"Hi [Vendor's Name], good day. We've placed the work order for the job at [ADDRESS] about the [ISSUE] issue back into scheduling. The resident states the appointment was missed. Are there any problems we should be aware of? Please schedule the appointment for the job using this link: [LINK]. You can always call or message us if further assistance is needed. Thanks!"*
+          1. Reschedule the work order.
+2. If there is no availability:
+  1. Call and apologize to the resident for the issue. Try to get their availability so we can schedule another appointment.
+    1. If the resident is unresponsive, leave a message and reschedule the job. Allow the system to follow up on the availability with the resident.
+      1. Once availability is provided, update their schedule and inform the resident that we will then reach out to the service provider. Then follow Step A.1.b.
+
+<Note>
+**Note:** If a locked-in vendor missed two consecutive appointments, escalate the work order to the Property Manager by creating a task following the [**Standard Task Creation Template**](https://help.latchel.com/latchel-admin/Service-Operations/Standard-Task-Creation-Template). But if the assigned vendor is **not** locked in **and has NOT already visited the property** and missed two consecutive appointments, proceed with the reassignment.
+</Note>
+
+#### **B. The resident confirmed the visit but he/she has been advised that a part/material is needed to complete the job**
+
+1. Apologize to the resident for the issue. Send a text message to the resident (Follow Latchel Blurb from Scenario 1. A.1.a).
+  1. If an ETA of the part/material is already provided, update the work order by following Step 3.d of [How to: Put a Job on Hold](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Put-a-Job-on-Hold)
+  2. If an ETA is not yet available, contact the service provider to confirm the ETA of the part/material, then update the work order following Step 3.d of [How to: Put a Job on Hold](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Put-a-Job-on-Hold)
+    1. If the service provider is unreachable, follow the [**Standard Task Creation Template**](https://help.latchel.com/latchel-admin/Service-Operations/Standard-Task-Creation-Template) above with the following details:
+      1. **Task Description:** "The resident confirmed a part/material is needed to complete the job. Please reach out to the service provider to confirm the ETA of the part/material and update the work order accordingly."
+
+#### **C. The resident confirmed the visit but an assessment was only done**
+
+1. Apologize to the resident for the issue. Send a text message to the resident (Follow Latchel Blurb from Scenario 1. A.1.a).
+  1. Contact the service provider to confirm their next steps (e.g., when they plan to return, whether parts or approval are needed), then update the work order by following Step 3.a of [How to: Put a Job on Hold](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Put-a-Job-on-Hold)
+    1. If the service provider is unreachable, follow the [**Standard Task Creation Template**](https://help.latchel.com/latchel-admin/Service-Operations/Standard-Task-Creation-Template) above with the following details:
+      1. **Task Description:** "The resident confirmed the service provider visited but only an assessment was completed. Please reach out to the service provider to confirm their next steps to complete the repair and update the work order accordingly."
+
+#### **D. The service provider only did a temporary fix and the issue is still unresolved**
+
+1. Apologize to the resident for the issue. Send a text message to the resident (Follow Latchel Blurb from Scenario 1. A.1.a).
+  1. Call the service provider and ask what is further needed to complete the job.
+    1. If the service provider says a **new appointment** is needed:
+      1. The service provider can't commit to a date and time — Reschedule the work order.
+      2. The service provider has confirmed a schedule — Set the appointment.
+    2. If an **estimate** is needed, ask the service provider when it will be available and update the work order by following Step 3.a of [How to: Put a Job on Hold](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Put-a-Job-on-Hold). The deferral date should be the availability date the service provider has provided.
+    3. If a **part/material** is needed, confirm an ETA then update the work order by following Step 3.d of [How to: Put a Job on Hold](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Put-a-Job-on-Hold).
+    4. If we are unable to reach the service provider and are unsure about their next step, follow the [**Standard Task Creation Template**](https://help.latchel.com/latchel-admin/Service-Operations/Standard-Task-Creation-Template)
+      1. **Task Description:** "The resident has reported an issue with the job. The service provider completed only a temporary fix. Please reach out to the service provider to confirm their next step to complete this work order. Update the work order accordingly."
+    5. with the following details.
+  2. Once the next step is confirmed (appointment set, job on hold, or task created), update the resident on what to expect — for example, the return date or that we are waiting on parts/estimate.
+
+#### **E. The resident updated the work order and reported there is an issue with the job but no other details were provided**
+
+1. Call the resident to apologize about the issue and get the details of what happened.
+  1. Use this blurb for the call or voicemail:*💬 "Hello [Resident's Name]! This is [Agent name], calling from Latchel, the maintenance intake team for [PM Company Name]. I see that you appear to still be having issues with your maintenance request. Can you let us know what happened? Was the service provider able to come? You can always call or message us back if anything else is needed. Thank you!"*
+  2. **If the resident responds with details, take action based on what they report:**
+    1. Estimate or part/material is needed — update the work order following the applicable steps on [How to: Put a Job on Hold](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Put-a-Job-on-Hold)
+    2. Service provider missed the appointment — follow Scenario A (missed appointment)
+    3. Another appointment is needed — reschedule the work order
+    4. Issue returned after being marked complete — this is a recall, follow the [Recall Standard Operating Procedure](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Identify-and-Handle-a-Recall-WO)
+  3. ** If the resident is unresponsive:**
+    1. Leave a voicemail. If no option to leave a voicemail, send an SMS or an email, whichever is available.
+    2. If the resident remains unresponsive after 2 contact attempts, follow the unresponsive contact escalation in the [<u>Basic Service Ops Guidelines</u>](https://help.latchel.com/latchel-admin/Service-Operations/Informational-Basic-Service-Ops-Guidelines-and-Rules).
+2. If the resident's response was a recall (Step 1.b.iv), follow the Recall WO SOP only — do not proceed further in this scenario. For all other responses, follow Scenario D, step 1.a (all sub-steps).
+
+### **Scenario 2. **The non-emergency work order was auto-completed after 48 hrs
+
+<Note>
+This usually happens when a work order from the Confirming Completion status transitions to complete (neither the resident nor the vendor confirmed the completion), then the resident updated the work order reporting there was still an issue.
+</Note>
+
+**A. Check if the resident has provided more information on their report.  **
+
+<Frame>
+  <img src="/images/SVC-502.png" alt="image-20260612-011734.png" />
+</Frame>
+
+1. **If details are already provided**, take action based on what the resident reported:
+  1. Follow-up is needed (e.g. estimate or part/material) - See [How to: Put a Job on Hold](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Put-a-Job-on-Hold) for detailed guides
+  2. Another appointment is required - Reschedule the work order.
+    1. Notify the service provider that the work order is reopened and a new appointment is needed.
+    2. Set an appointment if another schedule was confirmed.
+2. **If there is none**, call the resident to understand why they are reporting that there is still an issue with the job.
+  1. 💬 *"Hello [Resident's Name]! This is [Agent name], calling from Latchel, the maintenance intake team for [PM Company Name]. We noticed your work order was recently closed, but it looks like there may still be an unresolved issue. We'd like to help get this taken care of — could you let us know what's currently going on?"*
+  2. If the resident responded and the issue was deemed unresolved, take action as follows:
+    1. Follow-up is needed (e.g. estimate or part/material) - See [How to: Put a Job on Hold](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Put-a-Job-on-Hold) for detailed guides
+    2. Another appointment is required - Reschedule the work order.
+      1. Notify the service provider that the work order is reopened and a new appointment is needed.
+      2. Set an appointment if another schedule was confirmed.
+  3. If the resident has been unresponsive
+    1. Call the service provider to get an update and take action as follows:
+      1. Follow-up is needed (e.g. estimate or part/material) - See [How to: Put a Job on Hold](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Put-a-Job-on-Hold) for detailed guides
+      2. Another appointment is required - Reschedule the work order.
+        1. Notify the service provider that the work order is reopened and a new appointment is needed.
+        2. Set an appointment if another schedule was confirmed.
+      3. If the service provider said they completed the job and don't know of any issues, a follow-up has to be made to the resident to get exact details on what else is unresolved.Follow the [**Standard Task Creation Template**](https://help.latchel.com/latchel-admin/Service-Operations/Standard-Task-Creation-Template) above:
+        - **Task Description:** "The resident has reported an issue with the job but the service provider confirmed the completion. Please reach out to the resident and get exact details on what else is unresolved. Once details are provided, reach out to the service provider for a recall."
+      4. If the service provider is also unreachable:Follow the [**Standard Task Creation Template**](https://help.latchel.com/latchel-admin/Service-Operations/Standard-Task-Creation-Template) above:
+        - **Task Description:** "This work order was auto-completed but the resident reports there is still an issue. The resident is unresponsive. Please reach out to the service provider to confirm the status of the job and update the work order accordingly."
+      5. If the service provider reports they did not visit the property or are unfamiliar with the work order:
+        1. Document the SP's response in the work order notes.
+        2. Treat the work order as requiring re-dispatch.
+        3. Reschedule the work order and follow standard dispatch procedures.
+        4. Close your task.
+
+### **Scenario 3. **The resident reported issue was not resolved after initially marking it as completed.
+
+**A. Verify the complaint is related to the original maintenance request issue~~.~~**
+
+1. Review the resident's report and compare it against the original work order details. Ask yourself: is the resident describing the **same issue** that was previously addressed, or is this a **new/different problem**?
+2. **If the complaint IS related to the original issue (this is a recall):**
+  1. Refer to the steps outlined in [How to: Identify and Handle a Recall WO](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Identify-and-Handle-a-Recall-WO)
+  2. Close your Resident Follow Up task after the recall process has been initiated.
+3. **If the complaint is NOT related to the original issue (this is a new problem):**
+  1. This is not a recall. A new work order may be needed.
+  2. Inform the resident that this appears to be a separate issue and advise them to submit a new maintenance request through the portal.
+    1. If you have the access and permission needed to assist the resident with submitting the work order, proceed with doing so.
+  3. Close your Resident Follow Up task.
+4. **If you are unsure whether the job qualifies as a recall**, reach out to Operations Support Specialists via our escalation channels. See [How to: Escalate Between Teams](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Escalate-Between-Teams). Do not proceed until you receive guidance.
+5. **If you cannot determine from the notes whether this is a recall or a new issue:**
+Call the resident to gather more details about the reported problem. Use their response to determine whether to follow the Recall WO SOP or treat it as a new issue.
+
+### **Scenario 4.** A task was created as per Property Manager’s request/instruction.
+
+**A. Contact the resident to fulfill the PM's request**
+
+1. Review the PM's instructions as documented in the task.
+2. Call the resident and carry out the requested action (e.g., collect photos, confirm availability, relay information, gather details).
+
+**B. If the resident is responsive:**
+
+1. Complete the requested action.
+2. Document the outcome in the work order notes.
+3. If the PM requested a response or deliverable (e.g., photos, confirmation, resident's answer), create a task following the [**Standard Task Creation Template**](https://help.latchel.com/latchel-admin/Service-Operations/Standard-Task-Creation-Template) with Subject "Property Manager Follow Up" to relay the result.
+4. Close your task.
+
+**C. If the resident is unresponsive after 2 contact attempts:**
+
+1. Create a task following the Standard Task Creation Template to notify the PM of the unsuccessful contact attempts.
+2. Close your task.
+
+### **Scenario 5. ** The resident marked an urgent job as no longer an issue.
+
+<Note>
+This system-generated task is only created when the resident canceled an urgent work order. This requires us to contact the resident to confirm before excessive damage occurs in the home.
+</Note>
+
+**A. Attempt to call the resident and confirm the action they made. **
+
+1. **If the resident responds:**
+  1. The resident canceled the work order accidentally — Reschedule the work order and allow the automation to take over. Document the conversation in the work order notes. Close the task.
+  2. The resident confirmed that they no longer need the service because they have fixed the issue — Document the conversation in the work order notes. Close the task.
+2. **If the resident is unresponsive** (reached voicemail or no answer):
+  1. Leave a voicemail. If no option to leave a voicemail, send an SMS or email, whichever is available. Use the blurb below:*💬 "Hello [Resident's Name]! This is [Agent name], calling from Latchel, the maintenance intake team for [PM Company Name]. We noticed that the urgent job related to (issue) has been canceled. We just want to make sure this was done without error and the issue has been resolved. Please feel free to call or message us back if anything else is needed. Thank you!"*
+  2. Defer the task for the next business day at 9:00 AM local time for the contact to allow the resident time to respond.
+3. **If the resident has been contacted 2x and remains unresponsive:**
+  1. Document all contact attempts in the work order notes.
+  2. Escalate to the Property Manager. Follow the** **[**Standard Task Creation Template**](https://help.latchel.com/latchel-admin/Service-Operations/Standard-Task-Creation-Template) above with details:
+    - **Task Description:** *"Hello [PM Name], we have created this task for you following two unsuccessful attempts to contact [Resident Name] regarding the cancellation of an urgent work order related to [issue]. We want to confirm this was intentional before excessive damage occurs. Could you kindly let us know how you want to proceed? Thank you*!"
+  3. Close your Resident Follow Up task.
+
+### **Scenario 6. ** The resident asked for general help.
+
+When the tenant has updated the work order and requested general help, the system will allow them to write in free text what specific assistance would they need.
+
+**A. Read their notes and understand them carefully. **
+
+1. **If they are requesting updates**, call them to provide what is needed. Weigh if calling the assigned service provider (if there's any) is needed so we can provide a relevant update.
+  1. If the resident answers, provide the update and close the task.
+  2. If reached voicemail, send an SMS if possible. Close the task.
+2. **If the resident's message is intended for someone else** and there is no action needed from Latchel, all we need to do is relay the information and close the task.
+3. Use the following to determine who the message is for:
+
+| If the resident's message references... | Route to... |
+| --- | --- |
+| Billing, lease terms, property access, move-in/move-out, rent, or account changes | Property Manager |
+| Scheduling, repair quality, service provider arrival time, or the work being performed | Service Provider |
+| Something unclear or you cannot determine the intended recipient | Call the resident first to clarify, then route accordingly |
+
+To route to the Service Provider, create a task following the [**Standard Task Creation Template**](https://help.latchel.com/latchel-admin/Service-Operations/Standard-Task-Creation-Template) above with Subject 'Service Provider Follow Up.'
+
+For PM routing, refer to how we handle non-maintenance requests.
+
+**B. If the resident asked for general help but no notes were left:**
+
+1. Call the resident and ask how we can help.
+  1. **If the resident responds**, take action based on what they describe:Close the task after taking the appropriate action.
+    - Requesting updates on their work order — provide the update
+    - Describing an unresolved issue — follow the applicable scenario (Scenario 1 sub-scenarios)
+    - Message intended for the Property Manager or service provider — follow step A.2 above
+    - Reporting the issue returned after completion — this may be a recall, follow Scenario 3
+  2. **If the resident is unresponsive** (reached voicemail, or no voicemail option available):
+    1. Leave a voicemail if possible. If no voicemail option, send an SMS or email, whichever is available.
+    2. Close the task.
+
+## **<u>How to handle emergency work orders when resident requested further support or reported the issue is not resolved. </u>**
+
+For emergency follow-ups where the issue is not resolved, apply the same scenario logic above (1A–1E) but follow emergency contact frequency and escalation timelines per the [Informational: Basic Service Ops Guidelines and Rules](https://help.latchel.com/latchel-admin/Service-Operations/Informational-Basic-Service-Ops-Guidelines-and-Rules) and [How to: Handle Emergency Work Orders](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Handle-Emergency-Work-Orders).
+
+## 🎯 When to Break This SOP
+
+You should only break or deviate from the process in the SOP in specific, documented scenarios:
+
+- If the issue escalates to property damage or extreme habitability and following the standard process would delay urgent action, escalate immediately to emergency contacts as outlined in related SOPs.
+- If a company leadership gives direct instructions that override the SOP, follow their direction and document the exception.
+- If you encounter a situation not covered by the SOP or are unsure how to proceed, escalate to Operations Support Specialists for guidance—do not proceed on your own.
+
+## 💡 If You Think This SOP Could Be Improved...
+
+Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work?
+ 👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**

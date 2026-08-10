@@ -1,0 +1,146 @@
+---
+title: "How to Perform Lucia Interaction Audits"
+groups: ["latchel"]
+---
+
+## 🧠 What This Process Is Trying to Solve
+
+<Note>
+We want to ensure that Lucia’s (AI assistant) conversations with residents are handled with quality, accuracy, and in alignment with Latchel’s service standards and operations procedures. The goal of this SOP is to provide a structured review process for evaluating Lucia’s interactions, identifying errors or gaps, and ensuring that residents receive correct information and appropriate support. This process prevents miscommunication, unresolved issues, and compliance risks—helping Latchel maintain high customer satisfaction, build trust, and continuously improve both AI and human-assisted service quality
+
+Note: this SOP reflects the streamlined 3-category audit format (pilot), replacing the previous 12-category review.
+</Note>
+
+## 📋 Step-by-Step Process
+
+The following steps outline how to review Lucia’s interactions effectively. Each audit focuses on verifying whether Lucia correctly understood the issue, took the appropriate action, provided accurate information, updated the correct work order, avoided abandonment or broken promises, and followed Ops SOPs throughout the interaction.
+
+### Step 1 - Navigating through Lucia Spy Site
+
+- Go to [Lucia Spy Admin](https://app.latchel.com/admin/lucia-spy) to view Lucia’s recent conversations.
+- Scroll down to locate the **first conversation of the current day**.
+  - This will be the **first entry after the last one labeled ‘yesterday’**.
+  - <Frame>
+  <img src="/images/SVC-564.png" alt="image-20250805-194708.png" />
+</Frame>
+- Click to open the conversation.
+- Review the interaction that **matches the date you are auditing** (typically in real time, as this process is done daily).
+
+### Step 2 - Reviewing Lucia’s Interaction
+
+Read the full conversation from the resident's initial inquiry through Lucia's final response — this cannot be skipped, since any of the 3 priority issues below can occur at any point in the exchange. Open related work orders as you go to confirm context; Lucia may occasionally act on the incorrect work order, so double-check you're looking at the right one.
+
+- **Lucia Abandoned**:
+
+1. **What to look for:**
+Did the conversation end abruptly, with Lucia failing to respond, or failing to follow up on something she said she would check on?
+2. **How to verify:**
+
+- Confirm there is no further response from Lucia after the resident's last message (or after Lucia's own stated commitment to follow up).
+- If Lucia said she'd "check" or "look into" something, confirm she never returned with an update.
+- Mark "Lucia Abandoned?" as **Yes** if confirmed; **No** otherwise.
+
+- **Broken Promise to Add Note:**
+
+1. **What to look for:**
+Did Lucia say something like "I'll note this," "I'll pass this along," or "I've let the team know"?
+2. **How to verify:**
+  - Open the related work order in the corresponding system.
+  - Confirm whether a note matching what Lucia described was actually added.
+  - Mark "Broken promise to add note?" as **Yes** if the note is missing; **No** if it's present.
+
+- **Broken Promise to Add Files:**
+
+1. **What to look for:**
+Did Lucia say she uploaded, attached, or added a file/photo to the work order?
+2. **How to verify:**
+  - Open the related work order and check the attachments.
+  - Confirm whether the file/photo Lucia referenced is actually there.
+  - Mark "Broken promise to add files?" as **Yes** if the file is missing; **No** if it's present.
+
+**Common Task Triggers :**
+
+- "Requested general help" – created when Lucia commits to leaving a note.
+- "Issue not resolved" – created when Lucia reports an unresolved issue on behalf of the resident.
+
+### Step 3 - Completing the Audit Tracker
+
+<Note>
+All required data must be entered in the [Lucia Audit Tracker](https://docs.google.com/spreadsheets/d/1SWet_7wLRh7TgEG08qN9VdbnDTI1-JZ4NjTmFOC-QvY/edit?usp=sharing) sheet.
+</Note>
+
+- **Audit Tracker Columns:**
+
+| Column | Description |
+| --- | --- |
+| **Audit Date** | Date the audit was performed |
+| **Conversation Date** | Date of the resident conversation |
+| **User** | Resident's name |
+| **Quality Issue?** | Calculated automatically — Yes if any of the 3 priority categories below is Yes, No otherwise. Do not fill in manually. |
+| **Lucia Abandoned?** | Yes / No — only fill in if a quality issue was found |
+| **Broken promise to add note?** | Yes / No — only fill in if a quality issue was found |
+| **Broken promise to add files?** | Yes / No — only fill in if a quality issue was found |
+| **Time Spent (min)** | Minutes spent on this audit |
+| **Notes** | Free text — required only when a quality issue is found. Summarize what happened. |
+
+Note: if Lucia corrected herself within the same conversation (e.g., initially failed to send a link, but re-sent it after the resident followed up, without the conversation being abandoned), this is not marked as Yes in any of the 3 priority categories — and therefore the calculated Quality Issue field will read No. The key factor is that Lucia redeemed the error in real time.
+
+### 📊Handling the CSAT Survey Results File
+
+<Note>
+Utilize the [Serv Ops CSAT Survey Results](https://docs.google.com/spreadsheets/d/1qbb7PVm7M2cgWtQE3i_Cuo4EPXJw1dznd4-XdEESlno/edit?gid=1096436514#gid=1096436514) to perform this.
+</Note>
+
+<Note>
+*“Lucia auditors should only be reviewing any new poor (1–2 star) CSAT scores and noting them in our audit tracker. They should not update the CSAT Survey Results file directly.”*
+</Note>
+
+1. **Scroll to the bottom** of the entries in the survey file and check for any **new survey responses**.
+  1. <Frame>
+  <img src="/images/SVC-565.png" alt="image-20250805-204215.png" />
+</Frame>
+2. **Read the feedback** in the **‘Feedback’** column and take note of the corresponding **‘Rating’**.
+3. **Copy the ‘User Email’** and search for the resident's email address in **Console**.
+  1. <Frame>
+  <img src="/images/SVC-566.png" alt="image-20250805-204332.png" />
+</Frame>
+4. Once you locate the resident, return to the [AI Chat Monitoring](https://docs.google.com/spreadsheets/d/1SWet_7wLRh7TgEG08qN9VdbnDTI1-JZ4NjTmFOC-QvY/edit?gid=290123918#gid=290123918) spreadsheet and find the **matching resident**.
+  1. <Frame>
+  <img src="/images/SVC-567.png" alt="image-20250805-204413.png" />
+</Frame>
+  2. Ensure the **interaction date** matches the **survey date**.
+5. Review the conversation with Lucia and note if Lucia had a quality issue which may have caused the low rating.
+
+### 🧭Handling edge cases or uncertain situations
+
+If you're unsure how to handle a specific scenario or find something unclear during an audit, send a direct message to **Jordan** via Slack for guidance.
+
+**Lucia Audit Syncs** with Jordan are held every 3 weeks to review and align on:
+
+- Engineering updates that may impact Lucia’s behavior
+- Ongoing concerns or blockers raised during audits
+- Opportunities for process or quality improvements
+
+## **💡Knowledge & Tips**
+
+- Lucia’s capabilities closely mirror those of a resident using their dashboard, so certain limitations should be expected.
+- Always review the entire conversation from start to finish to identify any subtle signs of abandonment.
+- Double-check all work order (WO) actions in **Lucia Spy** to ensure they were completed accurately.
+- Cross-reference CSAT scores and internal notes to help uncover less obvious issues.
+- Log all findings consistently in the **Audit Tracker** to maintain transparency and visibility.
+
+## 🛠️Tools and Resources
+
+- [Lucia Spy](https://app.latchel.com/admin/lucia-spy) - Tool used to monitor and review Lucia’s most recent conversations.
+  - <Frame>
+  <img src="/images/SVC-568.png" alt="image-20250805-173026.png" />
+</Frame>
+- [Audit Tracker](https://docs.google.com/spreadsheets/d/1SWet_7wLRh7TgEG08qN9VdbnDTI1-JZ4NjTmFOC-QvY/edit?gid=290123918#gid=290123918) - Used to document and log the results of each interaction audit.
+- [CSAT Review Sheet](https://docs.google.com/spreadsheets/d/1qbb7PVm7M2cgWtQE3i_Cuo4EPXJw1dznd4-XdEESlno/edit?gid=1096436514#gid=1096436514) - Reference sheet used to cross-check resident satisfaction (CSAT) scores during audits.
+
+---
+
+## 💡 If You Think This SOP Could Be Improved...
+
+Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work?
+ 👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**
