@@ -89,7 +89,8 @@
                           "s/topic/0TO5e000000h9wqGAA/Managing-Intake-Settings",
                           "s/topic/0TO5e000000h9wqGAA/intake-settings-rule-analyzer",
                           "s/topic/0TO5e000000h9wqGAA/intake-conversation-settings"
-                        ]
+                        ],
+                        "public": true
                       }
                     ],
                     "public": true
