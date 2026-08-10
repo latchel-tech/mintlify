@@ -91,7 +91,8 @@
                           "s/topic/0TO5e000000h9wqGAA/intake-conversation-settings"
                         ]
                       }
-                    ]
+                    ],
+                    "public": true
                   },
                   {
                     "group": "Dashboard Overview",
