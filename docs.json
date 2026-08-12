@@ -801,10 +801,11 @@
                       {
                         "group": "Training Documentation",
                         "pages": [
+                          "latchel-admin/Service-Operations/Training-Documentation/Associate-Task-Refresher-Signal-Specification",
                           "latchel-admin/Service-Operations/Training-Documentation/how-to-check-for-updates-on-training-materials",
                           "latchel-admin/Service-Operations/Training-Documentation/job-aid-shadowing-phases-and-expectations",
                           "latchel-admin/Service-Operations/Training-Documentation/new-operations-associate-onboarding-plan",
-                          "latchel-admin/Service-Operations/Training-Documentation/Associate-Task-Refresher-Signal-Specification"
+                          "latchel-admin/Service-Operations/Training-Documentation/sop-associate-task-refresher-training-signals"
                         ]
                       },
                       {
