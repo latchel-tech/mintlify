@@ -1,12 +1,13 @@
 ---
-title: "Associate Task-Refresher Signal Specification "
+title: "Associate Task-Refresher Signal Specification"
+groups: ["latchel"]
 ---
 
-LATCHEL · OPERATIONS Associate Task-Refresher Signal Specification Volume-based early-warning signals for per-queue refresher training, derived from weekly productivity data Prepared by:  Jen Lye Prepared for:  Data / BI Team Date:  July 16, 2026 Source data:  Productivity Data tab, Associate Productivity Tracker (Google Sheet)
+LATCHEL · OPERATIONS Associate Task-Refresher Signal Specification Volume-based early-warning signals for per-queue refresher training, derived from weekly productivity data Prepared by:  Jen Lye Prepared for:  Data / BI Team Date:  July 16, 2026 Source data:  Productivity Data tab, Associate Productivity Tracker (Google Sheet)
 
-**1.Purpose**<br /> 
+**1.Purpose**
 
-Associates can move between queues (Inbound Calls, Emails, Tasks/Troubleshooter, SMS/Webchat, Admin, etc.) at any time. When an associate's volume in a queue they're still assigned to drops meaningfully below their own normal pace, that's an early signal they may need a task refresher — before it shows up as a quality or SLA problem. 
+Associates can move between queues (Inbound Calls, Emails, Tasks/Troubleshooter, SMS/Webchat, Admin, etc.) at any time. When an associate's volume in a queue they're still assigned to drops meaningfully below their own normal pace, that's an early signal they may need a task refresher — before it shows up as a quality or SLA problem.
 
 This spec covers: which productivity columns map to which queues, how a personal baseline is established, what counts as a meaningful drop, and the exclusions needed so the signal doesn't fire on noise, PTO/leave weeks, or a legitimate queue change.
 
@@ -24,9 +25,9 @@ This spec covers: which productivity columns map to which queues, how a personal
 
 <br /> 3.4 Baseline window<br /> Cadence: biweekly. Baseline = trailing 4-period rolling average of the true per-queue rate (≈ 2 months of history), using only periods where the associate (a) met the queue exposure floor (Section 6, Step 2) and (b) worked a normal schedule. Minimum 3 qualifying periods of history required before a signal can fire for that associate/queue — new assignments need time to establish a baseline first.
 
-**4.Queue Catalog**<br /> 
+**4.Queue Catalog**<br />
 
-Mapped from the productivity columns and the roster's Task Assignment field. Rate metrics are defined against hours in that queue (Section 3.3) — the ÷ hours in queue column is the field to source from the Latchel platform: 
+Mapped from the productivity columns and the roster's Task Assignment field. Rate metrics are defined against hours in that queue (Section 3.3) — the ÷ hours in queue column is the field to source from the Latchel platform:
 
 | **Queue** | **Volume Column** | **True Rate Metric** | **Primary Role** |
 | :-- | :-- | :-- | :-- |
@@ -36,9 +37,9 @@ Mapped from the productivity columns and the roster's Task Assignment field. Rat
 | Administrative Tasks | Admin Tickets | Tickets ÷ Hrs in Admin queue | OA-T (Administrative) |
 | SMS / Webchat | SMS Replied | SMS ÷ Hrs in SMS queue | SMS |
 
-**5.Empirical Grounding — What “Normal” Volatility Looks Like**<br /> 
+**5.Empirical Grounding — What “Normal” Volatility Looks Like**<br />
 
-Before setting thresholds, variation was measured across 10 weeks / ~40 associates, then re-aggregated into biweekly periods to match the confirmed cadence. One caveat: this analysis used total Hours Worked as the denominator, because that's what exists in the productivity sheet today — true hours-in-queue history wasn't available to analyze retroactively. The two metrics below still behave very differently, which is why the spec treats “stable” and “volatile” queues differently rather than one flat threshold everywhere: 
+Before setting thresholds, variation was measured across 10 weeks / ~40 associates, then re-aggregated into biweekly periods to match the confirmed cadence. One caveat: this analysis used total Hours Worked as the denominator, because that's what exists in the productivity sheet today — true hours-in-queue history wasn't available to analyze retroactively. The two metrics below still behave very differently, which is why the spec treats “stable” and “volatile” queues differently rather than one flat threshold everywhere:
 
 | **Metric (biweekly)** | **Typical period/period swing (25th–75th pct)** | **10th–90th pct band** | **Drops ≥50% below prior period** |
 | :-- | :-- | :-- | :-- |
@@ -49,16 +50,16 @@ For Inbound Calls, a sizeable period/period drop is a strong, rare signal. Email
 
 **6. Signal Logic**
 
-Evaluated per associate, per queue, per period (biweekly). Associates move across queues multiple times a day, so this logic gates on actual exposure and a true per-queue rate rather than tracking queue assignment as a fixed attribute: 
+Evaluated per associate, per queue, per period (biweekly). Associates move across queues multiple times a day, so this logic gates on actual exposure and a true per-queue rate rather than tracking queue assignment as a fixed attribute:
 
-- Eligibility gate — associate must have ≥ 40 hours worked (total) in the biweekly period and ≥ 90 days tenure. 
-- Queue exposure gate — associate must have logged ≥ 4 hours in that queue during the period (provisional, pending hours-in-queue history — see Section 5). Periods below the floor are excluded from both the baseline and the evaluation. 
-- Compute baseline — trailing 4-period average of the true rate (queue actions ÷ hours in that queue). 
-- Trigger — current period below the Section 7 threshold for 2 consecutive periods → Recommendation (auto-notify supervisor). Persists a 3rd consecutive period, or overall Total Actions/Hr is also below its own baseline → Escalation (auto-notify supervisor \+ flag as a broader performance concern, not just one queue). 
+- Eligibility gate — associate must have ≥ 40 hours worked (total) in the biweekly period and ≥ 90 days tenure.
+- Queue exposure gate — associate must have logged ≥ 4 hours in that queue during the period (provisional, pending hours-in-queue history — see Section 5). Periods below the floor are excluded from both the baseline and the evaluation.
+- Compute baseline — trailing 4-period average of the true rate (queue actions ÷ hours in that queue).
+- Trigger — current period below the Section 7 threshold for 2 consecutive periods → Recommendation (auto-notify supervisor). Persists a 3rd consecutive period, or overall Total Actions/Hr is also below its own baseline → Escalation (auto-notify supervisor \+ flag as a broader performance concern, not just one queue).
 
-**7. Thresholds**<br /> 
+**7. Thresholds**<br />
 
-**7.1 Stable queues (e.g., Inbound Calls)** 
+**7.1 Stable queues (e.g., Inbound Calls)**
 
 | **Signal** | **Condition** |
 | :-- | :-- |
@@ -72,37 +73,37 @@ Evaluated per associate, per queue, per period (biweekly). Associates move acros
 | Recommendation | Below associate's own historical 10th percentile, sustained 2 consecutive periods, AND overall Total Actions/Hr not compensating |
 | Escalation | Persists 3\+ consecutive periods |
 
-Minimum baseline floor: queues with a trailing average at or near zero (associate rarely touches that queue) are excluded from triggering — there's no meaningful “normal” to compare against. Suggested floor: baseline ≥ 0.3 actions/hr for volatile queues, ≥ 0.5 for stable queues. 
+Minimum baseline floor: queues with a trailing average at or near zero (associate rarely touches that queue) are excluded from triggering — there's no meaningful “normal” to compare against. Suggested floor: baseline ≥ 0.3 actions/hr for volatile queues, ≥ 0.5 for stable queues.
 
-**8. Fields Required From the Data Model** 
+**8. Fields Required From the Data Model**
 
-Most already exist in the source sheet(s); one — hours in queue — needs to be sourced from the Latchel platform and joined in, since it's the field that makes the true per-queue rate possible (Section 3.3): 
+Most already exist in the source sheet(s); one — hours in queue — needs to be sourced from the Latchel platform and joined in, since it's the field that makes the true per-queue rate possible (Section 3.3):
 
-- Associate name / unique ID 
-- Period (week number \+ date range) and Year 
-- Hours Worked (total, for the eligibility gate) 
+- Associate name / unique ID
+- Period (week number \+ date range) and Year
+- Hours Worked (total, for the eligibility gate)
 
-> New field — not currently in the productivity sheet Hours in Queue: associate × queue × period. Tracked in the Latchel platform — BI to confirm exact source system and join key. This is the single biggest accuracy improvement available for this signal; without it, every rate is diluted by time spent in other queues.
+> New field — not currently in the productivity sheet Hours in Queue: associate × queue × period. Tracked in the Latchel platform — BI to confirm exact source system and join key. This is the single biggest accuracy improvement available for this signal; without it, every rate is diluted by time spent in other queues.
 
-- Current Task Assignment / primary queue (from roster, for routing/context) 
+- Current Task Assignment / primary queue (from roster, for routing/context)
 - Tenure (from system— needed for the 90-day gate)
 - Supervisor (for routing the flag)
--  Per-queue volume count and true rate metric (Section 4 columns)
--  Total Actions / Hour Worked (for the escalation trigger in Section 6)<br /> 
+- Per-queue volume count and true rate metric (Section 4 columns)
+- Total Actions / Hour Worked (for the escalation trigger in Section 6)<br />
 
-**9. Exclusions & Guardrails** 
+**9. Exclusions & Guardrails**
 
-> Real example from the data — why the Hours-Worked gate matters 
->
+> Real example from the data — why the Hours-Worked gate matters
+
 > _In the sample, one associate's Inbound Calls/Hr fell from a 2.3 trailing baseline to 0.0 in a single week. Hours Worked that week was 0 — a leave week, not a skill issue. Without the ≥ 40 hr eligibility gate in Step 1 (Section 6), this would have fired a false Recommendation._
 
-- Exclude periods with \< 40 hours worked (biweekly, total) from both the baseline calculation and the trigger evaluation — filters PTO/leave periods. 
-- Exclude associates with \< 90 days tenure in role (or in that queue, if queue-specific tenure is trackable). 
-- Exclude a queue/period from evaluation if it falls below the queue exposure floor (Section 6, Step 2). 
-- Suppress re-triggering for an associate/queue for 3 biweekly periods (~6 weeks) after a refresher has already been completed, to avoid alert fatigue and give performance time to stabilize post-training. 
-- Supervisors and QA/leads roles are out of scope for this signal — it applies to production queues only (Inbound Calls, Emails, Tasks, SMS, Admin). 
+- Exclude periods with \< 40 hours worked (biweekly, total) from both the baseline calculation and the trigger evaluation — filters PTO/leave periods.
+- Exclude associates with \< 90 days tenure in role (or in that queue, if queue-specific tenure is trackable).
+- Exclude a queue/period from evaluation if it falls below the queue exposure floor (Section 6, Step 2).
+- Suppress re-triggering for an associate/queue for 3 biweekly periods (~6 weeks) after a refresher has already been completed, to avoid alert fatigue and give performance time to stabilize post-training.
+- Supervisors and QA/leads roles are out of scope for this signal — it applies to production queues only (Inbound Calls, Emails, Tasks, SMS, Admin).
 
-10. Confirmed Parameters 
+**10. Confirmed Parameters**
 
 | **Parameter** | **Value** |
 | :-- | :-- |
