@@ -3,11 +3,11 @@ title: "How to do the Weekly Review for Assisted Ledgering (Buildium)"
 ---
 
 <Note>
-The purpose of this document is to provide a guide into how to do a weekly review of a Property Manager in the Tracker when the PMS is Buildium.
+  The purpose of this document is to provide a guide into how to do a weekly review of a Property Manager in the Tracker when the PMS is Buildium.
 </Note>
 
 <Warning>
-In **Assisted Ledgering**, **once their contract reaches the 12-month period, it will end**; you should stop doing their review. <u>Make sure to check regularly the </u>**<u>service start date</u>**<u> for your PMs assigned to Assisted Ledgering</u>.
+  In **Assisted Ledgering**, **once their contract reaches the 12-month period, it will end**; you should stop doing their review. <u>Make sure to check regularly the service start date for your PMs assigned to Assisted Ledgering</u>.
 </Warning>
 
 ## **Step-by-step guide**
@@ -17,151 +17,151 @@ In **Assisted Ledgering**, **once their contract reaches the 12-month period, it
 For Property Managers using Buildium, you will need to download 2 different reports to do the weekly review.
 
 <Accordion title="Rent Roll Report">
-### **Step 1 - Export the Rent Roll data from Buildium**
+  ### **Step 1 - Export the Rent Roll data from Buildium**
 
-a. Log in to the PM's Buildium account.
+  a. Log in to the PM's Buildium account.
 
-b. Generate and download the **Rent Roll** report as an Excel file, following the "[How to: Generate a Rent Roll Report in Buildium](https://latchel.atlassian.net/wiki/spaces/AL/pages/2806054947/How+to+Generate+a+Rent+Roll+Report+in+Buildium)" SOP.
+  b. Generate and download the **Rent Roll** report as an Excel file, following the "[How to: Generate a Rent Roll Report in Buildium](https://latchel.atlassian.net/wiki/spaces/AL/pages/2806054947/How+to+Generate+a+Rent+Roll+Report+in+Buildium)" SOP.
 
-<Frame>
-  <img src="/images/CPT-140.png" alt="" />
-</Frame>
+  <Frame>
+    ![](/images/CPT-140.png)
+  </Frame>
 
-### **Step 2 - Use the reformatting script to prepare the data for analysis**
+  ### **Step 2 - Use the reformatting script to prepare the data for analysis**
 
-a. Open the CPT Tracker Google Sheet.
+  a. Open the CPT Tracker Google Sheet.
 
-b. Click **File > Import** and upload the Rent Roll report you just downloaded.
+  b. Click **File \> Import** and upload the Rent Roll report you just downloaded.
 
-c. In the import options, select **"Insert new sheet(s)"** and click **Import data**. A new sheet named "Rent Roll" will be created.
+  c. In the import options, select **"Insert new sheet(s)"** and click **Import data**. A new sheet named "Rent Roll" will be created.
 
-d. Go to the new "Rent Roll" sheet, click the top-left cell (between A and 1) to select all, and copy the data.
+  d. Go to the new "Rent Roll" sheet, click the top-left cell (between A and 1) to select all, and copy the data.
 
-<Frame>
-  <img src="/images/CPT-141.png" alt="" />
-</Frame>
+  <Frame>
+    ![](/images/CPT-141.png)
+  </Frame>
 
-e. Navigate to the sheet named **"reformatBuildium,"** click on cell A1, and paste the data.
+  e. Navigate to the sheet named **"reformatBuildium,"** click on cell A1, and paste the data.
 
-<Frame>
-  <img src="/images/CPT-142.png" alt="" />
-</Frame>
+  <Frame>
+    ![](/images/CPT-142.png)
+  </Frame>
 
-f. Click the **"Reformat report"** button.
+  f. Click the **"Reformat report"** button.
 
-- **Success:** A "Report formatting complete!" message appears.
-- **Error:** If an "Oops!" message appears, delete the data from the "reformatBuildium" sheet and repeat the process. If the error persists, contact BI Team.
+  - **Success:** A "Report formatting complete!" message appears.
+  - **Error:** If an "Oops!" message appears, delete the data from the "reformatBuildium" sheet and repeat the process. If the error persists, contact BI Team.
 
-<Frame>
-  <img src="/images/CPT-143.png" alt="" />
-</Frame>
+  <Frame>
+    ![](/images/CPT-143.png)
+  </Frame>
 
-### **Step 3 - Import the clean, reformatted data into the CPT Tracker**
+  ### **Step 3 - Import the clean, reformatted data into the CPT Tracker**
 
-a. Once the script runs successfully, go to the "reformatBuildium" sheet.
+  a. Once the script runs successfully, go to the "reformatBuildium" sheet.
 
-b. Select all the reformatted data, starting from row 2 (the first property) down to the last property, and from column A over to the "Charges" column (usually column I).
+  b. Select all the reformatted data, starting from row 2 (the first property) down to the last property, and from column A over to the "Charges" column (usually column I).
 
-c. Copy this selection.
+  c. Copy this selection.
 
-d. Navigate to the main tab for that PM and paste the data into the first empty cell in column **AJ** (right after the black divider cell).
+  d. Navigate to the main tab for that PM and paste the data into the first empty cell in column **AJ** (right after the black divider cell).
 </Accordion>
 
 <Accordion title="Transaction Details by Account Report">
-### **Step 1 - Generate a custom Transaction Details report**
+  ### **Step 1 - Generate a custom Transaction Details report**
 
-a. Go back to the PM's Buildium account and navigate to **Reports**.
+  a. Go back to the PM's Buildium account and navigate to **Reports**.
 
-b. Find and open the **"Transaction details by Account"** report.
+  b. Find and open the **"Transaction details by Account"** report.
 
-<Frame>
-  <img src="/images/CPT-144.png" alt="" />
-</Frame>
+  <Frame>
+    ![](/images/CPT-144.png)
+  </Frame>
 
-c. Configure the report with the following settings **exactly**:
+  c. Configure the report with the following settings **exactly**:
 
-- `Properties or Company`: **All**
-- `Account(s)`: Search for and select the **Latchel GL Account**.
-- `Date range`: **Custom**
-- `From`: The **21st of the previous month**.
-- `To`: The **current date**.
-- `Accounting basis`: **Accrual**
+  - `Properties or Company`: **All**
+  - `Account(s)`: Search for and select the **Latchel GL Account**.
+  - `Date range`: **Custom**
+  - `From`: The **21st of the previous month**.
+  - `To`: The **current date**.
+  - `Accounting basis`: **Accrual**
 
-d. Click **Run Report**.
+  d. Click **Run Report**.
 
-<Frame>
-  <img src="/images/CPT-145.png" alt="" />
-</Frame>
+  <Frame>
+    ![](/images/CPT-145.png)
+  </Frame>
 
-e. Click the **"Show/hide columns"** option and ensure **all columns are selected**. Click **Save** if you make any changes.
+  e. Click the **"Show/hide columns"** option and ensure **all columns are selected**. Click **Save** if you make any changes.
 
-f. Click **Export > Excel file** to download the report.
+  f. Click **Export \> Excel file** to download the report.
 
-<Frame>
-  <img src="/images/CPT-146.png" alt="" />
-</Frame>
+  <Frame>
+    ![](/images/CPT-146.png)
+  </Frame>
 
-<Frame>
-  <img src="/images/CPT-147.png" alt="" />
-</Frame>
+  <Frame>
+    ![](/images/CPT-147.png)
+  </Frame>
 
-### **Step 2 - Analyze the report to identify new GL code charges**
+  ### **Step 2 - Analyze the report to identify new GL code charges**
 
-a. Open a new, blank Google Sheet.
+  a. Open a new, blank Google Sheet.
 
-b. Click **File > Import**, upload the "Transaction Details" report, and select **"Replace spreadsheet"**.
+  b. Click **File \> Import**, upload the "Transaction Details" report, and select **"Replace spreadsheet"**.
 
-c. Count the total number of charges by selecting all rows in the "Type" column.
+  c. Count the total number of charges by selecting all rows in the "Type" column.
 
-d. Compare this count to the number of GL codes from the previous week's tracker. If the count is higher, you have new charges to investigate.
+  d. Compare this count to the number of GL codes from the previous week's tracker. If the count is higher, you have new charges to investigate.
 
-e. For each new charge, identify the property by its address (the tenant's name is not available in this report). Note the charge amount from the "Amount" column.
+  e. For each new charge, identify the property by its address (the tenant's name is not available in this report). Note the charge amount from the "Amount" column.
 
-<Frame>
-  <img src="/images/CPT-148.png" alt="" />
-</Frame>
+  <Frame>
+    ![](/images/CPT-148.png)
+  </Frame>
 
-<Frame>
-  <img src="/images/CPT-149.png" alt="" />
-</Frame>
+  <Frame>
+    ![](/images/CPT-149.png)
+  </Frame>
 
-<Frame>
-  <img src="/images/CPT-150.png" alt="" />
-</Frame>
+  <Frame>
+    ![](/images/CPT-150.png)
+  </Frame>
 
-<Frame>
-  <img src="/images/CPT-151.png" alt="" />
-</Frame>
+  <Frame>
+    ![](/images/CPT-151.png)
+  </Frame>
 
-<Frame>
-  <img src="/images/CPT-152.png" alt="" />
-</Frame>
+  <Frame>
+    ![](/images/CPT-152.png)
+  </Frame>
 
-### **Step 3 - Update the main tracker with the new GL Code information**
+  ### **Step 3 - Update the main tracker with the new GL Code information**
 
-a. Go to the PM's main tab in the CPT Tracker.
+  a. Go to the PM's main tab in the CPT Tracker.
 
-b. For each new charge you identified in Step 5, find the corresponding property address.
+  b. For each new charge you identified in Step 5, find the corresponding property address.
 
-c. In that row, update the following columns:
+  c. In that row, update the following columns:
 
-- **Latchel Charge column:** Enter the charge amount from the report.
-- **"Has GL code?" column:** Change the status to **YES**.
-- **Column AU:** Add the same charge amount here to prevent formula errors in column P.
+  - **Latchel Charge column:** Enter the charge amount from the report.
+  - **"Has GL code?" column:** Change the status to **YES**.
+  - **Column AU:** Add the same charge amount here to prevent formula errors in column P.
 
-<Frame>
-  <img src="/images/CPT-153.png" alt="" />
-</Frame>
+  <Frame>
+    ![](/images/CPT-153.png)
+  </Frame>
 
-<Frame>
-  <img src="/images/CPT-154.png" alt="" />
-</Frame>
+  <Frame>
+    ![](/images/CPT-154.png)
+  </Frame>
 
-### **Step 4- Perform a final data verification and cleanup**
+  ### **Step 4- Perform a final data verification and cleanup**
 
-a. For every newly added GL code, go back into Buildium and check that tenant's profile.
+  a. For every newly added GL code, go back into Buildium and check that tenant's profile.
 
-b. Verify the lease and addendum status and confirm the date the GL code was first added.
+  b. Verify the lease and addendum status and confirm the date the GL code was first added.
 
-c. If the tenant was previously marked as a "missed opportunity" in the CPT Tracker, remove that status now that they are compliant.
+  c. If the tenant was previously marked as a "missed opportunity" in the CPT Tracker, remove that status now that they are compliant.
 </Accordion>

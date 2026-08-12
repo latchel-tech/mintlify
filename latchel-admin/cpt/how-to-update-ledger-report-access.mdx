@@ -3,52 +3,49 @@ title: "How to: Update Ledger Report Access"
 ---
 
 <Note>
-The purpose of this job aid is to guide the **Finance Team** on how to manually input report availability in the **Report Access** tab within the Integration Health Metrics Dashboard. This manual input allows the Ops Integrations Team and other Stakeholders to see which reports (e.g., Rent Roll, General Ledger) are available in the main **PM Metrics** tab.
+  The purpose of this job aid is to guide the **Finance Team** on how to manually input report availability in the **Report Access** tab within the Integration Health Metrics Dashboard. This manual input allows the Ops Integrations Team and other Stakeholders to see which reports (e.g., Rent Roll, General Ledger) are available in the main **PM Metrics** tab.
 </Note>
 
 The information entered in the **Report Access** tab syncs automatically to the **PM Metrics** tab (Column R) via a script that runs every hour.
 
 <Check>
-It is important that **whenever a new PM is onboarded**, the Finance team record their access status and available reports in the **Report Access** tab <u>to ensure the information in </u>**<u>PM Metrics</u>**<u> remains up to date.</u>
+  It is important that **whenever a new PM is onboarded**, the Finance team record their access status and available reports in the **Report Access** tab <u>to ensure the information in PM Metrics remains up to date.</u>
 </Check>
 
 ## Step by step
 
 ### **Step 1: Access the Dashboard and locate the tab.**
 
-a. Open the [**Integration Health Metrics Dashboard**](https://docs.google.com/spreadsheets/d/1lqN_yI3vZUehb9BZylCvXK0KU-PFfpJCkDvw1_sgWug/edit?gid=186001220#gid=186001220) Google Sheet.
-b. Navigate to the tab labeled **Report Access** (_This is hidden, as it serves as a database for column R in PM Metrics_.)
+a. Open the [**Integration Health Metrics Dashboard**](https://docs.google.com/spreadsheets/d/1lqN_yI3vZUehb9BZylCvXK0KU-PFfpJCkDvw1_sgWug/edit?gid=186001220#gid=186001220) Google Sheet. b. Navigate to the tab labeled **Report Access** (_This is hidden, as it serves as a database for column R in PM Metrics_.)
 
 <Frame>
-  <img src="/images/CPT-565.png" alt="image-20260129-204042.png" />
+  ![image-20260129-204042.png](/images/CPT-565.png)
 </Frame>
 
 ### **Step 2: Locate the Property Manager (PM)**
 
 a. In **Column A (PM Company)**, search for the Property Management company you are reviewing.
 
-- _Tip: Use _`Ctrl + F`_ (Windows) or _`Cmd + F`_ (Mac) to search quickly._ 
+- _Tip: Use `Ctrl + F` (Windows) or `Cmd + F` (Mac) to search quickly._
+
 <Frame>
-  <img src="/images/CPT-566.png" alt="image-20260129-204259.png" />
+  ![image-20260129-204259.png](/images/CPT-566.png)
 </Frame>
 
 ### **Step 3: Input Access and Report Data**
 
 <Warning>
-Do **not** edit Column A or Column B. These columns are populated dynamically. <u>Only edit Columns C and D.</u>
+  Do **not** edit Column A or Column B. These columns are populated dynamically. <u>Only edit Columns C and D.</u>
 </Warning>
 
-a. **Column C (Do we have access to the PMS?):** Select **"Yes"** from the dropdown menu if we have active access to their software.
-b. **Column D (Ledger Report Access):** Manually type in the specific reports available: Rent roll (itemized), General Ledger or both separated by a semicolon.
+a. **Column C (Do we have access to the PMS?):** Select **"Yes"** from the dropdown menu if we have active access to their software. b. **Column D (Ledger Report Access):** Manually type in the specific reports available: Rent roll (itemized), General Ledger or both separated by a semicolon.
 
-You can use **Ctrl + Shift + V** to copy and paste the available reports so they look like the other reports available for the other PMs.
+You can use **Ctrl \+ Shift \+ V** to copy and paste the available reports so they look like the other reports available for the other PMs.
 
 <Frame>
-  <img src="/images/CPT-567.png" alt="image-20260129-204703.png" />
+  ![image-20260129-204703.png](/images/CPT-567.png)
 </Frame>
 
 ### **Step 4: Verification**
 
-a. Once you have entered the data in Column D, no further action is required.
-b. The system runs an automated script **every hour**. After the script runs, the information you entered in **Report Access (Column D)** will automatically appear in **PM Metrics (Column R)**.
-c. Be sure to **<u>hide the Report Access tab after</u>** you finish.
+a. Once you have entered the data in Column D, no further action is required. b. The system runs an automated script **every hour**. After the script runs, the information you entered in **Report Access (Column D)** will automatically appear in **PM Metrics (Column R)**. c. Be sure to **<u>hide the Report Access tab after</u>** you finish.

@@ -1,17 +1,18 @@
 ---
 title: "Creating an On-Call Rotation (Admin Guide)"
+groups: ["latchel"]
 ---
 
-Currently (9/26/24), on-call rotations can only be configured at the portfolio level. 
+Currently (9/26/24), on-call rotations can only be configured at the portfolio level.
 
 **On-call rotations will not trigger if the following steps are not completed:**
 
 1. [**On-Call Product Package Setup**](https://latchel.atlassian.net/wiki/spaces/TST/pages/PHONE_NUMBER_008/On-Call+Product+Package+Setup)
-2. [**Configuring On-Call Technicians**](https://latchel.atlassian.net/wiki/spaces/TST/pages/PHONE_NUMBER_009/Configuring+On-Call+Technicians)**.**
+2. **[Configuring On-Call Technicians](https://latchel.atlassian.net/wiki/spaces/TST/pages/PHONE_NUMBER_009/Configuring+On-Call+Technicians).**
 
 **Both steps must be completed for the rotation to execute.**
 
-**The demo begins at 1:15:** 
+**The demo begins at 1:15:**
 
 [https://www.loom.com/share/abcdbac39c97445c94c40a01132b94d5](https://www.loom.com/share/abcdbac39c97445c94c40a01132b94d5)### **On-Call Terminology:**
 
@@ -21,24 +22,14 @@ Currently (9/26/24), on-call rotations can only be configured at the portfolio l
 4. **Attempt (Number of Tries)**: How many times we will alert the on-call technician, before alerting the backup contact
 5. **On-call Response SLA (Resident Contact Window)**: Tells the resident how long they should expect to wait before being contacted by the on-call technician (20mins - 2hrs)
 6. **Backup Contact**: An email address, phone number or person who should be contacted if no Service Providers acknowledge to a given emergency alert. 
-
-    1. 1 SMS and 1 Call alert will trigger after \[X\] minutes 
-    
-        1. Follows the same alert frequency time as configured for technicians 
-        
-    
-7. **Final Contact Group:** An email or group of emails ([user group](https://help.latchel.com/s/article/How-to-Create-User-Groups)) notified if neither the on-call technician nor the Backup Contact acknowledges an emergency work order alert. 
-
-    1. 1 email
-    
+   1. 1 SMS and 1 Call alert will trigger after \[X\] minutes
+      1. Follows the same alert frequency time as configured for technicians
+7. **Final Contact Group:** An email or group of emails ([user group](https://help.latchel.com/s/article/How-to-Create-User-Groups)) notified if neither the on-call technician nor the Backup Contact acknowledges an emergency work order alert.
+   1. 1 email
 8. **Administrative Email Notifications**: These emails are sent to an email or group of emails depending on the customer’s preference.
-
-    1. Emergency work order created
-    2. Non-emergency work order created
-    3. Resident Requests follow-up
-    4. Resident submitted a review
-    
+   1. Emergency work order created
+   2. Non-emergency work order created
+   3. Resident Requests follow-up
+   4. Resident submitted a review
 9. **Emergency Work Order alert:** the call and text message sent to the on-call technicians and backup contact seeking an emergency acknowledgement. 
 10. **Emergency Acknowledgement**: The action that describes the on-call technician or backup contact confirming receipt and assignment to the work order. 
-
-
