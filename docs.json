@@ -2088,7 +2088,9 @@
                 },
                 "groups": [
                   {
-                    "group": "Accounts Receivables Page",
+                    "group": [
+                      "latchel"
+                    ],
                     "pages": [
                       "latchel-admin/accounts-receivable/Accounts-Receivable-Tasks",
                       "latchel-admin/accounts-receivable/How-to-Handle-Basic-AR-Requests",
