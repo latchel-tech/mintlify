@@ -1,0 +1,103 @@
+---
+title: "SOP: Associate Task-Refresher Training Signals  "
+---
+
+# **What This Does**
+
+Every 2 weeks, the system checks each associate's pace in a queue — actions completed per hour actually spent in that queue — against their own recent history. Not against other people, just against how they normally perform.
+
+If someone's pace drops meaningfully and stays down, they're flagged for a possible task refresher and their supervisor gets a Slack DM.
+
+| **Level** | **When it fires** |
+| :-- | :-- |
+| Recommendation | Pace has been low for 2 periods in a row (a soft heads-up) |
+| Escalation | Low for 3\+ periods in a row, or their overall output is down too (a more serious signal) |
+
+Guardrails built in: PTO weeks are skipped, and there's a cooldown so nobody gets pinged repeatedly for the same dip. Two separate rules protect anyone who's still learning: associates under 90 days at the company are excluded outright, and — independently — nobody gets flagged in a queue until they have 3 periods of real history in that exact queue (about 6 weeks of actually working it). So someone who's been here 2 years but just moved to Troubleshooter last week won't be flagged there until they've had a fair shot at learning it, even though they'd pass the 90-day company-tenure gate on day one.
+
+# **Where the Data Comes From**
+
+- Volumes and hours: your existing weekly productivity sheet — no change to that process.
+- Hours in queue: derived from the platform's status logs (this is what makes the pace comparison accurate instead of just using total hours worked).
+- Tenure: pulled automatically from the platform's account-creation date. This replaced the old Zoltar column, which had several #N/A values that were dropping real people from consideration — no manual upkeep needed going forward.
+
+# **What You Get**
+
+1. A Slack DM to the associate's supervisor at the moment a flag happens.
+2. A row in the [<u>Refresher Log tab </u>](https://docs.google.com/spreadsheets/d/1bC4NWuqf_cRZu0AsbsO4Osfn8QmfWaUDb5Edf1383J4/edit?gid=1047737466#gid=1047737466)of the productivity sheet, for every flag, permanently.
+3. A [<u>Looker dashboard</u>](https://datastudio.google.com/u/0/reporting/a528e2c3-b73f-4c8d-ae8c-2eb4358aad3b/page/Q1m4F) for browsing, filtering, and reviewing flags over time.
+
+All three read the exact same underlying data, so the dashboard, the log, and the DMs always agree.
+
+# **The Refresher Log Tab**
+
+Open the productivity sheet and click the “Refresher Log” tab (far right):
+
+<Frame>
+  ![Task Refresher Signal SOP Google Docs](/images/Task_Refresher_Signal_SOP---Google-Docs.png "Task Refresher Signal SOP Google Docs")
+</Frame>
+
+_The Refresher Log tab, in the productivity sheet's tab bar._
+
+Each flag is logged as one row: Date, Associate, Queue, Level (Recommendation or Escalation), and Supervisor.
+
+<Frame>
+  ![Task Refresher Signal SOP Google Docs (1)](/images/Task_Refresher_Signal_SOP---Google-Docs-\(1\).png "Task Refresher Signal SOP Google Docs (1)")
+</Frame>
+
+_Refresher Log columns. No flags yet at time of writing — expected, since flags are infrequent (roughly one every couple of weeks, often none)._
+
+# **Using the Looker Dashboard**
+
+This is the easiest way to review flags, filter by supervisor or associate, and see how someone's current pace compares to their own normal.
+
+<Frame>
+  ![Task Refresher Signal SOP Google Docs (2)](/images/Task_Refresher_Signal_SOP---Google-Docs-\(2\).png "Task Refresher Signal SOP Google Docs (2)")
+</Frame>
+
+_The dashboard as it appears on open._
+
+## **Filters and Counters**
+
+At the top: a date range filter, and dropdowns to narrow the view to a specific supervisor or associate. Below that, two running counts for whatever's currently filtered — total Escalations and total Recommendations.
+
+<Frame>
+  ![Task Refresher Signal SOP Google Docs (3)](/images/Task_Refresher_Signal_SOP---Google-Docs-\(3\).png "Task Refresher Signal SOP Google Docs (3)")
+</Frame>
+
+_Date range, Supervisor filter, Associate filter, and the Escalations/Recommendations counters._
+
+- To check one supervisor's team: click the Supervisor dropdown and select their name.
+- To check one associate: use the Associate dropdown the same way.
+- To look at a specific stretch of time: adjust the date range at the left.
+
+## **Reading the Table**
+
+Below the counters is the full list of flagged associates for the current filter, most recent first. The built-in note at the bottom of the dashboard explains each column, reproduced here:
+
+_The flag table and its “how to read this table” note, as shown on the dashboard._
+
+| **Column** | **Meaning** |
+| :-- | :-- |
+| Current Pace | How much this person is producing per hour in that queue right now. |
+| Normal Pace | Their own usual pace, based on their last ~2 months in that queue — not compared to anyone else. |
+| Percentage of Normal | Current pace as a share of their usual. Under 50% means a real drop. |
+| Recommendation | An early, soft heads-up — their pace dipped for two periods in a row. |
+| Escalation | More serious — the dip has held for 3\+ periods, or their overall output is down too. |
+
+# **When You Get a Flag**
+
+A Slack DM means the signal fired — it's not a verdict. Work through this before assuming a training gap:
+
+1. Talk to the associate first. Ask if anything changed — schedule, workload mix, personal circumstances — before assuming it's a skill gap.
+2. Check Current Pace vs. Normal Pace for that queue on the dashboard. A Recommendation is a soft signal (2 periods down); an Escalation is stronger (3\+ periods, or overall output down too). Weight your response accordingly.
+3. Decide: if the signal is true**, schedule the refresher.** If context explains it, **no action needed** — it drops off on its own once pace recovers.
+4. If a flag looks wrong, report it in #data-bug-report slack channel. Especially right now — the Emails-queue thresholds are still being refined, so a flag that doesn't make sense is worth flagging back rather than acting on.
+
+# **Cadence**
+
+The check runs every 2 weeks. 1 period = 2 weeks. Realistically, expect about one flag every couple of weeks, often none at all — this is designed to catch a real, sustained dip, not routine week-to-week noise.
+
+The system is live now.
+
+<br />
