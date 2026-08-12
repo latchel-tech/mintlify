@@ -2,3 +2,70 @@
 title: "Checking GL codes in Buildium"
 groups: ["latchel"]
 ---
+
+<Note>
+  The purpose of this document is to provide a guide on how to navigate the Buildium tool to be able to track the GL codes for each new added property into the tracker.
+</Note>
+
+## **Step-by-step guide**
+
+### **Step 1 - Access the tenant's financial records**
+
+a. Log in to the PM's Buildium account.
+
+b. Use the main search bar to find the tenant you are investigating.
+
+c. From the search results, click on **Lease Ledger** to go directly to their financial profile.
+
+<Frame>
+  ![](/images/CPT-165.png)
+</Frame>
+
+### **Step 2 - Verify if an active recurring charge exists**
+
+a. On the tenant's financial page, navigate to the **Recurring transactions** tab.
+
+b. Scan the list for a recurring charge related to Latchel (e.g., "Resident Benefits Package," "Amenity Fee"). This confirms if an automated charge is set up.
+
+<Frame>
+  ![](/images/CPT-166.png)
+</Frame>
+
+### **Step 3 - Audit the ledger for historical charges and payments**
+
+a. To confirm past charges and payments, navigate to the **Ledger** tab.
+
+<Frame>
+  ![](/images/CPT-167.png)
+</Frame>
+
+b. Scroll through the transaction history to find the first entry labeled as a **"Charge"** with the Latchel GL code in the "Account" description. Note the date.
+
+<Frame>
+  ![](/images/CPT-168.png)
+</Frame>
+
+c. To confirm if that charge was paid, look for the subsequent **"Payment"** entry.
+
+<Frame>
+  ![](/images/CPT-169.png)
+</Frame>
+
+d. Click on the payment entry to open its details.
+
+- **PAID:** If the Latchel charge amount is listed in the **"Amount"** column, it has been paid.
+- **UNPAID:** If the charge amount is only listed in the **"Balance"** column, it remains unpaid.
+
+<Frame>
+  ![](/images/CPT-170.png)
+</Frame>
+
+### **Step 4 - Investigate for future-scheduled charges**
+
+a. This is crucial for new or renewing leases. Navigate back to the **Recurring transactions** tab.
+
+b. If you see a recurring charge for Latchel, click on it to open the details.
+
+c. Confirm the "Account" is correct.
+
+d. Scroll to the bottom of the description chart to the **"Example"** section. This section will show the **start date** for the recurring charge, confirming when it is scheduled to begin.
