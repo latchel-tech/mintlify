@@ -2245,7 +2245,7 @@
   "navbar": {
     "links": [
       {
-        "label": "Login to Latchel",
+        "label": "Latchel Dashboard",
         "href": "https://app.latchel.com/login",
         "icon": "square-l"
       }
