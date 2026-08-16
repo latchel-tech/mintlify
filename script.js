@@ -56,4 +56,11 @@ function relocateAuthLink() {
     dock.appendChild(fresh);
   }
   fresh.classList.add('auth-fab');
+
+  // Hover tooltip text differs depending on login vs. logout state
+  if (fresh.classList.contains('login-link')) {
+    fresh.setAttribute('data-tooltip', 'Login Admin');
+  } else if (fresh.classList.contains('logout-link')) {
+    fresh.setAttribute('data-tooltip', 'Logout Admin');
+  }
 }

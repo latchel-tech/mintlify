@@ -13,6 +13,7 @@
 }
 
 .auth-fab {
+  position: relative; /* anchors the tooltip below */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,6 +27,42 @@
   font-size: 0; /* hides the "Log In" / "Log Out" text */
   gap: 0;
   transition: box-shadow 0.15s ease, background 0.15s ease;
+}
+
+/* Hover tooltip label */
+.auth-fab::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 52px; /* sits above the button */
+  right: 0;
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: #111827;
+  color: #ffffff;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(4px);
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s ease;
+  pointer-events: none;
+}
+
+.auth-fab:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.login-link.auth-fab {
+  /* fallback if data-tooltip isn't set via JS for some reason */
+}
+
+.dark .auth-fab::after {
+  background: #f9fafb;
+  color: #111827;
 }
 
 .auth-fab:hover {
