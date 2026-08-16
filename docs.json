@@ -849,7 +849,10 @@
                         "pages": [
                           {
                             "group": "Tasks",
-                            "pages": []
+                            "pages": [
+                              "latchel-admin/Service-Operations/Production-Documentations/How-to-Set-expectations-with-Service-Providers-when-dispatching",
+                              "latchel-admin/Service-Operations/Production-Documentations/How-to-Complete-Phone-Call-Required-Tasks"
+                            ]
                           },
                           {
                             "group": "Inbound Calls",

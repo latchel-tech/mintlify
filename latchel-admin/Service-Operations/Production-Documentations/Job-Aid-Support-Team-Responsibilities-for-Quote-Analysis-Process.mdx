@@ -4,7 +4,7 @@ groups: ["latchel"]
 ---
 
 <Note>
-We want to prevent delays, errors, and miscommunication during the quote analysis process by clearly defining the responsibilities of the Support Team. The goal is to ensure that Operations Support Specialists efficiently gather, organize, and provide all necessary data—such as open cases and price ranges—to associates analyzing estimates, so that every quote is reviewed accurately and on time.
+  We want to prevent delays, errors, and miscommunication during the quote analysis process by clearly defining the responsibilities of the Support Team. The goal is to ensure that Operations Support Specialists efficiently gather, organize, and provide all necessary data—such as open cases and price ranges—to associates analyzing estimates, so that every quote is reviewed accurately and on time.
 </Note>
 
 ## Support Responsibilities
@@ -14,7 +14,7 @@ The Operations Support Specialists play a crucial role in gathering and organizi
 **1. Running Queries to Identify Open Cases**
 
 - Before running a query, update the date range to ensure only the coverage dates are included. Verify that the query parameters align with the required timeframe.
-- Run a query to generate a list of open cases that require estimate analysis. For assistance in executing a query, you can refer to [How to: Execute SQL Queries in Pg_Admin](https://help.latchel.com/How-to-Execute-SQL-Queries-in-Pg_Admin).
+- Run a query to generate a list of open cases that require estimate analysis. For assistance in executing a query, you can refer to [How to: Execute SQL Queries in Pg\_Admin](https://help.latchel.com/How-to-Execute-SQL-Queries-in-Pg_Admin).
 - Once the query has been executed, download the result file.
 - Open the file, highlight the necessary data, copy it, and paste it into [Estimate Analysis](https://docs.google.com/spreadsheets/d/1qgq_IfDzoMJ-lenWjaKBS8NGyCUDi47c8ayzhV0rMVs/edit) file.
 - Identify the status of the work order. Any work order must be in "Needs approval", "Forwarded to PM", "Needs Owner Approval", or "Pending" status. All others would indicate an invalid work order.
@@ -37,33 +37,34 @@ The Operations Support Specialists play a crucial role in gathering and organizi
 
 ### Appendix:
 
-| Query repository | |
+| Query repository |  |
 | --- | --- |
-| Query Used to Populate Work Orders with Estimates: | ```sql
-SELECT
-    c.name AS pm_company_name,
-    j.job_id, j.state_id,
-    CONCAT('https://app.latchel.com/admin/job/', j.slug) AS job_url,
-    l.created_at AS estimate_creation_date,
-    REGEXP_REPLACE(l.note, '.*the value is ([0-9.]+).*', '\1')::NUMERIC AS estimate_value
-FROM
-    public.log l
-JOIN
-    job j ON j.job_id = l.relation_id
-JOIN
-    property p ON p.property_id = j.property_id
-JOIN
-    company c ON c.company_id = p.pm_company_id
-WHERE
-    l.type IS NULL
-    AND l.note LIKE 'A new estimate has been added, and the value is%'
-    AND l.created_at >= now() - interval '1 month' -- use this to filter by date
-    AND p.pm_company_id in (1125,29281,24652,19712,35430) -- use this to filter by pm company id
-GROUP BY
-    c.name, j.job_id, j.slug, l.created_at, l.note
-ORDER BY
-    l.created_at DESC;
-``` |
+| Query Used to Populate Work Orders with Estimates: | \`\`\`sql |
+| SELECT |  |
+| c.name AS pm\_company\_name, |  |
+| j.job\_id, j.state\_id, |  |
+| CONCAT('[https://app.latchel.com/admin/job/](https://app.latchel.com/admin/job/)', j.slug) AS job\_url, |  |
+| l.created\_at AS estimate\_creation\_date, |  |
+| REGEXP\_REPLACE(l.note, '._the value is (\[0-9.\]\+)._', '\\1')::NUMERIC AS estimate\_value |  |
+| FROM |  |
+| public.log l |  |
+| JOIN |  |
+| job j ON j.job\_id = l.relation\_id |  |
+| JOIN |  |
+| property p ON p.property\_id = j.property\_id |  |
+| JOIN |  |
+| company c ON c.company\_id = p.pm\_company\_id |  |
+| WHERE |  |
+| l.type IS NULL |  |
+| AND l.note LIKE 'A new estimate has been added, and the value is%' |  |
+| AND l.created\_at \>= now() - interval '1 month' -- use this to filter by date |  |
+| AND p.pm\_company\_id in (1125,29281,24652,19712,35430) -- use this to filter by pm company id |  |
+| GROUP BY |  |
+| c.name, j.job\_id, j.slug, l.created\_at, l.note |  |
+| ORDER BY |  |
+| l.created\_at DESC; |  |
+
+```|
 | *Query Used to Obtain the Price Range:* | |
 
 ## 🎯 When to Break This SOP
@@ -74,3 +75,4 @@ Do not break or deviate from this SOP on your own authority. Always escalate to 
 
 Noticed something clunky or confusing in this process? Or had a situation that wasn't covered here? Or tried something new that didn't work?
 👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— we want your input!
+```
