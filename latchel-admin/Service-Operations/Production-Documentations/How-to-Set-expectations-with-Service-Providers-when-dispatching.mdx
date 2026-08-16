@@ -6,13 +6,13 @@ groups: ["latchel"]
 ## 🧠 What This Process Is Trying to Solve
 
 <Note>
-We want to prevent confusion, disputes, and delays when dispatching service providers by ensuring they fully understand payment terms, estimate requirements, and dispatch conditions before accepting a job. The goal is to set clear, consistent expectations with every service provider at the time of dispatch, so jobs proceed smoothly, billing is accurate, and all parties know what to expect—helping Latchel deliver reliable, efficient service and avoid unnecessary back-and-forth or service interruptions.
+  We want to prevent confusion, disputes, and delays when dispatching service providers by ensuring they fully understand payment terms, estimate requirements, and dispatch conditions before accepting a job. The goal is to set clear, consistent expectations with every service provider at the time of dispatch, so jobs proceed smoothly, billing is accurate, and all parties know what to expect—helping Latchel deliver reliable, efficient service and avoid unnecessary back-and-forth or service interruptions.
 </Note>
 
 **Content**
 
 <Note>
-This document is not applicable to Resident Responsible WOs. Refer to [How to: Handle Home Assistant and Benefits Inquiries](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Handle-Home-Assistant-and-Benefits-Inquiries) for further information.
+  This document is not applicable to Resident Responsible WOs. Refer to [How to: Handle Home Assistant and Benefits Inquiries](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Handle-Home-Assistant-and-Benefits-Inquiries) for further information.
 </Note>
 
 ## 📋 Step-by-Step Process
@@ -20,311 +20,324 @@ This document is not applicable to Resident Responsible WOs. Refer to [How to: H
 When you’re dispatching a SP, make sure to communicate the following information to the person on the phone:
 
 1. **Emergency dispatch timing & rates:**
-  1. For **emergency work orders**, emergency pricing and budgets are intended for **same‑day or within 24 hours** appointments from the time the service provider is assigned to the work order.
-  2. When you dispatch an emergency work order and the service provider **cannot go same‑day / within 24 hours** (e.g., they schedule for 1–2 days later, or dispatch is deferred), you must:
-    1. Clearly confirm and document the **actual appointment date and time** in the work order, and
-    2. Set expectations that **standard (non‑emergency) rates and budgets will apply** if the appointment is not within the emergency window.
-      1. Agents should **proactively set conditional expectations** about what happens if the appointment changes. This helps prevent confusion or disputes if the appointment is later rescheduled or missed.
-        1. During the initial dispatch call, in addition to confirming the appointment details, communicate the following:
-          1. Emergency rates apply **only if the appointment is completed within 24 hours** of the SP being assigned.
-          2. If the appointment is **rescheduled or missed** and moves outside the 24-hour window, **standard (non-emergency) rates will apply** instead.
-          3. If the original appointment was scheduled **outside the 24-hour window** but the SP claims the work was completed within 24 hours, **the SP must provide proof to validate the claim**. Let the SP know this upfront so there are no surprises. See FAQ section for acceptable forms of proof.
-            1. **Say something like this to the SP: ***"Thanks for taking this emergency work order. Just to confirm, you'll be heading out on [DAY] at [TIME], correct? I also want to let you know upfront — emergency rates apply as long as the appointment is completed within 24 hours. If for any reason the appointment gets rescheduled or moved outside that 24-hour window, standard rates will apply instead. However, if you believe you can complete the work sooner and still within the 24-hour window, please make sure you record the change in Latchel. Once the work is completed, please reach out to advise us that the work is completed and have a timestamped photo of the completed work ready as proof. Our team will then manually apply the emergency rate from there. Thank you!"*
-              1. **If the SP agrees** → Proceed with dispatch as normal and document in the work order that the SP acknowledged the rate conditions.
-              2. **If the SP disagrees** → Find another SP willing to accept the terms, following the standard re-dispatch process.
-              3. If SP pushes back, please refer to the Handling SP Pushback Scenarios in the FAQ section.
-      2. **Sample Work Order Budget Limits:** Navigate to the work order’s **Properties** tab (refer to this [SOP](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Navigate-Properties-Tab-in-the-Latchel-Console)). Under the **Details** section, you will see the **Work Order Budget Limits**.
-        1. <Frame>
-  <img src="/images/SVC-453.png" alt="image-20260105-205456.png" />
-</Frame>
-  3. Automations/action sets will adjust the **Approved Budget** limit based on the confirmed appointment time.
-    1. If the appointment is scheduled **more than 24 hours out**, the system will reduce the soft emergency budget to a non‑emergency soft limit.
-      1. **NOTE: If it doesn’t drop automatically, Ops should:**
-        1. **Manually change the Approved Budget to the non‑emergency soft limit**
-        2. **Note why the budget limit was manually set.**
-        3. **Submit a bug report, and**
-        4. **Ensure that the service provider’s expectations are properly set.**
-      2. **Say something like this to the SP:** *“Thanks for taking this work order. Just to confirm, you’ll be going out on **[DAY] at [TIME]**, correct? Because this appointment is **more than 24 hours from now**, this will be handled as a **standard (non‑emergency)** visit for budgeting and payment. You’ll see an **approved amount** on the work order based on standard rates. If you think the total will be higher than that, please give us a call **before you proceed** so we can review the budget with the Property Manager.”*
-    2. If the provider later requests a budget increase, follow: [(⛑EMERGENCY) How to: Handle Changes to the Approved Budget](https://help.latchel.com/latchel-admin/Service-Operations/EMERGENCY-How-to-Handle-Changes-to-the-Approved-Budget)
-  4. **Missed emergency appointments and pricing expectations**
-    1. Sometimes a service provider accepts an **emergency** work order, confirms an emergency‑timed appointment, and then **misses that appointment** (no‑show or arrives significantly later than agreed and must reschedule).
-    2. To keep things fair for our customers and consistent with our emergency budget rules:
-      1. **A missed emergency appointment does NOT justify charging emergency rates for the rescheduled visit.**
-      2. If the original emergency appointment is **missed due to the service provider**, any **new appointment** that is scheduled later (that is outside 24 hours) should be treated as a **standard (non‑emergency)** visit for pricing and budget purposes, unless the PM explicitly authorizes otherwise.
-      3. We do **not** want to pay emergency rates twice (or at all) when the delay is caused by the provider.
-    3. **Important:** The above rules apply **only when the emergency appointment was missed due to the service provider and the appointment falls outside the 24 hour period from the time the service provider was assigned.**
-***If the appointment was missed or rescheduled because of the resident or PM (e.g., resident no‑show, last‑minute reschedule, PM change), do not automatically change the pricing to non‑emergency or adjust the soft budget.***
-      1. **What the agent should do for a missed emergency appointment due to SP issues**
-        1. Confirm with the resident that the appointment was missed.
-        2. Contact the service provider to:
-          1. Confirm what happened, and
-          2. Obtain a **new appointment date/time**.
-        3. Update the work order with the new appointment and clearly note that:
-          1. The prior emergency appointment was missed, and
-          2. The rescheduled visit is being treated as **non‑emergency** for pricing and budget.
-          3. **Update the soft budget based on the non‑emergency soft limit.**
-          4. **Say something to the SP like:** *“Because the original emergency appointment at **[DATE/TIME]** was missed and we’re now rescheduling for **[NEW DATE/TIME]**, this visit will be handled as a** standard (non‑emergency)** appointment for budgeting and rates. You’ll see an approved amount on the work order based on standard pricing. If you expect the total to go over that amount, please let us know before you proceed, so we can review the budget with the property manager.”*
-    4. **When to escalate to the PM**
-      1. If the service provider **insists on emergency rates** for the new appointment and the total cost would **exceed the Hard Budget** (the maximum amount Ops are allowed to approve),
-        1. Follow the escalation and budget review steps in [**(⛑ EMERGENCY) How to: Handle Changes to the Approved Budget**](https://help.latchel.com/latchel-admin/Service-Operations/EMERGENCY-How-to-Handle-Changes-to-the-Approved-Budget).
+   1. For **emergency work orders**, emergency pricing and budgets are intended for **same‑day or within 24 hours** appointments from the time the service provider is assigned to the work order.
+   2. When you dispatch an emergency work order and the service provider **cannot go same‑day / within 24 hours** (e.g., they schedule for 1–2 days later, or dispatch is deferred), you must:
+      1. Clearly confirm and document the **actual appointment date and time** in the work order, and
+      2. Set expectations that **standard (non‑emergency) rates and budgets will apply** if the appointment is not within the emergency window.
+         1. Agents should **proactively set conditional expectations** about what happens if the appointment changes. This helps prevent confusion or disputes if the appointment is later rescheduled or missed.
+            1. During the initial dispatch call, in addition to confirming the appointment details, communicate the following:
+               1. Emergency rates apply **only if the appointment is completed within 24 hours** of the SP being assigned.
+               2. If the appointment is **rescheduled or missed** and moves outside the 24-hour window, **standard (non-emergency) rates will apply** instead.
+               3. If the original appointment was scheduled **outside the 24-hour window** but the SP claims the work was completed within 24 hours, **the SP must provide proof to validate the claim**. Let the SP know this upfront so there are no surprises. See FAQ section for acceptable forms of proof.
+                  1. **Say something like this to the SP:**_"Thanks for taking this emergency work order. Just to confirm, you'll be heading out on \[DAY\] at \[TIME\], correct? I also want to let you know upfront — emergency rates apply as long as the appointment is completed within 24 hours. If for any reason the appointment gets rescheduled or moved outside that 24-hour window, standard rates will apply instead. However, if you believe you can complete the work sooner and still within the 24-hour window, please make sure you record the change in Latchel. Once the work is completed, please reach out to advise us that the work is completed and have a timestamped photo of the completed work ready as proof. Our team will then manually apply the emergency rate from there. Thank you!"_
+                     - **If the SP agrees** → Proceed with dispatch as normal and document in the work order that the SP acknowledged the rate conditions.
+                     - **If the SP disagrees** → Find another SP willing to accept the terms, following the standard re-dispatch process.
+                     - If SP pushes back, please refer to the Handling SP Pushback Scenarios in the FAQ section.
+         2. **Sample Work Order Budget Limits:** Navigate to the work order’s **Properties** tab (refer to this [SOP](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Navigate-Properties-Tab-in-the-Latchel-Console)). Under the **Details** section, you will see the **Work Order Budget Limits**.
+            <Frame>
+              ![image-20260105-205456.png](/images/SVC-453.png)
+            </Frame>
+   3. Automations/action sets will adjust the **Approved Budget** limit based on the confirmed appointment time.
+      1. If the appointment is scheduled **more than 24 hours out**, the system will reduce the soft emergency budget to a non‑emergency soft limit.
+         1. **NOTE: If it doesn’t drop automatically, Ops should:**
+            1. **Manually change the Approved Budget to the non‑emergency soft limit**
+            2. **Note why the budget limit was manually set.**
+            3. **Submit a bug report, and**
+            4. **Ensure that the service provider’s expectations are properly set.**
+         2. **Say something like this to the SP:** _“Thanks for taking this work order. Just to confirm, you’ll be going out on **\[DAY\] at \[TIME\]**, correct? Because this appointment is **more than 24 hours from now**, this will be handled as a **standard (non‑emergency)** visit for budgeting and payment. You’ll see an **approved amount** on the work order based on standard rates. If you think the total will be higher than that, please give us a call **before you proceed** so we can review the budget with the Property Manager.”_
+      2. If the provider later requests a budget increase, follow: [(⛑EMERGENCY) How to: Handle Changes to the Approved Budget](https://help.latchel.com/latchel-admin/Service-Operations/EMERGENCY-How-to-Handle-Changes-to-the-Approved-Budget)
+   4. **Missed emergency appointments and pricing expectations**
+      1. Sometimes a service provider accepts an **emergency** work order, confirms an emergency‑timed appointment, and then **misses that appointment** (no‑show or arrives significantly later than agreed and must reschedule).
+      2. To keep things fair for our customers and consistent with our emergency budget rules:
+         1. **A missed emergency appointment does NOT justify charging emergency rates for the rescheduled visit.**
+         2. If the original emergency appointment is **missed due to the service provider**, any **new appointment** that is scheduled later (that is outside 24 hours) should be treated as a **standard (non‑emergency)** visit for pricing and budget purposes, unless the PM explicitly authorizes otherwise.
+         3. We do **not** want to pay emergency rates twice (or at all) when the delay is caused by the provider.
+      3. **Important:** The above rules apply **only when the emergency appointment was missed due to the service provider and the appointment falls outside the 24 hour period from the time the service provider was assigned.** **_If the appointment was missed or rescheduled because of the resident or PM (e.g., resident no‑show, last‑minute reschedule, PM change), do not automatically change the pricing to non‑emergency or adjust the soft budget._**
+         1. **What the agent should do for a missed emergency appointment due to SP issues**
+            1. Confirm with the resident that the appointment was missed.
+            2. Contact the service provider to:
+               1. Confirm what happened, and
+               2. Obtain a **new appointment date/time**.
+            3. Update the work order with the new appointment and clearly note that:
+               1. The prior emergency appointment was missed, and
+               2. The rescheduled visit is being treated as **non‑emergency** for pricing and budget.
+               3. **Update the soft budget based on the non‑emergency soft limit.**
+               4. **Say something to the SP like:** _“Because the original emergency appointment at **\[DATE/TIME\]** was missed and we’re now rescheduling for **\[NEW DATE/TIME\]**, this visit will be handled as a_ **standard (non‑emergency)** appointment for budgeting and rates. You’ll see an approved amount on the work order based on standard pricing. If you expect the total to go over that amount, please let us know before you proceed, so we can review the budget with the property manager.”
+      4. **When to escalate to the PM**
+         1. If the service provider **insists on emergency rates** for the new appointment and the total cost would **exceed the Hard Budget** (the maximum amount Ops are allowed to approve),
+            1. Follow the escalation and budget review steps in [**(⛑ EMERGENCY) How to: Handle Changes to the Approved Budget**](https://help.latchel.com/latchel-admin/Service-Operations/EMERGENCY-How-to-Handle-Changes-to-the-Approved-Budget).
 2. **Payment terms:**
-  1. <u>Preferred SP:</u>
-    - **Default (Toggle OFF):** Payment should be collected from the Property Manager directly. 🗨️ Use the **Preferred SP payment** blurb in [Job-Aid: Blurbs or Templates to Communicate with Customers](https://help.latchel.com/latchel-admin/Service-Operations/Job-Aid-Blurbs-or-Templates-to-Communicate-with-Customers).
-    - **Toggle ON (Preferred SP Payments enabled):** If the PM has the 'Preferred Service Provider Payments' toggle ON in their Company Profile → Payments tab, Latchel processes payment **via Direct Deposit only**. Inform the SP that payment will be issued by Latchel through Direct Deposit once the work is confirmed complete and the invoice is uploaded. The SP must have a verified Direct Deposit account on file. Refer to [Service Ops: How to Handle Payment-Related Inquiries](https://help.latchel.com/latchel-admin/Service-Operations/Service-Ops-How-to-Handle-Payment-Related-Inquiries) for details.
-  2. <u>Latchel SP: </u>
-    1. Payment can be done via credit card through the phone or via automated direct deposit. For the latter, the SP will need to enter their bank account information by logging into the Latchel Dashboard.
-    2. Before and after photos are required to process payment.
-    3. Payment will not be processed until the issue has been confirmed resolved.
-      1. 💠 Use the **<u>Latchel SP </u><u>payment</u>** blurb in [Job-Aid: Blurbs or Templates to Communicate with Customers](https://help.latchel.com/latchel-admin/Service-Operations/Job-Aid-Blurbs-or-Templates-to-Communicate-with-Customers)
-    4. For payment processing timelines, refer to [(TECH 101) Job Aid: Service Provider Payment (Issue a Card)](https://help.latchel.com/latchel-admin/Service-Operations/TECH-101-Job-Aid-Service-Provider-Payment-Issue-a-Card)
+   1. <u>Preferred SP:</u>
+      - **Default (Toggle OFF):** Payment should be collected from the Property Manager directly. 🗨️ Use the **Preferred SP payment** blurb in [Job-Aid: Blurbs or Templates to Communicate with Customers](https://help.latchel.com/latchel-admin/Service-Operations/Job-Aid-Blurbs-or-Templates-to-Communicate-with-Customers).
+      - **Toggle ON (Preferred SP Payments enabled):** If the PM has the 'Preferred Service Provider Payments' toggle ON in their Company Profile → Payments tab, Latchel processes payment **via Direct Deposit only**. Inform the SP that payment will be issued by Latchel through Direct Deposit once the work is confirmed complete and the invoice is uploaded. The SP must have a verified Direct Deposit account on file. Refer to [Service Ops: How to Handle Payment-Related Inquiries](https://help.latchel.com/latchel-admin/Service-Operations/Service-Ops-How-to-Handle-Payment-Related-Inquiries) for details.
+   2. <u>Latchel SP: </u>
+      1. Payment can be done via credit card through the phone or via automated direct deposit. For the latter, the SP will need to enter their bank account information by logging into the Latchel Dashboard.
+      2. Before and after photos are required to process payment.
+      3. Payment will not be processed until the issue has been confirmed resolved.
+         1. 💠 Use the **<u>Latchel SP payment</u>** blurb in [Job-Aid: Blurbs or Templates to Communicate with Customers](https://help.latchel.com/latchel-admin/Service-Operations/Job-Aid-Blurbs-or-Templates-to-Communicate-with-Customers)
+      4. For payment processing timelines, refer to [(TECH 101) Job Aid: Service Provider Payment (Issue a Card)](https://help.latchel.com/latchel-admin/Service-Operations/TECH-101-Job-Aid-Service-Provider-Payment-Issue-a-Card)
 3. **Estimates:**
-  1. An estimate is required to obtain approval for any amount above the “Approved” budget.
-    1. 💠 Use the **<u>SP </u><u>estimate info for dispatching Non-Emergencies</u>** blurb in [Job-Aid: Blurbs or Templates to Communicate with Customers](https://help.latchel.com/latchel-admin/Service-Operations/Job-Aid-Blurbs-or-Templates-to-Communicate-with-Customers)
-  2. For emergencies, we need an estimate the same day. Otherwise, the WO may be reassigned to another SP if the estimate has not been provided.
-    1. 💠 Use the **<u>SP </u><u>estimate info for dispatching Emergencies</u>** blurb in [Job-Aid: Blurbs or Templates to Communicate with Customers](https://help.latchel.com/latchel-admin/Service-Operations/Job-Aid-Blurbs-or-Templates-to-Communicate-with-Customers)
-  3. ***Never disclose the hard budget limit to the Service Provider.******  ***
-4. ** Dispatch terms** (This is optional, only inform if the SP asks):
-  1. We don’t pay upfront for any fees (e.g. dispatch fees, 1st hour of labor, etc.).
-  2. <u>Latchel SP - Issued Cards:</u>
-    1. If the SP needs a credit card on file to be able to dispatch, the team can issue a credit card for the amount of $1.
-      1. Refer to [(TECH 101) Job Aid: Service Provider Payment (Issue a Card)](https://help.latchel.com/latchel-admin/Service-Operations/TECH-101-Job-Aid-Service-Provider-Payment-Issue-a-Card) to know how to issue a card.
-      2. The SP shouldn’t run this card to process payment.
-        1. We’ll provide the SP with a new card to process payment once the job has been confirmed complete.
-          1. 💠 Use the **<u>Issued Cards Latchel SP </u><u>upfront payment inquiries</u>** blurb in [Job-Aid: Blurbs or Templates to Communicate with Customers](https://help.latchel.com/latchel-admin/Service-Operations/Job-Aid-Blurbs-or-Templates-to-Communicate-with-Customers)
+   1. An estimate is required to obtain approval for any amount above the “Approved” budget.
+      1. 💠 Use the **<u>SP estimate info for dispatching Non-Emergencies</u>** blurb in [Job-Aid: Blurbs or Templates to Communicate with Customers](https://help.latchel.com/latchel-admin/Service-Operations/Job-Aid-Blurbs-or-Templates-to-Communicate-with-Customers)
+   2. For emergencies, we need an estimate the same day. Otherwise, the WO may be reassigned to another SP if the estimate has not been provided.
+      1. 💠 Use the **<u>SP estimate info for dispatching Emergencies</u>** blurb in [Job-Aid: Blurbs or Templates to Communicate with Customers](https://help.latchel.com/latchel-admin/Service-Operations/Job-Aid-Blurbs-or-Templates-to-Communicate-with-Customers)
+   3. **_Never disclose the hard budget limit to the Service Provider._**
+4. **Dispatch terms** (This is optional, only inform if the SP asks):
+   1. We don’t pay upfront for any fees (e.g. dispatch fees, 1st hour of labor, etc.).
+   2. <u>Latchel SP - Issued Cards:</u>
+      1. If the SP needs a credit card on file to be able to dispatch, the team can issue a credit card for the amount of \$1.
+         1. Refer to [(TECH 101) Job Aid: Service Provider Payment (Issue a Card)](https://help.latchel.com/latchel-admin/Service-Operations/TECH-101-Job-Aid-Service-Provider-Payment-Issue-a-Card) to know how to issue a card.
+         2. The SP shouldn’t run this card to process payment.
+            1. We’ll provide the SP with a new card to process payment once the job has been confirmed complete.
+               1. 💠 Use the **<u>Issued Cards Latchel SP upfront payment inquiries</u>** blurb in [Job-Aid: Blurbs or Templates to Communicate with Customers](https://help.latchel.com/latchel-admin/Service-Operations/Job-Aid-Blurbs-or-Templates-to-Communicate-with-Customers)
 
 <Note>
-Refer to [Job-Aid: Blurbs or Templates to Communicate with Customers](https://help.latchel.com/latchel-admin/Service-Operations/Job-Aid-Blurbs-or-Templates-to-Communicate-with-Customers)  for available blurbs to communicate the information in this document with the SP.
+  Refer to [Job-Aid: Blurbs or Templates to Communicate with Customers](https://help.latchel.com/latchel-admin/Service-Operations/Job-Aid-Blurbs-or-Templates-to-Communicate-with-Customers)  for available blurbs to communicate the information in this document with the SP.
 </Note>
 
 <Note>
-When dispatching a service provider on the phone, it is recommended to verify the email on file to ensure notifications are going out correctly.
+  When dispatching a service provider on the phone, it is recommended to verify the email on file to ensure notifications are going out correctly.
 </Note>
 
-## [**❓**](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Handle-Emergency-Work-Orders)**Frequently Asked Questions**
+## **[❓](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Handle-Emergency-Work-Orders)Frequently Asked Questions**
 
 <Accordion title="What if the assigned Peferred service provider, who initially accepted the job and our payment terms, reaches out to request upfront payment before attending the scheduled job?">
-Remind the service provider of our payment terms as outlined in step **1. Payment Terms → Preferred SP**
+  Remind the service provider of our payment terms as outlined in step **1. Payment Terms → Preferred SP**
 
-1. If the service provider insists on receiving payment upfront:
-  1. Locked in and PM-assigned service providers
-    1. If the issue is property damaging or extreme habitability, refer to [How to: Identify Property Damage and Extreme Habitability Situations](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Identify-Property-Damage-and-Extreme-Habitability-Situations), contact the emergency escalation contacts.
-    2. If the issue is not property damaging or extreme habitability:
-      1. Move the work order to Waiting for PM
-  2. NOT Locked in and NOT PM-assigned
-    1. Refer to [** (TECH 101) How to: Reassign a Service Provider**](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Reassign-a-Service-Provider)
-      1. Inform the PM via task that the initially assigned preferred service provider requested an upfront payment. As a result, we proceeded with reassigning the work order to a different provider. We may use the below to notify the PM
-        1. ”***We wanted to let you know that the initially assigned preferred service provider (insert SP’s name), requested upfront payment before proceeding with the job. As this is outside of our standard payment terms, we’ve gone ahead and reassigned the work order to another provider to avoid delays. If this provider is one you’d like to continue working with in the future, we recommend reaching out to them directly to clarify your payment arrangement.***
+  1. If the service provider insists on receiving payment upfront:
+  2. Locked in and PM-assigned service providers
+  3. If the issue is property damaging or extreme habitability, refer to [How to: Identify Property Damage and Extreme Habitability Situations](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Identify-Property-Damage-and-Extreme-Habitability-Situations), contact the emergency escalation contacts.
+  4. If the issue is not property damaging or extreme habitability:
+  5. Move the work order to Waiting for PM
+  6. NOT Locked in and NOT PM-assigned
+  7. Refer to [\*\*\*\*\*\*\*\* (TECH 101) How to: Reassign a Service Provider\*\*\*\*\*\*\*\*](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Reassign-a-Service-Provider)
+  8. Inform the PM via task that the initially assigned preferred service provider requested an upfront payment. As a result, we proceeded with reassigning the work order to a different provider. We may use the below to notify the PM
+  9. ”**_We wanted to let you know that the initially assigned preferred service provider (insert SP’s name), requested upfront payment before proceeding with the job. As this is outside of our standard payment terms, we’ve gone ahead and reassigned the work order to another provider to avoid delays. If this provider is one you’d like to continue working with in the future, we recommend reaching out to them directly to clarify your payment arrangement._**
 </Accordion>
 
 <Accordion title="What if the assigned LCN provider, who initially accepted the job and our payment terms, reaches out to request upfront payment before attending the scheduled job?">
-Remind the service provider of our payment terms as outlined in step **1. Payment Terms → Latchel SP**
+  Remind the service provider of our payment terms as outlined in step **1. Payment Terms → Latchel SP**
 
-1. If the service provider insists on receiving payment upfront, kindly inform them that we will need to reassign the work order to a different service provider.
-  1. If they continue to request payment first, please proceed with the reassignment by following the steps in[** (TECH 101) How to: Reassign a Service Provider**](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Reassign-a-Service-Provider)
+  1. If the service provider insists on receiving payment upfront, kindly inform them that we will need to reassign the work order to a different service provider.
+  2. If they continue to request payment first, please proceed with the reassignment by following the steps in[\*\*\*\*\*\*\*\* (TECH 101) How to: Reassign a Service Provider\*\*\*\*\*\*\*\*](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Reassign-a-Service-Provider)
 </Accordion>
 
 <Accordion title="What should be done if a PM-assigned LCN vendor requests card details before scheduling the appointment?">
-**Latchel Service Providers** are local vendors within the Latchel Service Provider Network that Property Managers can opt in to or opt out of. These vendors do not invoice Property Managers directly, as Latchel handles payment to the service providers.
+  **Latchel Service Providers** are local vendors within the Latchel Service Provider Network that Property Managers can opt in to or opt out of. These vendors do not invoice Property Managers directly, as Latchel handles payment to the service providers.
 
-If a service provider requests card details:
+  If a service provider requests card details:
 
-1. Proceed with issuing a credit card by following [**Step 2 – Issue a Card for Latchel Service Providers**](https://help.latchel.com/latchel-admin/Service-Operations/TECH-101-Job-Aid-Service-Provider-Payment-Issue-a-Card) in **TECH 101: Job Aid – Service Provider Payment (Issue a Card)**. Set the authorization limit to **$1** as a placeholder.
+  1. Proceed with issuing a credit card by following [**Step 2 – Issue a Card for Latchel Service Providers**](https://help.latchel.com/latchel-admin/Service-Operations/TECH-101-Job-Aid-Service-Provider-Payment-Issue-a-Card) in **TECH 101: Job Aid – Service Provider Payment (Issue a Card)**. Set the authorization limit to **\$1** as a placeholder.
 </Accordion>
 
 <Accordion title="What if the Property Manager sets the hard budget limit to $1? Should we still dispatch the work order?">
-**Answer:** Yes, continue dispatching the request and set expectations regarding the $1 NTE.
+  **Answer:** Yes, continue dispatching the request and set expectations regarding the \$1 NTE.
 
-If no Service Provider accepts the job due to budget constraints or advises their dispatch fee exceeds the NTE:
+  If no Service Provider accepts the job due to budget constraints or advises their dispatch fee exceeds the NTE:
 
-1. For **Property-Damaging** / **Extreme Habitability** issues:
-  1. Call the **EEC**. Refer to [Job Aid: PM Outbound Communication for Emergency WOs](https://help.latchel.com/latchel-admin/Service-Operations/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs)
-    1. **Say something like**: *“Hello, my name is **(Agent Name)**, and I’m calling on behalf of **Latchel**. This call may be recorded for quality and training purposes.  We attempted to dispatch a service provider to **(Property Address)** for **(Issue)**. While a service provider  (name of the company) is available, they are unable to perform the work within the budget set for this request. The current budget is **$**. Could you please let us know how you would like to proceed?”*
-  2. If the EEC responds, proceed according to their instructions.
-  3. If the EEC is unresponsive, escalate to the Property Manager via the **“Cannot Find a Service Provider” path**, using the message:
-    1. *“We attempted to dispatch the work order at **(Property)** for **(Issue)**. While a service provider  (name of the company) is available, they are unable to perform the work within the budget set for this request. The current budget is **$**. Kindly advise how you would like to proceed.”*
-2. For **Non Property-Damaging** / **Extreme Habitability **issues:
-  1. Escalate to the Property Manager via the **“Cannot Find a Service Provider” path**, using the same message above.
-    1. *“We attempted to dispatch the work order at **(Property)** for **(Issue)**. While a service provider  (name of the company) is available, they are unable to perform the work within the budget set for this request. The current budget is **$**. Kindly advise how you would like to proceed.”*
-3. Submit a **PS ticket**
-  1. Submit a PS ticket to document that the **Property Manager has set a $1 HBL**, affecting the dispatch of the work order, and to clarify the **next steps with Property Management** when setting an NTE for work orders. Refer to [How to: Escalate to Product Support](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Escalate-to-Product-Support)
+  1. For **Property-Damaging** / **Extreme Habitability** issues:
+  2. Call the **EEC**. Refer to [Job Aid: PM Outbound Communication for Emergency WOs](https://help.latchel.com/latchel-admin/Service-Operations/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs)
+  3. **Say something like**: _“Hello, my name is **(Agent Name)**, and I’m calling on behalf of **Latchel**. This call may be recorded for quality and training purposes.  We attempted to dispatch a service provider to **(Property Address)** for **(Issue)**. While a service provider  (name of the company) is available, they are unable to perform the work within the budget set for this request. The current budget is **\$**. Could you please let us know how you would like to proceed?”_
+  4. If the EEC responds, proceed according to their instructions.
+  5. If the EEC is unresponsive, escalate to the Property Manager via the **“Cannot Find a Service Provider” path**, using the message:
+  6. _“We attempted to dispatch the work order at **(Property)** for **(Issue)**. While a service provider  (name of the company) is available, they are unable to perform the work within the budget set for this request. The current budget is **\$**. Kindly advise how you would like to proceed.”_
+  7. For **Non Property-Damaging** / \*\*\*\*\*\*\*\*Extreme Habitability \*\*\*\*\*\*\*\*issues:
+  8. Escalate to the Property Manager via the **“Cannot Find a Service Provider” path**, using the same message above.
+  9. _“We attempted to dispatch the work order at **(Property)** for **(Issue)**. While a service provider  (name of the company) is available, they are unable to perform the work within the budget set for this request. The current budget is **\$**. Kindly advise how you would like to proceed.”_
+  10. Submit a **PS ticket**
+  11. Submit a PS ticket to document that the **Property Manager has set a \$1 HBL**, affecting the dispatch of the work order, and to clarify the **next steps with Property Management** when setting an NTE for work orders. Refer to [How to: Escalate to Product Support](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Escalate-to-Product-Support)
 </Accordion>
 
 ### FAQ: 24‑Hour Emergency Window Automations, and Budget Adjustments
 
 <Accordion title="When can Ops manually adjust an emergency budget down to the non‑emergency soft limit?">
-You should treat an emergency work order as **non‑emergency for budgeting** and **downgrade the soft budget** to the **non‑emergency NTE** in these cases:
+  You should treat an emergency work order as **non‑emergency for budgeting** and **downgrade the soft budget** to the **non‑emergency NTE** in these cases:
 
-1. **Appointment is &gt;24 hours from SP assignment (first appointment)**
+  1. **Appointment is \>24 hours from SP assignment (first appointment)**
+
   - If it **doesn’t drop**, Ops should manually change the Approved Budget to the **non‑emergency soft limit** and note why. Ensure that the service provider’s expectations are properly set. Submit a bug report for product team to resolve the issue.
-2. **Missed emergency appointment due to SP (rescheduled visit)**
+
+  2. **Missed emergency appointment due to SP (rescheduled visit)**
+
   - SP accepted an emergency job, **missed the emergency appointment**, and we reschedule.
   - The new visit is **non‑emergency for budgeting**.
   - If the NTE **stays at the higher emergency amount**, manually lower it to the **non‑emergency soft limit** and document that the original emergency slot was missed.
-3. **Reassignment where the new SP’s first appointment is &gt;24 hours from their assignment**
+
+  3. **Reassignment where the new SP’s first appointment is \>24 hours from their assignment**
+
   - New SP is assigned, but their first slot is **more than 24 hours** later.
   - The visit should be **non‑emergency** for budget.
-  - If the system **keeps the emergency NTE**, manually set the Approved Budget to the **non‑emergency soft limit** and note that the appointment is &gt;24 hours from reassignment.
+  - If the system **keeps the emergency NTE**, manually set the Approved Budget to the **non‑emergency soft limit** and note that the appointment is \>24 hours from reassignment.
 
-> After you downgrade to the non‑emergency soft NTE, Ops **can still increase** the Approved Budget again if the SP requests a higher amount that is **within the Hard Budget**, following:
-> 
-> - (Non‑Emergency) How to: Handle Over Approved Budget (aka Estimate):
-> [(Non-Emergency) How to: Handle Over Approved Budget (aka Estimate)](https://help.latchel.com/latchel-admin/Service-Operations/Non-Emergency-How-to-Handle-Over-Approved-Budget-aka-Estimate)
-> - (⛑EMERGENCY) How to: Handle Changes to the Approved Budget:
-> [(⛑EMERGENCY) How to: Handle Changes to the Approved Budget](https://help.latchel.com/latchel-admin/Service-Operations/EMERGENCY-How-to-Handle-Changes-to-the-Approved-Budget)
+  > After you downgrade to the non‑emergency soft NTE, Ops **can still increase** the Approved Budget again if the SP requests a higher amount that is **within the Hard Budget**, following:
+  >
+  > - (Non‑Emergency) How to: Handle Over Approved Budget (aka Estimate): [(Non-Emergency) How to: Handle Over Approved Budget (aka Estimate)](https://help.latchel.com/latchel-admin/Service-Operations/Non-Emergency-How-to-Handle-Over-Approved-Budget-aka-Estimate)
+  > - (⛑EMERGENCY) How to: Handle Changes to the Approved Budget: [(⛑EMERGENCY) How to: Handle Changes to the Approved Budget](https://help.latchel.com/latchel-admin/Service-Operations/EMERGENCY-How-to-Handle-Changes-to-the-Approved-Budget)
 </Accordion>
 
 <Accordion title="What if a service provider accepts an emergency job, schedules 1–2 days out, and still wants to charge emergency rates?">
-1. **Confirm and document the appointment**
-  1. Verify the **exact appointment date and time** and record it clearly on the Work Order.
-2. **Clarify rate and budget expectations**
-  1. Explain that **emergency rates and higher emergency budgets are intended for same‑day or within 24 hours appointments**.
-  2. For appointments scheduled **more than 24 hours out**, the visit is treated as a **standard (non‑emergency)** appointment for budgeting and payment.
-3. **If they still push for emergency pricing or more budget**
-  1. If the Service Provider insists on charging emergency rates or needs to go above the current Approved Budget:
-    1. Review the work order budgets (Approved vs. Hard Budget).
-    2. Follow the guidelines outlined in: [**(⛑EMERGENCY) How to: Handle Changes to the Approved Budget**](https://help.latchel.com/latchel-admin/Service-Operations/EMERGENCY-How-to-Handle-Changes-to-the-Approved-Budget).
-4. **Reminder:**
-  1. Do **not** disclose the **Hard Budget** to the Service Provider.
-  2. Only talk about the **Approved Budget** and the need to get additional approval if they expect to exceed it.
+  1. **Confirm and document the appointment**
+  2. Verify the **exact appointment date and time** and record it clearly on the Work Order.
+  3. **Clarify rate and budget expectations**
+  4. Explain that **emergency rates and higher emergency budgets are intended for same‑day or within 24 hours appointments**.
+  5. For appointments scheduled **more than 24 hours out**, the visit is treated as a **standard (non‑emergency)** appointment for budgeting and payment.
+  6. **If they still push for emergency pricing or more budget**
+  7. If the Service Provider insists on charging emergency rates or needs to go above the current Approved Budget:
+  8. Review the work order budgets (Approved vs. Hard Budget).
+  9. Follow the guidelines outlined in: [**(⛑EMERGENCY) How to: Handle Changes to the Approved Budget**](https://help.latchel.com/latchel-admin/Service-Operations/EMERGENCY-How-to-Handle-Changes-to-the-Approved-Budget).
+  10. **Reminder:**
+  11. Do **not** disclose the **Hard Budget** to the Service Provider.
+  12. Only talk about the **Approved Budget** and the need to get additional approval if they expect to exceed it.
 </Accordion>
 
 <Accordion title="When does the 24‑hour emergency window start?">
-The 24‑hour window starts **from the time the service provider is assigned** to the emergency work order.
+  The 24‑hour window starts **from the time the service provider is assigned** to the emergency work order.
 
-- If the **first appointment is scheduled within 24 hours** of SP assignment →
-The work is treated as an **emergency** for budgeting (higher soft emergency NTE may apply).
-- If the **first appointment is scheduled more than 24 hours** after SP assignment →
-Automations/action sets may **automatically reduce the Approved Budget** to a **non‑emergency soft limit**, even if the WO severity remains Emergency.
+  - If the **first appointment is scheduled within 24 hours** of SP assignment → The work is treated as an **emergency** for budgeting (higher soft emergency NTE may apply).
+  - If the **first appointment is scheduled more than 24 hours** after SP assignment → Automations/action sets may **automatically reduce the Approved Budget** to a **non‑emergency soft limit**, even if the WO severity remains Emergency.
 
-> 24 hours is 24 hours – it’s based on the time difference between SP assignment and the confirmed appointment window.
+  > 24 hours is 24 hours – it’s based on the time difference between SP assignment and the confirmed appointment window.
 </Accordion>
 
 <Accordion title="If the first appointment is more than 24 hours out, does automation adjust the budget automatically?">
-**Yes.**
-If the first confirmed appointment is **more than 24 hours from the SP assignment time**, internal automations/action sets **may**:
+  **Yes.** If the first confirmed appointment is **more than 24 hours from the SP assignment time**, internal automations/action sets **may**:
 
-- Lower the **Approved Budget (soft limit)** from **emergency** to a **non‑emergency** level.
-- Keep the **Hard Budget** as configured by the PM.
+  - Lower the **Approved Budget (soft limit)** from **emergency** to a **non‑emergency** level.
+  - Keep the **Hard Budget** as configured by the PM.
 
-You’ll see this reflected on the work order under the budget limits. The severity may still say “Emergency,” but the **budget behaves like a standard (non‑emergency) visit**.
+  You’ll see this reflected on the work order under the budget limits. The severity may still say “Emergency,” but the **budget behaves like a standard (non‑emergency) visit**.
 </Accordion>
 
 <Accordion title="If the second appointment (after a missed one) is more than 24 hours out, is the adjustment automatic?">
-For missed appointments:
+  For missed appointments:
 
-- The **system may not always auto‑adjust** budgets in the way we need for fairness.
-- Treat the **rescheduled visit as non‑emergency** for pricing and budget if this falls outside the 24 hour period.
-- **Manually adjust** the **Approved Budget** to the **non‑emergency** soft limit if needed, and clearly document:
-  - That the original emergency appointment was missed by the SP.
-  - That the new appointment is being handled as **non‑emergency**.
+  - The **system may not always auto‑adjust** budgets in the way we need for fairness.
+  - Treat the **rescheduled visit as non‑emergency** for pricing and budget if this falls outside the 24 hour period.
+  - **Manually adjust** the **Approved Budget** to the **non‑emergency** soft limit if needed, and clearly document:
+    - That the original emergency appointment was missed by the SP.
+    - That the new appointment is being handled as **non‑emergency**.
 </Accordion>
 
 <Accordion title="What happens to the 24‑hour clock when we reassign the work order to a new SP?">
-When you **reassign** to a different SP:
+  When you **reassign** to a different SP:
 
-- The assumption is that **the action set triggers again on assignment**, effectively **resetting the 24‑hour clock**.
-- That means:
-  - The new 24‑hour window is **based on the time the new SP is assigned**.
-  - If the **new SP’s first appointment is within 24 hours** of their assignment → emergency budget behavior can still apply.
-  - If the **new SP’s first appointment is more than 24 hours** from their assignment → the system may again adjust the **Approved Budget** to a **non‑emergency** soft limit.
+  - The assumption is that **the action set triggers again on assignment**, effectively **resetting the 24‑hour clock**.
+  - That means:
+    - The new 24‑hour window is **based on the time the new SP is assigned**.
+    - If the **new SP’s first appointment is within 24 hours** of their assignment → emergency budget behavior can still apply.
+    - If the **new SP’s first appointment is more than 24 hours** from their assignment → the system may again adjust the **Approved Budget** to a **non‑emergency** soft limit.
 
-Note: If this does not happen, follow FAQ 1 - manually adjust the budget.
+  Note: If this does not happen, follow FAQ 1 - manually adjust the budget.
 
-You should still **set expectations verbally** with the SP that appointments beyond 24 hours are **standard (non‑emergency)** for budgeting and rates. See: [How to: Set expectations with Service Providers when dispatching](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Set-expectations-with-Service-Providers-when-dispatching)
+  You should still **set expectations verbally** with the SP that appointments beyond 24 hours are **standard (non‑emergency)** for budgeting and rates. See: [How to: Set expectations with Service Providers when dispatching](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Set-expectations-with-Service-Providers-when-dispatching)
 </Accordion>
 
 <Accordion title="What if the SP misses the appointment and the only new slot is after hours (e.g., 5–9 PM) and they want emergency rates?">
-Scenario:
+  Scenario:
 
-- Emergency WO, SP misses the original emergency appointment.
-- Next available slot is **5 PM–9 PM** (after hours).
-- SP says they will charge **after‑hours/emergency rates**.
+  - Emergency WO, SP misses the original emergency appointment.
+  - Next available slot is **5 PM–9 PM** (after hours).
+  - SP says they will charge **after‑hours/emergency rates**.
 
-Guidance:
+  Guidance:
 
-1. Because the **original emergency appointment was missed by the SP**, the **rescheduled visit is treated as non‑emergency** for budgeting.
-2. **NTE stays at the standard (non‑emergency) level**.
+  1. Because the **original emergency appointment was missed by the SP**, the **rescheduled visit is treated as non‑emergency** for budgeting.
+  2. **NTE stays at the standard (non‑emergency) level**.
+
   - “We still go by the normal NTE at that point.”
-3. If the SP insists on higher emergency/after‑hours rates:
+
+  3. If the SP insists on higher emergency/after‑hours rates:
+
   - Explain that **emergency budgets are for the original within‑24‑hours visit**, which they missed.
   - If their after‑hours pricing exceeds the normal NTE and the property still wants them:
     - Follow [**(⛑EMERGENCY) How to: Handle Changes to the Approved Budget**](https://help.latchel.com/latchel-admin/Service-Operations/EMERGENCY-How-to-Handle-Changes-to-the-Approved-Budget)
 </Accordion>
 
 <Accordion title="What if a service provider scheduled outside 24 hours but later claims the work was completed within 24 hours?">
-**Scenario:**
+  **Scenario:**
 
-- An emergency work order was dispatched and the service provider scheduled the appointment **outside the 24-hour window**.
-- The budget was adjusted to the **non-emergency (standard) soft limit** — either automatically or manually.
-- The service provider later reaches out and claims the work was actually **completed within 24 hours** of assignment.
+  - An emergency work order was dispatched and the service provider scheduled the appointment **outside the 24-hour window**.
+  - The budget was adjusted to the **non-emergency (standard) soft limit** — either automatically or manually.
+  - The service provider later reaches out and claims the work was actually **completed within 24 hours** of assignment.
 
-**Process for Ops Associates:**
+  **Process for Ops Associates:**
 
-1. **Receive and log the SP's claim**
-  - Document the date and time the service provider contacted us, and their specific claim (e.g., "completed the job on [DATE] at [TIME]").
+  1. **Receive and log the SP's claim**
+
+  - Document the date and time the service provider contacted us, and their specific claim (e.g., "completed the job on \[DATE\] at \[TIME\]").
   - Note this on the work order.
-2. **Validate the completion timeframe**
+
+  2. **Validate the completion timeframe**
+
   - Cross-check the SP's claim against system records:
     - SP assignment timestamp (when the SP was assigned to the work order).
     - Claimed completion time reported by the SP.
   - Confirm that the gap between SP assignment and claimed completion is **within 24 hours**.
   - If the timestamps do **not** support a within-24-hour completion, **deny the adjustment** and inform the SP that the standard (non-emergency) rate stands. Document the denial and reasoning on the work order.
-    - **Say something like:** *"Hi [SP Name], thank you for reaching out regarding work order [WO#]. We've reviewed the timestamps on the work order, and based on our records, the work was not completed within the 24-hour emergency window from the time you were assigned. Because of this, we're unable to adjust the budget back to the emergency rate — the standard (non-emergency) rate will remain in place for this work order. If you have any questions or believe there's additional information we should consider, feel free to reach out. Thank you for your understanding."*
-3. **Review supporting evidence**
+    - **Say something like:** _"Hi \[SP Name\], thank you for reaching out regarding work order \[WO#\]. We've reviewed the timestamps on the work order, and based on our records, the work was not completed within the 24-hour emergency window from the time you were assigned. Because of this, we're unable to adjust the budget back to the emergency rate — the standard (non-emergency) rate will remain in place for this work order. If you have any questions or believe there's additional information we should consider, feel free to reach out. Thank you for your understanding."_
+
+  3. **Review supporting evidence**
+
   - Request and verify proof that the work was genuinely completed within 24 hours. Acceptable evidence includes a **record of the schedule change in Latchel** (e.g., a documented reschedule, status update, or notes showing the appointment was moved up) and any of the following:
     - **Before and after photos** with timestamps
     - **Videos** of the completed work with timestamps
     - **Communication records** (e.g., text messages, emails, or Latchel messages between the SP and tenant/agent confirming the earlier completion)
     - **System-generated timestamps** (e.g., portal updates, status changes, confirmed completion from resident)
-4. **Make the determination**
+
+  4. **Make the determination**
+
   - If timestamps AND evidence confirm the work was completed within 24 hours of SP assignment: **Approve** the rate adjustment.
   - If timestamps OR evidence do not support the claim: **Deny** the adjustment. The standard (non-emergency) rate applies.
-5. **Update the budget (if approved)**
+
+  5. **Update the budget (if approved)**
+
   - Change the Approved Budget back to the original emergency soft limit.
   - Add a note on the work order explaining that the SP initially scheduled outside 24 hours but provided evidence confirming completion within the emergency window, what evidence was reviewed, and the date the budget was restored.
-6. **Documentation and closure**
+
+  6. **Documentation and closure**
+
   - Attach all supporting evidence (photos, videos, logs) to the work order.
   - Notify the SP that the emergency rate has been reinstated (if approved) or that the standard rate stands (if denied).
 
-**Say something like this to the SP (if approved):**
+  **Say something like this to the SP (if approved):**
 
-> "We've reviewed the evidence you provided and confirmed that the work was completed within the 24-hour emergency window. We've updated the budget back to the emergency rate. Thank you for providing the documentation."
+  > "We've reviewed the evidence you provided and confirmed that the work was completed within the 24-hour emergency window. We've updated the budget back to the emergency rate. Thank you for providing the documentation."
 
-**Say something like this to the SP (if denied):**
+  **Say something like this to the SP (if denied):**
 
-> "We've reviewed the information provided, but we're unable to confirm that the work was completed within the 24-hour emergency window. Based on our records and/or the lack of supporting evidence, the standard (non-emergency) rate will apply for this work order. If you have additional documentation you'd like us to review, please send it over and we'll take another look."
+  > "We've reviewed the information provided, but we're unable to confirm that the work was completed within the 24-hour emergency window. Based on our records and/or the lack of supporting evidence, the standard (non-emergency) rate will apply for this work order. If you have additional documentation you'd like us to review, please send it over and we'll take another look."
 
-**Important Notes:**
+  **Important Notes:**
 
-- The burden of proof is on the service provider to demonstrate that work was completed within 24 hours.
-- Do not adjust the budget based solely on the SP's verbal claim — verifiable evidence is required.
-- If you are unsure whether the evidence is sufficient, escalate to an Ops Support specialist before making the adjustment.
+  - The burden of proof is on the service provider to demonstrate that work was completed within 24 hours.
+  - Do not adjust the budget based solely on the SP's verbal claim — verifiable evidence is required.
+  - If you are unsure whether the evidence is sufficient, escalate to an Ops Support specialist before making the adjustment.
 </Accordion>
 
 ### Handling SP Pushback Scenarios
 
 <Accordion title="'I'm still coming out for an emergency — it should be emergency rates regardless of when I get there.'">
-"I understand, and we appreciate you taking this on. However, our emergency rates are tied to the appointment being completed within 24 hours of assignment, not the severity of the issue. Since your appointment is on [DATE/TIME], standard rates will apply for budgeting."
+  "I understand, and we appreciate you taking this on. However, our emergency rates are tied to the appointment being completed within 24 hours of assignment, not the severity of the issue. Since your appointment is on \[DATE/TIME\], standard rates will apply for budgeting."
 </Accordion>
 
 <Accordion title="'I had to rearrange my schedule to fit this in — I should be compensated at emergency rates.'">
-"We appreciate the flexibility. That said, the emergency rate window is based on when the work is actually completed relative to the assignment time, not scheduling adjustments. The approved amount on the work order will reflect standard rates. If you expect the total to exceed that, please let us know before proceeding."
+  "We appreciate the flexibility. That said, the emergency rate window is based on when the work is actually completed relative to the assignment time, not scheduling adjustments. The approved amount on the work order will reflect standard rates. If you expect the total to exceed that, please let us know before proceeding."
 </Accordion>
 
 <Accordion title="'The last time I did this, I was paid emergency rates even though it was scheduled a day out.'">
-"I appreciate you sharing that. Our current policy is that emergency rates apply only when the appointment is completed within 24 hours of SP assignment. For this work order, standard rates and budget will apply. If the total ends up higher than the approved amount, we can review it with the PM before you proceed."
+  "I appreciate you sharing that. Our current policy is that emergency rates apply only when the appointment is completed within 24 hours of SP assignment. For this work order, standard rates and budget will apply. If the total ends up higher than the approved amount, we can review it with the PM before you proceed."
 </Accordion>
 
 <Accordion title="'I'll just cancel the job then.'">
-"I understand. If the terms don't work for you, we'll go ahead and reassign the work order to another provider. We appreciate your time and hope to work with you on future jobs."
+  "I understand. If the terms don't work for you, we'll go ahead and reassign the work order to another provider. We appreciate your time and hope to work with you on future jobs."
 </Accordion>
 
 <Accordion title="'Can you just approve the higher rate? It's only a little more.'">
-"I'm not able to override the budget on my end. If you believe the cost will exceed the approved amount, please submit an estimate with the updated total so we can review it with the Property Manager before any work begins."
+  "I'm not able to override the budget on my end. If you believe the cost will exceed the approved amount, please submit an estimate with the updated total so we can review it with the Property Manager before any work begins."
 </Accordion>
 
 <Accordion title="'The tenant said it's an emergency — why are you downgrading it?'">
-"The work order is still classified as an emergency, and we're treating the issue with urgency. The rate adjustment is strictly about budgeting — emergency pricing is tied to the appointment being within 24 hours of assignment. The urgency of the response hasn't changed."
+  "The work order is still classified as an emergency, and we're treating the issue with urgency. The rate adjustment is strictly about budgeting — emergency pricing is tied to the appointment being within 24 hours of assignment. The urgency of the response hasn't changed."
 </Accordion>
 
 ## **🎯 When to Break This SOP**
@@ -333,5 +346,4 @@ Guidance:
 
 ## **💡 If You Think This SOP Could Be Improved...**
 
-Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work?
- 👉 Share your suggestion in the[<u>SOP Feedback Form</u>](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**
+Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work? 👉 Share your suggestion in the[<u>SOP Feedback Form</u>](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**
