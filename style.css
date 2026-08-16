@@ -21,7 +21,7 @@
   height: 44px;
   padding: 0;
   border-radius: 50%;
-  background: #ff9b8a;
+  background: #ffffff;
   color: #373737; /* icon color */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   font-size: 0; /* hides the "Log In" / "Log Out" text */
@@ -67,7 +67,7 @@
 
 .auth-fab:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  background: #ff8a76;
+  background: #f3f4f6;
   color: #373737;
 }
 
