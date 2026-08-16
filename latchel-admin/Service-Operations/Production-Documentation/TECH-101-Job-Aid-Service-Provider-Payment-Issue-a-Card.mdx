@@ -15,58 +15,102 @@ groups: ["latchel"]
   The contents of this page have been included in the \*\*Budget Communication and Approval Process \*\*Coassemble course.
 </Note>
 
-Content\*
-
 ## Definition Matrix
 
-| Term | What it is | Who pays / How | Timing |
-| --- | --- | --- | --- |
-| Issuing a Card | One-time virtual credit card issued from the Work Order for a set amount. | Latchel pays the Service Provider by card. | 1–3 business days |
-| Direct Deposit | Payment sent to SP’s bank via invoice uploaded in the Latchel console. | Latchel pays the Service Provider by ACH. | 3 business days from invoice |
-| Preferred Service Provider | SP chosen by the Property Management company when joining Latchel. | PM pays SP directly (Ops: no payment step). | Outside Latchel’s payment flow |
-| Latchel Service Provider | Local SP in Latchel’s network, opted in/out by the PM. | Latchel pays SP via card or direct deposit. | Follows card/ACH timing above |
+<AccordionGroup>
+  <Accordion title="Issuing a Card">
+    <Tabs>
+      <Tab title="What it is?">
+        One-time virtual credit card issued from the Work Order for a set amount.
+      </Tab>
+      <Tab title="Who pays / How?">
+        Latchel pays the Service Provider by card.
+      </Tab>
+      <Tab title="Timing">
+        1–3 business days
+      </Tab>
+    </Tabs>
+  </Accordion>
 
-> **VERY IMPORTANT – Payment Policy for Emergency Issues**<br />Operations associates \*\*do NOT issue $$500+ credit card payments**.  
-> For payments above $$500, follow this SOP:<br />[(Job-Aid) How to: Upload an Invoice for a Work Order](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Upload-an-Invoice-for-a-Work-Order)
+  <Accordion title="Direct Deposit">
+    <Tabs>
+      <Tab title="What it is?">
+        Payment sent to SP’s bank via invoice uploaded in the Latchel console.
+      </Tab>
+      <Tab title="Who pays / How?">
+        Latchel pays the Service Provider by ACH.
+      </Tab>
+      <Tab title="Timing">
+        3 business days from invoice
+      </Tab>
+    </Tabs>
+  </Accordion>
+
+  <Accordion title="Preferred Service Provider">
+    <Tabs>
+      <Tab title="What it is?">
+        SP chosen by the Property Management company when joining Latchel.
+      </Tab>
+      <Tab title="Who pays / How?">
+        PM pays SP directly (Ops: no payment step).
+      </Tab>
+      <Tab title="Timing">
+        Outside Latchel’s payment flow
+      </Tab>
+    </Tabs>
+  </Accordion>
+
+  <Accordion title="Latchel Service Provider">
+    <Tabs>
+      <Tab title="What it is?">
+        Local SP in Latchel’s network, opted in/out by the PM.
+      </Tab>
+      <Tab title="Who pays / How?">
+        Latchel pays SP via card or direct deposit.
+      </Tab>
+      <Tab title="Timing">
+        Follows card/ACH timing above
+      </Tab>
+    </Tabs>
+  </Accordion>
+</AccordionGroup>
+
+<Check>
+  **VERY IMPORTANT – Payment Policy for Emergency Issues** <br />Operations associates do NOT issue \$500\+ credit card payments.<br />For payments above \$500, follow this SOP:<br />[(Job-Aid) How to: Upload an Invoice for a Work Order](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Upload-an-Invoice-for-a-Work-Order)
+</Check>
 
 ## 📋 Step-by-Step Process
 
 ### **Step 1 - Determine how this Service Provider will be paid**
 
 1. Identify SP type:
-2. Preferred Service Provider - Payment Details
-3. For payment, Preferred Service Providers are **typically** paid by the property management company directly. However, **before assuming Ops does nothing for payment**, check the PM's Company Profile → Payments tab → 'Preferred Service Provider Payments' toggle:
-
-- **Toggle OFF** (default): The PM pays the SP directly; the agent does nothing for payment.
-- **Toggle ON**: Latchel can process payments for this Preferred SP **via Direct Deposit only** (no issued cards). Refer to [Service Ops: How to Handle Payment-Related Inquiries](https://help.latchel.com/latchel-admin/Service-Operations/Service-Ops-How-to-Handle-Payment-Related-Inquiries) for full details on payment processing, convenience fees, and Direct Deposit verification requirements.
-
-2. Latchel Service Provider - Direct Deposit
-3. If there is a Latchel Service Provider available, check the bank information under "Payments" tab in the Service Provider's profile.
-4. If there is bank information available, the agent does nothing.
-5. For payment, the Latchel Service Provider with bank information uploads job invoices to the Latchel Console to receive payment from Latchel. Once the invoice is uploaded for payment, processing takes **three business days.**
-
-<Frame>
-  ![SVC-483.png](/images/SVC-483.png)
-</Frame>
-
-2. The agent can advise the Latchel Service Provider with bank information to upload job invoices to the Latchel Console (not send an email) or to upload the invoice via their Service Provider Interface.
-
-<Frame>
-  ![image-20251008-182956.png](/images/SVC-484.png)
-</Frame>
-
-2. If there is no bank information available, you are assigning a Latchel Service Provider with Issued Card payment method to the job.
-3. For payment, Issue a Card. Proceed to[Step 2](#)
-4. Latchel Service Providers - Issued Cards
-5. For payment, Issue a Card. Proceed to [Step 2](#)
+   1. Preferred Service Provider - Payment Details
+      1. For payment, Preferred Service Providers are **typically** paid by the property management company directly. However, **before assuming Ops does nothing for payment**, check the PM's Company Profile → Payments tab → 'Preferred Service Provider Payments' toggle:
+         - **Toggle OFF** (default): The PM pays the SP directly; the agent does nothing for payment.
+         - **Toggle ON**: Latchel can process payments for this Preferred SP **via Direct Deposit only** (no issued cards). Refer to [Service Ops: How to Handle Payment-Related Inquiries](https://help.latchel.com/latchel-admin/Service-Operations/Service-Ops-How-to-Handle-Payment-Related-Inquiries) for full details on payment processing, convenience fees, and Direct Deposit verification requirements.
+   2. Latchel Service Provider - Direct Deposit
+      1. If there is a Latchel Service Provider available, check the bank information under "Payments" tab in the Service Provider's profile.
+         1. If there is bank information available, the agent does nothing.
+            1. For payment, the Latchel Service Provider with bank information uploads job invoices to the Latchel Console to receive payment from Latchel. Once the invoice is uploaded for payment, processing takes **three business days.**
+               <Frame>
+                 ![SVC-483.png](/images/SVC-483.png)
+               </Frame>
+            2. The agent can advise the Latchel Service Provider with bank information to upload job invoices to the Latchel Console (not send an email) or to upload the invoice via their Service Provider Interface.
+               <Frame>
+                 ![image-20251008-182956.png](/images/SVC-484.png)
+               </Frame>
+         2. If there is no bank information available, you are assigning a Latchel Service Provider with Issued Card payment method to the job.
+            1. For payment, Issue a Card. Proceed to[Step 2](#)
+   3. Latchel Service Providers - Issued Cards
+      1. For payment, Issue a Card. Proceed to [Step 2](#)
 
 ### **Step 2 - Issue a Card for Latchel Service Providers**
 
-<Warning>
-  ### Warning against pre-charge the CC by Vendors
+<Danger>
+  **Warning against pre-charge the CC by Vendors**
 
   Service Providers sometimes will attempt to pre-charge a card to test if it is valid. (For example, they will charge \$1). **Agents should advise the Service Provider to not do this as the issued card is one-time-use CC**.
-</Warning>
+</Danger>
 
 1. To issue a card (one-time use for the approved budget), navigate to the Work Order
 2. Using the secondary actions button, click "issue card".
@@ -76,86 +120,67 @@ Content\*
 </Frame>
 
 3. The next dialogue box may show a list of past issued cards or may state "No issued cards to display".
+   <Frame>
+     ![SVC-486.png](/images/SVC-486.png)
+   </Frame>
+   1. If it has a list of past issued cards, review the list for other relevant cards for this Work Order, we can issue multiple cards for a work order.
+      1. Verify the reason why there should be an updated budget for this Service Provider.
+         1. View the amount of the Approved Budget of the previously existing card. This is the "Previous Approved Budget"
+            - Verify that the **(\$Previous Approved Budget)** amount PLUS ➕ the **(\$New Request)** amount (equals) = the **total \$Updated Approved Budget**. **If this total goes over "Hard Limit" then it needs to be escalated**.
+            - The (New Request) \$ amount is the number that you will enter in the Approved Budget field when you issue a new credit card. This means that the previous amount was already paid and we are just paying the difference. You will issue individual cards for each one of the instances being billed.
+              - This allows the service provider to charge each occurrence individually but the property manager will receive one invoice at the end of the work order.
+              - The invoice will have all of the itemized lines automatically added without the service provider having to go onto our system and create individual invoices.
+              - The invoice will specify which line item was charged to the virtual card and give details about each charge.
+            - For more information on how to Handle Changes to the Approved Budget, visit this SOP: [(⛑EMERGENCY) How to: Handle Changes to the Approved Budget](https://help.latchel.com/latchel-admin/Service-Operations/EMERGENCY-How-to-Handle-Changes-to-the-Approved-Budget)
+            - Click "Issue New Card" to issue a new card.
+   2. If it states, "No issued cards to display", click "Issue New Card" to issue a new card.
+4. The "Issue Card" box has three sections that require input information about issuing the new credit card number.
+   <Frame>
+     ![image-20240919-214130.png](/images/SVC-487.png)
+   </Frame>
+   1. In the section titled, "Usage", use the drop down list to choose one of these three categories for what the money will be used for: Deposit, materials, service visit.
+   2. In the section titled, "Card Limit", enter the monetary amount that the credit card is authorized for.
+      1. Enter the approved budget limit or their quoted amount (if lower). Inform the Service Provider that the job should not exceed this amount, and that if it does, to call back at the emergency line for Service Providers.
+         <Note>
+           **Approved Budget - Not to Exceed without Approval** The credit card payment won't work for more than what is allotted in the "Card Limit". If there's a change in the budget amount, the agent will determine if there should be a NEW card issued for the difference by reviewing the circumstances surrounding the budget change. The Console notes should clearly reflect the reason for the budget increase and an explanation of why the budget increase was granted. [See above for more instructions on this step.](https://help.latchel.com/latchel-admin/Service-Operations/See-above-for-more-instructions-on-this-step) Make sure that the previous Approved Amount and the Requested Amount equals to the total Updated Approval Budget. If this total goes over "Hard Limit" then it needs to be escalated.
+         </Note>
+   3. In the last section, it asks for the agent to "Please provide any details about the use of the card. This will appear in the final invoice."
+      1. Use the text box to type out the reason for using the card. Provide details about what specifically the card is being used for (trip visit, materials, deposit, etc).
+         1. The system already knows that the issued card is related to a work order, invoice, or property, so please avoid adding any details to this field related to the work order, invoice, or property (e.g. property address, work order #, invoice #, etc).
+         2. Whatever is put into this field shows up on the final invoice that both the Property Manager and Service Provider receive a copy of, and is supposed to provide details about the transaction.
+            1. An example of a **<u>good</u>**<u> </u>note would include information whatever work was completed by the Service Provider: "Snaked toilet to remove clog" or "Purchased 4 windows". If applicable, add information about the trip charge, service fee, diagnostic fee.
+            2. X An example of a **<u>bad</u>**<u> </u>note that is non descriptive, and how it looks to a PM/Service Provider:
+               <Frame>
+                 ![SVC-488.png](/images/SVC-488.png)
+               </Frame>
+      2. Click "Get Card" to receive a unique credit card number for that specific work order, job, and amount.
+      3. Proceed to [Step 3](#).
 
-<Frame>
-  ![SVC-486.png](/images/SVC-486.png)
-</Frame>
-
-1. If it has a list of past issued cards, review the list for other relevant cards for this Work Order, we can issue multiple cards for a work order.
-2. Verify the reason why there should be an updated budget for this Service Provider.
-3. View the amount of the Approved Budget of the previously existing card. This is the "Previous Approved Budget"
-
-- Verify that the **(**$$Previous Approved Budget)** amount PLUS ➕ the **($$**New Request)** amount (equals) = the **total \$Updated Approved Budget**. **If this total goes over "Hard Limit" then it needs to be escalated**.
-- The (New Request) \$ amount is the number that you will enter in the Approved Budget field when you issue a new credit card. This means that the previous amount was already paid and we are just paying the difference. You will issue individual cards for each one of the instances being billed.
-  - This allows the service provider to charge each occurrence individually but the property manager will receive one invoice at the end of the work order.
-  - The invoice will have all of the itemized lines automatically added without the service provider having to go onto our system and create individual invoices.
-  - The invoice will specify which line item was charged to the virtual card and give details about each charge.
-- For more information on how to Handle Changes to the Approved Budget, visit this SOP: [(⛑EMERGENCY) How to: Handle Changes to the Approved Budget](https://help.latchel.com/latchel-admin/Service-Operations/EMERGENCY-How-to-Handle-Changes-to-the-Approved-Budget)
-- Click "Issue New Card" to issue a new card.
-
-2. If it states, "No issued cards to display", click "Issue New Card" to issue a new card.
-3. The "Issue Card" box has three sections that require input information about issuing the new credit card number.
-
-<Frame>
-  ![image-20240919-214130.png](/images/SVC-487.png)
-</Frame>
-
-1. In the section titled, "Usage", use the drop down list to choose one of these three categories for what the money will be used for: Deposit, materials, service visit.
-2. In the section titled, "Card Limit", enter the monetary amount that the credit card is authorized for.
-3. Enter the approved budget limit or their quoted amount (if lower). Inform the Service Provider that the job should not exceed this amount, and that if it does, to call back at the emergency line for Service Providers.
-
-<Note>
-  **Approved Budget - Not to Exceed without Approval**
-
-  The credit card payment won't work for more than what is allotted in the "Card Limit". If there's a change in the budget amount, the agent will determine if there should be a NEW card issued for the difference by reviewing the circumstances surrounding the budget change. The Console notes should clearly reflect the reason for the budget increase and an explanation of why the budget increase was granted. [See above for more instructions on this step.](https://help.latchel.com/latchel-admin/Service-Operations/See-above-for-more-instructions-on-this-step) Make sure that the previous Approved Amount and the Requested Amount equals to the total Updated Approval Budget. If this total goes over "Hard Limit" then it needs to be escalated.
-</Note>
-
-3. In the last section, it asks for the agent to "Please provide any details about the use of the card. This will appear in the final invoice."
-4. Use the text box to type out the reason for using the card. Provide details about what specifically the card is being used for (trip visit, materials, deposit, etc).
-5. The system already knows that the issued card is related to a work order, invoice, or property, so please avoid adding any details to this field related to the work order, invoice, or property (e.g. property address, work order #, invoice #, etc).
-6. Whatever is put into this field shows up on the final invoice that both the Property Manager and Service Provider receive a copy of, and is supposed to provide details about the transaction.
-7. An example of a **<u>good</u>**<u> </u>note would include information whatever work was completed by the Service Provider: "Snaked toilet to remove clog" or "Purchased 4 windows". If applicable, add information about the trip charge, service fee, diagnostic fee.
-8. X An example of a **<u>bad</u>**<u> </u>note that is non descriptive, and how it looks to a PM/Service Provider:
-
-<Frame>
-  ![SVC-488.png](/images/SVC-488.png)
-</Frame>
-
-2. Click "Get Card" to receive a unique credit card number for that specific work order, job, and amount.
-3. Proceed to [Step 3](#).
-
-<Note>
+<Warning>
   **IMPORTANT**: The toggle for “**_Latchel will pay for this card's transactions_**” should never be used
 
   <Frame>
     ![image-20240917-200757.png](/images/SVC-489.png)
   </Frame>
-</Note>
+</Warning>
 
 ### **Step 3 - Give the information to the Service Provider**
 
 1. When the Service Provider asks for credit card information (before the job or after the job), complete [Step 2](#)until you "Get Card" and receive a unique credit card information for specific work order.
-
-<Note>
-  **Hot Tip**
-
-  When the Service Provider is ready to receive credit card information, \*\*allow the Service Provider to lead by \*\*<u>asking for the information they need</u>.
-</Note>
-
-1. _Address_
-2. _Name on Card_
-3. _Credit Card Numbers_
-4. _Expiration Date_
-5. _CVC_
-
-<Tip>
-  **Latchel Blurb Tips**
-
-  Speak slowly when you're giving information and give time for the Service Provider to record the information. Try giving the credit card number four-digits at a time and follow the pace of the other person.
-</Tip>
-
-6. When you finish the phone call with the Service Provider, thank them for their partnership with Latchel and let them know of the turn around timeframe.
-7. Click "Done" and Proceed to [Step 4](#)
+   <Tip>
+     **Hot Tip** When the Service Provider is ready to receive credit card information, \*\*allow the Service Provider to lead by \*\*<u>asking for the information they need</u>.
+   </Tip>
+   1. _Address_
+   2. _Name on Card_
+   3. _Credit Card Numbers_
+   4. _Expiration Date_
+   5. _CVC_
+      <Tip>
+        **Latchel Blurb Tips** Speak slowly when you're giving information and give time for the Service Provider to record the information. Try giving the credit card number four-digits at a time and follow the pace of the other person.
+      </Tip>
+   6. When you finish the phone call with the Service Provider, thank them for their partnership with Latchel and let them know of the turn around timeframe.
+      > _Hi \[Service Provider Name\]! Thank you for your partnership and for completing the job. We have now successfully issued you a card you can expect to receive the payment within 1-3 business days._
+      1. Click "Done" and Proceed to [Step 4](#)
 
 <Warning>
   ### **What do I do if the Credit Card declines?**
@@ -185,25 +210,21 @@ Content\*
   **Finance Team**
 
   1. Once the team receives a task regarding an issued card decline, check the issued card information on the Stripe portal.
-  2. If this is the first time that a specific issued card gets declined, immediately ask the Service Provider to attempt recharging the card a second time.
-  3. If this is **NOT** the first time that a specific issued card gets declined, (i.e, the balance in the PM’s account is not sufficient or the PM’s account expired):
-  4. Investigate the detailed decline reason and communicate with the according stakeholder to resolve the issue.
-  5. Once the stakeholder has gotten back to you about the reason for the decline and resolved the issue, contact the Service Provider to complete the payment.
-  6. Escalate to Customer Success as necessary (if the issue is out of the Finance team member’s control or has serious business impact).
+     1. If this is the first time that a specific issued card gets declined, immediately ask the Service Provider to attempt recharging the card a second time.
+     2. If this is **NOT** the first time that a specific issued card gets declined, (i.e, the balance in the PM’s account is not sufficient or the PM’s account expired):
+        1. Investigate the detailed decline reason and communicate with the according stakeholder to resolve the issue.
+        2. Once the stakeholder has gotten back to you about the reason for the decline and resolved the issue, contact the Service Provider to complete the payment.
+        3. Escalate to Customer Success as necessary (if the issue is out of the Finance team member’s control or has serious business impact).
 </Warning>
 
 ### **Step 4 - Write Effective Notes**
 
 1. Write a note about paying the Service Provider.
-2. Write: "Service Provider has completed work - paid by CC ($$Card Limit)" or "Service Provider has CC on file - paid by CC ($$CardLimit)" as applicable.
-3. Explain the reason for the budget increase and also give an explanation of why the budget increase was granted.
-
-<Note>
-  **Do not include Credit Card information in Notes**
-
-  **Important**: Do NOT put ANY raw credit card details into a note, task, or any other field/form. Property Managers have full access to the job log and can see every entry we create. For their security, as well as ours, please don't put any credit card details in the log.
-</Note>
-
+   1. Write: "Service Provider has completed work - paid by CC (\$Card Limit)" or "Service Provider has CC on file - paid by CC (\$CardLimit)" as applicable.
+   2. Explain the reason for the budget increase and also give an explanation of why the budget increase was granted.
+      <Note>
+        **Do not include Credit Card information in Notes** **Important**: Do NOT put ANY raw credit card details into a note, task, or any other field/form. Property Managers have full access to the job log and can see every entry we create. For their security, as well as ours, please don't put any credit card details in the log.
+      </Note>
 2. You're done setting up payment for the Latchel Service Provider!
 
 ---
@@ -214,4 +235,4 @@ Content\*
 
 ## **💡 If You Think This SOP Could Be Improved...**
 
-Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work? 👉 Share your suggestion in the[<u>SOP Feedback Form</u>](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**
+Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work? 👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**
