@@ -1,23 +1,55 @@
 /* ==========================================================
-   Mintlify private-space Login/Logout button — icon-only styling
-   Targets the auto-generated .login-link / .logout-link elements
-   that appear in the topbar when the private space is enabled.
+   Mintlify private-space Login/Logout button — icon-only,
+   floating button pinned to the bottom-right corner.
+   Targets the auto-generated .login-link / .logout-link
+   elements, which script.js moves into #auth-fab-dock.
    ========================================================== */
 
-.login-link,
-.logout-link {
-  font-size: 0;       /* hides the visible text ("Log In" / "Log Out") */
-  gap: 0;
-  padding: 6px;
-  border-radius: 6px;
+#auth-fab-dock {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
 }
 
-.login-link::before,
-.logout-link::before {
+.auth-fab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #4b5563; /* gray-600, matches existing nav link color */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  font-size: 0; /* hides the "Log In" / "Log Out" text */
+  gap: 0;
+  transition: box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.auth-fab:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.dark .auth-fab {
+  background: #1f2937;
+  color: #9ca3af; /* gray-400, matches existing dark-mode nav link color */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.dark .auth-fab:hover {
+  background: #374151;
+  color: #d1d5db;
+}
+
+.auth-fab::before {
   content: "";
   display: inline-block;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   background-color: currentColor;
   -webkit-mask-size: contain;
   mask-size: contain;
@@ -26,24 +58,13 @@
 }
 
 /* Login icon: an arrow entering a doorway */
-.login-link::before {
+.login-link.auth-fab::before {
   -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2'><path d='M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4'/><polyline points='10 17 15 12 10 7'/><line x1='15' y1='12' x2='3' y2='12'/></svg>");
   mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2'><path d='M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4'/><polyline points='10 17 15 12 10 7'/><line x1='15' y1='12' x2='3' y2='12'/></svg>");
 }
 
 /* Logout icon: an arrow exiting a doorway (mirrored) */
-.logout-link::before {
+.logout-link.auth-fab::before {
   -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2'><path d='M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4'/><polyline points='16 17 21 12 16 7'/><line x1='21' y1='12' x2='9' y2='12'/></svg>");
   mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2'><path d='M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4'/><polyline points='16 17 21 12 16 7'/><line x1='21' y1='12' x2='9' y2='12'/></svg>");
-}
-
-/* Optional: hover feedback since the button is now just an icon */
-.login-link:hover,
-.logout-link:hover {
-  background: rgba(0, 0, 0, 0.05);
-}
-
-.dark .login-link:hover,
-.dark .logout-link:hover {
-  background: rgba(255, 255, 255, 0.08);
 }
