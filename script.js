@@ -14,29 +14,46 @@ window.addEventListener('mintlify:user', () => {
   relocateAuthLink();
 });
 
-// Mintlify is a single-page app under the hood, so the topbar can
-// re-render and re-insert the original .login-link/.logout-link
-// element after our script already ran. Watch for that and re-apply.
+// Mintlify is a single-page app under the hood. On client-side route
+// changes it can re-create a fresh .login-link/.logout-link element
+// in the topbar (since the original was moved out by us). Watch for
+// that and relocate the fresh one, discarding any stale duplicate.
 const authObserver = new MutationObserver(() => {
   relocateAuthLink();
 });
 authObserver.observe(document.body, { childList: true, subtree: true });
 
-function relocateAuthLink() {
-  const authLink = document.querySelector('.login-link, .logout-link');
-  if (!authLink) return;
-
-  // Create (once) a fixed container pinned to the bottom-right corner
+function ensureDock() {
   let dock = document.getElementById('auth-fab-dock');
   if (!dock) {
     dock = document.createElement('div');
     dock.id = 'auth-fab-dock';
     document.body.appendChild(dock);
   }
+  return dock;
+}
 
-  // If it's already parked in the dock, nothing to do
-  if (authLink.parentElement === dock) return;
+function relocateAuthLink() {
+  const dock = ensureDock();
+  const matches = Array.from(document.querySelectorAll('.login-link, .logout-link'));
+  if (matches.length === 0) return;
 
-  dock.appendChild(authLink);
-  authLink.classList.add('auth-fab');
+  // Prefer whichever instance is NOT already sitting in the dock —
+  // that's the freshly-rendered, "live" one the app just created.
+  let fresh = matches.find((el) => el.parentElement !== dock);
+  if (!fresh) {
+    fresh = matches[matches.length - 1];
+  }
+
+  // Remove any other matches entirely so duplicates never pile up
+  matches.forEach((el) => {
+    if (el !== fresh) {
+      el.remove();
+    }
+  });
+
+  if (fresh.parentElement !== dock) {
+    dock.appendChild(fresh);
+  }
+  fresh.classList.add('auth-fab');
 }
