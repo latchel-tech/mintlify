@@ -21,8 +21,8 @@
   height: 44px;
   padding: 0;
   border-radius: 50%;
-  background: #ffffff;
-  color: #4b5563; /* gray-600, matches existing nav link color */
+  background: #ff9b8a;
+  color: #373737; /* icon color */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   font-size: 0; /* hides the "Log In" / "Log Out" text */
   gap: 0;
@@ -41,8 +41,8 @@
   line-height: 1;
   padding: 6px 10px;
   border-radius: 6px;
-  background: #111827;
-  color: #ffffff;
+  background: #ff9b8a;
+  color: #373737;
   opacity: 0;
   visibility: hidden;
   transform: translateY(4px);
@@ -61,25 +61,25 @@
 }
 
 .dark .auth-fab::after {
-  background: #f9fafb;
-  color: #111827;
+  background: #ff9b8a;
+  color: #373737;
 }
 
 .auth-fab:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  background: #f3f4f6;
-  color: #111827;
+  background: #ff8a76;
+  color: #373737;
 }
 
 .dark .auth-fab {
   background: #1f2937;
-  color: #9ca3af; /* gray-400, matches existing dark-mode nav link color */
+  color: #373737; /* icon color */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .dark .auth-fab:hover {
   background: #374151;
-  color: #d1d5db;
+  color: #373737;
 }
 
 .auth-fab::before {
