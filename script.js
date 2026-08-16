@@ -59,8 +59,8 @@ function relocateAuthLink() {
 
   // Hover tooltip text differs depending on login vs. logout state
   if (fresh.classList.contains('login-link')) {
-    fresh.setAttribute('data-tooltip', 'Login Admin');
+    fresh.setAttribute('data-tooltip', 'Admin login');
   } else if (fresh.classList.contains('logout-link')) {
-    fresh.setAttribute('data-tooltip', 'Logout Admin');
+    fresh.setAttribute('data-tooltip', 'Admin logout');
   }
 }
