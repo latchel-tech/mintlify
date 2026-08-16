@@ -1,0 +1,214 @@
+---
+title: "How to: Work the Tasks Queue"
+groups: ["latchel"]
+---
+
+## 🧠 What This Process Is Trying to Solve
+
+<Note>
+  We want to prevent missed tasks, duplicate work, and delays in resolving customer issues. The goal is to ensure every associate efficiently filters, claims, and completes tasks in the queue—so nothing falls through the cracks and customers get timely, accurate service from Latchel
+</Note>
+
+Note: You can refer to [Job Aid: What is a task?](/latchel-admin/Service-Operations/Production-Documentations/Job-Aid-What-is-a-task) for a brief overview of what is a task and its components.
+
+## 📋 Step-by-Step Process
+
+<Note>
+  **⚠️Before you begin**
+
+  **Verify You Are on the Correct Work Order**
+
+  Before taking any action on a task, confirm that the task is associated with the correct Work Order. Cross-reference the task description and the details of the work order.
+
+  Tasks may occasionally be assigned to the wrong Work Order. If you identify a mismatch, ensure to take the action on the correct work order.
+</Note>
+
+### How to filter tasks
+
+1. From the main Latchel homepage.
+2. Click the tasks icon next to your initials at the top right corner.
+3. Open the filters menu.
+4. Set up the task filter as follows:
+   1. Due: Overdue
+   2. For: Work Orders
+   3. Sort: Age
+   4. User group: see table below
+   5. Assignee: Unassigned
+   6. Hit “Save Current Filters” and choose a name for your filter, this will ensure that you won’t have to repeat this process each time you work on the tasks queue and the filter will be saved for easy access. 
+      <Frame>
+        ![SVC 438a](/images/SVC-438a.png "SVC 438a")
+      </Frame>
+
+| **User Group for Associates working on Emergency Queue** | **User Groups for Associates working on Non-Emergency Queue** |
+| --- | --- |
+| Troubleshooter | <ul><li>Assign Service Provide</li><li>Service Provider Followup</li><li>Resident Followup</li><li>Resident Responsible</li><li>Source Outside Network</li><li>Operations Associate</li><li>Scheduling</li></ul> |
+
+### How to assign a task to myself
+
+1. Open the most recent task (task at the top of the queue) and before doing any work, assign it to yourself! This will prevent multiple associates from working on the same task.
+   1. Click the “Assign To Me” option. 
+      <Frame>
+        ![SVC 438b](/images/SVC-438b.png "SVC 438b")
+      </Frame>
+      <Frame>
+        ![SVC 438c](/images/SVC-438c.png "SVC 438c")
+      </Frame>
+      <Frame>
+        ![SVC 438d](/images/SVC-438d.png "SVC 438d")
+      </Frame>
+
+#### What do you do next?
+
+1. For troubleshooting tasks refer to: [How to: Handle Emergency Work Orders](https://help.latchel.com/how-to-handle-emergency-work-orders)
+2. For other types of tasks, refer to the individual instructions of the task.
+3. When you’re done with the task, and before taking another one, be sure to refresh the task queue by clicking the refresh button:
+
+<Frame>
+  ![](/images/SVC-438.png)
+</Frame>
+
+<Warning>
+  If the task has to be deferred, please ensure that you unassign the task by clicking the 'x' button after your name so that it returns to the unassigned group and can be handled again when the time is due.
+</Warning>
+
+<Frame>
+  ![SVC 439a](/images/SVC-439a.png "SVC 439a")
+</Frame>
+
+### Handling the Task
+
+<Note>
+  The tasks tab will show all pending available tasks that need action. Please note that a property or resident may have multiple maintenance requests. As a result, Residents, Service Providers, and Owners can each have multiple tasks associated with different work orders assigned to them at any given time. This is applicable for both emergency and non-emergency work orders.
+</Note>
+
+<Warning>
+  It’s crucial to follow each step in this guideline, especially when handling multiple tasks, to ensure that all open tasks for the customer are properly addressed. Make sure to review and discuss all **pending tasks for the day** for the **_specific contact_** that you are calling. This approach helps resolve everything in a single interaction, providing a more efficient and seamless experience for the customer.
+</Warning>
+
+<Warning>
+  ### ✅ Prevent Orphaned Work Orders (No-Task WOs)
+
+  **A Work Order must never be left with zero open tasks unless it is Completed or Cancelled.**
+
+  If your action requires waiting (resident/SP/PM response), you must:
+
+  1. **Defer the existing task**, OR
+  2. **Create a new task** that matches the Work Order’s current status and next step.
+
+  For Autopilot WOs, refer to [How to: Handle Autopilot WOs](https://help.latchel.com/how-to-handle-autopilot-wos).
+</Warning>
+
+1. Go to the Task List in the Latchel Console and click on the task you want to pick up to expand it (see red arrow in the screenshot below).
+
+<Frame>
+  ![](/images/SVC-439.png)
+</Frame>
+
+<Frame>
+  ![](/images/SVC-440.png)
+</Frame>
+
+2. After expanding the task, press the “View Open Tasks” button under the Contact (see the button boxed in red in the screenshot below). 
+   <Frame>
+     ![SVC 440a](/images/SVC-440a.png "SVC 440a")
+   </Frame>
+3. You are then taken to the user work summary page
+
+<Frame>
+  ![SVC 441](/images/SVC-441.png "SVC 441")
+</Frame>
+
+<Warning>
+  First, check the top right corner of the page to ensure no one else is working on this user (see red arrow in the screenshot below). This step is very important so that we don’t duplicate deep dive efforts or unnecessarily call the user too many times in one day. If you see someone else on the same page as you, ping them to ensure only one of you works on the tasks.
+</Warning>
+
+4. The tasks section is overall broken out into two buckets. Click on the drop down to the right of the task to expand it and see more information.
+
+- **Open Tasks for Today** - These are defined as tasks that have a due date of today or before today (overdue tasks).
+- **Open Tasks for Later** - These are defined as tasks that have a due date beyond today.
+
+5. The following three filter and sort functionalities are available if you’d like to change the priority order or filter for specific items. The default priority logic for tasks on this page are: 1) Task Priority (high to low), 2) Severity (Emergency to Normal), and then 3) Task Due Date or Age (Oldest to Newest). 
+   <Frame>
+     ![SVC 442a](/images/SVC-442a.png "SVC 442a")
+   </Frame>
+
+- **Severity Filter** - This drop down allows you to filter for a specific severity. You can choose one at a time or All.
+
+<Frame>
+  ![SVC 442](/images/SVC-442.png "SVC 442")
+</Frame>
+
+- **User Type Filter** - This drop down allows you to filter for “Latchel Ops” user groups or “PM” user groups.
+
+<Frame>
+  ![SVC 443](/images/SVC-443.png "SVC 443")
+</Frame>
+
+- **Sort** - This drop down allows you to sort the tasks by age or priority. You can only choose one of these at a time. please note that this sort functionality applies to each task box separately. So “Open Tasks for Today” will be sorted separately from “Open Tasks for Later”.
+
+<Frame>
+  ![SVC 444](/images/SVC-444.png "SVC 444")
+</Frame>
+
+6. Take a look at the section labeled “Open Tasks for Today” to see what absolutely needs to be actioned on today for items that are specifically assigned to your user group. Please note that you will see all tasks (both Latchel Ops assigned and PM assigned) as the default. Feel free to filter only on Latchel Ops, but you will have to manually identify the user groups that you are working on. Assign the tasks to yourself refer to [https://latchel.atlassian.net/wiki/spaces/OPS/pages/edit-v2/2559639553#How-to-assign-a-task-to-myself](https://latchel.atlassian.net/wiki/spaces/OPS/pages/edit-v2/2559639553#How-to-assign-a-task-to-myself)
+7. Deep dive the tasks and corresponding WOs that are within the “Open Tasks for Today” section and follow the standard work for actioning those tasks. For any tasks that require you to contact that user, list out the items you need to contact that user about and prioritize them in order of importance (this is required because users sometimes don’t have time to discuss all of them). Then initiate contacting the user to close out on them.
+8. **After you speak with the user, action all the tasks based on the outcome.**
+   1. **Complete a task**
+      1. On the task, Click “Action” then select “Complete Task”.
+         <Frame>
+           ![image-20240715-154051.png](/images/SVC-445.png)
+         </Frame>
+      2. You will be prompted to confirm whether you are ready to complete the task. Click “OK” if you are certain, or click “Cancel” if you need to take more actions and do not intend to complete it yet.
+         <Frame>
+           ![image-20240715-162155.png](/images/SVC-446.png)
+         </Frame>
+         1. Once the task is complete, it will show the following just right below it.
+            <Frame>
+              ![image-20240715-162347.png](/images/SVC-447.png)
+            </Frame>
+   2. **Defer a task**
+      1. On the task, Click “Edit Task”. The task will now be available for editing. 
+         <Frame>
+           ![SVC 447a](/images/SVC-447a.png "SVC 447a")
+         </Frame>
+      2. Adjust the date and time for the next required follow-up action. Update the description with the outcome of your action and specify any additional instructions needed for the next associate.
+      3. Click “Save”. It is important to review the details of the information once it is saved to ensure that the follow up time and date is accurate, description has been updated and that the task has been unassigned if deferral is necessary. For guidance on unassigning the task if deferral is necessary, please refer to the steps below. To know more about general completion/deferral process, refer to [**Job Aid: What is a task?**](/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-What-is-a-task)
+
+### What should be done if an associate needs to release a Work Order due to unforeseen problems?
+
+This typically occurs when there's a language barrier (e.g. an English-speaking associate encountering a Spanish-speaking Resident), or the associate encounters a system issue that prevents them from completing the assignment.
+
+1. The associate needs to notify Operations Support Specialists by posting the work order, detailing the actions they've taken and the problems they're facing, in the #ops-troubleshooter channel for emergency work orders and in the #ops\_associate\_escalations channel for non-emergency work orders.
+2. Refer to [How to: Escalate Between Teams](/latchel-admin/Service-Operations/Production-Documentation/how-to-escalate-between-teams)
+3. Unassign the ticket task from yourself by editing the task as shown above.
+4. The work order returns to the task queue, and anyone available should pick it up.
+5. Note: If there's a language barrier, the Operations Support Specialist team may tag associates who can handle the task.
+
+<Note>
+  **Actions to Take When Associates are Working on Non-Emergency Tasks:**
+
+  Whenever you work on a task, kindly remember the following steps:
+
+  1. **Always Call First (**_Unless SOP states otherwise or there's a clear indication in the task that a call may be inappropriate, do not skip this step.**)**_
+
+  - **For Residents:** Call between 8:00 am and 7:00 pm property time is allowed.
+  - **For Service Providers:** Call between 8:00 am and 5:00 pm property time. Always check critical notes (e.g., Puls' office hours start at 7 am, so you can call them already).
+  - **For Owners (Nomad & RentRedi only):** Call between 8:00 am and 5:00 pm property time.
+
+  2. **If You Tried to Contact Them via Phone Call and the Contact Didn’t Answer:**
+
+  - Always leave a voicemail if applicable.
+  - Then attempt to reach the contact via text message and email.
+  - **For Service Providers:** Outside business hours, send an email only for non-emergency situations.
+  - **Note:** Only after completing these steps can you defer the task. Note that in some cases, tasks should not be deferred and must continue to follow the corresponding process or SOP.
+
+  FOR **EMERGENCY WORK ORDERS** please refer to: [How to: Handle Emergency Work Orders](https://latchel.atlassian.net/wiki/x/HYBCLQ)
+</Note>
+
+## **🎯 When to Break This SOP**
+
+**Do not break or deviate from this SOP on your own authority.** Always escalate to an Ops Support specialist or follow explicit instructions if you believe an exception is necessary.
+
+## **💡 If You Think This SOP Could Be Improved...**
+
+Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work? 👉 Share your suggestion in the[ <u>SOP Feedback Form</u>](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**
