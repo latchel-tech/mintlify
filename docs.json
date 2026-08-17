@@ -968,23 +968,33 @@
                           },
                           {
                             "group": "Service Provider Specialists",
-                            "pages": []
+                            "pages": [
+                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Navigate-Service-Provider-Profiles"
+                            ]
                           },
                           {
                             "group": "Operations Documentation and Training Coordinator",
-                            "pages": []
+                            "pages": [
+                              "latchel-admin/Service-Operations/Production-Documentation/Major-Releases-and-Training"
+                            ]
                           },
                           {
                             "group": "Operations Supervisors",
-                            "pages": []
+                            "pages": [
+                              "latchel-admin/Service-Operations/Production-Documentation/Latchel-Harmonia-Judgment-Override-Policy"
+                            ]
                           },
                           {
                             "group": "Coaches",
-                            "pages": []
+                            "pages": [
+                              "latchel-admin/Service-Operations/Production-Documentation/STAR-Feedback-Model"
+                            ]
                           },
                           {
                             "group": "Policy: Latchel Time and Attendance Policies (Operations Production Team)",
-                            "pages": []
+                            "pages": [
+                              "latchel-admin/Service-Operations/Production-Documentation/How-To-Fill-Out-the-Temporarily-Unavailable-Form"
+                            ]
                           }
                         ]
                       },
