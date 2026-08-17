@@ -2,194 +2,120 @@
 title: "Job Aid: Resident Self-Create Feature"
 groups: ["latchel"]
 ---
+
 ## 🧠 What This Process Is Trying to Solve
 
-
 <Note>
-We want to prevent delays, manual verification steps, and frustration for both residents and the operations team when residents submit maintenance requests online. The goal is to enable residents to “self-create” their profiles automatically when submitting a request for an existing property—eliminating the need for manual “Need to Verify” (NTV) tickets and reducing the workload on emergency and support teams.
+  We want to prevent delays, manual verification steps, and frustration for both residents and the operations team when residents submit maintenance requests online. The goal is to enable residents to “self-create” their profiles automatically when submitting a request for an existing property—eliminating the need for manual “Need to Verify” (NTV) tickets and reducing the workload on emergency and support teams.
 </Note>
-
-**Content***
-
 
 ## 📋 Step-by-Step Process
 
 For the complete walkthrough of this new process, you can watch this [video](https://www.loom.com/share/0285b4beca2049eda8d6b4d947ba2540).
 
-Normally, when a resident submits a maintenance request, if the information doesn’t match our records, the request comes through as a “**Need to Verify**” email, which is handled by our emergency team. In such cases, the emergency team follows the process outlined in [How to: Handle "Need to Verify" Emails](https://help.latchel.com/how-to-handle-need-to-verify-emails).
+Normally, when a resident submits a maintenance request, if the information doesn’t match our records, the request comes through as a “**Need to Verify**” email, which is handled by our emergency team. In such cases, the emergency team follows the process outlined in [How to: Handle "Need to Verify" Emails](/latchel-admin/Service-Operations/Production-Documentation/how-to-handle-need-to-verify-emails).
 
 With the introduction of a new feature, we aim to reduce these requests by allowing residents to “**self-create**” their profiles. This feature enables our system to automatically create a new resident profile, resulting in successful work order creation—provided that the Property Manager has correctly configured their “**Resident Modification**” settings.
 
 Below is the step-by-step procedure to check this setting.
 
-
 <Note>
-If associates do not have access, escalate to Operations Support Specialists. Refer to [How to: Escalate Between Teams](https://help.latchel.com/how-to-escalate-between-teams).
+  If associates do not have access, escalate to Operations Support Specialists. Refer to [How to: Escalate Between Teams](/latchel-admin/Service-Operations/Production-Documentation/how-to-escalate-between-teams).
 </Note>
 
-1. From the Console Homepage, search for the _**Property Management**_ company.
-  1. Click on “**People**” then choose “**Property Managers**” on the drop-down menu:
-    1. 
+1. From the Console Homepage, search for the **_Property Management_** company.
+   1. Click on “**People**” then choose “**Property Managers**” on the drop-down menu:
 
 <Frame>
-  <img src="/images/SVC-322.png" alt="image-20240819-180037.png" />
+  ![image-20240819-180037.png](/images/SVC-322.png)
 </Frame>
-
-
-
 
 2. Once you are on the Property Managers' search page, enter the name of the PM company you’re looking for.
-  1. 
-
-<Frame>
-  <img src="/images/SVC-323.png" alt="image-20240819-180248.png" />
-</Frame>
-
-
-  2. Click on the PM company name that matches your result. You will be directed to the Property Management company’s profile.
-  3. 
-
-<Frame>
-  <img src="/images/SVC-324.png" alt="image-20240819-180621.png" />
-</Frame>
-
-
-
+   <Frame>
+     ![image-20240819-180248.png](/images/SVC-323.png)
+   </Frame>
+   1. Click on the PM company name that matches your result. You will be directed to the Property Management company’s profile.
+      <Frame>
+        ![image-20240819-180621.png](/images/SVC-324.png)
+      </Frame>
 3. Scroll down and look for “**Miscellaneous Settings**”.
-  1. Maximize the details by clicking on the _**down arrow-head icon**_.
-  2. Locate “**Resident Modification**” sub-setting (Disable Creation) and check if the toggle is set to on/off.
-    1. **📝** **NOTE**_**: **_PMs with active integration will automatically have this feature disabled.
-    2. If the toggle is set to “**On**” (blue), it means the PM does not allow the “Resident Self-Create” feature.
-      1. **📝** **NOTE**: Residents under this PMs who want to submit requests will need to call us for further assistance.
-
-    3. If the toggle is set to “**Off**” (white), it means that when a resident submits a request and they are not listed in the property, a new profile will automatically be created, and the work order will be submitted.
-    4. 
-
-<Frame>
-  <img src="/images/SVC-325.png" alt="image-20240819-181527.png" />
-</Frame>
-
-
-
-
-
+   1. Maximize the details by clicking on the **_down arrow-head icon_**.
+   2. Locate “**Resident Modification**” sub-setting (Disable Creation) and check if the toggle is set to on/off.
+      1. **📝** **NOTE**: PMs with active integration will automatically have this feature disabled.
+      2. If the toggle is set to “**On**” (blue), it means the PM does not allow the “Resident Self-Create” feature.
+         1. **📝** **NOTE**: Residents under this PMs who want to submit requests will need to call us for further assistance.
+      3. If the toggle is set to “**Off**” (white), it means that when a resident submits a request and they are not listed in the property, a new profile will automatically be created, and the work order will be submitted.
+         <Frame>
+           ![image-20240819-181527.png](/images/SVC-325.png)
+         </Frame>
 
 ## Resident’s Point of View
 
 1. The resident attempts to submit their request online through a unique URL provided by the Property Manager.
-  1. To locate the Resident Maintenance Submission URL, refer to the below steps
-  2. 
-
-<Frame>
-  <img src="/images/SVC-326.png" alt="image-20240819-183633.png" />
-</Frame>
-
-
-  3. If the resident’s information is in our system, they can proceed as usual in submitting the work order.
-  4. If the resident’s information is not in our system:
-    1. If the toggle for “**Resident Modification**” is set to “**On**” (blue)
-      1. 
-
-<Frame>
-  <img src="/images/SVC-327.png" alt="image-20240819-183730.png" />
-</Frame>
-
-
-      2. The resident will receive an error message stating, “_**We cannot find a resident matching the details you have entered. Please call our maintenance hotline to submit your request.**_”
-      3. 
-
-<Frame>
-  <img src="/images/SVC-328.png" alt="image-20240819-183859.png" />
-</Frame>
-
-
-
-    2. If the toggle for “**Resident Modification**” is set to “**Off**” (white)
-      1. 
-
-<Frame>
-  <img src="/images/SVC-329.png" alt="image-20240819-184152.png" />
-</Frame>
-
-
-      2. When the resident enters their information (see sample below)
-      3. 
-
-<Frame>
-  <img src="/images/SVC-330.png" alt="image-20240819-185655.png" />
-</Frame>
-
-
-      4. The resident will be directed to the next page, “**Find Your Property**.”
-      5. 
-
-<Frame>
-  <img src="/images/SVC-331.png" alt="image-20240819-185255.png" />
-</Frame>
-
-
-      6. The resident then enters their property address and is presented with matching results.
-        1. The resident selects their property address.
-
-      7. 
-
-<Frame>
-  <img src="/images/SVC-332.png" alt="image-20240819-184839.png" />
-</Frame>
-
-
-      8. Once they’ve confirmed their property address, they will be directed to the _**diagnostic flow**_.
-        1. 
-
-<Frame>
-  <img src="/images/SVC-333.png" alt="image-20240819-185008.png" />
-</Frame>
-
-
-        2. The resident submits their request
-
-<Frame>
-  <img src="/images/SVC-334.png" alt="image-20240819-185036.png" />
-</Frame>
-
-
-
-      9. A work order will then be created using the new resident profile.
-
-
-
-
+   1. To locate the Resident Maintenance Submission URL, refer to the below steps
+      <Frame>
+        ![image-20240819-183633.png](/images/SVC-326.png)
+      </Frame>
+   2. If the resident’s information is in our system, they can proceed as usual in submitting the work order.
+   3. If the resident’s information is not in our system:
+      1. If the toggle for “**Resident Modification**” is set to “**On**” (blue)
+         <Frame>
+           ![image-20240819-183730.png](/images/SVC-327.png)
+         </Frame>
+      2. The resident will receive an error message stating, “**_We cannot find a resident matching the details you have entered. Please call our maintenance hotline to submit your request._**”
+         <Frame>
+           ![image-20240819-183859.png](/images/SVC-328.png)
+         </Frame>
+      3. If the toggle for “**Resident Modification**” is set to “**Off**” (white)
+         <Frame>
+           ![image-20240819-184152.png](/images/SVC-329.png)
+         </Frame>
+         1. When the resident enters their information (see sample below)
+            <Frame>
+              ![image-20240819-185655.png](/images/SVC-330.png)
+            </Frame>
+         2. The resident will be directed to the next page, “**Find Your Property**.”
+            <Frame>
+              ![image-20240819-185255.png](/images/SVC-331.png)
+            </Frame>
+         3. The resident then enters their property address and is presented with matching results.
+            1. The resident selects their property address.
+               <Frame>
+                 ![image-20240819-184839.png](/images/SVC-332.png)
+               </Frame>
+         4. Once they’ve confirmed their property address, they will be directed to the **_diagnostic flow_**.
+            <Frame>
+              ![image-20240819-185008.png](/images/SVC-333.png)
+            </Frame>
+         5. The resident submits their request
+            <Frame>
+              ![image-20240819-185036.png](/images/SVC-334.png)
+            </Frame>
+         6. A work order will then be created using the new resident profile.
+            <Frame>
+              ![image-20240819-185036.png](/images/SVC-334a.png)
+            </Frame>
 
 ## How to Locate the Resident Work Order Submission URL
 
 In cases where the resident does not know the PM URL where they can submit their work orders, provide them the Resident WO Submission URL.
 
 1. Navigate to the Property Management Company’s profile. Then go to **Details** tab.
-  1. 
 
 <Frame>
-  <img src="/images/SVC-335.png" alt="image-20260608-235944.png" />
+  ![image-20260608-235944.png](/images/SVC-335.png)
 </Frame>
 
-
-
-2. Under the **Portal Settings, **look for **Resident Work Order Submission URL**
-  1. 
+2. Under the Portal Settings, look for **Resident Work Order Submission URL**
 
 <Frame>
-  <img src="/images/SVC-336.png" alt="image-20260609-000120.png" />
+  ![image-20260609-000120.png](/images/SVC-336.png)
 </Frame>
-
-
-
-
 
 ## **🎯 When to Break This SOP**
 
 **Do not break or deviate from this SOP on your own authority.** Always escalate to an Ops Support specialist or follow explicit instructions if you believe an exception is necessary.
 
-
 ## 💡 If You Think This SOP Could Be Improved...
 
-Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work?
- 👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**
+Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work? 👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**
