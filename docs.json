@@ -948,7 +948,23 @@
                           },
                           {
                             "group": "Operations Support Specialists",
-                            "pages": []
+                            "pages": [
+                              "latchel-admin/Service-Operations/Production-Documentation/Operations-Support-Specialist-Business-Continuity-Plan",
+                              "latchel-admin/Service-Operations/Production-Documentation/Operations-Support-Specialist-Real-time-Monitoring-of-Emergency-Tasks",
+                              "latchel-admin/Service-Operations/Production-Documentation/Operations-Support-Specialist-Real-time-Monitoring-of-Emergency-Emails",
+                              "latchel-admin/Service-Operations/Production-Documentation/Operations-Support-Specialist-Real-time-Monitoring-of-Inbound-Calls-Amazon-Connect",
+                              "latchel-admin/Service-Operations/Production-Documentation/Operations-Support-Specialist-Bad-Status-Too-Old-Report",
+                              "latchel-admin/Service-Operations/Production-Documentation/Operations-Support-Specialist-Non-Productive-Time",
+                              "latchel-admin/Service-Operations/Production-Documentation/Monitoring-Schedule-Adherence-and-Staff-Availability",
+                              "latchel-admin/Service-Operations/Production-Documentation/Operations-Support-Specialist-When-to-offer-voluntary-time-off-VTO",
+                              "latchel-admin/Service-Operations/Production-Documentation/Ops-Policy-All-Hands-on-Deck",
+                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Work-Around-Service-Degradation-Events",
+                              "latchel-admin/Service-Operations/Production-Documentation/Operations-Support-Specialist-Shift-Interval-Data-Toolbox",
+                              "latchel-admin/Service-Operations/Production-Documentation/Operations-Support-Specialist-Cadence",
+                              "latchel-admin/Service-Operations/Production-Documentation/Slack-Coaching-Ticket-Validation-Tracking-Process",
+                              "latchel-admin/Service-Operations/Production-Documentation/Ops-Support-Handling-Messages-from-latchel-rentredi-Channel-via-Assembly",
+                              "latchel-admin/Service-Operations/Production-Documentation/Operations-Support-Specialist-SOP-Library"
+                            ]
                           },
                           {
                             "group": "Service Provider Specialists",
