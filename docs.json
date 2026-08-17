@@ -929,7 +929,22 @@
                           },
                           {
                             "group": "Emails",
-                            "pages": []
+                            "pages": [
+                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Property-Manager-Refund-Requests-for-Work-Order-Invoices",
+                              "latchel-admin/Service-Operations/Production-Documentation/Job-Aid-Finding-an-Existing-Work-Order-vs.-When-to-Create-a-new-Work-Order",
+                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Assembly-Email-Contacts",
+                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Voicemails-Emergency-and-Non-Emergency",
+                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Upload-an-Invoice-for-a-Work-Order",
+                              "latchel-admin/Service-Operations/Production-Documentation/TECH-101-How-to-Add-a-File-to-a-Work-Order",
+                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Locate-the-Default-Notification-User-Group-contacts",
+                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Hubspot-Form-Emails",
+                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Compose-a-New-Email-Assembly",
+                              "latchel-admin/Service-Operations/Production-Documentation/Assembly-Library",
+                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Respond-to-Assembly-Tickets-and-Forward-Requests",
+                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-LCD-Support-Requests",
+                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Retrieve-Inaccessible-Voicemails",
+                              "latchel-admin/Service-Operations/Production-Documentation/Service-Ops-Assembly-Guide"
+                            ]
                           },
                           {
                             "group": "Operations Support Specialists",
