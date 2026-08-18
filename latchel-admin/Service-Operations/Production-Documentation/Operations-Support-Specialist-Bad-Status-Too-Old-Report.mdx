@@ -7,35 +7,44 @@ groups: ["latchel"]
   We want to prevent emergency work orders from getting stuck in incorrect or outdated statuses, which can lead to delays, missed follow-ups, and unresolved issues. The goal is to ensure every emergency work order is actively managed and in the correct status, so that urgent problems are addressed promptly, responsibilities are clear, and nothing falls through the cracks. This process helps us catch and correct work orders that might otherwise be overlooked, saving time, reducing risk, and improving service for residents and property managers alike.
 </Note>
 
+### Two Different Severity Judgments
+
+<Check>
+  There are two separate judgment calls in this process, and this SOP covers the second one:
+
+  1. **Initial severity at intake** — governed by the AI judgment / intake policy. This determines whether a job is created as an Emergency in the first place, based on the PM’s severity settings and critical notes. This SOP does not change that policy.
+  2. **Ongoing severity while a job sits in queue** — covered by this SOP. Even when the initial Emergency classification was correct, a job that has been sitting in an ambiguous status for too long or has not moved forward after follow-up may no longer be behaving like an active emergency. Re-evaluating it at that point is a distinct, later-stage decision — not a correction of the original intake call and not a violation of the intake-settings policy.
+
+  **Guiding principle:** Intentional delays and active emergency handling are fundamentally incompatible. If the WO has moved into an intentional or open-ended delay, and the immediate emergency condition has passed or the PM has taken ownership, move the job out of Emergency status according to the guidance below.
+
+  De-escalating, forwarding to PM, or actively intervening based on how long a job has been stuck or how follow-up has progressed is the correct and expected action when this SOP indicates that review is needed.
+</Check>
+
 ## ⬅️ What is happening prior to this process?
 
-Operations Support Specialist is working from the "Bad Status" on the Emergency Dashboard report. These are jobs which are showing a status that does not make sense for emergency Work Orders (e.g. scheduling status)
+Operations Support Specialist works from the plugin’s Bad Status report. The plugin is the single source of truth for this SOP. These are jobs showing a status that does not make sense for emergency Work Orders or that require manual review because they may be stuck.
 
 ## 📋 Step-by-Step Process
 
-### Step 1- Open the Emergency Dashboard
+### Step 1- Open the plugin Bad Status report
 
-1. The work orders can be opened directly from the [Emergency Dashboard](https://datastudio.google.com/reporting/d9160663-a5a3-4f78-936f-75d92cc93fb6/page/p_fxccpatrwc). It will show you the count and the age of these work orders which are color-coded.
+1. Open the plugin’s Bad Status report. Support should work from the plugin report going forward; it is the single source of truth for this SOP.
+
+<video src="/videos/20260818-1939-16.1190908.mp4" controls />
 
 <Frame>
-  ![Emergency Dashboard count and age color-coded](/images/SVC-292.png)
 </Frame>
 
-2. Open the job URL
+2. Open the work order URL from the report.
+3. Review the status, age, pending tasks, and most recent notes to determine whether the WO is still actively moving or requires intervention
 
 <Frame>
-  ![Opening the job URL](/images/SVC-293.png)
-</Frame>
-
-3. The report itself does provide some insight, giving you the status
-
-<Frame>
-  ![Report showing the work order status](/images/SVC-294.png)
+  ![SOP Open Emergency Work Order (1)](/images/SOP_open_emergency_work_order-\(1\).png "SOP Open Emergency Work Order (1)")
 </Frame>
 
 ### Step 2- Research the Current Status
 
-- Identify the current status, either through the work order itself or through the spreadsheet
+- Identify the current status through the work order itself.
 - Verify the reason the work order is in its current status and verify that it makes sense.
 
 ### Step 3- Determine the next action
