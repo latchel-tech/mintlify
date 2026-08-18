@@ -32,9 +32,6 @@ Operations Support Specialist works from the plugin’s Bad Status report. The p
 
 <video src="/videos/20260818-1939-16.1190908.mp4" controls />
 
-<Frame>
-</Frame>
-
 2. Open the work order URL from the report.
 3. Review the status, age, pending tasks, and most recent notes to determine whether the WO is still actively moving or requires intervention
 
@@ -56,26 +53,74 @@ Operations Support Specialist works from the plugin’s Bad Status report. The p
 - Determine if there is a pending task that may be holding up the work order
 - Determine if the work order is completely in the wrong status (e.g. in "Awaiting Invoice receipt" when there is no confirmed work date.)
 
-The following table provides further guidance:
+The following list provides further guidance:
 
 <Note>
   Note: The below guidance does not apply to On-call customers. Please refer to (Operations Support Specialist) Bad Status/Too Old Report | Bad Status WOs FAQ: for further instructions.
 </Note>
 
 <Tip>
-  Refer to [(Operations Support Specialist) Job-Aid: Work Queues & Labor Management](https://help.latchel.com/\(Operations-Support-Specialist\)-Job-Aid-Work-Queues-and-Labor-Management) for how to create tasks for the emergency team.
+  Refer to [(Operations Support Specialist) Job-Aid: Work Queues & Labor Management](https://help.latchel.com/\(Operations-Support-Specialist\)-Job-Aid-Work-Queues-and-Labor-Management) for how to create tasks for the emergency team. 
 </Tip>
 
-| Status | Action | Why is this considered "bad status/too old"? |
-| --- | --- | --- |
-| Re/Scheduling with Tenant | Review the WO and create a task for the emergency team to schedule an appointment. | An emergency WO doesn't move from this status automatically. |
-| Scheduling with Vendor | Review the WO and create a task for the emergency team to schedule an appointment. | An emergency WO doesn't move from this status automatically. |
-| Finding Vendor | Don't do anything if it's been less than 1 hour since the WO was updated to this status. After 1 hour has passed since this WO was updated to Finding Vendor status, follow up with the troubleshooter working on this WO to check if the troubleshooter may require with the WO. If the WO is found abandoned and no one is working on it (e.g. the troubleshooter left), create a task for the emergency team so that another troubleshooter can pick up where the previous troubleshooter left off. Submit feedback to the agent who left without passing the WO off in #ops-feedback. | This would be considered an aging WO for emergency response standards. Exception: There will be instances where an emergency WO is left in this status for deferred dispatch and an automated task is created for troubleshooters by 9:00 AM property time. No action is required for these cases. |
-| Pending | The following are some situations of the pending status.<br />- When the resident reports an issue with the WO: Review what is the issue and create a task for the emergency team to follow up with the resident. This is very common when the issue wasn't resolved.<br />- When a RentRedi WO doesn't have an owner payment method: Review what is the issue and create a task for the emergency team so that the emergency team can follow up with the owner to request a payment method.<br />- When we need to collect an estimate for approval: Review what is the issue and create a task for the emergency team so that the emergency team can follow up with the Service Provider for the estimate.<br />- When the Service Provider reports an issue with the job, for example, work was denied on site, SP needs to provide an estimate, SP could not access the unit, SP missed the appointment: Review what is the issue and create a task for the emergency team so that the emergency team can follow up with the Service Provider. | An emergency WO in this status needs a manual follow up. |
-| Waiting for Materials | Review if any work was done to address the immediate emergency, if so, follow the PM severity settings to determine if the WO can be de-escalated or not.<br />- If the WO can't be de-escalated: Create a task so that the emergency team can follow up with the service provider to get an ETA for the materials. If the SP can't confirm an ETA, follow up daily with the SP.<br />- If the WO can be de-escalated: For a Premium Customer: Create a task for the non emergency team to follow up with the SP. For a Autopilot Customer: Create a task for the PM to let them know that the WO is Waiting for Materials and manual follow up is required to get an update from the SP. | An emergency WO in this status needs a manual follow up. |
-| Troubleshooting | After 13 mins has passed, follow up with the agent working on this WO to check if the troubleshooter may require assistance with the WO. Refer to [(Operations Support Specialist) Check-In Policy](https://help.latchel.com/\(Operations-Support-Specialist\)-Check-In-Policy). If the WO is found abandoned and no one is working on it (e.g. the troubleshooter left), trigger it out so that another agent can troubleshoot. Submit feedback to the agent who left without passing the WO off in #ops-feedback. | This would be considered an aging WO for emergency response standards. |
-| Diagnosing Issue | Create a task for the emergency team to reach out to the tenant to diagnose and troubleshoot. | An emergency WO doesn't move from this status automatically. |
-| Pending - Awaiting Payment Details | An emergency WO is never in this status automatically, this would most likely be the result of a human error if a resident responsible WO was escalated to emergency manually by an agent. Review the WO and de-escalate to the original severity. | This status in a emergency WO is not possible on its own without a human error. |
+<Tabs>
+  <Tab title="<TabScheduling with Ten">
+    Action: Review the WO and create a task for the emergency team to schedule an appointment.
+
+    Why is this considered "bad status/too old"?: An emergency WO doesn't move from this status automatically.
+  </Tab>
+  <Tab title="Scheduling with Vendor">
+    Action: Review the WO and create a task for the emergency team to schedule an appointment.
+
+    Why is this considered "bad status/too old"?: 
+
+      An emergency WO doesn't move from this status automatically.
+  </Tab>
+</Tabs>
+
+<Accordion title="Scheduling with Vendor">
+  Action: Review the WO and create a task for the emergency team to schedule an appointment.
+
+  Why is this considered "bad status/too old"?: 
+
+  An emergency WO doesn't move from this status automatically.
+</Accordion>
+
+<Accordion title="Finding Vendor">
+  Action: Don't do anything if it's been less than 1 hour since the WO was updated to this status. After 1 hour has passed since this WO was updated to Finding Vendor status, follow up with the troubleshooter working on this WO to check if the troubleshooter may require with the WO. If the WO is found abandoned and no one is working on it (e.g. the troubleshooter left), create a task for the emergency team so that another troubleshooter can pick up where the previous troubleshooter left off. Submit feedback to the agent who left without passing the WO off in #ops-feedback.
+
+  Why is this considered "bad status/too old"?: This would be considered an aging WO for emergency response standards. Exception: There will be instances where an emergency WO is left in this status for deferred dispatch and an automated task is created for troubleshooters by 9:00 AM property time. No action is required for these cases.
+</Accordion>
+
+<Accordion title="Pending">
+  Action: The following are some situations of the pending status.<br />- When the resident reports an issue with the WO: Review what is the issue and create a task for the emergency team to follow up with the resident. This is very common when the issue wasn't resolved.<br />- When a RentRedi WO doesn't have an owner payment method: Review what is the issue and create a task for the emergency team so that the emergency team can follow up with the owner to request a payment method.<br />- When we need to collect an estimate for approval: Review what is the issue and create a task for the emergency team so that the emergency team can follow up with the Service Provider for the estimate.<br />- When the Service Provider reports an issue with the job, for example, work was denied on site, SP needs to provide an estimate, SP could not access the unit, SP missed the appointment: Review what is the issue and create a task for the emergency team so that the emergency team can follow up with the Service Provider.
+
+  Why is this considered "bad status/too old"?: An emergency WO in this status needs a manual follow up.
+</Accordion>
+
+<Accordion title="Waiting for Materials">
+  Action: Review if any work was done to address the immediate emergency, if so, follow the PM severity settings to determine if the WO can be de-escalated or not.<br />- If the WO can't be de-escalated: Create a task so that the emergency team can follow up with the service provider to get an ETA for the materials. If the SP can't confirm an ETA, follow up daily with the SP.<br />- If the WO can be de-escalated: For a Premium Customer: Create a task for the non emergency team to follow up with the SP. For a Autopilot Customer: Create a task for the PM to let them know that the WO is Waiting for Materials and manual follow up is required to get an update from the SP.
+
+  Why is this considered "bad status/too old"?: An emergency WO in this status needs a manual follow up.
+</Accordion>
+
+<Accordion title="Troubleshooting">
+  Action: After 13 mins has passed, follow up with the agent working on this WO to check if the troubleshooter may require assistance with the WO. Refer to [(Operations Support Specialist) Check-In Policy](https://help.latchel.com/\(Operations-Support-Specialist\)-Check-In-Policy). If the WO is found abandoned and no one is working on it (e.g. the troubleshooter left), trigger it out so that another agent can troubleshoot. Submit feedback to the agent who left without passing the WO off in #ops-feedback.
+
+  Why is this considered "bad status/too old"?: This would be considered an aging WO for emergency response standards.
+</Accordion>
+
+<Accordion title="Diagnosing Issue">
+  Action: Create a task for the emergency team to reach out to the tenant to diagnose and troubleshoot.
+
+  Why is this considered "bad status/too old"?: An emergency WO doesn't move from this status automatically.
+</Accordion>
+
+<Accordion title="Pending - Awaiting Payment Details">
+  Action: An emergency WO is never in this status automatically, this would most likely be the result of a human error if a resident responsible WO was escalated to emergency manually by an agent. Review the WO and de-escalate to the original severity.
+
+  Why is this considered "bad status/too old"?: This status in a emergency WO is not possible on its own without a human error.
+</Accordion>
 
 <Note>
   NOTE: If you are not certain what is appropriate, escalate to your manager.
@@ -83,20 +128,39 @@ The following table provides further guidance:
 
 ## ❓ Frequently Asked Questions:
 
-**LVN Service Provider**
+<Warning>
+  **LVN Service Provider**
 
-For guidance on managing unresponsive LVN service providers or on acceptable scenarios for reassigning an LVN service provider (such as PM requests or missed appointments), refer to [Handling Work Orders Assigned to LVN Service Providers](https://help.latchel.com/Handling-Work-Orders-Assigned-to-LVN-Service-Providers).
+  For guidance on managing unresponsive LVN service providers or on acceptable scenarios for reassigning an LVN service provider (such as PM requests or missed appointments), refer to [Handling Work Orders Assigned to LVN Service Providers](https://help.latchel.com/Handling-Work-Orders-Assigned-to-LVN-Service-Providers).
+</Warning>
 
-**The PM requested to assign and dispatch a specific SP, but the service provider was unresponsive or unable to schedule within the expected timeframe.**
-
-- If the issue is property-damaging or extreme habitability (refer to [How to: Identify Property Damage and Extreme Habitability Situations](https://help.latchel.com/How-to-Identify-Property-Damage-and-Extreme-Habitability-Situations)):
-  - Call the escalation contacts. Refer to [Job Aid: PM Outbound Communication for Emergency WOs](https://help.latchel.com/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs)
-- If the issue is not property-damaging or extreme habitability:
-  - Defer the task to the next day for another follow-up.
-  - If still unsuccessful after the second follow-up, complete the task and create a new task for the Property Manager
-  - Refer to the below task template.
-
-**The SP paid an initial visit to the property, but the issue wasn't fixed, and they are building an estimate. The SP has not provided a date when the estimate will be available or is unresponsive.**
+1. **_The PM requested to assign and dispatch a specific SP, but the service provider was unresponsive or unable to schedule within the expected timeframe._**
+   1. If the issue is property-damaging or extreme habitability (refer to [https://latchel.atlassian.net/wiki/spaces/OPS/pages/745504771](https://latchel.atlassian.net/wiki/spaces/OPS/pages/745504771)): 
+      1. Call the escalation contacts. Refer to [https://latchel.atlassian.net/wiki/spaces/OPS/pages/2537652248](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2537652248)
+   2. If the issue is not property-damaging or extreme habitability:
+      1. Defer the task to the next day for another follow-up.
+         1. If still unsuccessful after the second follow-up, complete the task and create a new task for the Property Manager
+            1. Refer to the below [task template](https://latchel.atlassian.net/wiki/spaces/OPS/pages/783745716/Operations+Support+Specialist+Bad+Status+Too+Old+Report#%F0%9F%93%8BTask-Template-for-Property-Manager).
+2. **_The SP paid an initial visit to the property, but the issue wasn’t fixed, and they are building an estimate. The SP has not provided a date when the estimate will be available or is unresponsive._**
+   1. If the issue is property-damaging or extreme habitability (refer to [https://latchel.atlassian.net/wiki/spaces/OPS/pages/745504771](https://latchel.atlassian.net/wiki/spaces/OPS/pages/745504771)): 
+      1. Call the escalation contacts. Refer to [https://latchel.atlassian.net/wiki/spaces/OPS/pages/2537652248](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2537652248)
+   2. If the issue is not property-damaging or extreme habitability:
+      1. Make up to 2 total contact attempts on consecutive days (no more than 24hrs apart) to ask the SP for the estimate.
+         1. Create a task for the estimate follow-up.
+            1. Refer to [https://latchel.atlassian.net/wiki/spaces/OPS/pages/1386905601](https://latchel.atlassian.net/wiki/spaces/OPS/pages/1386905601) to know how to create the task.
+         2. If the Service Provider advises that they must first check with a **warehouse or supplier once it opens** before providing an estimate:
+            1. Do **not** defer the task at the start of operating hours.
+            2. Allow sufficient time for the Service Provider to obtain required materials and pricing details.
+            3. Schedule the estimate follow-up for **12:00 PM** (or a reasonable mid-day time) to confirm whether materials, costs, and the estimate are available.
+         3. If the Service Provider can’t provide the estimate but can provide a date when the estimate will be sent:
+            1. Schedule the estimate follow-up for that date and place the WO in Pending in the meantime.
+            2. No additional follow ups are required until that date.
+      - If after review or follow-up there is no confirmation that the immediate emergency condition has been addressed, move the WO to Waiting for PM, complete the task, and create a new task for the Property Manager.
+        1. When following up with the Service Provider, confirm whether the emergency condition has already been mitigated or otherwise made safe while the estimate is being prepared.
+        2. You may also rely on clear WO notes that show the emergency condition was already addressed, even if the confirmation did not come directly from the SP during that follow-up.
+        3. If the SP confirms, or the WO notes clearly show, that the immediate emergency condition has passed and the remaining need is the estimate/permanent repair, reclassify the WO to Urgent, move the WO to Waiting for PM, complete the current task, and create a new task for the Property Manager.
+        4. If the SP is unresponsive and the WO notes do not confirm that the emergency condition has passed, do not de-escalate based on assumption; move the WO to Waiting for PM, complete the task, and create a new task for the Property Manager.
+        5. Refer to the below [task template](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2511372328/SOP+Work+Order+Follow-ups+and+Updates#%F0%9F%93%8BTask-Template-for-Property-Manager).
 
 - If the issue is property-damaging or extreme habitability (refer to [How to: Identify Property Damage and Extreme Habitability Situations](https://help.latchel.com/How-to-Identify-Property-Damage-and-Extreme-Habitability-Situations)):
   - Call the escalation contacts. Refer to [Job Aid: PM Outbound Communication for Emergency WOs](https://help.latchel.com/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs)
