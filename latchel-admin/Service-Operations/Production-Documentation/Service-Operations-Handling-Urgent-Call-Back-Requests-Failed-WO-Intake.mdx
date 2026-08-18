@@ -13,14 +13,14 @@ With the implementation of Harphonia automation, most callback scenarios (caller
 
 ### Step 1 - Receiving the Alert
 
-When a Harphonia call ends because the caller hung up (Disconnection Reason = user_hangup) before a request is submitted, the system will automatically send an SMS to the resident. If the caller’s phone number is not textable, an alert will be posted in the **#cc-tasks** Slack channel. These alerts are the only case where associates need to take manual action (call back and/or create a WO). Each alert includes a link to the Retell call and the call summary for context.
+When a Harphonia call ends because the caller hung up (Disconnection Reason = user\_hangup) before a request is submitted, the system will automatically send an SMS to the resident. If the caller’s phone number is not textable, an alert will be posted in the **#cc-tasks** Slack channel. These alerts are the only case where associates need to take manual action (call back and/or create a WO). Each alert includes a link to the Retell call and the call summary for context.
 
 **Note:** Callback alerts for Spanish callers with non-textable phone numbers now include a **Spanish indicator** in the #cc-tasks alert. When this indicator is present, ensure a Spanish-speaking associate handles the callback.
 
 **Sample Alert**
 
 <Frame>
-  <img src="/images/SVC-450.png" alt="image-20260428-181315.png" />
+  ![image-20260428-181315.png](/images/SVC-450.png)
 </Frame>
 
 Each alert includes:
@@ -63,33 +63,33 @@ After acknowledging the alert, associates should navigate to the resident's prof
 
 ### Step 4 – Calling the Resident and Taking Action
 
-<Note>
-**Before calling:**
+<Warning>
+  **Before calling:**
 
-- **If the Retell recording shows that no conversation was established (caller never said anything / silence only), do not initiate a callback.**
-- **If a conversation was established (caller spoke or attempted to report an issue), call the resident once to provide assistance.**
-</Note>
+  - **If the Retell recording shows that no conversation was established (caller never said anything / silence only), do not initiate a callback.**
+  - **If a conversation was established (caller spoke or attempted to report an issue), call the resident once to provide assistance.**
+</Warning>
 
 Call the resident **once** to provide assistance with their request.
 
 **Script:**
 
-*"Hello [Resident Name], this is [Your Name], calling from Latchel, the maintenance intake team for [PM Company Name]. We received your call but couldn't reach you by text. I'm here to help. What's the issue? Could you please tell me more about the issue so we can help you?"*
+> _"Hello \[Resident Name\], this is \[Your Name\], calling from Latchel, the maintenance intake team for \[PM Company Name\]. We received your call but couldn't reach you by text. I'm here to help. What's the issue? Could you please tell me more about the issue so we can help you?"_
 
 **After confirmation:**
 
 1. Assist the resident with their concern
 2. Submit a Work Order if needed: [TECH 101 – How to Create a New Work Order](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Create-a-New-Work-Order-from-Incognito-Mode-All-Submissions)
 3. **If resident does not answer (voicemail):**
-  1. Leave a voicemail: *"Hi [Resident Name], this is [Your Name] with Latchel, the maintenance intake team for [PM Company Name]. We received your call but couldn’t reach you by text. Please call us back at [Callback Number] so we can help, or let us know the best time to reach you. Thank you and have a great day!"*
+   1. Leave a voicemail: _"Hi \[Resident Name\], this is \[Your Name\] with Latchel, the maintenance intake team for \[PM Company Name\]. We received your call but couldn’t reach you by text. Please call us back at \[Callback Number\] so we can help, or let us know the best time to reach you. Thank you and have a great day!"_
 4. Document the outcome in the **resident's profile and Slack thread**. Examples of notes may include, but are not limited to, the following:
-  1. WO Created
-  2. No Answer
-  3. Existing WO Follow-up
-  4. No conversation established
-  5. No details available
-  6. Non-maintenance
-  7. Others
+   1. WO Created
+   2. No Answer
+   3. Existing WO Follow-up
+   4. No conversation established
+   5. No details available
+   6. Non-maintenance
+   7. Others
 
 ---
 
@@ -97,11 +97,11 @@ Call the resident **once** to provide assistance with their request.
 
 Thanks to Harphonia automation, the following scenarios are now handled automatically:
 
-**Caller with textable number + call disconnected before WO submission:**
+**Caller with textable number \+ call disconnected before WO submission:**
 
 - Harphonia automatically sends an SMS to the resident reminding them to complete their request
 
-**Caller with non-textable number + call disconnected before WO submission:**
+**Caller with non-textable number \+ call disconnected before WO submission:**
 
 - An alert appears in #cc-tasks for you to handle (this is the scenario covered in this SOP)
 
@@ -125,12 +125,17 @@ Operations Support Specialists ensure non-textable number alerts are addressed p
 **Responsibilities:**
 
 1. **Monitor alerts in real time**
-  - Watch the **#cc-tasks** channel for new alerts
-  - Ensure each alert is acknowledged and claimed by an available associate
+
+- Watch the **#cc-tasks** channel for new alerts
+- Ensure each alert is acknowledged and claimed by an available associate
+
 2. **Escalate unclaimed alerts**
-  - If an alert remains unclaimed after 5 minutes, follow up with available associates
+
+- If an alert remains unclaimed after 5 minutes, follow up with available associates
+
 3. **Ensure documentation**
-  - Confirm outcomes are documented in Slack threads and alert status is marked correctly
+
+- Confirm outcomes are documented in Slack threads and alert status is marked correctly
 
 ---
 
@@ -142,5 +147,4 @@ Operations Support Specialists ensure non-textable number alerts are addressed p
 
 ## 💡 If You Think This SOP Could Be Improved...
 
-Noticed something clunky or confusing in this process? Or had a situation that wasn't covered here? Or tried something new that didn't work?  
-👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**
+Noticed something clunky or confusing in this process? Or had a situation that wasn't covered here? Or tried something new that didn't work?<br />👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**
