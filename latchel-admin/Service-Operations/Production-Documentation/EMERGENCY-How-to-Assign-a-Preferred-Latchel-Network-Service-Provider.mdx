@@ -1,0 +1,354 @@
+---
+title: "(EMERGENCY) How to: Assign a Preferred + Latchel Network Service Provider"
+groups: ["latchel"]
+---
+
+## 🧠 What This Process Is Trying to Solve
+
+<Note>
+We want to ensure emergency maintenance issues are dispatched quickly and to the right service provider, minimizing delays and confusion. The goal of this SOP is to provide clear, step-by-step instructions for assigning either a Property Manager’s preferred vendor or a Latchel Network Service Provider during emergencies. This process prevents missed appointments, repeated outreach, and leaving emergency work orders unresolved.
+</Note>
+
+## 🗂️Definition Matrix
+
+<Warning>
+### About Emergency Services - Dispatching a Service Provider
+
+The term "dispatch" is used to describe assigning any Service Provider (whether they are (1) Preferred or (2) Latchel Service Providers). This is a term used in emergency situations, similar to term "dispatch" used during 911 emergency services. We use it at Latchel to remember that we act on the urgency that Emergency Services require. For more information, see:  [↔ How to: Handle 911-Severity Type Work Orders](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-911-Severity-Type-Work-Orders)
+</Warning>
+
+<Warning>
+If you are reassigning a service provider, please refer to https://latchel.atlassian.net/wiki/x/NoTmLg 
+</Warning>
+
+## 📢Latchel Blurbs - What to Say
+
+<Note>
+### Make an Outbound Phone Call
+
+**‼️IMPORTANT:** Latchel has a standard for starting a phone calls due to regulation requirements of recording the call. For information on how to make an outbound call, refer to: [(TECH 101) How to: Make Outbound Calls Within the Latchel Console](https://latchel.atlassian.net/wiki/spaces/OPS/pages/757235750)
+</Note>
+
+<Check>
+### (EMERGENCY) Latchel Blurb - Service Provider Work Order Request Blurb
+
+Hi my name is ***(agent name here) ***
+
+I am calling [if LCN/LVN: a **Maintenance Coordinator**] on behalf of ***(resident's property management company) ***   
+We have a resident in ***(resident's city)*** that has ***an emergency situation for (job category/trade category)***
+
+We have attempted to get resident to do ***(describe troubleshooting steps)*** to attempt to de-escalate situation. They have not solved the problem.
+
+Do you have somebody available that can go out today/tonight to ***(resident's city)***?
+</Check>
+
+<Check>
+### (EMERGENCY) Latchel Blurb - Service Provider Voicemail blurb
+
+Hi my name is ***(agent name here)  ***
+
+*I am calling *[if LCN/LVN: a **Maintenance Coordinator**] *on behalf of ****(resident's property management company) ***   
+We have a resident in ***(resident's city)*** that has ***an emergency situation for (job category/trade category). ***
+
+*The Work Order number is**** (work order number here).***
+
+We have attempted to get resident to do ***(describe troubleshooting steps)*** to attempt to de-escalate situation. They have not solved the problem.
+
+Please have a technician contact us at (phone number) if someone can go out for the job.
+</Check>
+
+## 📋 Step-by-Step Process
+
+### **(EMERGENCY) Rules for Calling the Service Provider **
+
+1. Refer to https://latchel.atlassian.net/wiki/spaces/OPS/pages/2600337430.
+2. **General rule**: 📞Call each Service Provider 3 times, or until the Service Provider confirms.
+  1. **‼️IMPORTANT: If a Service Provider contact has multiple phone numbers on file, you must attempt ALL available numbers, with up to 3 dial attempts per number, before counting that contact as unreachable.**
+    1. The “3 attempts” rule applies per number, not per Service Provider. An SP with 2 numbers = up to 6 total dial attempts; an SP with 3 numbers = up to 9 total dial attempts.
+    2. Start with the primary number and complete all 3 attempts.
+    3. Repeat the same 3-attempt process for each additional number on file, such as secondary, tertiary, etc.
+    4. Only consider the Service Provider unreachable once every number on file has been dialed 3 times with no confirmation.
+    5. Do not move on to the next Service Provider or escalate as unreachable until all numbers have been fully exhausted.
+    6. This applies to all Service Provider types, including Preferred, LCN, and Sourced SPs, across all steps of this SOP.
+  2. If the Service Provider ✅ picks up and gives verbal confirmation of the job, follow the instructions on the screen. Say,
+
+  3. If the Service Provider❌ does not pick up on the third call, leave a message. In the voicemail you can say,
+
+<Check>
+Hi my name is ***(agent name here)***
+
+*I am calling *[if LCN/LVN: a **Maintenance Coordinator**] on behalf of ***(resident's property management company) ***  
+We have a resident in ***(resident's city)*** that has a ***(job category/trade category) ***
+
+We have attempted to get resident to do ***(describe troubleshooting steps)*** to attempt to de-escalate situation. They have not solved the problem.
+
+Please have a technician contact us at (phone number)  if someone can go out for the job. *The Work Order number is**** (work order number here).***
+
+**Note:** When handling an emergency service call, find the appropriate callback number within this document: https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Informational-Basic-Service-Ops-Guidelines-and-Rules 
+</Check>
+
+3. 📞Call the 2nd, 3rd, etc. Service Provider listed 3 times each until one confirms, or you run out of contacts.
+  1. If the Service Provider does not pick up on the third call, leave a message.
+4. **Additional Rule: Standardized Outreach Attempts to Preferred Service Providers:**
+  1. Ops must complete 2 outreach attempts to the Preferred Service Provider before escalating away from the Preferred SP, defined as:
+    1. **First outreach attempt** to each preferred SP = up to **3 dials** in a row (following the above steps 1-3).
+      1. Call the Preferred SPs up to 3 times in a row (following our standard spacing between dials) or until the preferred SP answers
+      2. Move through the preferred list (2nd, 3rd, etc. SP) the same way: **3 dials per preferred SP** on this first pass.
+    2. **Second outreach attempt – 1 dial only per preferred SP **(second pass through the list)
+      1. If **no preferred SP has been secured** after the first attempt pass (3x dial per Preferred SP), make **one additional dial** to **each preferred SP** on the list.
+      2. This second attempt happens **after you have completed the first attempt for all listed preferred SPs**, not immediately after the 3rd dial to a single SP.
+    3. If, after completing the second attempt pass (1 dial per preferred SP), **no preferred SP can be secured** (no answer/declines), stop preferred‑SP outreach and proceed per this SOP to:
+      1. the next eligible SP type (e.g., LCN) **or**
+      2. escalation to **PM / Waiting for PM**, depending on opt‑in/out status and current workflow step.
+
+### **Step 1: Troubleshooting Dispatch Instructions**
+
+<Warning>
+You should only assign a Service Provider to an emergency WO as long as the Service Provider was able to confirm an appointment. You should never leave an emergency WO in “Scheduling Service Provider” status.
+
+**EMERGENCY appointment window and pricing expectations**
+
+- When confirming the appointment, note whether the Service Provider can go **same‑day / within 24 hours** or only **later than 24 hours out**.
+- Emergency pricing and higher emergency soft budgets are intended for **same‑day or within 24 hours** appointments.  
+- If the Service Provider **accepts the job but can only schedule more than 24 hours out** (for example, dispatch deferred to a later date), the visit should be treated as a **standard (non‑emergency)** appointment for pricing and soft budget, even if the work order remains emergency severity.
+- When this occurs, follow the guidelines outlined in [**How to: Set expectations with Service Providers when dispatching**](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2600337430)  to communicate clearly to the Service Provider that **non‑emergency rates and budgets apply** for that appointment time.
+
+If the SP insists on getting the job without an appointment, inform the SP that they can contact us back once they can confirm an appointment, but they won’t be assigned to the job until then.
+
+**📝 NOTE: If the SP says they will call the resident directly, or says "I'll get back to you" / "I need to check my schedule" — this is not an acceptance. Do not assign. Redirect them:**
+
+- Say something like: *"We appreciate that! We'll take care of coordinating with the resident on our end. What we need from you is a date and time that you can commit to for this job — are you able to give us that right now?"*
+  - If they still cannot commit:
+    - Say something like: *"No worries! Just so you're aware, since we weren't able to confirm an appointment, you have not been assigned to this work order and we will be continuing to source other available providers. You're welcome to text or call us back when you have a more definitive schedule, but we can't guarantee the work order will still be open at that point."*
+- ⚠️ Assigning without a confirmed appointment while continuing to source creates a **double dispatch** risk. Continue sourcing the next SP.
+
+Note that the PM may request us to assign a certain service provider. Contact the specified service provider once (calling x3 on a row) and in the event that they have been unresponsive to confirm an appointment, escalate the WO back to the PM. 
+
+- Contact the escalation contacts, refer to [Job Aid: Defining Property Damage and Extreme Habitability](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-Property-Damage-and-Extreme-Habitability-Situations)
+- For Non-Property Damage and Extreme Habitability, proceed to creating a task for the PM with the task subject “**Action Required: PM Instructions or Information Needed**”
+</Warning>
+
+1. Complete Troubleshooting with Resident. Click on "Action" and select the appropriate status of the situation. 
+  1. <Frame>
+  ![image-20260522-082641.png](/images/SVC-761.png)
+</Frame>
+  2.  The issue is still an emergency, you will proceed with the service provider dispatching process. Select the appropriate option depending on the level of urgency. Majority of the Emergency work orders will require immediate dispatch.
+    1. <Frame>
+  ![image-20260522-082732.png](/images/SVC-762.png)
+</Frame>
+  3. By clicking on "Work order needs immediate dispatch", you will be asked to provide more details of what is happening and what troubleshooting you have done
+    1. <Frame>
+  ![image-20260522-082802.png](/images/SVC-763.png)
+</Frame>
+  4. Click on "Submit".
+  5. If the Property Manager **has pre-dispatch instructions** and has specified a service provider to use, this information will be presented to you with detailed instructions. 
+    1. **If the pre-dispatch instructions pop up, follow the instructions. **
+      1. **📝** **NOTE:** Do not repeat the pre-dispatch instructions if the action has already been taken by another Latchel Associate or the System, and would only result in repeating the same action that has not worked previously.
+      2. Important: Do not disclose the Property’s address or Resident’s contact information if the SP is not able to confirm an appointment on the phone.
+      3. If a Service Provider is specified, call the Service Provider (3) times.
+        1. If that Service Provider ✅accepts the work order
+          1. Navigate to the primary Action bar 
+            1. Choose Take Action. 
+              1. Choose "Contact accepted work order". A message will auto-forward to the Property Manager.
+        2. If that Service Provider ❌does not accept (refuses to take) the work order,
+          1. Navigate to the primary Action bar
+            1. Choose "Take Action"
+              1. Choose "Contact(s) refused work order" 
+                1. Proceed to [Step 2](#) instructions to Assign a Preferred Service Provider.
+        3. If that Service Provider ❌does not pick the phone call,
+          1. Leave a Voicemail (Scroll up to "Latchel Blurbs" to know what to say)
+          2. Navigate to the Primary Action bar
+            1. Choose "Take Action"
+              1. Choose "Could not reach a contact". 
+                1. Proceed to [Step 2](#) instructions to Assign a Preferred Service Provider.
+    2. **If no instructions for a Service Provider were listed**, or if you ❌cannot Assign the requested Service Provider, you will be prompted to "Find a Vendor"
+      1. **📝** **NOTE****:** if you Closed the window with the workflow, you can click on "Take Action" in the Primary Action bar to re-open the window and it will resume from where you left
+      2. Proceed to [Step 2 ](#)instructions to Assign a Preferred Service Provider.
+
+<Note>
+ If the SP is able to commit to be on site a a given day but is not able to confirm an specific time, you can assign them to the WO with a whole-day appointment window as long as the resident is available as well (provided it’s within the acceptable emergency dispatching timeframes).
+</Note>
+
+### **Step 2: Assign a Preferred Service Provider**
+
+<Note>
+### About Preferred Vendors
+
+***What's a Preferred Service Provider?*** Preferred Service Providers are Service Providers that the Property Management company identified when they first joined in as customers with Latchel. They're contractors that often have an existing trust relationship with the Property Management company and the Property Manager would like them to be the priority over other vendors. The Property Management Company **typically** pays these Service Providers directly. However, if the PM has the 'Preferred Service Provider Payments' toggle **ON** in their Company Profile → Payments tab, Latchel can process payments for Preferred SPs **via Direct Deposit only**. Refer to https://latchel.atlassian.net/wiki/spaces/OPS/pages/3256221699 for details.
+</Note>
+
+1. **Automated dispatching of Preferred Service Providers using the Auto-Assignment option.**
+  1. On June 7, 2022, Latchel launched Preferred Service Provider Auto Assign for Emergency Work Orders to provide 2 key benefits:
+    1. Get a Service Provider assigned more quickly, by broadcasting work orders to multiple Service Providers automatically, and
+    2. Reduce time spent by troubleshooters reaching out to Service Providers.
+      1. Questions? Please check out the [**Service Provider Auto-Assign on Emergency Work Orders - FAQs**](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2547548257)!
+  2. How it works:
+    1. After determining that the Emergency WO requires immediate dispatch, the Troubleshooter will be asked if they would like to use the auto-assign feature. ***You should check the pre-dispatch instructions before making this decision***. The pre-dispatch instructions will be displayed at the bottom of the box. If the pre-dispatch instructions ask you to contact (or not to contact) certain SPs, you should select "No" because you'll need to manage this yourself.  
+**📝** **NOTE**: Do not trigger auto-assign queue for emergency work orders if:
+      1. Pre-dispatch notes have specific instructions that require handling emergencies differently, and
+      2. Contacting all eligible SPs automatically is in non-compliance with the pre-dispatch instructions.
+    2. <Frame>
+  ![](/images/SVC-764.png)
+</Frame>
+    3. **If you select Yes:**
+      1. If the auto-assign queue is selected, you will be prompted to collect the resident's availability through the console within the troubleshooting flow. The resident’s schedule can be collected in 4-hour intervals for 2 calendar days (the current day and the next day).  
+
+      2. Once the troubleshooting form is submitted, the WO moves to Finding Service Provider state. The auto-assign queue will begin contacting eligible PM Preferred Service Providers and offer the work order. Please note that Preferred SPs will be contacted 1 minute apart (default) but if a PM requests to change this buffer between contacts, please submit a PS ticket with this request.
+<Frame>
+  ![image-20260522-082947.png](/images/SVC-765.png)
+</Frame>
+      3. While Auto Assign is running, proceed to dispatch.
+        1. Refer to Step 2 - **Manual Dispatching of Service Providers**.
+        2. Refer to https://latchel.atlassian.net/wiki/spaces/OPS/pages/2547548257 for information on how to handle situations where a service provider accepts via auto-assign while you are offering a job to another service provider.
+          1. **Workaround to Avoid Double Dispatch - **To prevent double dispatching while speaking with a Service Provider:
+            1. Open a **second Console window** and navigate to the **same Work Order**.
+            2. Be sure to **refresh the page regularly** during the call to check if another associate or the system has already assigned the job.
+            3. If you see that the job has been accepted, **do not proceed with dispatching** to avoid duplicate assignments.
+    4. **If you select No or no Service Provider accepted the job via Auto Assign, proceed to the next step “Manual Dispatching of Service Providers”.**
+  3. **‼️IMPORTANT**: **The only instance a task should be created for dispatching is if a task reassignment is necessary**, such as:
+    - The associate is unable to finish the full task and needs to endorse the remainder to another team member.
+2. **Manual Dispatching of Service Providers.**
+  1. **🔔****Reminder****:** You do not need to contact service providers and may skip them if they are marked as **“outside of territory”** in the system.
+    1. <Frame>
+  ![image-20250711-220247.png](/images/SVC-766.png)
+</Frame>
+  2. In the "Finding Vendor" window, you will see the skills that were selected for this work order. 
+  3. Each work order relies on the skill type to determine the appropriate Service Providers. Skills are defined as the work that needs to be done to resolve an issue. 
+  4. Work orders created by the call center team may come with the skills pre-selected. If it does not this will be required to be able to provide the list of Service Providers available. You may also change this skill if appropriate, but please make a note on the work order why you have made this decision.
+    1. <Frame>
+  ![image-20260522-083105.png](/images/SVC-767.png)
+</Frame>
+3. If there is a Preferred Service Provider that qualifies for the job type, review notes in the work order to see if this provider has already been assigned to this job previously
+  1. **‼️IMPORTANT****:** If the Service Provider is already assigned for this property with another work order, a label that states: "This service provider has an active job at this property" will appear the Service Provider name.  
+
+    1. Select that Service Provider for the additional Work Order; the goal is to make the customers' experience for maintenance repairs more effective!
+  2. Once the SP has been assigned to the WO you will be presented with a new screen to confirm the selection:
+<Frame>
+  ![](/images/SVC-768.png)
+</Frame>
+    1. Note: You will be able to change the User assigned to the WO from that Service Provider company and the system will always default to the primary user. There’s no need to change this.
+  3. **If the agent ❌cannot schedule the appointment with a Preferred Service Provider *****after completing all steps outlined in the Standardized Outreach Attempts to Preferred Service Providers*****, and there are no service providers left to call, review whether the Property Manager is opted in or opted out of the Latchel Service Providers Network.**
+<Frame>
+  ![image-20260522-084557.png](/images/SVC-769.png)
+</Frame>
+  4. **"Opt-in" to the Latchel Service Provider Network**
+    1. If the PM has opted into the Latchel Service Provider Network, we will start assigning Latchel Service Provider Network Service Providers 
+      1. Proceed to [Step 3](#) instructions to Assign a Latchel Network Service Provider.
+  5. **"Opt-out" of the Latchel Service Provider Network**
+    1. If the PM hasn’t opted into the Latchel Service Provider Network, we will Forward the Work Order to the Property Manager.
+      1. Click **"Escalate to Property Manager"**
+<Frame>
+  ![image-20260522-083332.png](/images/SVC-770.png)
+</Frame>
+      2. The tool will guide you to select if the issue is property damaging or extreme habitability.
+        1. Refer to [↔ Job Aid: Defining Property Damage and Extreme Habitability](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-Property-Damage-and-Extreme-Habitability-Situations) for details.
+        2. <Frame>
+  ![](/images/SVC-771.png)
+</Frame>
+          1. If the issue is property damaging or extreme habitability, you will be guided to contact the property manager's escalation contacts.
+          2. The "**Who Ya Gonna Call**" tool **auto-populates** at this step since it's part of the guided TS/dispatch flow. Associates should review the AI recommendation first, while also verifying the information against the original escalation instructions displayed below.https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-Critical-Pre-dispatch-Warranty-Special-Notes-Emergency-Escalation-Contacts for more details.
+            1. If there is no contact information or you were not able to reach out to the contact person, click on "Could not reach escalation contacts". If you are able to talk to the escalation contact, click on "Successful Contact"   
+
+          3. Is the issue is not property or extreme habitability, you will be guided to fill out a form to notify the property manager of the situation.
+            1. The Work Order status will be updated by the system.
+      3. The next screen will prompt you to add notes following this SOP: [↔ How to: Write Effective Notes](https://latchel.atlassian.net/wiki/spaces/OM/pages/763363368); Forward the work order to the Property Manager or escalation contact.
+      4. If the PM responds requesting to enable LCN/LVN, proceed with guidelines outlined in https://latchel.atlassian.net/wiki/spaces/SR/pages/2977234945.
+
+###  **Step 3: Assign a Latchel Network Service Provider**
+
+<Note>
+### About Latchel Contract Network (LCN) Vendors
+
+***What's a Latchel Network Service Provider? ***Latchel Network Service Providers are *local Service Providers* that are licensed and insured. These Service Providers are invoicing the Property Manager through the Latchel platform. Property Managers can Opt-in or Opt-out of using Service Providers from the Latchel Service Providers Network. Latchel Service Providers submit invoices through the Latchel console, so Latchel agents never interact with these.
+
+**Note:** Latchel Contract Network Service Providers were previously known as Latchel Network Service Provider. This terminology is now inaccurate, and we refer to them as "Latchel Network" Service Providers.
+</Note>
+
+1. When the Property Manager is "Opt-in" to the Latchel Network, the option to use a Service Provider becomes available.
+<Frame>
+  ![image-20260522-083424.png](/images/SVC-772.png)
+</Frame>
+  1. Click **"Search for Latchel Service Provider"** to proceed to Latchel Service Providers list.
+<Frame>
+  ![image-20260522-083446.png](/images/SVC-773.png)
+</Frame>
+  2. You will be directed to see a list of Latchel Service Providers located close to the property and have the skill needed to resolve this maintenance request.
+<Frame>
+  ![image-20260522-083504.png](/images/SVC-774.png)
+</Frame>
+2. Before contacting the Service Providers listed:
+  1. Note the property ZIP code.
+  2. Note the trade required for the job (e.g. Plumbing, Electrical, etc.)
+  3. Navigate to this page: [https://sites.google.com/latchel.com/lcn-lookup/home](https://sites.google.com/latchel.com/lcn-lookup/home)
+    1. As of December 7th, this is a new tool where new Partner Service Providers can be searched for. These Service Providers take priority over “regular” Latchel Service Providers since Latchel is partnering directly with them.
+    2. On this page, enter the ZIP code and click search.
+<Frame>
+  ![](/images/SVC-775.png)
+</Frame>
+    3. If there are Partner Service Providers in the area, they will appear on the page.
+      1. Check if any of the Service Providers match the trade required for the Work Order.
+        1. **‼️IMPORTANT**: As of Feb 7th, 2024, there’s only one Partner SP that supports emergency WOs, BlueChip. No other Partner Service Provider can be used for emergencies for now. 
+      2. If there’s a matching Service Provider, take note of the Company name.
+        1. Return to the Work Order and search for the Service Provider Company you found in the tool.
+        2. Proceed to call the Service Provider to confirm an appointment. 
+      3. If there wasn’t a matching, continue contacting the rest of the Latchel Service Providers who show up in the Latchel system until you can get an appointment confirmed.
+        1. <Frame>
+  ![image-20260522-083536.png](/images/SVC-776.png)
+</Frame>
+
+3. If you cannot Assign any Latchel Network Service Provider but the PM is Opted-in to the Latchel Network, proceed to Source an external Service Provider ([Step 4](#))
+  1. Click "Cannot Find Nearby Service Provider"
+<Frame>
+  ![image-20260522-083551.png](/images/SVC-777.png)
+</Frame>
+
+<Warning>
+### Emergency Services
+
+**Special Notes for Assigning a Latchel Network Service Provider,**
+
+1. Review Latchel guidelines to working with Latchel Network Service Providers.
+  1. See this Letter from Latchel Customer Success for more information: [A Letter from Customer Success: Key Guidelines to Handling Latchel Network & Latchel Affiliate Service Provider Relationships](https://latchel.atlassian.net/wiki/spaces/LTG/pages/950501383)
+2. Give the soft budget and ask the Service Provider to give Latchel a call-back if they need to go over this budget. 
+  1. Emergency Services Call-back: [Please refer to https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Informational-Basic-Service-Ops-Guidelines-and-Rules  for the appropriate phone number.]
+    1. More instructions on if they give a call-back about going over budget: [(⛑EMERGENCY) How to: Handle Changes to the Approved Budget](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/EMERGENCY-How-to-Handle-Changes-to-the-Approved-Budget)
+3. Verify if the Service Provider will need invoicing or credit card information to complete the job. 
+  1. Write detailed notes about agent actions.
+  2. If we pay the service provider via credit card we still require them to submit an itemized invoice.
+  3. For Issued card Payments, processing time will be within 1-3 business days. For Direct Deposit, the processing time is 3-business days once the invoice is uploaded for payment. For more information, refer to https://latchel.atlassian.net/wiki/spaces/OPS/pages/759365655.
+4. If the Latchel Service Provider picks up the phone and gives verbal confirmation of the job, follow the instructions on the screen.
+  1. Ask the Service Provider to take before and after pictures of the job (if applicable)
+    1. Ask the Service Provider to upload through the Service Provider Interface.
+      1. Alternatively, they can send the pictures to [team@latchel.com](mailto:team@latchel.com)
+5. If the Service Provider does not pick up on the third call, leave a message. 
+
+***Why?***** **Although some Latchel Service Providers have worked with Latchel before, agents must verify that there's a way to pay the Service Provider. We pay the Service Provider through an invoice or by using a company credit card.  Contact your supervisor for more guidance and coaching on this topic.
+</Warning>
+
+### ** Step 4: How to: Handle Latchel Service Provider Sourcing**
+
+<Note>
+### About Vendor Sourcing
+
+These Service Providers are outside of the Latchel system; sometimes, these Service Providers may have completed one job with Latchel before or the Service Provider does not want to be in the Latchel Network. Emergency Services oftentimes uses these Service Providers. This is because we secure and pay these Service Providers with a credit card. We also use credit card issuing when deposits on materials are needed because with our current invoicing system, it takes 3 days for a deposit to go through causing delays to a job. If we pay the service provider via credit card we still require them to submit an itemized invoice.
+</Note>
+
+- For detailed instructions, see: https://latchel.atlassian.net/wiki/spaces/OPS/pages/768999595 
+
+## 🎯 When to Break This SOP
+
+Based on the SOP and related guidance, you can deviate from the process in these cases:
+
+- **Pre-dispatch instructions require a different approach:**  
+If the property manager’s pre-dispatch notes specify handling the emergency differently (e.g., do not use auto-assign, contact only certain service providers, or follow a unique escalation path), you must follow those instructions—even if it means not using the standard workflow.
+- **No service provider can confirm an appointment:**  
+If you have called all required service providers (3 attempts each) and none can confirm, escalate to the property manager or their escalation contacts as instructed. For property-damaging or extreme habitability issues, follow the escalation pathway; for other cases, create a task for the PM.
+- **Explicit instructions from leadership or PM:**  
+If a property manager, owner, or company leadership gives direct instructions that override the SOP (such as assigning a specific provider or skipping steps), follow their direction and document the exception.
+
+---
+
+## 💡 If You Think This SOP Could Be Improved...
+
+Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work?  
+ 👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**
