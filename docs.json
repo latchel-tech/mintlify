@@ -892,7 +892,29 @@
                               "latchel-admin/Service-Operations/Production-Documentation/Troubleshooters-Handling-Skill-Assignment-Tasks-in-Work-Order-Intake-Low-Confidence-No-Skill-Match-and-No-Skill-Assigned",
                               "latchel-admin/Service-Operations/Production-Documentation/Service-Ops-Troubleshooting-Guide-for-System-Issues-Console-AWS-Assembly-etc",
                               "latchel-admin/Service-Operations/Production-Documentation/Service-Ops-Guidelines-in-Determining-Active-PM-Management-on-a-Work-Order",
-                              "latchel-admin/Service-Operations/Production-Documentation/Service-Ops-Handling-Multiple-Work-Orders-Generated-by-Harmonia-Intake"
+                              "latchel-admin/Service-Operations/Production-Documentation/Service-Ops-Handling-Multiple-Work-Orders-Generated-by-Harmonia-Intake",
+                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-DIY-Owner-Contacts",
+                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-to-Product-Support",
+                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-911-Severity-Type-Work-Orders",
+                              "latchel-admin/Service-Operations/Production-Documentation/SOP-Building-Wide-Emergency-Work-Orders",
+                              "latchel-admin/Service-Operations/Production-Documentation/Emergency-How-to-Handle-Scheduling-Requests",
+                              "latchel-admin/Service-Operations/Production-Documentation/PREMIUM-How-to-Assign-a-Preferred-Service-Provider",
+                              "latchel-admin/Service-Operations/Production-Documentation/EMERGENCY-How-to-Handle-Changes-to-the-Approved-Budget",
+                              "latchel-admin/Service-Operations/Production-Documentation/Non-Emergency-How-to-Handle-Over-Approved-Budget-aka-Estimate",
+                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-and-Handle-a-Recall-WO",
+                              "latchel-admin/Service-Operations/Production-Documentation/How-To-Add-a-New-Service-Provider",
+                              "latchel-admin/Service-Operations/Production-Documentation/Service-Ops-How-to-Use-Contact-Rotations-EEC-Pre-Dispatch",
+                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Emergency-Work-Orders",
+                              "latchel-admin/Service-Operations/Production-Documentation/Job-Aid-Critical-Pre-dispatch-Warranty-Special-Notes-Emergency-Escalation-Contacts",
+                              "latchel-admin/Service-Operations/Production-Documentation/EMERGENCY-Work-Order-Is-Not-Complete-Issue-is-Not-Resolved",
+                              "latchel-admin/Service-Operations/Production-Documentation/EMERGENCY-How-to-Assign-a-Preferred-Latchel-Network-Service-Provider",
+                              "latchel-admin/Service-Operations/Production-Documentation/Emergency-How-to-Handle-a-Utility-Issue",
+                              "latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs",
+                              "latchel-admin/Service-Operations/Production-Documentation/Job-Aid-Troubleshooter-Question-Bank",
+                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Properly-Diagnose-Emergency-Situations",
+                              "latchel-admin/Service-Operations/Production-Documentation/Job-Aid-Troubleshooter-Tips-for-Tricky-Situations",
+                              "latchel-admin/Service-Operations/Production-Documentation/Follow-Up-Guidelines-for-On-Call-Customers-app-latchel-com",
+                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-Property-Damage-and-Extreme-Habitability-Situations"
                             ]
                           },
                           {
@@ -925,7 +947,9 @@
                               "latchel-admin/Service-Operations/Production-Documentation/How-to-Perform-Lucia-Interaction-Audits",
                               "latchel-admin/Service-Operations/Production-Documentation/How-to-Respond-to-Inquiries-about-Merging-Work-Orders",
                               "latchel-admin/Service-Operations/Production-Documentation/Handling-Owner-WO-Submission-Requests",
-                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Resident-Maintenance-Requests-via-Text-Intake"
+                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Resident-Maintenance-Requests-via-Text-Intake",
+                              "latchel-admin/Service-Operations/Production-Documentation/SOP-Work-Order-Follow-ups-and-Updates",
+                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Customer-Information-Updates"
                             ]
                           },
                           {
@@ -944,7 +968,8 @@
                               "latchel-admin/Service-Operations/Production-Documentation/How-to-Respond-to-Assembly-Tickets-and-Forward-Requests",
                               "latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-LCD-Support-Requests",
                               "latchel-admin/Service-Operations/Production-Documentation/How-to-Retrieve-Inaccessible-Voicemails",
-                              "latchel-admin/Service-Operations/Production-Documentation/Service-Ops-Assembly-Guide"
+                              "latchel-admin/Service-Operations/Production-Documentation/Service-Ops-Assembly-Guide",
+                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Need-to-Verify-Emails"
                             ]
                           },
                           {
@@ -964,7 +989,8 @@
                               "latchel-admin/Service-Operations/Production-Documentation/Operations-Support-Specialist-Cadence",
                               "latchel-admin/Service-Operations/Production-Documentation/Slack-Coaching-Ticket-Validation-Tracking-Process",
                               "latchel-admin/Service-Operations/Production-Documentation/Ops-Support-Handling-Messages-from-latchel-rentredi-Channel-via-Assembly",
-                              "latchel-admin/Service-Operations/Production-Documentation/Operations-Support-Specialist-SOP-Library"
+                              "latchel-admin/Service-Operations/Production-Documentation/Operations-Support-Specialist-SOP-Library",
+                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-Between-Teams"
                             ]
                           },
                           {
