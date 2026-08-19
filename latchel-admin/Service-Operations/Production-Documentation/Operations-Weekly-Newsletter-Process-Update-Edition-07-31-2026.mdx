@@ -1,0 +1,104 @@
+---
+title: "Operations Weekly Newsletter — Process Update Edition 07/31/2026"
+groups: ["latchel"]
+---
+
+<Note>
+This newsletter is intended as a resource to collect Ops Goals, All Hands information, SOP updates, and Product releases impacting the team in one place, so you're able to refer to any recent changes that took place.
+</Note>
+
+<Warning>
+Please fill out this form after reading to confirm acknowledgement of the content: [**Form link**](https://forms.gle/PaWaZb9vRHc7Pqrk6)
+</Warning>
+
+<Warning>
+Please note that the content of this page may become obsolete over time since its validity is subject to any future changes; therefore, always refer to the actual SOPs and Job Aids for official guidance.
+</Warning>
+
+**All Hands Topics: **
+
+[Recording](https://drive.google.com/file/d/16SXBwg9bG45w-AdWxsRS1_qcl6QG9s8O/view?usp=sharing)
+
+- **Quality Team – Weekly Recap**
+- **Reminder: Medical condition intake — yes/no only** (sick, elderly, or infants). We ask *whether*, not *which*. No requesting or evaluating specifics.
+- **Latchel Ops Assistant** — Chrome extension rollout, latest features, and how to install/give feedback (see Will’s posts in #service-operations)
+- **Confluence → Mintlify Migration** — we’re moving in to Mintlify in the next couple of weeks. Updates to follow.
+
+<Note>
+## Shoutouts & Recognition
+
+**Customer Experience Top Performers:**
+
+- @@Pia Catherine Santos
+- @@Lily Pascua** **
+- @@Neil Reyes** **
+
+ **5 Star troubleshooting Rating**
+
+- @@Michael Azucena**: ***Michael was incredibly kind, patient, and thoughtful. He took the time to make sure everything was working properly and answered my questions with genuine care. I felt very comfortable throughout the entire experience and truly appreciated his support. *
+- @@Neil Reyes**: ***Neil provided the best customer service I’ve ever experienced*
+</Note>
+
+# Documentation Updates
+
+<Note>
+## Major Updates
+
+[How to: Handle Emergency Work Orders](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Emergency-Work-Orders)
+
+**Why it matters:**
+
+- Associates needed clearer guidance on common area emergencies, access/lockout scenarios, and a recurring edge case where the wrong person answers the outbound call.
+
+**What changed;**
+
+- **[Major]** Common area emergency handling — previously routed to the **Cannot Reach Resident** path → now has a dedicated flow (**Step 1.2.c** ) with specific steps and [escalation paths for common area emergenci](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Emergency-Work-Orders)[es](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Emergency-Work-Orders), lockout, and access-related scenarios. ()
+- **[Minor]** Resident has no availability / no entry permission — previously had two conflicting instructions (one sending associates to live escalation, another to create a manual PM task) → now consolidated into a single upstream trigger pointing to **"PM Input needed before dispatch"**; non-PD/EH outcome is now also documented inside that section. (**Option 2 1.d.ii.4**)(**Option 2 1.d.iv.1.c/e ****)(Option 2 1.d.iv.2.c ****)**
+- **[New]** FAQ added — [*Wrong Person Answered the Phone (Suspected Incorrect Number on File*](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Emergency-Work-Orders)*)* — previously no documented guidance → associates now have a defined path for this scenario
+
+**What you need to do:**
+
+- Review the updated SOP, specifically the common area and lockout/access sections
+- When a resident has no availability and entry permission was not granted, go directly to **"PM Input needed before dispatch"** — no manual PM task needed
+- Familiarize yourself with the new FAQ for incorrect number scenarios
+
+**When it takes effect:**
+
+- *Monday, *
+
+**Resources impacted:**
+
+- [Job Aid: PM Outbound Communication for Emergency WOs](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs)
+  - ()
+- [How to: Properly Diagnose Emergency Situations](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Properly-Diagnose-Emergency-Situations)
+  - ()
+</Note>
+
+<Note>
+## Minor Updates
+
+[How to: Identify and Handle a Recall WO](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-and-Handle-a-Recall-WO)
+
+- Previously Managed by PM - Added a pre-check at the top — before following this SOP, confirm who handled the original escalation (per the EEC notes/contact rotation log). If it was a PM, follow the section guidelines; if it was an on-call tech, handle it as a standard SP recall follow-up instead.
+- Added FAQ: What to do when the recall-eligible work order is archived but work is already actively in progress — covering whether to unarchive, how to handle related work orders, and when to notify the PM.
+
+[How to: Create a New Work Order from "Incognito Mode" (All Submissions)](https://latchel.atlassian.net/wiki/spaces/OPS/pages/781647909/How+to+Create+a+New+Work+Order+from+Incognito+Mode+All+Submissions#%E2%9D%93Frequently-Asked-Questions)
+
+- Added a new FAQ entry covering what to do when WO submission is down
+  - Same steps outlined in On-call job-aid
+
+[Service Ops: AI Voice for Vendors FAQ](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Service-Ops-Job-Aid-AI-Voice-for-Vendors)  
+• A new SOP to support Ops with the new product feature: AI Voice for Vendors
+</Note>
+
+<Note>
+## Product & Help Guides
+
+**Product Releases**
+
+- [Clock in / Clock out and Timesheets for In-House Techs](https://latchel.slack.com/archives/C038Z6M0T6H/p1785337942394869)
+  - demo - [Good to know!](https://www.loom.com/share/f4a3e8d973dc4c9dbfa5a45521a86566)
+- [AI Voice for Vendors: Manually triggered & automatic daily outbound calls](https://latchel.slack.com/archives/C038Z6M0T6H/p1785363558701669)
+  - **see all demos in the thread**
+  - Refer to the running dochttps://latchel.atlassian.net/wiki/x/DwAo_g. This will be updated every time we have a new release about this product feature.
+</Note>

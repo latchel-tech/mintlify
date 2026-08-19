@@ -1,0 +1,218 @@
+---
+title: "Service Ops Job-Aid: AI Voice for Vendors"
+groups: ["latchel"]
+---
+
+**Status:** Live now for selected PM beta testers
+
+**Audience:** Ops associates and frontline support
+
+**Purpose:** Use this job aid to help Ops associates answer AI Vendor Calls questions, review AI-call activity on work orders, route PMs to the correct help guide or support team, and triage tasks created from AI call outcomes.
+
+**Beta customers:** Coldwell Banker Residential Property Management, Andamio Management, Citywide Real Estate, and Asset Property Management
+
+---
+
+## Quick summary
+
+AI Voice for Vendors allows Property Managers to use an AI agent to call Service Providers about open work orders. Ops associates should use this job aid to answer basic questions, guide customers to existing help guides where applicable, review work order activity history and call logs, and triage any Ops tasks created from AI call outcomes. Automated daily calls create per-work-order activity history, including notes for work orders covered on the call agenda and notes explaining why a work order was intentionally skipped. If a call reaches voicemail, dead air, or no one answers, the system adds a short no-answer note instead of a full AI summary. Ops should assist at the associate level when the customer can be guided through existing steps, and escalate to Product Support only for issues, blockers, configuration problems, or behavior that does not match expected workflow.
+
+## What Ops associates need to know
+
+<Note>
+**Access note:** Latchel must enable the company-level **AI Vendor Calls** feature flag for a PM company before the PM can use manual AI vendor calls. This can be performed by Product Support team.
+</Note>
+
+<Accordion title="PMs can manually trigger outbound AI voice calls to a vendor to follow up on one or more open work orders.">
+From a work order:
+
+<Frame>
+  ![image-20260806-093544.png](/images/SVC-977.png)
+</Frame>
+</Accordion>
+
+<Accordion title="PMs can enable automated daily outbound calls for vendors with open work orders when the company is eligible and the correct settings are enabled.">
+From their Account Settings:
+
+<Frame>
+  ![image-20260806-093735.png](/images/SVC-978.png)
+</Frame>
+
+- For automated daily calls, every work order on the call agenda gets its own activity note after the call runs, even if the AI did not take a specific action on that work order.
+- For automated daily calls, work orders intentionally skipped by the AI receive a note explaining why they were not chased that day.
+</Accordion>
+
+- For voicemail, dead air, or no-answer calls, the system adds a short no-answer note instead of generating a full AI summary. This applies to both automated daily calls and manual calls.
+- Ops should route PMs to the PM help guide for how-to steps once the guide is available. Ops should not recreate PM-facing setup instructions in this job aid.
+- Ops should escalate to Product Support only when there is an issue, configuration blocker, missing setting, unexpected behavior, or a request that cannot be handled using the help guide or standard Ops process.
+
+## When Ops should take action
+
+- Answer general questions using the approved scripts and FAQ language in this job aid.
+- Direct PMs and Service Providers to the appropriate help guide for step-by-step how-to instructions once those guides are available.
+- Review work order activity history and available call logs when a PM, vendor, or internal team asks what happened on an AI vendor call.
+- Use per-work-order notes to confirm whether a work order was included on an automated daily call agenda or intentionally skipped.
+- Triage emergency or out-of-scope tasks created from AI vendor call outcomes using standard Ops task-handling processes.
+- Escalate to Product Support only for issues, configuration blockers, missing settings, unexpected behavior, unclear AI outcomes, or items outside the supported Ops workflow.
+
+## Frontline quick guidance
+
+| Scenario | Ops response / action | Owner / routing |
+| --- | --- | --- |
+| PM asks how to get access to AI vendor calls | *“Hello, [Name]! Thanks for reaching out. I've opened up a ticket for you with the Product Support team so they can take a closer look at what's going on. They will be reviewing your request and will send you a personal response via email (usually within one business day). Thank you for your patience.”* | Escalate to Product Support for access review / feature flag enablement |
+| PM asks to enable automatic daily vendor calls | *“Absolutely, I can send over the PM help guide so you can follow the steps to set up automatic daily vendor calls directly anytime you need. Here’s the link: [Insert Help Guide URL]. Please take a moment to check it out and let me know if you’d like me to walk through it with you.”* If the PM declines the help guide or still needs assistance: “No problem — I’m happy to walk through the steps with you. | Ops provides the PM help guide first; if the PM declines the guide or still needs help, Ops can walk them through the steps. |
+| Vendor asks why they are receiving AI calls | *“The call was related to open work order follow-up for a Property Manager you work with. The AI call is designed to collect updates such as scheduling, completion, or invoice information. You can manage automated call preferences from your vendor account settings. We also have a help guide that walks through how to update your automated call preferences. Here’s the link: [Insert Help Guide URL]. Please take a moment to check it out and let me know if you need any further assistance.”* | Ops |
+| PM asks why a work order was not discussed on an automated daily call | *“I’d be happy to look into that for you. Let me review the work order activity and check on the status of the automated vendor call. I’ll follow up with you on what I find.”* | Ops reviews activity history; if the expected note is missing or the behavior looks incorrect, file a [bug report](https://app.latchel.com/admin/bug-reports) for an AI behavior issue. |
+| Vendor wants to stop automated calls | *“You can opt out of automated AI calls from your vendor account settings under call preferences. We also have a help guide that walks through how to update your automated call preferences. Here’s the link: [Insert Help Guide URL]. Please take a moment to check it out and let me know if you need any further assistance. The Property Manager may also be able to opt you out from their Service Provider settings. If you cannot access those settings, we can route this to support for help.”* | Ops provides the help guide/self-service steps first; if settings are inaccessible, unavailable, not saving, or not working as expected after basic troubleshooting, file a [bug report](https://app.latchel.com/admin/bug-reports) for a settings issue. |
+| Vendor wants calls at a different time | *“You can update your preferred call window in your vendor account settings. We also have a help guide that walks through how to update your preferred call window. Here’s the link: [Insert Help Guide URL]. Please take a moment to check it out and let me know if you need any further assistance. Because vendors may work with multiple Property Managers, the vendor controls the preferred call window rather than each individual PM setting a different time.”* | Ops provides the help guide/self-service steps first; if the call window setting is inaccessible, unavailable, not saving, or not working as expected after basic troubleshooting, file a [bug report](https://app.latchel.com/admin/bug-reports) for a settings issue. |
+| PM reports vendor was called more than once | *“I’m sorry for the inconvenience. We can review the available call history and work order activity notes to understand what happened. Manual calls may warn the user if the vendor has already been called that day, but the user may still choose to continue.”* | Ops reviews history first; if a system error is suspected, file a [bug report](https://app.latchel.com/admin/bug-reports) for an AI behavior issue. |
+| Call shows voicemail, dead air, or no answer | If no one answered or spoke, the activity history should show a short no-answer note instead of a full AI summary. This is expected for both manual and automated AI vendor calls. | Ops verifies activity history; if a full summary of silence was generated or the expected no-answer note is missing, file a [bug report](https://app.latchel.com/admin/bug-reports) for an AI behavior issue. |
+| Ops receives an emergency task from an AI call | Treat the task based on the urgency and content of the request, not just because it came from an AI call. Validate the issue, follow the standard emergency task process, and escalate if the AI-generated context does not provide enough information to safely act. | Ops |
+| Ops receives an out-of-scope task from an AI call | Review the task details and triage it using the existing Ops task handling process. If the vendor request is unclear, unsafe, or outside current workflow, escalate for clarification before taking action. | Ops; Product Support if product/system investigation is needed |
+| Question about pricing | *“For billing or pricing confirmation, we’ll review the request and follow up with the right next steps.”* | Escalate to Product Support for billing or pricing confirmation |
+
+## Associate FAQ
+
+### 1. What is AI Voice for Vendors?
+
+AI Voice for Vendors is an AI outbound calling feature that contacts vendors/Service Providers to request updates on open work orders. The AI can ask about scheduling, completion, invoices, and other open work order statuses.
+
+### 2. Who can use it right now?
+
+It is live now for 4 PM beta testers: Coldwell Banker Residential Property Management, Andamio Management, Citywide Real Estate, and Asset Property Management. Access is controlled through a company-level feature flag.
+
+### 3. Is this a full Ops SOP?
+
+No. This should be treated as an FAQ/frontline enablement guide. Ops is impacted because out-of-scope requests may generate Ops tasks, but Ops does not own every setup step or product configuration described here.
+
+### 4. How does a PM get opted into the beta?
+
+A company-level feature flag called **AI vendor calls** must be enabled for the PM company. Once enabled, the PM can manually trigger AI calls to Service Providers. Ops should escalate access requests to Product Support for access review and feature flag enablement, using the standard Product Support ticket process. Include the PM company name, requesting user, whether they are part of the approved beta group, and that they are requesting AI vendor call access.
+
+### 5. What does the feature flag enable?
+
+The feature flag enables manual AI call functionality. PMs can trigger calls from a work order page or from a Service Provider page.
+
+### 6. Are manual calls and automatic daily calls the same thing?
+
+No. Manual calls are triggered by a user. Automatic daily calls require an additional automation setting after the feature flag is enabled.
+
+### 7. How does a manual call work from a work order?
+
+When a PM triggers a call from a specific work order, the AI asks about that work order first, then may ask about other open work orders for the same vendor.
+
+### 8. How does a manual call work from the Service Provider page?
+
+When a PM triggers a call from the Service Provider profile, the AI follows up on that vendor’s open work orders using a priority order, such as jobs that need scheduling, completion confirmation, invoices, or other open items.
+
+### 9. Can Ops use manual AI calls?
+
+Ops usage expectations and ownership should be confirmed before Ops treats this as a standard workflow.
+
+### 10. What are automatic daily outbound calls?
+
+Automatic daily outbound calls are recurring AI calls to vendors with open work orders. If enabled, the AI follows up with vendors automatically, typically Monday through Friday, based on the vendor’s preferred call window when available.
+
+### 11. When do automatic calls happen?
+
+If the vendor has a preferred call window, the system attempts to call during that window. If no preference is set, calls default to around 8:00 AM local time or shortly after, Monday through Friday.
+
+### 12. Why might calls happen shortly after 8:00 AM instead of exactly at 8:00 AM?
+
+The system has call concurrency limits, meaning only a limited number of calls can be placed at the same time. Calls may be spread out to avoid exceeding that limit.
+
+### 13. What activity history is created for automated daily calls?
+
+For automated daily calls, every work order on the call agenda is linked to the call before the call runs. After the call completes, each work order on that agenda should show a note in its activity history, even if the AI did not take a specific action on that work order. This helps staff see that the work order was touched by an AI call and what came of it.
+
+### 14. What if the AI skips an open work order on the daily call agenda?
+
+If the AI intentionally leaves an open work order off the automated daily call agenda, the work order should receive an activity note explaining why it was not chased that day. Example reasons may include that it was already covered on a recent call or that there was nothing new to raise. Staff should use this note to confirm the work order was deliberately skipped rather than forgotten.
+
+### 15. What happens when an AI vendor call reaches voicemail, dead air, or no answer?
+
+The system now adds a short no-answer note instead of generating a full AI summary of silence. This keeps the activity feed accurate and avoids unnecessary AI summaries when no one actually answered or spoke. This applies to all AI vendor calls, including manually initiated calls and automated daily calls.
+
+### 13. Can vendors choose their call window?
+
+Yes. Vendors can configure their automated call window in their own account settings under call preferences.
+
+### 14. Why does the vendor control the call window instead of the PM?
+
+The same vendor may work with multiple PMs. If each PM set a different preferred time, the settings could conflict. For that reason, the vendor owns their own preferred call window.
+
+### 15. Can PMs opt vendors out of automated calls?
+
+Yes. PMs can opt a Service Provider out of automated calls from Service Provider management or from the Service Provider page.
+
+### 16. Can vendors opt themselves out?
+
+Yes. Vendors can opt themselves out of automated daily calls in their own account settings.
+
+### 17. Are vendors opted in by default?
+
+When a PM opts into daily automated calls, Service Providers are opted into automated calls by default unless they are opted out by the PM or by the vendor.
+
+### 18. Do automated calls happen on weekends?
+
+Currently, the default behavior is Monday through Friday. Weekend and day-of-week preferences are planned for the future.
+
+### 19. Can vendors choose English or Spanish?
+
+Preferred language support, including English or Spanish selection, was described as coming soon. Do not promise this as currently available unless Product confirms it has been released.
+
+### 20. What happens if a manual call is triggered outside the vendor’s preferred call window?
+
+The intended behavior is that the user sees a warning that the call is outside the vendor’s preferred hours, but the user can proceed anyway. If this warning is missing or does not work as expected, file a [bug report](https://app.latchel.com/admin/bug-reports) for an AI behavior issue.
+
+### 21. What prevents vendors from being spammed with calls?
+
+If a provider has already been called that day, the manual call flow may show a warning and display the previous call log. The user may still choose to continue.
+
+### 22. What can the AI agent do during a call?
+
+The AI agent can perform actions similar to what a vendor can self-service in the vendor portal, such as collecting and updating work order status information.
+
+### 23. What happens with out-of-scope requests?
+
+Out-of-scope requests may generate tasks, including Ops emergency tasks. Ops should triage these according to existing task-handling expectations and escalate when the request is unclear, unsafe, or outside current process.
+
+### 24. What should frontline say if a PM asks whether this replaces vendor follow-up work?
+
+Position this as an AI follow-up tool for open work orders, not a replacement for all vendor management or exception handling. Out-of-scope items may still require human review.
+
+### 25. What should frontline say if a vendor complains about receiving calls?
+
+Explain that the PM has enabled AI vendor follow-up calls for open work orders. The vendor can adjust their automated call preferences or opt out from their account settings. 
+
+### 26. What should frontline say if a PM only wants manual calls?
+
+Manual access only requires the feature flag. The PM does not need to enable automatic daily outbound calls unless they want recurring automated follow-up.
+
+### 27. What should frontline say if a PM wants daily automated calls?
+
+Confirm that they understand this enables recurring calls to vendors with open work orders. During testing, the first month is free. Say that the team will review any pricing or approval questions and follow up with next steps.
+
+### 28. Is there a notification when automatic calls are enabled?
+
+Future notifications for Accounts Receivable and possibly email notifications to the company may be added when someone opts in. Do not assume these notifications are currently live unless confirmed.
+
+### 29. Where can teams see prior call activity?
+
+Support and Ops should review the work order activity history and available call logs when investigating AI call activity. For automated daily calls, each work order on the call agenda should have its own activity note after the call runs. Work orders intentionally skipped by the AI should also show a note explaining why they were not chased that day. For manual calls, the manual call flow may also display previous call logs when a provider has already been called that day.
+
+### 30. What is still changing?
+
+- Preferred language selection is planned.
+- Day-of-week calling preferences are planned.
+- Weekend opt-in may be supported in the future.
+- Notifications for AR or company users may be added.
+- The PM-facing call plan experience may change or be hidden.
+- The warning for manual calls outside preferred vendor hours may require bug confirmation/fix.
+
+## Demo links
+
+1. [Opting a PM into the beta](https://www.loom.com/share/475d19e7f13446308f57d62c4d80cdcf)
+2. [Vendor contact preferences](https://www.loom.com/share/8f354083130349d7b66207e8740a7fb9)
+3. [Manually triggering a call to a vendor](https://www.loom.com/share/0cb1ee0fea734eb0b00c757ee14359c2)
+4. [Vendor call experience and what’s next](https://www.loom.com/share/386cb0abb93f4a3080977ba10a323b3a)

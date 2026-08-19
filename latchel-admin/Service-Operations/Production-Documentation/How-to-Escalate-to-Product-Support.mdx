@@ -1,0 +1,238 @@
+---
+title: "How to: Escalate to Product Support"
+groups: ["latchel"]
+---
+
+## 🧠 What This Process Is Trying to Solve
+
+<Note>
+**This guide outlines the step-by-step process for escalating issues to the Product Support team.**
+
+**We want to prevent confusion, delays, and misrouting of issues that require system-level investigation or fixes.** The goal is to ensure agents know when and how to escalate problems from Property Managers, Residents, Owners, or Service Providers to the Product Support team. This helps reduce back-and-forth, improves resolution time, and ensures customers experience fewer disruptions caused by internal tooling or platform issues.
+</Note>
+
+## Content
+
+## 📋Step-by-Step Process
+
+<Warning>
+**Important**: Do not post actual messages directly in the **#ps-escalation** channel. All submissions must follow the established slack workflow '**PS Escalation**' to ensure consistency and proper tracking.
+</Warning>
+
+### **Step 1: Assess the Concern**
+
+1. The Ops associate evaluates the concern to determine if it requires submission as a PS ticket. Refer to this [list for the examples of types of escalations](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-to-Product-Support).
+2. Before initiating an escalation, it is essential to identify whether the concern is a **first-time inquiry** or a **follow-up inquiry**. This ensures the appropriate handling of the issue and avoids duplication.
+  1. Search for the related *existing reques*t in the ***#ps-escalation channel. ***Refer to[ How to Search in Slack](https://slack.com/help/articles/202528808-Search-in-Slack). Follow the steps when starting a search and use the below tip when narrowing search. Look for threads, messages, or records that match the details of the issue
+    1. Add **in:** and a channel name to search within specific conversations *(you can use the work order number in question, primary email address, name of the person that reached out, etc.)*
+    2. **Example**:** in:#ops-ps-escalation test email***** ***will find results in the #ops-ps-escalation channel
+    3. <Frame>
+  ![image-20241209-185146.png](/images/SVC-802.png)
+</Frame>
+  2. **First-Time Inquiry **- A first-time inquiry refers to an issue or concern being raised for the first time, with no previous records or discussions related to it. If the concern is new:
+    1. Proceed directly to **Step 2** to initiate the escalation process.
+  3. **Follow-Up Inquiry** - A follow-up inquiry refers to an additional or repeat query about a concern that has been raised previously. If this is an existing concern:
+    1. **Determine the status of the existing request:**
+      1. **If the request is located and is less than 1 week old:** Respond to the existing thread with your follow-up query. 
+        1. **Note: **Provide sufficient details and context in your submission to avoid delays.
+        2. * Hi @channel The Property Owner is following up on the previous request regarding [brief description of the issue, e.g., the service provider assignment delay]. They would like to check the current status of this request. Please let us know if any additional information is needed from our end. Thank you!*
+      2. **If the request cannot be found or is older than 1 week:** Handle it as a new concern and move on to Step 2.
+
+### **Step 2: Initiate the escalation process**
+
+1. The Ops associate submits a request using the '**PS Escalation**' workflow in the **#ps-escalation channel **by filling out the template questions/field as required.
+  1. **Notes and Reminders: **Ops must ensure that the requester has a ***valid email address***, as it is required by our Product Support team for communication. In cases where there is *really* no email address is available, a contact number must be provided instead.
+
+### **Examples of types of escalations**
+
+<Warning>
+👉 Always refer to this page for a detailed breakdown of what Ops agents can handle:  
+[Product Support Team vs Ops Agents](https://latchel.atlassian.net/wiki/spaces/SR/pages/2977234945). Anything outside of the actions listed in the above Job-Aid should be escalated to Product Support.
+</Warning>
+
+We submit an escalation ticket to Product Support when a request or issue falls outside of standard processing, involves account-specific inquiries, or requires changes only the Product Support team can handle.
+
+<Note>
+Don't wait for a client to say, "This is a bug." Listening for indirect language and frustration is critical, as ignoring these cues can lead to a negative customer experience and a delayed resolution.
+</Note>
+
+The examples below are **in addition to other relevant SOPs** that instruct escalation to Product Support at a specific situation or level. These are common types of cases that may require escalation:
+
+- **Account changes (e.g., contact updates, account ownership transfers)**
+  - *Examples:*
+    - *A property management company needs to update its main point of contact.*
+    - *Ownership of an account is moving from one property manager to another.*
+    - *A PM requests a change in notification preferences across their portfolio.*
+    - *An owner also resides in the property as a resident, and adding them as a resident causes a system error due to duplicate contact information.*
+    - *A service provider has multiple profiles (such as LCN and preferred vendor profiles for different Property Managers) that require alignment. This may include, but is not limited to, conflicting or outdated contact information, identified skill gaps, and changes to profile details.*
+- **Integration issues (e.g., problems with system syncs or third-party tool connections)**
+  - *Examples:*
+    - *New work orders from AppFolio aren’t syncing into Latchel.*
+    - *Completed jobs in Latchel aren’t updating in Buildium.*
+- **Login issues (e.g., user unable to access the portal despite correct credentials)**
+  - *Examples:*
+    - *A user enters the correct credentials but keeps getting an “invalid login” error.*
+- **Intake settings update**
+  - *Examples:*
+    - *A PM wants to escalate all plumbing leaks to “emergency.”*
+    - *A client requests that HVAC issues in summer be automatically flagged as urgent.*
+    - *PM says the wrong severity was assigned.*
+      - *Verbal triggers:*
+        - *“This should have been tenant responsible.”*
+        - *“This shouldn’t have been an emergency.”*
+        - *“We expect this to be handled another way.”*
+- **Invoice disputes**
+  - When a PM or Owner questions or contests charges on an invoice.
+  - *Examples:*
+    - *A PM states they were billed twice for the same job.*
+    - *A discrepancy is reported between a quoted cost and the final invoice.*
+    - *The customer refuses to pay for a bill.*
+- **PM has specific questions about their account (e.g., billing, custom workflows, subscription details)**
+  - *Examples:*
+    - *Clarification on how billing is calculated for their subscription.*
+    - *Questions about setting up a custom workflow for emergency calls.*
+    - *The PM is setting a budget constraint (a workflow/dispatch parameter).*
+      - *This occurs when a Property Manager sets a ****Hard Budget Limit (HBL) of $1****, potentially affecting the ability to assign the work order.*
+    - *Inquiries from Property Managers or Owners regarding plan or subscription coverage.*
+      - *Verbal triggers:*
+        - *“I want to be called for all HVAC emergencies.”*
+        - *“I want to be called if Latchel is unable to find a service provider.” *
+    - *Requests for details on portfolio unit counts.*
+- **Complaint or dissatisfaction about a work order**
+  - Examples:
+    - Work order closed before the issue was fully resolved.
+    - A contractor was dispatched late, causing delays.
+- **Complaint or dissatisfaction about the service provided by Latchel**
+  - Broader concerns about Latchel’s performance or reliability.
+    - *Examples:*
+      - *A PM feels Latchel’s response times are consistently too slow.*
+      - *Reports that communication to residents has been unclear or unhelpful.*
+- **Complaint or dissatisfaction about a service provider’s behavior**
+  - Concerns about professionalism, conduct, or reliability of vendors.
+    - *Examples:*
+      - *A resident reports that a vendor was rude or inappropriate on-site.*
+      - *A PM claims a vendor consistently no-shows or leaves jobs incomplete.*
+- **Feedback or issues with the Latchel system/app**
+  - Reports of bugs, confusing interfaces, or missing features.
+    - *Examples:*
+      - *A PM reports the app crashes when uploading photos.*
+      - *User confusion about where to view pending work orders.*
+      - *Suggestions for new dashboard filters.*
+- **Questions about the resident benefits program**
+  - Clarifications or problems related to RBP offerings
+    - *Refer to *[*How to: Handle Home Assistant and Benefits Inquiries*](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2571730945)* SOP to determine which Ops can handle and which needs to be escalated to PS.*
+- **Confusing, vague, or conflicting critical notes and/or pre-dispatch notes, warranty information, EEC notes or other instructions in the work order**
+  - Escalations when unclear instructions create risk or confusion.
+    - *Examples:*
+      - *One note says “call resident before dispatch,” while another says “do not contact resident directly.”*
+      - *A PM provided contradictory instructions on emergency protocols.*
+      - *If you are at the step to call the EEC for a Property Manager who is on an emergency plan and they do not have after-hours contact information, escalate to Product Support. PMs on this plan must have after-hours contact escalation set up.*
+- **Updates on Critical notes, EEC or Pre-dispatch Instructions (e.g., requests to add, change, or remove)**
+  - *Examples:*
+    - *A PM wants to update the pre-dispatch contacts for emergencies.*
+    - *Removing outdated instructions that no longer apply to the property.*
+    - *If you are at the step to call the EEC for a Property Manager who is on an emergency plan and they do not have after-hours contact information, escalate to Product Support. PMs on this plan must have after-hours contact escalation set up.*
+- **PM requests Latchel to take action on an On-Call work order**
+  - *Examples:*
+    - *A PM requests Latchel to contact the resident immediately.*
+    - *A PM asks Latchel to contact their OnCall technician. *
+- **Customer inquiry about their unit counts**
+  - Examples
+    - PM disputes the reported unit count 
+    - A PM sends confirmation that unit totals should be updated.
+- **Roers (On-call PM) escalations**
+  - Examples
+    - PM reaches out claiming the work order was not sent to their on-call maintenance
+- **System-generated integration emails ( Interested Users/Users Who Wants to Disable Integration)**
+  - These emails are automatically generated by Partner Web Access and usually look like:
+    - <Frame>
+  ![image-20251204-235342.png](/images/SVC-803.png)
+</Frame>
+<Frame>
+  ![image-20251204-235407.png](/images/SVC-804.png)
+</Frame>
+  - **Ops handling instructions**
+    - When you receive one of these emails:
+      - **Do not reply to the email**
+      - Escalate to Operations Specialists to reassign the email to the Product Support teamspace:
+      - **! Do not create a separate PS escalation ticket**
+- **Preferred Service Provider wants to be removed from the distribution list/notifications due to their preferred PM being disabled**
+  - Refer to FAQ on https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/SOP-Work-Order-Follow-ups-and-Updatesfor the guidelines on how to handle customer inquiries about an open work order for a Property Management (PM) company that is already disabled in Latchel
+- **Call verification / suspected spoofing / call attribution (PM requests deep dive to confirm whether a call was from Latchel)**
+  - Examples:
+    - PM received a call claiming to be Latchel and wants verification.
+    - Caller ID shows Latchel number but details don’t match the account; PM requests attribution check.
+- **Service provider profile duplication/merge**
+  - *Examples:*
+    - *SP is confused seeing two profiles (ex: LCN and NOMAD preferred) and asks if they can be merged and/or maybe asking if banking info from their LCN profile transfers to their preferred vendor profile.*
+    - *Request to merge profiles so payment information and work orders are on a single profile*
+- **SP requests to be added as a PM's preferred vendor**
+
+### **Templated Response to PM**
+
+When you escalate a ticket to Product Support, please communicate this with appropriate messaging to the property manager. This allows the Property Manager to know what to expect. Please use the below as a templated response:
+
+<Check>
+*Hello! Thanks for reaching out. I’ve opened up a ticket for you with the Product Support team so they can take a closer look at what’s going on. They will be reviewing your request and will send you a personal response via email (usually within one business day). Thank you for your patience.*
+</Check>
+
+### **Templated Response to Resident**
+
+<Check>
+*Do you mind if I connect you to one of our benefits experts? I specialize in maintenance. Someone from our benefits team will reach out within the next 24 hours to help you.*
+</Check>
+
+### **What to do if there is an ACTIVE work order inquiry requiring a PS ticket?**
+
+<Warning>
+**Important**: Before taking any action, Associates or Operations Support Specialist team members should first confirm with the PM or Owner what steps they would like to take regarding the work order (e.g., progressing the work order) while awaiting a resolution. For emergency work orders, PMs and Owners generally understand the urgency and will likely want the issue addressed even if there is a pending escalation. Associates should inform the PM/Owner that the work order needs to progress while awaiting the PS team’s resolution. They should be made aware that by doing this, the work order will be placed on hold, and no further action will be taken by Latchel.
+</Warning>
+
+1. If you are an associate handling this inquiry and the PM/Owner advised they will wait for the Product Support team's resolution, follow these steps:
+  1. **Say something like:**  
+“*Hi [Owner/PM’s Name], I totally understand you’d prefer to wait for the Product Support team’s resolution before moving forward. That said, to avoid delays on the work order while the ticket is being reviewed, we do have the option to go ahead with [brief action — assigning a service provider, scheduling, etc.].*
+*We’ll keep you updated on both ends — including any progress from Product Support about [brief reason for the PS ticket]. Let me know what you’d prefer and we’ll proceed accordingly.*”
+🎤 **Tip****:** Give the owner control, reduce friction, and show that you're proactively managing both the immediate need and the underlying concern.
+    1. If the Owner agrees to move forward, proceed with the necessary next steps based on the requirements of the work order. Ensure all relevant actions are taken to address the issue, and keep the Owner informed of any updates or progress.
+      1. **Say something like:**  
+“*Thanks for confirming, [PM/Owner's Name]. We’ll go ahead and [brief action, e.g., schedule the technician or move forward with next steps]. I’ve also flagged the issue with our Product Support team—they’ll take a closer look and get back to you by email, usually within one business day. Feel free to reach out if anything changes or if you have other questions in the meantime.*”
+🎤 **Tip****:** Reassure the owner you’re moving things along, while showing that the PS concern is also being handled in parallel.
+    2. If the Owner disagrees or insisted they will wait for the PS ticket to be resolved, proceed directly to Step b.
+      1. **Say something like:**  
+“*Got it—thanks for letting me know. I’ve noted that you’d prefer to wait for the Product Support team to review the issue before we proceed. I’ve paused any action on the work order for now, but let us know if anything changes or you decide to move forward. I’ll escalate this for you right away.*”
+🎤 **Tip****:** Acknowledge their preference, avoid pressure, and keep the door open for re-engagement.
+  2. Escalate to Product Support team by posting the request in the *ps-escalation *channel. Refer to https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-to-Product-Support.
+  3. When filling out the fields in the workflow, under the field ‘***Work Order on Hold Due to Pending PS Resolution***’,
+    1. **Enter “Yes”** if the owner decides to wait for the PS team’s resolution. This action:
+      1. Indicates that the owner has opted to wait.
+      2. Alert the PS team to email an update once the issue is resolved so the work order can be updated accordingly.
+      3. Escalate to the Operations Support Specialists so they can place the work order on Pending status with a task assigned to* Shift Support* group with the following information:
+        1. Subject: PS Ticket Resolution Monitoring
+        2. Who is this task about? choose the Owner/PM
+        3. Select a Date an Time: set the time after 24hrs
+        4. Assign to a User Group: Shift Support
+        5. Assign to a User: Leave as is
+        6. Priority: set to Highest
+        7. Never Complete on any job state change
+        8. Description: The Property Manager/Owner has reported [state the issue/complaint]. A PS ticket has been submitted, and the PM/Owner has chosen to wait for its resolution before proceeding. Please monitor the PS ticket resolution. You can refer to the ticket here: [insert PS ticket link].
+      4. Operations Support Specialists will monitor updates on the PS ticket. Once a resolution is provided, they should act based on the outcome to resolve the pending issue on the work order.
+        1. If the PS team responds **before the task’s due date**, the Operations Support Specialist team should take immediate action to move the work order forward.
+        2. Once the work order progresses, Operations Support Specialists can mark the assigned task as complete.
+    2. **Enter “No”** if the owner chooses not to wait for the PS team’s resolution and wants the work order to move forward immediately.
+      1. The PS team shall reach out to them once they’ve investigated the concern.
+
+## 🎯 When to Break This SOP
+
+This SOP is designed to cover the majority of escalation scenarios—roughly 80–90% of cases. However, no SOP can anticipate every situation. Use your judgment and break the SOP when the issue requires urgent action or falls outside of the outlined process. Break the SOP and escalate when:
+
+- **Follow-up inquiry is urgent but lacks a Slack thread:**  
+If the issue is clearly a follow-up but you're unable to locate the previous request in the #ps-escalation channel and the matter is time-sensitive (e.g., it’s blocking resolution for the customer), proceed with a new escalation in Step 2 instead of waiting for confirmation of the original thread.
+- **Details are incomplete but the escalation is critical:**  
+If the requester is missing a valid email address and you're unable to obtain it immediately, but the issue is urgent (e.g., a platform function is broken), escalate the concern with a contact number and flag the missing information in the submission. Notify support if further guidance is needed.
+- **The scenario seems like it should be escalated to Product Support—even if it’s not on the list:**  
+If the situation you're handling feels significant enough to warrant escalation to **Product Support**, even if it’s not listed in the current examples, and you believe immediate action is necessary—**especially if it involves a Property Manager or Owner’s customer experience**—go ahead and escalate. Be sure to flag that this may be a candidate for adding to the escalation list, and briefly explain your reasoning in the submission.
+
+## 💡 If You Think This SOP Could Be Improved...
+
+Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work?  
+ 👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**

@@ -1,0 +1,872 @@
+---
+title: "Follow Up Guidelines for On-Call Customers (app.latchel.com)"
+groups: ["latchel"]
+---
+
+## 🧠 What This Process Is Trying to Solve
+
+<Note>
+We want to prevent missed follow-ups, confusion, and inconsistent communication when residents or service providers reach out about their work orders under the On-Call program. The goal is to provide a clear, step-by-step process for associates to handle follow-up questions via SMS, calls, or email—ensuring every inquiry is acknowledged, properly documented, and escalated to the right party (like the Property Manager) when needed.
+</Note>
+
+<Warning>
+### **🚨 New On‑Call Alerts – Limited Customers Only**
+
+We are rolling out a new **On‑Call Alerts** model. This applies to properties that have the **On-Call add-on** enabled. To confirm if a property is on this model, navigate to the property page in [app.latchel.com](http://app.latchel.com/) and check the **Addon** field — it should display **"On-Call"**.
+</Warning>
+
+**Content***
+
+## **🗂️Scope**
+
+<Note>
+We are rolling out a new **On‑Call Alerts** model. This applies to properties that have the **On-Call add-on** enabled. To confirm if a property is on this model, navigate to the property page in [app.latchel.com](http://app.latchel.com/) and check the **Addon** field — it should display **"On-Call"**.
+</Note>
+
+<Note>
+**Note:** The call center should no longer use the Leo/Roers-specific intake page on [on-call.latchel.com](http://on-call.latchel.com). All Leo/Roers requests must now be processed through the standard call center page in [app.latchel.com](http://app.latchel.com).
+
+Refer to [**(TECH 101) How to: Create a New Work Order from "Incognito Mode" (All Submissions)**](https://latchel.atlassian.net/wiki/spaces/OPS/pages/781647909)[.](https://latchel.atlassian.net/wiki/spaces/OPS/pages/781647909)
+
+Moving forward, **Roers** should be handled as **standard On-Call**, and associates should refer to this SOP as the primary source of guidance.
+</Note>
+
+<Warning>
+**This SOP now covers two related workflows**:
+
+1. **New On‑Call Alerts**
+  - When the intake rule state is **“Contact On-Call”**, an **On‑Call Alert** is created **instead of a WO**.
+    - <Frame>
+  ![image-20260113-232712.png](/images/SVC-888.png)
+</Frame>
+  - Follow‑ups must be managed from the **On‑Call Alerts** tab (not from a work order).
+2. **Other Work Orders**
+  - When an intake session outcome matches anything other than “Go On Call”, a **Work Order** is created in [app.latchel.com](http://app.latchel.com/).
+  - Follow‑ups from residents or service providers are handled by checking the **work order details** and following the **Step‑by‑Step Process** below.
+</Warning>
+
+<Danger>
+***Associates are not permitted to update the work order status; however, they may take actions on the work order under the following specified conditions:***
+
+- Placing *notes* on the work order
+- Updating the "*Service Provider Instructions*"
+- Updating "*Access Instructions*" or "*Permission to Enter*"
+- Creating a *task for the Property Manager*
+
+**For On-call alerts, associates are not permitted to create a task for the PM**
+</Danger>
+
+## 📋 Step-by-Step Process
+
+<Warning>
+### 🔄 Calling Policy (On‑Call Follow‑ups)
+
+**Do not place outbound calls to residents, Property Managers, or Service Providers for On‑Call follow‑ups. Use SMS/email and the Response Links in app.latchel.com.**  
+**Exception: The Need to Verify (NTV) workflow may require an outbound call to the resident as described in the Handling “Need to Verify” Inquiries section.**
+
+**When a PM or On-Call Technician Contacts Us**
+
+- **Treat the caller (reporting party) like a resident and follow the standard resident-reported intake/on-call workflow.**
+- **If changes are needed, submit a new WO/alert through the normal process, just as you would for resident inquiries.**
+- **This applies even if a different technician may be dispatched for the new WO/alert.**
+- **When submitting a new work order or on-call alert, choose/select the primary resident associated with the property.**
+- **Always document the reason for creating/submitting a new work order/alert and who contacted us (inbound).**
+</Warning>
+
+Residents or Service Providers may reach out to follow up on their maintenance requests. When a resident or service provider reaches out to follow up, the associate should first identify if they are *On-Call* customers. Below are the steps associates should take to manage these inquiries effectively. 
+
+1. **Determine if the property has an on-call rotation add-on.**
+  1. **📝** **NOTE*****:***** What is an On-call rotation?**
+    1. *On-call rotation is a feature for Leo247 and other multifamily on-call customers. This feature allows Multi Family clients to schedule an on-call rotation for their in-house techs.*
+  2. Navigate to the property page and locate the *Addon*; they should display "**On-call**" as shown in the sample below
+    1. <Frame>
+  ![image-20260113-172534.png](/images/SVC-889.png)
+</Frame>
+
+## New On-Call Alerts
+
+<Note>
+**🔍 What Happens Before This** **Process?**
+
+- When an intake session matches with a “Go On Call” outcome, an On-Call Alert will be created (instead of a Work Order)
+  - <Frame>
+  ![image-20260113-174221.png](/images/SVC-890.png)
+</Frame>
+  - For all other outcomes, a Work Order will be created as usual.
+- Ops will see a new tab for On-Call Alerts (next to the Maintenance tab) in the PM, portfolio, property and resident views.
+- PM users can view On-Call Alerts under their Maintenance dropdown menu.
+</Note>
+
+### 1️⃣ Where Ops should look for On-Call Alerts
+
+When a **resident** or **service provider** or **PM** from an on-call customer follows up about an on-call issue:
+
+1. **Search for a work order as you normally would.**
+2. **If no work order is found for the issue:**
+  1. Confirm that the PM company is an on-call customer.
+  2. Go to the **PM, portfolio, property, or resident** view in `http://app.latchel.com`.
+  3. Click the **On-Call Alerts** tab (next to the **Maintenance** tab).
+    1. <Frame>
+  ![image-20260112-202351.png](/images/SVC-891.png)
+</Frame>
+  4. Look for the relevant alert (use resident name, property, and recent date/time to identify it).
+
+> **Note:** There is **no dedicated search** inside the On-Call Alerts tab yet, and On-Call Alerts are **not included in global search**. We plan to add this. For now, Ops may need to visually scan the alerts list to find the correct one.
+
+### 2️⃣ How to respond when an On-Call Alert exists
+
+When you open the On-Call Alert:
+
+1. **Check the current Status** of the alert.
+  1. **Refer to **https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Follow-Up-Guidelines-for-On-Call-Customers-app-latchel-com.
+2. **Use the Response Link for follow-ups:**
+  1. Vendors (on-call techs), backup contacts (PMs), and residents receive a **response link by SMS/email** when the alert is created or updated.
+    1. To access the response links and use them when a customer makes a follow-up, open the **On-Call Alert Details**.
+    2. Once opened, you will see sections for **Vendor**, **Backup Contact**, and **Resident**, each with a response link below it. Use the appropriate response link depending on who is making the follow-up.
+    3. <Frame>
+  ![image-20260113-175641.png](/images/SVC-892.png)
+</Frame>
+  2. **For follow-up questions**, Ops should:
+    1. Inform the caller of the **current Status** of the alert, and
+    2. **Copy/paste or re-send the Response Link** so they can review or take the appropriate action on their side.
+    3. **Say something like:** *“Hi [Customer Name], thanks for reaching out. The current status of your request is ****[Status]****. You may have received a link to view updates before, but I’m sending it again so you can quickly see the latest details and take any action if needed: [Insert Response Link].”*
+  3. **If the resident says the issue has gotten worse, reoccurred or not resolved ** and the alert is in **Successful, Escalated, or Cancelled**:
+    1. Advise that they (or Ops on their behalf) can **submit a new request**.
+    2. If the intake session matches to a “Go On Call Outcome,” this will create a **new On-Call Alert** and the on-call tech will be alerted again.
+    3. **Say something like:** *“I understand the problem has (gotten worse, reoccurred, not resolved). Since this request is already ****[Completed / Escalated / Cancelled]****, we’ll need to create a new request. You can submit it using this link **[insert the link to the resident’s public dashboard]**, or I can create it for you. Once it’s submitted, the tech will be notified and will contact you.”*
+      1. If the resident chooses to submit the request themselves, no further action is needed. 
+      2. If the resident asks for assistance and wants you to submit the request on their behalf, go ahead and submit it (this applies to calls and emails only). For requests received via SMS, follow our standard process and direct the resident to submit the maintenance request themselves.
+3. **Tasks for PMs:**
+  - For these On-Call Alerts, **Ops will not create tasks for PMs on the alert itself**.
+  - Continue to follow existing PM communication and task-management guidelines for all other PM-related concerns.
+
+## On-Call Video Call Troubleshooting
+
+This outlines the video call troubleshooting capability, available for properties with the On-Call add-on when video troubleshooting is enabled.
+
+### When Video Call Troubleshooting Applies
+
+1. When a resident submits a maintenance request, that results in a **“Contact On-Call”** outcome. The resident will receive a notification that includes an option to **text Latchel to request video troubleshooting** while awaiting the arrival of the on-call technician.⏳
+  1. Here’s a sample notification.
+    1. <Frame>
+  ![image-20260205-172240.png](/images/SVC-893.png)
+</Frame>
+  2. If the resident requested a video call, an SMS to Latchel will be triggered.
+    1. 📱 **Example SMS Request:**** ***“I want a video call.”*
+
+<Warning>
+For **On-Call Alerts**, there is **no capability to create a task** within the alert. As a result, a **task creation to notify a troubleshooter is not supported** in this environment.
+</Warning>
+
+For **SMS Associates **that receives the video call request**, **the associates must:
+
+1. Post the request in the #***ops_assistance_hub*** Slack channel by tagging @support**.**
+2. Ensure Operations Support Specialists are aware so an available **Troubleshooter** can be tagged to initiate the video call.
+
+### How Video Calls are Performed For On-Call Residents
+
+1. From the **Intake Session**, go to the **Resident** section.
+2. Click the resident’s **hyperlinked name** to open the resident profile.
+3. <Frame>
+  ![image-20260709-023800.png](/images/SVC-894.png)
+</Frame>
+On the resident profile, click the **three-dot menu** beside the resident’s phone number to display the available contact options.
+  1. <Frame>
+  ![image-20260709-024418.png](/images/SVC-895.png)
+</Frame>
+  2. Select **Video Chat** from the dropdown menu.
+
+## PM Communication
+
+There may be instances where a PM needs to reach out about an On-call work order. As part of our commitment to providing a positive experience, we will assist them to the best of our ability. However, there are a few additional steps we need to complete to ensure a smooth transition and help them understand the new process they need to follow when they are set up for On-call. 
+
+Below are common scenarios that Property Managers may contact us about. Follow the instructions provided for each scenario. 
+
+<Warning>
+***If the action requested by the PM is not covered in these guidelines, please escalate the issue to Product Support.***
+
+1. Submit a Product Support ticket as an FYI. See https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-to-Product-Support.
+  1. Write Effective Notes
+    1. See https://latchel.atlassian.net/wiki/spaces/OPS/pages/1058211367 
+</Warning>
+
+<Accordion title="Q: Request a restart of my on-call rotation">
+A: Inform the Property Manager that the technician can still accept the job by responding to the message alert that was previously sent. This will initiate the next steps and ensure the resident is informed about when they will be contacted by the technician.
+
+ *Hello, ****[PM name]****! Thank you for contacting our team! Please note that the technician can still accept the job by revisiting the SMS alert they received and responding to it. This will trigger the next steps and send notifications to your resident regarding when they will be contacted by the technician. If you need any further assistance, don’t hesitate to reach out. Thank you, and have a wonderful day!*
+</Accordion>
+
+<Accordion title="Q: Request permission from my resident to enter the property.">
+*A: * *Hello, ****[PM name]****! Thank you for reaching out to our team! We're happy to help add this information to the work order if you have it available. We recommend that the technician communicate directly with the resident to coordinate access as needed. If you need any further assistance, feel free to contact us. Have a wonderful day!*
+</Accordion>
+
+<Accordion title="Q: Request photos from my residents.">
+A:   *Hello, ****[PM name]****! Thank you for reaching out to our team! **To assist you further with the request, please inform your resident to upload any necessary documents or photos directly through their resident portal. Thank you, and have a wonderful day!*
+
+- If the Property Manager pushes back and requests that we ask the resident directly:
+  -  *Hello, ****[PM name]****! We understand your concerns and are here to assist. We'll reach out to the resident via SMS this time. If we receive any photos, we'll upload them to the job for you. Thank you, and have a wonderful day!*
+
+1. Send the following SMS to the resident.
+  1.  *Hi ****[Resident name]****! We are reaching out about your maintenance request for ****[work order title]****. Please be advised that we will need photos of the issue. You can easily upload this through your **resident portal: [insert the link to the resident’s public dashboard].** Thank you and have a wonderful day!*
+
+If an associate receives photos from the resident via SMS/email;
+
+1. Upload the photos to the work order.
+2. Proceed to create the task to the Property Manager
+  1. Subject: *Resident submitted photos of the issue*
+  2. Who is this task about? - *Choose the resident*
+  3. Select a Date an Time: *Leave as is*
+  4. Assign to a User Group: *PM User Group*
+  5. Assign to a User: *Leave as is*
+  6. Priority: *Highest*
+  7. Complete task on any job state change.
+  8. Description: *The resident has submitted the requested photos. These photos have been uploaded to the work order files. Thank you.*
+</Accordion>
+
+<Accordion title="Q: I want this job cancelled.">
+A:  *Hello, ****[PM name]****! Thank you for contacting our team! We're happy to assist with your request. The work order has been successfully canceled as per your instructions. If you need any further assistance, please don’t hesitate to reach out. Thank you, and have a wonderful day!*
+
+1. Proceed to cancel the work order.
+2. Write Effective Notes
+  1. See https://latchel.atlassian.net/wiki/spaces/OPS/pages/1058211367 
+</Accordion>
+
+<Accordion title="Q: Mark this job as complete.">
+A:  *Hello, ****[PM name]****! Thank you for contacting our team! We're happy to assist with your request and have marked the work order as completed per your instructions. If you need any further assistance, please don’t hesitate to contact us. Thank you, and have a wonderful day!*
+
+1. Proceed to mark the work order as complete.
+2. Write Effective Notes
+  1. See https://latchel.atlassian.net/wiki/spaces/OPS/pages/1058211367 
+</Accordion>
+
+<Accordion title="Q: I don’t see this job in my Leo account. Has Latchel added it?">
+A.  *Hello, ****[PM name]****! Thank you for contacting our team! We’re sorry to hear about your concern. I will escalate this to our support team to ensure it is added to Leo. If you need any further assistance, please don’t hesitate to reach out. Thank you, and have a wonderful day!*
+
+1. Post the request in the #ops_assistance_hub*** ***channel so Operations Support Specialists can check if the work order is in Leo. 
+  1. If the work order is not in Leo, Operations Support Specialists should add the work order in Leo following the guidelines in https://latchel.atlassian.net/wiki/spaces/OPS/pages/3115548673
+</Accordion>
+
+<Accordion title="Q: What should I do if a work order was created for the wrong property?">
+1. **Cancel** the work order associated with the incorrect property.
+2. In the cancellation **note**, clearly state the reason (e.g., “Work order created under the wrong property”).
+3. **Create a new work order** under the correct property, ensuring all relevant details are carried over accurately.
+
+✅ *Always double-check the property information before submitting or re-creating a work order to avoid repeat errors.*
+</Accordion>
+
+<Accordion title="Q: Troubleshoot with the resident by asking [custom question]">
+TBD
+</Accordion>
+
+<Accordion title="Q: My on-call technician never received a call (or sms, email) from Latchel">
+A: Review the work order notes to verify if the alerts (calls, SMS, emails) were sent to the on-call technician and ensure we have the correct contact information for them.
+
+1. If all information is correct and notifications were sent, but the PM believes they were not received:
+  1. Proceed to submit a report to the *#bug-report *channel.
+  2. Escalate to Product Support team and include the link to the bug in your request. Refer to https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-to-Product-Support 
+2. If we have incorrect contact information
+  1. Escalate to Product Support team. Refer to https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-to-Product-Support 
+3. Respond to the Property Manager
+  1.   *Hello, ****[PM name]****! Thank you for contacting our team! I’ve opened up a ticket for you with the Product Support team so they can take a closer look at what’s going on. They will be reviewing your request and will send you a personal response via email (usually within one business day). Thank you for your patience.*
+4. Write Effective Notes
+  1. See https://latchel.atlassian.net/wiki/spaces/OPS/pages/1058211367 
+</Accordion>
+
+<Accordion title="Q: Create a work order for this property.">
+A: Proceed to create the work order. Refer to https://latchel.atlassian.net/wiki/spaces/OPS/pages/781647909 
+
+  *Hello, ****[PM name]****! Thank you for contacting our team! We have successfully created the work order for this property. The work order is now on [On-call alert status]. Here is the work order number for your reference. If you need any further assistance, please don’t hesitate to reach out. Thank you, and have a wonderful day!*
+</Accordion>
+
+<Accordion title="Q: I want to update (add or remove) the escalation contact list.">
+A: Escalate to Product Support. Refer to https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-to-Product-Support.
+</Accordion>
+
+## How to Check the On-Call Alert Status
+
+On the On-Call Alerts tab, located beside Intake Sessions, you will see a list of on-call alerts, including the alert name, start date, property address, and status.
+
+<Frame>
+  ![image (41).png](/images/SVC-896.png)
+</Frame>
+
+### On-Call Alert Statuses
+
+<Accordion title="Contacting On-Call">
+1. **Alerting Vendor -** Latchel is alerting the On-Call Technician of a potential emergency and waiting for them to acknowledge the alert.
+  1. <Frame>
+  ![image (42).png](/images/SVC-897.png)
+</Frame>
+2. **Alerting Back-up - **The Vendor didn’t answer within the PM’s SLA, so we’re alerting the Backup and waiting for them to acknowledge the alert.
+  1. <Frame>
+  ![image (43).png](/images/SVC-898.png)
+</Frame>
+3. **Escalated -** Neither the Vendor nor the Backup acknowledged so we’ve emailed the PM’s final escalation contacts.
+  1. <Frame>
+  ![image (44).png](/images/SVC-899.png)
+</Frame>
+4. **Successful - **Vendor or Backup acknowledged the alert and will contact the resident regarding next steps.
+  1. <Frame>
+  ![image-20240830-003739.png](/images/SVC-900.png)
+</Frame>
+5. **Cancelled **- The resident cancelled the On-Call Alert via their Response Link. 
+  1. <Frame>
+  ![image (45).png](/images/SVC-901.png)
+</Frame>
+
+***Refer to the below section for more information on Response Links.***
+</Accordion>
+
+<Accordion title="Technician Dispatched">
+When a technician is dispatched for a work order, residents will receive a notification via SMS or email informing them that a technician is working on the issue and will contact them at a specified time. Similarly, the On-call service provider will receive a notification prompting them to reach out to the resident. 
+
+1. **On-call service provider notification**
+  1. <Frame>
+  ![image-20241031-191640.png](/images/SVC-902.png)
+</Frame>
+2. **Resident notification**
+  1. <Frame>
+  ![image-20241031-192832.png](/images/SVC-903.png)
+</Frame>
+3. **Resident Notification** (*Confirming Technician Contact*) After the specified time, a follow-up notification will ask if they were contacted as expected. The email will include a link to their portal, where they can select “Confirm Technician Contact” and choose one of three options to confirm.
+  1. <Frame>
+  ![image-20241031-192029.png](/images/SVC-904.png)
+</Frame>
+  2. <Frame>
+  ![image-20241031-192308.png](/images/SVC-905.png)
+</Frame>
+  3. Once an option is selected, the corresponding status note will be updated in the work order on their portal.
+    1. **Contact Confirmed** - This status note will appear if the resident selects either of the first two options, indicating that they were contacted.
+    2. <Frame>
+  ![image-20241031-181405.png](/images/SVC-906.png)
+</Frame>
+    3. **Resident Not Contacted **-The status note will display if the resident selects "I have not been contacted yet." However, residents will still have the option to confirm contact afterward.
+    4. <Frame>
+  ![image-20241031-181253.png](/images/SVC-907.png)
+</Frame>
+</Accordion>
+
+## Latchel Ops-Assigned Task Management
+
+This section outlines how the Latchel Operations team should review, complete, and create follow-up tasks related to work orders.
+
+<Warning>
+**IMPORTANT: **Use the guidelines below **when a task is assigned to the Latchel Ops team**.
+
+Ops creates tasks for **follow ups only on work orders that did not have a “Go On Call” outcome.**
+</Warning>
+
+1. Review the Task Assigned to the Latchel Ops Team.
+  1. Determine whether the task was **automatically created by the system** or **manually created by Latchel Ops**, and proceed according to the applicable steps below.
+  2. Task automatically created by the system
+    1. <Frame>
+  ![image-20240819-213022.png](/images/SVC-908.png)
+</Frame>
+    2. Check related notes to the task to get more information such as: resident left notations or any recent updates. 
+    3. Complete the automated task and create a new one with the necessary information assigning it to the PM User Group.
+    4. Submit a report to the *#bug-report *channel
+  3. Task manually created by Latchel Ops
+    1. Read the task description. If the task was created for Ops to follow up (except for reasons outlined here https://latchel.atlassian.net/wiki/spaces/OPS/pages/edit-v2/3132325894#PM-Communication), proceed to complete the task.
+      1. If an update to the PM is needed, create a new task and assign it to the PM User Group.
+    2. Post this on the *#emergency-escalations channel *for visibility.
+      1. Operations Support Specialists must follow guidelines ins Step 6 from https://latchel.atlassian.net/wiki/spaces/OPS/pages/783745716 
+
+## Handling “Need to Verify” Inquiries
+
+<Note>
+Following the migration of applicable On-Call customers to the app.latchel environment, all "Need to Verify" inquiries should be handled according to this SOP to ensure accurate property and resident verification.
+</Note>
+
+<Warning>
+**📝 Note:** This NTV workflow is the **only approved outbound calling scenario** in this SOP.
+</Warning>
+
+<Warning>
+The designated escalation contact for ROERS is **Ben**, a member of Latchel. As such, he is not in a position to independently validate a “Need to Verify” email using our standard process for NTV.  
+
+Therefore, the NTV process for ROERS should follow the steps outlined below.
+</Warning>
+
+### Step 1 - Find an Existing Work Order Under the Same Phone Number or Property Address
+
+1. This is the generic message that is sent from the Latchel call center. 
+2. <Frame>
+  ![image-20260217-195503.png](/images/SVC-909.png)
+</Frame>
+3. Before creating a new Work Order, search for a work order under the same phone number.
+  1. For detailed instructions, review the SOP: https://latchel.atlassian.net/wiki/spaces/OPS/pages/759562243 
+  2. If No Matching Phone Number is Found:
+    1. Copy the first line of the resident’s property address.
+    2. From the **Latchel Console Interface**, click the **Properties** tab.
+    3. Paste the property address into the search bar and search.
+  3. **If the Property Address Is Not Found in Console:**
+    - Checkhttps://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Follow-Up-Guidelines-for-On-Call-Customers-app-latchel-com**FAQ 6 **and search the [spreadsheet ](https://docs.google.com/spreadsheets/d/1h5R7llBOhghW9uAywiLQ05JJxmD2bnG7lm8ts7JO0_Q/edit?gid=0#gid=0)for the address.
+      - Sometimes, residents may give an incorrect or slightly different address that doesn’t match what’s in our records.
+      - **👉 For Example**: The resident says they live at **“15470 Founders Lane”**, but the correct address in our system is **“15380 Garrett Ave.” **
+    - <Frame>
+  ![image-20260217-200923.png](/images/SVC-910.png)
+</Frame>
+    - If the address is located, verify whether the unit number appears in the system.
+      - If the unit appears, the resident is active, but the contact information is outdated, update the contact details accordingly. Proceed to** Step 4. **
+      - If the unit information is missing, or
+      - If the property is not listed 
+        - Proceed to **Step 2 **of this process.
+
+### Step 2 - Call the Resident to Confirm their Property Manager and the Property Details
+
+1. Call the resident to confirm the following information, as gathered previously by the call center:
+  1. Property address ***(including unit number or apartment name****)- to facilitate search in the system or via spreadsheet guidance*
+  2. Property Management Company
+  3. Resident’s name
+  4. Resident’s phone number
+  5. Resident’s email (optional) 
+2. Verify in Latchel Console
+  1. From the **Latchel Console Interface**, go to **People → Property Managers**.
+  2. Search for the PM company (**ROERS**).
+  3. Once ROERS appears, click on the portfolio and search for the apartment/portfolio name.
+    1. <Frame>
+  ![image-20260217-224928.png](/images/SVC-911.png)
+</Frame>
+  4. **Scroll down and allow all properties to fully load.**
+    1. <Frame>
+  ![image-20260217-201047.png](/images/SVC-912.png)
+</Frame>
+  5. If the resident **cannot **provide the apartment/portfolio name:
+    1. Use the general search box to search for the address.
+    2. Identify the closest apartment name and the portfolio to which it belongs.
+
+      1. <Frame>
+  ![image-20260217-223232.png](/images/SVC-913.png)
+</Frame>
+      2. <Frame>
+  ![image-20260217-201229.png](/images/SVC-914.png)
+</Frame>
+
+### Step 3:  Adding the Missing Addresses
+
+1. If the address cannot be located in the system after exhausting the spreadsheet and system search steps:
+
+<Warning>
+Adding the address under the correct portfolio ensures proper routing and triggers the correct on-call rotation.
+</Warning>
+
+1. Add the address from the console interface.
+  1. <Frame>
+  ![image-20260217-201717.png](/images/SVC-915.png)
+</Frame>
+  2. Once the profile is created, click the **three dots** and select **“Set Portfolio”**.
+    1. <Frame>
+  ![image-20260217-201944.png](/images/SVC-916.png)
+</Frame>
+  3. Choose the portfolio and click **submit.**
+    1. <Frame>
+  ![image-20260217-202117.png](/images/SVC-917.png)
+</Frame>
+    2. <Frame>
+  ![image-20260217-202159.png](/images/SVC-918.png)
+</Frame>
+
+### Step 4:  Work Order Creation
+
+1. Once the property address has been added to the correct portfolio, you can proceed with **creating the work order** following the standard intake process. 
+
+### FAQs for NTVs
+
+<Accordion title="Q: How should we proceed if the resident does not respond to verification calls?">
+If the resident is unresponsive to calls to verify the NTV request, search for the address in the system. 
+
+- If the address is active and the resident is registered, update the phone number on file and proceed with creating a work order.
+  - **Workaround for Issues Updating the Phone Number:**
+    - <Frame>
+  ![image-20260217-202845.png](/images/SVC-919.png)
+</Frame>
+    - Delete the primary email and move it to the secondary email field (a duplicate primary email may cause the error).
+    - Update the phone number.
+- If the address does not appear in the system, but the spreadsheet identifies the appropriate portfolio where it should be added, and the unit number is indicated on the NTV report, follow the steps outlined here: https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Follow-Up-Guidelines-for-On-Call-Customers-app-latchel-com and create the work order. 
+- If the address is not found in the system, the unit number was not included on the NTV request, and the address cannot be located in the spreadsheet—even after searching for the closest match in the Console and failing to identify the appropriate portfolio—we cannot proceed with creating the work order.
+
+**📝** **Note:** Adding the address to the correct portfolio ensures accurate routing and the correct on-call rotation is applied.
+</Accordion>
+
+<Accordion title="Q: How do we proceed if the contact information is missing in the NTV email?">
+A: Associates may encounter NTV emails for Roers that do not include resident contact information. When this occurs, follow the process below:
+
+<Frame>
+  ![image-20260423-235322.png](/images/SVC-920.png)
+</Frame>
+
+1. Use available details (property/community name, address, unit, etc.) to locate the property and associated residents in [app.latchel.com](http://app.latchel.com).
+2. Search using the property information from the NTV email: check existing WOs (per Step 1) and/or search Properties in Console. Consult the address matching [spreadsheet ](https://docs.google.com/spreadsheets/d/1h5R7llBOhghW9uAywiLQ05JJxmD2bnG7lm8ts7JO0_Q/edit?gid=0#gid=0)if needed.
+3. Open the located property/unit and review the listed residents.
+4. Attempt verification outreach using any available resident contact methods (per the NTV workflow).
+  1. If resident contact information is found, proceed to call the resident and verify the submitted issue.
+  2. If no resident contact information is found, try calling active residents listed at the same property to gather more information.
+  3. If no resident contact information exists after completing these checks, still submit/create the work order so the PM is notified via the WO.
+    1. Set the phone number as **(000)-000-0000** in the meantime.
+<Frame>
+  ![image-20260423-235352.png](/images/SVC-921.png)
+</Frame>
+  4. Follow the remaining steps to submit the work order.
+</Accordion>
+
+## Frequently Asked Questions
+
+<Accordion title="Q1: How do we assist a Service Provider who advises they missed acknowledging an alert?">
+**A**: Review the recent work order notes to verify if the alerts were successfully sent (***see sample image below***). Even if an on-call technician misses the alert via SMS or phone, they can still accept the job by responding to the SMS alert.
+
+<Frame>
+  ![image-20240904-171620.png](/images/SVC-922.png)
+</Frame>
+
+<Check>
+*Hi [Service Provider's Name]! Thank you for reaching out! We understand that you may have missed to acknowledge the alert. Please be advised that you can still acknowledge it by simply going back to the SMS alert that was sent and responding to it to acknowledge the job. Thank you, and have a great day!*
+</Check>
+</Accordion>
+
+<Accordion title="Q2: How do we proceed with tenant initiated WO cancellation?">
+1. Please ask the resident to log in to their dashboard and cancel the work order from there.
+
+<Check>
+***Hello, [Resident's Name]!***  
+*Thanks for reaching out. Please log in to your resident portal by visiting [insert link here]. From your dashboard, you’ll have the option to request the cancellation.*
+
+*Let us know if you need any help. Thank you, and have a great day!*
+</Check>
+
+2. If the resident agrees, you can close the conversation.
+3. If the resident pushes back, take action on their behalf **only if the technician has not yet accepted the alert**.
+
+   a. Open the **Resident Response Link** and **Cancel**.  
+
+<Frame>
+  ![image-20260202-204808.png](/images/SVC-923.png)
+</Frame>
+
+<Danger>
+**NOTE**:  Cancellation is only possible between the time the request is submitted and before the technician accepts it. 
+</Danger>
+
+**⚠️ If the technician has already accepted the alert:**
+
+Cancellation is **no longer available** through the system once the on-call technician has accepted the job. This is a system-wide limitation (not specific to any single customer).
+
+**What to tell the resident:**
+
+*"Hello, [Resident's Name]! Thanks for reaching out. Unfortunately, since the on-call technician has already accepted your request, we're unable to cancel it through our system at this time. We recommend informing the technician directly if/when they reach out to coordinate service, and letting them know the issue no longer requires attention. This will help avoid any unnecessary trip charges. If you need further assistance, please don't hesitate to reach out. Thank you, and have a great day!"*
+
+**Ops documentation:**
+
+- Add a note to the work order/alert: *"Resident requested cancellation after tech accepted. Advised resident to inform tech directly. Cancellation not available post-acceptance per system limitation."*
+</Accordion>
+
+<Accordion title="Q3: If I can’t find a work order for an On‑Call customer in app.latchel.com, where should I look?">
+- First, confirm if the property has the **On-Call add-on** enabled by checking the **Addon** field on the property page in [app.latchel.com](http://app.latchel.com/).
+- If yes, and the intake was a **“Go On Call”** outcome, there may be **no WO created**. You must:
+  - Go to the PM/portfolio/property/resident page in `http://app.latchel.com`
+  - Open the **On‑Call Alerts** tab next to the **Maintenance** tab
+  - Find the relevant alert by resident/property and recent date
+</Accordion>
+
+<Accordion title="Q4: What happens to existing work orders for On-Call customers once the new On-Call tab launches?">
+**A:** For customers on the On-Call program, any pre-existing on-call work orders will still appear in the **Maintenance** tab, and they will also be visible under the new **On-Call** tab.
+
+- Example: A work order currently in **“Contacting On-Call”** (such as `https://app.latchel.com/admin/work-order/1UalV`) will remain in the Maintenance view, but will also show in the On-Call tab for that customer.
+- **New** on-call alerts created after the launch date will appear **only** in the **On-Call** tab.
+</Accordion>
+
+<Accordion title="Q5: What happens to customers who are not part of the 6 affected On-Call pilot customers?">
+**A:** For customers who are **not** on the On-Call product:
+
+- Their maintenance requests will continue to generate and display as **standard work orders** in the **Maintenance** tab only, exactly as they do today.
+- Their **On-Call** tab will remain **empty**, since they are not enrolled in the On-Call product.
+</Accordion>
+
+<Accordion title="Q6: For Leo(ROERS) customers, what should I do if I select “No” for the associated property and the resident’s property cannot be found in the system?">
+If you choose **"No"** when asked if you are calling about the associated property, you will be prompted to search for the resident's property in the system.
+
+**‼️IMPORTANT:**** Refer to the workarounds below if the property is not found within the system. **
+
+1. **Step 1. Ask the resident for their building/community name (portfolio in Latchel) or their unit number.**
+  1. When there is no matching resident property on search, you will be prompted with the below:
+    1. <Frame>
+  ![image-20251124-190802.png](/images/SVC-924.png)
+</Frame>
+ **Say something like**: *I am having trouble finding your address. Can you provide a building or community name? Alternatively can you provide your unit number?*
+  2. **Example 1:** The resident says they live in the “Mural” Apartments. Enter this in the search bar to locate their information.
+  3. <Frame>
+  ![image-20251120-214540.png](/images/SVC-925.png)
+</Frame>
+  4. **Example 2:** The resident provides a unit number, such as “C114.” You can search using the unit number to find the matching portfolio and unit.
+  5. <Frame>
+  ![image-20251120-214707.png](/images/SVC-926.png)
+</Frame>
+2. **Step 2. ***(use this step if Step 1 won’t work) ***Check the property address using the **[**spreadsheet**](https://docs.google.com/spreadsheets/d/1h5R7llBOhghW9uAywiLQ05JJxmD2bnG7lm8ts7JO0_Q/edit?usp=sharing)**.**
+  1. Sometimes, residents may give an incorrect or slightly different address that doesn’t match what’s in our records.
+  2. **👉 For Example**: The resident says they live at **“15470 Founders Lane”**, but the correct address in our system is **“15380 Garrett Ave.” **When this happens, you might see an **error message** while trying to submit the work order.
+    1. <Frame>
+  ![image-20251014-165100.png](/images/SVC-927.png)
+</Frame>
+    2. **We now have a way to search for additional variations to the address name. Open the **[**Address Matching Spreadsheet**](https://docs.google.com/spreadsheets/d/1h5R7llBOhghW9uAywiLQ05JJxmD2bnG7lm8ts7JO0_Q/edit?usp=sharing)
+    3. Locate the spreadsheet used for verifying or matching addresses.
+    4. Type in the address the resident gave (e.g., “15470 Founders Lane”) and look for the matching property under **Primary Address **column in the spreadsheet.
+    5. <Frame>
+  ![image-20251014-163622.png](/images/SVC-928.png)
+</Frame>
+    6. If the resident did **not** mention a unit number, confirm their **exact unit** before proceeding.
+    7. Use the **Primary Address** and the **confirmed unit number** from our records when creating the work order.
+      1. <Frame>
+  ![image-20251014-165209.png](/images/SVC-929.png)
+</Frame>
+3. Using either method will make it easier to locate the resident in the On-Call environment.
+4. Continue with the next steps to submit the work order.
+</Accordion>
+
+<Accordion title="Q7: What is the standard approach if Harmonia assigns an incorrect severity due to an inaccurate tenant response or a rule-matching failure and defaults to the fallback instead of generating an On-Call task?">
+- If the incorrect severity is caused by an **inaccurate tenant response**, the standard approach is to **resubmit the work order with the correct severity** so it follows the on-call rotation.
+- If the issue is due to a **Harmonia rule-matching failure**, a #**bug report**** should be submitted** so the behavior can be reviewed and corrected.
+</Accordion>
+
+<Accordion title="Q8: If a work order or On-Call alert is not visible on our end and the tenant indicates it was submitted by the landlord or Property Manager, is submitting a new work order appropriate?">
+- When an existing work order or On-Call alert for the same issue is not visible, a new work order should be submitted.
+</Accordion>
+
+<Accordion title="Q9: If new or updated information needs to be added, should we create a new work order?">
+- Yes. If any information has changed since the** last submission**, a new work order should be created to ensure the update is captured and processed correctly.
+</Accordion>
+
+<Accordion title="Q10: Handling On-Call Work Orders for Non-Portfolio or Offboarded Properties">
+**Overview:**  
+Some work orders submitted for On-Call PMs are not linked to any portfolio, which can result in a failed On-Call rotation and trigger the creation of an emergency work order. Refer to the **FAQs **below for guidance.
+
+**Q1: Is there a system or reference to confirm a serviceable property outside of a portfolio?**
+
+**A:** Currently, the [**spreadsheet **](https://docs.google.com/spreadsheets/d/1h5R7llBOhghW9uAywiLQ05JJxmD2bnG7lm8ts7JO0_Q/edit?gid=0#gid=0)is the primary reference. Non-portfolio properties not listed there are not serviceable. 
+
+**Q2: What if a WO comes from a property not in a portfolio?**  
+**A:** Submit a **PS (Product Support) ticket** with the following details:
+
+- Property ID
+- Full address
+- Summary of steps already taken (spreadsheet checked, portfolios searched, partial matches found)
+
+The PS/Data Support team will handle the portfolio assignment. If they cannot resolve it, they will escalate further to Ethan.
+
+**Q3: Do we maintain a list of offboarded portfolios?**
+
+**A:** We recently reviewed all Roers properties not currently in a portfolio. Active properties were moved into portfolios. 
+
+Properties remaining **outside **portfolios are **not **on the spreadsheet and are considered **non-serviceable** until further updates.
+
+**Q4: How do we set the tenant’s expectations regarding the submitted WO?**
+
+**A:** If the address is not serviceable, continue canceling the work order. If speaking with the resident, advise them to coordinate directly with their Property Management for the maintenance request, as we are unable to provide assistance for unserviceable addresses.
+</Accordion>
+
+<Accordion title="Q11: A Service Provider contacts us about a ROERS non-maintenance concern (e.g., invoice follow-up, payment inquiry, contract question). What should we do?">
+**A:** Use this guidance **only for ROERS-related non-maintenance requests from Service Providers**. These requests fall outside the standard on-call follow-up workflow. Follow these ROERS-specific steps:
+
+1. **Confirm the request is related to ROERS:**
+  - Ask which Property Management Company the request is for.
+  - Confirm the property address and/or unit involved.
+  - If the request is not related to ROERS, do not use this FAQ. Follow the applicable SOP guidance or escalate to Product Support if no guidance exists.
+2. **Gather key information from the SP:**
+  - SP company name
+  - SP contact name, phone number, and email address
+  - ROERS property address(es) and/or unit(s) involved
+  - Work order number(s), if available
+  - Nature of the request (invoice follow-up, payment inquiry, contract/scope question, etc.)
+  - Invoice number(s), dollar amount, and job completion date(s), if applicable
+3. **Search for and document the related work order(s):**
+  - If WO number(s) are provided, open the relevant work order(s) and add detailed notes.
+  - If no WO number is provided, search using the ROERS property address, unit, SP name, and recent job details.
+  - If no related WO can be located, include all gathered information in the escalation.
+4. **Escalate using the ROERS path:**
+  - **Associate escalates to Support:**
+    - Post the details in the **#ops_assistance_hub** channel with all gathered information from Steps 1–3.
+    - Include: SP name, ROERS property address, WO number(s) if available, nature of the concern, invoice/payment details, and any prior contact attempts by the SP.
+  - **Support sends a private message to Ethan:**
+    - A Support team member will review the escalation and send a **private message to Ethan** with the full details.
+    - Ethan will handle the ROERS-specific concern from there.
+5. **Respond to the SP:**
+  - *"Hi [SP Name], thank you for reaching out! I've documented your ROERS-related concern and escalated it to the appropriate internal contact for review. They will review the details and follow up as needed. If you have additional information such as invoice numbers, work order numbers, or job details, please send them over so they can be included. Thank you, and have a great day!"*
+</Accordion>
+
+<Accordion title="Q12: What should Ops do if an intake session outcome is wrong or needs to be corrected?">
+Use this process when:
+
+- A PM reaches out saying:
+  - “This should have created a work order/on‑call alert, not an email,” or
+  - “Can we resubmit this request?”
+- Ops notices that the **actual outcome** of an intake session does **not** match what the property’s **intake settings/rules** specify.
+
+**📝 NOTE:** *Intake processing does ****not**** re‑run on completed sessions. Instead, Ops should ****manually review**** and then use the ****session outcome options**** to correct it.*
+
+**Step 1 – Open the specific completed intake session**
+
+1. From the PM’s report or your investigation, identify the **exact intake session**.
+2. Open that **completed intake session** in Harmonia / Intake.
+3. Confirm the **current outcome** (e.g., email, work order, on‑call) that is being questioned.
+
+<Frame>
+  ![image-20260330-231515.png](/images/SVC-930.png)
+</Frame>
+
+**Step 2 – Review the full conversation with the resident**
+
+1. Read through the “**Complete Conversation **tab:
+  1. What did the resident actually request?
+  2. Does it sound like a **maintenance issue**, **on‑call emergency**, or clearly **non‑maintenance**?
+
+> Your goal: Decide what the resident’s request actually calls for (work order, on‑call, or non‑maintenance action).
+
+<Frame>
+  ![image-20260330-231700.png](/images/SVC-931.png)
+</Frame>
+
+1. **Step 3 – Check the property’s intake settings/rules**
+2. Open the** Intake Settings** section.
+3. Review and identify which rule should apply to this request (e.g., leasing questions, normal maintenance, non‑maintenance emergencies, etc.).
+4. Confirm what **action is configured** for that rule:
+  1. Create work order: “Normal”, “Emergency”, “Urgent”, “Resident Responsible”.
+  2. “Contact On‑Call”
+  3. “Action: Send Email”
+  4. “Other requests”
+5. Compare:
+  1. **What actually happened** (email / work order / on‑call), versus
+  2. **What the rule says should happen** for this type of request.
+
+<Frame>
+  ![image-20260330-232014.png](/images/SVC-932.png)
+</Frame>
+
+**Step 4 – Correct the outcome using the intake session options**
+
+If you determine the original outcome is **wrong** (based on the conversation and intake rules):
+
+1. In the **Session outcome** area of the completed intake session:
+  - Click the **ellipsis (…)** menu.
+2. Choose the appropriate action to match what should have happened, for example:
+  - **Create work order**
+  - **Go on‑call**
+
+Always use these options to correct the outcome **instead of re‑doing the intake with the resident**.
+
+**A. When it should have created a work order**
+
+1. Click **Create work order**.
+  1. <Frame>
+  ![image-20260330-232830.png](/images/SVC-933.png)
+</Frame>
+2. **Select the appropriate severity**:
+  1. <Frame>
+  ![image-20260330-232919.png](/images/SVC-934.png)
+</Frame>
+  2. Severity will **not** be auto‑picked; choose it manually using:
+    - The resident’s description
+    - The PM’s feedback
+    - Property rules/severity guidance
+3. Confirm creation of the work order.
+
+**B. When it should have triggered on‑call**
+
+1. Click **Go On‑Call**.
+  1. <Frame>
+  ![image-20260330-232958.png](/images/SVC-935.png)
+</Frame>
+2. **Select the correct on‑call rotation**:
+  1. <Frame>
+  ![image-20260330-233039.png](/images/SVC-936.png)
+</Frame>
+  2. The system does **not** use rules here; Ops must pick the right rotation (e.g., “Jordan – Non‑maintenance emergencies” or the appropriate maintenance rotation).
+    1. <Frame>
+  ![image-20260330-232618.png](/images/SVC-937.png)
+</Frame>
+    2. <Frame>
+  ![image-20260330-233146.png](/images/SVC-938.png)
+</Frame>
+3. Click on “Start On‑Call”.
+
+**Step 5 – Inform the PM of the action taken**
+
+If the PM reported the issue:
+
+1. Let them know you have:
+  - Reviewed the **intake conversation** and **rules**, and
+  - **Corrected the outcome** using the session options (Create work order / Go on‑call).
+2. Share:
+  - The **work order ID**, or
+  - Confirmation that **on‑call has been started** (including which rotation).
+
+**Step 6 – When should Ops escalate to Product?**
+
+Escalate to Product via the *#bug-report *channel when you see:
+
+- A pattern of similar cases where outcomes are wrong despite rules being configured correctly, or
+- Multiple sessions where maintenance vs non‑maintenance classification appears off.
+</Accordion>
+
+<Accordion title="Q13: What should I do if I get an error when trying to update a resident's phone number or email?">
+**A:** This can happen when a duplicate primary email exists on the profile. Use this workaround:
+
+1. Delete the primary email and move it to the secondary email field.
+2. Update the phone number.
+
+Per Product Team, this was previously a data issue that was resolved in an integration update. If the error persists after trying the workaround, submit a report to #bug-report.
+</Accordion>
+
+<Accordion title="Q14: What should we do if the call center or tenant submission flow is down for an on-call customer?">
+**A:** Use this process when you are unable to submit a WO through the normal call center flow (`app.latchel.com/call-center/handle-call`) or tenant flow for an **on-call customer**.
+
+**First, check if the issue is on your end:**
+
+| Try This | Notes |
+| --- | --- |
+| Hard refresh (Ctrl+Shift+R / Cmd+Shift+R) | Clears cached state |
+| Close and re-open the page | Resolves session-related errors |
+| Clear browser cache and cookies | [Instructions](https://support.google.com/accounts/answer/32050) |
+| Try the tenant flow as a fallback | Runs on a separate system |
+
+**If the issue persists, check with Support** to see if they are able to submit on your behalf before proceeding with the Console workaround.
+
+If Support is also unable to submit, proceed with the steps below.
+
+**Step 1 — While the resident is still on the phone**
+
+1. **Do not end the call.** Keep the resident on the line and complete the full diagnostic verbally. Gather all information normally collected during intake, including the issue description/severity, Permission to Enter (PTE), availability, and contact number.
+2. **Submit the WO via Console/property profile** as a temporary workaround so the request is documented.
+3. Inform the resident: *“I’ve submitted your request. You’ll be hearing from us shortly with next steps.”*
+
+**Step 2 — Notify Support**
+
+Notify Support immediately after submitting the WO via Console/property profile.
+
+- **Important:** Submitting via Console/property profile skips all on-call dispatch logic. Support needs to track these WOs for resubmission once the tech issue is resolved.
+- Include the WO number, property address, and a note that it was submitted via Console/property profile due to a system outage.
+
+**Step 3 — After the tech issue is fixed**
+
+Once Engineering confirms the call center/tenant flow is restored, **Support owns the resubmission process** for affected on-call customer WOs.
+
+1. **Support resubmits the WO** through the normal call center or tenant flow so the on-call dispatch logic is triggered.
+2. Diagnostics were already completed in Step 1, so the resident does not need to be called back unless required for missing information.
+3. **Support cancels the original Console/property profile WO** and adds a cancellation note.
+
+**Cancellation note:**
+
+> *Cancelled — resubmitted via call center flow on [date] after system outage. Original WO was submitted via Console/property profile as a workaround. On-call dispatch logic applied via resubmission.*
+
+**Key reminders**
+
+- Never resubmit before Engineering confirms the fix is live.
+- Console/property profile submission skips on-call dispatch logic, so Support must resubmit through the normal flow after the fix.
+- Support must be notified any time a WO for an on-call customer is submitted via Console/property profile during an outage.
+</Accordion>
+
+## **🎯 When to Break This SOP**
+
+**Do not break or deviate from this SOP on your own authority.** Always escalate to an Ops Support specialist or follow explicit instructions if you believe an exception is necessary.
+
+## 💡 If You Think This SOP Could Be Improved...
+
+Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work?  
+ 👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**  

@@ -1,0 +1,119 @@
+---
+title: "(Emergency) How to: Handle a Utility Issue"
+groups: ["latchel"]
+---
+
+## 🧠 What This Process Is Trying to Solve
+
+<Note>
+We want to prevent confusion, double-dispatching, and unnecessary delays during utility emergencies. The goal is to ensure Troubleshooters verify whether an issue is isolated to a single unit or is a widespread outage before dispatching a technician. This process saves time, money, and frustration for customers and property managers by avoiding redundant work orders and ensuring timely, accurate support.
+</Note>
+
+**Content**
+
+## 📋 Step-by-Step Process
+
+<Warning>
+In the case of **utility issues** affecting entire buildings, we want to avoid handling several work orders for the same issue when multiple residents are affected, since this can cause confusion and could lead to double dispatching or other mistakes. To help with this mission, it is important to check for any related work orders concerning the same concerns **within the same building,** per the process described below. 
+
+**For duplicate maintenance issues affecting a single unit:** refer to https://latchel.atlassian.net/wiki/spaces/OPS/pages/778174469 
+
+For **duplicate maintenance issues affecting building-wide incidents**, refer to: https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/SOP-Building-Wide-Emergency-Work-Orders 
+</Warning>
+
+1. Copy the building's address (excluding the unit number). Then, open the PM profile and navigate to the "Maintenance" tab. Paste the address into the search bar. This will display a list of WOs created for units in that same building.
+2. Carefully review the WOs on the list to check if the issue can be identified as a duplicate.
+3. Contact the resident to share the results of your search. Follow the same procedure as you would for handling duplicate WOs. Refer to [(⛑EMERGENCY) How to: Handle Duplicate Work Orders](https://latchel.atlassian.net/wiki/spaces/OPS/pages/778174469)
+
+Once the Troubleshooter has determined that the problem reported in the Work Order (WO) isn’t duplicate and could be related to an issue on the utility company’s end, proceed as follows:
+
+1. Ask the resident to contact the utility company first to confirm if it’s an issue with the utility company or not: 🗨️ **Say something like:** “*Ok, we’ll need to verify if the issue is on your utility company’s side. Could you please contact them to ask if they are currently experiencing any outages or service issues?”*
+  1. **📝 NOTE:** Asking the resident to contact the utility company applies in ALL utility-related scenarios — including when the issue is discovered mid-WO after an SP has already been dispatched (e.g., SP confirms the system is functional but the root cause is a utility supply issue like no gas meter or utility shutoff).
+    - If the issue is **PD/EH**: Do not wait for the resident's utility call to resolve. Proceed with calling the PM/EEC per the emergency escalation process simultaneously.
+    - If the issue is **not PD/EH**: Ask the resident to contact the utility company and follow up per standard process.
+  2. **Instruct the resident to contact us back once they have been able to confirm with the utility company.**  🗨️ **Say something like:** *Thanks for your help with this. I’m going to send you a text message right now. Did you receive it? Great! Once you speak with the utility company, can you please text us back with an update? After that, I’ll give you a call back to walk through next steps.”*
+    1. Take action on the work order to complete the troubleshooting form.
+      1. Select “Select “Issue IS an emergency” 
+<Frame>
+  ![](/images/SVC-864.png)
+</Frame>
+      2. Select “Work order does not need immediate dispatch”
+      3. Fill out the troubleshooting form accordingly with detailed notes so that anyone can understand why you took this action. 
+        1. **‼️IMPORTANT**: If this is done during business hours (9:00am to 5:00pm) a task will be created right away for “Emergency WO Deferred Dispatch”. 
+          1. Look for the task and complete it so that no one else grabs it (this task is not required since the WO will be moved to Pending status in the next step).
+<Frame>
+  ![](/images/SVC-865.png)
+</Frame>
+    2. Move the work order to pending status as follows:
+      1. Refer to https://latchel.atlassian.net/wiki/spaces/OPS/pages/766378165 
+        1. Use the Pending status.
+        2. Brief description of why you moved the job to this status.
+      2. Create a task for a courtesy follow-up with the resident:
+        1. Select the resident as the contact.
+        2. Date and Time for follow-up task: Select the next day at 12:00pm (property time).
+        3. Task priority: No need to modify.
+        4. User group: Troubleshooting.
+        5. Assign to user: No need to modify.
+        6. When should this cancel?: No need to modify
+        7. Summarize the next steps to be taken: E.g. “Please contact the resident(s) to verify that they have contacted the utility company to confirm that the [no water/ no gas/ no power] issue was caused or not by the utility company.”
+<Frame>
+  ![](/images/SVC-866.png)
+</Frame>
+
+    3. For the Troubleshooter following up on the task:
+      1. **📝** **NOTE***: When working on any follow up task, ****ensure you view all open tasks for the customer you are following up on ****(resident, service provider, owner). This step is crucial to avoid duplicating efforts and customers complaints, and to ensure we always get it right the first time.*
+*For detailed instructions on how to handle the tasks queue and view all open tasks, please refer to the following link: *https://latchel.atlassian.net/wiki/spaces/OPS/pages/2559639553/How+to+Work+the+Tasks+Queue#Handling-the-Task
+      2. Contact the resident(s) under this property to confirm if the issue was caused by the utility company or not.
+        1. *The resident confirmed it WAS an issue on the utility company’s end:*
+          1. Take action on the work order to mark as complete:
+<Frame>
+  ![](/images/SVC-867.png)
+</Frame>
+          2. Select “Resident Resolved the Issue”
+<Frame>
+  ![](/images/SVC-868.png)
+</Frame>
+          3. Leave a note explaining why you took that action:
+<Frame>
+  ![](/images/SVC-869.png)
+</Frame>
+        2. *The resident confirmed it WAS NOT an issue on the utility company’s end:*
+          1. Take action and proceed to dispatch.
+<Frame>
+  ![](/images/SVC-870.png)
+</Frame>
+          2. Refer to: https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Emergency-Work-Orders 
+          3. Refer to: https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/EMERGENCY-How-to-Assign-a-Preferred-Latchel-Network-Service-Provider 
+        3. *The resident(s) was unresponsive or hasn’t contacted the utility company yet:*
+          1. Take action and cancel the WO.
+<Frame>
+  ![](/images/SVC-871.png)
+</Frame>
+          2. Leave a note explaining why you took that action:
+<Frame>
+  ![](/images/SVC-872.png)
+</Frame>
+  3. **If the resident doesn’t have the utility company information and can’t contact them or refuses to do so:**
+    1. Select “Issue IS an emergency” 
+<Frame>
+  ![](/images/SVC-864.png)
+</Frame>
+    2. Select “PM input needed before dispatch”
+<Frame>
+  ![](/images/SVC-874.png)
+</Frame>
+      1. Refer to https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-Property-Damage-and-Extreme-Habitability-Situations to know if the issue is property damaging or extreme habitability.
+    3. Follow the guided workflow to escalate to the property manager and fill out the questions accordingly with notes so that anyone can understand why you took this action.
+
+## 🎯 When to Break This SOP
+
+You can break this SOP and escalate immediately in the following situations:
+
+- **Immediate threat to life, health, or major property damage:** For example, fire, gas leak, carbon monoxide leak, crime, hazardous materials, electrical pole or tree falling on the building, or major flooding. In these cases, follow the 911-Severity Work Order process instead of the standard steps.
+
+---
+
+## 💡 If You Think This SOP Could Be Improved...
+
+Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work?  
+ 👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**

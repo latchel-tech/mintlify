@@ -1,0 +1,599 @@
+---
+title: "(Non-Emergency) How to: Handle Over Approved Budget (aka Estimate)"
+groups: ["latchel"]
+---
+
+## 🧠 What This Process Is Trying to Solve
+
+<Note>
+We want to prevent delays, confusion, and unauthorized spending when a service provider requests work that exceeds the approved budget on a non-emergency work order. The goal is to ensure that all over-budget estimates are properly reviewed, documented, and sent to the property manager or owner for approval before any additional work is authorized—protecting our customers from unexpected costs and helping Latchel maintain clear financial controls and trust with all parties involved
+</Note>
+
+<Note>
+### What are Estimates?
+
+An estimate is a predetermined cost analysis for the amount that has gone over the Approved budget (while the Service Provider is on-site completing the job). Prior to this, the agent has received a call or message from the provider requesting the approved budget to be lifted to a new amount for a particular work order. This is the only circumstance in which Latchel follows-through with an "Estimate". 
+
+If a property manager wants to use the Latchel system to request a "shopping type" estimate, in which several Service Providers arrive at the site to give an estimate of the job, the property manager will need to initially manage that work order. The property manager will be responsible for creating the work order, assigning a service provider, and locking the service provider into the work order. 
+</Note>
+
+<Note>
+### When do we provide estimates 
+
+We will provide an estimate for property manager's but we cannot track, collect, or enforce for Preferred service providers.  If we receive the estimate, we'll pass it on to the property manager for approval. For LCN -- we do NOT do free estimates at all. We will not send a Service Provider to a job to collect an estimate. We will, however, send a Service Provider to a site to perform a diagnostic and provide an estimate. This will incur a service charge. We do not handle collecting multiple estimates and bids. That is project management that is outside the scope of Latchel's services.
+</Note>
+
+<Note>
+### "Quote" equals "Estimate"
+
+When you receive an incoming Work Order and see the word "Quote", this also refers to "Estimate". Latchel uses the term "Estimate" while other organizations might use the word "Quote".
+</Note>
+
+<Note>
+🎓**Training Content**
+
+The contents of this page have been included in the **Budget Communication and Approval Process** Coassemble courses.
+</Note>
+
+<Note>
+**⚠️ Automatic Budget Adjustment After Invoice Upload (System Update — June 2026)**  
+Once an invoice is uploaded to a work order — whether by the Service Provider via their portal or by a Latchel associate — the system will **automatically reduce both the Approved Budget and the Hard Budget** by subtracting the invoice amount. This happens at the time of upload; the invoice does **not** need to be marked as paid first.
+
+**What this means:**
+
+- Any new estimate submitted after an invoice has been uploaded will be compared against the **remaining** budget, not the original amount.
+- This prevents the system from auto-approving new estimates based on the full original budget when part of the work has already been invoiced.
+
+**⚠️ Reminder:** When uploading an invoice, always ensure the file is properly **tagged as an invoice** in the system (not as an estimate or other document type) so the automatic budget adjustment triggers correctly.
+
+**Example:** If the Approved Budget is $260 and an invoice for $260 is uploaded, the Approved Budget will automatically update to $0. If a Service Provider then submits a new estimate, it will be compared against the $0 remaining budget and will require PM approval.
+
+---
+</Note>
+
+<Note>
+**NOTE:** If an Owner or Property Manager requests that they want to approve **any amount before work is done** on a specific work order, **or do not want anything over $[X] approved without checking with them first** (especially when the Hard Budget Limit is higher), please refer to the **Frequently Asked Questions** section of this SOP.
+</Note>
+
+<Warning>
+Whenever a Service Provider sends multiple estimates for the same Work Order (for example: one estimate to *repair* an existing equipment and another to *replace* the same equipment), we will seek Property Manager’s approval prior to proceeding, even if the estimates fall under the Hard Limit. Latchel will not make the decision of which estimate to choose, we will allow the Property Manager to make that decision. In such cases, follow the same procedure for when an estimate exceeds the hard limit.
+</Warning>
+
+<Warning>
+For RentRedi and NOMAD related WOs, please refer to https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-DIY-Owner-Contacts.
+
+📌 **Autopilot Work Orders:** The budget approval process in this SOP still applies to Autopilot WOs. However, after approving the budget, do **not** proactively schedule the appointment or create a dispatching task — the system handles vendor automation. Only intervene if the work order did not move forward as expected, a task is created for Latchel, or the PM explicitly requests action. For full Autopilot handling, refer to https://latchel.atlassian.net/wiki/spaces/OPS/pages/2999812097.
+</Warning>
+
+<Note>
+If the SP states that they already got approval from the PM for an amount exceeding the Hard Limit, we’ll still escalate to get PM approval on our own. Please collect the following information from the SP:
+
+- Name of the PM who approved it.
+- What was the total amount approved?
+- Name of the SP who received the approval.
+- When was it approved?
+- How was it approved? verbally, text, email?
+</Note>
+
+# Content
+
+## 📋 Step-by-Step Process
+
+### **How to Handle Service Provider Visit Fees, Trip Charges, Diagnostic Fees**
+
+<Note>
+### What is a Visit Fee/Trip Charge/Diagnostic Fee?
+
+- Visit Fee/Trip Charge - (n.) Minimum fee when the Service Provider is dispatched, even if they do not perform any work.
+- Diagnostic Fee - (n.) Fee the Service Provider charges to assess the issue. They may charge this fee even though they can't complete the work.
+</Note>
+
+1. Service providers may charge visit fees, trip charges, and diagnostic fees.
+  1. Each service provider and trade treats these fees differently. Property Managers are responsible for paying any visit fees, trip charges, or diagnostic fees.
+  2. If a visit fee is outrageous, then PMs have a dispute process that they can go through. Please refer to https://latchel.atlassian.net/wiki/spaces/OPS/pages/795967495.
+2. The PM only pays what the Service Provider charges.
+  1. If the Service Provider doesn't charge a visit fee,  the PM pays no visit fee. 
+  2. The Property Manager pays visit fees via the normal invoice feature in our system
+  3. The Property Manager only pays for things that the Service Provider invoices through our platform or via Preferred Service Provider relationships outside of our system
+3. If the Service Provider charges a visit fee but doesn't complete the work, review Part 2, Section 2 "Service Provider Payment".
+
+### **Reassigning to a new Service Provider**
+
+In the situation where a Service Provider can complete a work order, follow Parts 1 - 3 of this SOP. If the Service Provider is NOT able to complete a work order (e.g. the required work is outside of their skill set) and a different Service Provider needs to be assigned, please follow the steps on [How to: Reassign a Service Provider](https://latchel.atlassian.net/wiki/spaces/OPS/pages/786859062).
+
+### **PART 1 - The Service Provider is requesting a $ money amount that is under the “Hard Budget” **
+
+1. The service provider may either call and leave a voicemail with the requested amount or submit an estimate via portal, email, SMS, or another communication method.
+  1. **Review the Estimate:**
+    1. **📝** **NOTE**: All estimates must clearly indicate the exact total amount before proceeding with any approval process. Estimates without the full details must be confirmed prior to moving forward.
+    2. If the estimate only includes hourly service rates, ensure it also specifies the duration of the work. The estimate must reflect the total cost of the job.
+    3. If the submitted estimate lacks complete details (e.g., missing the duration of work or total cost), contact the service provider to gather the missing information **before** approving the work or seeking approval from the Property Manager.
+    4. **📝 Estimates Submitted via Service Provider Link:**  
+Service providers may also submit estimates via the **Service Provider Work Order Link** (the link accessible from the work order interface under "Provide Work Order Update" → "Add Estimate"). Estimates submitted through this link are treated the same as estimates submitted via portal, email, SMS, or any other method.
+  2. If the information in the estimate submitted is complete, proceed to the below step.
+2. Ask the Service Provider to explain why the Work Order requires an adjustment to the Approved Budget.
+  1. Create an itemized list and include all cost amounts
+  2. Review the Work Order Budget Limits to better understand if the requested budget is above or below the Hard Budget.
+  3. When the Service Provider contacts Latchel to request approval for a higher monetary amount than the "Approved Budget”, the Operations Associate will review the amount for the "Hard Budget". If the requested amount is **under** the "Hard Budget" amount, ***you may immediately approve the work***.
+    1. From the Existing Work Order Interface, change the numbers in the "Approved Budget" to reflect the requested amount 
+<Frame>
+  ![image-20240116-231410.png](/images/SVC-719.png)
+</Frame>
+    2. Resolve the call with the Service Provider.
+      1. **Non-Autopilot (Premium) WOs** → Secure an appointment with the service provider.
+      2. **Autopilot WOs** → Do not proactively schedule; the system handles vendor automation. Only intervene if the work order did not move forward as expected or a task is created for Latchel or the PM explicitly requests action. Refer to https://latchel.atlassian.net/wiki/spaces/OPS/pages/2999812097.
+    3. Write Effective Notes on your interactions with the Service Provider and describe why the Budget was changed.
+      1. See: [↔ How to: Write Effective Notes](https://latchel.atlassian.net/wiki/spaces/OM/pages/763363368)
+3. If there is a note on the work order or if the Property Manager or Owner has already provided approval of the estimate
+  1. From the Existing Work Order Interface, change the numbers in the "Approved Budget" to reflect the requested amount
+<Frame>
+  ![](/images/SVC-720.png)
+</Frame>
+  2. Leave complete notes that the PM/Owner has provided the approval.
+
+### **PART 2 - The Service Provider is requesting a ****$ money**** amount that exceeds the Hard Budget**
+
+1. If the job exceeds the Hard budget, make it clear that the work order is now pending on Property Manager approval. Follow the steps below:
+  1. Inform the Service Provider that we will need approval from the property manager,
+    1. Notify the service provider that approval from the property manager is required.
+    2. Request a written estimate detailing the full repair costs, including any additional visit or diagnostic fees.
+    3. Advise the service provider to upload the estimate via the Service Provider Interface using the provided instructions.
+      1. On the Service provider Interface, click "Provide Work Order Update"
+        1. <Frame>
+  ![image-20241219-185259.png](/images/SVC-721.png)
+</Frame>
+        2. Click on “Add Estimate”
+<Frame>
+  ![image-20241219-185049.png](/images/SVC-722.png)
+</Frame>
+        3. Fill out the fields with the amount requested and the description of the estimate.
+<Frame>
+  ![image-20241219-185608.png](/images/SVC-723.png)
+</Frame>
+          1. Alternatively, Service Providers can send an email to [team@latchel.com](mailto:team@latchel.com)  
+
+2. **Service Provider Payment**
+  1. "Please pay me for this initial visit" - The Service Provider is **insisting **on payment after the first visit (while the Estimate for the rest of the job is pending).
+    1. **Note:** Escalation to the Payments team should occur only if the service provider insists on payment despite being informed that it must be collected after the completion of the work order.
+    2. Overview: If the Service Provider is a Latchel Service Provider, we will create a task for the finance team to review the Work Order and process payment. If the Service Provider (SP) is a Preferred Service Provider, we will advise the SP that payment should be collected from the Property Manager (PM) directly. 
+    3. Ask the service provider to send the invoice for the initial visit.
+      1. Refer to https://latchel.atlassian.net/wiki/spaces/OPS/pages/2511339521 
+        1. **Preferred Service Provider:**
+          1. First, check the PM's Company Profile → Payments tab → 'Preferred Service Provider Payments' toggle:
+          2. **Toggle OFF:** Advise the SP that the invoice will be attached to the Work Order so the PM can review it, but the SP needs to contact the PM directly to collect payment.
+          3. **Toggle ON:** Latchel can process payment for this Preferred SP **via Direct Deposit only**. The SP must have a verified Direct Deposit account on file. Refer to https://latchel.atlassian.net/wiki/spaces/OPS/pages/3256221699 for full processing steps, convenience fee structure, and what to do if Direct Deposit is not yet set up.
+        2. **Latchel Service Provider: **
+          1. Create a task for the Finance team to review the Work Order:
+            1. Title: "Service Provider is requesting payment for the initial visit"
+            2. Who is this task about?: Select the service provider.
+            3. Select a Date and Time: Leave blank
+            4. User group: Payment processing
+            5. Assign to a User: Leave blank
+            6. Set task to "Never complete on any job state change"
+            7. Description: "The Service Provider is requesting payment for the initial visit for the amount of $[XXX], please review."
+          2. <Frame>
+  ![image-20241226-181350.png](/images/SVC-724.png)
+</Frame>
+          3. Inform the service provider of the following:
+
+  2. Continue with  the following steps for the estimate:
+    1. Proceed to ["Handle the Pending Estimate Work Order"](#)
+      1. Inform the Service Provider that they can leave the property address now.
+
+      2. If Approved for the job, tell the Service Provider that scheduling functions will automatically be sent to them after it's approved by the Property Manager and scheduling has been completed by the Resident.
+        1. No one from Latchel will be contacting them directly.
+        2. For more information, see [Part 3](#).
+      3. If Denied for the job, then an Associate will give them a call after we get the denial from the Property Manager.
+        1. For more information, see [Part 3](#).
+
+<Note>
+**IMPORTANT***:*
+
+- If the service provider confirms they have already sent the estimate directly to the Property Manager AND can provide the estimate amount, update the work order status to "Needs Owner Approval."
+- If the service provider has evidence of approval but it cannot be found in the Latchel system, follow the guidelines in the FAQ section.
+- If the service provider claims the estimate is approved, we must confirm approval details for documentation. Escalate to Operations Support Specialists (move the work order to "Waiting for PM") if ANY of the following apply:
+  - The approved amount/total is not provided
+  - The approver’s name and approval date are not provided
+  - The service provider states they will send the estimate directly to the Property Manager
+
+Request that the SP also upload the estimate to the work order via the Service Provider Interface, or send a copy to [team@latchel.com](mailto:team@latchel.com), for documentation purposes.
+</Note>
+
+1. **Handle the "Pending" Work Order**
+  1. If the Service Provider did not ask to be paid immediately:
+    1. From "Put the job on hold", choose "Pending" as the destination status.
+      1. **‼️IMPORTANT:** Refer to [(SOP) How to: Put a Job on Hold](https://latchel.atlassian.net/wiki/spaces/OPS/pages/766378165) to make sure you're following proper procedure for putting a job into "Pending".
+    2. Add "(ESTIMATE)" to the beginning of the job title.
+<Frame>
+  ![image-20241226-181858.png](/images/SVC-725.png)
+</Frame>
+    3. **Lock-in the Service Provider to the job**, so the job is not mistakenly re-assigned to another Service Provider. 
+      1. From the Existing Work Order Interface, Navigate to the Service Provider section.
+        1. When the Service Provider is not locked-in (default), the toggle button is default to grey. 
+        2. To lock in the Service Provider, click the toggle button. The button will turn blue.
+<Frame>
+  ![image-20241226-182246.png](/images/SVC-726.png)
+</Frame>
+s
+          1. **Service Provider is Locked-in. **Click the toggle button to lock-in the Service Provider. The button will turn blue.
+<Frame>
+  ![image-20241226-182347.png](/images/SVC-727.png)
+</Frame>
+2. Write Notes about what happened with Service Provider interactions in Part 1, including all pertinent details about payment and other Work Orders, if applicable.
+
+### **PART 3 - Receive the Written Estimate via Email and Send it to the Owner/Property Manager for Approval or Denial**
+
+1. After the Estimate document comes into Assembly Email
+  1. Check if the document is saved as a PDF file.
+    1. If not, save the document as a PDF file.  
+
+  2. Upload the Estimate to the Work Order.
+    1. [↔ How to: Add a File to a Work Order](https://latchel.atlassian.net/wiki/spaces/OPS/pages/757039124)
+2. Change the status of Work Order from "Pending" to** ****“Needs Owner Approval”**
+  1. A text field will appear. This message will be relayed to the Property Manager.
+    1. You can write,
+
+    2. **IMPORTANT:** Refer to [(SOP) How to: Put a Job on Hold](https://latchel.atlassian.net/wiki/spaces/OPS/pages/766378165) to make sure you're following proper procedure for putting a job into "Needs Owner Approval".
+  2. Write Notes following [↔ How to: Write Effective Notes](https://latchel.atlassian.net/wiki/spaces/OM/pages/763363368)
+
+### **PART 4 - How to: Handle an ****Approved**** and a ****Denied**** Written Estimate **
+
+1. **✅Approved Estimate:**** Enter into the Work Order that contains the Service Provider whose estimate amount was ✅ Approved.**
+  1. The status of the Work Order should currently be in "Needs Owner Approval".
+    1. See [Part 2.](#)
+    2. Click on “Take action”
+    3. Click on “Approve Work”
+<Frame>
+  ![image-20241226-184824.png](/images/SVC-728.png)
+</Frame>
+      1. Enter in approved budget limit for this job
+      2. Summarize the approval from the PM into the summary section, include ticket number from Assembly and method of communication (phone, email, Webchat).
+<Frame>
+  ![image-20241226-184655.png](/images/SVC-729.png)
+</Frame>
+        1. Click "Submit"
+    4. Change the status back to "Scheduling with Tenant"
+    5. Replace existing "(ESTIMATE)" from the Work Order title to: (APPROVED).
+<Frame>
+  ![image-20241226-184726.png](/images/SVC-730.png)
+</Frame>
+    6. Write Effective Notes
+      1. Educate the PM about using their interface to approve work for next time.
+2. **❌Denied Estimate:**** Enter into the Work Order that contains the Service Provider whose estimate amount was ❌ Denied.**
+  1. Call the Service Provider to let them know the Work Order has been denied.
+    1. For Non-Emergencies, handle the payment to the Service Provider for the work performed so far and any visit fees/diagnostic costs for each type of Service Provider.
+      1. **Preferred Service Providers:** Invoice the Property Manager directly.
+        1. The status of the Work Order should currently be in "Needs Owner Approval".
+          1. See [Part 2.](#)
+        2. Click on “Take action”
+        3. Click on "Deny Work"
+<Frame>
+  ![image-20241226-184829.png](/images/SVC-731.png)
+</Frame>
+          1. Add the ticket number, how the PM contacted us (phone, email, or Webchat), and the outcome.
+            1. For example:
+              1. #Ticket 1234 email from property manager: owner declined estimate. 
+<Frame>
+  ![image-20241226-184846.png](/images/SVC-732.png)
+</Frame>
+          2. Click "Submit"
+            1. After you click "Submit" the Work Order will be "Cancelled"
+        4. Write Effective Notes
+          1. Educate the PM about using their interface to deny work for next time.
+      2. **Latchel Service Provider with Direct Deposit payment method****:**
+        1. The status of the Work Order should currently be in "Needs Owner Approval".
+        2. Click on the secondary take action button.
+          1. Choose "Mark this Job as Completed"
+<Frame>
+  ![image-20241226-184920.png](/images/SVC-733.png)
+</Frame>
+          2. A text field will appear, allowing the Associate to summarize why this action was taken.
+<Frame>
+  ![image-20241226-185058.png](/images/SVC-734.png)
+</Frame>
+            1. Click "Submit".
+              1. The Work Order will now go into "Awaiting Invoice Receipt" status.
+        3. If they need another method to send to us, direct them to send the invoice to "team@[latchel.com](http://latchel.com)"
+        4. Write Effective Notes
+          1. Educate the PM about using their interface to deny work for next time.
+      3. **Latchel Service Provider with Issued Cards payment method**
+        1. The status of the Work Order should currently be in "Needs Owner Approval".
+        2. Ask the service provider to send the invoice for the initial visit.
+          1. Refer to https://latchel.atlassian.net/wiki/spaces/OPS/pages/2511339521 
+        3. In order to process payment, refer to [(Job-Aid) How to: Upload an Invoice for a Work Order](https://latchel.atlassian.net/wiki/spaces/OPS/pages/759431181) for details.
+          1. Note: Payment should be processed by the Finance team if the total invoiced amount exceeds $500 
+        4. Write Effective Notes
+          1. Educate the PM about using their interface to deny work for next time.
+
+## [❓](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Emergency-Work-Orders)Frequently Asked Questions
+
+<Accordion title="What are the actions we can take for Service Provider Requests for Structural Changes">
+Situations arise where structural alterations, such as wall cutting, become necessary to resolve maintenance issues. Below are common scenarios we have encountered, though this list is not exhaustive.
+
+- Scenario 1: Resolution of a Problem Stated in the Work Order
+- Scenario 2: Service Provider’s Error
+
+**A. The service provider has stated that structural alterations are necessary to resolve the issue.**
+
+1. If the total requested cost is within the approved or hard budget limit, associates may proceed with approving the request.
+  1. Proceed to inform the service provider the work has been approved.
+  2. Leave complete notes of the approval process.
+    1. See https://latchel.atlassian.net/wiki/spaces/OPS/pages/1058211367 
+2. If the total requested cost exceeds the approved or hard budget limit, the request must be escalated to the Property Manager.
+  1. Move the WO to “Needs Owner Approval”.
+    1. Refer to [How to: Put a Job on Hold](https://latchel.atlassian.net/wiki/spaces/OPS/pages/766378165).
+    2. Await the PM/owner’s decision before proceeding.
+
+**B. The service provider has completed the work but left a hole/other issue that requires a different technician to fix.**
+
+1. **Handle the original work order**
+  1. If the SP has completed the original scope of work, proceed with the standard completion process for the original WO (invoice collection, etc.).
+  2. Document in the WO notes that the SP's work resulted in additional damage requiring a separate repair (e.g., hole in the wall, exposed wiring, etc.).
+2. **Create a new work order for the follow-up repair**
+  1. Create a **new work order** for the follow-up repair (e.g., drywall patching, painting, etc.).
+    - Link the new WO to the original WO for reference by adding them into the same project.
+    - In the new WO description, clearly state:
+      - What the original issue was
+      - What work was performed
+      - What damage/issue remains and needs to be addressed
+      - That this is a follow-up to WO [original WO #]
+  2. Move the new WO to **"Needs Owner Approval"**.
+    - Include a message to the PM explaining the situation.
+    - **Sample message:** *"During the completion of WO [original WO #] for [original issue] at [address], the service provider needed to [describe structural change, e.g., cut into the wall] to resolve the issue. The original repair has been completed, but a follow-up repair is now needed to [describe remaining work, e.g., patch and paint the drywall]. This new work order has been created for your review and approval. Please advise how you would like to proceed."*
+  3. **Do NOT assign a new SP to the follow-up WO** until PM approval is received.
+</Accordion>
+
+<Accordion title="What if the service provider requests that the approved estimate be signed before they perform the work?">
+**Step 1: Determine the Status of the Estimate**
+
+- **A. If the estimate has just been submitted or the work order is still in “Needs Approval” status:**
+  1. Inform the PM that the service provider requires a signed estimate before proceeding with the work.
+  2. Include this request in the task created when the work order is moved to “Needs Approval.”
+  3. Clearly state in the task that the signature is a requirement from the service provider.
+  4. **Sample Task Note:**  
+*“The assigned service provider has requested that the estimate be signed before they can proceed with the work. Please review and sign the estimate as soon as possible to avoid delays in scheduling. Please let us know once the estimate has been signed or if you have any questions.”*
+- **B. If the estimate has already been approved and the service provider now requests a signature:**
+  1. If the estimate was sent via DocuSign, follow the instructions in the DocuSign email to sign and return the document.
+  2. If manual signing is required:
+    1. Download the approved estimate.
+      1. <Frame>
+  ![image-20251023-173723.png](/images/SVC-735.png)
+</Frame>
+    2. Sign the document (digitally) with “Latchel” and indicate the date it was signed.
+      1. <Frame>
+  ![image-20251023-174001.png](/images/SVC-736.png)
+</Frame>
+    3. Save the signed version and attach it to the work order
+  3. **Send the Signed Estimate to the Service Provider:**
+    - Email signed estimate to the service provider.
+    - Notify the service provider that the estimate has been signed and is ready for their review.
+  4. **Sample Notification to Service Provider:**  
+*“The estimate has been signed as requested. Please review and proceed with scheduling the work. Let us know if you need anything further.”*
+
+**Step 2: Document Your Actions**
+
+- **Refer to **https://latchel.atlassian.net/wiki/spaces/OPS/pages/1058211367 
+</Accordion>
+
+<Accordion title=" How to Proceed When a Service Provider Claims OR Submits Property Manager/Owner Approval (Including Signed Estimates)">
+1. **Step 1: Verify and Upload Documentation**
+  1. Review the estimate to confirm whether it is signed by the Property Manager or Owner.
+    1. **📝** **NOTE: **If the Service Provider provided the signed estimate via email, add an internal note indicating that the document has not yet been uploaded to the work order and that confirmation from the Property Manager is still required. Include the corresponding Assembly ticket number in the work order for reference.
+  2. Proceed to **Step 3. Determine the Work Order Category.**
+2. **Step 2:** **Service Provider Claims Approval Above the Hard Limit **
+  1. ‼️**IMPORTANT: **If the Service Provider states that they have already received approval from the Property Manager/Owner for an amount **exceeding the Hard Limit**, do **not** proceed based solely on this claim. Independent verification is still required. You must escalate to obtain confirmation directly from the Property Manager.
+  2. Collect and document the following information from the Service Provider.
+    1. Name of the Property Manager/Owner who provided the approval
+    2. Total amount approved
+    3. Name of the Service Provider representative who received the approval
+    4. Date and time the approval was granted
+    5. Method of approval (verbal, text message, or email)
+3. **Step 3: Determine the Work Order Category**
+  1. **Property-Damaging (PD) / Extreme Habitability Condition (EH): **
+    1. Manually trigger the **Who Ya Gonna Call** feature from the Action Menu of the work order to identify the correct escalation contacts and their contact order. Refer to https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-Critical-Pre-dispatch-Warranty-Special-Notes-Emergency-Escalation-Contacts for more details.
+    2. Contact the Emergency Escalation Contacts (EEC) to confirm approval of the estimate. Refer to https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs .
+      1. If the Emergency Escalation Contacts respond, follow their guidance and document all actions taken in the work order. 
+      2. If the Emergency Escalation Contacts do not respond, create a task for the Property Manager, keep the work order in **Needs Approval** status, and document all outreach attempts. Refer to https://latchel.atlassian.net/wiki/spaces/OPS/pages/766378165 to make sure you're following the proper procedure for putting a job into **"Needs Owner Approval".**
+  2. **Non-Property-Damaging / Non-Extreme Habitability Condition: **
+    1. Keep the work order in **Needs Approval** status. 
+    2. Create a task for the Property Manager requesting formal approval.  Refer tohttps://latchel.atlassian.net/wiki/spaces/OPS/pages/766378165 to ensure you are following the correct process when setting a work order to **Needs Owner Approval**.
+4. **Step 3: Document Your Actions: **
+  1. Ensure that all actions, decisions, communications, approvals, and escalation attempts are fully documented in the work order.
+    1. **Refer to **https://latchel.atlassian.net/wiki/spaces/OPS/pages/1058211367   
+</Accordion>
+
+<Accordion title="What if the PM approved the job/quote but the budget is incorrect, unclear, doesn't match the proposal, or a prior charge may not have been disclosed?">
+1. **Review the work order:**
+  1. Check the *Files *section, *Notes*, *Tasks *and any *initial invoices* to confirm the estimate amount and the amount communicated to the Property Manager for approval.
+2. **If the approved amount is clear:**
+  1. For example, SP/associate notes indicate that the total approval needed is $**XX**, or there is a *single estimate covering the full scope* (including the initial charge).
+    1. In this case, we can proceed with updating the budget accordingly.
+3. If the amount is **unclear, incorrect, or doesn't match the proposal **and the situation involves **non-emergency **cases:
+  1. The PM may have updated the status incorrectly, or
+  2. The PM may have approved an initial estimate first, followed by a second estimate for a follow-up job.
+    1. Place the work order in **Needs Approval **status.
+    2. Create a task for the Property Manager requesting approval for the correct amount.
+    3. Document the reason approval is needed again, including any discrepancy in the approved amount. Refer tohttps://latchel.atlassian.net/wiki/spaces/OPS/pages/766378165
+</Accordion>
+
+<Accordion title="What should Ops do if an Owner says they want to approve any amount before work is performed on a specific work order?">
+<Warning>
+For standard Property Managers (not DIY Owners), please direct them to use **Bid Requests** and share this help guide: [How to Create and View a Bid Request for a Property](https://help.latchel.com/s/topic/0TO5e000000h9wqGAA/How-to-Create-and-View-a-Bid-Request-for-a-Property).
+
+If they refuse to use Bid Requests, submit a **PS ticket**.
+</Warning>
+
+**A:** If an Owner clearly states that they want to approve **any amount before work is done** for that work order:
+
+- For **Rentredi **Owners, provide first the help guide:** **https://help.rentredi.com/en/articles/4679902-set-update-latchel-budget   . If they refused proceed to the below steps.
+  - **Say something like:** *“Hi [Owner Name]! To manage your budget limit for this work order, please follow this guide: *https://help.rentredi.com/en/articles/4679902-set-update-latchel-budget *. This will allow you to set the approval limit exactly as you want. Once you’ve updated it, we can proceed with the work.”*
+- For **NOMAD **Owners, proceed directly to the below steps.
+
+1. **Set the Approved to $1 (lowest value) and Hard Budget limit to $0 (lowest value)** for that WO.
+2. **Do not approve any additional work** without first getting explicit approval from the Owner for the specific amount.
+3. **Add a Special Note and update the SP Instructions**
+  1. ***“DO NOT PROCEED WITH ANY WORK. ANY COST OR WORK MUST BE APPROVED PRIOR.”***
+4. **If a Service Provider is already assigned to the work order at the time of the request:**
+  1. Call the SP to clearly communicate the updated expectations and $0 approved budget before any further work is performed.
+  2. **Say something like:*** “Hi [SP Name], this is [Your Name] calling from Latchel about work order [WO #] at [property address]. I’m calling because the Owner/Property Manager has updated their instructions for this job. The work order is now set to a ****$1 approved budget****, which means ****no work or charges are authorized**** until we’ve obtained explicit approval from them. Please ****do not proceed with any work**** or incur any costs— including diagnostics, materials, or additional trips—unless you first contact Latchel and we confirm that approval has been granted for a specific amount. Any work or costs must be ****pre‑approved**** before you proceed. Are you comfortable continuing with this job under these conditions?”*
+  3. Follow our guidelines for follow-up attempts when contacting SPs. Refer to https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Informational-Basic-Service-Ops-Guidelines-and-Rules.
+5. **If the SP declines the job after the expectations are communicated:**
+  1. **For standard / not locked‑in / not PM‑assigned SPs who have NOT already visited the property:**
+    1. **Say something like:** *“I understand, thank you for letting us know. We’ll update the work order on our end and look for another provider who can accept these terms. We appreciate your time.”*
+    2. Proceed with **reassignment** to another SP who agrees to the terms. When contacting a new SP, clearly set expectations about the $1 Approved Budget and need for prior approval.
+  2. **For locked in / PM-assigned SPs, SPs who have already visited the property, or if we are unable to assign an SP who will accept the terms:**Escalate back to the **Owner** by calling them.
+    - **Say something like:** *Hi [Owner Name], we’ve reached out to multiple service providers and explained your requirement that no work be done without prior approval and that this job is set to a $0 approved budget. ****Multiple providers have declined to proceed under these conditions****, and we’re currently unable to secure someone who will accept the $0‑budget / prior‑approval requirement. We can’t move forward without a provider who agrees to these terms. Please let us know how you’d like to proceed (for example, adjust the budget/conditions or coordinate directly with a preferred provider).*
+    - If there is no response, leave the work under Needs Owner Approval.
+    - Document the escalation clearly in the work order notes.
+6. **Escalate to Product Support, when applicable:**
+  - If during the conversation the Owner indicates they want these “approve any amount before work is done” rules to apply **broadly to their account or to all future work orders**, **submit a PS ticket**.
+  - In the PS ticket, note that:
+    - This request started on a **specific work order** (include WO ID), and
+    - The Owner is now asking whether/how to apply similar rules to their **overall settings**.
+</Accordion>
+
+<Accordion title="What should Ops do when an Owner specifies a dollar amount or cap for a job (e.g., “Don’t approve over $X” or “Limit this to $X”)?">
+*Example: *
+
+- *Owner says “Don’t approve over $400,” but the HBL on the WO is $500.*
+- *“I’m okay with repairs up to $300 only.”*
+- *“Set the limit to $350 — nothing beyond that.”*
+- *“Limit this visit to $200 today.”*
+- *“This should not exceed $400 total.”*
+
+**A: Follow these steps:**
+
+- For **Rentredi **Owners, provide first the help guide:** **[https://help.rentredi.com/en/articles/4679902-set-update-latchel-budget](https://help.rentredi.com/en/articles/4679902-set-update-latchel-budget) . If they refused proceed to the below steps.
+  - **Say something like:** *“Hi [Owner Name]! To manage your budget limit for this work order, please follow this guide: *https://help.rentredi.com/en/articles/4679902-set-update-latchel-budget *. This will allow you to set the approval limit exactly as you want. Once you’ve updated it, we can proceed with the work.”*
+- For **NOMAD **Owners, proceed directly to the below steps.
+
+1. **Set the Approved and Hard Budget limit to match the Owner’s requested cap**
+  1. In the WO, update the **Approved and Hard Budget** to the amount they specified (e.g., $400). Ensure that the budget has been updated. Check for automated notes of budget changes in the work order to ensure that this has reflected.
+  2. This ensures that what the **service provider sees** matches the Owner’s instructions.
+  3. **Say something like:***** ****“Thanks for letting us know you don’t want anything over $[X] approved without your prior approval. Your account’s* **hard budget limit** *for this type of work has now been updated to $[HBL]. Thank you, and please let us know if we can assist you with anything else.”*
+2. **Update the SP Instructions**
+  1. ***“DO NOT PROCEED WITH ANY ADDITIONAL WORK. OWNER HAS APPROVED A MAXIMUM OF [amount] ONLY. ANY WORK OR COSTS BEYOND THIS AMOUNT ARE NOT AUTHORIZED AND REQUIRE PRIOR APPROVAL.”***
+3. **Add a Special Note**
+  1. **Something like: *****“The Owner has approved a maximum of [amount] only. Please ensure the Owner is contacted and approval is obtained prior to authorizing any additional work or costs beyond this amount. Due to the HBL not being updated, it is critical that if the SP directly requests additional work or approval from us, we must first obtain explicit approval from the Owner before proceeding or authorizing anything further.”***
+4. Add effective notes summarizing the request in the work order highlighting that the Owner requested a lower cap (e.g., $400)
+5. **If a Service Provider is already assigned to the work order at the time of the request:**
+  1. Call the SP to clearly communicate the updated expectations and the new approved budget **before any further work is performed.**
+  2. **Say something like:**  
+*“Hi [SP Name], this is [Your Name] calling from Latchel about emergency work order [WO #] at [property address]. I’m calling because the Owner has updated their instructions for this job. The work order is now set to an approved budget of* **$[X]***, which means* **no work or charges above that amount are authorized** *unless we first obtain explicit approval from them. Please* **do not proceed with any additional work or incur any costs beyond $[X]** *—including diagnostics, materials, or additional trips—unless you first contact Latchel and we confirm that approval has been granted for a higher amount. Any work or costs above $[X] must be* **pre‑approved** *before you proceed. Are you comfortable continuing with this job under these conditions?”*
+    1. Follow our guidelines for follow‑up attempts when contacting SPs. Refer to:
+      1. https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Informational-Basic-Service-Ops-Guidelines-and-Rules
+6. **If the SP declines the job after the expectations are communicated (non‑emergency):**
+  1. **For standard / not locked‑in / not PM‑assigned SPs who have NOT already visited the property:**
+    1. **Say something like:**  
+*“I understand, thank you for letting us know. We’ll update the work order on our end and look for another provider who can accept these terms. We appreciate your time.”*
+    2. **Premium/DIY Owners**: Proceed with **reassignment** to another SP who agrees to the terms. When contacting a new SP, clearly set expectations about:
+      1. The updated **Approved Budget of $[X]**, and
+      2. The requirement that **any work/costs beyond $[X] need prior approval**.
+  2. **For locked‑in / PM‑assigned SPs, SPs who have already visited the property, or if we are unable to assign an SP who will accept the terms:**
+    1. Escalate back to the **Owner**, explain that:
+      1. The requirement is now “do not approve over $[X] without checking with me first,”
+      2. The work order is set to **Approved Budget = $[X]**, but
+      3. **Locked‑in / PM‑assigned SPs** (or other contacted SPs) are declining to proceed under these restrictions.
+    2. Call the Owner to update them:
+      1. **Say something like:**  
+*“Hi [Owner Name], we’ve reached out to service providers and explained your requirement that nothing above $[X] be approved without your prior approval. The work order has been set to an approved budget of $[X], but* **the providers we’ve contacted have declined to proceed under these conditions***. At this time, we’re unable to secure someone who will accept the current budget/approval requirement. We can’t move forward without a provider who agrees to these terms. Please let us know how you’d like to proceed (for example, adjust the budget/conditions or coordinate directly with a preferred provider).”*
+      2. If there is no response, leave the work under Needs Owner Approval.
+    3. Document the escalation clearly in the work order notes.
+7. **Escalate to Product Support, when applicable:**
+  - If during the conversation the Owner indicates they want these rules to apply **broadly to their account or to all future work orders**, **submit a PS ticket**.
+  - In the PS ticket, note that:
+    - This request started on a **specific work order** (include WO ID), and
+    - The Owner is now asking whether/how to apply similar rules to their **overall settings**.
+</Accordion>
+
+<Accordion title="What if the Property Manager/Owner sets the hard budget limit to $1 or $0? Should we dispatch the work order?">
+**Answer:** Yes, continue dispatching the request and set expectations regarding the $1 or $0 NTE.
+
+If no Service Provider accepts the job due to budget constraints or advises their dispatch fee exceeds the NTE:
+
+1. For **Property-Damaging** / **Extreme Habitability** issues:
+  1. Call the **EEC**. Refer to https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs 
+    1.    **Say something like**: *“Hello, my name is ****(Agent Name)****, and I’m calling on behalf of ****Latchel****. We attempted to dispatch a service provider to ****(Property Address)**** for ****(Issue)****. While a service provider (name of the company) is available, they are unable to perform the work within the budget set for this request. The current budget is ****$****. Could you please let us know how you would like to proceed?”*
+  2. If the EEC responds, proceed according to their instructions.
+  3. If the EEC is unresponsive, escalate to the Property Manager via the **“Cannot Find a Service Provider” path**, using the message:
+    1. *“We attempted to dispatch the work order at ****(Property)**** for ****(Issue)****. While a service provider (name of the company) is available, they are unable to perform the work within the budget set for this request. The current budget is ****$****. Kindly advise how you would like to proceed.”*
+2. For **Non Property-Damaging** / **Extreme Habitability **issues:
+  1. Escalate to the Property Manager via the **“Cannot Find a Service Provider” path**, using the same message above. Refer to **FAQ 1** of https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Emergency-Work-Orders 
+    1. *“We attempted to dispatch the work order at ****(Property)**** for ****(Issue)****. While a service provider  (name of the company) is available, they are unable to perform the work within the budget set for this request. The current budget is ****$****. Kindly advise how you would like to proceed.”*
+3. Submit a **PS ticket** 
+  1. Submit a PS ticket to document that the **Property Manager has set a $1/$0 HBL**, affecting the dispatch of the work order, and to clarify the **next steps with Property Management** when setting an NTE for work orders. Refer to https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-to-Product-Support
+</Accordion>
+
+<Accordion title="What if the Property Manager/Owner set the approved budget to $0 but did not update the hard budget and gave no clarification about approving a specific amount before proceeding with work?">
+Process: If Approved Budget is $0, HBL is higher, and no clear instructions from the PM/Owner** — do not authorize work beyond $0 until clarified.**
+
+1. **Clarify with the PM/Owner first**
+  1. Reach out to the PM/Owner to confirm whether they want to approve a specific amount before work proceeds (e.g., “approve up to $X,” or “approve any amount before work”). Document the outreach and outcome in WO notes.
+  2. **DIY Owners**
+    1. Reach out directly to the Owner to obtain the cap or explicit approval for a specific amount.
+    2. If no answer: set the WO to Pending and create an Action Required task for the Owner.
+    3. Inform the service provider to hold off any work until confirmed with the Owner.
+  3. **Standard Property Managers**
+    1. If Property-Damaging or Extreme Habitability: call the Emergency Escalation Contacts to obtain a decision.
+      1. If unresponsive, create an Action Required task for the PM per task guidelines and document all attempts.
+    2. If **NOT **PD/EH: create an Action Required task to the PM.
+2. **Sample outreach script**
+  1. *“Hi [PM/Owner Name], this is [Your Name] from Latchel regarding WO [#] at [address]. The Approved Budget on this WO is currently set to $0 while the Hard Budget Limit is higher. Before we proceed, do you want us to approve up to a specific amount (e.g., $X), or should all work require your explicit approval first? Please confirm the dollar amount to authorize or that you want to review any amount before work is done. Thank you!”*
+
+**Important: Until we receive clarification, do not approve any work beyond $0. Document all outreach, set status appropriately, and create the Action Required task when applicable.**
+</Accordion>
+
+<Accordion title="The service provider sent an estimate via email with a link to approve or deny it. Do I (Ops) have the authority to approve or deny the estimate using that link?">
+Yes — Ops has the authority to approve or deny estimates submitted via a service provider's link, **as long as the standard budget rules are followed**:
+
+- ✅ **If the estimate is equal to or under the Hard Budget** → You may approve via the link. After approving, update the Approved Budget in the work order and document the action in the WO notes.
+- ❌ **If the estimate exceeds the Hard Budget** → Do **NOT** approve via the link. Escalate to the Property Manager.
+- ⚠️ **If the SP submits multiple estimates** (e.g., repair vs. replace) → Do **NOT** approve via the link. Escalate all options to the Property Manager regardless of amount.
+
+**Always remember to:**
+
+1. Attach the estimate/email to the work order.
+2. Leave clear notes documenting that the estimate was approved/denied via the SP's link, including the amount and reason.
+
+The submission method (link, email, portal, phone, SMS) does **not** change Ops' approval authority — the same budget-limit rules apply in all cases.
+
+**What if the SP sent the estimate link directly to the Property Manager (not to Ops) and the PM hasn't taken action?**
+
+In some cases, the service provider's system will send the estimate link and/or a copy of the estimate directly to the Property Manager (e.g., via SMS or email), requiring the PM to approve through the SP's external link. If the PM has not acted on the link:
+
+1. **Verify the estimate details** — Confirm the estimate amount and review whether it is within or over the Hard Budget.
+2. **Upload the estimate to the work order** — If the estimate or a screenshot of the SP's link/notification is available, attach it to the WO files. Refer to https://latchel.atlassian.net/wiki/spaces/OPS/pages/757039124.
+3. **Create a task for the Property Manager** informing them that the SP requires their action on the external link:
+  1. **Note: If this is the first time you are moving the work order to Needs Owner Approval, follow the below task information. If the WO is already in Needs Owner Approval, create a task.**
+  2. For Property Damaging and Extreme Habitability situations:
+    1. Subject: **Action Required: Service Provider Requires Approval via External Link**
+    2. Who is this task about? *Select the PM*
+    3. Select a Date and Time: *Leave as is*
+    4. Assign to a User Group: *PM user group*
+    5. Assign to a User: *Leave as is*
+    6. Priority: *Leave as is*
+    7. *Complete task only on Completed or Cancelled job States*
+    8. Description: *"The assigned service provider has submitted an estimate that requires your approval through an external link. The service provider's system sent the estimate details and approval link directly to you via [SMS/email — specify the method]. In addition to any approval through the work order portal, the service provider requires you to access and approve the estimate through their link before they will proceed with the work. Please complete the approval at your earliest convenience. If you have any questions or did not receive the link, please let us know and we can coordinate with the service provider to resend it. Thank you!"*
+  3. For non-Property Damaging and Extreme Habitability situations:
+    1. Call the escalation contacts.
+      1. Refer to https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs
+    2. If the escalation contacts are unresponsive, go back Step 3.a.
+4. **Move the work order to Needs Owner Approval** (if the estimate exceeds the Hard Budget) or **Pending** (if within budget but the SP still requires the PM's action on the link before proceeding).
+5. **Follow up if the PM does not act on the link** — Follow the same follow-up cadence as standard estimate approvals. Refer to the *"When should we follow up with the Property Manager if a work order is in Needs Owner Approval"* FAQ above.
+6. **Document your actions** — Leave clear notes that the SP sent the estimate link directly to the PM, the method used (SMS, email, etc.), the date it was sent, and that no action was taken by the PM. Refer to https://latchel.atlassian.net/wiki/spaces/OPS/pages/1058211367 .
+</Accordion>
+
+## 🎯 When to Break This SOP
+
+You can break the SOP in the following scenarios:
+
+- **If the Property Manager or Owner has already provided explicit approval or denial for the estimate outside of the standard process,** you may update the work order and document the exception accordingly.
+- **If the service provider insists on immediate payment for an initial visit while the estimate is still pending,** escalate to the Payments team or follow the payment escalation process as outlined, rather than waiting for the standard approval flow.
+- **If you are unsure which action to take or encounter an unusual situation not covered by the SOP,** escalate to an Operations Support Specialist for guidance rather than proceeding on your own.
+
+---
+
+## 💡 If You Think This SOP Could Be Improved...
+
+Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work?  
+ 👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**

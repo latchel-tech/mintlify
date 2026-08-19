@@ -1,0 +1,147 @@
+---
+title: "How to: Confirm Completion (Emergency and Non-Emergency)"
+groups: ["latchel"]
+---
+
+## 🧠 What This Process Is Trying to Solve
+
+<Note>
+We want to prevent emergency work orders from being closed before the job is truly finished or verified, which can lead to unresolved issues, callbacks, and resident frustration. The goal is to provide a clear, step-by-step process for confirming completion with both the resident and the service provider—ensuring that emergency repairs are fully resolved, accurately documented, and not prematurely marked as done.
+</Note>
+
+<Note>
+### What are Work Orders with "Confirming Completion" Status?
+
+Confirming Completion is when the Resident or the Service Provider confirms that "the Service Provider went to the home and did work with the maintenance request job". This stage occurs after the Service Provider has been assigned to a job and is expected to have gone to the home to do the work. Residents or Service Providers can confirm or deny the completion of the job through the automated system provided by Latchel ([How to: Navigate the Service Provider Interface](https://latchel.atlassian.net/wiki/spaces/LTG/pages/781713836)), or via text message (most popular), email, or phone.
+</Note>
+
+<Warning>
+**Attention: **For agents handling tasks for both emergencies and non-emergencies.
+
+Before you begin working on any task, **ensure you view all open tasks for the customer you are following up on **(resident, service provider, owner). This step is crucial to avoid duplicating efforts and customers complaints, and to ensure we always get it right the first time.
+
+For detailed instructions on how to handle the tasks queue and view all open tasks, please refer to the following link: https://latchel.atlassian.net/wiki/spaces/OPS/pages/2559639553
+
+For information on the frequency and number of times you should contact customers, please refer tohttps://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Informational-Basic-Service-Ops-Guidelines-and-Rules
+</Warning>
+
+# Content
+
+## 📋 Step-by-Step Process
+
+### Step 1: About "Confirming Completion" status
+
+1. https://latchel.atlassian.net/wiki/spaces/OPS/pages/2559639553  populates with a Work Order whose status is: "Confirming Completion." 
+  1. ***What does it mean? ***If the Work Order status is **"Confirming Completion"**, it means that we need to communicate with the resident or Service Provider to verify that the Service Provider has completed the maintenance request job as expected.
+    1. The Latchel Console system automatically moves it into "Confirming Completion" after the appointment window. 
+  2. Agents have the responsibility of:
+    1. Checking the Work Order notes for past actions of other Latchel agents
+    2. If there are no notes that indicate confirmation, check the text messages from the resident to see if the resident has already confirmed that the Work Order is complete.
+    3. If there are neither notes nor text messages from the resident, the agent makes a phone call to the Resident first and the Service Provider second if needed.
+2. Open the Work Order
+  1. Proceed to Step 2
+
+### Step 2: Read the Work Order
+
+1. Read the Work Order and check to see if another Latchel agent wrote a note about confirmation
+  1. Check for any notes that indicate that either the Service Provider or the resident has confirmed that they have completed the job 
+    1. ***Why?*** It is sometimes possible that the agent made a note in the Work Order but did not advance the work order by changing the status to "Completed" 
+      1. If the note reads: "Created by (name of a person)", then the note was written by another Latchel agent
+  2. **YES, reading the Work Order indicates that the Work Order is completed**
+    1. Click "Action".
+    2. Options for Confirming Completion will appear.
+    3. Click "The job is complete"  
+
+      1. Click "Request invoice from service provider"
+  3. **NO, it has ****not**** been confirmed to be completed**
+    1. Check the Notes of the Work Order
+      1. Contact the resident, 
+        1. If the resident can confirm completion, mark the work order as complete
+        2. If the resident advised the service provider did not complete the job, or cannot confirm completion or does not answer, proceed to [Step 3](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Confirm-Completion-Emergency-and-Non-Emergency).
+
+### Step 3 - Calling the Service Provider and Handling the Various Outcomes
+
+<Warning>
+**Emergencies**: Once you have reached this step, contact either the Resident or the Service Provider to determine if the job is still an emergency. If it is, the service provider is to be reassigned, proceed to [↔ How to: Reassign a Service Provider](https://latchel.atlassian.net/wiki/spaces/OPS/pages/786859062)
+</Warning>
+
+1. If the Service Provider has confirmed completion, we trust their word and assume that the job has been completed.
+2. Call the Service Provider.
+  1. **OUTCOME 1**: If the Service Provider answers the phone call, and they confirm that they've finished the job
+    1. Say,
+
+    2. Click "Action"
+    3. Options for Confirming Completion will appear.
+    4. Click "The job is complete"  
+
+    5. Say,
+
+    6. Click "Request invoice from service provider"  
+
+    7. Proceed to [Step 4](#)
+  2. **OUTCOME 2**: If the Service Provider answers the phone call and they say that they 🚫**did not** complete the job. 
+    1. Emergencies: [(🏡⛑EMERGENCY) Work Order Is Not Complete/Issue is Not Resolved](https://latchel.atlassian.net/wiki/pages/createpage.action?spaceKey=LTG&title=%28%F0%9F%8F%A1%E2%9B%91EMERGENCY%29%20Work%20Order%20Is%20Not%20Complete%2FIssue%20is%20Not%20Resolved)
+    2. Non-emergences: https://latchel.atlassian.net/wiki/spaces/OPS/pages/2528575517
+3. **OUTCOME 3**: If the Service Provider states that they'll call back or does not answer the phone call,
+  1. Leave a voicemail
+    1. **Preferred**: 💬“*Hello, [SP's name]! This is [your name] calling *on behalf of the [*Property Management Company's name] about a job at [address] for [issue]. We'd like to get your confirmation that the job has been completed. Please text us back at [PM Latchel-Assigned Phone Number] to confirm. We'll be happy to assist you with any other work orders, too. Thank you and have a nice day!”*
+    2. **LCN/LVN: ** 💬“*Hello, [SP's name]! This is [your name], a maintenance coordinator calling *on behalf of the [*Property Management Company's name] about a job at [address] for [issue]. We'd like to get your confirmation that the job has been completed. Please text us back at [PM Latchel-Assigned Phone Number]  to confirm. We'll be happy to assist you with any other work orders, too. Thank you and have a nice day!”*
+  2. Refer to the applicable stepshttps://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Informational-Basic-Service-Ops-Guidelines-and-Rules.
+4. **OUTCOME 4: **If the Service Provider Has a **Critical Note **Not to Be Contacted for Follow-Ups
+  1. Review the critical note to determine whether the restriction applies to phone calls only or to all communication methods.
+    1. If the restriction applies only to phone calls, check whether the service provider has other communication methods enabled (SMS and/or email).
+    2. If alternative communication methods are available, send an SMS or email follow-up.
+      1. **Preferred**: 💬 *Hi [SP Name]! This is [Your Name] on behalf of [PM Company]. We’re checking on the job at [Address] for [Issue]. Please text us at [PM Latchel-Assigned Phone Number]  to confirm if the work has been completed. Thanks!*
+      2. **LCN/LVN:  **💬 *Hi [SP Name]! This is [Your Name], a maintenance coordinator on behalf of [PM Company]. We’re following up on the job at [Address] for [Issue]. Please text [PM Latchel-Assigned Phone Number] to confirm if the work is complete. Thank you!*
+    3. If the issue remains Property-Damaging or Extreme Habitability, proceed with escalation by contacting the appropriate escalation contacts in accordance with https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs 
+    4. If the issue can be classified as Non–Property-Damaging or Non–Extreme Habitability, defer the task and follow the applicable steps in  https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Informational-Basic-Service-Ops-Guidelines-and-Rules 
+  2. If the Service Provider Should Not Be Contacted via Any Communication Method
+    1. Do not attempt any follow-up outreach to the service provider.
+    2. If the issue remains Property-Damaging or Extreme Habitability, proceed with escalation by contacting the appropriate escalation contacts in accordance with the https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs 
+    3. If the issue can be classified as Non-Property-Damaging or Extreme Habitability, create a task to PM following the  “Action Required: PM Instructions or Information Needed”
+
+### Step 4 - Write Effective Notes.
+
+1. Refer to [↔ How to: Write Effective Notes](https://latchel.atlassian.net/wiki/spaces/OM/pages/763363368) for details
+
+## [**❓**](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Emergency-Work-Orders)**Frequently Asked Questions**
+
+<Accordion title="How should we handle situations where the service provider who completes the work is different from the one currently assigned to the work order?">
+1. **Verify completion**
+  1. Confirm with the resident (and/or the provider who performed the work) that the job was actually completed.
+2. **Assign the work order to the provider who completed the work**
+  1. If the provider **is in our system**, reassign the work order to them.
+    1. If the provider **is NOT in our system**,
+      1. **Ask the resident if they hired the service provider themselves.**
+        1. **If the resident *****did***** hire the service provider:**
+          1. Proceed to Step 3 and choose **“Resident Resolved the Issue.”**
+        2. **If the resident *****did NOT***** hire the service provider**:
+          1. Proceed to Step 3 and still choose **“Resident Resolved the Issue”**, since the system requires this option when no assignable provider exists.
+          2. NOTE: This is required because the system does not let you close the work order without an assigned provider if you select “Service Provider Resolved.” 
+          3. ✅ *This avoids inaccurate closures under “Resident Resolved” and allows the WO to be closed properly.*
+3. **Mark the work order as Completed**
+  1. Include notes stating:
+    1. Which provider actually completed the job
+    2. Whether they were originally assigned, unassigned, or never in the system
+    3. How you confirmed completion
+    4. Why the assignment was corrected for closure
+4. **Notify the Property Manager**
+  1. Create a task summarizing what happened so they understand:
+    1. Why the work order was reassigned for accuracy
+    2. Who actually completed the work
+    3. Any billing or communication considerations
+</Accordion>
+
+## **🎯 When to Break This SOP**
+
+You may **deviate** from the SOP only in specific, documented scenarios. Here’s when deviation is allowed:
+
+- If the resident says the job is incomplete but the service provider insists it’s done (or vice versa), do not close the work order. Confirm completion with both parties and escalate if you cannot resolve the conflict.
+- If the job is confirmed to be incomplete and you’re unable to reach either the resident or the service provider after multiple attempts, do not close the work order. Escalate for further guidance.
+- If work order notes or messages from previous agents are conflicting or unclear about the job status, confirm with both parties. If you still cannot determine completion, escalate for assistance.
+- If you encounter a situation not addressed by the SOP, or you are unsure how to proceed, **pause and escalate to Operations Support Specialists for guidance**. Do not break the SOP on your own.
+
+## **💡 If You Think This SOP Could Be Improved...**
+
+Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work?  
+ 👉 Share your suggestion in the[ ](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd)[SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**

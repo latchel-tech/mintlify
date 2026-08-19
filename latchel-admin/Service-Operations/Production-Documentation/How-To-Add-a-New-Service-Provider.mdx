@@ -1,0 +1,259 @@
+---
+title: "How To: Add a New Service Provider"
+groups: ["latchel"]
+---
+
+## 🧠 What This Process Is Trying to Solve
+
+<Note>
+We want to prevent errors, delays, and compliance risks when adding new service providers to the Latchel Network. The goal is to ensure every new provider is onboarded with complete, accurate information—including contact details, skills, and payment setup—so they can be dispatched quickly and reliably for work orders.
+</Note>
+
+Content
+
+## 📋 Step-by-Step Process
+
+1. Select 'Service Providers' from the "People" dropdown on the Navigation bar of the Latchel Console Home Interface.
+  1. <Frame>
+  ![image-20260609-021241.png](/images/SVC-778.png)
+</Frame>
+2. From the top right of the screen, locate and select "+New Service Provider"
+  1. <Frame>
+  ![image-20260609-021756.png](/images/SVC-779.png)
+</Frame>
+3. Fill Out Basic Company Information
+  1. **📝** **NOTE:** For requests to update ***critical notes***, please escalate to https://latchel.atlassian.net/wiki/spaces/OPS/pages/2563276894 and https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Customer-Information-Updates.
+  2. **Primary Contact Email: **Enter the main email address for the [company.](http://company.It)
+    1. **Important:** An email address is required to create the profile.
+      1. If a Service Provider doesn’t have a real email, use a temporary/fake email: **SP Company Name **+“@**noemail.com”** to complete profile creation.
+        1. <Frame>
+  ![image-20251125-221159.png](/images/SVC-780.png)
+</Frame>
+      2. Proceed with the next steps by adding all required information to save the newly added SP.
+      3. Once the SP has been successfully created, you may remove the temporary (fake) email address from their profile.
+        1. <Frame>
+  ![image-20260610-195119.png](/images/SVC-781.png)
+</Frame>
+  3. **Company Name:** This is the operating name the company uses. This could be a person's name or a filed name of business. (e.g. John's Plumbing, John Jacob, A to Z Plumbing)
+  4. **Company Critical Notes: **This section is where any special information about the company is added. (e.g. does not work on federal holidays, closed on Mondays) 
+  5. **Primary Contact Name: **This is where you put the name of the person who will be the primary contact for the company; this should always be a given name (Use the format: (First Name) (Last Name)).
+  6. **Primary Contact Phone: **Enter the main phone number for the company. This will be used for all outbound contact from Latchel
+  7. **Critical Notes: **This is where secondary phone numbers or contact persons, as well as any specific contact information are being added. (e.g. A contact cannot answer on weekends
+<Frame>
+  ![](/images/SVC-782.png)
+</Frame>
+4. Fill Out Detailed Company Information
+  1. **Is the Service Provider In-Network? **This is referring to the Latchel Contractor Network, this should be toggled OFF (white) unless otherwise specified.
+
+  2. **Skill Categories: **Skill Categories are groups of skills that a Service Provider may have. (e.g. Plumbing, Electrical, HVAC) 
+    1. **"+ Add Skills"** - To add Service Providers that are ❌not considered to be a "Handyman" or "General Contractor. 
+      1. More information on Adding or Removing Service Provider Skills can be found here [(TECH 101) How to: Add or Remove Service Provider Skills](https://latchel.atlassian.net/wiki/spaces/OM/pages/791281864)
+    2. **"+ Add Quick Create Skill Set"** - To add Service Providers that are ✅considered to be a "Handyman" or "General Contractor. 
+      1. To complete Quick Create, follow the SOP for How to Quick Create for Handyman/General Contractor & General Skills: [(TECH 101) How To: Use "Quick Create tool" to add all Handyman/General Contractor skills to a Service Provider](https://latchel.atlassian.net/wiki/spaces/OM/pages/954401327)
+  3. **Insurance/License: **Insurance and licensing is verification that the provider is able to operate in their trade. Not every trade has licensing, therefore it is not required to register a Service Provider.
+
+  4. Click "Save"
+<Frame>
+  ![](/images/SVC-783.png)
+</Frame>
+5. Update the Service Provider Address
+  1. You must navigate to the address section of the Service Providers profile page and update this information.
+  2. 
+<Frame>
+  ![](/images/SVC-784.png)
+</Frame>
+6. How to verify the payment method for a Latchel Service Provider?
+  1. You can verify the Service Provider’s payment method in the profile under “Service Provider Status”.
+    1. Regardless if the toggle for “**Is the Service Provider In-Network?**” was set to on/off, the payment system should have defaulted to “Issued Cards”
+<Frame>
+  ![image-20240701-220131.png](/images/SVC-785.png)
+</Frame>
+    2. Service Providers who wish to opt in to Direct Deposit must complete the verification process. After they are added to the Console, they will receive an email with their credentials, allowing them to monitor work orders and enabling the Direct Deposit option. Once they have successfully added their details, the “Payment System” as shown above must reflect as “Direct Deposit”.
+
+## 📋 **Verifying Potential Duplicate Profiles Before Creating a New One**
+
+**When This Applies:**  
+You are adding a service provider to the system — whether from an onboarding request, a PM/owner request, or an LCN join request — and the system detects a match on email, phone number, or contact person with an existing profile, even though the company name has a slight variation (e.g., "ABC Mechanical" vs. "ABC Mechanicals") or the address is different.
+
+<Accordion title="Step-by-Step Process:">
+1. **Search for the existing profile in the Latchel Console.**
+  - Compare the following fields between the new onboarding request and the existing profile:
+    - Company Name
+    - Primary Contact Name
+    - Primary Contact Email
+    - Primary Contact Phone
+    - Company Address
+    - Skills / Service Categories
+2. **Assess the match.**
+  - If the **email, phone, and contact person are identical** but the **company name has only a minor variation** (e.g., added/removed letter, abbreviation difference, "LLC" vs. no "LLC"), treat this as a **likely duplicate or update** — not a new provider.
+  - If the **address is different** but all other contact details match, this **may** indicate a new branch location — but do **not** assume. Proceed to Step 3.
+3. **Call the Service Provider to verify.**
+  - Contact the SP using the phone number on file and confirm:
+    - *"We received a new application under [new company name]. We already have a profile for [existing company name] with the same contact information. Can you confirm whether this is a new branch/location, or are you updating your existing profile with us?"*
+  - Document the SP's response.
+4. **Based on the SP's response:**
+
+| SP Response | Action |
+| --- | --- |
+| **It's the same company / just updating info** | Update the existing profile with any new information (address, company name, skills). Do **not** create a new profile. Document the update in internal notes. |
+| **It's a new branch / separate location** | Since the system blocks duplicate emails, escalate to Product Support via https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-to-Product-Support with the details of both profiles and the SP's confirmation that this is a separate branch. PS can assist with creating the new profile or adjusting email constraints. |
+| **SP is unsure / cannot be reached** | Do **not** create a new profile. Leave the existing profile as-is. Add a note to the original request or ticket documenting the attempt to verify. Let them know we won’t be changing anything but would be best to reach out once they are certain. |
+
+5. **Document your actions.**
+  - Update the original request or ticket (e.g., Assembly, SP Profile) with the outcome of the verification call.
+  - If the existing profile was updated, add internal notes on the SP profile documenting what changed and why.
+  - If escalated to PS, include the original request link and the SP's confirmation in the PS ticket.
+</Accordion>
+
+## Owners/PMs Request to Add Preferred Service Providers
+
+<Accordion title="What should Ops do when an Owner/PM requests to add their preferred service provider?">
+A Property manager/Owner may contact you to request the assignment of a specific service provider. The owner may want the provider assigned **for a one-time job** or **added to their preferred vendor list** for future use. When you receive this type of request, follow the steps below:
+
+**Before You Begin**
+
+<Warning>
+For **Property Managers, **refer to the available help guides:
+
+- [How to Add & Manage Service Providers](https://help.latchel.com/s/topic/0TO5e000000h9wqGAA/How-to-Add-Manage-Service-Providers)
+- [How to Prioritize/Edit Service Providers With Their Skills](https://help.latchel.com/s/topic/0TO5e000000h9wqGAA/How-to-Prioritize-Edit-Service-Providers-with-their-skills)
+- [How to Add a Service Provider to a Portfolio](https://help.latchel.com/s/topic/0TO5e000000h9wqGAA/How-to-Add-a-Service-Provider-to-a-Portfolio)
+
+For **RentRedi owners**, we have a help guide available on how they can add a preferred vendor directly. Refer to: [Add Preferred Vendors to Latchel](https://help.rentredi.com/en/articles/4757352-add-preferred-vendors-to-latchel).
+
+However, if the request is related to an **active (live) work order**, **Ops should add the service provider immediately** to avoid delays. Refer to to the below steps to proceed.  
+If the request is for **future work orders**, share the help guide with the owner so they can complete the process themselves.
+
+** **If the PM/Owner refuses, is unable to complete the process, or encounters any issues (e.g., system blocks or access problems), you may then proceed with the steps below to assist them. Refer to https://latchel.atlassian.net/wiki/spaces/OPS/pages/759431202.
+</Warning>
+
+1. Obtain all necessary details about the service provider:
+  1. **Service Provider Company Name**
+  2. **Service Provider's Name**
+  3. **Service Provider's Email Address**
+  4. **Service Provider's Phone** **Number**
+  5. **Skills to Add (List all if multi-skills.)**
+2. **Before creating a new service provider entry, search Latchel to see if the service provider company already exists in the system.**
+  1. If a potential match is found, follow [📋 Verifying Potential Duplicate Profiles Before Creating a New One](https://latchel.atlassian.net/wiki/spaces/OPS/pages/edit-v2/794034545#).
+  2. If no matching profile exists, proceed to add the new service provider.
+3. Create the provider’s profile in the system
+  1. Refer to the above [step-by-step process](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-To-Add-a-New-Service-Provider).
+4. Add the **PM Company** under **Preferred PMs** so you can assign them to the work order.
+  1. <Frame>
+  ![image-20251030-184932.png](/images/SVC-786.png)
+</Frame>
+  2. <Frame>
+  ![image-20251030-185015.png](/images/SVC-787.png)
+</Frame>
+  3. Click **Submit**.
+  4. You can now assign the service provider to the work order.
+5. Ask the PM/Owner whether they would like to:
+  1. Use the service provider **only for this work order**, or
+    1. Simply assign the service provider to the work order.  
+✅ You’re done.
+  2. **Add them as a preferred vendor** for future use.
+    1. Assign the service provider to the work order.
+    2. Fill out the “**Add New Preferred Service Provider for Owners**” workflow in the **#ops_info_center** channel so the **Data Support** team can complete the remaining steps.
+</Accordion>
+
+## Tagging an Existing Preferred Service Provider as LCN
+
+<Accordion title="How do I tag an existing Preferred SP as LCN">
+Preferred service providers may request to join the Latchel Network. To tag them as an LCN and ensure they are available for future jobs, follow these steps:
+
+1. Navigate to the **Service Provider Profile**.
+2. Locate the **Service Provider Status** section.
+3. Toggle **Latchel Service Provider Network** to the right (ON).
+4. Click **Save**.
+
+<Warning>
+Ensure the service provider's address and skills are up to date to make them eligible for job assignments.
+</Warning>
+
+**📝** **NOTE:** The default payment system will be set to **Issued Cards**. If the service provider prefers **Direct Deposit**, follow the guidelines outlined in Step 7 above.
+
+<Frame>
+  ![image-20250206-194732.png](/images/SVC-788.png)
+</Frame>
+</Accordion>
+
+## **How to Handle Service Provider Requests to Join the LCN**
+
+<Accordion title="Step-by-step Procedure">
+Service providers may reach out to Latchel expressing interest in joining our network. When this happens, we should take action by guiding them through the steps required for onboarding.
+
+**Sample Triggers**
+
+- Email inquiry asking how to join the Latchel network.
+- Phone call/SMS or voicemail expressing interest in becoming a Latchel service provider.
+- Response to outreach emails (e.g., they reply showing interest in partnering).
+- Provider calling to update their status and mentioning they’d like to start taking work again.
+
+**Steps to Follow**
+
+1. **Acknowledge the service provider’s interest.**
+2. **Check the system to confirm whether they already have a profile.**
+  1. If a potential match is found, follow [📋 Verifying Potential Duplicate Profiles Before Creating a New One](https://latchel.atlassian.net/wiki/spaces/OPS/pages/edit-v2/794034545#).
+  2. If they don't have a profile, proceed to Step 3.
+3. For service providers reaching out via phone call, **say something like**:
+  1. *“Thank you for reaching out and for your interest in working with us.* *In order to get you set up with Latchel, we’ll need you to complete our vendor application form. I’ll send you an email with the link and all next steps as soon as we finish this call.”*
+4. **Send them the response below via email.**
+  - If the service provider does not have an email address, format the message as an SMS and ensure all links are accessible.
+  - For easier access to email, the template “**(VENDOR ON-BOARDING) Vendor Interested in Latchel**” has been updated to the following:
+
+<Check>
+*Hi XXXX,*
+
+*Good day! Thank you for reaching out and for your interest in joining our network.*
+
+*At Latchel, we connect property managers across the U.S. with reliable service providers to handle maintenance, emergency, and renovation work. Once onboarded, you’ll receive work orders directly through our platform.*
+
+*To begin the process, please complete our vendor application form here:*
+
+[*Latchel Vendor Sign-Up*](https://latchel.com/vendor-sign-up/)
+
+*After submitting your application, one of our onboarding team members will review your information and contact you to verify details and guide you through the next steps. We appreciate your interest and look forward to exploring a potential partnership. We’re here to help if you need anything else. Thank you, and enjoy your day!*
+</Check>
+</Accordion>
+
+<Accordion title="What happens after the Service Provider receives the email?">
+Upon receiving the email, the Service Provider is instructed to proceed to the registration link on our website: https://latchel.com/vendor-sign-up/ .
+
+1. Once on the registration page, the Service Provider is prompted to fill out all required information, ensuring completeness and accuracy. Upon completion, they are required to click the "Submit Application" button to finalize the registration process.
+
+<Frame>
+  ![image-20240223-182308.png](/images/SVC-789.png)
+</Frame>
+
+2. Upon successful submission, a notification confirming the registration's success will be displayed.
+<Frame>
+  ![image-20240223-183023.png](/images/SVC-790.png)
+</Frame>
+3. Following this, a ticket will be automatically generated on Assembly for our Operations team. The Operations team will then initiate the process of adding the Service Provider to the console following  https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-To-Add-a-New-Service-Provider
+<Frame>
+  ![image-20250303-210731.png](/images/SVC-791.png)
+</Frame>
+</Accordion>
+
+<Accordion title="How do I handle responses to Onboarding Emails">
+- When the service provider responds, simply add their profile information into the system.
+  - Refer to the [steps above](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-To-Add-a-New-Service-Provider) for adding a new service provider.
+  - Once the new profile has been created, the service provider will receive an automated notification of their account being created.
+- Sample email from when the service provider filled out the onboarding form:
+  - <Frame>
+  ![image-20251126-203531.png](/images/SVC-792.png)
+</Frame>
+</Accordion>
+
+---
+
+## 🎯 When to Break This SOP
+
+**Do not break or deviate from this SOP on your own authority.** Always escalate to an Ops Support specialist or follow explicit instructions if you believe an exception is necessary.
+
+---
+
+## 💡 If You Think This SOP Could Be Improved...
+
+Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work?  
+ 👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**

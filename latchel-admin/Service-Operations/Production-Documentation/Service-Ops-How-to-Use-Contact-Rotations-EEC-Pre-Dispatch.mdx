@@ -1,0 +1,208 @@
+---
+title: "Service Ops: How to Use Contact Rotations (EEC + Pre‑Dispatch)"
+groups: ["latchel"]
+---
+
+## 🧠 What This Process Is Trying to Solve
+
+<Note>
+We want to ensure Ops consistently uses PM contact rotation schedules—both for pre‑dispatch instructions and Emergency Escalation Contacts—in order to identify the correct on-call person for the current time and contact them using the information stored in [app.latchel.com](http://app.latchel.com/), instead of relying on static or outdated individual contacts.
+</Note>
+
+<Note>
+For how pre‑dispatch instructions and critical notes interact with emergency diagnosis and dispatch decisions (including override examples), see:  
+https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-Critical-Pre-dispatch-Warranty-Special-Notes-Emergency-Escalation-Contacts
+</Note>
+
+<Note>
+### 🔍 What the Contact Rotation link is:
+
+The Contact rotation link is a dynamic list of who to call first, in what order, based on time/day.
+
+- For some properties, this list is a set of Service Providers (SPs) the PM wants us to try first for dispatch.
+- For others, it is a list of Emergency Escalation Contacts (EECs) or PM contacts.
+- In some cases, it may mix SPs and PM/EEC contacts.
+
+**How to use it:**  
+The rotation link does not replace SOPs or notes—it supports them. It tells you **who to contact and in what sequence once you’ve confirmed that a call is required.**
+
+- **Example:**
+  - If you are handling an unresponsive resident for a PD/EH issue and need to call EEC, you will refer to the rotation link instead of a static contact list. The calendar will show who to call at that specific time.
+  - If the pre-dispatch notes only provide the Contact rotation link, this means that during dispatch, you should call the contacts listed in the time block corresponding to when you are handling the work order.* *
+</Note>
+
+## 📋 Step-by-Step Process
+
+<Warning>
+Effective April 06, 2026, Latchel will start using Contact rotations to determine who to call for PMs who have schedules in their pre-dispatch instructions or emergency escalation contacts.
+</Warning>
+
+Many of our Property Managers currently use pre‑dispatch instructions or emergency escalation contacts to specify **who to call at what time** or **in what order** escalation contacts should be called. For PMs who have been migrated to **Contact rotations**, those rules will now be enforced through a contact rotation URL.
+
+Below are the steps on how to utilize the new Contact rotations for these PMs.
+
+### **Step 1 – Confirm you are at an escalation/pre‑dispatch step**
+
+1. Check the work order status and guided workflow:
+  1. For emergencies: confirm you’ve reached the step to **call the Emergency Escalation Contact**.
+  2. For pre‑dispatch: confirm the pre-dispatch note applies to your current situation (e.g., about to dispatch, resident unreachable, or any other scenario the note specifies).
+2. Open:
+  1. The **PM / Portfolio / Property profile** if the escalation contact is stored there, and/or
+  2. The **Pre‑dispatch Instructions tab** on the work order / pre-dispatch instructions tab on the property details.
+  3. Refer to https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-Critical-Pre-dispatch-Warranty-Special-Notes-Emergency-Escalation-Contacts.
+
+### **Step 2 – Find the Contact Rotation URL **
+
+1. In the **Pre‑Dispatch Instructions** or **EEC **area, look for a contact reference. Common examples:
+  1. In many cases, this **may be the only text** shown (no extra “call before dispatch” wording).  
+  2. Click the contact rotation URL to open the rotation page.
+    1. <Frame>
+  ![image-20260617-202053.png](/images/SVC-969.png)
+</Frame>
+
+### **Step 3 – Open the Contact Rotation**
+
+1. This page shows you the **ordered list of contacts** (Service Providers and/or EEC/PM contacts) and the current on-call for that time block.
+2. Confirm the rotation page shows:
+  1. The correct PM/company
+  2. That the schedule appears active (entries visible across days/hours).
+  3. And the Active status is toggled to the right.
+  4. <Frame>
+  ![image-20260617-202510.png](/images/SVC-970.png)
+</Frame>
+
+### **Step 4 – Identify Who Is On‑Call Right Now**
+
+<Warning>
+- The "**Who Ya Gonna Call**" tool is now live which provides an AI suggestion for the correct contact and call order based on time of day and scenario. Associates should review the AI recommendation first, while also verifying the information against the original escalation instructions displayed below.
+  - If the AI recommendation conflicts with the original escalation instructions, please submit a bug report so the discrepancy can be reviewed.
+</Warning>
+
+1. On the rotation view, find:
+  1. The **time block** you’re currently in (e.g., Wednesday 12:00 PM),
+  2. Whether this block is labeled as **Business Hours / After Hours / Weekend**, etc.
+2. Identify the **on‑call person** (or sequence of people) for that block.
+  1. <Frame>
+  ![image-20260331-001509.png](/images/SVC-971.png)
+</Frame>
+  2. Example of an ordered rotation:
+    1. Abel Arechiga is the first to be contacted; if no answer, move to
+    2. Roberto Velasco, then
+    3. Caleb Hayes, then
+    4. Roberto Velasco again
+  3. Follow the order shown in the rotation.
+
+### Step 5 – Call the On‑Call Contact
+
+1. Use the standard outbound calling process. Refer to https://latchel.atlassian.net/wiki/spaces/OPS/pages/757235750.
+2. From the rotation, click or locate the **on-call person** in the PM’s contacts/service providers, then:
+  1. Open the contact record.
+  2. There are 2 ways on how you will be able to place the call for the on-call person:
+    1. Use the **phone number** shown in the contact details to place the call.
+      1. <Frame>
+  ![image-20260331-002101.png](/images/SVC-972.png)
+</Frame>
+      2. <Frame>
+  ![image-20260401-204020.png](/images/SVC-973.png)
+</Frame>
+    2. Search and call via the user profile of the contact:
+      1. For **Property Managers**, search for the PM user in the Property Management company’s profile.
+        1. <Frame>
+  ![image-20260401-203355.png](/images/SVC-974.png)
+</Frame>
+      2. For **Service Providers**, search for the SP under the Service Providers tab in the PM company profile.
+        1. <Frame>
+  ![image-20260401-203645.png](/images/SVC-975.png)
+</Frame>
+3. If they don’t answer, follow your **normal no‑answer/voicemail rules** for escalation contacts or pre-dispatch instructions (attempts, timing, whether/how to proceed without contact, etc.).
+  1. https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs.
+  2. https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Emergency-Work-Orders 
+4. **📝** **NOTE: Skip a contact if you see an indication that they are unavailable.**
+  1. <Frame>
+  ![image-20260402-174653.png](/images/SVC-976.png)
+</Frame>
+5. Always ensure the call you made is associated to the work order.
+  1. https://latchel.atlassian.net/wiki/spaces/OPS/pages/2744680449
+
+## [**❓**](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Emergency-Work-Orders)**Frequently Asked Questions**
+
+<Accordion title="Q1: If the only note says “Default on‑call schedule: see https://…”, what am I required to do?">
+When you see only:
+
+> “Default on‑call schedule: see [https://…”](https://xn--ivgr)
+
+this means:
+
+1. **When you reach a dispatch or escalation step**  
+  - If you are **about to dispatch** (Pre‑Dispatch step) or have reached the step to **call an escalation contact (EEC)**:
+    - You **must open the rotation link** and check **who is on‑call during your handling time** (for that time block).
+    - **Call the contacts listed in the rotation in order** — starting from the first person shown for your current time block.
+2. **If you are not dispatching or escalating yet**  
+  - The line **“Default on‑call schedule: see [https://…”](https://xn--ivgr) does NOT, by itself, tell you to call anyone during non‑dispatch troubleshooting.  
+  - You **do not call** just because the link exists.  
+  - You only call if:
+    - Another SOP or note explicitly instructs you to (e.g., “If resident is unresponsive to TS, call EEC”), or  
+    - You have reached a dispatch/escalation step where calling is part of the workflow.
+
+> **Bottom line:**  
+> 
+> - The rotation URL tells you **who is on‑call** and **in what order** once you are at a **dispatch or escalation** step.  
+> - For non‑dispatch scenarios, you only call if there is a **separate, explicit pre‑dispatch/EEC instruction** that applies to your situation (like the special notes we updated in the other SOPs).
+</Accordion>
+
+<Accordion title="Q2: I see a contact listed more than once in the same time block. Do I need to call them again?">
+Yes, **if they did not respond the first time** and they appear again in a later layer in the same time block.
+
+Example Contact setup for one time block:
+
+- Layer 1: **ABC**
+- Layer 2: XYC
+- Layer 3: 123
+- …
+- Layer 10: **ABC**
+
+In this case:
+
+- If you called **ABC** in **Layer 1** and they **did not answer or respond**, and
+- **ABC appears again in a later layer** in the same time block (e.g., **Layer 10**),
+
+then:
+
+> **You must contact ABC again when you reach Layer 10.**
+
+Each layer is a separate escalation step.  
+However, if ABC **already answered and engaged** with you in Layer 1, you **do not need to call them again** just because they appear in a later layer.
+</Accordion>
+
+<Accordion title="Q3: What if the note says “When calling ABC, call them 3x,” but ABC is not on the on‑call schedule for my current time block?">
+You should honor **both** the rotation **and** the special instruction, in this order:
+
+1. **Rotation decides *****who***** to call for this time block.**  
+  - Always start with whoever is on‑call **now** according to the rotation (Layer 1, then Layer 2, etc.).  
+  - Do **not** skip the scheduled on‑call contact just to call ABC because of that note.
+2. **The special instruction applies only when the rotation tells you to call ABC.**  
+  - If ABC **is not listed** anywhere in the current time block of the rotation:
+    - You **do not call ABC** just because of the “call 3x” note.  
+    - Follow the rotation and your normal no‑answer / escalation rules for the contacts who **are** scheduled.
+  - If ABC **is listed** in the rotation (for your current block or in a later layer):
+    - When you reach ABC in the rotation, you must:
+      - Apply the special instruction: **call ABC 3x** (instead of our normal 1‑attempt rule),  
+      - Then, if there is still no response after 3 attempts, proceed to the **next contact/layer** in the rotation.
+
+> **Bottom line:**  
+> 
+> - The **rotation** still controls *who* is eligible to be called in this time block.  
+> - The **special instruction (e.g., “call ABC 3x”)** only changes **how** you call ABC **when** the rotation actually tells you to call them.  
+> - If ABC isn’t on the schedule for this time, you **don’t pull them in** just because of that note.
+</Accordion>
+
+## 🎯 When to Break This SOP
+
+**Do not break or deviate from this SOP on your own authority.** Always escalate to an Ops Support specialist or follow explicit instructions if you believe an exception is necessary.
+
+## 💡 If You Think This SOP Could Be Improved...
+
+Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work?  
+ 👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**
+
+---

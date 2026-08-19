@@ -1,0 +1,768 @@
+---
+title: "Job Aid: PM Outbound Communication for Emergency WOs"
+groups: ["latchel"]
+---
+
+## 🧠 What This Process Is Trying to Solve
+
+<Note>
+*We aim to ensure timely and effective communication with Property Managers during emergency work orders. The goal is to provide clear and immediate updates to prevent miscommunication and delays, ensuring swift resolution of critical issues and maintaining property safety and resident satisfaction.*
+</Note>
+
+<Warning>
+### **🔑**Key Reminders
+
+- Latchel Troubleshooters will **only** call a PM Company via Escalation Contacts in the scenarios outlined in this Job Aid. If the scenario does not fit one of the listed prompts, contact Operations Support Specialists for guidance.
+- Make **one attempt per emergency escalation contact** in sequential order whenever one of the scenarios below occurs. Refer to the WYGC section below for when to use the tool versus calling manually.
+- **General Rule:** If you already called about the same reason and there are no new updates or changes, do **not** call again.
+- Always tag escalation calls to the related work order. For details, refer to [How to: Link Calls to a WO](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2744680449).
+- **Always provide complete property details** when calling, leaving voicemails, sending SMS, or sending Webchats. Include the **full property address with unit number**, **WO number**, issue summary, what you have done, why the issue is PD/EH, and what you need from the PM.
+- **No After-Hours Contact:** If EEC or critical notes explicitly state there are no after-hours contacts for a PD/EH issue, do not attempt EEC calls. Move the WO to the appropriate hold status, submit a [PS ticket ](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-to-Product-Support)for configuration review, and document why calls were not attempted.
+- **SMS-Sourced Work Orders:** SMS-sourced WOs follow the same EEC escalation rules as any other intake channel. Do not treat an SMS-sourced PD/EH WO differently when determining whether to call EECs.
+</Warning>
+
+<Note>
+### 🔧 Understanding the Who Ya Gonna Call (WYGC) Tool
+
+The **Who Ya Gonna Call (WYGC)** tool pulls the data from the **Emergency Escalation Contacts (EEC) list** configured in the system. When a step says to call escalation contacts, WYGC should detect who to call and the order to call them in based on that EEC list.
+
+**Use WYGC when:**
+
+- The scenario or guided workflow tells you to call escalation contacts.
+- Critical notes, pre-dispatch notes, or other instructions say to call **Emergency Escalation Contacts**, **EEC**, or the **full EEC list**.
+
+**Call manually instead of using WYGC when:**
+
+- Notes say to call the **specific** people.
+- Notes provide a contact order or sequence that may be different from the configured EEC list.
+
+For workflows where there is a guided flow to determine whether an issue is **PD/EH** — for example, when completing TS prompts — **WYGC automatically populates** with the configured EEC list once the flow reaches the escalation contact step. In this job aid, that applies to **Scenarios 1–3**. For **Scenarios 4–6**, WYGC does **not** auto-populate; manually access WYGC from the **Action Menu** if the scenario is tied to a work order. If there is no work order tied to the scenario, access WYGC from the **PM Company** or **Property** page.
+</Note>
+
+<Note>
+### 📞 General PM Outbound Script
+
+Use this as the default call template when a scenario does not provide a more specific script, and customize the bracketed details based on the work order and reason for the call.
+
+**General script:** *Hi, [Escalation Contact name]! This is [your name] calling from Latchel regarding WO number [provide number] at [property address, including unit #] for a [brief WO description] issue. [State what you've done and the reason for the call], and the issue is considered a Property Damage/Extreme Habitability situation. How would you like us to proceed?*
+</Note>
+
+<Danger>
+This process **does not **apply to **On-call customers**. For any concerns regarding On-call customers, always refer to the following link for further instructions: https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Follow-Up-Guidelines-for-On-Call-Customers-app-latchel-com 
+</Danger>
+
+<Note>
+**🎓Training Content**
+
+The contents of this page have been included in the **Budget Communication and Approval Process **and **PM Outbound Communication for Emergency WOs** Coassemble courses.
+</Note>
+
+## 📋 Step-by-Step Process
+
+## Step 1. Follow the steps below based on the type of work order (WO) you are handling.
+
+### **🛠️**During Troubleshooting & Dispatch
+
+<Accordion title="Scenario 1: Residents Not Responsive to a Property Damaging or Extreme Habitability Issue">
+### **Scenario 1: Residents Not Responsive to a **[**Property-Damaging or Extreme Habitability Issue**](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-Property-Damage-and-Extreme-Habitability-Situations)
+
+<Warning>
+📝 **NOTE — SMS-Originated Work Orders:**  
+If the work order was created from an SMS text intake and the resident stops responding during the text conversation:
+
+1. The associate's SMS follow-up attempts (soft check-in + second follow-up per the Resident Text Intake protocol) count toward establishing that the resident is unresponsive. You do **not** need to separately call the resident 3 times if you have already attempted to re-engage them via SMS and received no response within the required wait period.
+2. However, if the issue is clearly PD/EH based on what the resident described via text, **do not wait for the full SMS follow-up timer to expire before acting.** Create the WO immediately with whatever information is available and proceed with the guided workflow as outlined below.
+3. When contacting EEC, note that the resident initially reported the issue via text message and became unresponsive during SMS intake. Use the adjusted voicemail and SMS scripts below.
+</Warning>
+
+After ***calling all active residents 3 times***, follow the existing guided workflow (*Could not reach resident → Is there potential for property damage or an extreme habitability issue? Yes*).
+
+<Frame>
+  ![](/images/SVC-834.png)
+</Frame>
+
+<Frame>
+  ![](/images/SVC-835.png)
+</Frame>
+
+**WYGC automatically populates** in this guided workflow once you reach the escalation contact step. Use the populated WYGC list to identify the correct EEC contact order for this escalation scenario. The activity log records the scenario, AI recommendation, and contacts used. If an Escalation Contact is unresponsive, leave a voicemail for each contact and then continue to follow the guided workflow.
+
+<Frame>
+  ![image-20260604-091929.png](/images/SVC-836.png)
+</Frame>
+
+<Note>
+**Voicemail script for *****all but the last person on the Escalation Contacts list***: *Hi, [Escalation Contact name]! This is [your name] calling from Latchel regarding WO number [provide number] at [property address, including unit #] for a [brief WO description] issue. I’m reaching out because I called [the resident/all residents on record] and they have been unresponsive to my 3 Troubleshooting calls and the issue appears to be [property damaging/an extreme habitability issue]. I will continue to call the rest of your escalation contacts. Please don’t hesitate to send us a Webchat or text us back at (206)-900-9466 if we can assist you with this or any other work orders. Have a nice [day/evening]!*
+
+**Voicemail script for last contact on the list ( SMS-Originated Work Orders):** *"Hi [Escalation Contact name], this is [your name] from Latchel regarding WO #[number] at [property address, unit #] for a [brief issue description] issue. We received a text message from [Resident Name] reporting this concern, and the issue appears to be [property damaging / an extreme habitability situation]. We were unable to complete full intake as the resident [stopped responding / declined to provide details]. The WO has been created. I will continue to call the rest of your escalation contacts. Please don’t hesitate to send us a Webchat or text us back at (206)-900-9466 if we can assist you with this or any other work orders. Have a nice [day/evening]!*
+</Note>
+
+***If you were able to reach an Escalation Contact***, you will take action based on what the Escalation Contact asked you to do. See the options below:
+
+1. If they asked you to just go ahead and dispatch, go back to the beginning of the troubleshooting guided workflow, choose *Issue IS an Emergency*, and then choose *Work order needs immediate dispatch*.
+2. If they tell you it’s not an emergency, go back to the beginning of the troubleshooting workflow and choose *Issue is NOT an Emergency*.
+3. If the Escalation Contact says that they will handle it, choose *Successful Contact* and follow the guided workflow. It will ask you to complete a form. The system will then automatically send the WO to the PM. Use this template to fill out the form:
+
+<Note>
+- **Why did you escalate this?** *The resident was unresponsive to a [property damaging OR extreme habitability] issue. I called all residents and phone numbers on record.*
+- **What was the risk for property damage or an extreme habitability issue?** Provide a brief description. Ex: *The maintenance request states there is an active leak and they can’t shut off the water supply.*
+- **Who did you successfully contact?** Write the first and last name of the escalation contact you spoke with. Ex: *Jane Smith*
+- **What are the recommended next steps?** Summarize notes from your phone conversation with the escalation contact and include a brief description of what else needs to happen. *Ex: Spoke with Jane Smith and she asked to move the work order to her. She will contact the resident about this emergency work order and also confirm if resident information is correct in the Latchel system. Access property to assess the situation if the resident is still unresponsive.*
+</Note>
+
+<Frame>
+  ![](/images/SVC-837.png)
+</Frame>
+
+***If you were unable to reach an Escalation Contact***, leave a voicemail for the last person on the list using the following templates.
+
+<Note>
+**Voicemail script for last contact on the list (Premium Customers):** *Hi, [Escalation Contact name]! This is [your name] calling from Latchel regarding WO number [provide number] at [property address, including unit #] for a [brief WO description] issue. I’m reaching out because I called [the resident/all residents on record] and they have been unresponsive to my 3 Troubleshooting calls and the issue appears to be [property damaging/an extreme habitability issue]. I have called all of your Escalation Contacts and the work order has now been placed into “Needs PM Approval” status for your input. Please don’t hesitate to send us a Webchat or text us back at (206)-900-9466 if we can assist you with this or any other work orders. Have a nice [day/evening]!*
+
+**Voicemail script for last contact on the list (Non-Premium Customer):** *Hi, [Escalation Contact name]! This is [your name] calling from Latchel regarding WO number [provide number] at [property address, including unit #] for a [brief WO description] issue. I’m reaching out because I called [the resident/all residents on record] and they have been unresponsive to my 3 Troubleshooting calls and the issue appears to be [property damaging/an extreme habitability issue]. I have called all of your Escalation Contacts and the work order has now been placed into “Forwarded to PM” status so your team can take over. Please don’t hesitate to send us a Webchat or text us back at (206)-900-9466 if we can assist you with this or any other work orders. Have a nice [day/evening]!*
+
+**Voicemail script for last contact on the list ( SMS-Originated Work Orders):** *"Hi [Escalation Contact name], this is [your name] from Latchel regarding WO #[number] at [property address, unit #] for a [brief issue description] issue. We received a text message from [Resident Name] reporting this concern, and the issue appears to be [property damaging / an extreme habitability situation]. We were unable to complete full intake as the resident [stopped responding / declined to provide details]. The WO has been created. All escalation contacts have been called and the WO is now in [Needs PM Approval / Forwarded to PM] status. Please reply via Webchat or text (206)-900-9466 if we can assist."*
+</Note>
+
+Then, choose *Could not reach escalation contacts *and follow the guided workflow. It will ask you to answer the following questions. Use these templates to fill out the form:
+
+<Note>
+- **Why did you escalate this?** *The resident was unresponsive to a [property damaging OR extreme habitability] issue. I called all residents and phone numbers on record.*
+- **What is the risk for property damage or an extreme habitability issue?** Provide a brief description. Ex: *The maintenance request states there is an active leak and they can’t shut off the water supply.*
+- **What are the recommended next steps?** *Contact resident about this emergency work order and also confirm if resident information is correct in the Latchel system. Access property to assess the situation if the resident is still unresponsive.*
+</Note>
+
+<Frame>
+  ![](/images/SVC-838.png)
+</Frame>
+
+Upon submission, the guided workflow will then automatically send the WO to the PM.
+
+Send an SMS to all escalation contacts who have SMS enabled. Only skip this step if there are no available SMS options for any of the contacts.
+
+1. **Premium Customer SMS:**  
+*Hi [Escalation Contact name], this is [your name] from Latchel regarding WO #[number] at [property address, including unit #] for a [brief WO description] issue. I am reaching out because I called [the resident/all residents on record] and they have not responded to 3 troubleshooting calls, and the issue appears [property damaging/extreme habitability]. I’ve called all escalation contacts; the WO is now in “Needs PM Approval” status for your input. Please reply via Webchat or text (206)-900-9466 if we can assist.*
+2. **Non-Premium Customer SMS:**  
+*Hi [Escalation Contact name], this is [your name] from Latchel regarding WO #[number] at [property address, including unit #] for a [brief WO description] issue. I am reaching out because I called [the resident/all residents on record] and they have not responded to 3 troubleshooting calls, and the issue appears [property damaging/extreme habitability]. I’ve called all escalation contacts; the WO is now “Forwarded to PM” for your team. Please reply via Webchat or text (206)-900-9466 if we can assist.*
+3. ** SMS-Originated Work Orders**
+  1. *"Hi [Escalation Contact name], this is [your name] from Latchel regarding WO #[number] at [property address, unit #] for a [brief issue description] issue. We received a text message from [Resident Name] reporting this concern, and the issue appears to be [property damaging / an extreme habitability situation]. We were unable to complete full intake as the resident [stopped responding / declined to provide details]. The WO has been created. All escalation contacts have been called and the WO is now in [Needs PM Approval / Forwarded to PM] status. Please reply via Webchat or text (206)-900-9466 if we can assist."*
+</Accordion>
+
+<Accordion title="Scenario 2: Validate Unclear Situations for a Property Damaging or Extreme Habitability Issue & 911 Situations">
+### **Scenario 2: Validate Unclear Situations for a **[**Property Damaging or Extreme Habitability Issue**](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-Property-Damage-and-Extreme-Habitability-Situations)** & **[**911 Situations**](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-911-Severity-Type-Work-Orders)
+
+<Warning>
+📝 **NOTE — SMS-Originated Unclear Situations:**  
+If a resident describes an issue via text that *could* be PD/EH but you're not certain based on the text description alone (e.g., "there's water on the floor" without clarity on whether it's an active leak or a spill), this qualifies as an unclear situation requiring PM input. Follow Scenario 2 — do not default to treating it as non-PD/EH simply because the information came via text and is incomplete. When in doubt, escalate as PD/EH and let the PM make the determination.
+</Warning>
+
+<Note>
+If access information is needed before dispatch can proceed and only the PM can provide or authorize it, select “PM Input Needed Before Dispatch” and follow the applicable PD/EH or Non-PD/EH process. This applies to both common-area and unit-specific access issues. 
+</Note>
+
+This scenario will use the same guided workflow for 2 types of escalations:
+
+1. Validate Unclear Situations for a Property Damaging or Extreme Habitability Issue
+  1. Unclear situations are ones for which we need the Escalation Contacts’ input to handle a property damaging or extreme habitability issue. This means ***the only person who can answer the question blocking us from moving the WO forward is the PM***. Some examples include:
+    1. During the troubleshooting call, it was mentioned that the property manager/owner/resident would take care of the issue or have already sent a Technician/Vendor/Service Provider to the site.
+    2. If there’s a no watery issue and the resident doesn’t have the utility company information and can’t contact them or refuses to do so, refer tohttps://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Emergency-How-to-Handle-a-Utility-Issue for details.
+    3. Contradicting information between the intake setting and the PM’s critical notes. 
+    4. A new tenant was provided a lockbox code that is not working, or access credentials (key, fob, code) do not work and the PM is the only party who can provide or authorize correct access.
+    5. Access information is needed to proceed with dispatch for a confirmed emergency — whether for a common-area entry device or an individual unit lockout (e.g., no lockbox code available, building entry authorization required, no vendor access instructions). Use this path when the PM is the only party who can unblock dispatch by providing access details.
+    6. Inaccessible boiler room or utility room, such cases are common when dealing with buildings.
+    7. The resident is not available to let a Service Provider in and refuses to give permission to enter.
+    8. There is a leak coming from a different unit and we need to confirm if that unit is part of the PM company
+2. 911 situations
+  1. Learn more about handling 911 situations [here](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-911-Severity-Type-Work-Orders).
+
+Select *Issue IS an emergency → PM Input Needed Before Dispatch* from the guided workflow.
+
+<Frame>
+  ![](/images/SVC-839.png)
+</Frame>
+
+<Frame>
+  ![](/images/SVC-840.png)
+</Frame>
+
+**WYGC automatically populates** in this guided workflow once you reach the escalation contact step. Use the populated WYGC list to identify the correct EEC contact order for this escalation scenario. The activity log records the scenario, AI recommendation, and contacts used. If an Escalation Contact is unresponsive, leave a voicemail for each contact and then continue to follow the guided workflow.
+
+<Frame>
+  ![image-20260604-092011.png](/images/SVC-841.png)
+</Frame>
+
+<Note>
+**Voicemail script for *****all but the last person on the Escalation Contacts list***: *Hi, [Escalation Contact name]! This is [your name] calling from Latchel regarding WO number [provide number] at [property address, including unit #]. I’m reaching out because we’ve [state what was done], and the issue is considered a [property damaging/extreme habitability] situation. We need your help confirming [what you need from PM] so we can assist the resident in troubleshooting their [brief WO description] issue. I will continue to call the rest of your escalation contacts. Please don’t hesitate to send us a Webchat or text us back at (206)-900-9466 if we can assist you with this or any other work orders. Have a nice [day/evening]!*
+</Note>
+
+***If you were able to reach an Escalation Contact***, you will take action based on what the Escalation Contact asked you to do. See the options below:
+
+1. If they asked you to just go ahead and dispatch, go back to the beginning of the troubleshooting guided workflow, choose *Issue IS an Emergency*, and then choose *Work order needs immediate dispatch*.
+2. If they tell you it’s not an emergency, go back to the beginning of the troubleshooting workflow and choose *Issue is NOT an Emergency*.
+3. If the Escalation Contact says that they will handle it, choose *Successful Contact* and follow the guided workflow. It will ask you to complete a form. The system will then automatically send the WO to the PM. Use this template to fill out the form:
+
+<Note>
+- **Why did you escalate this?** Provide a brief description of what you need from the PM. Ex: *There is a leak coming from the unit above and we need to confirm if you also manage this unit.*
+- **What was the risk for property damage or an extreme habitability?** Provide a brief description. Ex: *There is a constant water leak coming from the unit above which could cause ceiling damage if not resolved ASAP.*
+- **Who did you successfully contact?** Write the first and last name of the escalation contact you spoke with. Ex: *Jane Smith*
+- **What are the recommended next steps?** Summarize notes from your phone conversation with the escalation contact and include a brief description of what needs to happen once the PM confirms your question. *Ex: Spoke with Jane Smith and she asked to move the work order to her. Please attempt to contact the upstairs resident. If it is managed by you and they are unresponsive, access the upstairs unit to assess the situation.*
+</Note>
+
+<Frame>
+  ![](/images/SVC-842.png)
+</Frame>
+
+***If you were unable to reach an Escalation Contact***, leave a voicemail for the last person on the list using the following templates.
+
+<Note>
+**Voicemail script for last contact on the list (Premium Customers):** *Hi, [Escalation Contact name]! This is [your name] calling from Latchel regarding WO number [provide number] at [property address, including unit #]. I’m reaching out because we’ve [state what was done], and the issue is considered a [property damaging/extreme habitability] situation. We  need your help confirming [what you need from PM] so we can assist the resident in troubleshooting their [brief WO description] issue. I have called all of your Escalation Contacts and the work order has now been placed into “Waiting for PM” status for your input. Please don’t hesitate to send us a Webchat or text us back at (206)-900-9466 if we can assist you with this or any other work orders. Have a nice [day/evening]!*
+
+**Voicemail script for last contact on the list (Non-Premium Customer):** *Hi, [Escalation Contact name]! This is [your name] calling from Latchel regarding WO number [provide number] at [property address, including unit #]. I’m reaching out because we’ve [state what was done], and the issue is considered a [property damaging/extreme habitability] situation. We need your help confirming [what you need from PM] so we can assist the resident in troubleshooting their [brief WO description] issue. I have called all of your Escalation Contacts and the work order has now been placed into “Forwarded to PM” status so your team can take over. Please don’t hesitate to send us a Webchat or text us back at (206)-900-9466 if we can assist you with this or any other work orders. Have a nice [day/evening]!*
+</Note>
+
+Then, choose *Could not reach escalation contacts *and follow the guided workflow. It will ask you to answer the following questions. Use these templates to fill out the form:
+
+<Note>
+- **Why did you escalate this?** Provide a brief description of what you need from the PM. Ex: *There is a leak coming from the unit above and we need to confirm if you also manage this unit.*
+- **What is the risk for property damage or an extreme habitability?** Provide a brief description. Ex: *There is a constant water leak coming from the unit above which could cause ceiling damage if not resolved ASAP.*
+- **What are the recommended next steps?** Brief description of what needs to happen once the PM confirms your question. Ex: *Attempt to contact the upstairs resident. If it is managed by you and they are unresponsive, access the upstairs unit to assess the situation.*
+</Note>
+
+<Frame>
+  ![](/images/SVC-843.png)
+</Frame>
+
+Upon submission, the guided workflow will automatically send the WO to the PM.
+
+Send an SMS to all escalation contacts who have SMS enabled. Only skip this step if there are no available SMS options for any of the contacts.
+
+1. **Premium Customer SMS:**  
+*Hi [Escalation Contact name], this is [your name] from Latchel regarding WO #[number] at [property address, including unit #]. I’m reaching out because we’ve [state what was done], and the issue is considered a [property damaging/extreme habitability] situation. We need your help confirming [what you need from PM] so we can assist the resident with their [brief WO description] issue. All escalation contacts have been called; WO is now in “Waiting for PM” status. Please reply via Webchat or text (206)-900-9466 if we can assist.*
+2. **Non-Premium Customer SMS:**  
+*Hi [Escalation Contact name], this is [your name] from Latchel regarding WO #[number] at [property address, including unit #]. I’m reaching out because we’ve [state what was done], and the issue is considered a [property damaging/extreme habitability] situation. We need your help confirming [what you need from PM] so we can assist the resident with their [brief WO description] issue. All escalation contacts have been called; WO is now “Forwarded to PM” for your team. Please reply via Webchat or text (206)-900-9466 if we can assist.*
+
+#### **Validate Unclear Situations for Non-Property Damaging or Non-Extreme Habitability Issues**
+
+When you encounter an emergency situation that is non-property-damaging and non-extreme habitability but you still need the PM to provide more information before dispatching, do NOT call anyone. In Troubleshooting state, select Issue IS an emergency → PM Input Needed Before Dispatch → Is there potential for property damage or an extreme habitability issue? No.
+
+This sub-section applies to access-related scenarios where dispatch cannot proceed without PM-provided information. For example, if a confirmed lockout emergency per intake settings cannot be dispatched because the SP needs a lockbox code, building entry authorization, or vendor access instructions that only the PM can provide — follow this path. Select “No” for property damage/EH since the issue blocking dispatch is access information, not property damage.
+
+- Form field — “Why did you escalate this?”: Access information is needed to dispatch for a confirmed [common-area lockout / unit lockout] emergency. The PM is the only party who can provide [lockbox code / building access authorization / vendor instructions].
+- Form field — “What are the recommended next steps?”: Please provide the necessary access information so we can proceed with dispatch for this confirmed emergency per your intake settings.
+
+In Troubleshooting state, select Issue IS an emergency → PM Input Needed Before Dispatch → Is there potential for property damage or an extreme habitability issue? No)
+
+<Frame>
+  ![](/images/SVC-839.png)
+</Frame>
+
+<Frame>
+  ![image-20260108-193240.png](/images/SVC-845.png)
+</Frame>
+
+<Frame>
+  ![image-20260108-193427.png](/images/SVC-846.png)
+</Frame>
+
+Fill out the form with the following:
+
+<Note>
+- **Why did you escalate this?  **Provide a brief description of what you need from the PM. Ex: *There is an alarm going off in the unit above, and we need to confirm if you also manage this unit.*
+- **What are the recommended next steps?** Brief description of what needs to happen once the PM confirms your question. Ex: *Attempt to contact the upstairs resident. If it is managed by you and they are unresponsive, access the upstairs unit to assess the situation and turn off the alarm.*
+</Note>
+
+<Frame>
+  ![image-20260108-193012.png](/images/SVC-847.png)
+</Frame>
+
+Upon submission, the guided workflow will automatically update the status of the Work Order to notify the property manager.
+</Accordion>
+
+<Accordion title="Scenario 2: Validate Unclear Situations for a Property Damaging or Extreme Habitability Issue & 911 Situations">
+### **Scenario 2: Validate Unclear Situations for a **[**Property Damaging or Extreme Habitability Issue**](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-Property-Damage-and-Extreme-Habitability-Situations)** & **[**911 Situations**](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-911-Severity-Type-Work-Orders)
+
+<Warning>
+📝 **NOTE — SMS-Originated Unclear Situations:**  
+If a resident describes an issue via text that *could* be PD/EH but you're not certain based on the text description alone (e.g., "there's water on the floor" without clarity on whether it's an active leak or a spill), this qualifies as an unclear situation requiring PM input. Follow Scenario 2 — do not default to treating it as non-PD/EH simply because the information came via text and is incomplete. When in doubt, escalate as PD/EH and let the PM make the determination.
+</Warning>
+
+<Note>
+If access information is needed before dispatch can proceed and only the PM can provide or authorize it, select “PM Input Needed Before Dispatch” and follow the applicable PD/EH or Non-PD/EH process. This applies to both common-area and unit-specific access issues. 
+</Note>
+
+This scenario will use the same guided workflow for 2 types of escalations:
+
+1. Validate Unclear Situations for a Property Damaging or Extreme Habitability Issue
+  1. Unclear situations are ones for which we need the Escalation Contacts’ input to handle a property damaging or extreme habitability issue. This means ***the only person who can answer the question blocking us from moving the WO forward is the PM***. Some examples include:
+    1. During the troubleshooting call, it was mentioned that the property manager/owner/resident would take care of the issue or have already sent a Technician/Vendor/Service Provider to the site.
+    2. If there’s a no watery issue and the resident doesn’t have the utility company information and can’t contact them or refuses to do so, refer tohttps://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Emergency-How-to-Handle-a-Utility-Issue for details.
+    3. Contradicting information between the intake setting and the PM’s critical notes. 
+    4. A new tenant was provided a lockbox code that is not working, or access credentials (key, fob, code) do not work and the PM is the only party who can provide or authorize correct access.
+    5. Access information is needed to proceed with dispatch for a confirmed emergency — whether for a common-area entry device or an individual unit lockout (e.g., no lockbox code available, building entry authorization required, no vendor access instructions). Use this path when the PM is the only party who can unblock dispatch by providing access details.
+    6. Inaccessible boiler room or utility room, such cases are common when dealing with buildings.
+    7. The resident is not available to let a Service Provider in and refuses to give permission to enter.
+    8. There is a leak coming from a different unit and we need to confirm if that unit is part of the PM company
+2. 911 situations
+  1. Learn more about handling 911 situations [here](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-911-Severity-Type-Work-Orders).
+
+Select *Issue IS an emergency → PM Input Needed Before Dispatch* from the guided workflow.
+
+<Frame>
+  ![](/images/SVC-839.png)
+</Frame>
+
+<Frame>
+  ![](/images/SVC-840.png)
+</Frame>
+
+**WYGC automatically populates** in this guided workflow once you reach the escalation contact step. Use the populated WYGC list to identify the correct EEC contact order for this escalation scenario. The activity log records the scenario, AI recommendation, and contacts used. If an Escalation Contact is unresponsive, leave a voicemail for each contact and then continue to follow the guided workflow.
+
+<Frame>
+  ![image-20260604-092011.png](/images/SVC-841.png)
+</Frame>
+
+<Note>
+**Voicemail script for *****all but the last person on the Escalation Contacts list***: *Hi, [Escalation Contact name]! This is [your name] calling from Latchel regarding WO number [provide number] at [property address, including unit #]. I’m reaching out because we’ve [state what was done], and the issue is considered a [property damaging/extreme habitability] situation. We need your help confirming [what you need from PM] so we can assist the resident in troubleshooting their [brief WO description] issue. I will continue to call the rest of your escalation contacts. Please don’t hesitate to send us a Webchat or text us back at (206)-900-9466 if we can assist you with this or any other work orders. Have a nice [day/evening]!*
+</Note>
+
+***If you were able to reach an Escalation Contact***, you will take action based on what the Escalation Contact asked you to do. See the options below:
+
+1. If they asked you to just go ahead and dispatch, go back to the beginning of the troubleshooting guided workflow, choose *Issue IS an Emergency*, and then choose *Work order needs immediate dispatch*.
+2. If they tell you it’s not an emergency, go back to the beginning of the troubleshooting workflow and choose *Issue is NOT an Emergency*.
+3. If the Escalation Contact says that they will handle it, choose *Successful Contact* and follow the guided workflow. It will ask you to complete a form. The system will then automatically send the WO to the PM. Use this template to fill out the form:
+
+<Note>
+- **Why did you escalate this?** Provide a brief description of what you need from the PM. Ex: *There is a leak coming from the unit above and we need to confirm if you also manage this unit.*
+- **What was the risk for property damage or an extreme habitability?** Provide a brief description. Ex: *There is a constant water leak coming from the unit above which could cause ceiling damage if not resolved ASAP.*
+- **Who did you successfully contact?** Write the first and last name of the escalation contact you spoke with. Ex: *Jane Smith*
+- **What are the recommended next steps?** Summarize notes from your phone conversation with the escalation contact and include a brief description of what needs to happen once the PM confirms your question. *Ex: Spoke with Jane Smith and she asked to move the work order to her. Please attempt to contact the upstairs resident. If it is managed by you and they are unresponsive, access the upstairs unit to assess the situation.*
+</Note>
+
+<Frame>
+  ![](/images/SVC-842.png)
+</Frame>
+
+***If you were unable to reach an Escalation Contact***, leave a voicemail for the last person on the list using the following templates.
+
+<Note>
+**Voicemail script for last contact on the list (Premium Customers):** *Hi, [Escalation Contact name]! This is [your name] calling from Latchel regarding WO number [provide number] at [property address, including unit #]. I’m reaching out because we’ve [state what was done], and the issue is considered a [property damaging/extreme habitability] situation. We  need your help confirming [what you need from PM] so we can assist the resident in troubleshooting their [brief WO description] issue. I have called all of your Escalation Contacts and the work order has now been placed into “Waiting for PM” status for your input. Please don’t hesitate to send us a Webchat or text us back at (206)-900-9466 if we can assist you with this or any other work orders. Have a nice [day/evening]!*
+
+**Voicemail script for last contact on the list (Non-Premium Customer):** *Hi, [Escalation Contact name]! This is [your name] calling from Latchel regarding WO number [provide number] at [property address, including unit #]. I’m reaching out because we’ve [state what was done], and the issue is considered a [property damaging/extreme habitability] situation. We need your help confirming [what you need from PM] so we can assist the resident in troubleshooting their [brief WO description] issue. I have called all of your Escalation Contacts and the work order has now been placed into “Forwarded to PM” status so your team can take over. Please don’t hesitate to send us a Webchat or text us back at (206)-900-9466 if we can assist you with this or any other work orders. Have a nice [day/evening]!*
+</Note>
+
+Then, choose *Could not reach escalation contacts *and follow the guided workflow. It will ask you to answer the following questions. Use these templates to fill out the form:
+
+<Note>
+- **Why did you escalate this?** Provide a brief description of what you need from the PM. Ex: *There is a leak coming from the unit above and we need to confirm if you also manage this unit.*
+- **What is the risk for property damage or an extreme habitability?** Provide a brief description. Ex: *There is a constant water leak coming from the unit above which could cause ceiling damage if not resolved ASAP.*
+- **What are the recommended next steps?** Brief description of what needs to happen once the PM confirms your question. Ex: *Attempt to contact the upstairs resident. If it is managed by you and they are unresponsive, access the upstairs unit to assess the situation.*
+</Note>
+
+<Frame>
+  ![](/images/SVC-843.png)
+</Frame>
+
+Upon submission, the guided workflow will automatically send the WO to the PM.
+
+Send an SMS to all escalation contacts who have SMS enabled. Only skip this step if there are no available SMS options for any of the contacts.
+
+1. **Premium Customer SMS:**  
+*Hi [Escalation Contact name], this is [your name] from Latchel regarding WO #[number] at [property address, including unit #]. I’m reaching out because we’ve [state what was done], and the issue is considered a [property damaging/extreme habitability] situation. We need your help confirming [what you need from PM] so we can assist the resident with their [brief WO description] issue. All escalation contacts have been called; WO is now in “Waiting for PM” status. Please reply via Webchat or text (206)-900-9466 if we can assist.*
+2. **Non-Premium Customer SMS:**  
+*Hi [Escalation Contact name], this is [your name] from Latchel regarding WO #[number] at [property address, including unit #]. I’m reaching out because we’ve [state what was done], and the issue is considered a [property damaging/extreme habitability] situation. We need your help confirming [what you need from PM] so we can assist the resident with their [brief WO description] issue. All escalation contacts have been called; WO is now “Forwarded to PM” for your team. Please reply via Webchat or text (206)-900-9466 if we can assist.*
+
+#### **Validate Unclear Situations for Non-Property Damaging or Non-Extreme Habitability Issues**
+
+When you encounter an emergency situation that is non-property-damaging and non-extreme habitability but you still need the PM to provide more information before dispatching, do NOT call anyone. In Troubleshooting state, select Issue IS an emergency → PM Input Needed Before Dispatch → Is there potential for property damage or an extreme habitability issue? No.
+
+This sub-section applies to access-related scenarios where dispatch cannot proceed without PM-provided information. For example, if a confirmed lockout emergency per intake settings cannot be dispatched because the SP needs a lockbox code, building entry authorization, or vendor access instructions that only the PM can provide — follow this path. Select “No” for property damage/EH since the issue blocking dispatch is access information, not property damage.
+
+- Form field — “Why did you escalate this?”: Access information is needed to dispatch for a confirmed [common-area lockout / unit lockout] emergency. The PM is the only party who can provide [lockbox code / building access authorization / vendor instructions].
+- Form field — “What are the recommended next steps?”: Please provide the necessary access information so we can proceed with dispatch for this confirmed emergency per your intake settings.
+
+In Troubleshooting state, select Issue IS an emergency → PM Input Needed Before Dispatch → Is there potential for property damage or an extreme habitability issue? No)
+
+<Frame>
+  ![](/images/SVC-839.png)
+</Frame>
+
+<Frame>
+  ![image-20260108-193240.png](/images/SVC-845.png)
+</Frame>
+
+<Frame>
+  ![image-20260108-193427.png](/images/SVC-846.png)
+</Frame>
+
+Fill out the form with the following:
+
+<Note>
+- **Why did you escalate this?  **Provide a brief description of what you need from the PM. Ex: *There is an alarm going off in the unit above, and we need to confirm if you also manage this unit.*
+- **What are the recommended next steps?** Brief description of what needs to happen once the PM confirms your question. Ex: *Attempt to contact the upstairs resident. If it is managed by you and they are unresponsive, access the upstairs unit to assess the situation and turn off the alarm.*
+</Note>
+
+<Frame>
+  ![image-20260108-193012.png](/images/SVC-847.png)
+</Frame>
+
+Upon submission, the guided workflow will automatically update the status of the Work Order to notify the property manager.
+</Accordion>
+
+<Accordion title="Scenario 3: All Preferred Service Providers are Unresponsive for non-LCN PMs">
+### **Scenario 3: All Preferred Service Providers are Unresponsive for non-LCN PMs**
+
+Follow the existing guided workflow (*Find Service Provider → Escalate to Property Manager*) that prompts you to select if the issue is a property damaging or extreme habitability situation.
+
+<Frame>
+  ![](/images/SVC-857.png)
+</Frame>
+
+<Frame>
+  ![](/images/SVC-858.png)
+</Frame>
+
+A) **If the situation is property damaging or an extreme habitability,** **WYGC automatically populates** in this guided workflow once you reach the escalation contact step. Use the populated WYGC list to identify the correct EEC contact order. The activity log records the scenario, AI recommendation, and contacts used.
+
+<Frame>
+  ![image-20260604-092057.png](/images/SVC-859.png)
+</Frame>
+
+If an Escalation Contact is unresponsive, leave a voicemail for each contact and then continue to follow the guided workflow.
+
+<Note>
+**Voicemail script for *****all but the last person on the Escalation Contacts list***: *Hi, [Escalation Contact name]! This is [your name] calling from Latchel regarding WO number [provide number] at [property address, including unit #] for [brief WO description] issue. I’m reaching out because I've contacted all of your Preferred Service Providers and none are available for this emergency work order, and the issue is considered a [property damaging/extreme habitability] situation. I will continue to call the rest of your escalation contacts. Please don’t hesitate to send us a Webchat or text us back at (206)-900-9466 if we can assist you with this or any other work orders. Have a nice [day/evening]!*
+</Note>
+
+***If you were able to reach an Escalation Contact***, you will take action based on what the Escalation Contact asked you to do. See the options below:
+
+1. If they say they have a new contact to add to their Preferred Service Providers, add to their Preferred Service Provider List and contact them.
+2. If they say they’d like to sign up for LCN, go back to the WO and start to source Service Providers.
+3. If the Escalation Contact says they will handle it, choose *Successful Contact* and follow the guided workflow. It will ask you to answer a form. The system will then automatically send the WO to the PM. Use this template to fill out the form:
+
+<Note>
+- **Why did you escalate this?** *No Preferred Service Providers were responsive.*
+- **What was the risk for property damage or an extreme habitability issue?** Provide a brief description. Ex: *There is an active leak and the resident can’t shut off the water supply. *OR *This is not a property damaging situation.*
+- **Who did you successfully contact?** Write the first and last name of the escalation contact you spoke with. Ex: *Jane Smith*
+- **What are the recommended next steps?** Summarize notes from your phone conversation with the escalation contact and include a brief description of discussed next steps. *Ex: Spoke with Jane Smith and she asked to move the work order to her. She will try contacting all Preferred Service Providers again then attempt to source other Service Providers.*
+</Note>
+
+<Frame>
+  ![](/images/SVC-860.png)
+</Frame>
+
+***If you were unable to reach an Escalation Contact***, leave a voicemail for the last person on the list using the following templates.
+
+<Note>
+**Voicemail script for last contact on the list (Premium Customers):** *Hi, [Escalation Contact name]! This is [your name] calling from Latchel regarding WO number [provide number] at [property address, including unit #] for [brief WO description] issue. I’m reaching out because I've contacted all of your Preferred Service Providers and none are available for this emergency work order, and the issue is considered a [property damaging/extreme habitability] situation. I have called all of your Escalation Contacts and the work order has now been placed into “Needs PM Approval” status for your input. Please don’t hesitate to send us a Webchat or text us back at (206)-900-9466 if we can assist you with this or any other work orders. Have a nice [day/evening]!*
+
+**Voicemail script for last contact on the list (Non-Premium Customer):** *Hi, [Escalation Contact name]! This is [your name] calling from Latchel regarding WO number [provide number] at [property address, including unit #] for [brief WO description] issue. I’m reaching out because I've contacted all of your Preferred Service Providers and none are available for this emergency work order, and the issue is considered a [property damaging/extreme habitability] situation. I have called all of your Escalation Contacts and the work order has now been placed into “Forwarded to PM” status so your team can take over. Please don’t hesitate to send us a Webchat or text us back at (206)-900-9466 if we can assist you with this or any other work orders. Have a nice [day/evening]!*
+</Note>
+
+Then, choose *Could not reach escalation contacts *and follow the guided workflow. It will ask you to answer the following questions. Use these templates to fill out the form:
+
+<Note>
+- **Why did you escalate this?** *No Preferred Service Providers were responsive.*
+- **What is the risk of property damage or an extreme habitability issue?** Provide a brief description. Ex: *There is an active leak and the resident can’t shut off the water supply. *OR *This is not a property damaging situation.*
+- **What are the recommended next steps? ***Moving work order to the PM because we were unable to get a response from the list of Preferred Service Providers. Please try contacting all Preferred Service Providers again then attempt to source other Service Providers.*
+</Note>
+
+<Frame>
+  ![](/images/SVC-861.png)
+</Frame>
+
+Send an SMS to all escalation contacts who have SMS enabled. Only skip this step if there are no available SMS options for any of the contacts.
+
+1. **Premium Customer SMS:**  
+*Hi [Escalation Contact name], this is [your name] from Latchel regarding WO #[number] at [property address, including unit #] for [brief WO description]. I’m reaching out because I've contacted all of your Preferred Service Providers and none are available for this emergency work order, and the issue is considered a [property damaging/extreme habitability] situation. All escalation contacts have been called; WO is now in “Needs PM Approval” status. Please reply via Webchat or text (206)-900-9466 if we can assist.*
+2. **Non-Premium Customer SMS:**  
+*Hi [Escalation Contact name], this is [your name] from Latchel regarding WO #[number] at [property address, including unit #] for [brief WO description]. I’m reaching out because I've contacted all of your Preferred Service Providers and none are available for this emergency work order, and the issue is considered a [property damaging/extreme habitability] situation. All escalation contacts have been called; WO is now “Forwarded to PM” for your team. Please reply via Webchat or text (206)-900-9466 if we can assist.*
+
+**B) If the situation is not property damaging or extreme habitability**, you’ll be prompted to fill out a form to notify the property manager about what’s happening.
+
+<Note>
+- **Why did you escalate this?** *No Preferred Service Providers were responsive.*
+- **What are the recommended next steps? ***Notify the property that none of the preferred service providers was available or responsive. We need instructions from the property manager to know how to proceed.*
+</Note>
+
+The guided workflow will automatically update the status of the Work Order to notify the property manager.
+</Accordion>
+
+<Accordion title="Scenario 4: Pre-Dispatch Notes">
+### **Scenario 4: Pre-Dispatch Notes**
+
+<Note>
+**WYGC Guidance:** WYGC does **not** auto-populate for pre-dispatch notes because the workflow is surfacing note instructions, not triggering the EEC escalation contact flow. If pre-dispatch notes, critical notes, or other instructions say to contact **EEC**, **Emergency Escalation Contacts**, or the **full EEC list**, manually open **WYGC** from the **Action Menu** to pull the configured EEC list and contact order. If the notes say to call the **following EECs**, list specific contacts, or provide a different sequence, do **not** use WYGC; call the listed contacts manually in the order provided. See the WYGC section above for the full rule.
+</Note>
+
+Any time the guided workflow prompts the pre-dispatch notes, you should follow whatever instructions are in the pre-dispatch notes. If it asks to call one or more people, then ***call each person once unless it says otherwise ***(some PMs explicitly ask to be called more than once). If there is an instruction to call a Service Provider in the pre-dispatch notes, you should also only call them once unless it says otherwise. If the contact is unresponsive then leave a voicemail.
+
+The voicemail you leave will depend on the situation. Here are some guidelines on what to include.
+
+<Note>
+**Voicemail script:**
+
+- *Hi, [Escalation Contact name]! This is [your name] calling from Latchel regarding WO number [provide number] at [property address, including unit #] for [brief WO description] issue. Based on our records, your pre-dispatch instructions instructs to [state what the pre-dispatch notes instructed you to do & if you were or were not successful]. The current issue is considered [property damaging/extreme habitability]. [What you will do next, or what you need from the PM to move forward.] Please don’t hesitate to send us a Webchat or text us back at (206)-900-9466 if we can assist you with this or any other work orders. Have a nice [day/evening]!*
+</Note>
+
+After you follow instructions in the pre-dispatch notes, please continue with the guided workflow.
+
+Send an SMS to all escalation contacts who have SMS enabled. Only skip this step if there are no available SMS options for any of the contacts.
+
+- *Hi, [Escalation Contact name]! This is [your name] calling from Latchel regarding WO number [provide number] at [property address, including unit #] for [brief WO description] issue. Based on our records, your pre-dispatch instructions instructs to [state what the pre-dispatch notes instructed you to do & if you were or were not successful]. The current issue is considered [property damaging/extreme habitability]. [What you will do next, or what you need from the PM to move forward.] Please reply via Webchat or text (206)-900-9466 if we can assist.*
+</Accordion>
+
+### **📤**After Dispatch
+
+<Accordion title="Scenario 5: Budget Approvals for a Property Damaging or Extreme Habitability Issue">
+### **Scenario 5: Budget Approvals for a **[**Property Damaging or Extreme Habitability Issue**](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-Property-Damage-and-Extreme-Habitability-Situations)
+
+There is no guided workflow for this scenario. Manually open **WYGC** from the **Action Menu** on the work order to pull the configured Emergency Escalation Contacts list and contact order. Call each person on the Escalation Contacts list ***once in the order specified***. If an Escalation Contact is unresponsive, leave a voicemail for each contact.
+
+<Note>
+**Voicemail script for *****all but the last person on the Escalation Contacts list***: *Hi, [Escalation Contact name]! This is [your name] calling from Latchel regarding WO number [provide number] at [property address, including unit #] for [brief WO description] issue. I’m reaching out because we sent a Service Provider who said that the budget will exceed the current hard budget because of (reasons for additional cost). The requested budget is (total cost), and the issue is considered a [property damaging/extreme habitability] situation. I will continue to call the rest of your escalation contacts. Please don’t hesitate to send us a Webchat or text us back at (206)-900-9466 if we can assist you with this or any other work orders. Have a nice [day/evening]!*
+</Note>
+
+***If you were unable to reach an Escalation Contact***, leave a voicemail for the last person on the list using the following template.
+
+<Note>
+**Voicemail script for last contact on the list:** *Hi, [Escalation Contact name]! This is [your name] calling from Latchel regarding WO number [provide number] at [property address, including unit #] for [brief WO description] issue. I’m reaching out because we sent a Service Provider who said that the budget will exceed the current hard budget because of (reasons for additional cost). The requested budget is (total cost), and the issue is considered a [property damaging/extreme habitability] situation. I have called all of your Escalation Contacts and the work order has now been placed into “Awaiting Owner Approval” status for your input. Please don’t hesitate to send us a Webchat or text us back at (206)-900-9466 if we can assist you with this or any other work orders. Have a nice [day/evening]!*
+</Note>
+
+The work order should be in “Awaiting Work Date” or “Confirming Completion” status. Regardless of these statuses or the customer subscription type, put the work order on hold with “Waiting for Owner Approval” which will create a task for the PM.
+
+Send an SMS to all escalation contacts who have SMS enabled. Only skip this step if there are no available SMS options for any of the contacts.
+
+*Hi [Escalation Contact name], this is [your name] from Latchel regarding WO #[number] at [property address, including unit #] for [brief WO description]. The Service Provider indicated the budget will exceed the current hard budget due to [reasons for additional cost]. The requested budget is [total cost], and the issue is considered a [property damaging/extreme habitability] situation. All escalation contacts have been called and the work order is now “Awaiting Owner Approval.” Please reply via Webchat or text (206)-900-9466 if we can assist.*
+
+When you put the work order on hold, you’ll be asked to complete a form. Use this template as a guide:
+
+<Note>
+- **Select a reason (destination status) for putting this job on hold: **Waiting for Owner Approval
+- **Describe why you moved the job to this status:** *We sent a Service Provider who said that the budget will exceed the current hard budget because of (reasons for additional cost). The requested budget is (total cost).*
+- **Who is this task about? **PM
+- **Set date and time for the follow-up task:** [leave blank]
+- **Task priority: **Highest
+- **User group*:** Choose the user group with “PM” in the title
+- **Assign to a User: **[leave blank]
+- **When should this cancel?** Cancel on any state change
+- **Summarize the next steps to be taken: ***Please approve or reject the budget through the “Update Owner Approval” option under the Take Action drop down at the bottom of this task.*
+</Note>
+
+<Frame>
+  ![](/images/SVC-862.png)
+</Frame>
+
+<Danger>
+For non-property damaging or non-extreme habitability situations, do not call the escalation contact list and instead just put the job On Hold --> Waiting for Owner Approval with a task assigned to the PM. Follow the same form template as above.
+</Danger>
+</Accordion>
+
+### **🚦**Admin Triggers
+
+<Accordion title="Scenario 6: Need to Verify ticket for a Property Damage or Extreme Habitability Issue">
+### **Scenario 6: Need to Verify ticket for a **[**Property Damage or Extreme Habitability Issue**](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-Property-Damage-and-Extreme-Habitability-Situations)
+
+There is no guided workflow for this scenario. Manually open **WYGC** to pull the configured Emergency Escalation Contacts list and contact order. Since there will be no work order tied to the scenario, access WYGC from the **PM Company** or **Property** page (use the PM Company page if the property doesn’t exist in our system).
+
+Call each person on the Escalation Contacts list ***once in the order specified***.  If the last Escalation Contact is unresponsive, leave a voicemail and resolve the trigger.
+
+<Note>
+**Voicemail script for *****all but the last person on the Escalation Contacts list***: *Hi, [Escalation Contact name]! This is [your name] calling from Latchel. [Resident name] at [property address, including unit #] is reporting that [brief description of maintenance request], and the issue appears to be a [property damaging/extreme habitability] situation. We currently do not have this [property's / resident's] information in our system so we are reaching out to confirm if you manage it. I will continue to call the rest of your escalation contacts. Please don’t hesitate to send us a Webchat or text us back at (206)-900-9466 if we can assist you with this or any other work orders. Have a nice [day/evening]!*
+</Note>
+
+**Voicemail script for last contact on the list:** *Hi, [Escalation Contact name]! This is [your name] calling from Latchel. [Resident name] at [property address, including unit #] is reporting that [brief description of maintenance request], and the issue appears to be a [property damaging/extreme habitability] situation. We currently do not have this [property's / resident's] information in our system so we are reaching out to confirm if you manage it. I have called all of your Escalation Contacts so we’ll need to hear back from you to proceed. Please don’t hesitate to send us a Webchat or text us at (206)-900-9466 if we can assist you with this or any other work orders. Have a nice [day/evening]!*
+
+Send an SMS to all escalation contacts who have SMS enabled. Only skip this step if there are no available SMS options for any of the contacts.
+
+*Hi [Escalation Contact name], this is [your name] from Latchel. [Resident name] at [property address, including unit #] reports [brief description of maintenance request], and the issue appears to be a [property damaging/extreme habitability] situation. We don’t have this property/resident info in our system and need to confirm if you manage it. All escalation contacts have been called and we need your response to proceed. Please reply via Webchat or text (206)-900-9466 if we can assist.*
+
+<Danger>
+For all other Need to Verify tickets, including non-emergencies, ***do not call.*** Send an email to the “failed escalation email” using the (Operations): Need to Verify Assembly macros.
+</Danger>
+</Accordion>
+
+<Accordion title="Scenario 7: Voicemail from PM">
+### **Scenario 7: Voicemail from PM**
+
+Call the PM who left the voicemail ***once***.
+
+<Note>
+**Voicemail script**: *Hi, [PM name]! This is [your name] calling from Latchel returning your voice message regarding WO #[number] at [property address, including unit # (if applicable)]. [Provide an update on their inquiry.] Please don't hesitate to send us a Webchat or text us at (206)-900-9466 if we can assist you with this or any other work orders. Have a nice [day/evening]!*
+</Note>
+
+Send an SMS to the PM. Only skip this step if there are no available SMS options.
+
+*Hi [PM name], this is [your name] from Latchel returning your voicemail regarding WO #[number] at [property address, including unit # (if applicable)]. [Provide an update on your inquiry.] Please reply via Webchat or text (206)-900-9466 if we can assist with this or any other work orders.*
+</Accordion>
+
+### **🚨**Severe Damage Escalation/911 Situations
+
+<Accordion title="Steps in handling Severe Damage Escalation/911 Situations">
+To ensure immediate escalation and communication in cases of severe structural damage reported by residents or identified through work order descriptions, follow the below guidelines.
+
+<Warning>
+**Attention:**
+
+This is not only applicable to emergency work orders. It must be followed anytime severe structural damage is identified, regardless of the work order type or timing. Escalation must occur even if the damage is not the primary reason for the resident’s report. Protecting the asset and minimizing risks are the top priorities.
+</Warning>
+
+1. **Identification of Severe Damage:**
+  1. Assess for severe structural damage at any point in the workflow, whether during troubleshooting, dispatch, or review of work orders.
+  2. <Frame>
+  ![image-20250113-234829.png](/images/SVC-863.png)
+</Frame>
+  3. Severe damage poses significant risks to the property, residents, or surrounding environment. Examples include but are not limited to:
+    1. **Major water leaks*** (Rapidly spreading leaks that threaten structural integrity or habitability. Water intrusion affecting multiple units or critical infrastructure, such as electrical systems.) *
+    2. **Fires*** (Any fire damage compromising the structural safety of a building.)*
+    3. **Uninhabitable units**:
+      1. Situations rendering a unit unsafe for occupancy, such as:
+        1. **Powerlines causing unsafe conditions:*** Electrical hazards like live wires near or within the property that risk injury or fire.*
+        2. **Ground-level breaches compromising security:** *Structural damage (e.g., a collapsed wall or broken door) creating direct outside access, exposing the property to safety or theft risks.*
+        3. **Vehicles colliding with properties:** *Impact causing damage to walls, foundation, or utilities, leaving the unit unsecure or unsafe.*
+2. **Escalation to Property Manager:**
+  1. Call the Property Manager escalation contact immediately.
+    1. **If you were able to reach an Escalation Contact**, you will take action based on what the Escalation Contact asked you to do.
+    2. If the PM is unavailable, leave a detailed voicemail explaining the situation.
+      1. **Voicemail script for *****all but the last person on the Escalation Contacts list***: *Hi, [Escalation Contact name]! This is [your name] calling from Latchel regarding WO number [provide number] at [property address, including the unit #]. I’m reaching out to notify you about a situation involving severe damage at this property. Specifically, [provide a brief description of the issue, e.g., a major water leak, fire damage, or structural breach]. We’ve attempted to reach you and your escalation contacts but have not received a response yet. The work order has now been placed into “Waiting for PM” status for your input. Please don’t hesitate to send us a Webchat or text us back at (206)-900-9466 if we can assist you with this or any other work orders. Have a nice [day/evening]!*
+      2. **Escalate to Operations Support Specialists***** ***in Slack to let them know we need more information from the PM to move forward. Operations Support Specialists will put the WO on hold using the *Waiting for PM* option, and create a task for the PM. Operations Support Specialists will fill out the form with the following:
+        1. **Select a reason (destination status) for putting this job on hold: **Waiting for PM
+        2. **Describe why you moved the job to this status:** Provide a brief description of what you need from the PM. Ex: *There is severe structural damage reported (e.g., a major water leak), and we need confirmation from you to proceed with the necessary actions on this work order.*
+        3. **Who is this task about?** PM
+        4. **Set a date and time for the follow-up task: **[leave blank]
+        5. **Task priority: **Highest
+        6. **User group*: **Choose the user group with “PM” in the title
+        7. **Assign to a User: **[leave blank]
+        8. **When should this cancel? **Cancel on any state change
+        9. **What action or information is required from the Property Manager?: **Provide a brief description of what you need from the PM. Ex: *We need your approval or guidance to address the severe damage reported in WO number [provide number]. Please confirm the next steps or let us know how to proceed.*
+3. **Document the Escalation:**
+  1. Ensure to link the call to the applicable work order. Refer to https://latchel.atlassian.net/wiki/spaces/OPS/pages/2744680449.
+    1. Include relevant details such as:
+    2. Date and time of the call
+    3. Summary of the reported damage
+    4. Actions taken
+</Accordion>
+
+## Step 2. **SMS Notification Following Unsuccessful Contact Attempts with Escalation Contacts**
+
+<Warning>
+**Important:** For the scenarios listed in this Job Aid (e.g., resident unresponsive to PDEH, unclear situations that require PM input, all Preferred SPs unresponsive, severe damage/911, etc.), **Latchel cannot move the work order forward without PM instruction.**
+
+- This applies to **both** initial contact and **any follow‑up contact** about the same scenario.
+- A follow‑up SMS in these scenarios is **only** to remind/notify the PM; it does **not** give you permission to proceed without their response.
+- If the escalation contacts are unresponsive and you’ve already sent an SMS, proceed to creating a follow-up task assigned to the PM if WO is already forwarded/on Waiting for PM Status or escalate to Operations Support Specialists to move the WO to Waiting for PM.
+  - Refer to https://latchel.atlassian.net/wiki/spaces/OPS/pages/766378165.
+</Warning>
+
+For **all other types of concerns when contacting escalation contacts** (any situation where the core SOP allows us to move forward without PM input), follow the guidelines below after **unsuccessful call attempts**.
+
+<Warning>
+To determine whether the PM is actively managing a work order, follow the guidelines in https://latchel.atlassian.net/wiki/spaces/OPS/pages/3805478920.
+</Warning>
+
+#### **If PM is Actively Managing the Work Order:**
+
+1. Send an SMS to all escalation contacts who have SMS enabled. Only skip this step if there are no available SMS options for any of the contacts.
+  1. Confirm you are following up and will not proceed further unless the PM provides different instructions.
+    1. **Say something like:**
+      1. *Hi [Escalation Contact name], this is [your name] from Latchel. We're reaching out regarding WO #[number] at [property address, including unit #] for a [brief WO description] issue. We attempted to reach all escalation contacts on file by phone but were unable to connect. [Briefly state what's been done so far — e.g., "We've dispatched a service provider" / "The resident has been unresponsive to troubleshooting calls" / "None of your Preferred Service Providers were available, so we dispatched from our network"], and the issue is considered a [property damaging/extreme habitability] situation. Since you're actively managing this work order, we wanted to keep you informed. Please contact us via Webchat or text us at (206)-900-9466 at your earliest convenience.*
+  2. Move the work order to Waiting for PM if it has not been updated yet.
+2. Document the SMS and any updates in the work order notes.
+
+**If PM is NOT Actively Managing the Work Order:**
+
+1. **If No Response from Escalation Contacts:**
+  1. Send an SMS to all escalation contacts who have SMS enabled. Only skip this step if there are no available SMS options for any of the contacts.
+    1. Inform them that, due to no response, you will proceed to the next phase of the emergency work order process.
+      1. **Say something like: **
+        1. *Hi [Escalation Contact name], this is [your name] from Latchel. We're reaching out regarding WO #[number] at [property address, including unit #] for a [brief WO description] issue. We attempted to reach all escalation contacts on file by phone but were unable to connect. [Briefly state what's been done so far — e.g., "We've dispatched a service provider from our network to address the issue" / "The resident was unresponsive, so we proceeded with dispatching"], and the issue is considered a [property damaging/extreme habitability] situation. Please contact us via Webchat or text us at (206)-900-9466 if you have any questions.*
+2. Document the SMS in the work order notes.
+3. **Proceed to the Next Phase**
+  1. Follow the SOP for the next escalation step. 
+    1. For **dispatching **a work order, refer to  https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/EMERGENCY-How-to-Assign-a-Preferred-Latchel-Network-Service-Provider 
+    2. **Setting expectations during dispatch**, refer to https://latchel.atlassian.net/wiki/spaces/OPS/pages/2600337430 
+    3. For **scheduling **a work order, refer to https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Emergency-How-to-Handle-Scheduling-Requests 
+    4. For **follow-up procedures,** refer to https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/SOP-Work-Order-Follow-ups-and-Updates 
+
+## [❓](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Emergency-Work-Orders)Frequently Asked Questions
+
+<Accordion title="Q: What should we do if a Work Order (WO) was updated by a PM who is not part of the EEC list, but we later need to contact the EEC team (e.g., when the assigned SP cannot schedule a PD/EH WO, or an SP mentions they already spoke with a specific PM)? Should we contact that PM even if they are not on the EEC list?">
+**A: **We should **always **follow the official **EEC contact list **when reaching out to the EEC team, regardless of which PM last updated the WO.  
+The only exception is if a PM explicitly instructs us to contact them directly or to reach out to a different PM/EEC.
+</Accordion>
+
+<Accordion title="Q: What do I do if someone (resident, fire department, police, or other emergency services) reaches out about a 911 or PD/EH situation, but the PM/property management company is disabled or inactive (no subscription)?">
+Resident safety always comes first — even without an active subscription.
+
+1. **Determine the severity of the situation:**
+  1. **If the issue is PD/EH only (not 911):** Route the customer to their Property Manager.
+  2. **If the issue is a 911 emergency:** Route the customer to call 911 immediately.
+2. **Customer Script:**
+🗨️ **For PD/EH issues (not 911), say something like:**
+*"I understand you're dealing with an urgent situation. Since your property management company is currently inactive in our system, we're unable to create a work order at this time. I'd recommend reaching out to your Property Manager directly for assistance. In the meantime, we will send a notification to your Property Manager to make them aware of the situation."*
+🗨️ **For 911 emergencies, say something like:**
+*"Your safety is our top priority. Please call 911 immediately for emergency assistance. Since your property management company is currently inactive in our system, we're unable to create a work order, but we will send a notification to your Property Manager to make them aware of the emergency."*
+3. **Send a courtesy email to the PM** using the **Failed Escalation Contacts** email under the Emergency escalation contacts tab.
+  1. Refer to https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-Critical-Pre-dispatch-Warranty-Special-Notes-Emergency-Escalation-Contacts
+4. **Document the interaction** (call notes, email sent) so there's a record of what was reported and what action was taken.
+
+**Email Template**
+
+**Subject:** Urgent: [911 Emergency / PD/EH Issue] Reported at [Property Address] — Action Required
+
+**Body:**
+
+Hi [Property Management Company]! This is [Associate Name] from Latchel. We received [a call from the fire department / a report from the resident / a call from emergency services / a report regarding a property damage or environmental hazard issue] regarding [brief description of the emergency — e.g., an active fire / a gas leak / a police-related incident / property damage / environmental hazard] at [Property Address].
+
+[If 911: We advised [the resident / emergency services] to contact 911, and [emergency services are on-site / have been dispatched / 911 has already responded].]
+
+[If PD/EH only: We advised the resident to contact you directly regarding this property damage/environmental hazard issue.]
+
+Please note that your account is currently inactive in our system, so we are unable to process a work order for this property. However, we wanted to ensure you are aware of the situation so you can take any necessary steps to follow up.
+
+If you have any questions or would like to reactivate your account with Latchel, please feel free to reach out to us.
+
+Best regards,  
+[Associate Name]  
+Latchel Support Team
+
+📝 **NOTE:** No subscription = no work order can be created, but resident safety and PM awareness still take priority. For 911 emergencies, do NOT delay routing the resident or assisting emergency services while attempting to reach a disabled PM. For PD/EH issues, ensure the customer is directed to their PM and that a notification is sent.
+</Accordion>
+
+<Accordion title="Q: The EEC/PM is requesting information via SMS, but they do not have a profile in the platform. What should I do?">
+**A:** We are unable to send SMS or Webchat messages to contacts who are not registered users in the platform. Do **not** create temporary profiles as a workaround.
+
+1. Politely let the EEC/PM know that they are not currently set up as a user in our system, so we are unable to text or message them through the platform.
+**Say something like:** *“I’d be happy to send that over, but it looks like you’re not currently set up in our system, so I’m unable to text you through our platform. I can provide the information verbally right now or send it via email — whichever works best for you.”*
+2. Offer an alternative way to relay the requested information:
+  - Provide the information verbally while you are on the call.
+  - Send the information via email.
+3. Submit a [PS ticket](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-to-Product-Support) to have the EEC/PM added as a user so they can receive platform communications going forward.
+</Accordion>
+
+<Accordion title="Q: I reached an EEC but they said the issue isn't something they handle and routed me to another EEC on the list who was previously unresponsive. What do I do?">
+A: Follow the **unresponsive EEC steps** outlined in this SOP.
+
+1. Document what the reached EEC confirmed (that the issue is outside their scope and who they said handles it).
+2. If the responsible EEC was **already contacted and unresponsive** — skip the call/voicemail/SMS (already done). Move to **Waiting for PM**.
+3. If the responsible EEC has **not yet been contacted** — proceed with the full outbound communication steps in this SOP (call, voicemail, SMS, email). If still unresponsive, move to **Waiting for PM**.
+</Accordion>
+
+## 🎯 When to Break This SOP
+
+<Note>
+You can only break or make exceptions to this SOP in very limited and specific scenarios. The SOP is strict: Latchel Troubleshooters are to call a PM Company (via their Escalation Contacts) **only** in the scenarios outlined in the Job Aid. If you encounter a situation that does **not** fit any of the listed scenarios or prompts, you **must contact Operations Support Specialists for guidance**—do not proceed on your own
+</Note>
+
+- If strictly following the SOP may lead to confusion or delay in the Work Order that could result in a negative experience for the resident or client, especially in urgent scenarios, associates are permitted to use discretion and act accordingly.
+  - Be sure to document the reason for the deviation and notify the appropriate lead or team for visibility.
+- Regardless of **Work Order severity** (emergency or non-emergency)—or even if there is no WO related—if a reported issue can be clearly defined as **property-damaging** or an **extreme habitability concern**, you **must call the PM**. This applies even if the specific scenario is not listed in the Job Aid. The only exemption is FAQ 2.
+  - Use sound judgment based on the potential **impact to property** or **resident safety**, and ensure the **appropriate lead or team is notified** for visibility.
+- **On-call customers:** This SOP does not apply. For On-call customers, always refer to the separate instructions provided in the linked documentation **1**.
+- **Do not break the SOP on your own judgment.** If your scenario is not covered, escalate to Operations Support Specialists.
+
+---
+
+## 💡 If You Think This SOP Could Be Improved...
+
+Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work?  
+ 👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**
