@@ -6,29 +6,29 @@ groups: ["latchel"]
 ## 🧠 What This Process Is Trying to Solve
 
 <Note>
-We want to ensure that maintenance requests are assigned to the Property Manager’s trusted vendors quickly and accurately. The goal of this SOP is to guide associates through the process of selecting and dispatching the right Preferred Service Provider for each work order. This prevents delays, miscommunication, and the risk of assigning unapproved or unfamiliar vendors.
+  We want to ensure that maintenance requests are assigned to the Property Manager’s trusted vendors quickly and accurately. The goal of this SOP is to guide associates through the process of selecting and dispatching the right Preferred Service Provider for each work order. This prevents delays, miscommunication, and the risk of assigning unapproved or unfamiliar vendors.
 </Note>
 
 ### About Preferred Vendors
 
 <Note>
-***What's a Preferred Service Provider?*** Preferred Service Providers are Service Providers that the Property Management company identified when they joined Latchel as customers. They're contractors that often have an existing trust relationship with the Property Management company. The Property Management Company **typically** pays these Service Providers directly. However, if the PM has the 'Preferred Service Provider Payments' toggle **ON** in their Company Profile → Payments tab, Latchel can process payments for Preferred SPs **via Direct Deposit only**. Refer to https://latchel.atlassian.net/wiki/spaces/OPS/pages/3256221699 for details.
+  **_What's a Preferred Service Provider?_** Preferred Service Providers are Service Providers that the Property Management company identified when they joined Latchel as customers. They're contractors that often have an existing trust relationship with the Property Management company. The Property Management Company **typically** pays these Service Providers directly. However, if the PM has the 'Preferred Service Provider Payments' toggle **ON** in their Company Profile → Payments tab, Latchel can process payments for Preferred SPs **via Direct Deposit only**. Refer to [https://latchel.atlassian.net/wiki/spaces/OPS/pages/3256221699](https://latchel.atlassian.net/wiki/spaces/OPS/pages/3256221699) for details.
 </Note>
 
 # 🗨️Latchel Blurbs - What to Say
 
 <Check>
-Latchel Blurb
+  Latchel Blurb
 
-*Hi, my name is (Associate's name) calling from Latchel on behalf of property management company XYZ on a recorded line. We have an open job in (Area - Do not disclose the full address). This is regarding a/the (Explain the Issue). We would like to check if this is something you can service?*
+  _Hi, my name is (Associate's name) calling from Latchel on behalf of property management company XYZ on a recorded line. We have an open job in (Area - Do not disclose the full address). This is regarding a/the (Explain the Issue). We would like to check if this is something you can service?_
 </Check>
 
 <Warning>
-Emergency Work Orders go to the Emergency Services team
+  Emergency Work Orders go to the Emergency Services team
 
-If you need to Reassign a Service Provider for an Emergency Work Order, Non-Emergency Associates should NOT handle them.
+  If you need to Reassign a Service Provider for an Emergency Work Order, Non-Emergency Associates should NOT handle them.
 
-Forward all Emergency Assigning and Reassigning a Service Provider via Slack on #ops_assistance_hub.
+  Forward all Emergency Assigning and Reassigning a Service Provider via Slack on #ops\_assistance\_hub.
 </Warning>
 
 ## 📋 Step-by-Step Process
@@ -36,106 +36,121 @@ Forward all Emergency Assigning and Reassigning a Service Provider via Slack on 
 ### **Step 1: Property Manager Instructions**
 
 1.  A **Pre-dispatch Instructions** box from the Property Manager may pop-up.
-  1. If the instructions pop up, follow the instructions.
-    1. **📝** **NOTE**: Do not repeat the pre-dispatch instructions if the action has already been taken by other Latchel Associates or the System and would only result in repeating the same action that has not worked previously.
-      1. **ATTENTION**
-If the Property Manager is asking for a specific Service Provider to be used for this work order in the critical notes or pre-dispatch instructions, or has asked for it via SMS, email, or phone, first check if that Service Provider was populated in the list of eligible providers based on the skill selected. If not, you will select the generic skill for that category, which will update the list to include all Service Providers within that category. To do that, you will:
+2. If the instructions pop up, follow the instructions.
+3. **📝** **NOTE**: Do not repeat the pre-dispatch instructions if the action has already been taken by other Latchel Associates or the System and would only result in repeating the same action that has not worked previously.
+4. **ATTENTION** If the Property Manager is asking for a specific Service Provider to be used for this work order in the critical notes or pre-dispatch instructions, or has asked for it via SMS, email, or phone, first check if that Service Provider was populated in the list of eligible providers based on the skill selected. If not, you will select the generic skill for that category, which will update the list to include all Service Providers within that category. To do that, you will:
+
 <Frame>
   ![](/images/SVC-751.png)
 </Frame>
-***If you need to do any of these work around, please include that in your notes so we can understand how often this happens.***
-        1. Click on "display other skills"  
-        1. Click on the current skill name to show the drop-down menu with other skills within this category, and select the "general" skill
+
+**_If you need to do any of these work around, please include that in your notes so we can understand how often this happens._**
+
+1. Click on "display other skills" 
+2. Click on the current skill name to show the drop-down menu with other skills within this category, and select the "general" skill
+
 <Frame>
   ![image-20240530-175357.png](/images/SVC-752.png)
 </Frame>
-        - **📝** **NOTE**: If the requested service provider is still not showing up in the list, you will need to search for that service provider profile (https://latchel.atlassian.net/wiki/spaces/OPS/pages/3265232903/How+to+Navigate+Service+Provider+Profiles?search_id=afb2b1fd-95dd-4e81-bc19-9dc7c2cb3f26&additional_analytics=queryHash---3c713fd0f978f818e754a7cbaf9a95793ac4ea48415cbd4c3730370e19816391) and check which skill categories this company has. To be able to see that provider in the list, you will then need to update the skill category in the work order *(see top section of this SOP, item #5 *[*↔ How to: Navigate the Existing Work Order Interface*](https://latchel.atlassian.net/wiki/spaces/LTG/pages/440074480)* for instructions) and restart the service provider assignment workflow. Then you will be able to select the general skill under that category.*
-  2. If nothing pops up or you don't have a specific request, proceed to assign a Service Provider based on the skill required
-2. **Navigate to the primary Action bar**
-  1. Choose Take Action and select "Find Vendor" or "Set a new confirmed work date"
+
+- **📝** **NOTE**: If the requested service provider is still not showing up in the list, you will need to search for that service provider profile ([https://latchel.atlassian.net/wiki/spaces/OPS/pages/3265232903/How\+to\+Navigate\+Service\+Provider\+Profiles?search\_id=afb2b1fd-95dd-4e81-bc19-9dc7c2cb3f26&additional\_analytics=queryHash---3c713fd0f978f818e754a7cbaf9a95793ac4ea48415cbd4c3730370e19816391](https://latchel.atlassian.net/wiki/spaces/OPS/pages/3265232903/How+to+Navigate+Service+Provider+Profiles?search_id=afb2b1fd-95dd-4e81-bc19-9dc7c2cb3f26&additional_analytics=queryHash---3c713fd0f978f818e754a7cbaf9a95793ac4ea48415cbd4c3730370e19816391)) and check which skill categories this company has. To be able to see that provider in the list, you will then need to update the skill category in the work order _(see top section of this SOP, item #5 [↔ How to: Navigate the Existing Work Order Interface](https://latchel.atlassian.net/wiki/spaces/LTG/pages/440074480) for instructions) and restart the service provider assignment workflow. Then you will be able to select the general skill under that category._
+
+2. If nothing pops up or you don't have a specific request, proceed to assign a Service Provider based on the skill required
+3. **Navigate to the primary Action bar**
+4. Choose Take Action and select "Find Vendor" or "Set a new confirmed work date"
+
 <Frame>
   ![image-20240530-175445.png](/images/SVC-753.png)
 </Frame>
- 
+
 3. Proceed to [Step 2](#).
 
 ### **Step 2: Verify Skill and Select Service Provider**
 
 1. Verify if the Skill is addressing the issue reported, i.e. if the skill selected is the right one to resolve this maintenance request. If no skill or incorrect skill, you can adjust that using this SOP: [↔ How to: Add or Edit the Required Skill to a Work Order](https://latchel.atlassian.net/wiki/spaces/OM/pages/791348187)
+
 <Frame>
   ![image-20240530-175516.png](/images/SVC-754.png)
 </Frame>
+
 2. If that skill is appropriate to the maintenance requested, follow instructions in [Step 3](#) to contact the Service Provider to confirm they are able to accept this job and proceed. 
 3. If that skill is **not** appropriate to the maintenance requested, click on "Display Other Skills" 
+
 <Frame>
   ![image-20240530-175600.png](/images/SVC-755.png)
 </Frame>
- 
-  1. Click on the skill category to see a list of all other Skill Categories that this Property Manager has Preferred Service Providers prioritized to be used. You can also click on the skill under the current category to see other skill options within that category
-  2. Select the appropriate Skill Category and/or skill. Select the appropriate one based on the issue that needs to be resolved. 
+
+1. Click on the skill category to see a list of all other Skill Categories that this Property Manager has Preferred Service Providers prioritized to be used. You can also click on the skill under the current category to see other skill options within that category
+2. Select the appropriate Skill Category and/or skill. Select the appropriate one based on the issue that needs to be resolved.
+
 <Frame>
   ![image-20240530-175634.png](/images/SVC-756.png)
 </Frame>
-    1. When you change the skill being used to assign the Service Provider, the skill displayed in the work order will automatically be updated. Please include in your notes the reason for changing the skill (for example, issue was originally misunderstood and skill was incorrect, prior skill was selected by mistake).
-  3. As you change the skill, the list of Service Providers will be updated to show the ones that have that skill. Follow instructions in [Step 3](#) to contact the Service Provider to confirm they are able to accept this job and proceed. 
-  4. If there is no specific Service Provider specified, proceed to [Step 4](#)
+
+1. When you change the skill being used to assign the Service Provider, the skill displayed in the work order will automatically be updated. Please include in your notes the reason for changing the skill (for example, issue was originally misunderstood and skill was incorrect, prior skill was selected by mistake).
+2. As you change the skill, the list of Service Providers will be updated to show the ones that have that skill. Follow instructions in [Step 3](#) to contact the Service Provider to confirm they are able to accept this job and proceed. 
+3. If there is no specific Service Provider specified, proceed to [Step 4](#)
 
 ### **Step 3: Assign a Preferred Service Provider**
 
 <Warning>
-Do not disclose the full property address or resident’s contact details to a SP who can’t confirm an appointment.
+  Do not disclose the full property address or resident’s contact details to a SP who can’t confirm an appointment.
 </Warning>
 
 1. If there are multiple Preferred Service Providers that have this skill, you will start by contacting the one at the top of the list, which is the one the Property Manager has prioritized.
-  1. **‼️IMPORTANT****:** If the Service Provider is already assigned for this property with another work order, a label that states: "**This service provider has an active job at this property" **will appear above the Service Provider name.  
+2. **‼️IMPORTANT**\*\*:\*\* If the Service Provider is already assigned for this property with another work order, a label that states: "\*\*This service provider has an active job at this property" \*\*will appear above the Service Provider name.
+3. Select that Service Provider for the additional Work Order; the goal is to make the customers' experience for maintenance repairs more effective!
+4. For the first qualified Service Provider, review the WO notes to see if this provider has already been assigned to this job previously  or if they already rejected the job from the automation.
+5. If the first qualified Service Provider has not been assigned yet  or has not rejected the job, attempt to contact the Service Provider and check if they can service the work order for the address and schedule an appointment. Review Critical Notes of Service Providers to check what are the “Do’s and Don'ts” in contacting them.
+6. **‼️IMPORTANT**: Ops Associate should ensure that they set appropriate expectations with Service Providers (SPs) before dispatching using this SOP: [↔](https://latchel.atlassian.net/wiki/spaces/OM/pages/791348187) [How to: Set expectations with Service Providers when dispatching](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2600337430)
+7. If you are able to speak with the Service Provider and secure a definite appointment date and time, assign them to the work order:
+8. Click on "Select" to proceed assigning the job to this service provider.
 
-    1. Select that Service Provider for the additional Work Order; the goal is to make the customers' experience for maintenance repairs more effective!
-2. For the first qualified Service Provider, review the WO notes to see if this provider has already been assigned to this job previously  or if they already rejected the job from the automation.
-  1. If the first qualified Service Provider has not been assigned yet  or has not rejected the job, attempt to contact the Service Provider and check if they can service the work order for the address and schedule an appointment.
-Review Critical Notes of Service Providers to check what are the “Do’s and Don'ts” in contacting them.
-  2. **‼️IMPORTANT**: Ops Associate should ensure that they set appropriate expectations with Service Providers (SPs) before dispatching using this SOP: [↔](https://latchel.atlassian.net/wiki/spaces/OM/pages/791348187) [How to: Set expectations with Service Providers when dispatching](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2600337430)
-  3. If you are able to speak with the Service Provider and secure a definite appointment date and time, assign them to the work order:
-    1. Click on "Select" to proceed assigning the job to this service provider.
 <Frame>
   ![](/images/SVC-757.png)
 </Frame>
-    2. Once the SP has been assigned to the WO you will be presented with a new screen to confirm the selection:
+
+2. Once the SP has been assigned to the WO you will be presented with a new screen to confirm the selection:
+
 <Frame>
   ![](/images/SVC-758.png)
 </Frame>
-      1. Note: You will be able to change the User assigned to the WO from that Service Provider company and the system will always default to the primary user. There’s no need to change this.
-      2. If the Service Provider answers but cannot confirm a specific appointment date and time (e.g., says "I'll call the resident," "I'll get back to you," or "I need to check my schedule") — this does **not** count as accepting the job. **Do not assign the SP.**
-        1. Say something like: *"We appreciate that! We'll take care of coordinating with the [resident/property manager] on our end. What we need from you is a date and time that you can commit to for this job — are you able to give us that right now?"*
-        2. If they still cannot commit:
-          1. Say something like: *"No worries! Just so you're aware, since we weren't able to confirm an appointment, you have not been assigned to this work order and we will be continuing to source other available providers. You're welcome to text or call us back when you have a more definitive schedule, but we can't guarantee the work order will still be open at that point."*
-⚠️ Assigning without a confirmed appointment while continuing to source creates a **double dispatch** risk. Continue to the next SP on the list.
-  4. If the Service Provider had already been assigned, rejected the job previously or could not go to the job,  proceed to go down the list of Preferred Service Providers to assign the next one listed sequentially.
-3. **If the agent ❌cannot schedule the appointment with a Preferred Service Provider after following the applicable outreach rules (including the emergency ****Standardized Outreach Attempts to Preferred Service Providers** when the work order is emergency), and there are no Service Providers left to call, review if the Property Manager is "Opt-in" or "Opt-out" of the Latchel Service Providers Network in Step 4.
-  1. Refer to Step 4 under “**(EMERGENCY) Rules for Calling the Service Provider**” of this [SOP](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/EMERGENCY-How-to-Assign-a-Preferred-Latchel-Network-Service-Provider) to review the guidelines for the **Standardized Outreach Attempts to Preferred Service Providers** 
-4. If the Preferred Service Provider needs to be reassigned, follow instructions here: [↔ How to: Reassign a Service Provider](https://latchel.atlassian.net/wiki/spaces/OPS/pages/786859062)
+
+1. Note: You will be able to change the User assigned to the WO from that Service Provider company and the system will always default to the primary user. There’s no need to change this.
+2. If the Service Provider answers but cannot confirm a specific appointment date and time (e.g., says "I'll call the resident," "I'll get back to you," or "I need to check my schedule") — this does **not** count as accepting the job. **Do not assign the SP.**
+3. Say something like: _"We appreciate that! We'll take care of coordinating with the \[resident/property manager\] on our end. What we need from you is a date and time that you can commit to for this job — are you able to give us that right now?"_
+4. If they still cannot commit:
+5. Say something like: _"No worries! Just so you're aware, since we weren't able to confirm an appointment, you have not been assigned to this work order and we will be continuing to source other available providers. You're welcome to text or call us back when you have a more definitive schedule, but we can't guarantee the work order will still be open at that point."_ ⚠️ Assigning without a confirmed appointment while continuing to source creates a **double dispatch** risk. Continue to the next SP on the list.
+6. If the Service Provider had already been assigned, rejected the job previously or could not go to the job,  proceed to go down the list of Preferred Service Providers to assign the next one listed sequentially.
+7. \*\*If the agent ❌cannot schedule the appointment with a Preferred Service Provider after following the applicable outreach rules (including the emergency \*\***Standardized Outreach Attempts to Preferred Service Providers** when the work order is emergency), and there are no Service Providers left to call, review if the Property Manager is "Opt-in" or "Opt-out" of the Latchel Service Providers Network in Step 4.
+8. Refer to Step 4 under “**(EMERGENCY) Rules for Calling the Service Provider**” of this [SOP](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/EMERGENCY-How-to-Assign-a-Preferred-Latchel-Network-Service-Provider) to review the guidelines for the **Standardized Outreach Attempts to Preferred Service Providers**
+9. If the Preferred Service Provider needs to be reassigned, follow instructions here: [↔ How to: Reassign a Service Provider](https://latchel.atlassian.net/wiki/spaces/OPS/pages/786859062)
 
 ### **Step 4: Cannot Assign a Preferred Service Provider** 
 
 1. The Property Manager could be "Opt-in" or "Opt-out" of the Latchel Service Providers Network
-  1. The system will determine on its own if the Property Manager is eligible for Latchel Service Providers
-  2. **"Opt-in"** to the Latchel Service Provider Network
-    1. If the PM has opted into the Latchel Service Provider Network, we will start assigning Latchel Service Provider Network Service Providers or Sourced Service Providers.
-      1. [(PREMIUM) How to: Assign a Latchel Network Service Provider](https://latchel.atlassian.net/wiki/spaces/OPS/pages/752943255)
-    2. If you cannot assign any Latchel Network Service Providers but the PM is Opted-in to the Latchel Network, create a Task for the User Group: Source Outside Network
-  3. **"Opt-out"** of the Latchel Service Provider Network
-    1. If the PM hasn’t opted into Latchel Service Provider Network, 
-      1. Select "Cannot secure a preferred service provider to dispatch". 
-        1. <Frame>
+2. The system will determine on its own if the Property Manager is eligible for Latchel Service Providers
+3. **"Opt-in"** to the Latchel Service Provider Network
+4. If the PM has opted into the Latchel Service Provider Network, we will start assigning Latchel Service Provider Network Service Providers or Sourced Service Providers.
+5. [(PREMIUM) How to: Assign a Latchel Network Service Provider](https://latchel.atlassian.net/wiki/spaces/OPS/pages/752943255)
+6. If you cannot assign any Latchel Network Service Providers but the PM is Opted-in to the Latchel Network, create a Task for the User Group: Source Outside Network
+7. **"Opt-out"** of the Latchel Service Provider Network
+8. If the PM hasn’t opted into Latchel Service Provider Network, 
+9. Select "Cannot secure a preferred service provider to dispatch". 
+
+<Frame>
   ![](/images/SVC-759.png)
 </Frame>
-        2. By clicking on "Cannot secure a preferred service provider to dispatch", the tool will move the job to "Waiting for PM" and send this message to the PM: "We have attempted to schedule this job with one of your preferred vendors and none of your vendors accepted the job. There is no risk of property damage. We've asked the tenant to call us back if the situation worsens"
-          1. [(Operations) How to: Escalate Between Teams](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-Between-Teams)
-          2. If the PM responds requesting to enable LCN/LVN, proceed with guidelines outlined in https://latchel.atlassian.net/wiki/spaces/SR/pages/2977234945.
 
-- **📝** **NOTE****:** Sometimes, the Preferred Service Provider is "Locked-in", meaning that the Property Manager has deemed this Service Provider to be mandatory for this Work Order
+2. By clicking on "Cannot secure a preferred service provider to dispatch", the tool will move the job to "Waiting for PM" and send this message to the PM: "We have attempted to schedule this job with one of your preferred vendors and none of your vendors accepted the job. There is no risk of property damage. We've asked the tenant to call us back if the situation worsens"
+3. [(Operations) How to: Escalate Between Teams](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-Between-Teams)
+4. If the PM responds requesting to enable LCN/LVN, proceed with guidelines outlined in [https://latchel.atlassian.net/wiki/spaces/SR/pages/2977234945](https://latchel.atlassian.net/wiki/spaces/SR/pages/2977234945).
+
+- **📝** **NOTE**\*\*:\*\* Sometimes, the Preferred Service Provider is "Locked-in", meaning that the Property Manager has deemed this Service Provider to be mandatory for this Work Order
 
 1. If an ops agent tries to re-assign or remove a Service Provider while this flag is on, they will receive a message alerting that they cannot re-assign or remove the Service Provider.
-  1. The flag needs to be turned off to reassign the Service Provider.
+2. The flag needs to be turned off to reassign the Service Provider.
+
 <Frame>
   ![image-20240530-180020.png](/images/SVC-760.png)
 </Frame>
@@ -150,5 +165,4 @@ Based on the SOP and related guidance, you can deviate from the process in these
 
 ## 💡 If You Think This SOP Could Be Improved...
 
-Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work?  
- 👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**
+Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work?<br />👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**
