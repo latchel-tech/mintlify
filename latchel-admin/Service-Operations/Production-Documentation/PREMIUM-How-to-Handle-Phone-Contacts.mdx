@@ -1,0 +1,182 @@
+---
+title: "(PREMIUM) How to: Handle Phone Contacts"
+groups: ["latchel"]
+---
+
+## 🧠 What This Process Is Trying to Solve
+
+<Note>
+We want to prevent missed information, inconsistent service, and delays when handling premium customer phone contacts. The goal is to ensure every call is managed efficiently and according to premium standards—so customers receive prompt, accurate, and high-quality support, enhancing their experience and protecting Latchel's reputation.
+
+Operations agents follow these guidelines when interacting with customers on an active phone call in Amazon Connect.
+</Note>
+
+<Note>
+### How do I put a call "on hold"?
+
+When you need time to research or complete an action while the customer waits:
+
+- Tell the customer you'll take a couple of minutes to research and return with an update.
+- Avoid silent holds—briefly explain what you're doing.
+- See the [Handling Customer Hold Situations](#handling-customer-hold-situations) section below for the 2-minute check-in and next steps.
+</Note>
+
+## 📋 Step-by-Step Process
+
+### Step 1 - Receive the Call in Amazon Connect
+
+1. Receive the call
+   1. Refer to [How to: Receive a Call - Inbound (Amazon Connect)](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to:-Receive-a-Call---Inbound-(Amazon-Connect)) for details.
+2. Introduce yourself:
+
+<Tip>
+**Latchel Blurb**
+
+*"Thanks for calling the recorded maintenance line. This is \[Your Name\]. How can we help you?"*
+</Tip>
+
+### Step 2 - Empathize and Paraphrase the Request / Question
+
+1. Listen to the customer and take notes of key information (work order, name, address, issues).
+2. Paraphrase what you understood the customer is requesting to make sure you are clear on the problem. Show empathy as you paraphrase and that you will own the resolution. Example *" I am so sorry you are dealing with \[X\] issue. I can definitely get this resolved for you! I will do \[Y\] to take care of it"*. If customer is asking about multiple things, make a list of them and say,
+
+   <Tip>
+   **Latchel Blurb**
+
+   *"I am so sorry you are dealing with \[X\] number of issues. To summarize, the issues are: \[A, B and C\]. Let's start with \[A\]. For this one you need \[Y\], correct? I can definitely get this resolved for you!"*
+   </Tip>
+
+### Step 3 - Existing or New Work Order
+
+1. Answer any generic question that is not work order specific.
+2. Verify if there is a work order for this request already - follow step 2 of this SOP: [(PREMIUM) Job Aid: Finding an Existing Work Order vs. When to Create a new Work Order](https://latchel.atlassian.net/wiki/pages/createpage.action?spaceKey=ops&title=%28PREMIUM%29%20Job%20Aid%3A%20Finding%20an%20Existing%20Work%20Order%20vs.%20When%20to%20Create%20a%20new%20Work%20Order&linkCreation=true&fromPageId=759398413).
+   1. If this is a new request, create the work order.
+      1. Verify if the resident requires a Maintenance Request or a Home Assistant request.
+
+         <Frame>
+           <img src="/images/SVC-604.png" alt="image-20230210-170308.png" />
+         </Frame>
+
+      2. Follow this SOP to create the work order: [↔ How to: Create a New Work Order from "Incognito Mode" (📞All Phone Submissions)](https://latchel.atlassian.net/wiki/spaces/OPS/pages/781647909/How+to+Create+a+New+Work+Order+from+Incognito+Mode+All+Submissions).
+
+   2. If this is for an existing work order, go research specific work order to find answers and take actions appropriately. Make sure you are letting the customer know you will take a few minutes to research. Say:
+
+      <Tip>
+      **Latchel Blurb**
+
+      *"I'll need to take a few moments to gather more information. Is that okay?"*
+      </Tip>
+
+### Step 4 - Research
+
+1. Research: ([Job Aid: When to Create a New Work Order (and Find Related Existing Work Order)](https://latchel.atlassian.net/wiki/x/AwBGLQ))
+   1. Open the customer's profile (Resident/Service Provider/PM) in the Latchel Console to review all open jobs for that caller.
+   2. Also open the property profile ([↔ How to: Navigate Properties Tab in the Latchel Console](https://latchel.atlassian.net/wiki/spaces/OPS/pages/464388136/How+to+Navigate+Properties+Tab+in+the+Latchel+Console)) because work orders might be requested by different residents for the same property.
+      1. Those views will allow you to see all issues/jobs that person is handling so you have a more complete picture of what is going on. If you are unable to find the work order in the profile view, check which filters are being applied and include all that is unchecked. For example the work order could have been cancelled and those are hidden by default.
+   3. To specifically see what open action items we have for each work order, you can:
+      1. Open all work orders in different tabs and check for tasks
+   4. Search for and match the work order that the customer is referring to.
+      1. Open the work order in a separate tab and check for pending tasks and recent notes.
+      2. Skim work order for prior email and SMS conversations to see if there were prior interactions for the same issue and if there is anything there that is not in the work order notes.
+         1. Refer to [Job Aid: Read the Existing Work Order](https://latchel.atlassian.net/wiki/x/BIAhLQ).
+   5. If there is no information that will help to answer the customer's question or resolving the issue, check also the email queue for emails related to this work order, resident, property manager, or address.
+
+### Step 5 - Take Action
+
+1. After getting more context, answer the question and take any action needed to resolve the issue or move the work order forward.
+2. After resolving the first issue, ask if there are other work orders the customer has questions about
+   1. If yes, go back to step 3
+   2. If not, proceed to step 6
+
+### Step 6 - Complete the Call
+
+1. Once you resolve the issue with all work orders the customer is calling about, check if there are other work orders that we need information from the caller to move the work order forward:
+   1. Review your "Research" session (Step 4) on how to find other open jobs that you may need to discuss.
+   2. Ask customer if s/he is available to go over those. If customer does not have time to go through all open tasks, direct them to the dashboard from their Resident Interface.
+      1. Refer to [How to: Navigate the Resident Interface](https://latchel.atlassian.net/wiki/spaces/LTG/pages/782172204/How+to+Navigate+the+Resident+Interface).
+   3. Go to each overdue task and defer them for 24 hours.
+2. Once all issues have been resolved and you cleared all pending tasks with this customer, thank the customer for working with us on those issues, apologize for anything that hasn't been resolved yet. Let the customer know what you are doing next to make sure the work orders are progressing. Wait for the customer to hang up.
+
+### Step 7 - Write Effective Notes
+
+1. Wrap-up the call
+   1. If the call was in regards to a Work Order, leave an internal note on it
+      1. Refer to [How to: Write Effective Notes](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to:-Write-Effective-Notes) for details
+
+### Handling Customer Hold Situations
+
+1. When the customer places you on hold
+   1. Politely acknowledge and confirm that you will wait for them to return.
+
+<Tip>
+**Latchel Blurb**
+
+*"No worries, I'll remain on the line for up to 3 minutes. Please take your time and let me know when you're ready to continue."*
+</Tip>
+
+b. Wait for **3 minutes** from the time the customer placed you on hold.
+
+   i. If the customer placed you on ***silent*** hold
+
+1. After 2 minutes, check if the customer has returned the call by saying, "*__Just checking if you're back with us__*."
+
+2. If the customer has not returned after 3 minutes, politely end the call.
+
+<Tip>
+**Latchel Blurb**
+
+*"It seems we've been disconnected. I'll end this call now, but please feel free to contact us again when you're available."*
+</Tip>
+
+   i. If the customer placed you on hold music
+
+1. If the customer has not returned after 3 minutes, you may end the call.
+
+2. When Placed on Hold with an Indefinite Queue Time (calling the service provider or Property Manager's hotline)
+   1. Wait for ***3 minutes*** for someone to answer
+   2. You may end the call if there are no updates or responses after 3 minutes
+
+<Warning>
+For calls with queue time, our associates can either wait for the initial wait time advice or cut it after 3 minutes. They can proactively end the call if no one answers after. No SMS is necessary if we are unable to reach anyone.
+</Warning>
+
+3. Record the details including the duration of the hold and note that the customer did not return
+   1. If the information you have about the customer's request is enough, proceed to update our system with the information
+      1. Send the customer an SMS
+
+<Tip>
+**Latchel Blurb**
+
+*"Hello \[Customer's Name\], we had to end the call as we did not receive a response from you for a while. I have \{state the action taken based on the request\}. Please feel free to contact us should need further assistance. Thank you!"*
+</Tip>
+
+b. If the information isn't enough,
+
+   i. Send the customer an SMS
+
+<Tip>
+**Latchel Blurb**
+
+*"Hello \[Customer's Name\], we had to end the call as we did not receive a response from you for a while. So we can assist you further with your request, please feel free to contact us again at your convenience. Thank you!"*
+</Tip>
+
+   ii. If you believe that the matter is urgent
+
+1. Proceed to escalate to the Operations Support Specialist team. [How to: Escalate Between Teams](https://latchel.atlassian.net/wiki/spaces/OPS/pages/776044545/How+to+Escalate+Between+Teams)
+
+2. If the staffing permits, Operations Support Specialists can either approve you go offline to call the customer back or tag another associate to handle the request
+
+<Warning>
+If the customer's phone number cannot receive texts, you may skip sending the SMS.
+</Warning>
+
+---
+
+## 🎯 **When to Break This SOP**
+
+**Do not break or deviate from this SOP on your own authority.** Always escalate to an Ops Support specialist or follow explicit instructions if you believe an exception is necessary.
+
+## 💡 **If You Think This SOP Could Be Improved...**
+
+Noticed something clunky or confusing in this process? Or had a situation that wasn't covered here? Or tried something new that didn't work?\
+👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**

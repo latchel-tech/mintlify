@@ -1,0 +1,236 @@
+---
+title: "(Operations Support Specialist) SLA Review workflow"
+groups: ["latchel"]
+---
+
+## 🧠 What This Process Is Trying to Solve
+
+We want to ensure that all SLA-related performance data is accurately captured, documented, and submitted after every shift. This helps us identify missed SLA intervals, understand the reasons behind them (like staffing gaps, high volume, or system issues), and implement improvements to maintain consistent service levels. By completing the SS SLA Review workflow thoroughly, we protect customer experience, keep internal teams accountable, and provide Latchel with actionable insights to continuously optimize operations.
+
+**Who should read this document?**
+
+- Operations Support Specialist
+- Ops Supervisors
+- Ops Managers
+
+## 📋 Step-by-Step Process
+
+### Process Overview
+
+SLA (Service Level Agreement) Reviews play a vital role in monitoring and managing service performance to ensure the fulfillment of agreed-upon service levels. These reviews involve a comprehensive evaluation of the performance metrics, goals, and targets stated in the SLA, with the aim of assessing their achievement and identifying opportunities for improvement. See: [Service Level Agreement (SLAs) for our Products](https://latchel.atlassian.net/wiki/spaces/LTG/pages/794526591/Job+Aid+Latchel+Product+Features+Pricing+and+KPIs#JobAid:LatchelProductFeatures,PricingandKPIs-JobAid%3ALatchelProductFeatures%2CPricingandKPIs-1.ServiceLevelAgreement(SLAs)forourProducts)
+
+Operations Support Specialists must submit the SS SLA Review workflow within 48 hours following their shift, or sooner if the data is available.
+
+### Step 1
+
+Go to the #operations_support channel on Slack and click on SS SLA Review under Workflows:
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-619.png" alt="image-20230712-172420.png" />
+  </Frame>
+</Accordion>
+
+### Step 2
+
+Fill out all the information being asked: Submission Date, Shift Date, Shift P90 SMS/Web, Shift P90 Emergency Call Backs, Shift Rollover Percentage. (We will have separate instructions on what data is needed on the Missed Intervals fields.)
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-620.png" alt="image-20241210-115431.png" />
+  </Frame>
+</Accordion>
+
+To find the information of the data you need to fill out, go to the Shift Support performance per day tab under the [Shift Support Performance dashboard](https://lookerstudio.google.com/reporting/dcd7b8bd-76ff-45eb-9d91-ae7b1289ad75/page/p_507qqmxk5c).
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-621.png" alt="image-20230712-174933.png" />
+  </Frame>
+</Accordion>
+
+Let's have the July 6th, 4 am-1 pm data as an example.
+
+**Submission Date**
+
+Enter the date the workflow is submitted.\
+For example, if the workflow is submitted today, the submission date would be [insert today's date, e.g., 7/9/2023]
+
+**Shift Date**
+
+Enter the date of the shift you are reporting.\
+For example, in the scenario above, the shift date is 7/6/2023.
+
+**Shift P90 SMS/Web**
+
+Under the Shift Support performance per day tab, depending on which shift you worked on, write the data under the sms and Web column.\
+In the example above, it is 1.8 / 1.25
+
+**Shift P90 Emergency Call Backs**
+
+Under the Shift Support performance per day tab, depending on which shift you worked on, write the data under the call back column.\
+In the example above, it is 13.63
+
+**Shift Rollover Percentage**
+
+Under the Shift Support performance per day tab, depending on which shift you worked on, write the data under the Rollover column.\
+In the example above, 16.91
+
+Fill out all the other information being asked: Total Missed Webchat Interval Over # of Intervals Owned, Comments for Missed Webchat Intervals, Total Missed SMS Interval Over # of Intervals Owned, Comments for Missed SMS Intervals, Total Missed Emergency Call Back Interval Over # of Intervals Owned, Comments for Missed Emergency Call Back Intervals, Total Missed Rollover Over # of Intervals Owned, Comments for Missed Rollover Interval, Total Missed Admin Tickets Over # of Intervals Owned, Comments for Missed Admin Tickets Intervals. (This may include deep dives on several dashboards and tools, please see: [(Operations Support Specialist) Shift Interval Data Toolbox](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2774499356))
+
+**Total Missed (Webchat/SMS/Emergency Call Back/Rollover) Interval Over # of Intervals Owned**
+
+This field represents the ratio of intervals where the SLA was missed to the total number of intervals you were assigned as a Shift Owner. For example, if there was 1 missed SLA interval out of 8 intervals where you were responsible as a Shift Owner, you would input "1/8" in this field.
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-622.png" alt="image-20241210-120624.png" />
+  </Frame>
+</Accordion>
+
+**Missed Webchat or SMS Intervals**
+
+Go to the [SMS/ Webchat Volumes Report dashboard](https://lookerstudio.google.com/u/0/reporting/f9860d2c-89d8-4bdd-9e45-bb5c69a5be2a/page/p_j0fax2zazc) and click on Web Chat Missed SLA Intervals and SMS Missed SLA Intervals. From there, input the date you are reporting then look at the P90 column. The P90 threshold for SMS/Webchat is 12 minutes. This means that if the data displayed in the column exceeds 12, the SLA was not met. In such cases, any hour where the number exceeds 12 will be considered a missed interval.
+
+If ever an interval is missed, please create a detailed note on what happened during the hour. How many people do you have logged in and how many SMS are in the queue? Were you short-staffed? Were there too many SMS that came in and your people were on lunch/break or some meeting/training? Was there a system issue that caused an influx of messages on the system?
+
+Even though the workflow is submitted 2 days after the shift, it is highly recommended to document every shift event on the same day instead of relying on memory to recall the details from the previous day.\
+In the example below, Saturday 4 am-1 pm shift:\
+Webchat : 11AM - 24mins\
+SMS: No data available
+
+Webchat:
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-623.png" alt="image-20241210-123017.png" />
+  </Frame>
+</Accordion>
+
+In the workflow, you will complete the fields as follows:
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-624.png" alt="image-20241210-123411.png" />
+  </Frame>
+</Accordion>
+
+SMS
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-625.png" alt="image-20241210-124408.png" />
+  </Frame>
+</Accordion>
+
+In the workflow, you will complete the fields as follows:
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-626.png" alt="image-20241210-124504.png" />
+  </Frame>
+</Accordion>
+
+**Missed Emergency Call Back Intervals:**
+
+Go to the [EMERGENCY CALL BACKS dashboard](https://lookerstudio.google.com/u/0/reporting/054e803b-a218-4e67-93eb-0b231d83535f/page/p_nohxdpf8rc) and click on HEAT MAP TIME TO CALL P90. From there, input the date you are reporting then look at the data. The P90 threshold for the emergency callback is 20 minutes. This means that if the data displayed in the column exceeds 20, the SLA was not met. In such cases, any hour where the number exceeds 20 will be considered a missed interval.
+
+If ever an interval is missed, please create a detailed note on what happened during the hour. How many people do you have logged in and how many emergency tasks are in the queue? Were you short-staffed? Were there too many emergency tasks that came in and your people were on lunch/break or some meeting/training? Was there a system issue that hinders the Troubleshooters to complete the tasks on the system? Was there a weather event that caused the influx of tasks?
+
+Even though the workflow is submitted 2 days after the shift, it is highly recommended to document every shift event on the same day instead of relying on memory to recall the details from the previous day.\
+In the example below, Saturday 4 am-1 pm shift:\
+No intervals were missed
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-627.png" alt="image-20241210-124901.png" />
+  </Frame>
+</Accordion>
+
+In the workflow, you will complete the fields as follows:
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-628.png" alt="image-20241210-125140.png" />
+  </Frame>
+</Accordion>
+
+**Missed Rollover Intervals:**
+
+Go to the [Call Center Roll Over dashboard](https://lookerstudio.google.com/u/0/reporting/08a7c003-8b2a-4063-9527-5bb7f61cfc72/page/p_34r1f1mmyc) and click on % Roll Over Heat Map. From there, input the date you are reporting then look at the data. The % threshold for the rollover is 20%. This means that if the data displayed in the column exceeds 20, the SLA was not met. In such cases, any hour where the number exceeds 20 will be considered a missed interval.
+
+If ever an interval is missed, please create a detailed note on what happened during the hour. How many people do you have logged in and how many calls roll over? Were you short-staffed? Were there too many calls that came in and your people were on lunch/break or some meeting/training? Was there a system issue that caused the call influx?
+
+Even though the workflow is submitted 2 days after the shift, it is highly recommended to document every shift event on the same day instead of relying on memory to recall the details from the previous day.\
+In the example below, 4 am-1 pm shift:\
+4AM 100% (8 out of 8 calls rolled over) 7 calls came in before the openers logged in. 1 call came in at 4:57 and was a Spanish call, I only have X-agent and Y-agent logged in at the time.\
+6AM 25% (4 out of 18 calls rolled over) I have 5 ops logged in and 2 of them took their breaks during this hour which might have caused the rollover.\
+10AM 25.93% (7 out of 36 calls rolled over) Most associates were on break/lunch or in a 1:1 during this hour.
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-629.png" alt="image-20230712-194815.png" />
+  </Frame>
+</Accordion>
+
+**Missed Admin Tickets Interval**
+
+Go to the [Emergency Admin Missed Interval](https://docs.google.com/spreadsheets/d/1qFEk0ycGutpxOPTjIkNA5OEEc8iQNcSOCl2NZPnU4VM/edit?gid=696011515#gid=696011515) file and open the Heat Map_P90 P75 P50 tab.
+
+Make sure you are referencing the correct week. To validate, check Column B or M, depending on the week being reported. The report uses a week starting on Sunday (1) through Saturday (7) as shown in Row 4. The numbers in Column C and N represent the hourly intervals. If certain hours do not appear in these columns, it means that no tickets were missed during those intervals. Review the data to identify any missed intervals.
+
+If an interval is missed, please create a detailed note explaining what happened during that hour. Consider the following:
+
+- How many people were assigned to the Admin queue?
+- How many tickets were breached?
+- Were you short-staffed at that time?
+- Did a sudden volume of tickets come in while team members were on lunch, break, meeting, or training?
+- Was there a system issue that contributed to the ticket influx?
+- What assistance was provided by Support during the interval?
+
+Even though the workflow is submitted up to 2 days after the shift, it is highly recommended to document shift events on the same day to ensure accuracy, instead of relying on memory to recall details from the previous day.
+
+<Note>
+Real-time data updates may not always be available. In situations where data has not been generated at the time of submitting the workflow, please indicate "No data available" in the respective field.
+</Note>
+
+| # | SLA Metrics | Explanation |
+|---|---|---|
+| 1 | Shift P90 SMS/Web (12 min P90) | This is the time it takes us to respond to an inbound SMS conversation from you, residents, Service Providers, and Property Managers. |
+| 2 | Shift P90 Emergency Call Backs (20 min P90) | This is the amount of time it takes for our experienced troubleshooting team to call the resident back and attempt to fix the issue. |
+| 3 | Shift Rollover Percentage (20% P90) | This is the % of calls allowed to roll over to our third-party Call Centers. |
+| 4 | P90 Emergency Admin Ticket Response Time (20 min P90) | This is the time it takes us to take action and respond to an Emergency Admin ticket |
+
+### Step 3
+
+Once every field has been filled out. Go ahead and submit the workflow and it should show up on the #operations_support channel like this:
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-630.png" alt="image-20241210-130741.png" />
+  </Frame>
+</Accordion>
+
+In the same thread, you must submit screenshots of the reports mentioned above, sourced from the dashboards you used to gather the information, as shown here:
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-631.png" alt="image-20241210-131043.png" />
+  </Frame>
+</Accordion>
+
+## 🎯 When to Break This SOP
+
+While this workflow is designed for standard SLA reporting, there are situations where you may need to deviate slightly:
+
+- **Data is delayed or missing:** If a dashboard hasn't updated yet or shows "No data available," submit the workflow with that note and explain in the comments what steps were taken to retrieve the data.
+- **High-volume or urgent incidents:** If a sudden spike in calls, SMS, webchats, or emergency tasks occurs, prioritize monitoring and addressing real-time SLAs over completing the workflow immediately. The workflow should still be submitted as soon as possible once the urgent situation is under control.
+- **New tools or dashboards introduced:** If a new tool is created to monitor SLA for a specific queue, incorporate the data from this tool into your workflow, even if it changes the usual sequence of reporting.
+- **System outages or technical issues:** If a system is down or reporting tools aren't accessible, document the situation and escalate appropriately, then complete the workflow once data is available.
+
+The key is to ensure accurate reporting while adapting to circumstances that could impact SLA monitoring or customer experience.
+
+## 💡 If You Think This SOP Could Be Improved...
+
+Noticed something clunky or confusing in this process? Or had a situation that wasn't covered here? Or tried something new that didn't work?\
+👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**

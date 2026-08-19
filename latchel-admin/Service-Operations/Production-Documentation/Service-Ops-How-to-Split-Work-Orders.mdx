@@ -1,0 +1,93 @@
+---
+title: "Service Ops: How to Split Work Orders"
+groups: ["latchel"]
+---
+
+## 🧠 What This Process Is Trying to Solve
+
+This SOP serves as a guide for the Operations team on how to utilize the Split Work Order function in Latchel. It outlines when and how to split a work order into separate work orders — whether prompted by the system's LLM suggestion or done manually at the request of a PM. By following this guide, Ops associates can ensure work orders are properly separated, categorized, and linked within the same project for accurate tracking and efficient service provider dispatching.
+
+PMs and Latchel users now have the ability to split a work order at any time using the Split Work Order feature. Previously, the system's auto-splitter would automatically separate multiple issues detected during intake — however, feedback from PMs indicated it was overly aggressive, particularly for related issues like leak and remediation that PMs preferred to be handled by the same service provider. The auto-splitter has since been updated to only separate completely unrelated issues (e.g., a clogged toilet and a broken clothes dryer). For related issues, the system will now keep them in a single work order by default. The Split Work Order feature gives PMs and Latchel users the flexibility to manually split a work order into separate work orders whenever they see fit — whether it's to assign different vendors, separate trades, or organize work based on their preference.
+
+## 📋 Step-by-Step Process
+
+### 📌 When to Use the Split Work Order Feature
+
+- When a PM requests separate work orders for related issues
+- When the work order contains multiple unrelated issues that weren't auto-split
+- When you need to break out a secondary issue from the original work order
+- When you want to create an additional work order linked to the same project
+
+Here are the steps on how to utilize this new feature:
+
+### Step 1 - Initiate the Split
+
+On the work order, click **Action** and select **Split Work Order**.
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-646.png" alt="image-20260506-181329.png" />
+  </Frame>
+</Accordion>
+
+A new panel will slide in where you can enter the split details.
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-647.png" alt="image-20260506-181646.png" />
+  </Frame>
+</Accordion>
+
+### Step 2 - Review and Edit the Suggested Split
+
+Check and update the following fields before proceeding:
+
+- **Work Order Summary** – A pre-filled summary will be provided for both the original and new work order. Review and edit as needed.
+- **Severity** – The new work order will automatically inherit the severity of the original. You must manually update this to reflect the correct severity. Refer to the Intake Settings guide to select the appropriate level: 👉 [Service Ops: Handling Work Order Severity via Harmonia & Harmonia X Intake Settings](https://latchel.atlassian.net/wiki/spaces/OPS/pages/3576627319)
+- **Budget** – The suggested budget is carried over from the original work order. Adjust if needed (e.g., if the PM has requested a budget change).
+
+### Step 3 - Add Additional Splits (If Needed)
+
+If the work order needs to be split into more than two WOs, click **Add New Work Order** and manually enter the required details.
+
+<Note>
+📝 Note: Any split resulting in 3 or more work orders will require full manual input for each additional WO.
+</Note>
+
+### Step 4 - Confirm and Split
+
+Once all details are finalized, click the **Split Work Order** button. Review the details of all newly created work orders before confirming.
+
+<Note>
+📝 Note: All work orders created from the split will automatically be grouped under a new project.
+</Note>
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-648.png" alt="image-20260506-182835.png" />
+  </Frame>
+</Accordion>
+
+### Step 4 - Verify the Project
+
+Open the newly created project and confirm that all split work orders are correctly listed and accounted for.
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-649.png" alt="image-20260506-183058.png" />
+  </Frame>
+</Accordion>
+
+## ❓ Frequently Asked Questions
+
+<Accordion title="Can I still split a work order that does not have multiple issues?">
+</Accordion>
+
+## 🎯 When to Break This SOP
+
+Do not break or deviate from this SOP on your own authority. Always escalate to an Ops Support specialist or follow explicit instructions if you believe an exception is necessary.
+
+## 💡 If You Think This SOP Could Be Improved...
+
+Noticed something clunky or confusing in this process? Or had a situation that wasn't covered here? Or tried something new that didn't work?\
+👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**

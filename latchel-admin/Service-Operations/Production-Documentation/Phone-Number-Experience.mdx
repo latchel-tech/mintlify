@@ -1,0 +1,48 @@
+---
+title: "Phone Number Experience"
+groups: ["latchel"]
+---
+
+**Customer Communication Table:**
+
+| Direction | Phone Number | Used by | Purpose | Severity | Call Experience |
+| --- | --- | --- | --- | --- | --- |
+| Inbound | 206-900-9466 | Property Manager | Dialed by PM's to reach Latchel | Emergency | Initiates IVR options -PM impersonates resident to create a new work order |
+| Inbound | 206-900-9466 | Property Manager | Dialed by PM's to reach Latchel | Non-Emergency | Initiates IVR options-leaves a voicemail received by TS Admin team |
+| Outbound | 206-900-9466 | Property Manager | Number seen by PM's when Latchel calls them | Any | Caller ID Shows Latchel |
+| Inbound | Unique Maintenance Hotline | Vendor | Dialed by Service Provider to reach Latchel | Any | Initiates IVR Flow-Vendor Leaves a Voicemail received by TS Admin team |
+| Outbound | Unique Maintenance Hotline | Vendor | Number seen by Vendor's when Latchel calls them | Any | Caller ID Shows Latchel |
+| Inbound | Unique Maintenance Hotline | Resident | Resident uses to contact Latchel for new reports and followups | Emergency | Initiates IVR options-may call CC, may sms, may email |
+| Inbound | Unique Maintenance Hotline | Resident | Resident uses to contact Latchel for new reports and followups | Non-Emergency | Initiates IVR options--may call CC, may sms, may email |
+| Outbound | Unique Maintenance Hotline | Resident | Number seen by Vendor's when Latchel calls them | Any | Caller ID Shows Latchel |
+| Inbound | Unique Maintenance Hotline | Owner | Dialed by Owner's to reach Latchel | Emergency | Initiates IVR options-may call CC, may sms, may email |
+| Inbound | Unique Maintenance Hotline | Owner | Dialed by Owner's to reach Latchel | Non-Emergency | Initiates IVR options--may call CC, may sms, may email |
+| Outbound | 206-900-9466 | Owner | Number seen by Owner's when Latchel calls them | Any | Caller ID Shows Latchel |
+
+**Internal Reference Table**
+
+| Name | Number | Used by | Purpose | Usage |
+| --- | --- | --- | --- | --- |
+| Stage | [**206 717 8374**](https://console.twilio.com/us1/develop/phone-numbers/manage/incoming/PN282b8ddda949d18ab9d463d1e09644ad/configure) | [Automated SMS Line Router](https://console.twilio.com/us1/studio/flows/FWe250a5fb126c4508f09cd1da92b46b39?frameUrl=%2Fconsole%2Fstudio%2Fflows%2FFWe250a5fb126c4508f09cd1da92b46b39) | Utility number used by Latchel's internal system | Drives the studio workflow which automates SMS messaging |
+| Latchel Internal CC/Amazon (English)(Direct) | 8335484312 | [Amazon Connect-English Line (Delay)](https://www.twilio.com/console/twiml-bins/EHea9deb20dd6fcee1d59479acf9c28b22) | Connect with the next available agent in the given queue | Used to connect to a 3rd party call servicing software where Latchels agents are available to answer |
+| Latchel Internal CC/Amazon (English)(Twilio) | [**415 340 7651**](https://console.twilio.com/us1/develop/phone-numbers/manage/incoming/PN864f3dfe6ac2cb6decb8a30481a7254e/configure) | [Aggressive Web Routing: Hotline IVR Flow](https://www.twilio.com/console/studio/flows/FW42d42dfbafd469ad8934b7e2dc4c61c2) | Uniquely identify the delay needed for Latchel's internal English call center | Initiates a delay when call battle is active |
+| Latchel Internal CC/Amazon (Spanish)(Direct) | 8005814136 | [Amazon Connect- Spanish Line (Delay)](https://www.twilio.com/console/twiml-bins/EHf0800e3c9654335930fc54ed6666eab7) | Connect with the next available agent in the given queue | Used to connect to a 3rd party call servicing software where Latchels agents are available to answer |
+| Latchel Internal CC/Amazon (Spanish)(Twilio) | [**312 477 2255**](https://console.twilio.com/us1/develop/phone-numbers/manage/incoming/PN0b97b5fd3b0b74b6dc0b4d8b6e428117/configure) | [Aggressive Web Routing: Hotline IVR Flow](https://www.twilio.com/console/studio/flows/FW42d42dfbafd469ad8934b7e2dc4c61c2) | Uniquely identify the delay needed for VLatchel's internal Spanish call center | Initiates a delay when call battle is active |
+| Sunshine(Spanish)(Direct) | 2063330590 | [Sunshine Call (Delay)](https://www.twilio.com/console/twiml-bins/EH0a0b5e8f757af0ba7a0f441dc0d3479a) | Connect with the next available agent in the given queue | Used to connect to a 3rd party call center |
+| Sunshine(Spanish)(Twilio) | [**859 696 1888**](https://console.twilio.com/us1/develop/phone-numbers/manage/incoming/PN2db78ec5e6c682a14c57ddcadbd5aacc/configure) | [Aggressive Web Routing: Hotline IVR Flow](https://www.twilio.com/console/studio/flows/FW42d42dfbafd469ad8934b7e2dc4c61c2) | Uniquely identify the delay needed for Sunshine | Initiates a delay when call battle is active |
+| TMP Call Center (English)(Direct) | 5514440868 | [TMP Call Center English (Delay)](https://www.twilio.com/console/twiml-bins/EHed732eee93db89c6ccabe3d53d40931b) | Connect with the next available agent in the given queue | Used to connect to a 3rd party call center |
+| TMP Call Center (English)(Twilio) | [**+1 978 577 2018**](https://console.twilio.com/us1/develop/phone-numbers/manage/incoming/PN94b36978b8dae927e15f01bb90a5b4c4/configure) | [Aggressive Web Routing: Hotline IVR Flow](https://www.twilio.com/console/studio/flows/FW42d42dfbafd469ad8934b7e2dc4c61c2) | Uniquely identify the delay needed for TMP (english) | Initiates a delay when call battle is active |
+| TMP Call Center (Spanish)(Direct) | 5514440867 | [TMP Call Center Spanish (Delay)](https://www.twilio.com/console/twiml-bins/EHf2e05c78fc12acb6b990c66387412824) | Connect with the next available agent in the given queue | Used to connect to a 3rd party call center |
+| TMP Call Center (Spanish) (Twilio) | [**+1 989 487 7465**](https://console.twilio.com/us1/develop/phone-numbers/manage/incoming/PNc30e33569eca9587a9a05ce2c521a40c/configure) | [Aggressive Web Routing: Hotline IVR Flow](https://www.twilio.com/console/studio/flows/FW42d42dfbafd469ad8934b7e2dc4c61c2) | Uniquely identify the delay needed for TMP(spanish) | Initiates a delay when call battle is active |
+| Voicelink Columbus (Direct) | 7372153142 | [Voicelink Columbus (Delay)](https://www.twilio.com/console/twiml-bins/EH52e0936c4e9a90aa3201dee101104518) | Connect with the next available agent in the given queue | Used to connect to a 3rd party call center |
+| Voicelink Columbus (Twilio) | [**+1 903 437 7682**](https://console.twilio.com/us1/develop/phone-numbers/manage/incoming/PN4bff3d4f00092db39f87b6f573d03630/configure) | [Aggressive Web Routing: Hotline IVR Flow](https://www.twilio.com/console/studio/flows/FW42d42dfbafd469ad8934b7e2dc4c61c2) | Uniquely identify the delay needed for Voicelink | Initiates a delay when call battle is active |
+
+**Terms Glossary:**
+
+*__Direction__*: Inbound-The root user contacts Latchel or Outbound - Latchel contacts the root user\
+*__Phone Number__*: Actual Number utilized\
+*__Used By__*: Who (or what) is dialing or receiving the call\
+*__Purpose__*: When and Why is this number used\
+*__Severity__*: Used to determine criticality of function\
+*__Call Experience__*: Description of what the user encounters when utilizing the number\
+*__Usage__*: Action that is taken when triggered

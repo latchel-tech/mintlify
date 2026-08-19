@@ -1,0 +1,139 @@
+---
+title: "How to: Receive a Call - Inbound (Amazon Connect)"
+groups: ["latchel"]
+---
+
+## 🧠 What This Process Is Trying to Solve
+
+<Note>
+We want to prevent missed calls, incomplete information, and inconsistent handling when receiving inbound calls through Amazon Connect. The goal is to ensure every call is answered promptly and handled according to standard procedures—so customers get timely, accurate assistance and Latchel maintains high service quality.
+</Note>
+
+<Note>
+**🎓 Training Content**
+
+The contents of this page have been included in the **Presenting: Amazon Connect** and **Call Center Cross-Training** Coassemble course.
+</Note>
+
+## 📋 Step-by-Step Process
+
+<Note>
+### How to Make an Outbound Call
+
+**IMPORTANT**: Latchel has a standard for starting a phone calls due to regulation requirements of recording the call. For information on how to make an outbound call, refer to: [↔ How to: Make Outbound Calls Within the Latchel Console](https://latchel.atlassian.net/wiki/spaces/OPS/pages/757235750/TECH+101+How+to+Make+Outbound+Calls+Within+the+Latchel+Console).
+</Note>
+
+### How to Set Up To Take a Call
+
+1. Enter Amazon Connect through your desktop browser: [https://latchelphone.my.connect.aws/ccp-v2](https://latchelphone.my.connect.aws/ccp-v2)
+   1. To avoid Chrome's automatic tab-sleeping function causing connection errors when accepting calls, **please ensure to use Amazon Connect exclusively in a distinct browser window. Keep it free from any other tabs, maintaining it as the sole active tab for optimal operation.**
+      1. 🛠️ **Troubleshooting tip:** If you run into connection errors when accepting calls, refresh the browser to see if you can successfully accept the next inbound call.
+   2. Sign-in with your credentials set for Amazon Connect.
+
+      <Frame>
+        <img src="/images/SVC-595.png" alt="image-20231027-203725.png" />
+      </Frame>
+
+      <Frame>
+        <img src="/images/SVC-596.png" alt="image-20231027-203901.png" />
+      </Frame>
+
+2. You can click the cog icon to change your Audio Devices' settings and click save to update the settings. **Important**: *Phone type* should always be set as *Softphone*, do not change this.
+
+   <Frame>
+     <img src="/images/SVC-597.png" alt="image-20231027-204043.png" />
+   </Frame>
+
+   1. Click the phone icon to return to the main interface.
+
+3. Now, in order to change your status, click the status dropdown:
+
+   <Frame>
+     <img src="/images/SVC-598.png" alt="image-20231027-204337.png" />
+   </Frame>
+
+   1. Change the status accordingly:
+      1. Choose "Available" to go online and start receiving calls
+      2. Choose "Offline" when going on break
+
+4. When a phone call comes into your account, you'll be notified:
+
+   <Frame>
+     <img src="/images/SVC-599.png" alt="image-20231027-211306.png" />
+   </Frame>
+
+   1. Answer the call by clicking *Accept call*.
+      1. Refer to [Job Aid: Customer Experience Review Calibration Guidelines](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2150039592/Job+Aid+Customer+Experience+Review+Calibration+Guidelines#Customer-Experience-Review%3A-Calls%5BhardBreak%5D%5BhardBreak%5D) to know how you should conduct yourself during the call and ensure quality standards are met to provide a great customer experience.
+
+         **Note:** It may be confusing to customers when we mention our company name (Latchel). For your inbound greeting, follow the suggested script here: [(PREMIUM) How to: Handle Phone Contacts](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/(PREMIUM)-How-to:-Handle-Phone-Contacts#Step-1---Receive-the-Call-in-Amazon-Connect).
+
+   2. When the call connects, the pane will say Connected call:
+
+      <Frame>
+        <img src="/images/SVC-600.png" alt="image-20231027-211529.png" />
+      </Frame>
+
+<Note>
+**How to: Handle Phone Contacts**
+
+For a Step-by-Step guide on how to actively handle phone contacts in Amazon Connect, see: [(PREMIUM) How to: Handle Phone Contacts](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/(PREMIUM)-How-to:-Handle-Phone-Contacts).
+</Note>
+
+### How to Exit the Call
+
+1. After you have addressed all customer questions and issues, thank the customer and let the customer hang up the call. If that doesn't happen after 30 sec, then you can hang up.
+
+   <Tip>
+   "Thank you for calling us today! I have updated your account and everything will be processed soon! Is there anything else I can help you with?"
+   </Tip>
+
+2. Wrap Up Time
+   1. Wrap up time is the post-call work time you spend finishing up after the call has ended and before you are available again to take another phone call. During this duration your status is automatically set to "wrap up". Wrap up time is set for a 1 minute length of time. At the end of the 1 minute wrap up time the system will automatically set your status to available.
+   2. If you are ready to take another call before your wrap up time has ended click, *Close Contact*. Your status will be set to available and you will be ready once again to answer phone calls.
+
+      <Frame>
+        <img src="/images/SVC-601.png" alt="image-20231027-211932.png" />
+      </Frame>
+
+### How to Report a Missed Call
+
+Ops Associates may receive missed calls due to various events. One potential explanation is technical issues with Amazon Connect. In order to exhibit professionalism, courtesy, and a genuine commitment to effective customer communication, associates are required to promptly report any **Missed Calls** using this [form](https://docs.google.com/forms/d/e/1FAIpQLScmEhPL12UnuSp7JMKAYhl4SyZO8lSnd-GstmH49Y7orOg9YQ/viewform).
+
+<Frame>
+  <img src="/images/SVC-602.png" alt="image-20230810-180502.png" />
+</Frame>
+
+### How to Stop Receiving Calls
+
+Once you're finished with your shift or if you're asked to stop receiving inbound calls to move over to a different activity, you need to stop receiving calls on Amazon Connect. All you need to do is set yourself as offline on the platform by clicking the status dropdown menu and selecting *Offline*. Note: This is not applicable if you're asked to work on emails, since inbound calls and emails are usually worked in parallel, with answering inbound calls taking precedence over emails.
+
+<Frame>
+  <img src="/images/SVC-603.png" alt="image-20231027-204610.png" />
+</Frame>
+
+### How to Handle Ghost Calls
+
+When encountering a ghost call, associates must wait for **1 minute and 30 seconds** before ending the call. This allows some time for the caller to potentially respond or for any technical issues to be resolved. If there's still no response after that time, it's appropriate to hang up.
+
+1. During this time, periodically say "Hello" naturally, to check if the caller is still on the line.
+2. On the 30-second mark, use the following spiel:
+
+<Tip>
+1. "Hello, this is the maintenance line, can you hear me?" (3x)
+
+   "If you can hear me, I'm unable to hear you. Please give us a call back at \[PM Latchel-Assigned Phone Number for Residents/Service Providers/Unknown\] \[206-900-9466 for PMs\] so we can assist you further. Thank you!"
+</Tip>
+
+3. If the call reaches 1 minute and 30 seconds without any response from the caller, repeat the spiel once again.
+4. After delivering the spiel for the second time, if there is still no response, associates may end the call.
+
+---
+
+## 🎯 **When to Break This SOP**
+
+**Do not break or deviate from this SOP on your own authority.** Always escalate to an Ops Support specialist or follow explicit instructions if you believe an exception is necessary.
+
+## 💡 **If You Think This SOP Could Be Improved...**
+
+Noticed something clunky or confusing in this process? Or had a situation that wasn't covered here? Or tried something new that didn't work?\
+👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**

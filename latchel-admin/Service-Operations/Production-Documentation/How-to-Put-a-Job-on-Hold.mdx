@@ -1,0 +1,359 @@
+---
+title: "How to: Put a Job on Hold"
+groups: ["latchel"]
+---
+
+## 🧠 What This Process Is Trying to Solve
+
+We want to ensure jobs only move forward when all necessary correspondence and coordination with Property Managers, Service Providers, owners, or residents is complete. The goal is to keep everyone informed and aligned, so work orders progress smoothly and efficiently, resulting in better outcomes for customers and Latchel.
+
+## 📋 Step-by-Step Process
+
+<Note>
+**Reminder for RentRedi and NOMAD Work Orders**
+
+Before moving a work order forward (which will notify the owner), always include the following message to text us back:
+
+"Please text us at 206-717-8374 to advise how you wish to proceed."
+</Note>
+
+## ⏸️ Putting a Job on Hold
+
+Depending on the unique circumstances of a Work Order, the order may need to be placed on hold. The agent may be led to place the order on hold by the system workflow, or the agent may need to manually click the action button and choose the option for "Put this Job on Hold"
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-633.png" alt="image-20230908-145102.png" />
+  </Frame>
+</Accordion>
+
+The agent will be requested to fill up the following form asking to select the reason why the work order is being placed on hold, write a short explanation of it, select the person that should be contacted to coordinate next steps, and define when the next task is due. The agent will also enter a summary of what will happen next or what the next steps will be.
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-634.png" alt="image-20230908-145148.png" />
+  </Frame>
+</Accordion>
+
+Fill up the form, starting with the reason for putting the job on hold.
+
+<Note>
+📝NOTE: Automated notifications are triggered and sent immediately when a work order is moved to a different status. Operations associates must confirm that these notifications are sent to the relevant parties before leaving the work order. If you notice that the notifications are not being sent, please submit a bug report promptly. For detailed instructions on how to submit a bug report, refer to the guide: [How to Use the Serv Ops Intake Workflows](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2313453653).
+</Note>
+
+**Pending** - Only use this if:
+
+You're waiting on a Service Provider to send us an estimate. To make sure the property manager understands the estimate, please make sure the provider is providing an itemized estimate.
+
+<Warning>
+⚠️IMPORTANT: For emergency work orders, always follow the Step 2 process outlined in [(Operations Support Specialist) Bad Status/Too Old Report](https://latchel.atlassian.net/wiki/spaces/OPS/pages/783745716/Operations+Support+Specialist+Bad+Status+Too+Old+Report#Bad-Status-WOs-FAQ%3A)
+</Warning>
+
+For non-emergency work orders, "Describe why you moved the job to this status", explain why you need that estimate. For example, the service provider went to the property and learned the root cause of the problem will cost more than the initial estimate, so we are requesting an itemized estimate to seek approval from the Property Manager.
+
+Select the service provider name in the "Who is this task about?" and assign the task to the Service Provider Follow up group.
+
+Set follow-up task for the next business day, due at 9 am (unless the Service Provider provided a specific date).
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-635.png" alt="image-20240501-105833.png" />
+  </Frame>
+</Accordion>
+
+If the Service Provider provides the estimate and you need approval from the Property Manager, change the status to "Needs Owner Approval".
+
+<Warning>
+⚠️IMPORTANT: If the service provider confirms they have already sent the estimate directly to the Property Manager AND can provide the estimate amount, update the work order status to "Needs Owner Approval." If they are unable or unwilling to confirm the amount, or if they state they will send the estimate directly to the Property Manager, complete your current task and keep the status as in "Needs Owner Approval" and create a new task to the Property Manager. For PD/EH issues, also call the escalation contacts to ensure timely follow-up. If escalation contacts are unresponsive, move the WO to Waiting for PM.
+</Warning>
+
+Refer to [this guide for emergencies](https://latchel.atlassian.net/wiki/spaces/OPS/pages/797245658/EMERGENCY+How+to+Handle+Changes+to+the+Approved+Budget#Step-1---How-to-Handle-the-Service-Provider-Request-for-a-new-Cost) and [this guide for non-emergencies](https://latchel.atlassian.net/wiki/spaces/OPS/pages/764313974/Non-Emergency+How+to+Handle+Over+Approved+Budget+aka+Estimate#PART-1---The-Service-Provider-is-requesting-a-%24-money-amount-that-is-under-the-%E2%80%9CHard-Budget%E2%80%9D) in case the estimate is over the approved budget.
+
+Go to Step B - "Waiting for Owner Approval".
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-636.png" alt="image-20230908-145259.png" />
+  </Frame>
+</Accordion>
+
+For the associates following up on the task, if after two attempts (made on separate days) to follow up, there is no response or no commitment date to send the estimate that has been provided by the service provider:
+
+<Note>
+📝NOTE: Make sure to review the Work Order history and search for any emails the service provider may have set regarding the Work Order.
+</Note>
+
+1. Complete the task to follow up with the vendor.
+2. Without changing the status of the Work Order, create a new task for the Property Manager to inform them that the vendor has not been responsive to our attempts to follow up on the estimate and request instructions for how to proceed.
+3. Set the vendor as a contact.
+4. Assign the task to the Property Manager group.
+5. Summarize the status of the Work Order in the task description.
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-637.png" alt="image2022-2-14_15-1-5.png" />
+  </Frame>
+</Accordion>
+
+The job has been reported incomplete by the vendor or the resident and the reason or following steps are unknown, we need to follow up to obtain more information:
+
+<Warning>
+⚠️IMPORTANT: For emergency work orders, always follow the Step 3 process outlined in [(Operations Support Specialist) Bad Status/Too Old Report](https://latchel.atlassian.net/wiki/spaces/OPS/pages/783745716)
+</Warning>
+
+<Note>
+📝NOTE: If the Job is already in Pending status just create a task.
+</Note>
+
+1. Change the status to Pending.
+2. Create a task to contact the person (Resident or Service Provider) who reported that the job was not completed to get more information:
+   - For "Why this action was taken", explain why the job is on hold
+   - Assign the task to the Operations Associate group.
+   - Summarize the status of the Work Order and provide clear and concise instructions for the next associate who will be taking over.
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-638.png" alt="image2022-2-21_15-46-36.png" />
+  </Frame>
+</Accordion>
+
+For the team following up on the task: We should be contacting both the resident and the Service Provider until we obtain more information on what is needed to move the Work Order forward.
+
+If after two attempts (made on separate days) to follow up, both the Service Provider AND resident have been unresponsive, escalate to the Property Manager:
+
+<Note>
+📝NOTE: We should only escalate to the Property Manager after both the vendor and resident have been unresponsive to two attempts of following up each.
+</Note>
+
+1. Don't change the status of the Work Order.
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-639.png" alt="image2022-2-21_14-21-42.png" />
+  </Frame>
+</Accordion>
+
+2. Assign to the Property Manager user group.
+3. Set the follow-up task due immediately.
+4. Describe "What action or information is required from the Property Manager".
+
+<Warning>
+⚠️IMPORTANT: The information typed in this field will be sent DIRECTLY to the Property Manager. Be descriptive and clear with actionable steps from the Property Manager. Avoid asking the property manager or owner to take action directly. Instead, describe the situation and seek their guidance on how they would like us to proceed.
+</Warning>
+
+<Note>
+📝NOTE: We do not call property managers to follow up (unless it is indicated on the critical notes).
+</Note>
+
+5. Click "Save Task"
+6. The newly created task will generate into the Existing Work Order.
+
+---
+
+**Needs Owner Approval** - Only used when we are waiting on an estimate approval.
+
+<Note>
+📝NOTE: All estimates must clearly indicate the exact total amount before proceeding with any approval process. Estimates without the full details must be confirmed prior to moving forward. Refer to [this guide for emergencies](https://latchel.atlassian.net/wiki/spaces/OPS/pages/797245658/EMERGENCY+How+to+Handle+Changes+to+the+Approved+Budget#Step-1---How-to-Handle-the-Service-Provider-Request-for-a-new-Cost) and [this guide for non-emergencies](https://latchel.atlassian.net/wiki/spaces/OPS/pages/764313974/Non-Emergency+How+to+Handle+Over+Approved+Budget+aka+Estimate#PART-1---The-Service-Provider-is-requesting-a-%24-money-amount-that-is-under-the-%E2%80%9CHard-Budget%E2%80%9D).
+</Note>
+
+1. Set the task to "Waiting for Owner Approval".
+2. For "Why this action was taken", explain why the job is on hold and what approval we are seeking from the property manager or owner.
+3. Set the follow-up task due immediately.
+4. Assign the task to the Property Manager User Group.
+
+<Note>
+📝NOTE: We do not call property managers to follow up (unless it is indicated on the critical notes).
+</Note>
+
+5. Describe "What action or information is required from the Property Manager".
+
+<Warning>
+⚠️IMPORTANT: The information typed in this field will be sent DIRECTLY to the Property Manager/Owner. Be descriptive and clear with actionable steps from the Property Manager/Owner. Avoid asking the property manager or owner to take action directly. Instead, describe the situation and seek their guidance on how they would like us to proceed.
+</Warning>
+
+6. Choose "Never Complete on any job state change" status when setting up when the task will be cancelled.
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-640.png" alt="image-20260415-214808.png" />
+  </Frame>
+</Accordion>
+
+<Warning>
+‼️ATTENTION: Make sure this work order has the Service Provider locked-in to avoid this work order being re-assigned to another Service Provider.
+</Warning>
+
+---
+
+**Waiting for materials** - Only used when a Service Provider has ordered parts or materials to complete a job. The job cannot progress until the materials arrive.
+
+<Warning>
+⚠️IMPORTANT: For emergency work orders, always confirm if any work was done to address the immediate emergency, if so, follow the PM's Intake settings to determine if the WO can be de-escalated or not.
+</Warning>
+
+Make sure you are locking-in the Service Provider. Avoid asking the property manager or owner to take action directly. Instead, describe the situation and seek their guidance on how they would like us to proceed to avoid this work order being re-assigned to another Service Provider.
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-636.png" alt="image-20230908-145259.png" />
+  </Frame>
+</Accordion>
+
+1. Set the Work Order to "Waiting for Materials".
+2. For "Why this action was taken", explain why the job couldn't be completed and what materials had to be ordered.
+3. Select the service provider name in the "Who is this task about?" field.
+4. If you're in communication with the Service Provider, ask about the ETA (Estimated Time of Arrival) of the missing materials.
+5. Set the follow-up task based on the Service Provider's estimation of when the parts/materials will be available.
+   - If you're not in communication with the Service Provider: Set follow-up task for the next business day, due at 9 am (unless the Service Provider provided a specific date).
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-641.png" alt="image2022-2-14_17-12-56.png" />
+  </Frame>
+</Accordion>
+
+6. For emergency work orders, assign the task to the "Troubleshooters" group.
+7. For the associates following up on the task, if after two attempts (made on separate days) to follow up there is no response or no commitment date to have the materials provided by the service provider, escalate to the PM.
+   - For property damage or extreme habitability issues, refer to [Job Aid: Defining Property Damage and Extreme Habitability](https://latchel.atlassian.net/wiki/spaces/OPS/pages/745504771), and contact the emergency escalation contacts.
+   - For Non-Property Damage and Extreme Habitability, keep the work order status as is, complete your current task and create a new task to the Property Manager.
+8. For non-emergency work orders, assign the task to the Service Provider follow-up group.
+9. For the associates following up on the task, if after two attempts (made on separate days) to follow up there is no response or no commitment date to have the materials provided by the service provider:
+
+<Note>
+📝NOTE: Make sure to review the Work Order history and search for any emails the service provider may have set regarding the Work Order.
+</Note>
+
+   1. Complete the task to follow up with the vendor.
+   2. Without changing the status of the Work Order, create a new task for the Property Manager to inform them that the vendor has not been responsive to our attempts of following up on the materials and requesting instructions for how to proceed.
+   3. Set the vendor as a contact.
+   4. Assign the task to the Property Manager group.
+   5. Summarize the status of the Work Order in the task description.
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-642.png" alt="image2022-2-14_17-48-5.png" />
+  </Frame>
+</Accordion>
+
+---
+
+**Waiting for PM** - Work orders should remain in their current status unless there is missing or unclear information that only the Property Manager (PM) can provide in order to move forward. In most cases, this is rare. For guidance on how to handle work orders that are already awaiting PM Action, refer to [How to: Handle situations for WOs awaiting PM action](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2741829633)
+
+<Note>
+📝NOTE: It should also be used when the property owner (with the exception of a RentRedi owner) requests to put the WO on hold. In this case, the PM should be informed of the owner's request and the PM should handle communication with the owner directly.
+
+For example: An owner requesting to put the job on hold in order to contact a warranty company, etc.
+</Note>
+
+**Approved Scenarios for Moving a Work Order to "Waiting for PM"**
+
+- The Property Manager has specifically requested that the work order be moved to "Waiting for PM" or forwarded to them or advised that they will be handling the work order on their end.
+  - This also applies to work orders where critical notes or other WO notes include instructions from the PM to forward the request to them.
+  - For cases where the work order is no longer in TS status but the PM has provided instructions to forward it, associates/troubleshooters must follow the process outlined in FAQ 1 of the [How to: Handle Emergency Work Orders](https://latchel.atlassian.net/wiki/spaces/OPS/pages/759332893) SOP.
+- The work order is not managed by Latchel due to the PM's subscription coverage (e.g., PM is on 24/7 or after-hours emergency coverage and the issue is non-emergency).
+- The work order is non-emergency and has warranty information which should be forwarded to the Property Manager.
+- We are unable to source a service provider.
+- The work order involves enabling a resident or property (e.g., resident or property got disabled mid-process).
+- The work order was created by the Property Manager (e.g., for an inspection, unit turn, or make-ready), and the PM is actively managing it in the background.
+- The unit is vacant and requires access instructions from the Property Manager.
+- If the issue is property damaging or poses extreme habitability concerns (PD/EH) and all escalation contacts are unresponsive after the required attempts.
+  - Refer to applicable scenarios where we can escalate back to PM in this SOP: [Job Aid: PM Outbound Communication for Emergency WOs](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2537652248).
+- The service provider submits an estimate directly to the PM but does not provide (or refuses to provide) the amount. Or if the service provider claims they have been approved, but cannot provide the estimate amount or specify who approved.
+
+1. Set the Work Order to "Waiting for PM".
+   - If the option is not available to you, escalate a request to the Operations Support Specialist team via Slack channel #ops_assistance_hub.
+2. In the section "Describe why you moved the job to this status", explain why the job is on hold and what approval, direction, or clarification we are seeking from the property manager.
+
+<Warning>
+⚠️IMPORTANT: The information typed in this field will be sent DIRECTLY to the Property Manager. Provide descriptive responses; the goal is to allow Property Managers to receive better information on what actions they need to take.
+</Warning>
+
+3. Assign to the Property Manager user group.
+4. Set the follow-up task due immediately.
+5. Describe "What action or information is required from the Property Manager".
+
+<Warning>
+⚠️IMPORTANT: The information typed in this field will be sent DIRECTLY to the Property Manager. Be descriptive and clear with actionable steps from the Property Manager.
+</Warning>
+
+<Note>
+📝NOTE: We do not call property managers to follow up (unless it is indicated on the critical notes).
+</Note>
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-643.png" alt="image2022-2-14_15-36-8.png" />
+  </Frame>
+</Accordion>
+
+If the information needed is NOT critical to progressing the work order—or if it's something we can ask for via a task without halting progress—then the work order should not be moved to "Waiting for PM."
+
+Instead, leave the WO in an appropriate state where no external workflows are triggered (vendor dispatch, auto-notifications, scheduling, etc.) and create a task to the PM.
+
+If the scenario is not part of the approved 'Waiting for PM' list, leave the WO in the appropriate state below (based on the situation you're handling) and create a task to the PM.
+
+**Pending**
+
+Use when:
+- The work order is in Confirming Completion or Awaiting Work Date and you receive an update from the resident or service provider that requires PM input.
+- The resident reports the issue as unresolved via their dashboard, and the work order moves to Pending automatically. If the service provider is unresponsive, escalate to PM.
+- You are following up with a resident or service provider about work order updates and they remain unresponsive.
+- There is a conflict with service provider assignment and leaving the work order as-is risks automation errors, complaints, or disputes.
+
+**Pending - Waiting for Materials**
+
+Use when:
+- The service provider reports they are waiting for materials but is unresponsive to follow-up attempts.
+
+**Rescheduling with Tenant or Scheduling with Service Provider/Resident**
+
+Use when:
+- Both the resident and service provider must provide availability but are unresponsive.
+
+**Needs Owner/PM Approval**
+
+Use when:
+- Awaiting estimate approval and new updates (e.g., revised amount or updated quote) require PM review.
+
+Create/Assign the task directed to the PM with a task Title as "Action Required: PM Instructions or Information Needed"
+
+Ensure that the task is set as follows: "Complete task on any job state change"
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-644.png" alt="image-20251120-233349.png" />
+  </Frame>
+</Accordion>
+
+This approach ensures the PM is notified while keeping the work order controlled and avoiding confusion.
+
+Misuse of the "Waiting for PM" status creates extra manual work, slows resolution times, and can cause unnecessary delays for Support.
+
+<Warning>
+⚠️IMPORTANT: This status should only be used for cases when the other statuses are not applicable.
+</Warning>
+
+Write notes that can effectively "pass the baton" to other Ops agents. See: [How to: Write Effective Notes](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to:-Write-Effective-Notes)
+
+Click "Submit"
+
+The newly created task will generate into the Existing Work Order.
+
+## 🎯 When to Break This SOP
+
+You should only break the SOP for How to: Put a Job on Hold in rare, exceptional cases where strictly following the SOP would cause harm, violate compliance, or prevent urgent escalation (such as life safety, legal, or severe customer impact situations). In these cases:
+
+- Document clearly why the SOP was not followed.
+- Notify the Operations Support Specialist team immediately.
+- Resume following the SOP as soon as the exception is resolved.
+
+Examples of when it may be appropriate to break the SOP (not limited to):
+
+- There is an immediate risk to health, safety, or property and waiting for standard approvals would cause harm. If the work order involves property damage, extreme habitability issues, or any emergency (such as fire, gas leak, major flooding, electrical hazard, or life-threatening situations), you must bypass the standard "on hold" process. Instead, immediately follow emergency escalation procedures and contact the appropriate emergency contacts. Only if all escalation contacts are unresponsive should you move the work order to "Waiting for PM"—and this should be clearly documented.
+- System outages or technical issues prevent you from following the documented process.
+- You receive direct instructions from senior leadership to deviate from the SOP.
+
+## 💡 If You Think This SOP Could Be Improved...
+
+Noticed something clunky or confusing in this process? Or had a situation that wasn't covered here? Or tried something new that didn't work?\
+👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**

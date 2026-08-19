@@ -1,0 +1,175 @@
+---
+title: "Job-Aid: Increasing LCN SP Visibility"
+groups: ["latchel"]
+---
+
+## 🧠 What This Process Is Trying to Solve
+
+We want to prevent LCN service providers from being overlooked or underutilized in specific geographic areas due to system limitations on territory visibility. This process should only be used for ZIP codes, properties, or cities that are active properties or cities managed by Latchel. The goal is to provide Operations Support Specialists with a clear workaround process to artificially expand an LCN SP's coverage area—by creating dummy work orders only in Latchel-managed target locations—so these providers appear as "nearby" and are more likely to be matched with jobs.
+
+Completing a dummy work order makes the SP "nearby" within a 25-50 mile radius, significantly increasing their visibility.
+
+The system takes into account both the current address and addresses of previously completed work orders of the SP.
+
+## 📋 Step-by-Step Process
+
+**What happened prior to this step?**
+
+An LCN service provider contacted us to request the addition of territories in their service area. A Latchel representative completed the [Request to Increase LCN SP Visibility](https://slack.com/shortcuts/Ft08LWKZ82HM/b447618f1f619f75f9892edda035eae9) workflow in the ops_assistance_hub channel to initiate the process.
+
+**Blurb for SPs**
+
+*Hi [SP Name]! We've received your request to add territories to your service area. Our team will review your current coverage and assess the feasibility of expanding into the requested territories. While we're in this process, if you've received notifications for test accounts, please disregard them. We'll let you know if any additional information is needed. Thank you for your patience!*
+
+Latchel's system uses the service provider's company address and historical work order data to determine proximity to properties. Because LCN service providers don't have configurable service territories like Preferred or LVN SPs, this workaround allows OPs to artificially expand their perceived coverage area, boosting visibility within the platform.
+
+**Sample Requests:**
+
+*"HomeTech Pro LLC would like to add Chicago, IL, Charlotte, NC, St. Louis, MO to their service territories"*
+
+### Identify the Target Area
+
+In the above request, we've identified the city where increased visibility for the LCN service provider is desired.
+
+**Option 1:** If the service provider provided a city, first confirm the city is currently managed by Latchel or has active Latchel-managed properties by referencing the [Active Properties Page](https://lookerstudio.google.com/u/0/reporting/ca2bb475-b6c6-4836-8428-0a89f62d0b37/page/S79lC). Then use Google Search or Latchel property data to identify an appropriate ZIP code for that active Latchel-managed city/property.
+
+Chicago, IL
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-656.png" alt="image-20250408-183604.png" />
+  </Frame>
+</Accordion>
+
+Charlotte, NC
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-657.png" alt="image-20250408-183755.png" />
+  </Frame>
+</Accordion>
+
+St. Louis, MO
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-658.png" alt="image-20250408-183828.png" />
+  </Frame>
+</Accordion>
+
+Select a ZIP code result that corresponds to an active Latchel-managed property or city, and make a note of it for later use. Do not add ZIP codes for cities or properties that are not active or managed by Latchel. See below sample:
+
+- Chicago, IL 60618
+- Charlotte, NC 28269
+- St. Louis, MO 63116
+
+**Option 2** (applicable if the service provider did not provide a city, or if you need to validate that the requested location is managed by Latchel): Use the [Active Properties Page](https://lookerstudio.google.com/u/0/reporting/ca2bb475-b6c6-4836-8428-0a89f62d0b37/page/S79lC) to locate active Latchel-managed properties by state, city, and ZIP code.
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-659.png" alt="image-20250423-213651.png" />
+  </Frame>
+</Accordion>
+
+You have two options:
+
+- Manually locate the state by scrolling through the table on the right side where the states are listed, or
+- Extract the data from the table:
+  - Click the three dots next to the filter button.
+  - Select "Export" to download the data.
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-660.png" alt="image-20250423-214133.png" />
+  </Frame>
+</Accordion>
+
+Use this spreadsheet to find the postal abbreviation for any U.S. state.
+
+For example, if the service provider only listed "Wyoming," you can refer to the spreadsheet to see that its abbreviation is "WY". Use this abbreviation to search in the extracted file.
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-661.png" alt="image-20250423-215154.png" />
+  </Frame>
+</Accordion>
+
+You'll find "Sheridan" listed as the city.
+
+<Note>
+If multiple cities are listed, identify the city with the highest number of units. You can manually view the Property Manager's profile in the Latchel System to find the zip code associated with the greatest number of units or search its ZIP code on Google.
+</Note>
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-662.png" alt="image-20250423-215434.png" />
+  </Frame>
+</Accordion>
+
+### Create a Dummy Work Order
+
+Navigate to the "Gordon Family Properties" PM account. Only use or add properties for ZIP codes/cities that have been validated as active properties or cities managed by Latchel.
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-663.png" alt="image-20250408-182957.png" />
+  </Frame>
+</Accordion>
+
+Under the Properties tab, search for an existing property.
+
+- If a property that matches your search (including city, state, and ZIP code) is found, select that property and proceed with creating the work order.
+- If no matches are found, add a New Property only when the city/state/ZIP code has already been confirmed as active and managed by Latchel.
+
+Refer to How to: Navigate Properties Tab in the Latchel Console.
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-664.png" alt="image-20250408-185506.png" />
+  </Frame>
+</Accordion>
+
+Enter the following details in the respective fields.
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-665.png" alt="image-20250408-185829.png" />
+  </Frame>
+</Accordion>
+
+Click **Save**.
+
+Create a new work order using the property address that matches the city, state, and ZIP code you identified earlier.
+
+Refer to [How to: Create a New Work Order from "Incognito Mode" (All Submissions)](https://latchel.atlassian.net/wiki/spaces/OPS/pages/781647909).
+
+Choose a simple category that does not trigger actual dispatch or notifications.
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-666.png" alt="image-20250408-190552.png" />
+  </Frame>
+</Accordion>
+
+### Assign the LCN SP
+
+- Set the SP as a preferred vendor under Gordon Family Properties (Test).
+- Manually assign the target LCN SP to the dummy work order.
+- Confirm that the work order reflects the correct SP and target location.
+- Once completed, remove the SP from Gordon Family Properties (Test) preferred vendor list.
+
+### Complete the Work Order
+
+- Mark the work order as "Completed" once it is created and assigned.
+- If you're unable to mark the work order as complete due to an invoice requirement, please use the following workaround: impersonate the Service Provider's dashboard access. Refer to this [video tutorial](https://www.loom.com/share/e2a4d154587943708d580bb6e7e408b4?sid=50c82433-829a-4984-b836-7512a08ddf4d) for guidance.
+- Optionally, add a private note (e.g., "Dummy WO to increase SP visibility in [ZIP code/City]") for internal reference.
+- Repeat the process for the other target location.
+
+## 🎯 When to Break This SOP
+
+Do not break or deviate from this SOP on your own authority. Always escalate to an Ops Support specialist or follow explicit instructions if you believe an exception is necessary.
+
+## 💡 If You Think This SOP Could Be Improved...
+
+Noticed something clunky or confusing in this process? Or had a situation that wasn't covered here? Or tried something new that didn't work?\
+👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**

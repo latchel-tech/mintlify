@@ -1,0 +1,196 @@
+---
+title: "(Operations Support Specialist) Job-Aid: Work Queues & Labor Management"
+groups: ["latchel"]
+---
+
+## 🧠 What This Process Is Trying to Solve
+
+This SOP ensures Operations Support Specialists and Associates can work together effectively to prioritize work, monitor queues, and adjust assignments throughout a shift. The goal is to maintain high-quality customer service, reduce wait times, and prevent tasks from rolling over to third-party support, while also optimizing team resources and reducing operational costs for Latchel.
+
+## 📋 Step-by-Step Process
+
+### Process Overview
+
+1. Ops Supervisor creates assignments
+2. Associates will work on assigned areas of responsibility
+3. Operations Support Specialists will monitor queues and adjust assignments as needed
+
+### Step 1 - Work Assignment and Expectations of Ownership
+
+Ops Supervisor creates a standard daily assignment sheet specifying which work queues each team member is assigned to as their "primary" responsibility. For certain time intervals, associates may also have a "secondary" responsibility assigned.
+
+Assignments are created based on historical data on the volume of work per time interval (30min or 1hr, depending on data availability). Assignments are currently posted here: [Zoltar](https://docs.google.com/spreadsheets/d/1S7ybxAhNH_JIMlYyV-zFLacL2bptWb9kWTjHPiWwDik/edit#gid=1851274354)
+
+Associates will access the assignment tool and work in their assigned areas.
+
+Associates should reach out to Operations Support Specialists if they believe they need help with their assignments or if they run out of work in their assigned areas.
+
+Operations Support Specialists will monitor all work queues throughout the day and change assignments as needed.
+
+- This could happen when there are volume spikes in certain queues that require more support to bring them back under control.
+- Operations Support Specialists may also assign to an associate certain tasks or emails that are old or need special attention. When this happens, Operations Support Specialists should specify the level of urgency (i.e. should the associate pause what she/he is doing to take care of it? should the associate work on it after finishing what they are doing?)
+
+<Warning>
+**ATTENTION → PHONE ASSIGNMENT**
+
+**Associates:** If they are assigned to phones, they should NEVER switch to "AWAY" or "OFFLINE" because calls will roll over to the 3rd party call center, which is not only more costly to Latchel, but also does not provide the same level of quality as our AMAZING TEAM does.
+
+**Operations Support Specialists:** When the team member assigned to phones goes on break or lunch, make sure someone else is available to take calls unless you need to prioritize other queues that have a high backlog. The only exception for this is meeting times approved by the Ops Supervisor.
+</Warning>
+
+### Step 2 - Prioritization of Work
+
+Operations Support Specialists will be monitoring work across all of the operations, which includes Emergency Work Orders Queues (Troubleshooters and Emergency Admin (Email), Phones, SMS/Chat, Email, Tasks, and Sourcing.
+
+Operations Support Specialists may change team assignments based on queue sizes and age. The prioritization list is specified in Klipfolio ([https://app.klipfolio.com/dashboard#](https://app.klipfolio.com/dashboard#)). You can also watch a video from Will explaining how to use this prioritization list - [https://www.loom.com/share/5f341666bd8b4bd8805ade16be802edd](https://www.loom.com/share/5f341666bd8b4bd8805ade16be802edd)
+
+| Queue Type | What is this queue about and why it received that place in the priority list? | Guidance for Target Queue Size (as long as not aged) | Target Acceptable Age |
+|---|---|---|---|
+| Administrative Emergency Emails (Assembly) | This is the more administrative type of ticket that only our internal team is able to do, so there is no backup support. Also, handling those quickly will make sure emergency work orders get back on track to be troubleshooted. All emergency work should be handled immediately. | 0 | 0 |
+| Emergency Work Orders (Troubleshooter tasks) | This is the actual troubleshooting queue for emergency work orders. All emergency work should be handled immediately | 0 | 0 |
+| Sourcing | In order to move the work order forward, we need to be able to assign a vendor, so sourcing is key to enabling us to get started with the maintenance coordination process. Also, we have learned that having the job scheduled quickly is one of the top priorities for Property Managers, which requires having a Service Provider assigned | 0 | 0 |
+| SMS | Real time support, could be about an emergency | 5 | Less than 1 min for 1st reply |
+| Tasks | Could be blocking a work order from moving forward | Max of total 50 overdue tasks | No task should be more than 12hrs overdue |
+| Phone | Real-time support could be about an emergency; however, we have call center back-up support for new requests. | Depends on # of associates assigned to phones. We should have enough associates to handle calls within 1min. If we constantly have more calls in queue than associates available, we need to move labor to balance it. | Less than 1 min to avoid calls rolling over to the call center |
+| Email | People are not expecting an immediate response; otherwise, they would call or SMS. However, while working on tasks and waiting on information from someone, make sure to check emails before contacting the customer. You may be able to kill two birds with one stone. | 40 | max 24hrs |
+
+### Step 3 - Adjustments to Assignments or Daily Plans
+
+Throughout the day, Operations Support Specialists will monitor all of the work queues to determine if assignments should be changed. Operations Support Specialists may also ask someone in the team to work on a specific request when available, or to pause what they are doing to take care of something urgent.
+
+Changes to assignments and requests should be done via the #operations_support channel in Slack, so everyone has visibility to the change or request. Private messages should only be used when the message is more personal. If you see that someone is not working on the assigned area, check in the slack channel to see if the associate was re-assigned.
+
+If there's no update or visible activity after the expected timeframe, follow the [(Operations Support Specialist) Check-In Policy](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/(Operations-Support-Specialist)-Check-In-Policy) — posting a check-in in the appropriate channel based on the type of task. This ensures visibility, accountability, and a consistent process for verifying task progress before escalation or reassignment.
+
+To monitor the queue volumes, Operations Support Specialist will use the following tools:
+
+**Phone**
+
+Tool: Amazon Connect
+
+Link: [Real-time Metrics: Shift-Support Dashboard](https://latchelphone.my.connect.aws/real-time-metrics?reportArn=arn:aws:connect:us-west-2:356760302025:instance/5f8c8154-2858-4a38-975a-8bba18568fba/report/a26f6fea-1324-4847-b1b6-82826ab9379a)
+
+Refer to [(Operations Support Specialist) Real-time Monitoring of Inbound Calls (Amazon Connect)](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2836922369) for guidance.
+
+**SMS**
+
+Tool: Latchel Console
+
+Link: [https://stage.latchel.com/](https://stage.latchel.com/)
+
+Latchel Console also shows the total open conversations:
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-613.png" alt="image-20231218-200700.png" />
+  </Frame>
+</Accordion>
+
+To see who is working on a SMS, you can go to the "My Team" tab and see active chats.
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-614.png" alt="image-20231218-201017.png" />
+  </Frame>
+</Accordion>
+
+**Tasks**
+
+Tool: Looker Studio
+
+Link: [https://lookerstudio.google.com/reporting/d9160663-a5a3-4f78-936f-75d92cc93fb6/page/FXltC](https://lookerstudio.google.com/reporting/d9160663-a5a3-4f78-936f-75d92cc93fb6/page/FXltC)
+
+Klipfolio will show how many Emergency Work orders are pending to troubleshoot or are with a "Bad Status"
+
+<Note>
+Bad status means an emergency work order is in a status that an emergency should not be in, e.g. Pending, Scheduling with Vendor. Goal is to have no emergency work order with "bad status"
+</Note>
+
+It will also show many overdue tasks are sitting in the queue for each ops groups and for how long:
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-615.png" alt="image-20231218-203425.png" />
+  </Frame>
+</Accordion>
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-616.png" alt="image-20200909-162043.png" />
+  </Frame>
+</Accordion>
+
+<Note>
+You can also filter tasks in the Latchel Console that are overdue.
+</Note>
+
+It also shows tables with tasks details for each group based on their status and highlights the ones that should be prioritized to be addressed.
+
+To find the work order with that task that needs to be addressed, you will need to run queries.
+
+**Administrative Emergency Emails**
+
+Tool: Assembly / [Wavelength](https://www.dashboard.askassembly.app/teams/0192f85d-8fb4-7b52-be01-5a84ddb83543/issues)
+
+Link: N/A
+
+### Step 5 - Finding "trouble" work orders
+
+To find work orders in bad status, you will need to visit:
+
+[https://datastudio.google.com/reporting/d9160663-a5a3-4f78-936f-75d92cc93fb6/page/p_fxccpatrwc?pli=1](https://datastudio.google.com/reporting/d9160663-a5a3-4f78-936f-75d92cc93fb6/page/p_fxccpatrwc?pli=1)
+
+[(Operations Support Specialist) Bad Status/Too Old Report](https://latchel.atlassian.net/wiki/spaces/OPS/pages/783745716)
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-617.png" alt="image-20221213-212818.png" />
+  </Frame>
+</Accordion>
+
+### How to trigger follow-up actions for emergency WOs.
+
+Throughout the different reporting mechanisms available to you, you will encounter cases of emergency Work Orders (WOs) that require follow-up from our emergency team to move the WO forward.
+
+For example, a WO is in Pending "bad status" because an estimate is required from the service provider for a repair above the hard limit.
+
+In order to trigger said follow-up, you will need to create a task for the emergency team queue:
+
+Refer to: [How to: Work the Tasks Queue](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2559639553)
+
+From the WO page, create a task as follows:
+
+- **Subject:** Brief explanation of what is required.
+  - For example: Estimate follow-up
+- **Who is this task about:** Select who should be contacted for follow-up.
+  - For example: Service Provider
+- **Select a Date and Time:**
+  - If the WO requires immediate action, leave this field empty.
+  - If the WO requires delayed action at a specific date and time, select that date and time.
+  - For example, a follow-up is required when the service provider is back in the office during business hours.
+- **User Group:** Troubleshooter
+- **Assign to a User:** Leave empty
+- **Priority:** Highest
+- Set the task to **"Never complete on any job state change"**
+- **Description:** add detailed instructions on what action is required from the troubleshooter.
+  - For example: Please contact service provider X to obtain an estimate for Y repair since it was reported that it would go over budget.
+
+<Accordion title="Open">
+  <Frame>
+    <img src="/images/SVC-618.png" alt="image-20220706-214712.png" />
+  </Frame>
+</Accordion>
+
+## 🎯 When to Break This SOP
+
+Follow this SOP in most situations, but team members are empowered to make judgment calls in unique scenarios. Exceptions may apply if:
+
+- Leadership directs a different approach based on real-time needs.
+- Queue volumes or task priorities change suddenly, requiring immediate reassignment.
+- Associates have completed their primary work and can support other high-priority tasks.
+- Temporary experiments or process improvements are being tested to optimize coverage or efficiency.
+
+## 💡 If You Think This SOP Could Be Improved...
+
+Noticed something clunky or confusing in this process? Or had a situation that wasn't covered here? Or tried something new that didn't work?\
+👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**
