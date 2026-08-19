@@ -6,244 +6,254 @@ groups: ["latchel"]
 ## 🧠 What This Process Is Trying to Solve
 
 <Note>
-We want to prevent unauthorized work orders, misrouted requests, and service delays by ensuring that every "Need to Verify" email is properly checked before proceeding. The goal is to confirm that the resident and property are actually managed by the stated Property Management Company before any work order is created or action is taken.
+  We want to prevent unauthorized work orders, misrouted requests, and service delays by ensuring that every "Need to Verify" email is properly checked before proceeding. The goal is to confirm that the resident and property are actually managed by the stated Property Management Company before any work order is created or action is taken.
 </Note>
 
 # Content
 
 <Warning>
-### Emergency Services
+  ### Emergency Services
 
-**‼️IMPORTANT:** DO NOT add a resident's property address to a Property Manager profile without first verifying that the resident is within their system *before* proceeding with the Work Order.
+  **‼️IMPORTANT:** DO NOT add a resident's property address to a Property Manager profile without first verifying that the resident is within their system _before_ proceeding with the Work Order.
 </Warning>
 
 <Note>
-**For scenarios we escalate to Product Support**
+  **For scenarios we escalate to Product Support**
 
-The PS team typically responds to PMs within 8 business hours. When they reach out via email, they usually confirm whether the PM still needs the work order to be created or addressed. If the PM confirms, the PS team will post in **#ops_assistance_hub** to request assistance.
+  The PS team typically responds to PMs within 8 business hours. When they reach out via email, they usually confirm whether the PM still needs the work order to be created or addressed. If the PM confirms, the PS team will post in **#ops\_assistance\_hub** to request assistance.
 </Note>
 
 ## 📋 Step-by-Step Process
 
 ### Step 1 - Find an Existing Work Order Under the Same Phone Number or Property Address
 
-1. This is the generic message that is sent from the Latchel call center.  
+1. This is the generic message that is sent from the Latchel call center.
 
 <Frame>
   ![](/images/SVC-737.png)
 </Frame>
+
 2. Before creating a new work order, try to find an existing Work Order under the same phone number.
-  1. Review this SOP for more details: [(⛑EMERGENCY) How to: Find an Existing Work Order vs. When to Create a new Work Order (Previous Caller)](https://latchel.atlassian.net/wiki/spaces/OPS/pages/787382436)
-  2. If no matching phone number appears, search using the provided property address.
-    1. Refer to the [guide ](https://latchel.atlassian.net/wiki/spaces/OPS/pages/464388136)on how to search using a property address.
-    2. Always enable “Show Disabled Properties” tick box to ensure inactive properties are included in your search.
-      1. If there is no matching property address, proceed to [Step 2.](https://latchel.atlassian.net/wiki/spaces/OPS/pages/edit-v2/768999793#Step-2---Check-if-PM-is-on-an-integration)
+3. Review this SOP for more details: [(⛑EMERGENCY) How to: Find an Existing Work Order vs. When to Create a new Work Order (Previous Caller)](https://latchel.atlassian.net/wiki/spaces/OPS/pages/787382436)
+4. If no matching phone number appears, search using the provided property address.
+5. Refer to the [guide ](https://latchel.atlassian.net/wiki/spaces/OPS/pages/464388136)on how to search using a property address.
+6. Always enable “Show Disabled Properties” tick box to ensure inactive properties are included in your search.
+7. If there is no matching property address, proceed to [Step 2.](https://latchel.atlassian.net/wiki/spaces/OPS/pages/edit-v2/768999793#Step-2---Check-if-PM-is-on-an-integration)
 
 ### Step 2 - Check if PM is on an “**ACTIVE**” integration
 
-1. Refer to https://latchel.atlassian.net/wiki/spaces/OPS/pages/3084845060 
+1. Refer to [https://latchel.atlassian.net/wiki/spaces/OPS/pages/3084845060](https://latchel.atlassian.net/wiki/spaces/OPS/pages/3084845060)
 
 ### Step 3 - Call the Resident to Confirm their Property Manager.
 
-1. The agent must verify with the Property Manager that the resident is within their system *before* proceeding with the Work Order.
-  1. Call the resident to confirm the following information as gathered previously by the call center:
-    1. The property address.
-    2. The Property Management Company.
-      1. **‼️IMPORTANT:** Ask the resident directly: "Who is your Property Manager?"
-        1. ***Why do we ask the resident directly?*** This is to eliminate the suggestive property manager so that it eliminates the opportunity for resident to lie about property manager. 
-    3. The resident’s name.
-    4. The resident’s phone number.
-    5. The resident’s email (optional).
-  2. If the resident can verify the same Property Manager name that was in the email. 
-    1. From the Latchel Console Interface, Click "People" and choose "Property Managers"
-    2. Search for the property manager using the Property Manager name.
-      1. ✅ If the Property Manager comes up, Click on the property name. The Property Management company will appear.
-        1. Proceed to Step 4 - Verify the Information
-      2. ❌If the Property Manager doesn't come up in the system, we cannot help them. 
-  3. If the resident answers but declines assistance or states the issue is resolved.
-    1. Since the associate was unable to complete verification (property address, PM company, resident details), the NTV process must still be followed:
-      1. Document in the ticket notes that the resident was reached but declined verification, including any relevant details the resident provided (e.g., "Resident stated the issue has been resolved and no assistance is needed").
-      2. Proceed to [How to: Handle "Need to Verify" Emails | Step 5 Sending an email to the Property Manager](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Need-to-Verify-Emails).
-        - In the NTV email, note that the resident was contacted but declined assistance and stated the issue was resolved.
-        - This ensures the PM is aware that a maintenance request was submitted from their property and can follow up directly if needed.
-      3. Proceed to [How to: Handle "Need to Verify" Emails | Step 6 Resolve the Call and Write Notes](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Need-to-Verify-Emails).
-  4. **‼️IMPORTANT**: If the resident does not know their Property Manager or cannot verify the same Property Manager name that was in the email,
-    - Proceed to [Step 4](https://latchel.atlassian.net/wiki/spaces/OPS/pages/edit-v2/768999793#Step-4---Verify-the-Information).
+1. The agent must verify with the Property Manager that the resident is within their system _before_ proceeding with the Work Order.
+2. Call the resident to confirm the following information as gathered previously by the call center:
+3. The property address.
+4. The Property Management Company.
+5. **‼️IMPORTANT:** Ask the resident directly: "Who is your Property Manager?"
+6. **_Why do we ask the resident directly?_** This is to eliminate the suggestive property manager so that it eliminates the opportunity for resident to lie about property manager. 
+7. The resident’s name.
+8. The resident’s phone number.
+9. The resident’s email (optional).
+10. If the resident can verify the same Property Manager name that was in the email. 
+11. From the Latchel Console Interface, Click "People" and choose "Property Managers"
+12. Search for the property manager using the Property Manager name.
+13. ✅ If the Property Manager comes up, Click on the property name. The Property Management company will appear.
+14. Proceed to Step 4 - Verify the Information
+15. ❌If the Property Manager doesn't come up in the system, we cannot help them. 
+16. If the resident answers but declines assistance or states the issue is resolved.
+17. Since the associate was unable to complete verification (property address, PM company, resident details), the NTV process must still be followed:
+18. Document in the ticket notes that the resident was reached but declined verification, including any relevant details the resident provided (e.g., "Resident stated the issue has been resolved and no assistance is needed").
+19. Proceed to [How to: Handle "Need to Verify" Emails | Step 5 Sending an email to the Property Manager](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Need-to-Verify-Emails).
+
+- In the NTV email, note that the resident was contacted but declined assistance and stated the issue was resolved.
+- This ensures the PM is aware that a maintenance request was submitted from their property and can follow up directly if needed.
+
+3. Proceed to [How to: Handle "Need to Verify" Emails | Step 6 Resolve the Call and Write Notes](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Need-to-Verify-Emails).
+4. **‼️IMPORTANT**: If the resident does not know their Property Manager or cannot verify the same Property Manager name that was in the email,
+
+- Proceed to [Step 4](https://latchel.atlassian.net/wiki/spaces/OPS/pages/edit-v2/768999793#Step-4---Verify-the-Information).
 
 ### Step 4 - Verify the Information
 
 1. If the missing information is simply the residents' name, and the agent was able to verify the following information:
-  1. The PM Company is active in Latchel
-  2. The Property Address is on file under the PM Company AND active:
-    1.  **PM has NO Active Integration** or the** ****PM has ACTIVE Integration paused with Resident Modification Toggled to the left**
-      1. Add the resident to said property.
-        1. Proceed to create the Work Order.
-        2. Go to Step 6 - Resolve the Call and Write Notes
-    2. **PM has ACTIVE Integration paused with both Resident Modification and Property Modification Toggled to the right**
-      1. Proceed to [Step 5 ](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Need-to-Verify-Emails)[- Sending email to Property Manager](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Need-to-Verify-Emails)
-      2. Escalate to Product Support. Refer to [How to: Escalate to Product Support](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-to-Product-Support)
-    3. **PM has Active Integration**
-      1. Go to Step 3.a.i.2.c
-2. If the agent is able to find the resident under the property but one of the following conditions is true:
-  1. The resident's account is disabled.
-  2. The resident’s move-in date is a future date.
-  3. The resident’s move-out date is in the past.
-    1. Once the resident was able to verify the address and their PM Company, the associate may enable the resident to the property file.
-    2. Proceed to create the Work Order.
-    3. Proceed to Step 6 - Resolve the Call and Write Notes
-3. If the missing information is the property address or the property is inactive, but the agent is able to confirm all other information, the agent should escalate to the PM following the contact guidelines in the following document: https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs.
-  1. If the issue is property damaging or extreme habitability, the agent can proceed to call the emergency escalation contacts.
-    1. Remember: Associates can now use "Who Ya Gonna Call" from the PM Company page to get the AI-recommended contact order, even without a WO.
-    2. If the agent was able to confirm with the Property Manager that ***the Property is managed by their company***:
-      1. **Disabled Properties:**
-        1. Ops associate may re-enable the property
-        2. Once enabled, they can proceed submitting maintenance request.
-      2. **Missing Properties:**
-        1. **PM has NO Active Integration** or the **PM has ACTIVE Integration paused with Modifications ****Toggled to the left**
-          1. Manually add the property address
-          2. Provide the PM the guides to add the [property](https://help.latchel.com/s/topic/0TO5e000000h9wqGAA/How-to-Add-a-Property#how-to-add-a-property)/[resident](https://help.latchel.com/s/topic/0TO5e000000h9wqGAA/How-to-Add-Manage-Residents#how-to-add-and-manage-residents).
-          3. Proceed to create the work order.
-        2. **PMs with Active Integration**
-          1. Chrome Plugin - also known as “Latchel Data Sync Extension”. Proceed to advise the PM to run their sync and provide them with the available help guide [here](https://help.latchel.com/s/article/Latchel-Data-Sync-Extension-Reference-Guide).
-          2. Other Integrations or Property/Resident Restricted Customers (API/Webhook, Propertyware, Buildium, Rent Manager, Yardi, Rentredi). 
-            1. Escalate to Product Support. Refer to https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-to-Product-Support.
-        3. **PM has ACTIVE Integration paused with both Resident Modification and Property Modification Toggled to the right**
-          1. Escalate to Product Support. Refer to [How to: Escalate to Product Support](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-to-Product-Support)
-    3. If the agent is unable to get in contact with the emergency escalation contacts, we’ll send an email to the Property Manager.
-      1. Go to Step 5 - Sending an email to the Property Manager
-  2. If the issue is not property damaging or extreme habitability, don’t contact the emergency escalation contacts and instead just send an email to the “Failed Emergency Escalation Email List”
-    1. Go to Step 5 - Sending an email to the Property Manager
-  3. Go to Step 6 - Resolve the Call and Write Notes
-4. If the resident is unable to provide the Property Manager’s company name and the address does not appear in our system, **we are unable to proceed with assistance.** Advise the resident to review their lease agreement or any communications (calls, emails, or notices) from their Property Manager that may contain the necessary details.
-5. If the agent is unable to get in contact with the resident to verify the required information
-  1. Go to Step 4.3.a
-6. If the resident that was called advised that the phone number is incorrect,
-  1. Attempt to reach other phone numbers available on file. Additionally, the agent must try contacting other residents associated with the same property.
-    1. If the agent is able to reach the primary resident on a different number
-      1. Confirm their updated contact number and update their profile
-    2. If the agent is able to reach a different resident, ask them if the issue that was reported still exists
-  2. Existing Issue
-    1. Go to Step 4.3.a
-  3. There are no issues at the property
-    1. Step 6 - Resolve the Call and Write Notes
-  4. If no other numbers or residents exist or if you are unable to reach anyone,
-    1. Go to Step 4.3
+2. The PM Company is active in Latchel
+3. The Property Address is on file under the PM Company AND active:
+4. **PM has NO Active Integration** or the\*\* \*\***PM has ACTIVE Integration paused with Resident Modification Toggled to the left**
+5. Add the resident to said property.
+6. Proceed to create the Work Order.
+7. Go to Step 6 - Resolve the Call and Write Notes
+8. **PM has ACTIVE Integration paused with both Resident Modification and Property Modification Toggled to the right**
+9. Proceed to [Step 5 - Sending email to Property Manager](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Need-to-Verify-Emails)
+10. Escalate to Product Support. Refer to [How to: Escalate to Product Support](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-to-Product-Support)
+11. **PM has Active Integration**
+12. Go to Step 3.a.i.2.c
+13. If the agent is able to find the resident under the property but one of the following conditions is true:
+14. The resident's account is disabled.
+15. The resident’s move-in date is a future date.
+16. The resident’s move-out date is in the past.
+17. Once the resident was able to verify the address and their PM Company, the associate may enable the resident to the property file.
+18. Proceed to create the Work Order.
+19. Proceed to Step 6 - Resolve the Call and Write Notes
+20. If the missing information is the property address or the property is inactive, but the agent is able to confirm all other information, the agent should escalate to the PM following the contact guidelines in the following document: [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs).
+21. If the issue is property damaging or extreme habitability, the agent can proceed to call the emergency escalation contacts.
+22. Remember: Associates can now use "Who Ya Gonna Call" from the PM Company page to get the AI-recommended contact order, even without a WO.
+23. If the agent was able to confirm with the Property Manager that **_the Property is managed by their company_**:
+24. **Disabled Properties:**
+25. Ops associate may re-enable the property
+26. Once enabled, they can proceed submitting maintenance request.
+27. **Missing Properties:**
+28. **PM has NO Active Integration** or the \*\*PM has ACTIVE Integration paused with Modifications \*\***Toggled to the left**
+29. Manually add the property address
+30. Provide the PM the guides to add the [property](https://help.latchel.com/s/topic/0TO5e000000h9wqGAA/How-to-Add-a-Property#how-to-add-a-property)/[resident](https://help.latchel.com/s/topic/0TO5e000000h9wqGAA/How-to-Add-Manage-Residents#how-to-add-and-manage-residents).
+31. Proceed to create the work order.
+32. **PMs with Active Integration**
+33. Chrome Plugin - also known as “Latchel Data Sync Extension”. Proceed to advise the PM to run their sync and provide them with the available help guide [here](https://help.latchel.com/s/article/Latchel-Data-Sync-Extension-Reference-Guide).
+34. Other Integrations or Property/Resident Restricted Customers (API/Webhook, Propertyware, Buildium, Rent Manager, Yardi, Rentredi).
+35. Escalate to Product Support. Refer to [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-to-Product-Support](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-to-Product-Support).
+36. **PM has ACTIVE Integration paused with both Resident Modification and Property Modification Toggled to the right**
+37. Escalate to Product Support. Refer to [How to: Escalate to Product Support](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-to-Product-Support)
+38. If the agent is unable to get in contact with the emergency escalation contacts, we’ll send an email to the Property Manager.
+39. Go to Step 5 - Sending an email to the Property Manager
+40. If the issue is not property damaging or extreme habitability, don’t contact the emergency escalation contacts and instead just send an email to the “Failed Emergency Escalation Email List”
+41. Go to Step 5 - Sending an email to the Property Manager
+42. Go to Step 6 - Resolve the Call and Write Notes
+43. If the resident is unable to provide the Property Manager’s company name and the address does not appear in our system, **we are unable to proceed with assistance.** Advise the resident to review their lease agreement or any communications (calls, emails, or notices) from their Property Manager that may contain the necessary details.
+44. If the agent is unable to get in contact with the resident to verify the required information
+45. Go to Step 4.3.a
+46. If the resident that was called advised that the phone number is incorrect,
+47. Attempt to reach other phone numbers available on file. Additionally, the agent must try contacting other residents associated with the same property.
+48. If the agent is able to reach the primary resident on a different number
+49. Confirm their updated contact number and update their profile
+50. If the agent is able to reach a different resident, ask them if the issue that was reported still exists
+51. Existing Issue
+52. Go to Step 4.3.a
+53. There are no issues at the property
+54. Step 6 - Resolve the Call and Write Notes
+55. If no other numbers or residents exist or if you are unable to reach anyone,
+56. Go to Step 4.3
 
 ### Step 5 - Sending an email to the Property Manager
 
 1. Create a new email using Assembly.
-  1. Refer to https://latchel.atlassian.net/wiki/spaces/OPS/pages/3383558150 
-    1. Note: Do not just forward the admin email you received, since it contains language that is only intended for our internal team.
-    2. Use the following macros in Assembly to create the email.
-      - Disabled properties: **(Operations) Need to Verify (Disabled Property (All PMs))**
-      - Missing Properties
-        - No Integration OR ACTIVE integration paused with Property Modification toggle to the left: **(Operations) Need to Verify - Missing Property (No Integration)**
-        - PMs with Active Integration (Chrome plugin – toggles to the right): **(OPS) NTV-Missing Property(PMs on Chrome Plugin/Latchel Data Sync Ext)**
-        - PMs with Other Active Integrations (toggles to the right): **(OPS) NTV - Missing Property (PMs On Other Integration)**
-    3. Fill in the ”Need to Verify” template with the information from your admin email.
-  2. The email should be sent to the “Failed Emergency Escalation Email List” for the Property Management company.
+2. Refer to [https://latchel.atlassian.net/wiki/spaces/OPS/pages/3383558150](https://latchel.atlassian.net/wiki/spaces/OPS/pages/3383558150)
+3. Note: Do not just forward the admin email you received, since it contains language that is only intended for our internal team.
+4. Use the following macros in Assembly to create the email.
+
+- Disabled properties: **(Operations) Need to Verify (Disabled Property (All PMs))**
+- Missing Properties
+  - No Integration OR ACTIVE integration paused with Property Modification toggle to the left: **(Operations) Need to Verify - Missing Property (No Integration)**
+  - PMs with Active Integration (Chrome plugin – toggles to the right): **(OPS) NTV-Missing Property(PMs on Chrome Plugin/Latchel Data Sync Ext)**
+  - PMs with Other Active Integrations (toggles to the right): **(OPS) NTV - Missing Property (PMs On Other Integration)**
+
+3. Fill in the ”Need to Verify” template with the information from your admin email.
+4. The email should be sent to the “Failed Emergency Escalation Email List” for the Property Management company.
+
 <Frame>
   ![](/images/SVC-738.png)
 </Frame>
-  3. Proceed to Step 6 - Resolve the Call and Write Notes
+
+3. Proceed to Step 6 - Resolve the Call and Write Notes
 
 ### Step 6 - Resolve the Call and Write Notes
 
 1. Resolve the ticket in Assembly:
-  1.  Refer to: https://latchel.atlassian.net/wiki/spaces/OPS/pages/2565210117 
-2. Write Effective Notes
+2. Refer to: [https://latchel.atlassian.net/wiki/spaces/OPS/pages/2565210117](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2565210117)
+3. Write Effective Notes
 
 ## Associates Handling the Need to Verify Confirmation Email from PM
 
 Property Managers reply to the "Need to Verify" email to confirm if they still manage the property or resident. Sometimes, they also give instructions for the next steps. Here are common responses from Property Managers and the actions associates can take when handling these email confirmations:
 
 1. The PM indicates they no longer manage the property/resident
-  1. Acknowledge the PM’s email and let them know that no further action will be taken on Latchel’s end
-2. The PM confirms they still manage the property/resident but will handle the issue internally.
-  1. Acknowledge the PM’s email
-    1. **PMs with No Active Integration or the PM has ACTIVE Integration paused with Property Modification ****Toggled to the left**- proceed to add the address on file
-    2. **PMs with Active Integration**
-      1. Chrome Plugin - also known as “Latchel Data Sync Extension”. Proceed to advise the PM to run their sync following the guidelines [here](https://help.latchel.com/s/article/Latchel-Data-Sync-Extension-Reference-Guide).
-      2. Other Integrations or Property/Resident Restricted Customers (API/Webhook, Propertyware, Buildium, Rent Manager, Yardi, Rentredi). Suggest adding the missing record to their integrated system.
-    3. **PM has ACTIVE Integration paused with both Resident Modification and Property Modification Toggled to the right**
-      1. Escalate to Product Support. Refer to https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-to-Product-Support.
-3. The PM confirms they manage the property/resident and requests a work order submission.
-  1. Acknowledge the PM’s email
-    1. **PMs with No Active Integration or the PM has ACTIVE Integration paused with Property Modification ****Toggled to the left **
-      1. Proceed to create the Work Order.
-    2. **PMs with Active Integration** - Follow steps on 2.a.ii.
-      1. Chrome Plugin - also known as “Latchel Data Sync Extension”. Proceed to advise the PM to run their sync and provide them with the available help guide [here](https://help.latchel.com/s/article/Latchel-Data-Sync-Extension-Reference-Guide).
-      2. Other Integrations or Property/Resident Restricted Customers (API/Webhook, Propertyware, Buildium, Rent Manager, Yardi, Rentredi). 
-        - Escalate to Product Support. Refer to https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-to-Product-Support.
-    3. **PM has ACTIVE Integration paused with both Resident Modification and Property Modification Toggled to the right**
-      1. Escalate to Product Support. Refer to https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-to-Product-Support.
+2. Acknowledge the PM’s email and let them know that no further action will be taken on Latchel’s end
+3. The PM confirms they still manage the property/resident but will handle the issue internally.
+4. Acknowledge the PM’s email
+5. \*\*PMs with No Active Integration or the PM has ACTIVE Integration paused with Property Modification \*\***Toggled to the left**- proceed to add the address on file
+6. **PMs with Active Integration**
+7. Chrome Plugin - also known as “Latchel Data Sync Extension”. Proceed to advise the PM to run their sync following the guidelines [here](https://help.latchel.com/s/article/Latchel-Data-Sync-Extension-Reference-Guide).
+8. Other Integrations or Property/Resident Restricted Customers (API/Webhook, Propertyware, Buildium, Rent Manager, Yardi, Rentredi). Suggest adding the missing record to their integrated system.
+9. **PM has ACTIVE Integration paused with both Resident Modification and Property Modification Toggled to the right**
+10. Escalate to Product Support. Refer to [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-to-Product-Support](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-to-Product-Support).
+11. The PM confirms they manage the property/resident and requests a work order submission.
+12. Acknowledge the PM’s email
+13. \*\*PMs with No Active Integration or the PM has ACTIVE Integration paused with Property Modification \*\*\*\*Toggled to the left \*\*
+14. Proceed to create the Work Order.
+15. **PMs with Active Integration** - Follow steps on 2.a.ii.
+16. Chrome Plugin - also known as “Latchel Data Sync Extension”. Proceed to advise the PM to run their sync and provide them with the available help guide [here](https://help.latchel.com/s/article/Latchel-Data-Sync-Extension-Reference-Guide).
+17. Other Integrations or Property/Resident Restricted Customers (API/Webhook, Propertyware, Buildium, Rent Manager, Yardi, Rentredi).
+
+- Escalate to Product Support. Refer to [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-to-Product-Support](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-to-Product-Support).
+
+3. **PM has ACTIVE Integration paused with both Resident Modification and Property Modification Toggled to the right**
+4. Escalate to Product Support. Refer to [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-to-Product-Support](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-to-Product-Support).
 
 Resolve the ticket in Assembly
 
-1. Refer to https://latchel.atlassian.net/wiki/spaces/OPS/pages/3208249355 
+1. Refer to [https://latchel.atlassian.net/wiki/spaces/OPS/pages/3208249355](https://latchel.atlassian.net/wiki/spaces/OPS/pages/3208249355)
 
-## [**❓**](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Emergency-Work-Orders)**Frequently Asked Questions**
+## **[❓](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Emergency-Work-Orders)Frequently Asked Questions**
 
 <Accordion title="What if the resident successfully confirmed the address, but the property management company mentioned is listed as the portfolio name rather than the actual PM company name?">
-The resident must provide the PM company name; otherwise, we will proceed with sending the NTV email to the PM. Please continue with[ Step 5](https://latchel.atlassian.net/wiki/spaces/OPS/pages/edit-v2/768999793#Step-5---Sending-an-email-to-the-Property-Manager).
+  The resident must provide the PM company name; otherwise, we will proceed with sending the NTV email to the PM. Please continue with[ Step 5](https://latchel.atlassian.net/wiki/spaces/OPS/pages/edit-v2/768999793#Step-5---Sending-an-email-to-the-Property-Manager).
 </Accordion>
 
 <Accordion title="How should we proceed if a Property Manager with ACTIVE Integration requests that we enable a property on their behalf due to an inability to do so on their end, including in cases where they respond to an NTV email but the property remains disabled?">
-- If the request is made by a Property Manager listed in the system, we may proceed with enabling the property.
-  - In scenarios where we send an NTV email to a PM with active integration (e.g., via the Chrome plugin) and they respond requesting a work order—but the property remains disabled—we should proceed with enabling the property ourselves. This is necessary as running the sync does not re-enable disabled properties in the console.
-- For Property Managers not listed or for owner (not Rentredi or NOMAD) requests, we will escalate to Product Support.
-  - Refer to [this SOP](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-to-Product-Support) for detailed guidance.
+  - If the request is made by a Property Manager listed in the system, we may proceed with enabling the property.
+    - In scenarios where we send an NTV email to a PM with active integration (e.g., via the Chrome plugin) and they respond requesting a work order—but the property remains disabled—we should proceed with enabling the property ourselves. This is necessary as running the sync does not re-enable disabled properties in the console.
+  - For Property Managers not listed or for owner (not Rentredi or NOMAD) requests, we will escalate to Product Support.
+    - Refer to [this SOP](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-to-Product-Support) for detailed guidance.
 </Accordion>
 
 <Accordion title="What if the Need to Verify email indicates that the owner was the one who called to submit the work order on behalf of the resident (for property addresses not in the system)?">
-Proceed with the standard process for handling Need to Verify (NTV) emails.
+  Proceed with the standard process for handling Need to Verify (NTV) emails.
 
-When sending an NTV email to the Property Manager, update the template to clearly indicate that the **owner** was the one who called to submit the work order.
+  When sending an NTV email to the Property Manager, update the template to clearly indicate that the **owner** was the one who called to submit the work order.
 
-<Frame>
-  ![image-20250902-194116.png](/images/SVC-739.png)
-</Frame>
+  <Frame>
+    ![image-20250902-194116.png](/images/SVC-739.png)
+  </Frame>
 </Accordion>
 
 <Accordion title="What should I do if a prospective resident asks about the next steps after submitting an NTV request?">
-*You may respond with the following guidance: *
+  \*You may respond with the following guidance: \*
 
-1. 🗨️ **Say something like:** *“Someone from our maintenance team will contact you to verify the details of your request. Please keep your phone line open to help avoid any delays in processing.”*
+  1. 🗨️ **Say something like:** _“Someone from our maintenance team will contact you to verify the details of your request. Please keep your phone line open to help avoid any delays in processing.”_
 </Accordion>
 
 <Accordion title="What to Do When a Resident Follows Up on a Maintenance Request Submitted via NTV?">
-1. **Verify Resident Information**  
-Obtain and confirm the resident’s phone number, property address, and Property Management company.
-2. **Check Assembly.**
-  1. Locate the request details in **Assembly by using the Property Address. **
-  2. Search the **Operations Email Team** channel to confirm whether an NTV email was sent.
-    1. <Frame>
-  ![image-20260120-202230.png](/images/SVC-740.png)
-</Frame>
+  1. **Verify Resident Information**<br />Obtain and confirm the resident’s phone number, property address, and Property Management company.
+  2. **Check Assembly.**
+  3. Locate the request details in \*\*Assembly by using the Property Address. \*\*
+  4. Search the **Operations Email Team** channel to confirm whether an NTV email was sent.
+
+  <Frame>
+    ![image-20260120-202230.png](/images/SVC-740.png)
+  </Frame>
+
   3. Also check the **Emergency Admin** channel, as PM responses may appear there.
-    1. <Frame>
-  ![image-20260120-202316.png](/images/SVC-741.png)
-</Frame>
-3. **Review the Property Manager’s Response (if available)**  
- If the PM responds and confirms that:
-  1. **They manage the property and authorize work order creation:**  
- Update the information in the system and proceed with work order creation. Refer to [(TECH 101) How to: Create a New Work Order from "Incognito Mode" (All Submissions)](https://latchel.atlassian.net/wiki/spaces/OPS/pages/781647909)
-    1. 🗨️ ***Say something like:**** **“We were able to verify the management of this property address, and a work order has been submitted based on the report you provided.”*
-      - For emergency requests requiring troubleshooting:* “A member of our maintenance team will be reaching out to you shortly.”*
-      - For Property Manager–handled requests: *“Your request is being coordinated with the appropriate team, and someone from their team will take over and provide further updates moving forward.”*
-  2. **They manage the property but will handle it internally:**  
- Set the resident’s expectations accordingly and document the response.
-    1. 🗨️ ***Say something like:**** **“We’ve successfully verified the property management, and the appropriate team will take it from here and keep you informed with any next steps.”*
-  3. **They do not manage the property:**  
-** **Inform the resident that the Property Management company no longer manages the property and advise them to contact the correct Property Management.  
-    1. 🗨️ ***Say something like:****  “**Thank you for reaching out. We’ve confirmed that the Property Management company previously associated with this property no longer manages it. To ensure your request is addressed promptly, please contact the correct Property Management company directly, as they will be able to assist you moving forward.”*
-4. **If the Property Manager Has Not Responded**  
-** **Set clear expectations with the resident regarding next steps.
-  1. 🗨️ ***Say something like:**** * *“Thank you for your patience. At this time, we have not received a response to confirm management of the property address. We will keep an eye on this and will provide you with an update as soon as we receive confirmation.”*
+
+  <Frame>
+    ![image-20260120-202316.png](/images/SVC-741.png)
+  </Frame>
+
+  3. **Review the Property Manager’s Response (if available)**<br />If the PM responds and confirms that:
+  4. **They manage the property and authorize work order creation:**<br />Update the information in the system and proceed with work order creation. Refer to [(TECH 101) How to: Create a New Work Order from "Incognito Mode" (All Submissions)](https://latchel.atlassian.net/wiki/spaces/OPS/pages/781647909)
+  5. 🗨️ **_Say something like:_**\* \*_“We were able to verify the management of this property address, and a work order has been submitted based on the report you provided.”_
+
+  - For emergency requests requiring troubleshooting:\* “A member of our maintenance team will be reaching out to you shortly.”\*
+  - For Property Manager–handled requests: _“Your request is being coordinated with the appropriate team, and someone from their team will take over and provide further updates moving forward.”_
+
+  2. **They manage the property but will handle it internally:**<br />Set the resident’s expectations accordingly and document the response.
+  3. 🗨️ **_Say something like:_**\* \*_“We’ve successfully verified the property management, and the appropriate team will take it from here and keep you informed with any next steps.”_
+  4. **They do not manage the property:**<br />\*\* \*\*Inform the resident that the Property Management company no longer manages the property and advise them to contact the correct Property Management.
+  5. 🗨️ **_Say something like:_**\*  “\*_Thank you for reaching out. We’ve confirmed that the Property Management company previously associated with this property no longer manages it. To ensure your request is addressed promptly, please contact the correct Property Management company directly, as they will be able to assist you moving forward.”_
+  6. **If the Property Manager Has Not Responded**<br />\*\* \*\*Set clear expectations with the resident regarding next steps.
+  7. 🗨️ **_Say something like:_**\* \* _“Thank you for your patience. At this time, we have not received a response to confirm management of the property address. We will keep an eye on this and will provide you with an update as soon as we receive confirmation.”_
 </Accordion>
 
 <Accordion title="What should I do if the resident answers but says they've already figured it out and don't need help?">
-You should still send an NTV email to the PM. Since verification was not completed, the PM needs to be notified that a maintenance request was submitted from their property. Document that the resident was reached but declined assistance, then proceed to [How to: Handle "Need to Verify" Emails | Step 5 Sending an email to the Property Manager](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Need-to-Verify-Emails) to send the NTV email and [How to: Handle "Need to Verify" Emails | Step 6 Resolve the Call and Write Notes](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Need-to-Verify-Emails) to resolve the ticket.
+  You should still send an NTV email to the PM. Since verification was not completed, the PM needs to be notified that a maintenance request was submitted from their property. Document that the resident was reached but declined assistance, then proceed to [How to: Handle "Need to Verify" Emails | Step 5 Sending an email to the Property Manager](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Need-to-Verify-Emails) to send the NTV email and [How to: Handle "Need to Verify" Emails | Step 6 Resolve the Call and Write Notes](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Need-to-Verify-Emails) to resolve the ticket.
 </Accordion>
 
 ## 🎯 When to Break This SOP
@@ -252,5 +262,4 @@ You should still send an NTV email to the PM. Since verification was not complet
 
 ## 💡 If You Think This SOP Could Be Improved...
 
-Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work?  
- 👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**
+Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work?<br />👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**

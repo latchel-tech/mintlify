@@ -6,7 +6,7 @@ groups: ["latchel"]
 ## 🧠 What This Process Is Trying to Solve
 
 <Note>
-We want to prevent delays, errors, and miscommunication when uploading invoices for work orders. The goal is to ensure invoices are accurately matched to the correct work order, properly documented, and processed according to the service provider and property manager’s requirements—so payments are not delayed, records stay accurate, and all parties (service providers, property managers, and residents) have clear visibility into job completion and billing.
+  We want to prevent delays, errors, and miscommunication when uploading invoices for work orders. The goal is to ensure invoices are accurately matched to the correct work order, properly documented, and processed according to the service provider and property manager’s requirements—so payments are not delayed, records stay accurate, and all parties (service providers, property managers, and residents) have clear visibility into job completion and billing.
 </Note>
 
 # Content
@@ -14,23 +14,23 @@ We want to prevent delays, errors, and miscommunication when uploading invoices 
 # Definition Matrix
 
 <Note>
-### What is an invoice?
+  ### What is an invoice?
 
-Service Providers send invoices to Latchel to get paid for their work. The Ops agent is responsible for uploading the invoice to help bridge payment communication between the Property Manager and the Service Provider. Sometimes the invoice is submitted to us simply for record keeping.
+  Service Providers send invoices to Latchel to get paid for their work. The Ops agent is responsible for uploading the invoice to help bridge payment communication between the Property Manager and the Service Provider. Sometimes the invoice is submitted to us simply for record keeping.
 
-All Preferred and Latchel Affiliate Service Providers send invoices via email and Ops agents receive them from Assembly; these are the invoices we are working on. Latchel In-Network Service Providers submit invoices through the Latchel console, so Ops agents never interact with these.
+  All Preferred and Latchel Affiliate Service Providers send invoices via email and Ops agents receive them from Assembly; these are the invoices we are working on. Latchel In-Network Service Providers submit invoices through the Latchel console, so Ops agents never interact with these.
 </Note>
 
 <Note>
-### Who pays who?
+  ### Who pays who?
 
-Preferred Service Providers are **typically** paid by the property management company directly. Sometimes we take care of their invoices, other times, the SP invoices the PM directly. **However**, if the PM has the 'Preferred Service Provider Payments' toggle **ON** in their Company Profile → Payments tab, Latchel processes payment for Preferred SPs **via Direct Deposit only** (no issued cards). Refer to [Service Ops: How to Handle Payment-Related Inquiries](https://help.latchel.com/latchel-admin/Service-Operations/Service-Ops-How-to-Handle-Payment-Related-Inquiries) for full details.
+  Preferred Service Providers are **typically** paid by the property management company directly. Sometimes we take care of their invoices, other times, the SP invoices the PM directly. **However**, if the PM has the 'Preferred Service Provider Payments' toggle **ON** in their Company Profile → Payments tab, Latchel processes payment for Preferred SPs **via Direct Deposit only** (no issued cards). Refer to [Service Ops: How to Handle Payment-Related Inquiries](https://help.latchel.com/latchel-admin/Service-Operations/Service-Ops-How-to-Handle-Payment-Related-Inquiries) for full details.
 
-Latchel Service Providers are paid by Latchel through direct deposit per invoice that is uploaded through the Latchel console or through a unique credit card number that is created through the "Issue Card" function in the Work Order.
+  Latchel Service Providers are paid by Latchel through direct deposit per invoice that is uploaded through the Latchel console or through a unique credit card number that is created through the "Issue Card" function in the Work Order.
 </Note>
 
 <Note>
-For invoices which were incorrectly uploaded by a service provider, refer to [https://latchel.atlassian.net/wiki/spaces/OPS/pages/edit-v2/759431181#FAQs](https://help.latchel.com/latchel-admin/Service-Operations/https//latchelatlassiannet/wiki/spaces/OPS/pages/edit-v2/759431181FAQs).
+  For invoices which were incorrectly uploaded by a service provider, refer to [https://latchel.atlassian.net/wiki/spaces/OPS/pages/edit-v2/759431181#FAQs](https://help.latchel.com/latchel-admin/Service-Operations/https//latchelatlassiannet/wiki/spaces/OPS/pages/edit-v2/759431181FAQs).
 </Note>
 
 ## 📋 Step-by-Step Process
@@ -38,78 +38,88 @@ For invoices which were incorrectly uploaded by a service provider, refer to [ht
 ### Step 1 - Download the Invoice
 
 <Note>
-### Guidelines for Accepting Invoices via Text Message (Latchel Console)
+  ### Guidelines for Accepting Invoices via Text Message (Latchel Console)
 
-As a best practice we will not take Invoices for any work order over $500 via Text Message. A detailed invoice must be sent via email.
+  As a best practice we will not take Invoices for any work order over \$500 via Text Message. A detailed invoice must be sent via email.
 </Note>
 
 1. If the Invoice is coming in from Assembly email queue, find the invoice file.
-  1. Download the file with right click and save it to your computer.
-    1. Remember the file name and download location (the file is named by the Service Provider, Ops agents do not need to rename the file)
-  2. **🔔Ops associates must ensure that a response is sent to the service provider to acknowledge receipt of the invoice.**
-2. If the Invoice is coming in from SMS Text, find the invoice file.
-  1. Download the file with right click and save it to your computer.
-    1. Remember the file name and download location (the file is named by the Service Provider, Ops agents do not need to rename the file)
+2. Download the file with right click and save it to your computer.
+3. Remember the file name and download location (the file is named by the Service Provider, Ops agents do not need to rename the file)
+4. **🔔Ops associates must ensure that a response is sent to the service provider to acknowledge receipt of the invoice.**
+5. If the Invoice is coming in from SMS Text, find the invoice file.
+6. Download the file with right click and save it to your computer.
+7. Remember the file name and download location (the file is named by the Service Provider, Ops agents do not need to rename the file)
 
 ### Step 2 - Find the Existing Work Order
 
 1. If the Work Order has a number in the email or on the invoice, Copy the Work Order number
-  1. Paste the Work Order number into the Latchel console search bar to find the work order.
-  2. Find the Work Order in Latchel console [(PREMIUM) Job Aid: Finding an Existing Work Order vs. When to Create a new Work Order](https://help.latchel.com/latchel-admin/Service-Operations/PREMIUM-Job-Aid-Finding-an-Existing-Work-Order-vs-When-to-Create-a-new-Work-Order)
+2. Paste the Work Order number into the Latchel console search bar to find the work order.
+3. Find the Work Order in Latchel console [(PREMIUM) Job Aid: Finding an Existing Work Order vs. When to Create a new Work Order](https://help.latchel.com/latchel-admin/Service-Operations/PREMIUM-Job-Aid-Finding-an-Existing-Work-Order-vs-When-to-Create-a-new-Work-Order)
 
 <Frame>
-  <img src="/images/SVC-454.png" alt="SVC-454.png" />
+  ![SVC-454.png](/images/SVC-454.png)
 </Frame>
-  3. When you have located the Work Order, proceed to Step 3.
-2. If the Work Order does not have its Work Order number in the email or on the invoice, use the information within the email or SMS Text to find the Work Order.
-  1. First, try to find the Work Order by Service Provider. Go to the Latchel Console Interface.
-  2. Click "People" on the Latchel Console Interface 
+
+3. When you have located the Work Order, proceed to Step 3.
+4. If the Work Order does not have its Work Order number in the email or on the invoice, use the information within the email or SMS Text to find the Work Order.
+5. First, try to find the Work Order by Service Provider. Go to the Latchel Console Interface.
+6. Click "People" on the Latchel Console Interface
 
 <Frame>
-  <img src="/images/SVC-455.png" alt="SVC-455.png" />
+  ![SVC-455.png](/images/SVC-455.png)
 </Frame>
-    1. From the drop down menu, click "Service Providers"
-      1. Within the Service Providers Tab, Enter the name of the Service Provider into the search bar
-        1. When the name of the Service Provider appears, click on the name to enter into the Service Provider's profile.
-          1. Within the Service Provider's profile, click the "Maintenance" tab
-            1. Refer to the invoice and locate the related work order by matching the address of the resident.
-              1. When you have located the Work Order, proceed to Step 3.
-              2. If you cannot locate the related Work Order by Service Provider, go back to the Latchel Console Interface to try searching by the property address
-  3. Click "Property" on the Latchel Console Interface
+
+1. From the drop down menu, click "Service Providers"
+2. Within the Service Providers Tab, Enter the name of the Service Provider into the search bar
+3. When the name of the Service Provider appears, click on the name to enter into the Service Provider's profile.
+4. Within the Service Provider's profile, click the "Maintenance" tab
+5. Refer to the invoice and locate the related work order by matching the address of the resident.
+6. When you have located the Work Order, proceed to Step 3.
+7. If you cannot locate the related Work Order by Service Provider, go back to the Latchel Console Interface to try searching by the property address
+8. Click "Property" on the Latchel Console Interface
+
 <Frame>
-  <img src="/images/SVC-456.png" alt="SVC-456.png" />
+  ![SVC-456.png](/images/SVC-456.png)
 </Frame>
-    1. Within the Properties tab, Enter the property address of the resident into the search bar.
-      1. When the address appears, Click on the address name to enter into the property's profile.
-        1. Within the Property's profile, click the "Maintenance" tab
-          1. Refer to the invoice and Locate the related work order by matching the work order by address or Work Order number.
-            1. When you have located the Work Order, proceed to Step 3.
-            2. If you cannot find the Work Order, forward the email with the invoice to the Property Manager
+
+1. Within the Properties tab, Enter the property address of the resident into the search bar.
+2. When the address appears, Click on the address name to enter into the property's profile.
+3. Within the Property's profile, click the "Maintenance" tab
+4. Refer to the invoice and Locate the related work order by matching the work order by address or Work Order number.
+5. When you have located the Work Order, proceed to Step 3.
+6. If you cannot find the Work Order, forward the email with the invoice to the Property Manager
 
 ### Step 3- Verify if the Invoice amount
 
 1. Verify the invoice total versus the approved budget in the work order or an uploaded invoice in the work order files.
-  1. Be sure to consider all the invoices uploaded to the WO, **their added total should not exceed the total approved budget.**
-  2. <Frame>
-  <img src="/images/SVC-457.png" alt="SVC-457.png" />
-</Frame>
-2. **If the invoice total is above the approved budget,** reply to the service provider asking to clarify the amount and confirm if they got approval from Latchel, the Property Manager or the Owner for that amount.
-<Note>
-"Before we're able to proceed with this invoice, could you please verify what's the total amount for the job and who approved it? Thank you!"
-</Note>
-  1. If there's a task already created to request the invoice, update the description in the current "Pending invoice" task with the message:
-    1. "The service provider submitted an over-the-budget invoice, kindly check for the Service Provider's reply to email or contact the Service Provider to follow up"
-  2. If there's not a task to collect the invoice, create a task that "never complete on any job state change" and assign it to the Service Provider Followup group with the message "Service provider submitted an over the budget invoice, kindly check for Service Provider's reply to email or contact the Service Provider to follow up".
+2. Be sure to consider all the invoices uploaded to the WO, **their added total should not exceed the total approved budget.**
 
 <Frame>
-  <img src="/images/SVC-458.png" alt="SVC-458.png" />
+  ![SVC-457.png](/images/SVC-457.png)
 </Frame>
-  3. If the service provider responded to the confirmation:
-    1. **Preferred vendors: **Respond to the email and advise the service provider that the amount invoiced exceeds the approved budget limit. Let them know the property manager will be reaching out to them to follow up on the matter. Create a task for the property manager including the details of the invoice.
-b) **Issued card vendors: **Respond to the email and advise the service provider that the amount invoiced exceeds the approved budget limit. Let them know that one of our service provider specialists will be reaching out to them to follow up on the matter. Create a task for the “payment issues” including the details of the invoice. (See [↔ How to: Create a Task](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Create-a-Task))
-      1. <Frame>
-  <img src="/images/SVC-459.png" alt="SVC-459.png" />
+
+2. **If the invoice total is above the approved budget,** reply to the service provider asking to clarify the amount and confirm if they got approval from Latchel, the Property Manager or the Owner for that amount.
+
+<Note>
+  "Before we're able to proceed with this invoice, could you please verify what's the total amount for the job and who approved it? Thank you!"
+</Note>
+
+1. If there's a task already created to request the invoice, update the description in the current "Pending invoice" task with the message:
+2. "The service provider submitted an over-the-budget invoice, kindly check for the Service Provider's reply to email or contact the Service Provider to follow up"
+3. If there's not a task to collect the invoice, create a task that "never complete on any job state change" and assign it to the Service Provider Followup group with the message "Service provider submitted an over the budget invoice, kindly check for Service Provider's reply to email or contact the Service Provider to follow up".
+
+<Frame>
+  ![SVC-458.png](/images/SVC-458.png)
 </Frame>
+
+3. If the service provider responded to the confirmation:
+4. \*\*Preferred vendors: \*\*Respond to the email and advise the service provider that the amount invoiced exceeds the approved budget limit. Let them know the property manager will be reaching out to them to follow up on the matter. Create a task for the property manager including the details of the invoice. b) \*\*Issued card vendors: \*\*Respond to the email and advise the service provider that the amount invoiced exceeds the approved budget limit. Let them know that one of our service provider specialists will be reaching out to them to follow up on the matter. Create a task for the “payment issues” including the details of the invoice. (See [↔ How to: Create a Task](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Create-a-Task))
+
+<Frame>
+  ![SVC-459.png](/images/SVC-459.png)
+</Frame>
+
 3. **If the invoice (or invoices) total is within the approved budget**, proceed to Step 4 - Upload the Invoice (Depending on the Status).
 
 ### Step 4.1 - Upload the Invoice
@@ -117,174 +127,207 @@ b) **Issued card vendors: **Respond to the email and advise the service provider
 #### Job is "Awaiting invoice receipt"
 
 1. If the Work Order is in "Awaiting invoice" Status,
-  1. Click the "Action" button, then “Add Invoice” to navigate the agent to "Upload the Invoice"
-    1. <Frame>
-  <img src="/images/SVC-460.png" alt="image-20241101-001155.png" />
+2. Click the "Action" button, then “Add Invoice” to navigate the agent to "Upload the Invoice"
+
+<Frame>
+  ![image-20241101-001155.png](/images/SVC-460.png)
 </Frame>
-  2. Click "Upload Invoice"
-    1. <Frame>
-  <img src="/images/SVC-461.png" alt="image-20241101-005534.png" />
+
+2. Click "Upload Invoice"
+
+<Frame>
+  ![image-20241101-005534.png](/images/SVC-461.png)
 </Frame>
-    2. Enter the total amount for the invoice.
-      1. *optional - *Fill out the Memo field with any additional relevant information that is not already listed on the invoice.
-      2. <Frame>
-  <img src="/images/SVC-462.png" alt="image-20241101-005925.png" />
+
+2. Enter the total amount for the invoice.
+3. \*optional - \*Fill out the Memo field with any additional relevant information that is not already listed on the invoice.
+
+<Frame>
+  ![image-20241101-005925.png](/images/SVC-462.png)
 </Frame>
-    3. Click box "Select Invoice File to Upload"
-      1. <Frame>
-  <img src="/images/SVC-463.png" alt="image-20241101-005852.png" />
+
+3. Click box "Select Invoice File to Upload"
+
+<Frame>
+  ![image-20241101-005852.png](/images/SVC-463.png)
 </Frame>
-    4. Select the file you're uploading, and make sure the upload matches that work order. Click "Open".
-      1. Click "Continue"
-      2. Proceed to Step 6 - Write Effective Notes
+
+4. Select the file you're uploading, and make sure the upload matches that work order. Click "Open".
+5. Click "Continue"
+6. Proceed to Step 6 - Write Effective Notes
 
 #### Job is Confirming Completion
 
 1. If an agent receives an invoice and the Work Order is a "Confirm Completion" Status, the Operations agent assumes that the job is completed.
-  1. Click **"Action".**
-  2. Options for Confirming Completion will appear.
-  3. Click** "The job is complete"**
-  4. Upload the invoice as a file (See:  [How to: Add a file to a Work Order](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Add-a-file-to-a-Work-Order))
-2. Verify if the Service Provider is an "Issued Cards" LCN Service Provider:
-  1. Look for the following labels under the "Service Provider" section in the Work Order.
-    1. If the Service Provider is** an issued cards LCN Service Provider:**
-      1. Proceed to Step 5 - Payment for Issued Cards Latchel Service Providers.
-      2. Proceed to Step 6 - Write Effective Notes.
-    2. If the Service Provider was **a Preferred Service Provider or a Direct Deposit LVN/LCN Service Provider:**:
-      1. Proceed to Step 6 - Write Effective Notes.
+2. Click **"Action".**
+3. Options for Confirming Completion will appear.
+4. Click\*\* "The job is complete"\*\*
+5. Upload the invoice as a file (See:  [How to: Add a file to a Work Order](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Add-a-file-to-a-Work-Order))
+6. Verify if the Service Provider is an "Issued Cards" LCN Service Provider:
+7. Look for the following labels under the "Service Provider" section in the Work Order.
+8. If the Service Provider is\*\* an issued cards LCN Service Provider:\*\*
+9. Proceed to Step 5 - Payment for Issued Cards Latchel Service Providers.
+10. Proceed to Step 6 - Write Effective Notes.
+11. If the Service Provider was **a Preferred Service Provider or a Direct Deposit LVN/LCN Service Provider:**:
+12. Proceed to Step 6 - Write Effective Notes.
 
 #### Job is Completed
 
 1. If an agent receives an invoice and the Work Order is a "Completed" Status (See:[Job Aid: Read the Existing Work Order](https://help.latchel.com/latchel-admin/Service-Operations/Job-Aid-Read-the-Existing-Work-Order))
-  1. Upload the invoice as a file (See:  [How to: Add a file to a Work Order](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Add-a-file-to-a-Work-Order))
-  2. Verify if the Service Provider is an "Issued Cards" LCN Service Provider:
-    1. Look for the following labels under the "Service Provider" section in the Work Order.
-      1. <Frame>
-  <img src="/images/SVC-464.png" alt="image-20241101-010730.png" />
+2. Upload the invoice as a file (See:  [How to: Add a file to a Work Order](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Add-a-file-to-a-Work-Order))
+3. Verify if the Service Provider is an "Issued Cards" LCN Service Provider:
+4. Look for the following labels under the "Service Provider" section in the Work Order.
+
+<Frame>
+  ![image-20241101-010730.png](/images/SVC-464.png)
 </Frame>
-    2. If the Service Provider was** an issued cards LCN Service Provider:**
-      1. Proceed to Step 5 - Payment for Issued Cards Latchel Service Providers.
-      2. Proceed to Step 6 - Write Effective Notes.
-    3. If the Service Provider was **a Preferred Service Provider or a Direct Deposit LVN/LCN Service Provider:**:
-      1. Proceed to Step 6 - Write Effective Notes.
+
+2. If the Service Provider was\*\* an issued cards LCN Service Provider:\*\*
+3. Proceed to Step 5 - Payment for Issued Cards Latchel Service Providers.
+4. Proceed to Step 6 - Write Effective Notes.
+5. If the Service Provider was **a Preferred Service Provider or a Direct Deposit LVN/LCN Service Provider:**:
+6. Proceed to Step 6 - Write Effective Notes.
 
 <Note>
-*The system will only request an invoice upon Work Order completion if the PM has enabled invoice collection for the service provider assigned to the Work Order. If invoice collection is disabled, the WO will move to Completed status without prompting for an invoice upload.*
+  _The system will only request an invoice upon Work Order completion if the PM has enabled invoice collection for the service provider assigned to the Work Order. If invoice collection is disabled, the WO will move to Completed status without prompting for an invoice upload._
 </Note>
 
-Note: Agents must check if the Service Provider’s *Invoice Collection* is **On** or **Off. **If the Invoice Collection is turned On and the Service Provider has not submitted an Invoice, the agent must place the work order on “Pending” status, move the work order to “Completed”, and upload the Invoice from the Service Provider when prompted. If the Invoice Collection is turned Off, must upload the Invoice from the Service Provider, and then create a task for the Property Management.
+Note: Agents must check if the Service Provider’s _Invoice Collection_ is **On** or \*\*Off. \*\*If the Invoice Collection is turned On and the Service Provider has not submitted an Invoice, the agent must place the work order on “Pending” status, move the work order to “Completed”, and upload the Invoice from the Service Provider when prompted. If the Invoice Collection is turned Off, must upload the Invoice from the Service Provider, and then create a task for the Property Management.
 
 To determine if the Service Provider's invoice collection is turned “**ON/OFF**”:
 
-1. Go to the Property Manager’s profile and click on ***Service Providers.***
-  1. <Frame>
-  <img src="/images/SVC-465.jpg" alt="SP1.jpg" />
-</Frame>
-2. Under the *Service Providers tab, *select ***Service Provider Management.***
-  1. <Frame>
-  <img src="/images/SVC-466.jpg" alt="SP.jpg" />
-</Frame>
-3. Check the*** Invoice*** ***Collection Column*** if the option is switched to **On** or **Off**.
-  1. <Frame>
-  <img src="/images/SVC-467.jpg" alt="SP2.jpg" />
+1. Go to the Property Manager’s profile and click on **_Service Providers._**
+
+<Frame>
+  ![SP1.jpg](/images/SVC-465.jpg)
 </Frame>
 
-*Latchel may receive two types of invoices; an Invoice and an Invoice Receipt. We only notify the Property Manager or the Payments Team whenever we receive Invoices, however, for Invoice Receipts we only upload them for documentation purposes.*
+2. Under the \*Service Providers tab, \*select **_Service Provider Management._**
+
+<Frame>
+  ![SP.jpg](/images/SVC-466.jpg)
+</Frame>
+
+3. Check the\*\*\* Invoice\*\*\* **_Collection Column_** if the option is switched to **On** or **Off**.
+
+<Frame>
+  ![SP2.jpg](/images/SVC-467.jpg)
+</Frame>
+
+_Latchel may receive two types of invoices; an Invoice and an Invoice Receipt. We only notify the Property Manager or the Payments Team whenever we receive Invoices, however, for Invoice Receipts we only upload them for documentation purposes._
 
 Sample Invoice:
 
 <Frame>
-  <img src="/images/SVC-468.jpg" alt="Invoice.jpg" />
+  ![Invoice.jpg](/images/SVC-468.jpg)
 </Frame>
 
 Sample Invoice Receipt:
 
 <Frame>
-  <img src="/images/SVC-469.jpg" alt="Invoice Receipt.jpg" />
+  ![Invoice Receipt.jpg](/images/SVC-469.jpg)
 </Frame>
 
 #### Job is in a different status
 
 1. If agent receives an invoice and the Work Order is a status other than “Confirming Completion”, "Awaiting Invoice" or "Completed"
-  1. Call resident or Service Provider to verify that it has been completed
-    1. [(PREMIUM) How to: Confirm Completion of the Work Order with Resident and Service Provider](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Confirm-Completion-of-the-Work-Order-with-Resident-and-Service-Provider)
-    2. If the resident confirms that the job has been completed,
-      1. Use the secondary action button in the work order to advance the work order
-<Frame>
-  <img src="/images/SVC-470.jpg" alt="SVC-470.jpg" />
-</Frame>
-      2. Click "Mark this job as completed"
-      3. The next box asks the agent to "Please select what you would like to do for invoicing on this job". Choose "Upload invoice"
-<Frame>
-  <img src="/images/SVC-471.jpg" alt="SVC-471.jpg" />
-</Frame>
-      4. Click on file of the downloaded invoice to upload. Make sure it's the upload matches with that work order. Click "Open".
-      5. Click "Done"
-      6. Verify if the Service Provider is an "Issued Cards" LCN Service Provider:
-        1. Look for the following labels under the "Service Provider" section in the Work Order.
-        2. <Frame>
-  <img src="/images/SVC-472.png" alt="image-20241101-010730.png" />
-</Frame>
-        3. If the Service Provider was** an issued cards LCN Service Provider:**
-        4. Proceed to Step 5 - Payment for Issued Cards LCN Service Providers.
-      7. If the Service Provider was **a Preferred Service Provider or a Direct Deposit LVN/LCN Service Provider:**:
-        1. Proceed to Step 6 - Write Effective Notes.
-    3. If the resident states that the job** hasn't been completed**, follow up with the Service Provider. See: [How to: Confirm Completion of the Work Order with Resident and Service Provider](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Confirm-Completion-of-the-Work-Order-with-Resident-and-Service-Provider)
+2. Call resident or Service Provider to verify that it has been completed
+3. [(PREMIUM) How to: Confirm Completion of the Work Order with Resident and Service Provider](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Confirm-Completion-of-the-Work-Order-with-Resident-and-Service-Provider)
+4. If the resident confirms that the job has been completed,
+5. Use the secondary action button in the work order to advance the work order
 
-### Step 4.2 - Upload the Invoice - **NO Automation **
+<Frame>
+  ![SVC-470.jpg](/images/SVC-470.jpg)
+</Frame>
+
+2. Click "Mark this job as completed"
+3. The next box asks the agent to "Please select what you would like to do for invoicing on this job". Choose "Upload invoice"
+
+<Frame>
+  ![SVC-471.jpg](/images/SVC-471.jpg)
+</Frame>
+
+4. Click on file of the downloaded invoice to upload. Make sure it's the upload matches with that work order. Click "Open".
+5. Click "Done"
+6. Verify if the Service Provider is an "Issued Cards" LCN Service Provider:
+7. Look for the following labels under the "Service Provider" section in the Work Order.
+
+<Frame>
+  ![image-20241101-010730.png](/images/SVC-472.png)
+</Frame>
+
+3. If the Service Provider was\*\* an issued cards LCN Service Provider:\*\*
+4. Proceed to Step 5 - Payment for Issued Cards LCN Service Providers.
+5. If the Service Provider was **a Preferred Service Provider or a Direct Deposit LVN/LCN Service Provider:**:
+6. Proceed to Step 6 - Write Effective Notes.
+7. If the resident states that the job\*\* hasn't been completed\*\*, follow up with the Service Provider. See: [How to: Confirm Completion of the Work Order with Resident and Service Provider](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Confirm-Completion-of-the-Work-Order-with-Resident-and-Service-Provider)
+
+### Step 4.2 - Upload the Invoice - \*\*NO Automation \*\*
 
 1. If you need to upload an invoice but do not want to affect the status of the job an invoice can be added via a jobs **Invoice Tab**
+
 <Frame>
-  <img src="/images/SVC-473.png" alt="image-20241204-203951.png" />
+  ![image-20241204-203951.png](/images/SVC-473.png)
 </Frame>
-  1. Click "Add Invoice"
-  2. Enter the total amount for the invoice
+
+1. Click "Add Invoice"
+2. Enter the total amount for the invoice
+
 <Frame>
-  <img src="/images/SVC-474.png" alt="image-20241204-204356.png" />
+  ![image-20241204-204356.png](/images/SVC-474.png)
 </Frame>
-  3. *optional - *Fill out the Memo field with any additional relevant information which is not already listed on the invoice.
+
+3. \*optional - \*Fill out the Memo field with any additional relevant information which is not already listed on the invoice.
+
 <Frame>
-  <img src="/images/SVC-475.png" alt="image-20241204-204441.png" />
+  ![image-20241204-204441.png](/images/SVC-475.png)
 </Frame>
-  4. Click box "Select Invoice File to Upload"
+
+4. Click box "Select Invoice File to Upload"
+
 <Frame>
-  <img src="/images/SVC-476.png" alt="image-20241204-204535.png" />
+  ![image-20241204-204535.png](/images/SVC-476.png)
 </Frame>
-  5. Select the file you're uploading, and make sure the upload matches that work order. Click "Open".
-    1. Click "Submit"
-  6. Verify if the Service Provider is an "Issued Cards" LCN Service Provider:
-    1. Look for the following labels under the "Service Provider" section in the Work Order.
-      1. <Frame>
-  <img src="/images/SVC-477.png" alt="image-20241101-010730.png" />
+
+5. Select the file you're uploading, and make sure the upload matches that work order. Click "Open".
+6. Click "Submit"
+7. Verify if the Service Provider is an "Issued Cards" LCN Service Provider:
+8. Look for the following labels under the "Service Provider" section in the Work Order.
+
+<Frame>
+  ![image-20241101-010730.png](/images/SVC-477.png)
 </Frame>
-      2. If the Service Provider was **an issued cards LCN Service Provider**:
-      3. Proceed to Step 5 - Payment for Issued Cards LCN Service Providers.
-    2. If the Service Provider was **a Preferred Service Provider or a Direct Deposit LVN/LCN Service Provider**:
-      1. Proceed to Step 6 - Write Effective Notes.
+
+2. If the Service Provider was **an issued cards LCN Service Provider**:
+3. Proceed to Step 5 - Payment for Issued Cards LCN Service Providers.
+4. If the Service Provider was **a Preferred Service Provider or a Direct Deposit LVN/LCN Service Provider**:
+5. Proceed to Step 6 - Write Effective Notes.
 
 ### Step 5 - Payment for Issued Cards Latchel Service Providers:
 
 Issued Cards LCN Service Providers are those who have the least experience working with Latchel because they were contacted mostly out necessity due to lack of other Service Providers being available. These Service Providers are not paid directly by the Property Manager and they don't have a bank account registered on file to be paid via automated direct deposit. These Service Providers require manual payment processing via a generated credit card through the Latchel system. However, since these are the Service Providers with the least experience with us, we need to be careful when paying them.
 
 1. Confirm with the resident that the job was completed.
-  1. **Note**: We need verbal or written confirmation from the resident that the job was successfully completed before processing the credit card payment.
-  2. If you’re not able to get confirmation from the resident that the issue was resolved, payment can be processed if the SP provided before and after photos showing the work performed.
-2. If the total invoice amount is** below $500, an Operations Associate should process payment.**
-  1. Contact the service provider: [(TECH 101) How to: Make Outbound Calls Within the Latchel Console](https://help.latchel.com/latchel-admin/Service-Operations/TECH-101-How-to-Make-Outbound-Calls-Within-the-Latchel-Console)
-  2. Refer to [(TECH 101) Job Aid: Service Provider Payment (Issue a Card)](https://help.latchel.com/latchel-admin/Service-Operations/TECH-101-Job-Aid-Service-Provider-Payment-Issue-a-Card) to process payment via credit card.
-  3. If it was not possible to get in contact with the Service Provider, create a task to follow up on the payment.
-    1. Assign the task for the **Service Provider Followup group** so that an Operations Associate completes payment.
-    2. The task should be set to **"Never complete on any job state change":**
-    3. <Frame>
-  <img src="/images/SVC-478.png" alt="SVC-478.png" />
-</Frame>
-3. If the status of the work order is anything other than 'awaiting invoice' or 'completed,' and we receive an invoice from the LCN vendor, we should verify if they have any remaining follow-up work. If they confirm they will not return regardless of the status, we should still proceed with processing the payment if the invoice is under $500.
-If the total invoice amount is **above $500, the Finance team should process payment.**
-  1. Create a task for the **Payment Processing **user group so that a Finance team member completes payment:
-4. The task should be set to **"Never complete on any job state change":**
+2. **Note**: We need verbal or written confirmation from the resident that the job was successfully completed before processing the credit card payment.
+3. If you’re not able to get confirmation from the resident that the issue was resolved, payment can be processed if the SP provided before and after photos showing the work performed.
+4. If the total invoice amount is\*\* below \$500, an Operations Associate should process payment.\*\*
+5. Contact the service provider: [(TECH 101) How to: Make Outbound Calls Within the Latchel Console](https://help.latchel.com/latchel-admin/Service-Operations/TECH-101-How-to-Make-Outbound-Calls-Within-the-Latchel-Console)
+6. Refer to [(TECH 101) Job Aid: Service Provider Payment (Issue a Card)](https://help.latchel.com/latchel-admin/Service-Operations/TECH-101-Job-Aid-Service-Provider-Payment-Issue-a-Card) to process payment via credit card.
+7. If it was not possible to get in contact with the Service Provider, create a task to follow up on the payment.
+8. Assign the task for the **Service Provider Followup group** so that an Operations Associate completes payment.
+9. The task should be set to **"Never complete on any job state change":**
 
 <Frame>
-  <img src="/images/SVC-479.png" alt="SVC-479.png" />
+  ![SVC-478.png](/images/SVC-478.png)
+</Frame>
+
+3. If the status of the work order is anything other than 'awaiting invoice' or 'completed,' and we receive an invoice from the LCN vendor, we should verify if they have any remaining follow-up work. If they confirm they will not return regardless of the status, we should still proceed with processing the payment if the invoice is under $$500.
+   If the total invoice amount is **above $$500, the Finance team should process payment.\*\*
+4. Create a task for the \*\*Payment Processing \*\*user group so that a Finance team member completes payment:
+5. The task should be set to **"Never complete on any job state change":**
+
+<Frame>
+  ![SVC-479.png](/images/SVC-479.png)
 </Frame>
 
 5. Proceed to Step 6 - Write Effective Notes.
@@ -292,35 +335,38 @@ If the total invoice amount is **above $500, the Finance team should process pay
 ### Step 6 - Write Effective Notes
 
 1. If the Work Order was in "Upload an Invoice" Status
-  1. Write a note about receiving the invoice and the Ticket # within the Work Order.
+2. Write a note about receiving the invoice and the Ticket # within the Work Order.
 
 <Frame>
-  <img src="/images/SVC-480.png" alt="SVC-480.png" />
+  ![SVC-480.png](/images/SVC-480.png)
 </Frame>
-  2. Click "Submit" to complete uploading an invoice.
-    1. Status Reflection
-<Frame>
-  <img src="/images/SVC-481.png" alt="SVC-481.png" />
-</Frame>
-  3. Once the associate responded to the email/message that was sent by the service provider, write a note in the Assembly email that the Work Order was updated.
-    1. [Service Ops: Assembly Guide](https://help.latchel.com/latchel-admin/Service-Operations/Service-Ops-Assembly-Guide)
-  4. To change the status of the ticket, Click "Resolve" in Assembly emails
-    1. [Service Ops: Assembly Guide](https://help.latchel.com/latchel-admin/Service-Operations/Service-Ops-Assembly-Guide)
-  5. No further tasks.
-2. If the Work Order is in a "Completed" status
-  1. Manually write a note within the Work Order. Write: : "Ticket #. "Email from Service Provider, Invoice"
-  2. Once the associate responded to the email/message that was sent by the service provider, write a note in the Assembly email that the Work Order was updated. Write: "Work order was updated. Cut and Paste Work Order URL."
-    1. [Service Ops: Assembly Guide](https://help.latchel.com/latchel-admin/Service-Operations/Service-Ops-Assembly-Guide)
-  3. To change the status of the ticket, Click "Resolve" in Assembly emails
-    1. [Service Ops: Assembly Guide](https://help.latchel.com/latchel-admin/Service-Operations/Service-Ops-Assembly-Guide)
-  4. No further tasks.
 
-## [**❓**](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Handle-Emergency-Work-Orders)**Frequently Asked Questions**
+2. Click "Submit" to complete uploading an invoice.
+3. Status Reflection
+
+<Frame>
+  ![SVC-481.png](/images/SVC-481.png)
+</Frame>
+
+3. Once the associate responded to the email/message that was sent by the service provider, write a note in the Assembly email that the Work Order was updated.
+4. [Service Ops: Assembly Guide](https://help.latchel.com/latchel-admin/Service-Operations/Service-Ops-Assembly-Guide)
+5. To change the status of the ticket, Click "Resolve" in Assembly emails
+6. [Service Ops: Assembly Guide](https://help.latchel.com/latchel-admin/Service-Operations/Service-Ops-Assembly-Guide)
+7. No further tasks.
+8. If the Work Order is in a "Completed" status
+9. Manually write a note within the Work Order. Write: : "Ticket #. "Email from Service Provider, Invoice"
+10. Once the associate responded to the email/message that was sent by the service provider, write a note in the Assembly email that the Work Order was updated. Write: "Work order was updated. Cut and Paste Work Order URL."
+11. [Service Ops: Assembly Guide](https://help.latchel.com/latchel-admin/Service-Operations/Service-Ops-Assembly-Guide)
+12. To change the status of the ticket, Click "Resolve" in Assembly emails
+13. [Service Ops: Assembly Guide](https://help.latchel.com/latchel-admin/Service-Operations/Service-Ops-Assembly-Guide)
+14. No further tasks.
+
+## **[❓](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Handle-Emergency-Work-Orders)Frequently Asked Questions**
 
 <Note>
-**Invoice Discrepancy Procedure**
+  **Invoice Discrepancy Procedure**
 
-If you receive an invoice from a service provider and find that the information (such as property address or work order number) is incorrect, request a revised invoice with the correct information. Do not upload the incorrect invoice to the work order.
+  If you receive an invoice from a service provider and find that the information (such as property address or work order number) is incorrect, request a revised invoice with the correct information. Do not upload the incorrect invoice to the work order.
 </Note>
 
 **Q1: What if the Service provider reached out and advised that they have uploaded an incorrect invoice on a work order?**
@@ -328,35 +374,35 @@ If you receive an invoice from a service provider and find that the information 
 For all incorrectly uploaded invoices by the service providers (all types), please do not take further action. Please escalate this to the appropriate team for proper handling.
 
 <Accordion title="Preferred Service Providers">
-1. Review the details of the incorrect invoice that was uploaded and take the following information
-  1. Invoice Number and amount
-  2. Work Order it was incorrectly uploaded to
-  3. Work Order it should be uploaded to
-2. Escalate to the Property Manager via task
-  1. Subject: *Service provider submitted an incorrect invoice*
-  2. Who is this task about? - *Choose the service provider*
-  3. Select a Date an Time: *Leave as is*
-  4. Assign to a User Group: *PM Group*
-  5. Assign to a User: *Leave as is*
-  6. Priority: *choose based on the WO severity*
-  7. Complete task on any job state change.
-  8. Description: *The service provider has informed us that they mistakenly uploaded an invoice to work order [incorrect work order number] instead of work order [correct work order number].You may contact the service provider directly to address the payment for the correct work order. Thank you.*
+  1. Review the details of the incorrect invoice that was uploaded and take the following information
+  2. Invoice Number and amount
+  3. Work Order it was incorrectly uploaded to
+  4. Work Order it should be uploaded to
+  5. Escalate to the Property Manager via task
+  6. Subject: _Service provider submitted an incorrect invoice_
+  7. Who is this task about? - _Choose the service provider_
+  8. Select a Date an Time: _Leave as is_
+  9. Assign to a User Group: _PM Group_
+  10. Assign to a User: _Leave as is_
+  11. Priority: _choose based on the WO severity_
+  12. Complete task on any job state change.
+  13. Description: _The service provider has informed us that they mistakenly uploaded an invoice to work order \[incorrect work order number\] instead of work order \[correct work order number\].You may contact the service provider directly to address the payment for the correct work order. Thank you._
 </Accordion>
 
 <Accordion title="LCN/LVN Service Providers">
-1. Review the details of the incorrect invoice that was uploaded and take the following information
-  1. Invoice Number and amount
-  2. Work Order it was incorrectly uploaded to
-  3. Work Order it should be uploaded to
-2. Escalate to the Payment Issues and Disputes Team via task
-  1. Subject: *Service provider submitted an incorrect invoice*
-  2. Who is this task about? - *Choose the service provider*
-  3. Select a Date an Time: *Leave as is*
-  4. Assign to a User Group: *Payment Issues and Disputes *
-  5. Assign to a User: *Leave as is*
-  6. Priority: *choose based on the WO severity*
-  7. Complete task on any job state change.
-  8. Description: *The service provider has informed us that they mistakenly uploaded an invoice to work order [incorrect work order number] instead of work order [correct work order number]. Please reach out to the service provider for proper handling. Thank you*
+  1. Review the details of the incorrect invoice that was uploaded and take the following information
+  2. Invoice Number and amount
+  3. Work Order it was incorrectly uploaded to
+  4. Work Order it should be uploaded to
+  5. Escalate to the Payment Issues and Disputes Team via task
+  6. Subject: _Service provider submitted an incorrect invoice_
+  7. Who is this task about? - _Choose the service provider_
+  8. Select a Date an Time: _Leave as is_
+  9. Assign to a User Group: \*Payment Issues and Disputes \*
+  10. Assign to a User: _Leave as is_
+  11. Priority: _choose based on the WO severity_
+  12. Complete task on any job state change.
+  13. Description: _The service provider has informed us that they mistakenly uploaded an invoice to work order \[incorrect work order number\] instead of work order \[correct work order number\]. Please reach out to the service provider for proper handling. Thank you_
 </Accordion>
 
 **Q2: What should be done if an associate incorrectly uploads an invoice and cannot remove or delete it?**
@@ -364,75 +410,75 @@ For all incorrectly uploaded invoices by the service providers (all types), plea
 Note: This issue typically arises when an associate uploads the invoice through the "Take Action" button while marking the work order as completed, instead of uploading it to the Files tab.
 
 <Accordion title="For LCN Issued Cards">
-1. If there are no succeeding tasks indicating a review from PM is required and if the amount is less than $500
-  1. Upload the correct invoice
-  2. Proceed to process the payment for the correct invoice
-  3. Leave a "Special Note" on the work order indicating that an incorrect invoice was uploaded and should be disregarded. Also, note that the correct invoice has been uploaded and that payment has been processed.
-  4. Write Effective Notes
-    1. See [How to: Write Effective Notes](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Write-Effective-Notes)
-2. If there is a succeeding task or if the amount is more than $500
-  1. Upload the correct invoice
-  2. Escalate to the Payment Issues and Disputes Team via task to process the payment to the correct invoice
-    1. Subject: *Incorrect Invoice was uploaded*
-    2. Who is this task about? - *Choose the service provider*
-    3. Select a Date an Time: *Leave as is*
-    4. Assign to a User Group: *Payment Issues and Disputes *
-    5. Assign to a User: *Leave as is*
-    6. Priority: *choose based on the WO severity*
-    7. Complete task on any job state change.
-    8. Description: *An incorrect invoice was uploaded to work order [work order number]. Please assist in processing the payment for the correct invoice [correct invoice file name]. Thank you*
-      1. **Note**: Payments team shall handle the documentation moving forward
+  1. If there are no succeeding tasks indicating a review from PM is required and if the amount is less than \$500
+  2. Upload the correct invoice
+  3. Proceed to process the payment for the correct invoice
+  4. Leave a "Special Note" on the work order indicating that an incorrect invoice was uploaded and should be disregarded. Also, note that the correct invoice has been uploaded and that payment has been processed.
+  5. Write Effective Notes
+  6. See [How to: Write Effective Notes](https://help.latchel.com/latchel-admin/Service-Operations/How-to-Write-Effective-Notes)
+  7. If there is a succeeding task or if the amount is more than \$500
+  8. Upload the correct invoice
+  9. Escalate to the Payment Issues and Disputes Team via task to process the payment to the correct invoice
+  10. Subject: _Incorrect Invoice was uploaded_
+  11. Who is this task about? - _Choose the service provider_
+  12. Select a Date an Time: _Leave as is_
+  13. Assign to a User Group: \*Payment Issues and Disputes \*
+  14. Assign to a User: _Leave as is_
+  15. Priority: _choose based on the WO severity_
+  16. Complete task on any job state change.
+  17. Description: _An incorrect invoice was uploaded to work order \[work order number\]. Please assist in processing the payment for the correct invoice \[correct invoice file name\]. Thank you_
+  18. **Note**: Payments team shall handle the documentation moving forward
 </Accordion>
 
 <Accordion title=" Preferred Service Providers">
-1. Upload the correct invoice
-2. Notify the Property Manager via task
-  1. Subject: *An incorrect invoice was uploaded*
-  2. Who is this task about? - *Choose the service provider*
-  3. Select a Date an Time: *Leave as is*
-  4. Assign to a User Group: *PM Group*
-  5. Assign to a User: *Leave as is*
-  6. Priority: *choose based on the WO severity*
-  7. Complete task on any job state change.
-  8. Description: *Please note that an incorrect invoice was previously uploaded to work order [work order number]. We have now uploaded the correct invoice. Kindly disregard the earlier invoice with the file name [invoice file name]. We apologize for any inconvenience this may have caused and appreciate your understanding.*
+  1. Upload the correct invoice
+  2. Notify the Property Manager via task
+  3. Subject: _An incorrect invoice was uploaded_
+  4. Who is this task about? - _Choose the service provider_
+  5. Select a Date an Time: _Leave as is_
+  6. Assign to a User Group: _PM Group_
+  7. Assign to a User: _Leave as is_
+  8. Priority: _choose based on the WO severity_
+  9. Complete task on any job state change.
+  10. Description: _Please note that an incorrect invoice was previously uploaded to work order \[work order number\]. We have now uploaded the correct invoice. Kindly disregard the earlier invoice with the file name \[invoice file name\]. We apologize for any inconvenience this may have caused and appreciate your understanding._
 </Accordion>
 
 <Accordion title="LCN/LVN Direct Deposit">
-1. Associates should not upload invoices for Direct Deposit service providers. All invoices for these service providers must be uploaded by the providers themselves through their portal.
+  1. Associates should not upload invoices for Direct Deposit service providers. All invoices for these service providers must be uploaded by the providers themselves through their portal.
 </Accordion>
 
 **Q3: What should be done if an associate incorrectly uploads an invoice on Files tab?**
 
 <Accordion title="If an incorrect file (such as an invoice, document, image, etc.) is uploaded to the Files tab, the Ops team can delete it using the trash bin icon located at the right corner of the file.">
-<Frame>
-  <img src="/images/SVC-482.png" alt="image-20240913-012342.png" />
-</Frame>
+  <Frame>
+    ![image-20240913-012342.png](/images/SVC-482.png)
+  </Frame>
 </Accordion>
 
 **Q4: What should be done if a work order is being cancelled due to denied budget request and the service provider is an LCN Issued Card or LVN/LCN Direct Deposit**
 
 <Accordion title="When a work order is canceled, service providers like LVN/LCN Direct Deposit will no longer have the option to upload an invoice. For Latchel users, the option to 'Issue a Card' for payments under $500 will also be unavailable. If you receive inquiries about these situations, please escalate them to the Payments Team.">
-1. Subject: *[Unable to Issue Card for Service Provider Due to Canceled Work Order Status] [Service Provider Unable to Upload Invoice due to Cancelled Work Order Status]*
-2. Who is this task about? - *Choose the service provider*
-3. Select a Date an Time: *Leave as is*
-4. Assign to a User Group: *Payment Issues and Disputes*
-5. Assign to a User: *Leave as is*
-6. Priority: *choose based on the WO severity*
-7. Never Complete on any job state change
-8. Description: *provide a summary of what happened*
+  1. Subject: _\[Unable to Issue Card for Service Provider Due to Canceled Work Order Status\] \[Service Provider Unable to Upload Invoice due to Cancelled Work Order Status\]_
+  2. Who is this task about? - _Choose the service provider_
+  3. Select a Date an Time: _Leave as is_
+  4. Assign to a User Group: _Payment Issues and Disputes_
+  5. Assign to a User: _Leave as is_
+  6. Priority: _choose based on the WO severity_
+  7. Never Complete on any job state change
+  8. Description: _provide a summary of what happened_
 </Accordion>
 
 **Q5: What should we do if a Service Provider reach out informing that they are unable to upload the invoice?**
 
 <Accordion title="If a Service Provider reports difficulty uploading an invoice, follow these steps:">
-1. Confirm whether the SP **does not know how to upload the invoice** or is **encountering a technical/system issue** while attempting to upload.
-2. If the SP is unfamiliar with the process, share the invoice upload **help guide** and walk them through the steps if needed.
-  1. Help Guide: [https://help.latchel.com/s/topic/0TO5e000000h9wpGAA/How-to-Upload-an-Invoice#uploading-an-invoice-service-providers](https://help.latchel.com/s/topic/0TO5e000000h9wpGAA/How-to-Upload-an-Invoice#uploading-an-invoice-service-providers)
-  2. Ask them to attempt the upload again after reviewing the instructions.
-3. If the SP confirms they have followed the instructions but are still experiencing issues, **document the specific problem** encountered (error messages, blocked actions, screenshots if available).
-  1. **Escalate to Payments**
-    1. Create a **task for the Payments team** including the work order number, SP details, and the documented issue.
-    2. Payments will review and take the appropriate next steps.
+  1. Confirm whether the SP **does not know how to upload the invoice** or is **encountering a technical/system issue** while attempting to upload.
+  2. If the SP is unfamiliar with the process, share the invoice upload **help guide** and walk them through the steps if needed.
+  3. Help Guide: [https://help.latchel.com/s/topic/0TO5e000000h9wpGAA/How-to-Upload-an-Invoice#uploading-an-invoice-service-providers](https://help.latchel.com/s/topic/0TO5e000000h9wpGAA/How-to-Upload-an-Invoice#uploading-an-invoice-service-providers)
+  4. Ask them to attempt the upload again after reviewing the instructions.
+  5. If the SP confirms they have followed the instructions but are still experiencing issues, **document the specific problem** encountered (error messages, blocked actions, screenshots if available).
+  6. **Escalate to Payments**
+  7. Create a **task for the Payments team** including the work order number, SP details, and the documented issue.
+  8. Payments will review and take the appropriate next steps.
 </Accordion>
 
 ## **🎯 When to Break This SOP**
@@ -441,5 +487,4 @@ Note: This issue typically arises when an associate uploads the invoice through 
 
 ## **💡 If You Think This SOP Could Be Improved...**
 
-Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work?
- 👉 Share your suggestion in the[<u>SOP Feedback Form</u>](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**
+Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work? 👉 Share your suggestion in the[<u>SOP Feedback Form</u>](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**
