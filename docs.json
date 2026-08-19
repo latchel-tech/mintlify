@@ -914,7 +914,16 @@
                               "latchel-admin/Service-Operations/Production-Documentation/How-to-Properly-Diagnose-Emergency-Situations",
                               "latchel-admin/Service-Operations/Production-Documentation/Job-Aid-Troubleshooter-Tips-for-Tricky-Situations",
                               "latchel-admin/Service-Operations/Production-Documentation/Follow-Up-Guidelines-for-On-Call-Customers-app-latchel-com",
-                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-Property-Damage-and-Extreme-Habitability-Situations"
+                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-Property-Damage-and-Extreme-Habitability-Situations",
+                              "latchel-admin/Service-Operations/Production-Documentation/Job-Aid-Troubleshooter-Question-Bank",
+                              "latchel-admin/Service-Operations/Production-Documentation/EMERGENCY-Work-Order-Is-Not-Complete-Issue-is-Not-Resolved",
+                              "latchel-admin/Service-Operations/Production-Documentation/PREMIUM-How-to-Assign-a-Preferred-Service-Provider",
+                              "latchel-admin/Service-Operations/Production-Documentation/Emergency-How-to-Handle-a-Utility-Issue",
+                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Emergency-Work-Orders",
+                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Confirm-Completion-Emergency-and-Non-Emergency",
+                              "latchel-admin/Service-Operations/Production-Documentation/How-To-Add-a-New-Service-Provider",
+                              "latchel-admin/Service-Operations/Production-Documentation/Job-Aid-Handling-Tasks-assigned-to-the-Resident-Follow-Up-Group",
+                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Put-a-Job-on-Hold"
                             ]
                           },
                           {
@@ -925,8 +934,8 @@
                               "latchel-admin/Service-Operations/Production-Documentation/Job-Aid-Call-Flow-for-Outbound-Calls",
                               "latchel-admin/Service-Operations/Production-Documentation/PREMIUM-Job-Aid-Phone-and-Text-Message-Webchat-Frequently-Asked-Questions-Live-Updates",
                               "latchel-admin/Service-Operations/Production-Documentation/How-to-Troubleshoot-Issues-with-AWS-Connect",
-                              "latchel-admin/Service-Operations/Production-Documentation/Service-Operations-Handling-Warm-Transfers-from-Harphonia-AI-Call-Center",
-                              "latchel-admin/Service-Operations/Production-Documentation/Service-Operations-Handling-Urgent-Call-Back-Requests-Failed-WO-Intake"
+                              "latchel-admin/Service-Operations/Production-Documentation/Service-Operations-Handling-Urgent-Call-Back-Requests-Failed-WO-Intake",
+                              "latchel-admin/Service-Operations/Production-Documentation/Service-Operations-Handling-Warm-Transfers-from-Harphonia-AI-Call-Center"
                             ]
                           },
                           {
@@ -939,7 +948,6 @@
                               "latchel-admin/Service-Operations/Production-Documentation/Help-Center-Reference-Guide",
                               "latchel-admin/Service-Operations/Production-Documentation/How-to-Use-Text-Message-SMS-Webchat-Functions-In-Latchel-Console",
                               "latchel-admin/Service-Operations/Production-Documentation/Job-Aid-Blurbs-or-Templates-to-Communicate-with-Customers",
-                              "latchel-admin/Service-Operations/Production-Documentation/Job-Aid-Guide-to-write-SMS-Webchat-or-email-to-customers",
                               "latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Dissatisfied-Customers",
                               "latchel-admin/Service-Operations/Production-Documentation/How-to-Translate-SOPs-to-assist-non-English-speakers",
                               "latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Autopilot-WOs",
@@ -949,7 +957,8 @@
                               "latchel-admin/Service-Operations/Production-Documentation/Handling-Owner-WO-Submission-Requests",
                               "latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Resident-Maintenance-Requests-via-Text-Intake",
                               "latchel-admin/Service-Operations/Production-Documentation/SOP-Work-Order-Follow-ups-and-Updates",
-                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Customer-Information-Updates"
+                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Customer-Information-Updates",
+                              "latchel-admin/Service-Operations/Production-Documentation/Job-Aid-Guide-to-write-SMS-Webchat-or-email-to-customers"
                             ]
                           },
                           {
