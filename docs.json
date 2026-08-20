@@ -1026,6 +1026,8 @@
                           {
                             "group": "Operations Documentation and Training Coordinator",
                             "pages": [
+                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Ops-Request-Ticket-Assembly",
+                              "latchel-admin/Service-Operations/Production-Documentation/Operations-Documentation-and-Training-Coordinator-Cadence",
                               "latchel-admin/Service-Operations/Production-Documentation/Major-Releases-and-Training"
                             ]
                           },
