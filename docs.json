@@ -904,10 +904,12 @@
                               "latchel-admin/Service-Operations/Production-Documentation/Emergency-How-to-Handle-Scheduling-Requests",
                               "latchel-admin/Service-Operations/Production-Documentation/Job-Aid-Critical-Pre-dispatch-Warranty-Special-Notes-Emergency-Escalation-Contacts",
                               "latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-to-Product-Support",
+                              "latchel-admin/Service-Operations/Production-Documentation/Follow-Up-Guidelines-for-On-Call-Customers-app-latchel-com",
                               "latchel-admin/Service-Operations/Production-Documentation/How-to-Set-Expectations-for-Customers",
                               "latchel-admin/Service-Operations/Production-Documentation/Job-Aid-Resident-Self-Create-Feature",
                               "latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Work-Orders-with-Incomplete-Information",
                               "latchel-admin/Service-Operations/Production-Documentation/How-to-Research-Local-Property-Managers-Second-Phase",
+                              "latchel-admin/Service-Operations/Production-Documentation/Job-Aid-Increasing-LCN-SP-Visibility",
                               "latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Home-Assistant-and-Benefits-Inquiries",
                               "latchel-admin/Service-Operations/Production-Documentation/How-to-Ask-for-assistance-in-the-Slack-channels",
                               "latchel-admin/Service-Operations/Production-Documentation/Service-Ops-HubSpot-Contact-Enrichment",
@@ -920,14 +922,9 @@
                               "latchel-admin/Service-Operations/Production-Documentation/Service-Ops-Troubleshooting-Guide-for-System-Issues-Console-AWS-Assembly-etc",
                               "latchel-admin/Service-Operations/Production-Documentation/Service-Ops-Guidelines-in-Determining-Active-PM-Management-on-a-Work-Order",
                               "latchel-admin/Service-Operations/Production-Documentation/Service-Ops-Handling-Multiple-Work-Orders-Generated-by-Harmonia-Intake",
-                              "latchel-admin/Service-Operations/Production-Documentation/PREMIUM-How-to-Assign-a-Preferred-Service-Provider",
                               "latchel-admin/Service-Operations/Production-Documentation/Service-Ops-How-to-Use-Contact-Rotations-EEC-Pre-Dispatch",
-                              "latchel-admin/Service-Operations/Production-Documentation/EMERGENCY-Work-Order-Is-Not-Complete-Issue-is-Not-Resolved",
-                              "latchel-admin/Service-Operations/Production-Documentation/Follow-Up-Guidelines-for-On-Call-Customers-app-latchel-com",
-                              "latchel-admin/Service-Operations/Production-Documentation/How-To-Add-a-New-Service-Provider",
-                              "latchel-admin/Service-Operations/Production-Documentation/Job-Aid-Handling-Tasks-assigned-to-the-Resident-Follow-Up-Group",
-                              "latchel-admin/Service-Operations/Production-Documentation/EMERGENCY-How-to-Handle-Changes-to-the-Approved-Budget",
-                              "latchel-admin/Service-Operations/Production-Documentation/EMERGENCY-How-to-Handle-Duplicate-Work-Orders"
+                              "latchel-admin/Service-Operations/Production-Documentation/Service-Ops-How-to-Split-Work-Orders",
+                              "latchel-admin/Service-Operations/Production-Documentation/Service-Ops-Job-Aid-AI-Voice-for-Vendors"
                             ]
                           },
                           {
