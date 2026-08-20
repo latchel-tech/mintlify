@@ -1037,13 +1037,16 @@
                           {
                             "group": "Coaches",
                             "pages": [
+                              "latchel-admin/Service-Operations/Production-Documentation/SBI-Coaching-Method",
                               "latchel-admin/Service-Operations/Production-Documentation/STAR-Feedback-Model"
                             ]
                           },
                           {
                             "group": "Policy: Latchel Time and Attendance Policies (Operations Production Team)",
                             "pages": [
-                              "latchel-admin/Service-Operations/Production-Documentation/How-To-Fill-Out-the-Temporarily-Unavailable-Form"
+                              "latchel-admin/Service-Operations/Production-Documentation/How-To-Fill-Out-the-Temporarily-Unavailable-Form",
+                              "latchel-admin/Service-Operations/Production-Documentation/Measures-for-Attendance-Punctuality-Guidelines",
+                              "latchel-admin/Service-Operations/Production-Documentation/Sick-Personal-Carers-Leave-Policy-Operations-Production-Team"
                             ]
                           },
                           "latchel-admin/Service-Operations/Production-Documentation/How-to-Gather-Additional-Estimates",
@@ -1054,10 +1057,14 @@
                           "latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Feedback-Loop-Ticket-Assembly",
                           "latchel-admin/Service-Operations/Production-Documentation/Job-Aid-Support-Team-Responsibilities-for-Quote-Analysis-Process",
                           "latchel-admin/Service-Operations/Production-Documentation/Job-Aid-Peer-Review-Process-for-Estimate-Analysis",
+                          "latchel-admin/Service-Operations/Production-Documentation/Phone-Number-Experience",
+                          "latchel-admin/Service-Operations/Production-Documentation/Informational-Basic-Service-Ops-Guidelines-and-Rules",
+                          "latchel-admin/Service-Operations/Production-Documentation/Latchel-Processes-and-Product-Wiki",
                           "latchel-admin/Service-Operations/Production-Documentation/How-to-Navigate-Properties-Tab-in-the-Latchel-Console",
                           "latchel-admin/Service-Operations/Production-Documentation/How-to-Use-the-Serv-Ops-Intake-Workflows",
                           "latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-situations-for-WOs-awaiting-PM-action",
-                          "latchel-admin/Service-Operations/Production-Documentation/Latchel-Processes-and-Product-Wiki"
+                          "latchel-admin/Service-Operations/Production-Documentation/Job-Aid-AI-Summarize-Feature-for-Work-Orders",
+                          "latchel-admin/Service-Operations/Production-Documentation/How-to-Submit-Associate-Feedback-Tickets"
                         ]
                       },
                       "latchel-admin/Service-Operations/SOP-Reporting-Suspected-Account-Compromise",
