@@ -989,21 +989,30 @@
                             "group": "Operations Support Specialists",
                             "pages": [
                               "latchel-admin/Service-Operations/Production-Documentation/Operations-Support-Specialist-Business-Continuity-Plan",
+                              "latchel-admin/Service-Operations/Production-Documentation/Operations-Support-Specialist-Job-Aid-Work-Queues-Labor-Management",
+                              "latchel-admin/Service-Operations/Production-Documentation/Operations-Support-Specialist-How-to-Handle-Need-To-Verify-Tickets-and-Voicemails",
                               "latchel-admin/Service-Operations/Production-Documentation/Operations-Support-Specialist-Real-time-Monitoring-of-Emergency-Tasks",
                               "latchel-admin/Service-Operations/Production-Documentation/Operations-Support-Specialist-Real-time-Monitoring-of-Emergency-Emails",
                               "latchel-admin/Service-Operations/Production-Documentation/Operations-Support-Specialist-Real-time-Monitoring-of-Inbound-Calls-Amazon-Connect",
+                              "latchel-admin/Service-Operations/Production-Documentation/Orphaned-Work-Orders",
                               "latchel-admin/Service-Operations/Production-Documentation/Operations-Support-Specialist-Bad-Status-Too-Old-Report",
                               "latchel-admin/Service-Operations/Production-Documentation/Operations-Support-Specialist-Non-Productive-Time",
                               "latchel-admin/Service-Operations/Production-Documentation/Monitoring-Schedule-Adherence-and-Staff-Availability",
                               "latchel-admin/Service-Operations/Production-Documentation/Operations-Support-Specialist-When-to-offer-voluntary-time-off-VTO",
                               "latchel-admin/Service-Operations/Production-Documentation/Ops-Policy-All-Hands-on-Deck",
+                              "latchel-admin/Service-Operations/Production-Documentation/SOP-How-to-verify-open-shifts-in-Deputy",
                               "latchel-admin/Service-Operations/Production-Documentation/How-to-Work-Around-Service-Degradation-Events",
+                              "latchel-admin/Service-Operations/Production-Documentation/Operations-Support-Specialist-SLA-Review-workflow",
                               "latchel-admin/Service-Operations/Production-Documentation/Operations-Support-Specialist-Shift-Interval-Data-Toolbox",
                               "latchel-admin/Service-Operations/Production-Documentation/Operations-Support-Specialist-Cadence",
                               "latchel-admin/Service-Operations/Production-Documentation/Slack-Coaching-Ticket-Validation-Tracking-Process",
                               "latchel-admin/Service-Operations/Production-Documentation/Ops-Support-Handling-Messages-from-latchel-rentredi-Channel-via-Assembly",
                               "latchel-admin/Service-Operations/Production-Documentation/Operations-Support-Specialist-SOP-Library",
-                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-Between-Teams"
+                              "latchel-admin/Service-Operations/Production-Documentation/Support-Compliance-Dashboard",
+                              "latchel-admin/Service-Operations/Production-Documentation/Centralized-Reporting-for-Support-Compliance-Dashboard",
+                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-Between-Teams",
+                              "latchel-admin/Service-Operations/Production-Documentation/Service-Operations-Support-Specialist-Guidelines-for-Handling-Associate-Queries",
+                              "latchel-admin/Service-Operations/Production-Documentation/Ops-Support-Handling-Resident-left-comments-on-job-Tasks"
                             ]
                           },
                           {
