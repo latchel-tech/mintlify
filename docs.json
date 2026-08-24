@@ -184,12 +184,6 @@
                       "s/topic/0TO5e000000h9wqGAA/How-Latchel-Integration-Works",
                       "s/topic/0TO5e000000h9wqGAA/How-to-Export-Reports-with-Reference-IDs",
                       {
-                        "group": "Rentvine",
-                        "pages": [
-                          "s/topic/0TO5e000000h9wqGAA/Rentvine-Integration-Reference-Guide"
-                        ]
-                      },
-                      {
                         "group": "Latchel Data Sync Extension",
                         "pages": [
                           "s/topic/0TO5e000000h9wqGAA/Latchel-Data-Sync-Extension-Reference-Guide",
@@ -225,6 +219,12 @@
                         "pages": [
                           "s/topic/0TO5e000000h9wqGAA/Buildium-Integration-Reference-Guide",
                           "s/topic/0TO5e000000h9wqGAA/redirect-tenant-maintenance-submissions-from-buildium-to-latchel"
+                        ]
+                      },
+                      {
+                        "group": "Rentvine",
+                        "pages": [
+                          "s/topic/0TO5e000000h9wqGAA/Rentvine-Integration-Reference-Guide"
                         ]
                       },
                       {
