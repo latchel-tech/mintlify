@@ -1,0 +1,171 @@
+---
+title: "August 24, 2026"
+---
+
+The following are the Latchel updates for the week of August 24, 2026.
+
+### **New Features**
+
+1. **Resident Contact Info Now Stays in Sync With Your PMS**
+
+Until now, resident contact info like emails and phone numbers only came over from your PMS on their very first sync. Anything your team updated after that stayed inside your PMS.
+
+<Check>
+  **What’s New:**
+
+  We’re now syncing resident contact info for existing residents too — on every sync, across every PMS we integrate with.
+
+  - Both sources live side by side, labeled so you can always tell what came from your PMS and what was entered in Latchel
+  - Changes flow through on every sync: remove a number in your PMS and it comes off the resident in Latchel on the next pass
+</Check>
+
+**Safeguards worth knowing about:** we’ll never delete a resident’s only number, and we’ll never leave a resident with no contact info at all — if your PMS has nothing on file, what’s in Latchel stays put.
+
+This one has been on customer wish lists for years — thank you to everyone who asked for it.
+
+<Tip>
+  Questions about how it behaves with your PMS? Email [success@latchel.com](mailto:success@latchel.com).
+</Tip>
+
+2. **Non-Maintenance Calls Now Route by Category — and Can Transfer Live**
+
+Not every call is a maintenance request. Leasing questions, rent payment questions, and vendor calls all used to land in the same place, because every non-resident call went to whatever single destination you had configured.
+
+<Check>
+  **What’s New**
+
+  - **Category-based routing.** Every account, new and existing, comes seeded with four basic categories (Leasing, Payments, Owner Inquiries, Service Provider Inquiries) plus a catch-all for anything that doesn’t match. Add as many of your own as you like — each one just needs a title and a short description
+  - After we ask the caller what they’re calling about, Latchel matches their answer against your category descriptions and sends the call to the destination you set for that category
+  - **Live call forwarding.** A brand-new destination type: instead of a webhook or an email, forward the live call straight to a phone number. You’ll get a notification either way, telling you whether the transfer connected or didn’t
+</Check>
+
+<Callout icon="hands-holding-heart" iconType="duotone" color="#B19cf8">
+  **Why This Matters:**
+
+  Leasing questions can go to your leasing line, rent questions to accounting, and the calls that need a real person can ring one — without your team working as a switchboard.
+</Callout>
+
+**Learn more about this cool Latchel AI feature through this help guide:**
+
+<Card title="24/7 AI Virtual Receptionist (Non-Resident Call Intake)" color="#ff9b8a" icon="user-headset" iconType="duotone" href="/s/topic/0TO5e000000h9wqGAA/24-7-ai-virtual-receptionist">
+  Discover how Latchel's AI receptionist handles calls from non-resident around the clock, ensuring no requests goes unanswered.
+</Card>
+
+3. **Time Sheets Are Now in Your Analytics Reports — With the Odd Ones Flagged**
+
+Remember the clock in / clock out release for in-house techs from our last edition? That data now has a home in your reports.
+
+We've added **Time Sheets** to Analytics and Analytics\+ — download the full sheet and see actual clocked hours next to reported hours.
+
+- Every entry shows times in both the property's time zone and UTC, so there's no mental math when you manage across regions
+- Meaningful gaps between true clock in/out and reported clock in/out are highlighted automatically
+- So are the strange ones — an overnight clock-in that never closed out, for example
+
+<Callout icon="hands-holding-heart" iconType="duotone" color="#B19cf8">
+  **Why This Matters**
+
+  You can catch a labor-hours or billing discrepancy while it's still fresh, instead of reconstructing what happened at the end of the week.
+
+  <Columns cols={2}>
+    <Column>
+      <Card title="Open your Analytics Dashboard here!" color="#ff9b8a" icon="display-chart-up" iconType="duotone" horizontal href="https://app.latchel.com/admin/analytics">
+      </Card>
+    </Column>
+    <Column>
+    </Column>
+  </Columns>
+</Callout>
+
+<Tip>
+  **Bonus:** Refer another property manager to Latchel and earn **one year of Analytics\+ for free!**
+</Tip>
+
+### Resolved Bugs
+
+1. Work Order Notifications Follow the Right Team After a Portfolio Move
+
+<Warning>
+  **What was happening:**
+
+  When properties were moved to a different portfolio, properties carrying a property-level team override kept pointing at their old notification group. New work orders at those properties emailed the wrong set of users — and the team that should have been notified never heard about them.
+</Warning>
+
+<Check>
+  **What’s fixed:**
+
+  Individual and bulk property moves now include an explicit option to bring team assignments along with the move, so work order notifications go to the team that owns the portfolio the property actually sits in.
+</Check>
+
+<Tip>
+  Spot a work order that notified the wrong people? You can reassign the team on the work order itself, and [success@latchel.com](mailto:success@latchel.com) can help sort out the property setup behind it.
+</Tip>
+
+### **Special Announcements**
+
+1. **Split Work Orders Now Describe Their Own Issue**
+
+<Accordion title="Shoutout!" defaultOpen iconType="duotone">
+  <Icon icon="party-horn" iconType="sharp-duotone-solid" color="#ff9b8a" size={35} /> Shoutout to **Propertywize** and **Scarpa** for flagging this one!
+</Accordion>
+
+When a resident reports several unrelated problems on one call, we split them into separate work orders. Until now, each of those work orders repeated the entire intake conversation — every issue the resident mentioned, plus every troubleshooting question we asked about any of them. Service provider instructions took the worst of it: a vendor dispatched for a broken garage door opener would open the work order and read mostly about the resident’s plumbing leak.
+
+<Warning>
+  **What’s changed:**
+
+  every split work order is now built from its own issue alone — the resident’s details about that specific problem and the diagnostics we ran on it, and nothing about the others. If we genuinely didn’t discuss or troubleshoot one of the issues on the call, that section is left off rather than padded out with the full recap.
+</Warning>
+
+<Callout icon="hands-holding-heart" iconType="duotone" color="#B19cf8">
+  **What this means for you:**
+
+  - Vendors can tell what they’ve been dispatched for at a glance, and your coordinators stop reading past irrelevant detail to find the real scope
+  - This applies to newly created split work orders — tickets created before this release keep the descriptions they already have
+  - **Coming soon:** the original work order in a split still carries the full, all-issues description. Tightening that one up is next on our list
+</Callout>
+
+2. **General Ledger Management — Now Free for Resident Benefits Customers**
+
+Does your team ever miss — or run late on — adding GL codes for residents opted into benefits? It's a small step that's easy to lose track of, and it usually surfaces later as a reconciliation headache.
+
+We're now offering **GL Management at no cost to every Resident Benefits customer.** Our team makes sure each lease opted into benefits gets a corresponding GL code, and that the resident's benefits are active in Latchel on move-in day.
+
+<Tip>
+  **To enroll, email [success@latchel.com](mailto:success@latchel.com).**
+</Tip>
+
+<Columns cols={2}>
+  <Column>
+    <Card title="New to Latchel Benefits?" color="#ff9b8a" icon="shield-user" iconType="duotone" horizontal href="https://latchel.com/resident-benefits-overview/">
+      Learn more here!
+    </Card>
+  </Column>
+  <Column>
+  </Column>
+</Columns>
+
+### **One Click, 10 Seconds — Rate Our Newsletter**
+
+Only one question is required: how valuable is this newsletter to you? Click a number, hit submit. Everything else — favorite feature, what to build next — is optional if you've got more to say.
+
+<Columns cols={2}>
+  <Column>
+    <Card title="Rate it here!" color="#ff9b8a" icon="message-pen" iconType="duotone" horizontal href="https://forms.gle/AbUoieefga3azLmH7">
+    </Card>
+  </Column>
+  <Column>
+  </Column>
+</Columns>
+
+<br />
+
+We genuinely want to hear from you!
+
+### **Interested in learning more about Latchel's products? Book a meeting with us.**
+
+<Columns cols={2}>
+  <Column>
+    <Card title="Get a Demo" color="#ff9b8a" icon="comments-question-check" iconType="duotone" horizontal href="https://latchel.com/demo-request-releases/">
+    </Card>
+  </Column>
+</Columns>
