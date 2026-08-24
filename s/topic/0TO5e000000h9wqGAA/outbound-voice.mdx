@@ -41,6 +41,27 @@ If the vendor asks for something the AI can't resolve, it doesn't guess — it c
   **Vendors stay in control too.** A vendor can tell the AI they'd prefer to be called at a specific time of day, and Latchel will call them at that time going forward.
 </Check>
 
+### Work Order States and Ages That Trigger Calls
+
+#### States
+
+1. Accept **open** (unaccepted) requests
+2. **Scheduling Service Provider** - schedule accepted work orders
+3. **Confirming Completion** - Confirm completion of scheduled work
+4. **Awaiting Invoice** - Upload/submit invoice for completed work
+
+#### Age Thresholds
+
+- **Under 12 hours since last state change** → no call
+- **12 hours to 3 days since last state change** → triggers the daily automated outbound call; while the vendor is on the line, the AI will also ask about any other open WOs whose last state change was within the past month
+- **Needs Approval status** does NOT trigger a call (it doesn't require vendor action)
+
+<Warning>
+  **Bid Requests & Estimates**
+
+  The AI does NOT follow up on outstanding bid requests or estimates via outbound call, but it can receive estimates over voice.
+</Warning>
+
 ### **Steps to Activate**
 
 ### 1. Turn On Automated AI Calls
@@ -132,6 +153,16 @@ If the vendor asks for something the AI can't resolve, it doesn't guess — it c
   **Automated Daily Calls** will eventually be a paid upgrade to your maintenance subscription. For a limited time, it's included free so you can try it before pricing goes into effect. New customers who sign up with Latchel this quarter also get a free trial period.
 </Warning>
 
+### Vendor Opt-Outs & Preferred Call Times
+
+There are three ways to manage this:
+
+<Icon icon="circle-1" iconType="duotone" size="25" /> PM manages it on the vendor user profile
+
+<Icon icon="circle-2" iconType="duotone" size="25" /> Vendor self-manages by accessing their Call Preferences in their Account Settings.
+
+<Icon icon="circle-3" iconType="duotone" size="25" /> Vendor states their preferences during a call
+
 **Not a Latchel customer yet? You can request a live demo of Outbound Voice and the rest of the AI Voice suite:**
 
 <Columns cols={2}>
@@ -196,6 +227,18 @@ If the vendor asks for something the AI can't resolve, it doesn't guess — it c
 
   <Accordion title="Does AI Voice only make outbound calls, or can it also answer when a vendor calls in?">
     Both. If a vendor calls your Latchel line and their number is recognized, AI Voice can also handle that inbound call — so the experience is consistent whether Latchel calls the vendor or the vendor calls in.
+  </Accordion>
+
+  <Accordion title="When the AI collects an invoice on a call, how is it delivered to us? We route invoices into our accounting system and need to know where they land.">
+    We don't collect invoices over voice, only estimates. Building an invoice is too involved for a voice call (before/after pictures may be required, separating labor and materials and breaking out line items). The routing for invoices remains unchanged (and if we ever do solve creating a full and complete invoice over voice, we'd keep the same invoice routing. wehave today)
+  </Accordion>
+
+  <Accordion title="Does the autopilot only call on dispatched and approved work orders? We need confirmation it will not schedule work sitting in Needs Approval or estimate-only status.">
+    Yes, it doesn't take work that isn't approved and send it out. Needs Approval is NOT a status that requires vendor action so it wouldn't trigger a vendor call or be part of its call script. If a vendor asked about it, they'd be told it's in Needs Approval. In addition, the same budget limits and rules apply for voice calls as any other work order.
+  </Accordion>
+
+  <Accordion title="We are in California, a two-party consent state. Please confirm how recording consent is handled on these calls beyond the opening disclosure.">
+    In California, consent is legally achieved if a participant stays on the line after hearing an automated or verbal disclosure.
   </Accordion>
 </AccordionGroup>
 
