@@ -8,7 +8,7 @@ description: "The Rent Manager Integration with Latchel makes property maintenan
 1. New Properties/Units added to Rent Manager will push to Latchel but **not** vice versa.
    - **Previously created Properties:**  will only update the active status (from active to inactive only and not vice versa). This means if a customer activates an in-active property in the platform, this change will not propagate to Latchel.
 2. New Residents added to Rent Manager will push to Latchel but **not** vice versa.
-3. Service Issues that have the **[Latchel] Maintenance Category** in Rent Manager **AND** a property or unit assigned to the Service Issue will push to Latchel.
+3. Service Issues that have the **\[Latchel\] Maintenance Category** in Rent Manager **AND** a property or unit assigned to the Service Issue will push to Latchel.
 4. Work orders created in Latchel will push to Rent Manager with the following information:
    - The Job Title
    - The Job Status
@@ -38,7 +38,7 @@ description: "The Rent Manager Integration with Latchel makes property maintenan
 
 The Rent Manager equivalent to Latchel’s **work orders** is called **Service Manager Issues**. You can find them in the **Services** tab.
 
-- For a Service Issues to be synced from Rent Manager to Latchel, it has to have the **[Latchel] Maintenance** **Category AND** a property or unit assigned to it.
+- For a Service Issues to be synced from Rent Manager to Latchel, it has to have the **\[Latchel\] Maintenance** **Category AND** a property or unit assigned to it.
 - The sync occurs every hour.
 - Any update to a Service Issue in Rent Manager won’t be reflected in Latchel.
 
@@ -93,3 +93,22 @@ Special **Categories**, **Priorities,** and **Statuses** are created on Rent Man
 ### **File Sync**
 
 Latchel will automatically sync files (such as pictures and invoices) to Rent Manager regardless of the work order status.
+
+### **Other Related Articles**
+
+<Columns cols={2}>
+  <Column>
+    <Card title="Integrating Rent Manager into Latchel" icon="building-circle-check" iconType="duotone" href="/s/topic/0TO5e000000h9wqGAA/Integrating-Rent-Manager-into-Latchel">
+      This guide walks you through how to connect your Rent Manager account with Latchel.
+    </Card>
+
+    <Card title="Rent Manager Integration Troubleshooting" icon="building-circle-check" iconType="duotone" href="/s/topic/0TO5e000000h9wqGAA/Rent-Manager-Integration-Troubleshooting">
+      Resolve common issues that may occur when connecting or syncing with Rent Manager.
+    </Card>
+  </Column>
+  <Column>
+    <Card title="Turn Off Maintenance Requests in Rent Manager" icon="building-circle-check" iconType="duotone" href="/s/topic/0TO5e000000h9wqGAA/Turn-Off-Maintenance-Request-in-Rent-Manager">
+      Learn how to disable your Rent Manager maintenance request to redirect your residents to Latchel.
+    </Card>
+  </Column>
+</Columns>

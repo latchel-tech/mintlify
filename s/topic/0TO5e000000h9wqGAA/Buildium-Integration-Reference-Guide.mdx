@@ -47,14 +47,12 @@ The two-way sync between Buildium and Latchel ensures that key data—like prope
 
 - **Properties:** The complete property address, along with the property ID, unit ID, and status, is brought over to Latchel. During subsequent synchronizations of the same property, both the address and integration data are interpreted to prevent duplicate property entries in Latchel.
 - **Residents:** Latchel syncs all eligible residents from Buildium every hour. Unlike other integrations that only sync recently added or edited residents, Buildium syncs all current (non-"Past") residents at a property so they can submit work orders in Latchel.
-
   Key resident fields mapped from Buildium to Latchel include name, email, phone numbers (prioritizing cell \> home \> work \> fax), property/unit IDs, and move-in/move-out dates. A primary phone number is required and is selected based on priority.
-
   Once a resident is created in Latchel, only specific fields are updated during future syncs—such as property/unit associations and move-in/move-out dates. Residents are marked inactive in Latchel after their move-out date.
 - **Work Orders:** The Buildium integration no longer imports work orders to Latchel by default.
 
 <Tip>
-  If you wish to enable this feature, email Latchel via [**team@latchel.com**](mailto:team@latchel.com)**.**
+  If you wish to enable this feature, email Latchel via **[team@latchel.com](mailto:team@latchel.com).**
 </Tip>
 
 2. **Latchel  Buildium**
@@ -79,6 +77,12 @@ To ensure accurate customer billing, Latchel runs an automated process each mont
 
 **To know more about Latchel integration, please visit:**
 
-<Card title="How Latchel Integration Works" icon="arrow-right-arrow-left" iconType="duotone" color="#ff9b8a" href="/s/topic/0TO5e000000h9wqGAA/How-Latchel-Integration-Works">
+<Card title="How Latchel Integration Works" color="#ff9b8a" icon="arrow-right-arrow-left" iconType="duotone" href="/s/topic/0TO5e000000h9wqGAA/How-Latchel-Integration-Works">
   Get the high-level view of how Latchel connects with your property management system to streamline operations.
+</Card>
+
+**Other Related Article**
+
+<Card title="Redirect Tenant Maintenance Submissions From Buildium to Latchel" color="#ff9b8a" icon="house-chimney-blank" iconType="duotone" href="/s/topic/0TO5e000000h9wqGAA/redirect-tenant-maintenance-submissions-from-buildium-to-latchel">
+  Redirect Buildium maintenance requests to the Latchel maintenance URL
 </Card>

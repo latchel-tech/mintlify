@@ -14,7 +14,6 @@ description: "Once the integration is active, it will allow groupings of propert
 1. **Properties:** Property fields are automatically brought over from Propertyware to Latchel via initial sync with a two-hour interval.
 2. **Residents:** For both initial and regular sync, only residents with active leases are included on the imports for initial and ongoing sync. Much like properties, resident details are also synced with a two-hour interval
 3. **Work Orders:** Work orders are excluded from all syncs if the owner's email does not match the email used to access Propertyware (as supplied when setting up the integration).
-
    <Check>
      **Each work order is:**
      - Assigned to a property manager based on the property manager user ID related to the property
@@ -39,7 +38,6 @@ Subsequent syncs will look for any data that was created or updated **within the
 2. **Work Order** - In order for new work orders to sync to Latchel, the “**Managed By**” field must be assigned to the Latchel user in Propertyware. There is no way to automatically have all of the “Managed By” fields filled out when a maintenance request is submitted. It has to be manually done by someone on the team. Normally:
    - **When a resident submits the WO**, the Managed By field will be blank.
    - **When a Propertyware user creates the WO**, the Managed By defaults to the user that created the WO.
-
    <Check>
      **To customize the "Managed By" field:**
      - Go to your Settings.
@@ -72,7 +70,7 @@ When a property is deactivated through this process. It will be logged to the pr
 
 2. **Residents -** The integration will not currently update contact information, name nor “**active**” status. Once a resident is created a two things will change on the subsequent sync:
    - The **property and unit** the resident is associated with
-   - The **move_in and move_out dates**. Any issues with move in/out dates needs to be resolved in Propertyware when an integration is in place. These fields can be found on the tenant's lease.
+   - The **move\_in and move\_out dates**. Any issues with move in/out dates needs to be resolved in Propertyware when an integration is in place. These fields can be found on the tenant's lease.
 
 <Frame>
   ![Propertyware On Demand Real Estate Solution 06 24 2025 01 04 PM Pn](/images/Propertyware-On-Demand-Real-Estate-Solution-06-24-2025_01_04_PM.png)
@@ -98,3 +96,22 @@ When a customer is on an **_active_** integration, an indication will show at th
 <Frame>
   ![](/images/rtaImage-349.jpg)
 </Frame>
+
+#### **Other Related Articles**
+
+<Columns cols={2}>
+  <Column>
+    <Card title="How to Activate the Client Propertyware Integration" icon="cloud-arrow-up" iconType="duotone" href="/s/topic/0TO5e000000h9wqGAA/How-to-Activate-the-Client-Propertyware-Integration">
+      Follow these instructions to turn on the Propertyware integration within your Latchel account.
+    </Card>
+
+    <Card title="Turn Off Maintenance Request in PropertyWare" icon="cloud-check" iconType="duotone" href="/s/topic/0TO5e000000h9wqGAA/Turn-Off-Maintenance-Request-in-Propertyware">
+      Learn how to disable your Propertyware maintenance request to redirect your residents to Latchel.
+    </Card>
+  </Column>
+  <Column>
+    <Card title="How to Sync Work Order Attachments from Latchel to PropertyWare" icon="cloud-check" iconType="duotone" href="/s/topic/0TO5e000000h9wqGAA/How-to-Sync-Work-Order-Attachments-from-Latchel-to-PropertyWare-New-Experience">
+      This guide walks you through how to sync work order attachment from your Latchel work orders to your Propertyware.
+    </Card>
+  </Column>
+</Columns>
