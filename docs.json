@@ -194,7 +194,8 @@
                           "s/topic/0TO5e000000h9wqGAA/Navigating-the-Latchel-Data-Sync-Extension-New-Version",
                           "s/topic/0TO5e000000h9wqGAA/Prevent-Chrome-from-Interrupting-Your-Auto-Sync",
                           "s/topic/0TO5e000000h9wqGAA/Disable-Online-Maintenance-Requests"
-                        ]
+                        ],
+                        "public": true
                       },
                       {
                         "group": "Rent Manager",
@@ -203,7 +204,8 @@
                           "s/topic/0TO5e000000h9wqGAA/Integrating-Rent-Manager-into-Latchel",
                           "s/topic/0TO5e000000h9wqGAA/Turn-Off-Maintenance-Request-in-Rent-Manager",
                           "s/topic/0TO5e000000h9wqGAA/Rent-Manager-Integration-Troubleshooting"
-                        ]
+                        ],
+                        "public": true
                       },
                       {
                         "group": "Propertware",
@@ -212,32 +214,37 @@
                           "s/topic/0TO5e000000h9wqGAA/How-to-Activate-the-Client-Propertyware-Integration",
                           "s/topic/0TO5e000000h9wqGAA/How-to-Sync-Work-Order-Attachments-from-Latchel-to-PropertyWare-New-Experience",
                           "s/topic/0TO5e000000h9wqGAA/Turn-Off-Maintenance-Request-in-Propertyware"
-                        ]
+                        ],
+                        "public": true
                       },
                       {
                         "group": "Buildium",
                         "pages": [
                           "s/topic/0TO5e000000h9wqGAA/Buildium-Integration-Reference-Guide",
                           "s/topic/0TO5e000000h9wqGAA/redirect-tenant-maintenance-submissions-from-buildium-to-latchel"
-                        ]
+                        ],
+                        "public": true
                       },
                       {
                         "group": "Rentvine",
                         "pages": [
                           "s/topic/0TO5e000000h9wqGAA/Rentvine-Integration-Reference-Guide"
-                        ]
+                        ],
+                        "public": true
                       },
                       {
                         "group": "Yardi",
                         "pages": [
                           "s/topic/0TO5e000000h9wqGAA/Yardi-Voyager-Standard-Interfaces-Setup"
-                        ]
+                        ],
+                        "public": true
                       },
                       {
                         "group": "RentCheck",
                         "pages": [
                           "s/topic/0TO5e000000h9wqGAA/Rentcheck-Integration"
-                        ]
+                        ],
+                        "public": true
                       },
                       {
                         "group": "Other Integration Guides",
@@ -246,7 +253,8 @@
                           "s/topic/0TO5e000000h9wqGAA/How-to-Generate-an-API-Key",
                           "s/topic/0TO5e000000h9wqGAA/The-Webhook-Subscription",
                           "s/topic/0TO5e000000h9wqGAA/How-to-Terminate-the-Gmail-Integration"
-                        ]
+                        ],
+                        "public": true
                       }
                     ]
                   },
