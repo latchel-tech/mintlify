@@ -2,36 +2,24 @@
    Pin the Mintlify private-space Login/Logout button as a
    floating icon button fixed to the bottom-right corner of
    the page, instead of sitting in the topbar.
-
-   Also hides the "Latchel Admin" nav tab entirely unless the
-   authenticated user belongs to the "latchel" group — Mintlify's
-   `groups` frontmatter property only blocks direct page access
-   (404s), it does not hide the tab itself, so we handle that
-   part here using window.mintlify.user.
    ========================================================== */
-
-const ADMIN_TAB_TEXT = 'Latchel Admin';
-const REQUIRED_GROUP = 'latchel';
 
 window.addEventListener('DOMContentLoaded', () => {
   relocateAuthLink();
-  toggleAdminTabVisibility();
 });
 
 // Mintlify re-renders parts of the topbar on client-side navigation
 // (e.g. after login/logout state changes), so re-run there too.
 window.addEventListener('mintlify:user', () => {
   relocateAuthLink();
-  toggleAdminTabVisibility();
 });
 
 // Mintlify is a single-page app under the hood. On client-side route
 // changes it can re-create a fresh .login-link/.logout-link element
-// in the topbar (since the original was moved out by us), and can
-// also re-render the tab bar. Watch for both and re-apply.
+// in the topbar (since the original was moved out by us). Watch for
+// that and relocate the fresh one, discarding any stale duplicate.
 const authObserver = new MutationObserver(() => {
   relocateAuthLink();
-  toggleAdminTabVisibility();
 });
 authObserver.observe(document.body, { childList: true, subtree: true });
 
@@ -71,18 +59,8 @@ function relocateAuthLink() {
 
   // Hover tooltip text differs depending on login vs. logout state
   if (fresh.classList.contains('login-link')) {
-    fresh.setAttribute('data-tooltip', 'Login Admin');
+    fresh.setAttribute('data-tooltip', 'Admin login');
   } else if (fresh.classList.contains('logout-link')) {
-    fresh.setAttribute('data-tooltip', 'Logout Admin');
+    fresh.setAttribute('data-tooltip', 'Admin logout');
   }
-}
-
-function toggleAdminTabVisibility() {
-  const groups = (window.mintlify && window.mintlify.user && window.mintlify.user.groups) || [];
-  const isAuthorized = groups.includes(REQUIRED_GROUP);
-
-  document.querySelectorAll('.nav-tabs-item').forEach((tab) => {
-    if (tab.textContent.trim() !== ADMIN_TAB_TEXT) return;
-    tab.style.display = isAuthorized ? '' : 'none';
-  });
 }
