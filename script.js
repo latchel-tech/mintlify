@@ -4,14 +4,19 @@
    the page, instead of sitting in the topbar.
 
    Also hides the "Latchel Admin" nav tab entirely unless the
-   authenticated user belongs to the "latchel" group — Mintlify's
+   authenticated user's email is on the Latchel domain — Mintlify's
    `groups` frontmatter property only blocks direct page access
    (404s), it does not hide the tab itself, so we handle that
    part here using window.mintlify.user.
+
+   Note: Mintlify flattens the Info API's "content" field directly
+   onto window.mintlify.user (it does NOT nest under a .content key).
+   So if the Info API returns content: { isLatchelDomain: true },
+   that shows up as window.mintlify.user.isLatchelDomain — not
+   window.mintlify.user.content.isLatchelDomain.
    ========================================================== */
 
 const ADMIN_TAB_TEXT = 'Latchel Admin';
-const REQUIRED_GROUP = 'latchel';
 
 window.addEventListener('DOMContentLoaded', () => {
   relocateAuthLink();
@@ -78,8 +83,7 @@ function relocateAuthLink() {
 }
 
 function toggleAdminTabVisibility() {
-  const groups = (window.mintlify && window.mintlify.user && window.mintlify.user.groups) || [];
-  const isAuthorized = groups.includes(REQUIRED_GROUP);
+  const isAuthorized = Boolean(window.mintlify && window.mintlify.user && window.mintlify.user.isLatchelDomain);
 
   document.querySelectorAll('.nav-tabs-item').forEach((tab) => {
     if (tab.textContent.trim() !== ADMIN_TAB_TEXT) return;
