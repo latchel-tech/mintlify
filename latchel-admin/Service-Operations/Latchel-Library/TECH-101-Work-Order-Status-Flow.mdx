@@ -1,0 +1,32 @@
+---
+title: "(TECH 101) Work Order Status Flow"
+groups: ["latchel"]
+---
+
+## Purpose
+
+<Info>
+**Purpose of this document**
+Show all of the possible job state changes from any state
+</Info>
+
+<Info>
+**Who should read this document?**
+Anyone interested in learning how jobs are allowed to move from one status to another
+</Info>
+
+### Status Flow & State Diagram
+
+<Info>
+**What is in this?**
+This describes all of the possible state changes and the logic behind these state changes. Any of the state changes in the flow can occur through the primary take action or expected exception paths. The “Other available state changes” can occur through secondary actions or rare edge cases.
+</Info>
+
+
+<Frame>
+  <img src="/images/LL-86.png" alt="Image" />
+</Frame>
+
+
+### Available Actions
+This [spreadsheet](https://docs.google.com/spreadsheets/d/15OQaAtXR5biBzRQKY51IZYWpBbd5ITZul8AJBZe61i4/edit#gid=924139970) catalogs the available actions by user type, such as Ops Admin, In-House, On-Demand, Managed PM, Service Provider, or Resident. SaaS PM users are not yet launched and their available actions are to be determined.

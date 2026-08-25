@@ -1,0 +1,15 @@
+---
+title: "Stripe Errors"
+groups: ["latchel"]
+---
+
+All Stripe Errors will post in slack channel: [#Service_provider_team](https://latchel.slack.com/archives/CL8GYPGF3)
+
+### This Authorization is no Longer Pending Approval
+Video Link: [https://drive.google.com/open?id=183QCmtqEVAnxvH7Ei4eP40Fdsmy8EzZ0](https://drive.google.com/open?id=183QCmtqEVAnxvH7Ei4eP40Fdsmy8EzZ0)
+- How to resolve a specific error in stripe labeled: **This Authorization is no Longer Pending Approval**
+- This occurs when we have collected funds from the property manager but did not disburse funds to the service provider. (Credit card issuing only)
+- Verify funds were withdrawn from property managers account by copying the primary property manager email and enter in search bar on Stripe dashboard. This will bring up the property managers account in Stripe.
+- Next take the invoice number in question and search in the Stripe dashboard. If there is more than one charge we need to find the correct charge amount.
+- There are times that service providers attempt to run the same card for two different amounts, when this occurs we will refund the incorrect amount. Allow customer to know that refunds take 7-10 business days.
+- Take action > Issue new card > Deselect property manager as payment source and make Latchel the payment source. (Funds were already collected from the PM and are now in Latchel accounts)

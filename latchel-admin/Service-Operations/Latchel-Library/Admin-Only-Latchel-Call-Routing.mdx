@@ -1,0 +1,15 @@
+---
+title: "(Admin Only) Latchel Call Routing"
+groups: ["latchel"]
+---
+
+| **IMPORTANT**: Latchel has a standard for starting a phone calls due to regulation requirements of recording the call. For information on how to make an outbound call, refer to: [↔ How to: Make Outbound Calls Within the Latchel Console](http://latchel.atlassian.net/wiki/spaces/LTG/pages/757235750) |
+|---|
+
+## Definitions
+1. **Emergency Callback** - The number that displays to Property Managers and Service Providers when they receive a call from the Emergency Bridge. If a property manager or service provider call this number and leave a voicemail the voicemail is forwarded to [emergency@latchel.com](mailto:emergency@latchel.com). See [Twilio Studio Flow configuration…](https://www.twilio.com/console/studio/flows/FWf2a0657a56901be2ed7253ff99c39ef0)
+2. **Latchel Console (xxx)** - Phone number used for 2-way texting into the Latchel Console. App is the production environment. Dev is the development test environment. Demo is for sales demonstrations. Calls go through an IVR controlled by Twilio Studio Flow to direct callers to the Resident, Property Manager, or Service Provider lines in Zendesk. See [Twilio Studio Flow configuration for App…](https://www.twilio.com/console/studio/flows/FW49e00334356b2cb72db0a3cf5a8de0f5)
+3. **Zendesk Groups**
+  1. **Tier 1 Premium Service Provider Group** - This group includes only Premium Tier 1 agents. They can receive any service provider call.
+  2. **Tier 1 Premium Resident Group**- This group includes both Premium and Emergency Tier 1 agents. They can receive resident calls about non-emergency follow-up.
+  3. **Tier 1 Emergency Resident Group** - This group contains only Emergency Tier 1 agents. They can receive resident calls about new maintenance requests or emergency follow-up.

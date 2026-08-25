@@ -1,0 +1,53 @@
+---
+title: "Twilio Management (4 Videos)"
+groups: ["latchel"]
+---
+
+Video List
+1. [https://drive.google.com/open?id=1YQGhioeScJEq09Db7FcJYW-S28QnQfAk](https://drive.google.com/open?id=1YQGhioeScJEq09Db7FcJYW-S28QnQfAk)
+- Used for offboardings typically to prevent residents from submitting work orders.
+- Go to the property manager’s company page on Stage
+- Scroll down to ‘maintenance communication settings’ to locate the ‘Latchel assigned phone number’.
+- Copy the phone number and go to the Twilio Console, on the left side go to ‘Numbers’, ‘Manage numbers’.
+- Paste the phone number into the search bar when you are on the page ‘Active numbers’ and click ‘Filter’.
+- Ensure the phone numbers match and click on the phone number, scroll down and click ‘Release this number’.
+- The phone number will be available to retrieve for 30 days in case customer would like to rejoin.
+- Latchel will no longer receive calls or texts from the assigned phone line.
+2. [https://drive.google.com/open?id=1jHoZZftemDP3QLc5tpZ4717dNkg3PtJc](https://drive.google.com/open?id=1jHoZZftemDP3QLc5tpZ4717dNkg3PtJc)
+- How to reissue a phone. (Use cases may be the area code does not match property location)
+- The account will require an active subscription, once activated the account will automatically be provided a phone number.
+- To ensure we are not using duplicate information, select ‘Friendly Name’s' in Twilio and search.
+- For a specific area code you will need to manually create the phone number
+- To purchase the new number on Twilio go to the ‘RED +’ symbol and search for the zip code requested.
+- You will then see a list of phone numbers populate for that area code if available. Choose a number and click ‘Buy XXX-XXX-XXXX’
+- Delete the released number from Latchel on the company page.
+- Update the ‘Friendly Name’ inside Twilio with the Property Managers name in Latchel. Update the drop down labeled ‘A call comes in’ to ‘Studio Flow’.
+- In the drop down to the right of ‘Studio Flow’ use this dropdown to select ‘Chatbox enabled hotline IVR flow’
+- Scroll down to ‘Messaging’ go to ‘A message comes in’ and select ‘Studio flow’.
+- In the drop down to the right of ‘Studio Flow’ drop down and select ‘ER chatbot’ and press ‘SAVE'
+- Copy the phone number that purchased and configuring in Twilio and paste it in Latchel under the ‘Maintenance Communications Settings’ and press ‘Save’.
+- For offboards you would look up the account by ‘Friendly name’ or phone number and release the phone number. Go back to the Latchel account delete the phone number and press save.
+- Numbers that were purchase and then turned off are available for re-purchase for 10 business days. To find released numbers look on the left side of Twilio and select ‘Released Numbers’.
+3.[https://drive.google.com/open?id=1UrLE0sPSMJsTZ4yxzUDUht00pIvz5NnO](https://drive.google.com/open?id=1UrLE0sPSMJsTZ4yxzUDUht00pIvz5NnO)
+- Go to ‘Maintenance Communications Settings’ on the property managers Latchel page and copy the phone number
+- On the left side of Twilio go to ‘All products and services’ and click ‘phone numbers’ search the phone number in the second field to left of the field that shows ‘phone numbers’.
+- Click on the Red ‘Filter’ button on the right far hand corner.
+- You can also search as the ‘friendly name’, however the phone number is the most reliable search method in Twilio.
+- Once you search this method the two best criteria that populate are ‘Call logs’ and ‘Message logs’.
+- Message logs are best for tracking the automated messages that are sent to customer via Latchel. “Latchelbot” 🙂 (Both inbound and outbound  automated texts are monitored here)
+- To get a spreadsheet of all text logs go to ‘View my message logs’ and once the page is loaded and then click on the far right, ‘Export to CSV’
+- Call logs are the same. ‘View messages logs’ and once the page is loaded click on the far right to, ‘Export to CSV’ (Ensure if you wish to gather ‘inbound’ or ‘outbound’ call data available in the drop down)
+- When searching call logs it is important to know that ‘From’ are calls made by Latchel to any entity (i.e. service providers, residents, property managers).
+- Outgoing and Incoming calls are marked appropriately.
+- Call logs> view outbound calls> use the ‘from’ search bar.
+- Call logs> view inbound calls> use the ‘to’ search bar.
+- If a property manager would like access to all call logs within a certain time frame. Select the date (typically a 30 day window) and this will bring up all call logs within the past thirty days.
+- ‘View my call logs’ and then ‘Export to CSV’ to view
+- Filter only the useful information, information is now ready to be shared with property manager if requested.
+4.[https://drive.google.com/open?id=1rcC8IyqqirXSQkywBcXpRSKGOyAoYE90](https://drive.google.com/open?id=1rcC8IyqqirXSQkywBcXpRSKGOyAoYE90)
+- Twilio is a service used to provide phone numbers for customers
+- Deep dives for common issues
+- Resident calls and no work orders (confirmation of call receipt and times)
+- Used primarily for phone calls.
+- Call logs are still necessary with a SQL report.
+- Customer onboardings and offboardings.
