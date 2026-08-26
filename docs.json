@@ -1958,104 +1958,6 @@
                 ]
               },
               {
-                "dropdown": "Latchel People Ops",
-                "icon": "people-roof",
-                "color": {
-                  "light": "#ff9b8a",
-                  "dark": "#ff9b8a"
-                },
-                "groups": [
-                  {
-                    "group": "Latchel People Ops Pages",
-                    "pages": [
-                      "latchel-admin/Latchel-People-Ops/latchel-people-ops-home",
-                      "latchel-admin/Latchel-People-Ops/latchel-handbook",
-                      "latchel-admin/Latchel-People-Ops/team-member-employee-contractor-term-sheet",
-                      {
-                        "group": "Latchel Policies & Procedures",
-                        "pages": [
-                          "latchel-admin/Latchel-People-Ops/latchel-policies-and-procedures",
-                          "latchel-admin/Latchel-People-Ops/code-of-conduct",
-                          "latchel-admin/Latchel-People-Ops/staffing-approval-and-hiring-policy-and-procedure",
-                          "latchel-admin/Latchel-People-Ops/referral-policy-and-procedure",
-                          "latchel-admin/Latchel-People-Ops/policy-employee-compensation-increase-process",
-                          "latchel-admin/Latchel-People-Ops/remote-work-policy",
-                          "latchel-admin/Latchel-People-Ops/sales-commission-payout-policy",
-                          "latchel-admin/Latchel-People-Ops/nondiscrimination-anti-harassment-policy-and-complaint-procedure",
-                          "latchel-admin/Latchel-People-Ops/team-member-complaint-procedure",
-                          {
-                            "group": "Policy: Employee Time and Attendance",
-                            "pages": [
-                              "latchel-admin/Latchel-People-Ops/policy-employee-time-and-attendance",
-                              "latchel-admin/Latchel-People-Ops/shortened-work-week-policy",
-                              "latchel-admin/Latchel-People-Ops/shortened-work-week-schedule-2026"
-                            ]
-                          },
-                          {
-                            "group": "Latchel Leave Policies",
-                            "pages": [
-                              "latchel-admin/Latchel-People-Ops/latchel-leave-policies",
-                              "latchel-admin/Latchel-People-Ops/Vacation-Leave-Policy",
-                              "latchel-admin/Latchel-People-Ops/Sick-Leave-Policy",
-                              "latchel-admin/Latchel-People-Ops/Bereavement-Leave-Policy",
-                              "latchel-admin/Latchel-People-Ops/Employee-Birthing-Parental-Leave-Policy-and-Procedure",
-                              "latchel-admin/Latchel-People-Ops/Employee-Non-Birthing-Parental-Leave-Policy-and-Procedure",
-                              "latchel-admin/Latchel-People-Ops/Job-Abandonment-Policy",
-                              "latchel-admin/Latchel-People-Ops/International-Team-Member-Birthing-Parental-Leave-Policy",
-                              "latchel-admin/Latchel-People-Ops/International-Team-Member-Non-Birthing-Parental-Leave-Policy"
-                            ]
-                          },
-                          {
-                            "group": "Paid Holidays",
-                            "pages": [
-                              "latchel-admin/Latchel-People-Ops/Paid-Holidays",
-                              "latchel-admin/Latchel-People-Ops/2026-Scheduled-Holidays"
-                            ]
-                          },
-                          {
-                            "group": "Latchel Security Policies",
-                            "pages": [
-                              "latchel-admin/Latchel-People-Ops/asset-management-policy",
-                              "latchel-admin/Latchel-People-Ops/policy-information-security"
-                            ]
-                          },
-                          "latchel-admin/Latchel-People-Ops/performance-and-salary-review-policy",
-                          "latchel-admin/Latchel-People-Ops/health-care-benefits-policy",
-                          "latchel-admin/Latchel-People-Ops/international-health-care-benefits-policy"
-                        ]
-                      },
-                      {
-                        "group": "Management Resource Center",
-                        "pages": [
-                          "latchel-admin/Latchel-People-Ops/manager-resource-center",
-                          {
-                            "group": "Toolkit: Performance Management",
-                            "expanded": true,
-                            "pages": [
-                              "latchel-admin/Latchel-People-Ops/toolkit-performance-management",
-                              "latchel-admin/Latchel-People-Ops/performance-review-process-documentation"
-                            ]
-                          }
-                        ]
-                      },
-                      "latchel-admin/Latchel-People-Ops/onboarding-flow-communications"
-                    ]
-                  }
-                ]
-              },
-              {
-                "dropdown": "HR Documents",
-                "icon": "file-doc",
-                "color": {
-                  "light": "#ff9b8a",
-                  "dark": "#ff9b8a"
-                },
-                "pages": [
-                  "latchel-admin/HR-Documents/hr-documents-overview",
-                  "latchel-admin/HR-Documents/Employee-Attrition-Announcement"
-                ]
-              },
-              {
                 "dropdown": "Customer Profitability Team",
                 "icon": "hand-holding-circle-dollar",
                 "color": {
@@ -2449,6 +2351,104 @@
                       "latchel-admin/accounts-receivable/How-To-Handle-Desire-to-Churn-Alerts"
                     ]
                   }
+                ]
+              },
+              {
+                "dropdown": "Latchel People Ops",
+                "icon": "people-roof",
+                "color": {
+                  "light": "#ff9b8a",
+                  "dark": "#ff9b8a"
+                },
+                "groups": [
+                  {
+                    "group": "Latchel People Ops Pages",
+                    "pages": [
+                      "latchel-admin/Latchel-People-Ops/latchel-people-ops-home",
+                      "latchel-admin/Latchel-People-Ops/latchel-handbook",
+                      "latchel-admin/Latchel-People-Ops/team-member-employee-contractor-term-sheet",
+                      {
+                        "group": "Latchel Policies & Procedures",
+                        "pages": [
+                          "latchel-admin/Latchel-People-Ops/latchel-policies-and-procedures",
+                          "latchel-admin/Latchel-People-Ops/code-of-conduct",
+                          "latchel-admin/Latchel-People-Ops/staffing-approval-and-hiring-policy-and-procedure",
+                          "latchel-admin/Latchel-People-Ops/referral-policy-and-procedure",
+                          "latchel-admin/Latchel-People-Ops/policy-employee-compensation-increase-process",
+                          "latchel-admin/Latchel-People-Ops/remote-work-policy",
+                          "latchel-admin/Latchel-People-Ops/sales-commission-payout-policy",
+                          "latchel-admin/Latchel-People-Ops/nondiscrimination-anti-harassment-policy-and-complaint-procedure",
+                          "latchel-admin/Latchel-People-Ops/team-member-complaint-procedure",
+                          {
+                            "group": "Policy: Employee Time and Attendance",
+                            "pages": [
+                              "latchel-admin/Latchel-People-Ops/policy-employee-time-and-attendance",
+                              "latchel-admin/Latchel-People-Ops/shortened-work-week-policy",
+                              "latchel-admin/Latchel-People-Ops/shortened-work-week-schedule-2026"
+                            ]
+                          },
+                          {
+                            "group": "Latchel Leave Policies",
+                            "pages": [
+                              "latchel-admin/Latchel-People-Ops/latchel-leave-policies",
+                              "latchel-admin/Latchel-People-Ops/Vacation-Leave-Policy",
+                              "latchel-admin/Latchel-People-Ops/Sick-Leave-Policy",
+                              "latchel-admin/Latchel-People-Ops/Bereavement-Leave-Policy",
+                              "latchel-admin/Latchel-People-Ops/Employee-Birthing-Parental-Leave-Policy-and-Procedure",
+                              "latchel-admin/Latchel-People-Ops/Employee-Non-Birthing-Parental-Leave-Policy-and-Procedure",
+                              "latchel-admin/Latchel-People-Ops/Job-Abandonment-Policy",
+                              "latchel-admin/Latchel-People-Ops/International-Team-Member-Birthing-Parental-Leave-Policy",
+                              "latchel-admin/Latchel-People-Ops/International-Team-Member-Non-Birthing-Parental-Leave-Policy"
+                            ]
+                          },
+                          {
+                            "group": "Paid Holidays",
+                            "pages": [
+                              "latchel-admin/Latchel-People-Ops/Paid-Holidays",
+                              "latchel-admin/Latchel-People-Ops/2026-Scheduled-Holidays"
+                            ]
+                          },
+                          {
+                            "group": "Latchel Security Policies",
+                            "pages": [
+                              "latchel-admin/Latchel-People-Ops/asset-management-policy",
+                              "latchel-admin/Latchel-People-Ops/policy-information-security"
+                            ]
+                          },
+                          "latchel-admin/Latchel-People-Ops/performance-and-salary-review-policy",
+                          "latchel-admin/Latchel-People-Ops/health-care-benefits-policy",
+                          "latchel-admin/Latchel-People-Ops/international-health-care-benefits-policy"
+                        ]
+                      },
+                      {
+                        "group": "Management Resource Center",
+                        "pages": [
+                          "latchel-admin/Latchel-People-Ops/manager-resource-center",
+                          {
+                            "group": "Toolkit: Performance Management",
+                            "expanded": true,
+                            "pages": [
+                              "latchel-admin/Latchel-People-Ops/toolkit-performance-management",
+                              "latchel-admin/Latchel-People-Ops/performance-review-process-documentation"
+                            ]
+                          }
+                        ]
+                      },
+                      "latchel-admin/Latchel-People-Ops/onboarding-flow-communications"
+                    ]
+                  }
+                ]
+              },
+              {
+                "dropdown": "HR Documents",
+                "icon": "file-doc",
+                "color": {
+                  "light": "#ff9b8a",
+                  "dark": "#ff9b8a"
+                },
+                "pages": [
+                  "latchel-admin/HR-Documents/hr-documents-overview",
+                  "latchel-admin/HR-Documents/Employee-Attrition-Announcement"
                 ]
               },
               {
