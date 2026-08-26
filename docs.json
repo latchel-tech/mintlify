@@ -2453,105 +2453,109 @@
               },
               {
                 "dropdown": "Latchel Library",
-                "pages": [
+                "groups": [
                   {
-                    "group": "Company-Wide Information",
-                    "pages": [
-                      "latchel-admin/Service-Operations/Latchel-Library/Company-Wide-Information",
-                      "latchel-admin/Service-Operations/Latchel-Library/Job-Aid-Latchel-Product-Features-Pricing-and-KPIs",
-                      "latchel-admin/Service-Operations/Latchel-Library/Latchel-Hiring-and-Promotion-Policy",
-                      "latchel-admin/Service-Operations/Latchel-Library/Quarterly-Reviews-and-Interview-Debriefs",
-                      "latchel-admin/Service-Operations/Latchel-Library/SOP-How-to-Use-Coassemble-for-Latchel-Training",
-                      "latchel-admin/Service-Operations/Latchel-Library/SOP-Latchel-App-Outage",
-                      "latchel-admin/Service-Operations/Latchel-Library/Policy-Ops-Troubleshooter-Meeting-Attendance-Policy",
-                      "latchel-admin/Service-Operations/Latchel-Library/How-to-process-shift-swaps"
-                    ]
-                  },
-                  {
-                    "group": "Informational",
-                    "pages": [
-                      "latchel-admin/Service-Operations/Latchel-Library/Informational",
-                      "latchel-admin/Service-Operations/Latchel-Library/A-Letter-from-the-CEO-Customer-Obsession",
-                      "latchel-admin/Service-Operations/Latchel-Library/Informational-Latchel-Customer-Service-Tenets-High-5-Your-Customers-Today",
-                      "latchel-admin/Service-Operations/Latchel-Library/Informational-Latchel-Customers-Customer-Subscriptions",
-                      "latchel-admin/Service-Operations/Latchel-Library/Latchel-Tips-for-Remote-Working-Tips-from-Latchel-team-members",
-                      {
-                        "group": "Software Tutorial",
-                        "pages": [
-                          "latchel-admin/Service-Operations/Latchel-Library/Software-Tutorials",
-                          "latchel-admin/Service-Operations/Latchel-Library/How-to-Use-Functions-of-Google-Suites-Google-Calendar-and-Google-Drive",
-                          "latchel-admin/Service-Operations/Latchel-Library/How-to-Use-Functions-of-Slack"
-                        ]
-                      },
-                      "latchel-admin/Service-Operations/Latchel-Library/How-to-Use-Slack-Workflows",
-                      "latchel-admin/Service-Operations/Latchel-Library/How-to-Search-in-Confluence",
-                      "latchel-admin/Service-Operations/Latchel-Library/Informational-Recommended-Latchel-Maintenance-Guide-for-Property-Managers",
-                      "latchel-admin/Service-Operations/Latchel-Library/iFrame-Demonstration-Page",
-                      "latchel-admin/Service-Operations/Latchel-Library/Feb-2020-Customer-Love-Announcement-Submit-Send-Customer-Acknowledgements-or-Apologies"
-                    ]
-                  },
-                  {
-                    "group": "Latchel Customers Education",
-                    "pages": [
-                      "latchel-admin/Service-Operations/Latchel-Library/Latchel-Customers-Education",
-                      "latchel-admin/Service-Operations/Latchel-Library/PM-How-to-Guide-Property-Managers",
-                      "latchel-admin/Service-Operations/Latchel-Library/SP-Service-Provider-Guide",
-                      "latchel-admin/Service-Operations/Latchel-Library/How-to-Navigate-the-Service-Provider-Interface",
-                      "latchel-admin/Service-Operations/Latchel-Library/How-to-Navigate-the-Resident-Interface"
-                    ]
-                  },
-                  {
-                    "group": "Latchel Knowledge 101",
+                    "group": "Latchel Library",
                     "pages": [
                       {
-                        "group": "(TECH 101) Technology 101",
+                        "group": "Company-Wide Information",
                         "pages": [
-                          "latchel-admin/Service-Operations/Latchel-Library/TECH-101-Technology-101",
-                          "latchel-admin/Service-Operations/Latchel-Library/TECH-101-How-to-Add-or-Edit-the-Required-Skill-to-a-Work-Order",
-                          "latchel-admin/Service-Operations/Latchel-Library/TECH-101-How-To-Use-Quick-Create-tool-to-add-all-Handyman-General-Contractor-skills-to-a-Service-Provider",
-                          "latchel-admin/Service-Operations/Latchel-Library/TECH-101-How-to-Navigate-the-Latchel-Console-Home-Interface",
-                          "latchel-admin/Service-Operations/Latchel-Library/TECH-101-Work-Order-Status-Flow",
-                          "latchel-admin/Service-Operations/Latchel-Library/ADMINS-ONLY-How-To-Create-or-Modify-Custom-Emergency-Definitions",
-                          "latchel-admin/Service-Operations/Latchel-Library/How-to-Manage-Vendor-Skills-and-Categories"
+                          "latchel-admin/Service-Operations/Latchel-Library/Company-Wide-Information",
+                          "latchel-admin/Service-Operations/Latchel-Library/Job-Aid-Latchel-Product-Features-Pricing-and-KPIs",
+                          "latchel-admin/Service-Operations/Latchel-Library/Latchel-Hiring-and-Promotion-Policy",
+                          "latchel-admin/Service-Operations/Latchel-Library/Quarterly-Reviews-and-Interview-Debriefs",
+                          "latchel-admin/Service-Operations/Latchel-Library/SOP-How-to-Use-Coassemble-for-Latchel-Training",
+                          "latchel-admin/Service-Operations/Latchel-Library/SOP-Latchel-App-Outage",
+                          "latchel-admin/Service-Operations/Latchel-Library/Policy-Ops-Troubleshooter-Meeting-Attendance-Policy",
+                          "latchel-admin/Service-Operations/Latchel-Library/How-to-process-shift-swaps"
                         ]
                       },
                       {
-                        "group": "Latchel Service Providers 101",
+                        "group": "Informational",
                         "pages": [
-                          "latchel-admin/Service-Operations/Latchel-Library/Latchel-Service-Providers-101",
-                          "latchel-admin/Service-Operations/Latchel-Library/A-Letter-from-Customer-Success-Key-Guidelines-to-Handling-Latchel-Network-Latchel-Affiliate-Service-Provider-Relationships",
-                          "latchel-admin/Service-Operations/Latchel-Library/PREMIUM-How-to-Add-or-Remove-Service-Providers-and-Skills-from-a-Property-Management-Priority-List",
-                          "latchel-admin/Service-Operations/Latchel-Library/How-to-Request-Changes-or-Maintenance-to-Vendor-Skills",
-                          "latchel-admin/Service-Operations/Latchel-Library/TECH-101-How-to-Add-or-Remove-Service-Provider-Skills"
+                          "latchel-admin/Service-Operations/Latchel-Library/Informational",
+                          "latchel-admin/Service-Operations/Latchel-Library/A-Letter-from-the-CEO-Customer-Obsession",
+                          "latchel-admin/Service-Operations/Latchel-Library/Informational-Latchel-Customer-Service-Tenets-High-5-Your-Customers-Today",
+                          "latchel-admin/Service-Operations/Latchel-Library/Informational-Latchel-Customers-Customer-Subscriptions",
+                          "latchel-admin/Service-Operations/Latchel-Library/Latchel-Tips-for-Remote-Working-Tips-from-Latchel-team-members",
+                          {
+                            "group": "Software Tutorial",
+                            "pages": [
+                              "latchel-admin/Service-Operations/Latchel-Library/Software-Tutorials",
+                              "latchel-admin/Service-Operations/Latchel-Library/How-to-Use-Functions-of-Google-Suites-Google-Calendar-and-Google-Drive",
+                              "latchel-admin/Service-Operations/Latchel-Library/How-to-Use-Functions-of-Slack"
+                            ]
+                          },
+                          "latchel-admin/Service-Operations/Latchel-Library/How-to-Use-Slack-Workflows",
+                          "latchel-admin/Service-Operations/Latchel-Library/How-to-Search-in-Confluence",
+                          "latchel-admin/Service-Operations/Latchel-Library/Informational-Recommended-Latchel-Maintenance-Guide-for-Property-Managers",
+                          "latchel-admin/Service-Operations/Latchel-Library/iFrame-Demonstration-Page",
+                          "latchel-admin/Service-Operations/Latchel-Library/Feb-2020-Customer-Love-Announcement-Submit-Send-Customer-Acknowledgements-or-Apologies"
+                        ]
+                      },
+                      {
+                        "group": "Latchel Customers Education",
+                        "pages": [
+                          "latchel-admin/Service-Operations/Latchel-Library/Latchel-Customers-Education",
+                          "latchel-admin/Service-Operations/Latchel-Library/PM-How-to-Guide-Property-Managers",
+                          "latchel-admin/Service-Operations/Latchel-Library/SP-Service-Provider-Guide",
+                          "latchel-admin/Service-Operations/Latchel-Library/How-to-Navigate-the-Service-Provider-Interface",
+                          "latchel-admin/Service-Operations/Latchel-Library/How-to-Navigate-the-Resident-Interface"
+                        ]
+                      },
+                      {
+                        "group": "Latchel Knowledge 101",
+                        "pages": [
+                          {
+                            "group": "(TECH 101) Technology 101",
+                            "pages": [
+                              "latchel-admin/Service-Operations/Latchel-Library/TECH-101-Technology-101",
+                              "latchel-admin/Service-Operations/Latchel-Library/TECH-101-How-to-Add-or-Edit-the-Required-Skill-to-a-Work-Order",
+                              "latchel-admin/Service-Operations/Latchel-Library/TECH-101-How-To-Use-Quick-Create-tool-to-add-all-Handyman-General-Contractor-skills-to-a-Service-Provider",
+                              "latchel-admin/Service-Operations/Latchel-Library/TECH-101-How-to-Navigate-the-Latchel-Console-Home-Interface",
+                              "latchel-admin/Service-Operations/Latchel-Library/TECH-101-Work-Order-Status-Flow",
+                              "latchel-admin/Service-Operations/Latchel-Library/ADMINS-ONLY-How-To-Create-or-Modify-Custom-Emergency-Definitions",
+                              "latchel-admin/Service-Operations/Latchel-Library/How-to-Manage-Vendor-Skills-and-Categories"
+                            ]
+                          },
+                          {
+                            "group": "Latchel Service Providers 101",
+                            "pages": [
+                              "latchel-admin/Service-Operations/Latchel-Library/Latchel-Service-Providers-101",
+                              "latchel-admin/Service-Operations/Latchel-Library/A-Letter-from-Customer-Success-Key-Guidelines-to-Handling-Latchel-Network-Latchel-Affiliate-Service-Provider-Relationships",
+                              "latchel-admin/Service-Operations/Latchel-Library/PREMIUM-How-to-Add-or-Remove-Service-Providers-and-Skills-from-a-Property-Management-Priority-List",
+                              "latchel-admin/Service-Operations/Latchel-Library/How-to-Request-Changes-or-Maintenance-to-Vendor-Skills",
+                              "latchel-admin/Service-Operations/Latchel-Library/TECH-101-How-to-Add-or-Remove-Service-Provider-Skills"
+                            ]
+                          }
+                        ]
+                      },
+                      "latchel-admin/Service-Operations/Latchel-Library/Latchels-Terms-and-Definitions",
+                      "latchel-admin/Service-Operations/Latchel-Library/Job-Aid-How-to-link-slack-workflows-to-a-spreadsheet",
+                      "latchel-admin/Service-Operations/Latchel-Library/How-to-Use-Functions-of-Slack-Knowledge-101",
+                      "latchel-admin/Service-Operations/Latchel-Library/How-to-resolve-payments-blocked-by-Stripe-Connect",
+                      "latchel-admin/Service-Operations/Latchel-Library/How-to-Check-that-a-Service-Providers-has-Direct-Deposit-enabled",
+                      "latchel-admin/Service-Operations/Latchel-Library/Property-Manager-Configuration-follow-up",
+                      "latchel-admin/Service-Operations/Latchel-Library/Vendor-Management-3-Videos",
+                      "latchel-admin/Service-Operations/Latchel-Library/What-is-Stripe",
+                      "latchel-admin/Service-Operations/Latchel-Library/Appfolio-Guides-2-Videos",
+                      "latchel-admin/Service-Operations/Latchel-Library/Twilio-Management-4-Videos",
+                      "latchel-admin/Service-Operations/Latchel-Library/Stripe-Errors",
+                      "latchel-admin/Service-Operations/Latchel-Library/Latchel-Libraries-Part-1",
+                      "latchel-admin/Service-Operations/Latchel-Library/Types-of-Latchel-Service-Providers",
+                      "latchel-admin/Service-Operations/Latchel-Library/Jorges-M-Projects",
+                      "latchel-admin/Service-Operations/Latchel-Library/Admin-Only-Latchel-Call-Routing",
+                      "latchel-admin/Service-Operations/Latchel-Library/How-to-Navigate-the-Work-Order-Interface",
+                      {
+                        "group": "Home Assistant Services",
+                        "pages": [
+                          "latchel-admin/Service-Operations/Latchel-Library/Home-Assistant-Services",
+                          "latchel-admin/Service-Operations/Latchel-Library/HOME-ASSISTANT-How-to-Answer-Resident-Questions-About-the-Program-Associates-FAQ",
+                          "latchel-admin/Service-Operations/Latchel-Library/HOME-ASSISTANT-How-to-Answer-Property-Manager-Questions-About-the-Program-Associates-FAQ",
+                          "latchel-admin/Service-Operations/Latchel-Library/HOME-ASSISTANTCSAdmin-How-to-Handle-Appointment-Cancellation-Charge-Backs-to-Property-Managers",
+                          "latchel-admin/Service-Operations/Latchel-Library/HOME-ASSISTANT-CSAdmin-How-to-Answer-Property-Manager-Questions-About-the-Program"
                         ]
                       }
-                    ]
-                  },
-                  "latchel-admin/Service-Operations/Latchel-Library/TECH-101-How-to-Add-or-Remove-Service-Provider-Skills",
-                  "latchel-admin/Service-Operations/Latchel-Library/Latchels-Terms-and-Definitions",
-                  "latchel-admin/Service-Operations/Latchel-Library/Job-Aid-How-to-link-slack-workflows-to-a-spreadsheet",
-                  "latchel-admin/Service-Operations/Latchel-Library/How-to-Use-Functions-of-Slack-Knowledge-101",
-                  "latchel-admin/Service-Operations/Latchel-Library/How-to-resolve-payments-blocked-by-Stripe-Connect",
-                  "latchel-admin/Service-Operations/Latchel-Library/How-to-Check-that-a-Service-Providers-has-Direct-Deposit-enabled",
-                  "latchel-admin/Service-Operations/Latchel-Library/Property-Manager-Configuration-follow-up",
-                  "latchel-admin/Service-Operations/Latchel-Library/Vendor-Management-3-Videos",
-                  "latchel-admin/Service-Operations/Latchel-Library/What-is-Stripe",
-                  "latchel-admin/Service-Operations/Latchel-Library/Appfolio-Guides-2-Videos",
-                  "latchel-admin/Service-Operations/Latchel-Library/Twilio-Management-4-Videos",
-                  "latchel-admin/Service-Operations/Latchel-Library/Stripe-Errors",
-                  "latchel-admin/Service-Operations/Latchel-Library/Latchel-Libraries-Part-1",
-                  "latchel-admin/Service-Operations/Latchel-Library/Types-of-Latchel-Service-Providers",
-                  "latchel-admin/Service-Operations/Latchel-Library/Jorges-M-Projects",
-                  "latchel-admin/Service-Operations/Latchel-Library/Admin-Only-Latchel-Call-Routing",
-                  "latchel-admin/Service-Operations/Latchel-Library/How-to-Navigate-the-Work-Order-Interface",
-                  {
-                    "group": "Home Assistant Services",
-                    "pages": [
-                      "latchel-admin/Service-Operations/Latchel-Library/Home-Assistant-Services",
-                      "latchel-admin/Service-Operations/Latchel-Library/HOME-ASSISTANT-How-to-Answer-Resident-Questions-About-the-Program-Associates-FAQ",
-                      "latchel-admin/Service-Operations/Latchel-Library/HOME-ASSISTANT-How-to-Answer-Property-Manager-Questions-About-the-Program-Associates-FAQ",
-                      "latchel-admin/Service-Operations/Latchel-Library/HOME-ASSISTANTCSAdmin-How-to-Handle-Appointment-Cancellation-Charge-Backs-to-Property-Managers",
-                      "latchel-admin/Service-Operations/Latchel-Library/HOME-ASSISTANT-CSAdmin-How-to-Answer-Property-Manager-Questions-About-the-Program"
                     ]
                   }
                 ]
