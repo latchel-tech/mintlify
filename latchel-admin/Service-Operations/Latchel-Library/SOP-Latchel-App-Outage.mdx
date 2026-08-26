@@ -6,18 +6,18 @@ groups: ["latchel"]
 ## Purpose
 
 <Info>
-**Purpose of this document**
+  **Purpose of this document**
 
-The purpose of this SOP is to explain the process to handle outages in our Latchel application, also known as the Latchel App, Latchel Console, or Latchel Portal
+  The purpose of this SOP is to explain the process to handle outages in our Latchel application, also known as the Latchel App, Latchel Console, or Latchel Portal
 </Info>
 
 <Info>
-**Who should read this document?**
+  **Who should read this document?**
 
-- Service Operations staff (associates)
-- Service Operation leadership (Coach, Shift Support, Supervisor, Operations Manager)
-- Growth Team
-- Engineering Team
+  - Service Operations staff (associates)
+  - Service Operation leadership (Coach, Shift Support, Supervisor, Operations Manager)
+  - Growth Team
+  - Engineering Team
 </Info>
 
 ## Step-by-Step Guide
@@ -28,15 +28,19 @@ Someone has been experiencing an issue with the Latchel Application
 
 ### Process Overview
 
+<Frame>
+  ![LL 179](/images/LL-179.png "LL 179")
+</Frame>
+
 Here is the process (text version):
 
 1. Service Operations staff reproduces the bug and then reports bugs in the #bug-report channel →
 2. Service Operations leadership validates if the bug is an outage or degradation of service. The bug is then escalated in the #tech-high-sev-escalations channel →
-3. If Customer Success received a communication from a customer-facing an issue, they will also report it in the #tech-high-sev-escalations channel
-4. Engineering assesses the issue and determines if it is an outage →
-5. Engineering keeps the internal team and customer-facing page updated on the status of the outage →
-6. Engineering resolves the issue and communicates the resolution and post-mortem →
-7. Customer Success assesses if they should or not send an additional customer communication, depending on duration and/or need for PMs to take action
+   1. If Customer Success received a communication from a customer-facing an issue, they will also report it in the #tech-high-sev-escalations channel
+3. Engineering assesses the issue and determines if it is an outage →
+4. Engineering  keeps the internal team and customer-facing page updated on the status of the outage →
+5. Engineering  resolves the issue and communicates the resolution and post-mortem →
+6. Customer Success assesses if they should or not send an additional customer communication, depending on duration and/or need for PMs to take action
 
 ### What is an outage?
 
@@ -56,7 +60,7 @@ An outage means that multiple people can't access the app or reports it is not r
   - Invoicing or payment features
 
 <Note>
-Remember to reproduce the error/bug and record a video. If you cannot reproduce it, it is ok to record a video explaining how the customer navigates the app and where the issue appears.
+  Remember to reproduce the error/bug and record a video. If you cannot reproduce it, it is ok to record a video explaining how the customer navigates the app and where the issue appears.
 </Note>
 
 ### Where do I see information about having an outage or service degradation?
@@ -71,42 +75,42 @@ Incident troubleshooting guidance Page: [https://latchel.com/incident-troublesho
 
 **Service Operations staff**
 
-| | |
-|---|---|
-| Having a tech issue | Check Latchel Status Page or #core-team channel to see if there is an issue already identified that tech is working on.<br/>Attempt the troubleshooting steps outlined in the troubleshooting link provided in the Latchel Status Page before escalating.<br/>Escalate to the Service Operations Leadership. |
-| Tech issue has been validated | Monitor #core-team slack channel for potential updates. |
-| During the outage | Acknowledge the outage message posted on the #core-team channel.<br/>Monitor #core-team slack channel for potential updates.<br/>If we get emails from customers reporting an outage or issue using our system, escalate those to Customer Success.<br/>If customers are asking for support because they have system issues that we are aware of, help the customer with their request and share the link to the Latchel Status page, where they can see instructions for troubleshooting and monitor the status of the issue.<br/>If customers are asking for support because they have system issues that we are NOT aware of, help the customer with their request, say you are reporting this issue, and monitor the Latchel Status Page for updates. Escalate this to Customer Success.<br/>If we are also having system issues internally and cannot take action to help the customer, reply to the customer apologizing and saying we will take care of it when the system is back. Share the link to the Latchel Status page. See blurb in this page [Job-Aid: Blurbs or Templates to Communicate with Customers](#)<br/>Create a task due in 1hr to take the action you were unable to do. If you are unable to create a task, send an email to team@latchel.com with a link to the work order and the action that needs to be taken |
-| End of the outage | Resume normal work |
+|  |  |
+| --- | --- |
+| Having a tech issue | <ol><li>Check Latchel Status Page or #core-team channel to see if there is an issue already identified that tech is working on.</li><li>Attempt the troubleshooting steps outlined in the troubleshooting link provided in the Latchel Status Page before escalating.</li><li>Escalate to the Service Operations Leadership.</li></ol> |
+| Tech issue has been validated | <ol><li>Monitor #core-team slack channel for potential updates.</li><li>Acknowledge the outage message posted on the #core-team channel.</li></ol> |
+| During the outage | <ol><li>Monitor #core-team slack channel for potential updates.</li><li>If we get emails from customers reporting an outage or issue using our system, escalate those to Customer Success.</li><li>If customers are asking for support because they have system issues that we are aware of, help the customer with their request and share the link to the Latchel Status page, where they can see instructions for troubleshooting and monitor the status of the issue.</li><li>If customers are asking for support because they have system issues that we are **NOT** aware of, help the customer with their request, say you are reporting this issue, and monitor the Latchel Status Page for updates. Escalate this to Customer Success.</li><li>If we are also having system issues internally and cannot take action to help the customer, reply to the customer apologizing and saying we will take care of it when the system is back. Share the link to the Latchel Status page. See blurb in this page [Job-Aid: Blurbs or Templates to Communicate with Customers \| To   All Customers](/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-Blurbs-or-Templates-to-Communicate-with-Customers) <ol><li>Create a task due in 1hr to take the action you were unable to do. If you are unable to create a task, send an email to [team@latchel.com](mailto:team@latchel.com) with a link to the work order and the action that needs to be taken</li></ol></li></ol> |
+| End of the outage | <ol><li>Resume normal work</li></ol> |
 
 **Service Operations Leadership**
 
-| | |
-|---|---|
-| Having a tech issue | Check Latchel Status Page or #core-team channel to see if there is an issue already identified that tech is working on.<br/>Attempt the troubleshooting steps outlined in the troubleshooting link provided in the Latchel Status Page before escalating to tech.<br/>If you got an escalation from the associates, check if you are facing the same issue. Verify that the associate has attempted those troubleshooting steps.<br/>Report on #tech-high-sev-escalations channel |
-| Tech issue has been validated | Monitor #core-team slack channel for potential updates |
-| During the outage | Acknowledge the outage message posted on the #core-team channel<br/>Monitor #core-team slack channel for potential updates.<br/>Re-allocate staff to work on things that we are able to do like emails and calls, for example.<br/>Remind the team on how to handle customers questions and reports about system issues (copy and paste in Slack the instructions on what to do during outage) |
-| End of the outage | Resume normal work |
+|  |  |
+| --- | --- |
+| Having a tech issue | <ol><li>Check Latchel Status Page or #core-team channel to see if there is an issue already identified that tech is working on.</li><li>Attempt the troubleshooting steps outlined in the troubleshooting link provided in the Latchel Status Page before escalating to tech.</li><li>If you got an escalation from the associates, check if you are facing the same issue. Verify that the associate has attempted those troubleshooting steps.</li><li>Report on #tech-high-sev-escalations channel</li></ol> |
+| Tech issue has been validated | <ol><li>Monitor #core-team slack channel for potential updates</li><li>Acknowledge the outage message posted on the #core-team channel</li></ol> |
+| During the outage | <ol><li>Monitor #core-team slack channel for potential updates.</li><li>Re-allocate staff to work on things that we are able to do like emails and calls, for example.</li><li>Remind the team on how to handle customers questions and reports about system issues (copy and paste in Slack the instructions on what to do during outage)</li></ol> |
+| End of the outage | <ol><li>Resume normal work</li></ol> |
 
 **Tech Team**
 
-| | |
-|---|---|
-| Having a tech issue | Receive tech issue on #tech-high-sev-escalations channel and initiate assessment |
-| Tech issue has been validated | After doing an initial investigation and determining we have an issue, update the Latchel Status Page. This will trigger a message in the #core-channel.<br/>If the issue only impacts internal teams, DO NOT update the status page as it will confuse customers. Instead, create an internal Slack thread in the #core-team channel by selecting the "Internal Outage" workflow |
-| During the outage | As you progress with the investigation and resolution, update the status of the incident in the status page (use the standard/generic message)<br/>If there are more information to be provided internally, add a note to the incident thread in Slack |
-| End of the outage | Update Latchel Status Page resolving the issue to resolve the incident<br/>Communicate your findings and required customer actions in the #core-team channel using the "Outage Post-mortem Workflow"<br/>If any customer type needs to take immediate action to be able to resume normal operations, and this happens overnight or during a weekend, call (1) Jennifer Folch, (2) Josie<br/>If it is a new issue, provide more details to CS, who will update the guidelines provided in the Latchel Status Page |
+|  |  |
+| --- | --- |
+| Having a tech issue | <ol><li>Receive tech issue on #tech-high-sev-escalations channel and initiate assessment</li></ol> |
+| Tech issue has been validated | <ol><li>After doing an initial investigation and determining we have an issue, update the Latchel Status Page. This will trigger a message in the #core-channel.</li><li>If the issue only impacts internal teams, **DO NOT** update the status page as it will confuse customers. Instead, create an internal Slack thread in the #core-team channel by selecting the “Internal Outage” workflow</li></ol> |
+| During the outage | <ol><li>As you progress with the investigation and resolution, update the status of the incident in the status page (use the standard/generic message)</li><li>If there are more information to be provided **internally**, add a note to the incident thread in Slack</li></ol> |
+| End of the outage | <ol><li>Update Latchel Status Page resolving the issue to resolve the incident</li><li>Communicate your findings and required customer actions in the #core-team channel using the “Outage Post-mortem Workflow” <ol><li>If any customer type needs to take immediate action to be able to resume normal operations, and this happens overnight or during a weekend, call (1) Jennifer Folch, (2) Josie</li></ol></li><li>If it is a new issue, provide more details to CS, who will update the guidelines provided in the Latchel Status Page</li></ol> |
 
 **Customer Success**
 
-| | |
-|---|---|
-| Having a tech issue | Receive emails from customers reporting tech issues and report on #tech-high-sev-escalations channel<br/>Watch #tech-high-sev-escalations channel for tech issues reported by ops |
-| Tech issue has been validated | Monitor #core-team slack channel for potential updates |
-| During the outage | Acknowledge the outage message posted on the #core-team channel<br/>Monitor #core-team slack channel for potential updates<br/>Monitor email for customers communications that could include other issues that we are not aware of. If any new issue is reported, update the thread on the #core-team slack channel and tag the tech team member that is handling the issue<br/>Refer to Latchel Status Page for troubleshooting steps provided to customers. If a customer has not attempted anything, ask them to try.<br/><br/>*Note: we provide the link to this page in the customer's onboarding checklist.* |
-| End of the outage | 1. Send communication to customers, if:<br/>   - Customer needs to take action to restart normal operation<br/>   - Outage lasted 3hrs+ and we should send an apology email<br/>2. Check if there is any new troubleshooting step that should be added to the list provided in the Latchel Status Page, or if standard actions to resume operations could be added to the table on Appendix 3 |
+|  |  |
+| --- | --- |
+| Having a tech issue | <ol><li>Receive emails from customers reporting tech issues and report on #tech-high-sev-escalations channel</li><li>Watch #tech-high-sev-escalations channel for tech issues reported by ops</li></ol> |
+| Tech issue has been validated | <ol><li>Monitor #core-team slack channel for potential updates</li><li>Acknowledge the outage message posted on the #core-team channel</li></ol> |
+| During the outage | <ol><li>Monitor #core-team slack channel for potential updates</li><li>Monitor email for customers communications that could include other issues that we are not aware of. If any new issue is reported, update the thread on the #core-team slack channel and tag the tech team member that is handling the issue</li><li>Refer to Latchel Status Page for troubleshooting steps provided to customers. If a customer has not attempted anything, ask them to try. <ol><li>**Note:** we provide the link to this page in the customer’s onboarding checklist.</li></ol></li></ol> |
+| End of the outage | Send communication to customers, if: Customer needs to take action to restart normal operation Outage lasted 3hrs\+ and we should send an apology email <ol><li>Check if there is any new troubleshooting step that should be added to the list provided in the Latchel Status Page, or if standard actions to resume operations could be added to the table on Appendix 3</li></ol> <ul><li>If the outage happens at night or on a weekend, the communication will be sent on the next business day, unless tech says the communication needs to happen immediately. In this case, tech will call (1) Jennifer Folch</li></ul> |
 
 <Note>
-If the outage happens at night or on a weekend, the communication will be sent on the next business day, unless tech says the communication needs to happen immediately. In this case, tech will call (1) Jennifer Folch
+  If the outage happens at night or on a weekend, the communication will be sent on the next business day, unless tech says the communication needs to happen immediately. In this case, tech will call (1) Jennifer Folch
 </Note>
 
 ## Appendix:
@@ -134,42 +138,40 @@ Customer Success will communicate the outage to Customers in two situations:
 
 1. When the outage/issue lasted less than 3hrs and we require any of our customers to take an action to resume normal operations. Send this message to the customer that needs to take action:
 
-**Subject Title:** (Latchel / Latchel Feature) is Back!
+> **Subject Title:** (Latchel / Latchel Feature) is Back!
+>
+> **Content:**
+>
+> Hi there,
+>
+> We are very sorry about the (feature) (outage/service degradation) we had today. Our tech team worked super hard to get this quickly fixed and (Latchel/feature) is back!
+>
+> Because this issue impacted (xyz), it is necessary for you to (action) to avoid any issues when you resume using (Latchel/feature). In order to do that, you can follow the instructions in this guide (link).
+>
+> If you have any questions, please contact us (via email at [success@latchel.com](mailto:success@latchel.com) / Webchat - if ops has received guidance on how to help customers with this)
+>
+> Thank you, The Latchel Team
 
-**Content:**
+2. When the outage takes 3hrs\+ to get resolved, we will send an apology email to PMs? or also residents?
 
-Hi there,
-
-We are very sorry about the (feature) (outage/service degradation) we had today. Our tech team worked super hard to get this quickly fixed and (Latchel/feature) is back!
-
-Because this issue impacted (xyz), it is necessary for you to (action) to avoid any issues when you resume using (Latchel/feature). In order to do that, you can follow the instructions in this guide (link).
-
-If you have any questions, please contact us (via email at success@latchel.com / Webchat - if ops has received guidance on how to help customers with this)
-
-Thank you,
-The Latchel Team
-
-2. When the outage takes 3hrs+ to get resolved, we will send an apology email to PMs? or also residents?
-
-**Subject Title:** (Latchel/Feature) is Back!
-
-**Content:**
-
-Hi there,
-
-We are very sorry about the (feature) (outage/service degradation) we had today. We appreciate your patience while we got this fixed and apologize for the poor experience you have had. Our tech team worked super hard to fix the issue and (Latchel/feature) is back!
-
-(Because this issue impacted (xyz), it is necessary for you to (action) to avoid any issues when you resume using (Latchel/feature). In order to do that, you can follow the instructions in this guide (link).)
-
-If you have any questions, please contact us (via email at success@latchel.com / Webchat - if ops has received guidance on how to help customers with this)
-
-Thank you,
-The Latchel Team
+> **Subject Title:** (Latchel/Feature) is Back!
+>
+> **Content:**
+>
+> Hi there,
+>
+> We are very sorry about the (feature) (outage/service degradation) we had today. We appreciate your patience while we got this fixed and apologize for the poor experience you have had. Our tech team worked super hard to fix the issue and (Latchel/feature) is back!
+>
+> (Because this issue impacted (xyz), it is necessary for you to (action) to avoid any issues when you resume using (Latchel/feature). In order to do that, you can follow the instructions in this guide (link).)
+>
+> If you have any questions, please contact us (via email at [success@latchel.com](mailto:success@latchel.com) / Webchat - if ops has received guidance on how to help customers with this)
+>
+> Thank you, The Latchel Team
 
 ### Appendix 3 - Standard procedure to resume normal operations after an outage
 
 As we learn about outages, we will start adding information to this table
 
 | Key Feature | PMs | Residents | Vendors |
-|---|---|---|---|
-| | | | |
+| --- | --- | --- | --- |
+|  |  |  |  |
