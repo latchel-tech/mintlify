@@ -2558,7 +2558,12 @@
                       }
                     ]
                   }
-                ]
+                ],
+                "icon": "books",
+                "color": {
+                  "light": "#ff9b8a",
+                  "dark": "#ff9b8a"
+                }
               }
             ]
           }
