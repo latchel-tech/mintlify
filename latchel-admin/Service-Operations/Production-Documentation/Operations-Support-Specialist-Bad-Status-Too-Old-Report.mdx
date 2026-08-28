@@ -12,9 +12,9 @@ groups: ["latchel"]
 <Check>
   **Guiding Principle & Severity Re-evaluation**
 
-  There are two separate judgmentcalls in this process, and this SOP covers the second one:
+  There are two separate judgment calls in this process, and this SOP covers the second one:
 
-  1. **Initial severity at intake** — governed by the AI judgment / intake policy and PM severity settings. This determines whether a job is created as an Emergency in the first place. This SOP does not change intake policy; intake settings dictate job creation, while this SOP governs how Ops manages an already-created WO that later sits in queue.
+  1. **Initial severity at intake** — governed by the AI judgment or intake policy and PM severity settings. This determines whether a job is created as an Emergency in the first place. This SOP does not change intake policy; intake settings dictate job creation, while this SOP governs how Ops manages an already-created WO that later sits in queue.
   2. **Ongoing severity while a job sits in queue** — covered by this SOP. Even when the initial Emergency classification was correct, Ops must reassess whether the WO is still being handled on an active emergency path. Re-evaluating it at that point is a distinct, later-stage operational decision — not a correction of the original intake call. This has two directions, and they use different tests:
      1. _De-escalating (Emergency → Urgent):_ an operational judgment that applies when the WO is no longer moving through active emergency handling. This includes cases where the immediate emergency condition has passed, the PM has taken ownership, the WO is in an intentional or open-ended delay, the PM has imposed scheduling/provider constraints, or follow-up has not produced concrete forward progress. In those cases, moving the WO out of Emergency reflects its current handling path, even if the original intake settings would still classify the issue as an emergency.
      2. _Re-escalating (after a resident follows up on an already de-escalated WO):_ reassess based on what the resident is reporting about the **current situation**. The key question is whether the resident is providing new information or describing a material change from the situation that existed when the WO was de-escalated — such as worsening conditions, new/spreading damage, a new safety concern, or another update that changes the current handling need. Do not re-escalate just because the WO qualified as an Emergency before, and do not keep it Urgent if the current report now shows an active emergency condition. Refer to the FAQ below for the full resident follow-up workflow.
@@ -35,7 +35,7 @@ groups: ["latchel"]
 
   **Standard Internal Note Template:**
 
-  _De-escalated from Emergency to Urgent — \[reason, e.g., "PM scheduled provider for \[date\]" / "no active damage per resident"\]. Flagging for team visibility — reach out before re-escalating unless resident reports new/worsening damage._
+  _De-escalated from Emergency to Urgent — (reason, e.g., "PM scheduled provider for (date)" or "no active damage per resident"). Flagging for team visibility — reach out before re-escalating unless resident reports new/worsening damage._
 </Warning>
 
 <Note>
@@ -53,12 +53,12 @@ Operations Support Specialist works from the plugin’s Bad Status report. The p
 ## 📋 Step-by-Step Process
 
 <Note>
-  General Rules
+  **General Rules**
 
   - If the issue is not genuinely an emergency, don't sit on it — inspect it and move it forward: de-escalate and update the WO. For required de-escalation documentation, title formatting, and task-routing rules, refer to the callout panels above.
   - If the PM explicitly asks us to treat a work order as an emergency and allows Latchel to obtain a confirmed appointment or alternative provider, treat it as an Emergency. If the PM requires use of one unavailable provider and does not authorize an alternative, escalate the conflict to PS team and de-escalate to Urgent while following the de-escalation documentation and title-formatting rules above.
   - Follow-up attempts (to an SP or a resident) are capped at 1 attempt before acting on the outcome the same day — no multi-day deferrals or "try again tomorrow" cycles.
-  - PM Critical Notes / SP Restrictions: If a PM critical note restricts contacting the SP or states the PM/SP is handling scheduling directly, do not force SP contact attempts. Refer to the **FAQ section** for scenario-specific de-escalation steps.
+  - PM Critical Notes or SP Restrictions: If a PM critical note restricts contacting the SP or states the PM/SP is handling scheduling directly, do not force SP contact attempts. Refer to the **FAQ section** for scenario-specific de-escalation steps.
 
   Sample
 
@@ -70,46 +70,66 @@ Operations Support Specialist works from the plugin’s Bad Status report. The p
   />
 </Note>
 
-### Step 1- Open the plugin Bad Status report
+## 1. The loop
 
-1. Open the plugin’s Bad Status report. Support should work from the plugin report going forward; it is the single source of truth for this SOP.
+Repeat this for every WO on the report.
 
-<video src="/videos/20260818-1939-16.1190908.mp4" controls />
+**Step 1 — Open**
 
-2. Open the work order URL from the report.
-3. Review the status, age, pending tasks, and most recent notes to determine whether the WO is still actively moving or requires intervention
+1. Work from the plugin's Bad Status report — it is the single source of truth for this SOP. Open the work order URL from the report.
+
+**Step 2 — Diagnose**
+
+1. Review status, age, pending tasks, and the most recent notes. Answer two questions:
+   1. Is there a pending task holding the WO up?
+   2. Is the WO in the wrong status entirely? (e.g. "Awaiting Invoice Receipt" with no confirmed work date, or a confirmed date that has already passed.)
+
+Verify the reason it's in its current status and that the reason still makes sense.
 
 <Frame>
   ![SOP Open Emergency Work Order (1)](/images/SOP_open_emergency_work_order-\(1\).png "SOP Open Emergency Work Order (1)")
 </Frame>
 
-### Step 2- Research the Current Status
+**Step 3 — Decide and act, same day**
 
-- Identify the current status through the work order itself.
-- Verify the reason the work order is in its current status and verify that it makes sense.
+Pick one of the three outcomes below and execute it. See Section 4 for the action tied to each status.
 
-### Step 3- Determine the next action
+## 2. The three outcomes
 
 <Warning>
-  **Important:** Do not de-escalate a WO solely to clear it from this report without review. However, once a WO has been sitting in an ambiguous status and the existing follow-up has not resulted in forward progress, you are expected to actively re-evaluate it. The PM’s original severity setting reflects the situation at intake; it does not override the need to re-evaluate a job that has aged or stalled in the Bad Status process.
+  **Important: Check PD/EH before you de-escalate anything.** If the issue is property-damaging or an extreme habitability situation, it stays **Emergency** and escalation contacts get called — regardless of what an SP told you, how old the WO is, or whether follow-up stalled. See How to: [<u>Identify Property Damage and Extreme Habitability Situations</u>](https://help.latchel.com/s/topic/0TO5e000000h9wqGAA/Emergency-Escalations-Property-Damaging-and-Extreme-Habitability-Situations#emergency-escalations-property-damaging-and-extreme-habitability-situations "https://latchel.atlassian.net/wiki/spaces/OPS/pages/745504771").
 </Warning>
 
 <Note>
   **Note**: Reclassifying a WO from Emergency to Urgent automatically lowers its approved budget limit, since budget ceilings are tied to severity (e.g., a job not scheduled within 24 hours has its budget adjusted down automatically once no longer Emergency). This is expected system behavior, not an error — no separate action is needed.
 </Note>
 
-1. Determine if there is a pending task that may be holding up the work order.
-2. Determine if the work order is completely in the wrong status (e.g., in “Awaiting Invoice Receipt” when there is no confirmed work date or the confirmed work date has already passed).
+The one exception is a PM critical note that instructs us to forward everything to the PM — see the scenario playbook.
 
-**The following information and actions provides further guidance on how to handle these scenarios:**
+| **Outcome** | **When** |
+| :-- | :-- |
+| **Intervene** | There's still a lever you can pull yourself. Schedule directly, chase a concrete ETA or date, or reassign the vendor where appropriate. Goal: get the WO moving **today**. |
+| **De-escalate to Urgent** | Intervening didn't work, the immediate emergency condition has passed, and there's no concrete near-term resolution date. Follow the de-escalation steps in Section 5. |
+| **Forward to PM** | PM input, approval, or prior PM instructions are needed — or the PM has taken ownership by assigning their own SP. |
 
-<Warning>
-  Note: The below guidance does not apply to On-call customers. Please refer to (Operations Support Specialist) Bad Status/Too Old Report | Bad Status WOs FAQ: for further instructions.
-</Warning>
+## 3. Rules that always apply
 
-<Tip>
-  Refer to the (Operations Support Specialist) Job-Aid: Work Queues & Labor Management for how to create tasks for the emergency team.
-</Tip>
+| **Rule** | **Detail** |
+| :-- | :-- |
+| **1 contact attempt, then act** | Follow-up attempts to an SP or resident are capped at **1 attempt**, then act on the outcome the same day. No multi-day deferrals, no "try again tomorrow." |
+| **Don't sit on non-emergencies** | If the issue isn't genuinely an emergency, inspect it and move it forward — don't leave it parked. |
+| **Don't de-escalate just to clear the report** | Review first. But once a WO has sat in an ambiguous status and follow-up has produced no forward progress, you are **expected** to re-evaluate. The PM's intake severity setting does not override that. |
+| **Keep "(EMERGENCY)" in the title** | When de-escalating, retain "(EMERGENCY)" in the WO title so the SP still treats it with urgency, unless a scenario below says otherwise. |
+| **Internal note is mandatory** | Every intentional de-escalation gets a note explaining why. See the template. |
+| **A task needs a real owner** | Do **not** create a task just because you de-escalated. Create one only when there is a specific pending follow-up action and a clear owner. |
+| **Respect PM critical notes** | If a critical note restricts contacting the SP, or says the PM/SP is handling scheduling directly, do not force SP contact attempts. |
+| **PM-mandated emergencies** | If the PM asks us to treat a WO as an emergency **and** allows a confirmed appointment or alternative provider, treat it as an Emergency. If the PM requires one unavailable provider and won't authorize an alternative, escalate the conflict to the PS team and de-escalate to Urgent. |
+| **Budget drops automatically** | Emergency → Urgent automatically lowers the approved budget limit, because budget ceilings are tied to severity. Expected system behavior. No separate action needed. |
+| **On-Call customers are different** | The status guidance in Section 4 does **not** apply to On-Call customers. See the On-Call scenarios in the playbook. |
+
+## 4. Status lookup: what to do by status
+
+Each heading below carries the short answer — expand only when you need the detail.
 
 <Tabs>
   <Tab title="Re/Scheduling with Tenant">
@@ -119,12 +139,12 @@ Operations Support Specialist works from the plugin’s Bad Status report. The p
     - If unsuccessful, **de-escalate to Urgent** when the immediate emergency condition has passed and there is no concrete near-term resolution date.
     - **Forward to PM** when PM input, approval, or prior PM instructions are needed.
 
-    **Why is this considered "bad status/too old"?**: The concern is when the WO remains in this status after follow-up has not resulted in a confirmed appointment or concrete ETA. At that point, the WO needs active review instead of remaining in scheduling indefinitely.
+    **Why it's flagged:** the WO remains in this status after follow-up has not produced a confirmed appointment or concrete ETA. At that point it needs active review instead of remaining in scheduling indefinitely.
   </Tab>
   <Tab title="Scheduling with Vendor">
     **Action:** If the scheduled follow-up with the SP has not resulted in a confirmed appointment or concrete ETA, apply the 3-way decision framework:
 
-    1. **Intervene** — chase a concrete ETA/date or reassign the vendor if appropriate.
+    1. **Intervene** — chase a concrete ETA or date or reassign the vendor if appropriate.
     2. If unsuccessful, **de-escalate to Urgent** when the immediate emergency condition has passed and there is no concrete near-term resolution date.
     3. **Forward to PM** when the PM has taken ownership, assigned their own SP, or Ops-side action requires PM input/approval.
 
@@ -133,251 +153,274 @@ Operations Support Specialist works from the plugin’s Bad Status report. The p
   <Tab title="Finding Vendor">
     **Action:**
 
-    1. Don't do anything if it’s been less than 1 hour since the WO was updated to this status.
-    2. After 1 hour has passed since this WO was updated to Finding Vendor status, follow up with the troubleshooter working on this WO to check if the troubleshooter may require assistance with the WO.
-    3. If the WO is found abandoned and no one is working on it, create a task for the emergency team so that another troubleshooter can pick up where the previous troubleshooter left off.
-       1. Submit feedback to the agent who left without passing the WO off in #ops-feedback.
+    - Do nothing if it's been **less than 1 hour** since the WO moved to this status.
+    - After 1 hour, follow up with the troubleshooter working the WO to check whether they need assistance.
+    - If the WO is abandoned and no one is working it, **create a task for the emergency team** so another troubleshooter can pick up where the previous one left off.
+    - Submit feedback in **#ops-feedback** about the agent who left without passing the WO off.
 
-    **Why is this considered "bad status/too old"?:** This would be considered an aging WO for emergency response standards.
+    **Why it's flagged:** this is an aging WO by emergency response standards.
 
-    **Exception**: There will be instances where an emergency WO is left in this status for deferred dispatch and an automated task is created for troubleshooters by 9:00 AM property time. No action is required for these cases.
+    **Exception:** an emergency WO may sit here for deferred dispatch, with an automated task created for troubleshooters by 9:00 AM property time. No action required in those cases.
   </Tab>
   <Tab title="Pending">
-    **Action**: Keep the current sub-scenario guidance below. If none of the listed sub-scenarios apply and the existing follow-up has produced no activity or response, treat the WO as a candidate for the 3-way decision framework: Intervene, De-escalate to Urgent, or Forward to PM.
+    **Action:** use the sub-scenario that matches. If none applies and existing follow-up has produced no activity or response, treat the WO as a candidate for the 3-way decision framework (Intervene or De-escalate or Forward to PM).
 
-    **When the resident reports an issue with the WO:**
+    | **Sub-scenario** | **Do this** |
+    | :-- | :-- |
+    | Resident reports an issue with the WO | Review, then create a task for the emergency team to follow up with the resident **and** the SP. Very common when the issue wasn't resolved. |
+    | RentRedi WO with no owner payment method | Review, then create a task for the emergency team to follow up with the owner for a payment method. |
+    | We need to collect an estimate for approval | Review, then create a task for the emergency team to follow up with the SP for the estimate. |
+    | SP reports an issue with the job (work denied on site, SP needs to provide an estimate, SP couldn't access the unit, SP missed the appointment) | Review, then create a task for the emergency team to follow up with the SP. |
 
-    - Review the issue and create a task for the emergency team to follow up with the resident and the service provider. This is very common when the issue was not resolved.
-
-    **When a RentRedi WO doesn’t have an owner payment method:**
-
-    - Review the issue and create a task for the emergency team so the emergency team can follow up with the owner to request a payment method.
-
-    **When we need to collect an estimate for approval:**
-
-    - Review the issue and create a task for the emergency team so the emergency team can follow up with the Service Provider for the estimate.
-
-    **When the Service Provider reports an issue with the job, for example, work was denied on site, SP needs to provide an estimate, SP could not access the unit, or SP missed the appointment:**
-
-    - Review the issue and create a task for the emergency team so the emergency team can follow up with the Service Provider.
-
-    **Why is this considered "bad status/too old"?:** An emergency WO in this status needs manual follow-up. If follow-up does not produce progress, Ops should not leave it pending indefinitely.
+    **Why it's flagged:** an emergency WO in this status needs manual follow-up. If follow-up doesn't produce progress, don't leave it pending indefinitely.
   </Tab>
   <Tab title="Waiting for Materials">
     **Action:**
 
-    1. Contact the SP for a firm ETA on the materials.
-    2. If the SP provides an ETA and confirms they will install promptly once materials arrive, lock in a scheduled installation appointment for that date. The WO stays on an active, concrete resolution path and does not require de-escalation solely because it is waiting for materials.
-    3. De-escalate to Urgent if either: the SP responds but cannot provide an ETA or will not commit to prompt installation once materials arrive; or the SP is unresponsive with no ETA secured after repeated follow-up attempts. In both cases, there is no concrete plan to point to, so the job no longer meets the bar for active emergency handling.
-    4. Forward to PM when the PM has taken ownership, assigned their own SP, or additional PM input/approval is needed.
+    - Contact the SP for a **firm ETA** on the materials.
+    - **SP gives an ETA and commits to installing promptly on arrival:** lock in a scheduled installation appointment for that date. The WO stays on an active, concrete resolution path and does **not** need de-escalation just because it's waiting for materials.
+    - **De-escalate to Urgent if either:** the SP responds but can't give an ETA or won't commit to prompt installation; or the SP is unresponsive with no ETA secured after follow-up. In both cases there's no concrete plan to point to, so the job no longer meets the bar for active emergency handling.
+    - **Forward to PM** when the PM has taken ownership, assigned their own SP, or additional PM input/approval is needed.
 
-    **Why is this considered "bad status/too old"?:** An emergency WO in this status needs a concrete resolution path. A confirmed materials ETA plus installation appointment can keep the WO active; an open-ended wait should trigger re-evaluation.
+    **Why it's flagged:** an emergency WO in this status needs a concrete resolution path. A confirmed materials ETA plus an installation appointment keeps it active; an open-ended wait triggers re-evaluation.
   </Tab>
   <Tab title="Troubleshooting">
     **Action:**
 
-    1. After 13 mins has passed, follow up with the agent working on this WO to check if the troubleshooter may require assistance with the WO.
-       1. Refer to [https://latchel.atlassian.net/wiki/spaces/OPS/pages/3658612739](https://latchel.atlassian.net/wiki/spaces/OPS/pages/3658612739).
-    2. If the WO is found abandoned and no one is working on it, trigger it out so that another agent can troubleshoot.
-       1. Submit feedback to the agent who left without passing the WO off in #ops-feedback.
+    - After **13 minutes**, follow up with the agent working the WO to check whether they need assistance.
+    - If the WO is abandoned and no one is working it, **trigger it out** so another agent can troubleshoot.
+    - Submit feedback in **#ops-feedback** about the agent who left without passing the WO off.
 
-    **Why is this considered "bad status/too old"?:** This would be considered an aging WO for emergency response standards.
+    **Why it's flagged:** this is an aging WO by emergency response standards.
   </Tab>
   <Tab title="Diagnosing Issue">
-    **Action:** Create a task for the emergency team to reach out to the tenant to diagnose and troubleshoot.
+    **Action:** create a task for the emergency team to reach out to the tenant to diagnose and troubleshoot.
 
-    **Why is this considered "bad status/too old"?:** An emergency WO doesn’t move from this status automatically.
+    **Why it's flagged:** an emergency WO doesn't move out of this status automatically.
   </Tab>
   <Tab title="Pending - Awaiting Payment Details">
-    **Action:**
+    **Action:** an emergency WO is never in this status automatically. This is almost always the result of a resident-responsible WO being manually escalated to emergency by an agent. Review the WO and de-escalate it to its **original severity**.
 
-    An emergency WO is never in this status automatically. This would most likely be the result of human error if a resident-responsible WO was escalated to emergency manually by an agent. Review the WO and de-escalate to the original severity.
-
-    **Why is this considered "bad status/too old"?:** This status in an emergency WO is not possible on its own without human error.
+    **Why it's flagged:** this status on an emergency WO isn't possible without human error.
   </Tab>
   <Tab title="Confirming Completion">
-    **Action:** If the resident has not replied and has not raised any issue after standard follow-up attempts, move the WO to Awaiting Invoice. This does not close the door on the resident — they can still report a problem after the move, which would trigger normal follow-up.
+    **Action:** if the resident hasn't replied and hasn't raised any issue after standard follow-up attempts, move the WO to **Awaiting Invoice**. This doesn't close the door on the resident — they can still report a problem afterward, which triggers normal follow-up.
 
-    **Why is this considered "bad status/too old"?:** The job may be functionally complete but sitting unconfirmed with no resident response and no reported issue.
+    **Why it's flagged:** the job may be functionally complete but sitting unconfirmed, with no resident response and no reported issue.
+
+    <Info>
+      Creating tasks for the emergency team: see [(Operations Support Specialist) Job-Aid: Work Queues & Labor Management](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Operations-Support-Specialist-Job-Aid-Work-Queues-Labor-Management#operations-support-specialist-job-aid-work-queues-and-labor-management).
+    </Info>
   </Tab>
 </Tabs>
 
-## ❓ Frequently `Asked Questions:`
+## 5. How to de-escalate correctly
 
-<Warning>
-  `LVN Service Provider`
+1. Confirm it's not PD/EH. Property-damaging or extreme habitability situations do not get de-escalated. Call the escalation contacts instead.
+2. Reclassify Emergency → Urgent. The budget ceiling drops automatically. That's expected.
+3. Keep "(EMERGENCY)" in the WO title so the SP still treats the job with urgency.
+4. Complete the current task, if applicable — only where the scenario calls for it.
+5. Leave the internal note (mandatory). The reason must be visible in the WO so the next person can tell it was reviewed and intentionally moved forward. Use the template.
+6. Route only if there's a real pending action. Do not create a task solely because you de-escalated. Route by subscription where the scenario calls for it:
 
-  For guidance on managing unresponsive LVN service providers or on acceptable scenarios for reassigning an LVN service provider (such as PM requests or missed appointments), refer to [Handling Work Orders Assigned to LVN Service Providers](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Handling-Work-Orders-Assigned-to-LVN-Service-Providers#handling-work-orders-assigned-to-lvn-service-providers).
-</Warning>
+| **PM subscription** | **Routing after de-escalation** |
+| :-- | :-- |
+| **Autopilot** | Tell the SP to submit the estimate via the self-service portal — the system advances the WO automatically. No manual task. |
+| **Premium** | Create a free-flow follow-up task **only** if Support still needs to track a pending follow-up. Assign to **Ops Associates**, not the PM. |
+| **24/7** | De-escalating automatically forwards the WO to the PM for non-emergency handling. No manual task — the PM picks it up directly. |
 
-<Expandable title="The PM requested to assign and dispatch a specific SP, but the service provider was unresponsive or unable to schedule within the expected timeframe.">
+## 6. Scenario playbook
+
+<Expandable title="PM assigned a specific SP, and that SP is unresponsive or can't schedule in time.">
   **No restriction on Support following up (ordinary unresponsiveness):**
 
-  - If PD/EH, call the escalation contacts — severity and status stay unchanged (Emergency, Scheduling Service Provider), since this is still being actively worked as an emergency.
-  - If not PD/EH, de-escalate to Urgent, keep "(EMERGENCY)" in the WO title, and leave the internal de-escalation note — no PM task needed. The WO stays in Scheduling Service Provider status.
+  - **If PD/EH:** call the escalation contacts. Severity and status stay unchanged (Emergency, Scheduling Service Provider) — this is still being actively worked as an emergency.
+  - **If not PD/EH:** de-escalate to Urgent, keep "(EMERGENCY)" in the title, leave the internal de-escalation note. No PM task needed. The WO stays in **Scheduling Service Provider** status.
 
-  **PM insists the job is an emergency but restricts us to one specific SP, and that SP is unresponsive (a genuine conflict, not ordinary unresponsiveness):**
+  **PM insists it's an emergency but restricts us to one specific SP, and that SP is unresponsive (a genuine conflict, not ordinary unresponsiveness):**
 
-  - "Emergency" and "you must use only this one, possibly unreachable provider" aren't compatible — if we must use that person and they don't answer, it isn't functioning as an emergency.
-  - De-escalate to Urgent, keep "(EMERGENCY)" in the title so the SP still treats it with urgency, and leave the internal note — no PM task.
-  - Escalate to Product Support or have CS raise the contradiction with the PM directly, since this is a policy conflict to resolve, not just a one-off WO decision. If the PM later pushes back asking why it was de-escalated, use the script below.
-    - _“Hi \[PM Name\]. As part of our emergency process, we ensure that a job gets scheduled. If we cannot schedule with the current assigned service provider, we will find an alternative service provider. Unless you want us to find an alternative service provider, the appropriate status is urgent and we can keep emergency in the title so that your service provider is aware. But if we have an emergency job, our job is to get a service provider scheduled.”_
+  - "Emergency" and "you must use only this one, possibly unreachable provider" aren't compatible. If we must use that person and they don't answer, it isn't functioning as an emergency.
+  - De-escalate to Urgent, keep "(EMERGENCY)" in the title so the SP still treats it with urgency, leave the internal note. No PM task.
+  - Escalate to **Product Support**, or have CS raise the contradiction with the PM directly — this is a policy conflict to resolve, not a one-off WO decision. If the PM pushes back on the de-escalation, use the PM script.
 
-  **PM has an explicit critical note instructing us not to contact the SP or the PM once a provider is assigned (a clear instruction, not a conflict):**
+  **PM has an explicit critical note not to contact the SP or the PM once a provider is assigned (a clear instruction, not a conflict):**
 
-  - Do not call the SP or the PM — that defeats the purpose of the instruction.
+  - Do **not** call the SP or the PM — that defeats the purpose of the instruction.
   - De-escalate to Urgent, keep "(EMERGENCY)" in the title, leave the internal note, and move it out of the active queue.
-  - Escalate to Product Support as what is outlined in the above sample.
+  - Escalate to **Product Support** as outlined above.
 </Expandable>
 
-<Expandable title="The SP paid an initial visit to the property, but the issue wasn't fixed, and they are building an estimate.">
-  **Step 1 — Contact the SP first** (or ask directly if already on the phone with them):
+<Expandable title="SP visited, issue not fixed, and they're building an estimate.">
+  **Step 1 — Contact the SP first** (or ask directly if you're already on the phone):
 
   - Is the emergency part of this already resolved or made safe?
   - Can you get us the estimate today, or only on a later date?
 
   **Step 2 — If the SP confirms the emergency part is resolved:**
 
-  - Check PD/EH separately — resolving the immediate trigger doesn't automatically clear this.
-    - **Still actively property damaging or a habitability concern:** do not de-escalate. The WO stays Emergency, and escalation contacts get called as part of standard emergency handling — a true PD/EH situation must be treated as an emergency regardless of what the SP confirmed.
-    - **Not currently property damaging:** proceed with de-escalation. Reclassify to Urgent, keep “(EMERGENCY)” in the WO title, complete the current task if applicable, and leave the internal de-escalation note. If there's any uncertainty about severity, verify directly with the resident rather than relying on the SP's word or WO notes alone.
-  - Once reclassified to Urgent, route by PM subscription:
-    - **Autopilot:** advise the SP to submit the estimate via the self-service portal — the system automatically advances the WO from there. No manual task needed.
-    - **Premium:** create a free-flow follow-up task only if Support still needs to track a pending follow-up; assign it to Ops Associates, not the PM.
-    - **24/7:** de-escalating automatically forwards the WO to the PM for non-emergency handling — no manual task needed, the PM picks it up directly.
-  - Whether the estimate itself lands today or later doesn't matter here — the emergency's resolved, so it proceeds through the applicable path above either way.
+  Check PD/EH separately — resolving the immediate trigger doesn't automatically clear this.
+
+  - **Still actively property-damaging or a habitability concern:** do **not** de-escalate. The WO stays Emergency and escalation contacts get called as part of standard emergency handling. A true PD/EH situation is treated as an emergency regardless of what the SP confirmed.
+  - **Not currently property-damaging:** proceed with de-escalation. Reclassify to Urgent, keep "(EMERGENCY)" in the title, complete the current task if applicable, and leave the internal note. If there's any uncertainty about severity, verify directly with the resident rather than relying on the SP's word or WO notes alone.
+
+  Once reclassified to Urgent, route by PM subscription (see the routing table in Section 5). Whether the estimate lands today or later doesn't matter here — the emergency is resolved, so it proceeds through the applicable path either way.
 
   **Step 3 — If the SP says the emergency part is NOT resolved:**
 
-  - **SP can give us the estimate today:** don't de-escalate yet — tell them to submit it and follow up same-day.
-  - **SP can only give us a later date, or is unresponsive after the one same-day contact attempt:**
-    - **PD/EH:** do not de-escalate. Call escalation contacts — same rule as Step 2, an active PD/EH situation stays Emergency regardless of timeline.
-    - **Not PD/EH:** reclassify to Urgent, keep “(EMERGENCY)” in the WO title, complete the current task if applicable, and leave the internal de-escalation note. Do not create a PM task unless separate PM input or approval is actually needed.
+  - **SP can give us the estimate today:** don't de-escalate yet. Tell them to submit it and follow up same-day.
+  - **SP can only give a later date, or is unresponsive after the one same-day contact attempt:**
+    - **PD/EH:** do not de-escalate. Call escalation contacts.
+    - **Not PD/EH:** reclassify to Urgent, keep "(EMERGENCY)" in the title, complete the current task if applicable, leave the internal note. Do not create a PM task unless separate PM input or approval is actually needed.
 </Expandable>
 
-<Expandable title="The SP paid an initial visit to the property, but the issue wasn’t fixed, and they are waiting for materials. The SP has not provided a date when the materials will be available or is unresponsive.">
-  1. If the issue is property-damaging or extreme habitability (refer to [How to: Identify Property Damage and Extreme Habitability Situations](https://latchel.atlassian.net/wiki/spaces/OPS/pages/745504771) ):
-     1. Call the escalation contacts. Refer to [Job Aid: PM Outbound Communication for Emergency WOs](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2537652248)
-  2. If the issue is not property-damaging or extreme habitability:
-     1. Contact the SP for a firm ETA on when materials will be available and confirm whether they can install promptly once materials arrive.
-        1. Create a task for follow-up on materials.
-           1. Refer to [(Operations Support Specialist) Job-Aid: Work Queues & Labor Management](https://latchel.atlassian.net/wiki/spaces/OPS/pages/1386905601)  to know how to create the task.
-           2. If the SP provides an ETA and confirms they will install promptly once materials arrive:
-              1. Schedule the installation date as the appointment.
-              2. No additional follow-ups are required until that date unless the SP or resident provides a new update.
-           3. If the SP does not have the installation date/time yet, cannot confirm a firm installation appointment, or is unresponsive after the one same-day contact attempt:
-              1. De-escalate the WO to Urgent, complete the current task if applicable, keep “(EMERGENCY)” in the WO title, and leave the standard internal de-escalation note explaining that no firm installation date/time was confirmed.
-              2. Do not schedule an additional callback/follow-up just to ask again for the materials or installation date/time.
+<Expandable title="SP visited, issue not fixed, waiting for materials — no date given, or unresponsive.">
+  **If property-damaging or extreme habitability:** call the escalation contacts. See [Job Aid: PM Outbound Communication for Emergency WOs](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs#job-aid-pm-outbound-communication-for-emergency-wos).
+
+  **If not PD/EH:**
+
+  - Contact the SP for a firm ETA on materials and confirm they can install promptly once materials arrive.
+  - Create a task for materials follow-up — see [(Operations Support Specialist) Job-Aid: Work Queues & Labor Management](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Operations-Support-Specialist-Job-Aid-Work-Queues-Labor-Management#operations-support-specialist-job-aid-work-queues-and-labor-management).
+  - **SP provides an ETA and confirms prompt installation:** schedule the installation date as the appointment. No additional follow-ups until that date unless the SP or resident provides a new update.
+  - **SP has no installation date/time, can't confirm a firm appointment, or is unresponsive after the one same-day attempt:** de-escalate to Urgent, complete the current task if applicable, keep "(EMERGENCY)" in the title, and leave the internal note explaining that no firm installation date/time was confirmed.
+  - Do **not** schedule an additional callback just to ask again for the materials or installation date.s
 </Expandable>
 
-<Expandable title="The resident has reported that the issue is unresolved but they have been unresponsive to our contacts to confirm what needs to be fixed. The SP has been unresponsive too.">
-  1. Attempt to follow up once with the resident, using all residents available in the property.
-     1. Attempt to get in contact as follows:
-        1. Phone call.
-        2. Send SMS and/or email.
-  2. If the resident is unresponsive, attempt to contact the SP once the same day.
-  3. If both parties are unresponsive:
-     1. If the issue is property damaging or extreme habitability, refer to [How to: Identify Property Damage and Extreme Habitability Situations](https://latchel.atlassian.net/wiki/spaces/OPS/pages/745504771) and contact the emergency escalation contacts.
-     2. If the issue is not property damaging or extreme habitability, de-escalate the WO to Urgent, keep “(EMERGENCY)” in the WO title, complete the current task if applicable, and leave the internal de-escalation note. Do not defer to the next day and do not create a PM task unless separate PM input or approval is actually needed.
+<Expandable title="Resident says the issue is unresolved, but both resident and SP are unresponsive.">
+  - Attempt to follow up **once** with the resident, using all residents available on the property: phone call, then SMS and/or email.
+  - If the resident is unresponsive, attempt to contact the SP **once** the same day.
+  - **If both are unresponsive:**
+    - **PD/EH:** contact the emergency escalation contacts.
+    - **Not PD/EH:** de-escalate to Urgent, keep "(EMERGENCY)" in the title, complete the current task if applicable, leave the internal note. Do not defer to the next day, and do not create a PM task unless separate PM input or approval is actually needed.
 </Expandable>
 
-<Expandable title="The resident has reported that the appointment was missed. ">
-  1. Contact the resident to confirm the report.
-     1. Inform the resident that we’ll attempt to contact the assigned SP, but if the SP is unresponsive and the WO is still an active emergency, we’ll reassign to someone else when appropriate.
-  2. Contact the SP once the same day to follow up on the missed appointment.
-     1. If the SP is responsive, confirm a new appointment time.
-     2. If the SP is unresponsive:
-        1. **Locked in and PM-assigned service providers:**
-           1. If the issue is property damaging or extreme habitability, refer to [How to: Identify Property Damage and Extreme Habitability Situations](https://latchel.atlassian.net/wiki/spaces/OPS/pages/745504771) and contact the emergency escalation contacts.
-           2. If the issue is not property damaging or extreme habitability, de-escalate the WO to Urgent, keep “(EMERGENCY)” in the WO title, complete the current task if applicable, and leave the internal de-escalation note. Do not create a PM task unless separate PM input or approval is actually needed.
-        2. **Not locked in:**
-           1. If the issue is property damaging or extreme habitability, reassign the WO to another SP. Refer to [(EMERGENCY) How to: Assign a Preferred \+ Latchel Network Service Provider](https://latchel.atlassian.net/wiki/spaces/OPS/pages/782565943).
-           2. If the issue is not property damaging or extreme habitability, de-escalate the WO to Urgent, keep “(EMERGENCY)” in the WO title, complete the current task if applicable, and leave the internal de-escalation note. Do not defer to the next day and do not create a PM task unless separate PM input or approval is actually needed.
+<Expandable title="Resident reports the appointment was missed.">
+  - Contact the resident to confirm the report.
+  - Tell the resident we'll attempt to contact the assigned SP, and that if the SP is unresponsive and the WO is still an active emergency, we'll reassign when appropriate.
+  - Contact the SP **once** the same day about the missed appointment.
+  - **SP responsive:** confirm a new appointment time.
+  - **SP unresponsive — locked-in and PM-assigned SPs:**
+    - **PD/EH:** contact the emergency escalation contacts.
+    - **Not PD/EH:** de-escalate to Urgent, keep "(EMERGENCY)" in the title, complete the current task if applicable, leave the internal note. Do not create a PM task unless separate PM input or approval is actually needed.
+  - **SP unresponsive — not locked in:**
+    - **PD/EH:** reassign the WO to another SP. See [(EMERGENCY) How to: Assign a Preferred \+ Latchel Network Service Provider](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/EMERGENCY-How-to-Assign-a-Preferred-Latchel-Network-Service-Provider#emergency-how-to-assign-a-preferred-latchel-network-service-provider).
+    - **Not PD/EH:** de-escalate to Urgent, keep "(EMERGENCY)" in the title, complete the current task if applicable, leave the internal note. Do not defer to the next day, and do not create a PM task unless separate PM input or approval is actually needed.
 </Expandable>
 
-<Expandable title="The WO has been moved to Needs Owner Approval for the estimate approval request, then we received a follow-up request from the SP or the resident. ">
-  1. You may inform the resident or service provider that the estimate is in the process of being reviewed by the Property Manager, and that we’ve sent a follow-up request regarding the status of the approval.
-  2. Then, create a task for the Property Manager using the template below:
-     1. Subject: **Estimate Approval Follow-Up Request**
-     2. Who is this task about? _Select the PM_
-     3. Select a Date and Time: _Leave as is_
-     4. Assign to a User Group: _PM user group_
-     5. Assign to a User: _Leave as is_
-     6. Priority: _Leave as is_
-     7. _Complete task only on Completed or Cancelled job States_
-     8. Description: _The (service provider or resident) is following up on the estimate approval. The work order is currently in Needs Approval status after the service provider submitted the estimate. Please let us know if the estimate has been approved or declined, or if you need any assistance. else. Thank you!_
+<Expandable title="WO is in Needs Owner Approval and the SP or resident follows up.">
+  Tell the resident or SP that the estimate is being reviewed by the Property Manager and that we've sent a follow-up request about the approval status. Then create a PM task:
+
+  | **Field** | **Value** |
+  | :-- | :-- |
+  | Subject | Estimate Approval Follow-Up Request |
+  | Who is this task about? | Select the PM |
+  | Select a Date and Time | Leave as is |
+  | Assign to a User Group | PM user group |
+  | Assign to a User | Leave as is |
+  | Priority | Leave as is |
+  | Completion | Complete task only on Completed or Cancelled job states |
+
+  **Description:** The (service provider or resident) is following up on the estimate approval. The work order is currently in Needs Approval status after the service provider submitted the estimate. Please let us know if the estimate has been approved or declined, or if you need any assistance. Thank you!
 </Expandable>
 
-<Expandable title="The WO is in Scheduling with Service Provider / Scheduling with Resident status after the PM assigned a service provider and;">
-  1. **_There is a critical note that there is no need to contact the SP AND we can forward the WO to the PM. Do we still need to call the service provider and the escalation contacts?_**
-     - No. Move the WO to “Waiting for PM” and reclassify the severity to Urgent.
-       1. **Do not contact the EEC**, even for PD/EH issues, when this critical-note exception applies. The PM has taken ownership of SP coordination and has requested that all requests be forwarded directly to them.
-       2. Keep “(EMERGENCY)” in the WO title, leave the internal de-escalation note, and document that the PM critical note/direct instruction is the reason the WO was moved out of the active emergency queue.
+<Expandable title="Scheduling with SP / Resident after the PM assigned an SP, and a critical note says don't contact the SP.">
+  **Question:** there's a critical note saying no need to contact the SP **and** we can forward the WO to the PM. Do we still call the SP and the escalation contacts?
+
+  **No.** Move the WO to **"Waiting for PM"** and reclassify severity to **Urgent**.
+
+  - Do **not** contact the EEC, even for PD/EH issues, when this critical-note exception applies. The PM has taken ownership of SP coordination and asked that all requests be forwarded directly to them.
+  - Keep "(EMERGENCY)" in the title, leave the internal de-escalation note, and document that the PM critical note or direct instruction is the reason the WO was moved out of the active emergency queue.
 </Expandable>
 
-<Expandable title="A WO was previously moved to “Waiting for PM” after the PM said they would handle it, but later someone moved it back into a Scheduling status after assigning a service provider. What should we do?">
-  1. If the PM previously confirmed they would handle the WO (and the WO was moved to “Waiting for PM” for that reason), but the job is now in a Scheduling with Service Provider / Scheduling with Resident / Rescheduling with Tenant status after the PM assigned a service provider:
-     1. Move the WO back to “Waiting for PM.”
-     2. Reclassify the severity to Urgent because the PM has taken ownership by assigning their own service provider while the WO is being handled through the Bad Status process.
-     3. In the task description, add a note: “_We see that this work order was previously moved to ‘Waiting for PM’ after you confirmed you would handle it, and a service provider has now been assigned. Please let us know if you would like Latchel to coordinate the appointment, or if you prefer to keep managing scheduling directly on your end._”
-  2. This applies to **both PD/EH and non‑PD/EH** WOs. Only contact the **EEC** if:
-     - If this has not already been done, **AND**
-     - The PM does **not** confirm they are managing it, **AND**
-     - The situation meets standard PD/EH escalation rules as outlined elsewhere in the following SOPs:
-       - [https://latchel.atlassian.net/wiki/spaces/OPS/pages/2537652248](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2537652248)
-       - [https://latchel.atlassian.net/wiki/spaces/OPS/pages/2475851825/How\+to\+Properly\+Diagnose\+Emergency\+Situations#%F0%9F%93%9DGuidelines-for-Evaluating-and-Reassessing-Work-Order-Information](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2475851825/How+to+Properly+Diagnose+Emergency+Situations#%F0%9F%93%9DGuidelines-for-Evaluating-and-Reassessing-Work-Order-Information)
-       - [https://latchel.atlassian.net/wiki/spaces/OPS/pages/2741829633](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2741829633)
+<Expandable title='WO was in "Waiting for PM," then someone moved it back to Scheduling after the PM assigned an SP.'>
+  If the PM previously confirmed they'd handle the WO (and it was moved to "Waiting for PM" for that reason), but it's now in Scheduling with Service Provider or Scheduling with Resident / Rescheduling with Tenant after the PM assigned a provider:
+
+  - Move the WO back to **"Waiting for PM."**
+  - Reclassify severity to **Urgent** — the PM has taken ownership by assigning their own SP while the WO is being handled through the Bad Status process.
+  - Add this note to the task description: _"We see that this work order was previously moved to 'Waiting for PM' after you confirmed you would handle it, and a service provider has now been assigned. Please let us know if you would like Latchel to coordinate the appointment, or if you prefer to keep managing scheduling directly on your end."_
+
+  This applies to **both** PD/EH and non-PD/EH WOs. Only contact the EEC if **all** of the following are true:
+
+  - It hasn't already been done, **and**
+  - The PM does not confirm they are managing it, **and**
+  - The situation meets standard PD/EH escalation rules per the SOPs linked in Related documents.
 </Expandable>
 
-<Expandable title="A resident follows up on a WO that was previously de-escalated to Urgent. What do we do?">
-  **Action:** Ask the resident to describe the **current condition**, then follow this decision tree:
+<Expandable title="Resident follows up on a WO that was already de-escalated to Urgent.">
+  Ask the resident to describe the **current condition**, then:
 
-  1. **New or Worsening Emergency Condition** (e.g., leak spread, structural damage, total loss of power/heat in severe weather):
-     - **Decision:** Re-escalate to **Emergency**.
-     - **Steps:** Resume standard emergency dispatch/follow-up procedures immediately. Post an internal note: _"Re-escalated to Emergency due to new resident report: \[details\]"_.
-  2. **Unchanged / Stable Condition** (resident is asking for status or expressing urgency, but condition is unchanged):
-     - **Decision:** Maintain **Urgent** status.
-     - **Steps:** Reassure the resident, provide current status/ETA, create a task to PM as needed, and log the contact attempt in an internal note. Do not re-escalate solely because the initial intake was an emergency.
+  - **New or worsening emergency condition** (leak spread, structural damage, total loss of power/heat in severe weather): **re-escalate to Emergency.** Resume standard emergency dispatch/follow-up immediately and post an internal note: _"Re-escalated to Emergency due to new resident report: \[details\]."_
+  - **Unchanged or stable condition** (resident is asking for status or expressing urgency, but nothing has changed): **maintain Urgent.** Reassure the resident, give current status/ETA, create a PM task as needed, and log the contact attempt in an internal note.
+
+  Do not re-escalate solely because the initial intake was an emergency.
 </Expandable>
 
-<Expandable title="On-call customers-related tasks">
-  1. Task automatically created by the system: <img src="/images/image-10.png" alt="Image" title="Image" /> 2. Check the notes that the resident left when they reported that there is an issue with the job. You can find this just below the automated task that was created: <img src="/images/image-11.png" alt="Image" title="Image" />
-     c. Complete the automated task and create a new one with the information left by the resident, assigning it to the PM User Group.
-     d. Submit a report to the _#bug-report_ channel
-  2. All other On-call customer related tasks manually assigned to the Latchel Ops team:
-     1. Read the task description. If the task was created for Ops to follow up (except for reasons outlined here [https://latchel.atlassian.net/wiki/spaces/OPS/pages/3132325894](https://latchel.atlassian.net/wiki/spaces/OPS/pages/3132325894) ), proceed to complete the task.
-        1. If an update to the PM is needed, create a new task and assign it to the PM User Group.
-     2. Submit a ticket to the _svc-ops-feedback_ channel
-  3. For Bad Status report concerns or suspected plugin reporting issues, escalate through the current reporting/support channel for the plugin. Do not use the retired pgAdmin query path for this SOP.
+<Expandable title="On-Call customer tasks.">
+  **Task automatically created by the system:**
+
+  - Check notes the resident left when reporting an issue with the job — found just below the automated task that was created.
+  - Complete the automated task and create a new one with the resident's information, assigning it to the **PM User Group**.
+  - Submit a report to the **#bug-report** channel.
+
+  **All other On-Call customer tasks manually assigned to the Latchel Ops team:**
+
+  - Read the task description. If the task was created for Ops to follow up (except for the excluded reasons in the linked SOP), complete the task.
+  - If an update to the PM is needed, create a new task assigned to the **PM User Group**.
+  - Submit a ticket to the **svc-ops-feedback** channel.
 </Expandable>
 
-<Expandable title="The PM is On-Call, and the WO doesn't have a “Waiting for PM” option or the ability to create a PM task. What do we do?">
-  Use “Forward to PM” that is built in the Latchel Ops assistant plugin instead — this is the only available routing option for On-Call PMs in this process.
+<Expandable title={"PM is On-Call and there's no \"Waiting for PM\" option or ability to create a PM task."}>
+  Use **"Forward to PM"** built into the Latchel Ops assistant plugin — this is the only available routing option for On-Call PMs in this process.
 
-  **Note**: this button does not leave an internal note or trigger any other automation; it only forwards the WO and moves it out of the current status. Per the de-escalation callout above, add your own note to the WO documenting the reason before using it, since the button won't capture it for you.
+  **IMPORTANT**
+
+  This button does not leave an internal note or trigger any other automation. It only forwards the WO and moves it out of the current status. **Add your own note to the WO documenting the reason before using it** — the button won't capture it for you.
 </Expandable>
 
-<Expandable title="Assigned Service Providers Also Listed as PM or EEC">
-  1. In some cases, the assigned Service Provider on a Work Order may also be listed as the Property Manager or Emergency Escalation Contact. When this occurs **do not assume** that their dual role changes our obligation to verify scheduling, completion, or issue resolution. Ops team should:
-     - **Continue to treat the follow-up process as business as usual.**
-       - Follow all standard communication and update procedures as you would with any regular service provider.
-       - Ensure all updates are clearly documented in the Work Order, and create or update related tasks as needed.
-       - If there's any confusion about responsibilities or roles, escalate to Product support for correction. ‼️**IMPORTANT**: When handling **PD/EH issues**, if you anticipate that you may need to escalate the case **after calling the service provider**, and the **escalation contact is the same person** as the service provider, **address the potential escalation during that initial call**. There is **no need to call them a second time as an escalation contact**—make sure to cover both aspects (service provider support and escalation) in your first conversation with them. **Say something like:** _“Thanks for the update. Since you’re also listed as the escalation contact for this work order, we’ll consider this conversation as addressing both roles. I’ll make sure your response is documented as the official direction moving forward.”_ _“Just to confirm—we’d typically escalate this to the PM due to the nature of the issue, but as you're also the escalation contact, your response here will serve as the PM’s direction. I’ll make sure that’s captured.”_
+<Expandable title="Assigned SP is also listed as the PM or EEC.">
+  A dual role does **not** change our obligation to verify scheduling, completion, or issue resolution.
+
+  - Treat the follow-up process as business as usual.
+  - Follow all standard communication and update procedures as with any regular SP.
+  - Document all updates clearly in the WO, and create or update related tasks as needed.
+  - If there's confusion about responsibilities or roles, escalate to Product Support for correction.
+
+  **IMPORTANT**
+
+  **PD/EH with a dual-role contact:** if you anticipate needing to escalate after calling the SP, and the escalation contact is the same person, address the potential escalation during that first call. Don't call them a second time as an escalation contact — cover both roles in one conversation. See the dual-role script.
 </Expandable>
 
-## Script: Responding to a PM Question About a De-escalation.
+<Expandable title="LVN service providers.">
+  For unresponsive LVN service providers, or acceptable scenarios for reassigning an LVN service provider (PM requests, missed appointments), see Handling Work Orders Assigned to LVN Service Providers.Templates & scripts
+</Expandable>
 
-_“Hi \[PM Name\]. As part of our emergency process, we ensure that a job gets scheduled. If we cannot schedule with the current assigned service provider, we will find an alternative service provider. Unless you want us to find an alternative service provider, the appropriate status is urgent and we can keep emergency in the title so that your service provider is aware. But if we have an emergency job, our job is to get a service provider scheduled.”_
+## Templates & scripts
 
-## 📋Task Template for Property Manager
+### Internal de-escalation note (mandatory on every de-escalation)
 
-This task template should be used when we are awaiting the Property Manager’s instructions in order to proceed with the work order.
+De-escalated from Emergency to Urgent — (reason, e.g., "PM scheduled provider for (date)" or "no active damage per resident"). Flagging for team visibility — reach out before re-escalating unless resident reports new/worsening damage.
 
-1. Subject: **Action Required: PM Instructions or Information Needed**_._
-2. Who is this task about? _Select the PM_
-3. Select a Date and Time: _Leave as is_
-4. Assign to a User Group: _PM user group_
-5. Assign to a User: _Leave as is_
-6. Priority: _Leave as is_
-7. _Complete task on any job state change_
-8. Description: _We’ve created this task for the Property Manager to \[insert specific information or instructions needed\]. The current status of the work order is \[insert status\]. Kindly provide the requested information or guidance at your earliest convenience to help ensure a smooth continuation of the process. If you have any questions or need further clarification, please don’t hesitate to reach out. Thank you!_
+### PM task — instructions or information needed
+
+Use when we're awaiting the Property Manager's instructions in order to proceed.
+
+| **Field** | **Value** |
+| :-- | :-- |
+| Subject | Action Required: PM Instructions or Information Needed |
+| Who is this task about? | Select the PM |
+| Select a Date and Time | Leave as is |
+| Assign to a User Group | PM user group |
+| Assign to a User | Leave as is |
+| Priority | Leave as is |
+| Completion | Complete task on any job state change |
+
+**Description:** We've created this task for the Property Manager to \[insert specific information or instructions needed\]. The current status of the work order is \[insert status\]. Provide the requested information or guidance at your earliest convenience. If you have any questions or need further clarification, please don't hesitate to reach out. Thank you!
+
+### PM task — estimate approval follow-up
+
+See the Needs Owner Approval scenario for the full template.
+
+### Script — responding to a PM who questions a de-escalation
+
+"Hi (PM Name). As part of our emergency process, we ensure that a job gets scheduled. If we cannot schedule with the current assigned service provider, we will find an alternative service provider. Unless you want us to find an alternative service provider, the appropriate status is urgent and we can keep emergency in the title so that your service provider is aware. But if we have an emergency job, our job is to get a service provider scheduled."
+
+<br /><br />
