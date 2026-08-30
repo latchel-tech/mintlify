@@ -1,183 +1,144 @@
 ---
 title: "How to: Handle Autopilot WOs"
-groups: ["latchel"]
+groups:
+  - "latchel"
 ---
+
 ## 🧠 What This Process Is Trying to Solve
 
-
 <Note>
-_We aim to streamline the handling of non-emergency Autopilot work orders by ensuring that tasks are appropriately managed by the Property Manager (PM) through automated assignments. This process is designed to minimize unnecessary manual interventions by Latchel associates, thereby reducing operational overhead and enhancing efficiency. By clearly defining when and how Latchel should intervene, we prevent redundant actions and ensure that PMs are empowered to manage their responsibilities effectively. This approach helps maintain a seamless workflow, reduces potential errors, and ensures that all parties involved have a clear understanding of their roles and responsibilities._
+  _We aim to streamline the handling of non-emergency Autopilot work orders by ensuring that tasks are appropriately managed by the Property Manager (PM) through automated assignments. This process is designed to minimize unnecessary manual interventions by Latchel associates, thereby reducing operational overhead and enhancing efficiency. By clearly defining when and how Latchel should intervene, we prevent redundant actions and ensure that PMs are empowered to manage their responsibilities effectively. This approach helps maintain a seamless workflow, reduces potential errors, and ensures that all parties involved have a clear understanding of their roles and responsibilities._
 </Note>
 
 🎓**Training Content**
 
-The contents of this page have been included in the **Autopilot for Service Ops Q4 2022 **Coassemble course.
-
+The contents of this page have been included in the **Autopilot for Service Ops Q4 2022**  Coassemble course.
 
 ## 🗂️Overview
 
 For non-emergency Autopilot work orders, all automated tasks are assigned to the PM by the system.
 
-
 <Note>
-**There are a few known exceptions to this** that Product will be prioritizing soon:
+  **There are a few known exceptions to this** that Product will be prioritizing soon:
 
-1. SP left a note tasks
-2. Job is incomplete tasks (e.g. review estimate, etc.)
-3. Sourcing tasks for a limited number of PMs
+  1. SP left a note tasks
+  2. Job is incomplete tasks (e.g. review estimate, etc.)
+  3. Sourcing tasks for a limited number of PMs
 
-**NOTE**: If you are working on a task that is not one of the tasks listed in the “Warning” box above, continue with the below applicable steps and submit a #bug-report for Product.
+  **NOTE**: If you are working on a task that is not one of the tasks listed in the “Warning” box above, continue with the below applicable steps and submit a #bug-report for Product.
 </Note>
 
-1. **Scenario 1: **The PM explicitly asks you to do something (see[ PM Communication section below](https://help.latchel.com/how-to-handle-autopilot-wos)).
-2. **Scenario 2: **You received an inbound communication from a resident, SP or owner or is working on a task assigned to Latchel Service Ops:
-  1. If the request is of general inquiry that is available in the work order (i.e., what is the residents phone number, what's the access information, etc.) **AND **is visible to that client type (i.e. it is on the service provider dashboard):
-    1. Go to the **Additional Information** tab of the work order, under the **Property Access** section. Copy the link that corresponds to the client who reached out and open it in a new Chrome tab. The information displayed there represents what the client can see on their end. If the client is requesting information that is already visible there, you can proceed to the below step of sending an SMS.
-      1. 
+1. **Scenario 1**: The PM explicitly asks you to do something (see[ PM Communication section below](https://help.latchel.com/how-to-handle-autopilot-wos)).
+2. **Scenario 2**: You received an inbound communication from a resident, SP or owner or is working on a task assigned to Latchel Service Ops:
+   1. If the request is of general inquiry that is available in the work order (i.e., what is the residents phone number, what's the access information, etc.) **AND** is visible to that client type (i.e. it is on the service provider dashboard):
+      1. Go to the **Additional Information** tab of the work order, under the **Property Access** section. Copy the link that corresponds to the client who reached out and open it in a new Chrome tab. The information displayed there represents what the client can see on their end. If the client is requesting information that is already visible there, you can proceed to the below step of sending an SMS.
+      2. Send an SMS to the customer with the requested information together with a link to their dashboard.
+         1. **Say something like**: _“Hi \[customer name\]. Here is the information you requested. \[Indicate the information requested by the customer\]. For your convenience, you can also view this and other details on your dashboard: \[dashboard link\]. If you have any other questions, please let us know!”_
+      3. If an update is provided by the resident, service provider or registered owner.
+         1. Determine if the information is sufficient for us to take action.
+            1. **If the information is sufficient for immediate action:**
+               1. **Example 1**: SP notes that a work order is scheduled and we have all necessary information to set the appointment.
+                  1. Proceed to make the necessary update or schedule the appointment.
+               2. **Example 2**: SP contacts Latchel to request approval for a higher amount than the Approved Budget. If the requested amount is under the Hard Budget, approve the work and update the Approved Budget per our [(Non-Emergency) How to: Handle Over Approved Budget (aka Estimate)](https://help.latchel.com/non-emergency-how-to-handle-over-approved-budget-aka-estimate). Do not proactively schedule; the system handles vendor automation. **Only intervene if the work order did not move forward as expected or a task is created for Latchel or the PM explicitly requests action.**
+               3. **Example 3:** If an SP sends an invoice via email that exceeds the approved and hard budget limits, follow \[How to: Handle Invoices or Estimates Sent via email\] Step 6.4 — but assign the resulting task to the PM rather than Service Provider Followup, consistent with Autopilot routing.
+               4. **If the information is insufficient, proceed to Step d.**
+      4. **All other inquiries,** escalate to the Property Manager.
+         1. **📝 NOTE** (This process applies to the following scenarios, including but not limited to **recall work orders**, **unresolved concerns**, and **missed appointments**)
+         2. If there are no changes with the severity of the work order, create a task to PM.
+         3. If the issue is non-emergency but is property damaging or extreme habitability, call the escalation contacts.
+            1. Manually trigger the "**Who Ya Gonna Call**" tool via the work order Action Menu. Associates should review the AI recommendation first, while also verifying the information against the original escalation instructions displayed below. Refer to [Job Aid: PM Outbound Communication for Emergency WOs](https://help.latchel.com/job-aid-pm-outbound-communication-for-emergency-wos).
+               1. If they are unresponsive, create a task assigned to the PM.
+         4. If the issue escalates to an emergency, follow the steps outlined in Step 1.a.ii.3 of this [SOP](https://help.latchel.com/how-to-properly-diagnose-emergency-situations)
+            1. **Resident notification:** _Hello \[**resident’s name**\]! Thank you for reaching out. We will notify the appropriate team about your request. If the issue has become worse or you need further assistance with anything, please call your emergency hotline at (NUMBER) or reply to this message. We appreciate your patience!_
+         5. _Ensure all tasks assigned to Latchel Service Ops are marked as completed_
 
 <Frame>
-  <img src="/images/SVC-432.png" alt="image-20251016-225148.png" />
 </Frame>
-
-
-
-
-  2. Send an SMS to the customer with the requested information together with a link to their dashboard.
-    1. **Say something like**: _“Hi [customer name]. Here is the information you requested. [Indicate the information requested by the customer]. For your convenience, you can also view this and other details on your dashboard: [dashboard link]. If you have any other questions, please let us know!”_
-
-  3. If an update is provided by the resident, service provider or registered owner.
-    1. Determine if the information is sufficient for us to take action.
-      1. **If the information is sufficient for immediate action:**
-        1. **Example 1**: SP notes that a work order is scheduled and we have all necessary information to set the appointment.
-          1. Proceed to make the necessary update or schedule the appointment.
-
-        2. **Example 2**: SP contacts Latchel to request approval for a higher amount than the Approved Budget. If the requested amount is under the Hard Budget, approve the work and update the Approved Budget per our [(Non-Emergency) How to: Handle Over Approved Budget (aka Estimate)](https://help.latchel.com/non-emergency-how-to-handle-over-approved-budget-aka-estimate). Do not proactively schedule; the system handles vendor automation. **Only intervene if the work order did not move forward as expected or a task is created for Latchel or the PM explicitly requests action.**
-
-      2. **If the information is insufficient, proceed to Step d.**
-
-
-  4. **All other inquiries,** escalate to the Property Manager.
-    1. **📝 NOTE** (This process applies to the following scenarios, including but not limited to **recall work orders**, **unresolved concerns**, and **missed appointments**)
-    2. If there are no changes with the severity of the work order, create a task to PM.
-    3. If the issue is non-emergency but is property damaging or extreme habitability, call the escalation contacts.
-      1. Manually trigger the "**Who Ya Gonna Call**" tool via the work order Action Menu. Associates should review the AI recommendation first, while also verifying the information against the original escalation instructions displayed below.
-      2. Refer to [Job Aid: PM Outbound Communication for Emergency WOs](https://help.latchel.com/job-aid-pm-outbound-communication-for-emergency-wos).
-        1. If they are unresponsive, create a task assigned to the PM.
-
-
-    4. If the issue escalates to an emergency, follow the steps outlined in Step 1.a.ii.3 of this [SOP](https://help.latchel.com/how-to-properly-diagnose-emergency-situations)
-    5. **Resident notification:** _Hello [**resident’s name**]! Thank you for reaching out. We will notify the appropriate team about your request. If the issue has become worse or you need further assistance with anything, please call your emergency hotline at (NUMBER) or reply to this message. We appreciate your patience!_
-
-  5. _Ensure all tasks assigned to Latchel Service Ops are marked as completed_
-
-
 
 ## 💬PM Communication
 
 If a PM reaches out to you asking you to take action on a non-emergency work order:
 
-
 <Note>
-**LVN Service Provider**
+  **LVN Service Provider**
 
-For guidance on managing unresponsive LVN service providers or on acceptable scenarios for reassigning an LVN service provider (such as PM requests or missed appointments), refer to [Handling Work Orders Assigned to LVN Service Providers](https://help.latchel.com/handling-work-orders-assigned-to-lvn-service-providers).
+  For guidance on managing unresponsive LVN service providers or on acceptable scenarios for reassigning an LVN service provider (such as PM requests or missed appointments), refer to [Handling Work Orders Assigned to LVN Service Providers](https://help.latchel.com/handling-work-orders-assigned-to-lvn-service-providers).
 </Note>
 
 1. Review the list of scripts below.
-  1. _**If one of the scripts matches the PM’s request**_, use it to:
-    1. Share a help guide with the PM on how they could take action themselves.
-      1. **‼️IMPORTANT:** If the PM insists they want you to take action on their behalf, we will fulfill their requests.
-
-
-
-2. If the action the PM is asking you to take is _**not found in the **_[http://help.latchel.com](http://help.latchel.com/):
-  1. Take the action for the PM. Follow the appropriate SOP for the action requested. If creating a task is part of that SOP, assign it to the PM.
-  2. [Submit a Public Latchel Help Article Request in the #svc-ops-requests Slack channel](https://www.loom.com/share/c7821e32631245bca208855edfc68494). Service Ops leadership will work with CS to confirm the proper Help Article and draft the accompanying script to add to the list below.
-
+   1. **_If one of the scripts matches the PM’s request_**, use it to:
+      1. Share a help guide with the PM on how they could take action themselves.
+         1. **‼️IMPORTANT:** If the PM insists they want you to take action on their behalf, we will fulfill their requests.
+2. If the action the PM is asking you to take is **_not found_**_ in the_ [http://help.latchel.com](http://help.latchel.com/):
+   1. Take the action for the PM. Follow the appropriate SOP for the action requested. If creating a task is part of that SOP, assign it to the PM.
+   2. [Submit a Public Latchel Help Article Request in the #svc-ops-requests Slack channel](https://www.loom.com/share/c7821e32631245bca208855edfc68494). Service Ops leadership will work with CS to confirm the proper Help Article and draft the accompanying script to add to the list below.
 3. For sample blurbs when providing a PM with a help guide—or when the PM declines to take action themselves—see [How to Handle SMS/Webchat Contacts: New Support Framework](https://help.latchel.com/how-to-handle-sms-webchat-contacts-new-support-framework).
 
-
 <Note>
-If the Property Managers express any resistance or dissatisfaction with our process of having them apply the changes themselves for PMs with Autopilot subscription, always escalate to support for a PS ticket. This does not apply to Owners from NOMAD and RentRedi since they don’t have access to the console
-Please refer to the following SOPs [(How to: Escalate to Product Support)](https://help.latchel.com/how-to-escalate-to-product-support) & [(How to: Escalate Between Teams)](https://help.latchel.com/how-to-escalate-between-teams).
+  If the Property Managers express any resistance or dissatisfaction with our process of having them apply the changes themselves for PMs with Autopilot subscription, always escalate to support for a PS ticket. This does not apply to Owners from NOMAD and RentRedi since they don’t have access to the console Please refer to the following SOPs [(How to: Escalate to Product Support)](https://help.latchel.com/how-to-escalate-to-product-support) & [(How to: Escalate Between Teams)](https://help.latchel.com/how-to-escalate-between-teams).
 </Note>
-
 
 ## 🛠️Dispatching
 
-
 <Note>
-The associate should avoid creating a task proactively for Latchel to manually assign a service provider, **unless** requested by the PM, since we rely on the system to handle the vendor automation queue, and we rely on the PM to intervene on the WO as necessary when flagged by the system. However, the system might create a task for the Latchel team to intervene or take action on the WO, in such cases, proceed to work on the task following its instructions. See below for guidance.
+  The associate should avoid creating a task proactively for Latchel to manually assign a service provider, **unless** requested by the PM, since we rely on the system to handle the vendor automation queue, and we rely on the PM to intervene on the WO as necessary when flagged by the system. However, the system might create a task for the Latchel team to intervene or take action on the WO, in such cases, proceed to work on the task following its instructions. See below for guidance.
 </Note>
-
 
 ## 🌐Sourcing outside network
 
 If sourcing outside of the network is requested, Latchel Service Ops Associates should follow [How to: Source a New Service Provider (Outside Network)](https://help.latchel.com/how-to-source-a-new-service-provider-outside-network). If we are unsuccessful and the PM asks us to try again, follow the SOP by recontacting all SPs (Preferred, LCN & 5 you tried to source yesterday) the next day, then attempting to contact 5 new ones.
 
-
 ## 🧑‍🤝‍🧑Resident Communication
 
 While these requests are handled by the appropriate team (the property manager assigned to their unit), we should avoid phrasing that separates Latchel from the process or places responsibility solely on the PM.
 
-
 ## [<u>❓</u>](https://help.latchel.com/how-to-handle-emergency-work-orders)Frequently Asked Questions
 
-Q1: Should we submit a new work order if a Non-ER issue is identified as a recall or potential recall under Auto-Pilot PM?
+<Expandable title="Q1: Should we submit a new work order if a Non-ER issue is identified as a recall or potential recall under Auto-Pilot PM?">
+  ### **Answer: No.**
 
+  For **Auto-Pilot PM – Non-ER work orders**:
 
-### **Answer: No.**
+  1. **Do not create a new work order.**
+  2. Create a **task for the PM** informing them:
+     - The issue is recurring, and it may qualify as a recall.
+  3. The **PM will continue coordinating** with the assigned Service Provider using the same work order.
 
-For **Auto-Pilot PM – Non-ER work orders**:
+  If the PM **explicitly** requests assistance in creating a new work order for the recall process, proceed at that time.
+</Expandable>
 
-1. **Do not create a new work order.**
-2. Create a **task for the PM** informing them:
-  - The issue is recurring, and it may qualify as a recall.
+<Expandable title="Q2: If the PM confirms the issue is a recall, should the work order be added to a project?">
+  ### **Answer: No.**
 
-3. The **PM will continue coordinating** with the assigned Service Provider using the same work order.
+  If the PM confirms it is a recall:
 
-If the PM **explicitly **requests assistance in creating a new work order for the recall process, proceed at that time.
+  - The PM should continue working with the Service Provider under the **same work order**.
+  - The work order **does not need to be added to a project**.
 
-Q2: If the PM confirms the issue is a recall, should the work order be added to a project?
+  If the PM explicitly requests a new work order:
 
+  - Create the new work order as requested.
+  - Assign the task to the PM.
+  - Clearly communicate expectations regarding recall qualification.
+  - The work order still does **not** need to be added to a project unless otherwise directed.
+</Expandable>
 
-### **Answer: No.**
+<Expandable title="Q3: If a Non-ER Auto-Pilot work order escalates to ER, should we apply the SOP “How to: Handle Situations for WOs Awaiting PM Action”?">
+  ### **Answer: Yes — follow the applicable escalation steps.**
 
-If the PM confirms it is a recall:
+  Refer to: **SOP:[ How to: Handle Situations for WOs Awaiting PM Action](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2741829633)**<br />→ Scenario B under **_Handling Other Scenarios of Work Orders Awaiting PM Action_**<br />→ Follow guidance in[ **_Guidelines for Evaluating and Reassessing Work Order Information_**](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2475851825/How+to+Properly+Diagnose+Emergency+Situations#%F0%9F%93%9DGuidelines-for-Evaluating-and-Reassessing-Work-Order-Information) under **1.a.ii.3 (b, c)**
 
-- The PM should continue working with the Service Provider under the **same work order**.
-- The work order **does not need to be added to a project**.
+  ### Escalation Steps:
 
-If the PM explicitly requests a new work order:
+  Refer to [**Job Aid: PM Outbound Communication for Emergency WOs**](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2537652248)
 
-- Create the new work order as requested.
-- Assign the task to the PM.
-- Clearly communicate expectations regarding recall qualification.
-- The work order still does **not** need to be added to a project unless otherwise directed.
+  - **If PD/EH:**
+    - Call the **EEC** to notify them of the severity change or possible PD/EH classification.
+  - **If Non-PD/EH:**
+    - Create a **task for the PM** to inform them of the escalation.
 
-Q1: If a Non-ER Auto-Pilot work order escalates to ER, should we apply the SOP “How to: Handle Situations for WOs Awaiting PM Action”?
-
-
-### **Answer: Yes — follow the applicable escalation steps.**
-
-Refer to: **SOP:**[** How to: Handle Situations for WOs Awaiting PM Action**](https://help.latchel.com/how-to-handle-situations-for-wos-awaiting-pm-action)
-→ Scenario B under** **_**Handling Other Scenarios of Work Orders Awaiting PM Action**_
-→ Follow guidance in[ _**Guidelines for Evaluating and Reassessing Work Order Information**_](https://help.latchel.com/how-to-properly-diagnose-emergency-situations) under **1.a.ii.3 (b, c)**
-
-
-### Escalation Steps:
-
-Refer to [**Job Aid: PM Outbound Communication for Emergency WOs**](https://help.latchel.com/job-aid-pm-outbound-communication-for-emergency-wos)
-
-- **If PD/EH:**
-  - Call the **EEC** to notify them of the severity change or possible PD/EH classification.
-
-- **If Non-PD/EH:**
-  - Create a **task for the PM** to inform them of the escalation.
-
-
-Since the PM is actively managing these work orders, ensure proper notification and follow the outlined emergency diagnosis procedures.
-
+  Since the PM is actively managing these work orders, ensure proper notification and follow the outlined emergency diagnosis procedures.
+</Expandable>
 
 ## 🎯 When to Break This SOP
 
@@ -185,18 +146,13 @@ While the SOP should guide most situations, there are rare instances where devia
 
 - **PM or Leadership Provides Explicit Approval to Deviate**
   - If a PM or internal team lead (e.g., Service Ops or Product Support) gives you **explicit direction** to handle the WO outside of normal Autopilot flow, you may proceed. Always document the instruction (e.g., Slack, email) and include it in the task or WO notes.
-
 - **System Failure or Bug Prevents Standard Workflow**
   - If a bug or system limitation prevents you from following the SOP (e.g., task is misrouted, automation failed), handle the task appropriately and **submit a #bug-report** after resolving the issue.
 
-
 _Do not break the SOP on your own—always document the situation and seek guidance from leadership to ensure we maintain compliance, safety, and customer satisfaction._
-
 
 ---
 
-
 ## 💡 If You Think This SOP Could Be Improved...
 
-Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work?
- 👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**
+Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work? 👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**
