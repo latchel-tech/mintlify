@@ -1,6 +1,7 @@
 ---
 title: "How to: Handle Invoices or Estimates Sent via email"
-groups: ["latchel"]
+groups:
+  - "latchel"
 ---
 
 ## 🧠 What This Process Is Trying to Solve
@@ -132,7 +133,10 @@ When working on new & unsorted tickets, you will come across emails and estimate
 />
 
 4. **Invoice:**
-   1. If the invoice total is above the approved budget, reply to the service provider asking to clarify the amount and confirm if they got approval from Latchel, the Property Manager or the Owner for that amount.
+   1. **Before proceeding:** Check whether the work order is an Autopilot WO.
+      - **If Autopilot:** Do not assign to Service Provider Followup. Instead, create the task and assign it to the **PM**, per \[How to: Handle Autopilot WOs\]. Note in the task that the SP submitted an over-budget invoice via email.
+      - **If not Autopilot:** Continue with the existing steps below (create/update the "Pending invoice" task for Service Provider Followup, etc.).
+   2. If the invoice total is above the approved budget, reply to the service provider asking to clarify the amount and confirm if they got approval from Latchel, the Property Manager or the Owner for that amount.
       1. Say something like: _"Before we're able to proceed with this invoice, could you please verify what's the total amount for the job and who approved it? Thank you!"_
       2. If there's a task already created to request the invoice, update the description in the current "Pending invoice" task with the message:
          1. _"The service provider submitted an over-the-budget invoice, kindly check for the Service Provider's reply to email or contact the Service Provider to follow up"_
