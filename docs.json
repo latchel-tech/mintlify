@@ -755,7 +755,7 @@
                               {
                                 "group": "How: the Integration Health monitoring process works",
                                 "pages": [
-                                  "latchel-admin/Service-Operations/Ops-Integrations/how-the-integration-health-monitoring-process-works-for-internally-flagged-pms",
+                                  "latchel-admin/Service-Operations/Ops-Integrations/how-the-integration-health-monitoring-process-works",
                                   "latchel-admin/Service-Operations/Ops-Integrations/how-to-request-assistance-from-the-customer-success-manager",
                                   "latchel-admin/Service-Operations/Ops-Integrations/how-to-proceed-if-we-receive-a-pm-removal-issue-request",
                                   "latchel-admin/Service-Operations/Ops-Integrations/integration-metrics-report",
@@ -765,7 +765,7 @@
                               {
                                 "group": "How: the Integration Health monitoring process works for Internally Flagged PMs",
                                 "pages": [
-                                  "latchel-admin/Service-Operations/Ops-Integrations/how-the-integration-health-monitoring-process-works",
+                                  "latchel-admin/Service-Operations/Ops-Integrations/how-the-integration-health-monitoring-process-works-for-internally-flagged-pms",
                                   "latchel-admin/Service-Operations/Ops-Integrations/how-to-proceed-when-the-latchel-sync-request-is-received",
                                   "latchel-admin/Service-Operations/Ops-Integrations/how-to-access-the-teamviewer-remote-server",
                                   "latchel-admin/Service-Operations/Ops-Integrations/how-to-enable-automatic-cloud-sync-for-a-clients-account",
