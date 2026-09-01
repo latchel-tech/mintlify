@@ -1,6 +1,7 @@
 ---
 title: "SOP: Guidelines for Notifying Property Managers of Severe Weather Events"
-groups: ["latchel"]
+groups:
+  - "latchel"
 ---
 
 <Note>
@@ -12,7 +13,7 @@ groups: ["latchel"]
 1. A bot monitors extreme weather events on a weekly basis and reports them in the [#svc-ops-sync](https://latchel.slack.com/archives/GK725P4H4) Slack channel. Ex:
 
 <Frame>
-  ![ChatGPT Image 25 jun 2026, 04\_46\_32 p.m..png](/images/PST-105.png)
+  ![ChatGPT Image 25 jun 2026, 04_46_32 p.m..png](/images/PST-105.png)
 </Frame>
 
 2. The bot sends a notification to the Product Support Manager to review the post.
@@ -30,14 +31,14 @@ groups: ["latchel"]
 
 Once the Product Support team has been notified by the Product Support Manager that we will alert affected PM customers about an upcoming extreme weather event:
 
-1. Determine which PMs are affected. The following pgAdmin query returns all active units for all active customers by state. [This Loom video](https://www.loom.com/share/938542f5564e478ba58d9e93eba04d6c) provides an overview of how to use it in conjunction with [this worksheet](https://docs.google.com/spreadsheets/d/1SbRD_K00to64JdUhnhOlofOEi6u0HLjM4Gaw2SQTtD4/edit#gid=0) to identify which PMs should receive an email. 
+1. Determine which PMs are affected. The following pgAdmin query returns all active units for all active customers by state. [This Loom video](https://www.loom.com/share/938542f5564e478ba58d9e93eba04d6c) provides an overview of how to use it in conjunction with [this worksheet](https://docs.google.com/spreadsheets/d/1SbRD_K00to64JdUhnhOlofOEi6u0HLjM4Gaw2SQTtD4/edit#gid=0) to identify which PMs should receive an email.
    ```sql lines
    SELECT p.address1, p.city, p.state, p.pm_company_id AS company_id, c.name
    FROM property p
    LEFT JOIN company c ON c.company_id = p.pm_company_id
    WHERE p.is_active = 1 AND c.is_active = 1
    ```
-   The following query retrieves a list of emails for property manager users whose companies are located in specific states (see states in line 15). You can change the state abbreviations in the query based on where you need to focus your attention, such as specific weather-related events. 
+   The following query retrieves a list of emails for property manager users whose companies are located in specific states (see states in line 15). You can change the state abbreviations in the query based on where you need to focus your attention, such as specific weather-related events.
 
 ```sql lines
 SELECT distinct c.name as pm_co_name, u.name as user_name, con.value as email 
@@ -67,13 +68,13 @@ AND c.name NOT ILIKE '%test%'
   _Some weather events (ex: a major winter storm) could be almost nationwide. In those cases, it would be appropriate to email all customers. Consult with the Product Support Manager if you’re unsure._
 </Note>
 
-2. Product Support sends the following email template with the list of affected PMsvia hubspot at least 48 hours before the weather event. Be sure to update the fields in \[red\] accordingly.
+2. Product Support sends the following email template with the list of affected PMsvia hubspot at least 48 hours before the weather event. Be sure to update the fields in [red] accordingly.
 
 ### Email Template
 
-> Dear \[Customer Name\],
+> Dear [Customer Name],
 >
-> Latchel is actively monitoring \[weather event\] which is forecast to impact \[geographic area\] in the days ahead.
+> Latchel is actively monitoring [weather event] which is forecast to impact [geographic area] in the days ahead.
 >
 > **_How does Latchel prepare?_** Our Service Operations team regularly monitors extreme weather events across the US and adjusts staffing to ensure continuity in intaking resident calls, troubleshooting and dispatching emergencies.
 >

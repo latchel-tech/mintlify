@@ -1,6 +1,7 @@
 ---
 title: "Job Aid: Top PM Requested Action Sets"
-groups: ["latchel"]
+groups:
+  - "latchel"
 ---
 
 <Note>
@@ -11,7 +12,7 @@ groups: ["latchel"]
 
 1. Review the below table.
 2. Find the Action Set you would like model your request after.
-3. In the #pd\_cn\_actionset Slack Channel, fill out the Action Set Request workflow and submit:
+3. In the #pd_cn_actionset Slack Channel, fill out the Action Set Request workflow and submit:
 
 <Frame>
   ![Screenshot 2024-11-07 at 8.09.24 AM.png](/images/PST-94.png)
@@ -59,7 +60,7 @@ groups: ["latchel"]
         [Auto-Close Work Order (Unresponsive Resident)](https://app.latchel.com/admin/action-sets/1015 "https://app.latchel.com/admin/action-sets/1015")
       </Tab>
       <Tab title="Details">
-        If WO in "Scheduling with Tenant" or "Rescheduling with Tenant", after 7 days of residnet not scheduling (unless mandatory, SP is assigned or an emergency) ---\> Auto-Cancel the WO.
+        If WO in "Scheduling with Tenant" or "Rescheduling with Tenant", after 7 days of residnet not scheduling (unless mandatory, SP is assigned or an emergency) ---> Auto-Cancel the WO.
       </Tab>
       <Tab title="Notes">
         Length of time can be adjusted to X days based on PM Request - Request with [Madeleine Nylec](mailto:maddie@latchel.com "mailto:maddie@latchel.com")
@@ -76,7 +77,7 @@ groups: ["latchel"]
         [SP Instructions with Owner Contact Info](https://app.latchel.com/admin/action-sets/1047 "https://app.latchel.com/admin/action-sets/1047")
       </Tab>
       <Tab title="Details">
-        Provides SP instructions based on the assigned owner for the property. ---\> "RECOMMENDATIONS: If you have questions, here is the contact information"
+        Provides SP instructions based on the assigned owner for the property. ---> "RECOMMENDATIONS: If you have questions, here is the contact information"
       </Tab>
       <Tab title="Notes">
         If no owner assigned to the property, no addition to SP insturction will be made and a note will be logged on the WO that the Custom Automation was NOT applied.
@@ -87,7 +88,7 @@ groups: ["latchel"]
   <Accordion title="Automatic Permission To Enter + AI">
     <Tabs>
       <Tab title="URL">
-        [Automatic Permission To Enter \+ AI](https://app.latchel.com/admin/action-set-group/12 "https://app.latchel.com/admin/action-set-group/12")
+        [Automatic Permission To Enter + AI](https://app.latchel.com/admin/action-set-group/12 "https://app.latchel.com/admin/action-set-group/12")
       </Tab>
       <Tab title="Action Set Included">
         [Add Permission to Enter](https://app.latchel.com/admin/action-sets/49 "https://app.latchel.com/admin/action-sets/49")
@@ -110,10 +111,10 @@ groups: ["latchel"]
         [Needs PM Approval SMS](https://app.latchel.com/admin/action-sets/713 "https://app.latchel.com/admin/action-sets/713")
       </Tab>
       <Tab title="Details">
-        If WO in Needs Approval ---\> Sends SMS to User Group
+        If WO in Needs Approval ---> Sends SMS to User Group
       </Tab>
       <Tab title="Notes">
-        "Hi (to.name) the job, (job.name), at the address, (job.property.full\_address) requires your approval. For more details visit this link: (job.url)"
+        "Hi (to.name) the job, (job.name), at the address, (job.property.full_address) requires your approval. For more details visit this link: (job.url)"
       </Tab>
     </Tabs>
   </Accordion>
@@ -127,7 +128,7 @@ groups: ["latchel"]
         [Urgent Job Notification](https://app.latchel.com/admin/action-sets/1135 "https://app.latchel.com/admin/action-sets/1135")
       </Tab>
       <Tab title="Details">
-        If WO is Urgent and in "Scheduling with Tenant", "Scheduling with Vendor", "Finding Vendor", or "Rescheduling with Tenant" for 3 Days ---\> Task Created and Task Notification sent.
+        If WO is Urgent and in "Scheduling with Tenant", "Scheduling with Vendor", "Finding Vendor", or "Rescheduling with Tenant" for 3 Days ---> Task Created and Task Notification sent.
       </Tab>
       <Tab title="Notes">
         "Urgent Work Order Stuck for 72 hours: This job has not been successfully scheduled for 72 hours and requires your attention."
@@ -144,7 +145,7 @@ groups: ["latchel"]
         [Finding Vendor 3 Day Notice](https://app.latchel.com/admin/action-sets/543 "https://app.latchel.com/admin/action-sets/543")
       </Tab>
       <Tab title="Details">
-        WO in "Finding Vendor" ---\> If no vendor assigned after 3 days, sends SMS to PM's phone number directly. Will only send between 8am-5pm property time.
+        WO in "Finding Vendor" ---> If no vendor assigned after 3 days, sends SMS to PM's phone number directly. Will only send between 8am-5pm property time.
       </Tab>
       <Tab title="Notes">
         "Work Order: SLA Breach - No vendor has accepted the job for 3 days. Property: , , , Resident: Vacant unit Job Link:" PM Phone Number needs to be manually updated for PM request - Request update with Madeleine Nylec
@@ -161,7 +162,7 @@ groups: ["latchel"]
         [Troubleshooting 24 hour Notice](https://app.latchel.com/admin/action-sets/544 "https://app.latchel.com/admin/action-sets/544")
       </Tab>
       <Tab title="Details">
-        WO in "Troubleshooting" ---\> Still in "Troubleshooting" after 24 hours, sends SMS to PM's phone number directly. Will only send between 8am-5pm property time.
+        WO in "Troubleshooting" ---> Still in "Troubleshooting" after 24 hours, sends SMS to PM's phone number directly. Will only send between 8am-5pm property time.
       </Tab>
       <Tab title="Notes">
         "Work Order: SLA Breach - Job in troubleshooting for 24 hours. Property: , , , Resident: Vacant unit Job Link:" PM Phone Number needs to be manually updated for PM request - Request update with Madeleine Nylec
@@ -178,7 +179,7 @@ groups: ["latchel"]
         [Custom Vendor Instructions](https://app.latchel.com/admin/action-sets/956 "https://app.latchel.com/admin/action-sets/956")
       </Tab>
       <Tab title="Details">
-        Provide customer vendor instructions based on the assigned PM for the portfolio. ---\> "RECOMMENDATIONS: If you have questions, here is the contact information"
+        Provide customer vendor instructions based on the assigned PM for the portfolio. ---> "RECOMMENDATIONS: If you have questions, here is the contact information"
       </Tab>
       <Tab title="Notes">
         If property not assigned to a portfolio, no addition to SP insturction will be made and a note will be logged on the WO that the Custom Automation was NOT applied.
@@ -192,10 +193,10 @@ groups: ["latchel"]
         [Emergency Auto-Complete](https://app.latchel.com/admin/action-set-group/83 "https://app.latchel.com/admin/action-set-group/83")
       </Tab>
       <Tab title="Action Set Included">
-        [AWD \> Complete](https://app.latchel.com/admin/action-sets/816 "https://app.latchel.com/admin/action-sets/816")
+        [AWD > Complete](https://app.latchel.com/admin/action-sets/816 "https://app.latchel.com/admin/action-sets/816")
       </Tab>
       <Tab title="Details">
-        WO is Emergency and in "Awaiting work date" ---\> Moves to "Completed" after 15 mins.
+        WO is Emergency and in "Awaiting work date" ---> Moves to "Completed" after 15 mins.
       </Tab>
       <Tab title="Notes">
         Note is logged on the WO: "Per PM request, this job is being automatically closed out so residents do not receive further automated follow-up messaging." Length of time can be adjusted to X mins (or hours/days) based on PM Request - Request with [Madeleine Nylec](mailto:maddie@latchel.com "mailto:maddie@latchel.com")
@@ -246,7 +247,7 @@ groups: ["latchel"]
         [Cancel "Normal" jobs in scheduling after 3 days](https://app.latchel.com/admin/action-sets/1016 "https://app.latchel.com/admin/action-sets/1016")
       </Tab>
       <Tab title="Details">
-        If WO is in "Scheduling with Tenant" or "Rescheduling with Tenant", and a non-emergency, and not urgent ---\> Auto-cancel the WO after 3 days and log a note on the job.
+        If WO is in "Scheduling with Tenant" or "Rescheduling with Tenant", and a non-emergency, and not urgent ---> Auto-cancel the WO after 3 days and log a note on the job.
       </Tab>
       <Tab title="Notes">
         Length of time can be adjusted to X mins (or hours/days) based on PM Request - Request with [Madeleine Nylec](mailto:maddie@latchel.com "mailto:maddie@latchel.com"). "This property manager has a custom action set which closes any job which is not urgent, or an emergency after 3 days of resident inaction."
@@ -348,7 +349,7 @@ groups: ["latchel"]
         [Make Every New Work Order Mandatory (except res responsible)](https://app.latchel.com/admin/action-sets/940 "https://app.latchel.com/admin/action-sets/940")
       </Tab>
       <Tab title="Details">
-        Makes ALL WOs (excepted resident responsible) MANDATORY ---\> Meaning the Resident CANNOT Cancel the WO.
+        Makes ALL WOs (excepted resident responsible) MANDATORY ---> Meaning the Resident CANNOT Cancel the WO.
       </Tab>
       <Tab title="Notes">
         Note logged on WO: "Per property manager request, custom automation set this job to be "Mandatory"."
@@ -376,10 +377,10 @@ groups: ["latchel"]
   <Accordion title="Needs PM Approval > Needs Owner Approval">
     <Tabs>
       <Tab title="URL">
-        [Needs PM Approval \> Needs Owner Approval](https://app.latchel.com/admin/action-set-group/85 "https://app.latchel.com/admin/action-set-group/85")
+        [Needs PM Approval > Needs Owner Approval](https://app.latchel.com/admin/action-set-group/85 "https://app.latchel.com/admin/action-set-group/85")
       </Tab>
       <Tab title="Action Set Included">
-        [Move Needs PM Approval \> Needs Owner Approval](https://app.latchel.com/admin/action-sets/1013 "https://app.latchel.com/admin/action-sets/1013")
+        [Move Needs PM Approval > Needs Owner Approval](https://app.latchel.com/admin/action-sets/1013 "https://app.latchel.com/admin/action-sets/1013")
       </Tab>
       <Tab title="Details">
         Moves "Needs PM Approval" WOs into "Needs Owner Approval"
@@ -399,7 +400,7 @@ groups: ["latchel"]
         [Move Pending Duplicate to Scheduling](https://app.latchel.com/admin/action-sets/829 "https://app.latchel.com/admin/action-sets/829")
       </Tab>
       <Tab title="Details">
-        This skips the duplicate check when a new WO is submitted for the same property that already has an open WO. Moves WO from "Pending" ---\> "Finding Vendor".
+        This skips the duplicate check when a new WO is submitted for the same property that already has an open WO. Moves WO from "Pending" ---> "Finding Vendor".
       </Tab>
       <Tab title="Notes">
         It is VERY important to explain this clearly to the PM as this does run the risk of a double dispatch situation.
@@ -552,7 +553,7 @@ groups: ["latchel"]
         [Auto Remove SP when Unresponsive (2 Day Delay)](https://app.latchel.com/admin/action-sets/950 "https://app.latchel.com/admin/action-sets/950")
       </Tab>
       <Tab title="Details">
-        Automatically removes a Service Provider if the job has been in Scheduling Service provider for 2\+ days. The only conditions where they wouldn't be removed is if they're a) locked-in or b) provided an estimate on the job (via their dashboard)
+        Automatically removes a Service Provider if the job has been in Scheduling Service provider for 2+ days. The only conditions where they wouldn't be removed is if they're a) locked-in or b) provided an estimate on the job (via their dashboard)
       </Tab>
       <Tab title="Notes">
         If they provided an estimate verbally OR they're VIP, they'll still be removed using this action set. The key is they need to use Latchel to set an appointment. Use with care; as these service providers may have scheduled off-platform. Other action sets will notify them they have been removed, but they may not heed them or receive them (e.g. not textable/no email).
@@ -603,7 +604,7 @@ groups: ["latchel"]
         THERE ARE MULTIPLE AS THIS IS THE CORE WO ACTION SETS THAT PMs DEFAULT TO. Calling out specifically [\[STATE\] Confirming Completion.](https://app.latchel.com/admin/action-sets/1080 "https://app.latchel.com/admin/action-sets/1080")
       </Tab>
       <Tab title="Details">
-        There is branch off the action set that can be manipulated by adding a PM ID ---\> This will remove the Auto-Completed function. If the WO is NOT confirmed completed, the WO will NOT auto-complete. A task with generated for the User Group saying the WO has not been confirmed complete.
+        There is branch off the action set that can be manipulated by adding a PM ID ---> This will remove the Auto-Completed function. If the WO is NOT confirmed completed, the WO will NOT auto-complete. A task with generated for the User Group saying the WO has not been confirmed complete.
       </Tab>
       <Tab title="Notes">
         Request additional PM ID with [Madeleine Nylec](mailto:maddie@latchel.com "mailto:maddie@latchel.com")
@@ -614,7 +615,7 @@ groups: ["latchel"]
   <Accordion title="Auto-Fill SP instructions with Portfolio Name + Owner Info">
     <Tabs>
       <Tab title="URL">
-        [Auto-Fill SP instructions with Portfolio Name \+ Owner Info](https://app.latchel.com/admin/action-set-group/145 "https://app.latchel.com/admin/action-set-group/145")
+        [Auto-Fill SP instructions with Portfolio Name + Owner Info](https://app.latchel.com/admin/action-set-group/145 "https://app.latchel.com/admin/action-set-group/145")
       </Tab>
       <Tab title="Action Set Included">
         [SP Instructions with Primary and Second Contact](https://app.latchel.com/admin/action-sets/1454 "https://app.latchel.com/admin/action-sets/1454")
