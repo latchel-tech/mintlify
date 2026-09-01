@@ -1,18 +1,17 @@
 ---
 title: "How to: Work Around Service Degradation Events"
-groups: ["latchel"]
+groups:
+  - "latchel"
 ---
 
 ## 🧠 What This Process Is Trying to Solve
 
 <Info>
-We want to prevent delays in handling emergency work orders when troubleshooting tasks are not automatically created due to a service degradation. The goal is to manually create and monitor tasks so that customer issues are addressed promptly, ensuring Latchel operations continue smoothly despite system disruptions.
+  We want to prevent delays in handling emergency work orders when troubleshooting tasks are not automatically created due to a service degradation. The goal is to manually create and monitor tasks so that customer issues are addressed promptly, ensuring Latchel operations continue smoothly despite system disruptions.
 </Info>
 
-**Content**
-
 <Info>
-To learn about what a “Service Degration” is, refer to (SOP) Latchel App Outage
+  To learn about what a “Service Degration” is, refer to [(SOP) Latchel App Outage](https://help.latchel.com/latchel-admin/Service-Operations/Latchel-Library/SOP-Latchel-App-Outage#sop-latchel-app-outage).
 </Info>
 
 ## Troubleshooting Tasks are not being created or delayed
@@ -21,22 +20,24 @@ In the event that Emergency Troubleshooting tasks are not being created for inco
 
 1. Go to the main Latchel page: [https://app.latchel.com/admin/work-orders](https://app.latchel.com/admin/work-orders)
 2. Filter by WOs in “Troubleshooting” state:
-  <Frame>
-    ![image-20230526-230413.png](/images/SVC-95.png)
-  </Frame>
+
+<Frame>
+  ![image-20230526-230413.png](/images/SVC-95.png)
+</Frame>
+
 3. Create a manual troubleshooting task for each of the WOs displayed.
-  1. Refer to [Job Aid: What is a task?](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2528083973/Job+Aid+What+is+a+task+)
+   1. Refer to [Job Aid: What is a task?](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-What-is-a-task#what-is-a-task)
 4. Refresh the page as often as possible.
 5. Repeat the steps above for any new WOs until the Service Degradation is resolved.
 
 ## 🎯 When to Break This SOP
 
 <Note>
-This SOP should be followed in most cases, but team members can adjust their approach based on the situation. For example, if the service degradation is resolved temporarily, or if a leadership-directed workaround or tool becomes available, support may skip or modify steps. The goal is to maintain coverage and ensure emergency work orders are addressed without unnecessary delay.
+  This SOP should be followed in most cases, but team members can adjust their approach based on the situation. For example, if the service degradation is resolved temporarily, or if a leadership-directed workaround or tool becomes available, support may skip or modify steps. The goal is to maintain coverage and ensure emergency work orders are addressed without unnecessary delay.
 </Note>
 
 ## 💡 If You Think This SOP Could Be Improved...
 
 Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work?
 
- 👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**
+👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**
