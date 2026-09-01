@@ -1,6 +1,7 @@
 ---
 title: "SOP: Account Termination Steps"
-groups: ["latchel"]
+groups:
+  - "latchel"
 ---
 
 ### Step-by-Step Guide:
@@ -9,7 +10,7 @@ Once account is confirmed that they are terminating and we have the termination 
 
 **Step 1. PS or CS receives cancellation request from the PM.**
 
-- If request goes to PS, [PS should escalate the ticket to the CSM](https://latchel.atlassian.net/wiki/x/VoDpnQ).
+- If request goes to PS, [PS should escalate the ticket to the CSM](/latchel-admin/Product-Support-Team/SOP-Escalating-Tickets-to-the-CSM).
 
 **Step 2.** CSM meets with PM to discuss cancellation and next steps.
 
@@ -28,6 +29,16 @@ Once account is confirmed that they are terminating and we have the termination 
 - Primary Termination Reason
 - Assembly Desire to Churn Ticket URL
 
+Additionally, CSM creates a second calendar invite under PS Team Calendar, dated 3 weeks after the Date of Cancellation, for the Twilio phone number release. Invite must include:
+
+- PM Account Name
+- PM Latchel URL
+- Original Date of Cancellation
+- Latchel-Assigned Phone Number
+- Latchel Communication Phone Number
+
+If the Date of Cancellation changes after this invite is created, CSM updates the ticket, recreates both invites with the new date, and recalculates this reminder to new date \+ 3 weeks.
+
 **Step 6:** On the Date of Cancelation, PS turns OFF all communications to ALL users in Latchel account. **SKIP THIS STEP IF TERMINATED FOR NON-PAYMENT.**
 
 1. Turn OFF invoice notifications via the Maint. Communication Settings.
@@ -44,12 +55,26 @@ Once account is confirmed that they are terminating and we have the termination 
 2. Cancel any open active WOs.
 3. Click the 3 dots in the top right corner of the account home page, then select **Terminate Service**.
 4. Link the Assembly Desire to Churn case in the termination reason field and save.
+5. Spot check the PS Team Calendar to confirm a Twilio Release reminder invite exists, dated 3 weeks from the Date of Cancellation. If it's missing, notify CSM to create it before moving on.
 
 <Frame>
   ![Screenshot 2025-09-30 at 3.20.03 PM.png](/images/PST-8.png)
 </Frame>
 
-**Step 8.** Release all Twilio phone numbers associated with the customer.
+**Step 8.** Complete the Account Termination Workflow in [#service-changes](https://latchel.slack.com/archives/CKA2W1KJA) using the information shared in the Calendar Invite. Once submitted, tag the CSM in the thread for confirmation.
+
+**Step 9.** PS emails the PM to confirm cancellation completed and that they are good to go! ([Cancelation Confirmation Template here.](https://www.dashboard.askassembly.app/preferences/templates "https://www.dashboard.askassembly.app/preferences/templates"))
+
+**Step 10.** CSM updates the Opportunity in Hubspot:
+
+- Account it terminated in any pipeline stage BEFORE Live:
+  - **Stage: Churned  \> Substage: Churned During Onboarding**
+- Account is terminated in stage Live:
+  - **Stage: Churned \> Substage: Churned Post-Launch**
+
+**Step 11.** On the date noted in the Twilio Release reminder invite (3 weeks after the Date of Cancellation), release all Twilio phone numbers associated with the customer.
+
+Before releasing, confirm no recent call/text activity on the numbers (check Twilio Messages/Calls Log). If activity is found in the last few days, delay release and flag to CSM.
 
 <Note>
   Find phone numbers associated with the PM by going to the PM Account page in Latchel. In Maint. Communication Settings, you will want use the **Latchel-Assigned Phone Number** and the **Latchel Communication Phone Number**.
@@ -68,13 +93,4 @@ Once account is confirmed that they are terminating and we have the termination 
   ![image-20240524-142159.png](/images/PST-10.png)
 </Frame>
 
-**Step 9.** Complete the Account Termination Workflow in [#service-changes](https://latchel.slack.com/archives/CKA2W1KJA) using the information shared in the Calendar Invite. Once submitted, tag the CSM in the thread for confirmation.
-
-**Step 10.** PS emails the PM to confirm cancellation completed and that they are good to go! ([Cancelation Confirmation Template here.](https://www.dashboard.askassembly.app/preferences/templates))
-
-**Step 11**. CSM updates the Opportunity in Hubspot:
-
-- Account it terminated in any pipeline stage BEFORE Live:
-  - **Stage: Churned  \> Substage: Churned During Onboarding**
-- Account is terminated in stage Live:
-  - **Stage: Churned \> Substage: Churned Post-Launch**
+**Step 12.** Post a confirmation reply in the original [#service-changes](https://latchel.slack.com/archives/CKA2W1KJA) thread (from Step 8) noting that the Twilio phone numbers have been released, so the termination record is fully closed out in one place.
