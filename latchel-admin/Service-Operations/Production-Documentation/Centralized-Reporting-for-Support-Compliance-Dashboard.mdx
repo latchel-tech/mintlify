@@ -1,30 +1,35 @@
 ---
 title: "Centralized Reporting for Support Compliance Dashboard"
-groups: ["latchel"]
+groups:
+  - "latchel"
 ---
 
 ## 🧠 What This Process Is Trying to Solve
 
-Maintaining the Support Compliance Dashboard requires updates from multiple sheets and reports. Without a single reference, this process can become scattered, leading to:
+<Info>
+  Maintaining the Support Compliance Dashboard requires updates from multiple sheets and reports. Without a single reference, this process can become scattered, leading to:
 
-- Missed updates when owners are unclear on which report to maintain.
-- Delays in refreshing dashboard data.
-- Risk of inconsistent or inaccurate compliance tracking.
+  - Missed updates when owners are unclear on which report to maintain.
+  - Delays in refreshing dashboard data.
+  - Risk of inconsistent or inaccurate compliance tracking.
 
-This SOP solves that by consolidating all maintenance instructions in one place. It ensures that anyone responsible for the dashboard knows:
+  This SOP solves that by consolidating all maintenance instructions in one place. It ensures that anyone responsible for the dashboard knows:
 
-- What reports/sheets need to be updated.
-- Where to update them.
-- How often updates are required.
-- Who is accountable for each step.
+  - What reports/sheets need to be updated.
+  - Where to update them.
+  - How often updates are required.
+  - Who is accountable for each step.
 
-By keeping this SOP as the single source of truth, maintaining the Support Compliance Dashboard becomes easier, faster, and less prone to errors—ensuring Support and Leadership always have accurate compliance insights.
+  By keeping this SOP as the single source of truth, maintaining the Support Compliance Dashboard becomes easier, faster, and less prone to errors—ensuring Support and Leadership always have accurate compliance insights.
+</Info>
 
-**Who should read this document?**
+<Note>
+  **Who should read this document?**
 
-- Operations Support Specialist
-- Ops Supervisors
-- Ops Managers
+  - Operations Support Specialist
+  - Ops Supervisors
+  - Ops Managers
+</Note>
 
 ## Summary
 
@@ -39,18 +44,13 @@ This report assesses the performance and accountability of Shift Support team me
 **Reports/Forms Needed**
 
 - [Support SLA Review](https://slack.com/shortcuts/Ft07BH2QFRR8/55df20825614434b0331bb77c2089b4b) - This workflow is completed in Slack by the Shift Owner approximately two days after their assigned shift, once all relevant SLA data is available. It serves to review and validate the SLA report tied to their shift.
-
 - [Ops Support Performance](https://docs.google.com/spreadsheets/d/1-82LC-G1-ddMf_OaXVch6wwj9ph3SxAcUuyYlkE2KUM/edit?gid=0#gid=0) - This file collects SLA reports submitted via Slack. The [SLA Report tab](https://docs.google.com/spreadsheets/d/1-82LC-G1-ddMf_OaXVch6wwj9ph3SxAcUuyYlkE2KUM/edit?gid=18869716#gid=18869716) serves as the clean data source to track each Support team member's compliance in submitting their SLA Review report.
 
 **SLA Reporting Workflow**
 
-1. **SLA Review report submission** - The Shift Owner is responsible for submitting this report within 48 hours after their shift or as soon as the data becomes available.\
-   SOP Guide: [(Operations Support Specialist) SLA Review workflow](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/(Operations-Support-Specialist)-SLA-Review-workflow)
-
+1. **SLA Review report submission** - The Shift Owner is responsible for submitting this report within 48 hours after their shift or as soon as the data becomes available.<br />SOP Guide: [(Operations Support Specialist) SLA Review workflow](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Operations-Support-Specialist-SLA-Review-workflow)
 2. **Report Extraction** - These reports submitted in Slack are automatically extracted into the Ops Support Performance file, which feeds into the [Support Compliance Dashboard](https://lookerstudio.google.com/u/0/reporting/b5b7d097-1818-4a9c-aec3-8ee2437a8ca6/page/p_9tbe016wvd) under the SLA Reports section.
-
 3. **Automatic Data Processing** - No manual updating is required. These values are synced to the Dashboard in real time.
-
 4. **Dashboard View** - Results are visible at both team and individual levels. Metrics automatically refresh to reflect compliance in weather report submissions without further intervention.
 
 ### 2. Dashboard Health Check Reporting
@@ -59,7 +59,7 @@ To provide visibility into how consistently the Support team performs their requ
 
 **Reports/Forms Needed**
 
-[Dashboard Check Log Sheet](https://docs.google.com/spreadsheets/d/1dggO49xg_zh_NnKhJihxg34KrD_QUCtMmBwaJxENVgE/edit?gid=633275225#gid=633275225) – serves as the main tracker that automatically records when a Support member clicks the green "Dashboard Checked" button.
+- [Dashboard Check Log Sheet](https://docs.google.com/spreadsheets/d/1dggO49xg_zh_NnKhJihxg34KrD_QUCtMmBwaJxENVgE/edit?gid=633275225#gid=633275225) – serves as the main tracker that automatically records when a Support member clicks the green "Dashboard Checked" button.
 
 No manual input is required — data automatically logs in the Data Log tab under the following columns (A-E):
 
@@ -76,13 +76,10 @@ The **Compliance Summary** tab in the same sheet computes and aggregates results
 1. **Logging Dashboard Checks**
    1. Each Support must click the green **"Dashboard Checked"** button in the upper-right corner of each Looker dashboard page once every week.
    2. This automatically records a new entry in the Dashboard Log tab with the Support Name, Dashboard Checked, and Week Number.
-
-2. **Automatic Compliance Calculation**\
-   The Compliance Summary tab uses formulas to compute compliance metrics:
+2. **Automatic Compliance Calculation**<br />The Compliance Summary tab uses formulas to compute compliance metrics:
    1. Individual dashboard check compliance per Support
    2. Overall Support average compliance
    3. Calculations automatically refresh whenever a new log is added — no manual update required.
-
 3. **Data Flow to Looker**
    1. Looker directly references the Compliance Summary data.
    2. The dashboard displays real-time metrics as the sheet updates.
@@ -95,5 +92,4 @@ The **Compliance Summary** tab in the same sheet computes and aggregates results
 
 ## 💡 If You Think This SOP Could Be Improved...
 
-Noticed something clunky or confusing in this process? Or had a situation that wasn't covered here? Or tried something new that didn't work?\
-👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**
+Noticed something clunky or confusing in this process? Or had a situation that wasn't covered here? Or tried something new that didn't work?<br />👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**
