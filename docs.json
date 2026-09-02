@@ -2224,6 +2224,47 @@
                 },
                 "groups": [
                   {
+                    "group": "Accounts Receivables",
+                    "pages": [
+                      "latchel-admin/accounts-receivable/Accounts-Receivable-Tasks",
+                      "latchel-admin/accounts-receivable/How-to-Handle-Basic-AR-Requests",
+                      "latchel-admin/accounts-receivable/How-To-Set-Up-a-New-Customer",
+                      {
+                        "group": "How to Receive and Reconcile Payments",
+                        "pages": [
+                          "latchel-admin/accounts-receivable/How-to-Receive-and-Reconcile-Payments",
+                          "latchel-admin/accounts-receivable/How-to-Upload-Bank-Transactions-to-Rillet"
+                        ]
+                      },
+                      {
+                        "group": "How to Handle Monthly Subscription Invoice Adjustments",
+                        "pages": [
+                          "latchel-admin/accounts-receivable/How-to-Handle-Monthly-Subscription-Invoice-Adjustments",
+                          "latchel-admin/accounts-receivable/Active-Unit-Count-Credit-Request-Process"
+                        ]
+                      },
+                      {
+                        "group": "How To: Identify and Handle Past Due Subscription Invoices",
+                        "pages": [
+                          "latchel-admin/accounts-receivable/How-To-Identify-and-Handle-Past-Due-Subscription-Invoices",
+                          "latchel-admin/accounts-receivable/How-to-Create-the-Aging-and-Payment-Checker",
+                          "latchel-admin/accounts-receivable/How-to-Set-Up-the-Non-Payment-Reminder-Banner"
+                        ]
+                      },
+                      {
+                        "group": "How To Create Monthly Subscription Invoices",
+                        "pages": [
+                          "latchel-admin/accounts-receivable/How-To-Create-Monthly-Subscription-Invoices",
+                          "latchel-admin/accounts-receivable/How-to-Create-AR-Monthly-Bridge-Report",
+                          "latchel-admin/accounts-receivable/How-to-Create-Monthly-Latchel-Autopay-Checker",
+                          "latchel-admin/accounts-receivable/How-to-Fill-Out-and-Use-the-AR-Credit-and-Overpayment-Tracker-2026"
+                        ]
+                      },
+                      "latchel-admin/accounts-receivable/How-To-Terminate-Accounts-from-ARs-Perspective",
+                      "latchel-admin/accounts-receivable/How-To-Handle-Desire-to-Churn-Alerts"
+                    ]
+                  },
+                  {
                     "group": "Accounts Receivable",
                     "pages": [
                       "latchel-admin/accounts-receivable/Accounts-Receivable-Tasks",
