@@ -1,0 +1,220 @@
+---
+title: "Common Area Property Requests for Non-Recurring Work Orders"
+---
+
+Purpose
+
+<Callout icon="pencil" color="#NaNNaNNaN">
+  This SOP outlines the end-to-end process for creating and managing **Common Area Properties for non-recurring work orders** in Latchel.
+</Callout>
+
+Common Area Properties are special property records created to represent shared areas or entire buildings rather than individual residential units. These requests are submitted when a Property Manager needs to create a non-recurring work order for a common area that does not yet exist as a property in Latchel.
+
+The process combines manual data validation by the **Ops Integration Team** with automated property creation through **n8n**.
+
+## Step by step
+
+### Step 1: Request & Intake
+
+**a.** When a Property Manager needs a **Common Area Property for a non-recurring work order**,  you can use the [**Common Area/Building Properties Template**](https://docs.google.com/spreadsheets/d/1Al_Y5bb1lf7ToaBGsym9sZHI6jwrgI4kMSiOs1Tkdvw/edit?gid=1713025177#gid=1713025177) to gather the required information from the Property Manager.
+
+![Image](/images/image-147.png "Image")
+
+**b.** Download a copy of the template before entering the PM's information.
+
+**c.** Review the information provided by the Property Manager before creating the properties.
+
+Make sure the request includes the correct:
+
+- Property Management Company
+- Common Area/Building address
+- City, State, and ZIP Code
+- Contact information
+- Latchel URL for an existing unit within the same building
+- Portfolio name, if applicable
+- Any additional notes provided by the PM
+
+**d.** Once you receive all the properties information from the PM, proceed with Step 2
+
+---
+
+> **Important:** At least one of the original properties or units associated with the building must already exist in Latchel before the request can be processed.
+
+<Warning>
+  If the original properties have not yet been created in Latchel, **do not proceed with the request**. Common Area Properties are not additional units that the Property Manager needs to create in their PMS. They are property records created to represent the common areas associated with existing addresses.
+</Warning>
+
+---
+
+### Step 2: Team Verification
+
+**a.** Once you receive the properties list, review the submitted information and confirm that:
+
+1. The request is for a **non-recurring work order**.
+2. The requested property represents a **Common Area or entire building**.
+3. At least one existing unit within the building already exists in Latchel.
+4. The address information is complete and accurate.
+5. The correct Property Management Company was provided.
+6. The Common Area Property does not already exist in Latchel.
+
+**b.** Go to the [**Common Area Property Requests**](https://docs.google.com/spreadsheets/d/1YGogRgpSHnNiqoNlncjUeTRvrck5sG6jqZWqegWZlWA/edit?gid=917818050#gid=917818050) tab and copy-paste the received information into columns J-R. 
+
+![Image](/images/image-154.png "Image")
+
+<Check>
+  This tab serves as the processing queue where the Ops Integration Team reviews and validates requests before the automation creates the Common Area Property in Latchel.
+</Check>
+
+**c.** The Ops Integration Team must manually complete the following columns before the automation can proceed:
+
+#### Column A (`ref_property_id`)
+
+1. Go to the **Latchel Console**, open the **Property Manager profile**, and under **Properties**, search for the existing address associated with the new Common Area Property that will be created.
+   <img
+     src="/images/image-149.png"
+     alt="Image"
+     title="Image"
+     style={{ width:"78%" }}
+   />
+2. Open the property and locate the correct `ref_property_id`.
+3. Copy the ID.
+   <img
+     src="/images/image-150.png"
+     alt="Image"
+     title="Image"
+     style={{ width:"81%" }}
+   />
+4. Paste it into **Column A** of the **Common Area Property Requests** tab.
+   <img
+     src="/images/image-151.png"
+     alt="Image"
+     title="Image"
+     style={{ width:"59%" }}
+   />
+
+<Check>
+  The `ref_property_id` is required to correctly associate the Common Area Property with the existing property structure and ensure it can successfully sync with the PMS when applicable.
+</Check>
+
+#### Column B (PM Company ID)
+
+1. Go to the **PM Company Profile** in Latchel.
+2. Locate the PM Company ID in the company's profile URL.
+3. Copy the ID from the URL.
+   <img
+     src="/images/image-152.png"
+     alt="Image"
+     title="Image"
+     style={{ width:"81%" }}
+   />
+4. Paste it into **Column B** of the **Common Area Property Requests** tab.
+   <img
+     src="/images/image-153.png"
+     alt="Image"
+     title="Image"
+     style={{ width:"65%" }}
+   />
+
+<Warning>
+  **Important:** The automation will not proceed until the required manual information has been entered.
+</Warning>
+
+---
+
+### Step 3: Automated Property Creation (n8n)
+
+Once the required information has been entered, the **n8n automation** processes the request.
+
+**a. Status — Column C**
+
+The automation updates the status of the request.
+
+Possible statuses include:
+
+- **Created:** The automation successfully created the Common Area Property in Latchel.
+- **Duplicated:** The automation detected that the property already exists in Latchel, so no additional property was created.
+  <img
+    src="/images/image-155.png"
+    alt="Image"
+    title="Image"
+    style={{ width:"47%" }}
+  />
+
+If the request is marked as **Duplicated**, verify the existing property before taking any additional action.
+
+**b. Property URL — Column D**
+
+Once the Common Area Property is successfully created, the automation captures the new **Latchel Property URL** and automatically populates **Column D**. No manual entry is required.
+
+<img
+  src="/images/image-156.png"
+  alt="Image"
+  title="Image"
+  style={{ width:"45%" }}
+/>
+
+---
+
+### Step 4: Confirm Property Creation
+
+**a.** After the automation processes the request, confirm that **Column C (Status)** has been updated.
+
+**b.** If the status is **Created**, confirm that **Column D (Property URL)** has been populated.
+
+**c.** Search for the newly created property in Latchel and verify that:
+
+1. The property appears under the correct PM Company.
+2. The property address matches the submitted request.
+3. The property was created as the intended Common Area/Building Property.
+4. The correct Property ID is displayed in the request sheet.
+
+**d.** If the request was successfully processed, no additional property creation steps are required.
+
+The Common Area Property can now be used for the associated **non-recurring work order**.
+
+---
+
+### FAQ
+
+#### What should I do if the original property does not exist in Latchel?
+
+Do not proceed with the request.
+
+At least one original property or unit associated with the building must already exist in Latchel before a Common Area Property can be created.
+
+---
+
+#### What should I do if the Common Area Property already exists?
+
+Do not create another property.
+
+If the automation detects an existing matching property, the request may be marked as **Duplicated**. Verify the existing property in Latchel before taking any further action.
+
+---
+
+#### What should I do if the request is for a recurring work order?
+
+Do not process the request through this workflow.
+
+The process for **recurring work orders remains unchanged**. Property Managers should continue using the standard [**Recurring Work Orders form**](https://recurring-work-orders.web.app/).
+
+If a PM needs a recurring work order for a Common Area/Building Property that has not yet been created, they should submit the request through the recurring work order form.
+
+<Warning>
+  **Do not use the Common Area Property workflow described in this SOP for recurring work orders.**
+</Warning>
+
+---
+
+#### What should I do if the automation does not create the property?
+
+Verify the following:
+
+1. The `ref_property_id` is correct.
+2. The PM Company ID is correct.
+3. The submitted address is complete and valid.
+4. At least one related property already exists in Latchel.
+5. The Common Area Property does not already exist.
+6. There are no blank spaces
+
+If all the information is correct and the automation still does not create the property, escalate the request for further investigation.
