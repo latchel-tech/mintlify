@@ -1,0 +1,159 @@
+---
+title: "how-to-add-properties-in-the-latchel-console-to-a-new-account"
+groups:
+  - "latchel"
+---
+
+# Objective
+
+**Purpose**
+
+The purpose of this document is to provide an overview process on how to set-up properties to a new Property Management account and provide links with detailed process for each step of the process.
+
+# Content
+
+**What is happening prior to this process?**
+
+The customer has created their account in the console using an account creation link provided to them by the Sales team. 
+
+The Sales team has also requested Property information by sending them our spreadsheet and / or requesting access to their database with that information 
+
+# **Step-by-Step Guide**
+
+## **Process Overview**
+
+1. Once the Property Management account has been set-up into the Latchel Console, you will be able to start adding and configuring properties to the Property Management account.
+2. There are multiple steps involved in fully setting up properties:
+   1. The process starts with collecting basic information from Property Managers on the properties they service. For Property Management companies with multiple units, we should explain the concept of portfolios (see step 2 and 3 of [Customer Onboarding Process & Checklist](https://latchel.atlassian.net/wiki/spaces/CS/pages/791347310)) and work with them to group properties into Portfolios.
+      1. The property information is usually either provided via a download from the current system the property management company uses to manage their properties, or via a tracking spreadsheet they maintain, or by filling up our spreadsheet [(located here)](https://docs.google.com/spreadsheets/d/1OLC1S4VVp755qXpbxSUZcGS3enlmLF2YwdQDRi1B7kE/edit?folder=1fPMYgh3niGJUwrAZFBP5dFtOeIkeWzlP#gid=1924383467)
+      2. To provide guidance for the minimum required information we request to set-up the account, we will send Property Managers our spreadsheet showing required and optional information. However, they can also use any other format to send the required information to us. See warming box on [ 796131349](#Howto:AddPropertiesintheLatchelConsoletoaNewAccount-step2) for a call out on requiring property and resident information so the ops team can provide the maintenance coordination service.
+   2. After the spreadsheet is received, it needs to be converted into the format required by the Latchel Console import tool, which you will use to upload (create) the properties in the system (see [ 796131349](#Howto:AddPropertiesintheLatchelConsoletoaNewAccount-step2))
+      1. Properties can be created in the system under the overall Property Manager account ([ 796131349](#Howto:AddPropertiesintheLatchelConsoletoaNewAccount-step3)), or
+      2. Properties can be created in the system directly into a Portfolio ([ 796131349](#Howto:AddPropertiesintheLatchelConsoletoaNewAccount-step4))
+         1. Note at the end of each section (step 3 or step 4) there are instructions on how to add/ move properties to a portfolio or remove from the port
+   3. After all properties are created in the system, you will be able to go to each one of those to finalize configuration and customize.
+
+## **Step 1 - Get Properties Information**
+
+There are multiple ways to collect information on properties: (1) Property Managers can provide a data extract from their current system or they can provide their login information to us and we will do the data extract; (2) Property Managers can fill in the spreadsheet we provide to them (see templates in this [folder](https://drive.google.com/drive/folders/1fPMYgh3niGJUwrAZFBP5dFtOeIkeWzlP)); (3) Property Managers can provide any other spreadsheet they use to keep track of the properties they manage; (4) Data sync, i.e. we use our plug-in application to "copy" information from the Property Manager current system to Latchel Console - this is available for Appfolio only
+
+The initial request for Service Provider information is done by the Sales team before the onboarding meeting. If this information is not received, please follow-up with the Property Management company using the template in this link: [Job-Aid: Onboarding Flow & Communications](https://latchel.atlassian.net/wiki/spaces/CS/pages/851247114)
+
+If we are doing the data extract on their behalf, the process will depend on the system they use. Please use the appropriate SOP below to guide you on how to pull the data:
+
+| **System** | **SOPs** |
+| --- | --- |
+| Appfolio | [How to: Install the Chrome Plug-in (Appfolio)](https://latchel.atlassian.net/wiki/spaces/CS/pages/813729953) |
+| Buildium | [How to: Export and Import Data from Buildium](https://latchel.atlassian.net/wiki/spaces/TST/pages/795148345) |
+| Propertware | [How to: Export and Import Property Data from PropertyWare](https://latchel.atlassian.net/wiki/spaces/TST/pages/795148635) |
+| Rent Manager | TDB - tech is working on the integration |
+
+**ATTENTION**
+
+We require Property Managers to provide property address and resident information to properties we will be coordinating maintenance on their behalf. We will only not require resident information if the property is vacant or the property manager is saying it is a short-term rental (i.e. something like an Airbnb) 
+
+Without property information, the ops team is unable to provide any type of service. Without resident information, the work order cannot be scheduled, so the workflow stops at collecting resident availability and the ops team will need to contact property management to get resident information to continue to coordinate the maintenance request. Therefore, having accurate and complete property and resident information in the system is crucial for the account creation process
+
+To learn more about how ops team uses property information to create a work order, see the SOP below:
+
+- [↔ How To: Create a New Work Order from stage.latchel.com/maintenance-request & Incognito Mode](https://latchel.atlassian.net/wiki/pages/createpage.action?spaceKey=LTG&title=%E2%86%94%20How%20to%3A%20Handle%20Intake%20of%20Phone%20Maintenance%20Requests%20via%20Incognito%20method)
+
+## **Step 2** - **Prepare Properties Data for Upload**
+
+1. Because the information on Properties can be provided to us in different formats and the Latchel Console has some requirements to enable the data upload, you will have to make some adjustments to the data to meet those requirements.
+   1. Overall, the data will need to be converted into another spreadsheet showing the information of each Property on each line. This spreadsheet needs to be saved in ".csv" format. The spreadsheet does not need to have "headings" or field names, but it is recommended to use the first line to show the field name so you can use it to make sure you are matching the information correctly in the upload tool, as described in the [ 796131349](#Howto:AddPropertiesintheLatchelConsoletoaNewAccount-step3).
+   2. Therefore, the spreadsheet should show the field name in the first line (for example: Resident Name, Property Address, City, State, ZIP, etc), and each other line will contain the information for one Property per line.
+      1. Note that the field name in the spreadsheet does not need to exactly match the field name options you will see in the Latchel Console, but you need to make sure that the information in the subsequent lines are related to the field name, so the information populated in that section of the Service Provider profile is correct. See example below:  Note: Phone and email formats are not enforced, so you can enter it anyway
+2. If the input data is coming from a system extract, you will follow the SOPs listed in [ 796131349](#Howto:AddPropertiesintheLatchelConsoletoaNewAccount-step1) to change the input data into the required format to upload into Latchel Console
+3. If the input data is coming from the spreadsheet we provided (see templates in this [folder](https://drive.google.com/drive/folders/1fPMYgh3niGJUwrAZFBP5dFtOeIkeWzlP)), use the following SOP to change the input data into the required format to upload into Latchel Console — [How to: Convert our Property Information Template into "Latchel Imports" Required Format](https://latchel.atlassian.net/wiki/spaces/TST/pages/889782300)
+
+## **Step 3** - **Upload Properties Information to Property Manager Account**
+
+**ATTENTION:**
+
+- If this property management account has only one unit, it will be simpler to add the property directly in the Latchel Console instead of using the importer too. Use this SOP to guide you [**↔ How to: Navigate Properties Tab in the Latchel Console**](https://latchel.atlassian.net/wiki/spaces/OPS/pages/464388136)
+- If this property management has their properties organized in portfolios, skip to [ 796131349](#Howto:AddPropertiesintheLatchelConsoletoaNewAccount-step4) as that process is better to upload properties on their own portfolios instead of uploading properties to the overall account and re-assigning to portfolios
+
+**ATTENTION**
+
+Use this process if the Property Manager account does not have Portfolios, or to upload properties that are not part of a specific Portfolio. 
+
+To upload properties into a Portifolio, go to [ 796131349](#Howto:AddPropertiesintheLatchelConsoletoaNewAccount-step4)
+
+Once the spreadsheet has all of the property information matching the template described on [ 796131349](#Howto:AddPropertiesintheLatchelConsoletoaNewAccount-step2), follow this process to upload the information into the Property Manager account in the Latchel Console:
+
+1.  Go to the Property Manager Profile page: [How to: Access the Property Manager Profile Page](https://latchel.atlassian.net/wiki/spaces/TST/pages/813729656)
+2. Click on the "three dots" icon on the upper right-hand side of your screen
+3. You will see a configuration menu. Click on "Import properties"
+4. The importer tool will open. Click on the "Select CSV file" button and navigate to the folder in your computer where the spreadsheet you created on [step 2](https://latchel.atlassian.net/wiki/spaces/CS/pages/794198095/How+to+Configure+Preferred+Service+Providers+to+a+New+Account#Howto:ConfigurePreferredServiceProviderstoaNewAccount-step2) is saved.
+   1. Select the ".csv" file with the Property information and click on "Open"
+5. The information you have in the spreadsheet will populate in the Latchel Console
+   1. Note: Depending on how your spreadsheet was built, some of the field names populated in the Latchel Console (line A) will not match what you have in your spreadsheet (line B). In that case, you can change the field name in the drop-down menu
+   2. To change the filed name, click on the drop-down menu and select the field name that reflects the information you have in that column of your spreadsheet
+6. Verify that all of the field names in the Latchel Console and spreadsheet matches 
+7. Delete the line you have with the field names so that information is not uploaded as a new property
+   1. To delete a property before uploading in the system, click on the "trash can" icon next to the line with that property information
+   2. After upload, Properties cannot be deleted in the system by admin users (only engineering team), but they can be disabled. See steps to disable properties by the end of this section
+8. Click on "Save Properties"
+   1. Note: If you have "empty" lines in the spreadsheet, i.e. a line added but without any data, you will need to delete those; otherwise you will get an error message saying "The following rows are missing a required field". To delete those "empty" cells, click on the "trash can" icon:
+9. You will get a confirmation page with a link to track the progress of the import as well as to start a new import
+10. To double-check if the information was uploaded correctly, return to the Property Manager Profile and go to the "Properties" tab. There you will see the list of all Properties you had in your spreadsheet
+    1. Verify that all Properties listed in the spreadsheet is showing up on the list in the Latchel Console and that the property information was correctly uploaded into the system
+    2. **If you created a property by mistake**, you can't delete it, but you can disable it. There are two ways to disable a property:
+       1. Option 1: Click on the link to the property and the property profile will open. Click on the three dots in the upper right corner and select "Disable property" 
+       2. Option 2: In the "properties" tab, select the property you want to disable, click on the drop down menu on your right and select "Update List" 
+          1. Click on the drop-down menu and scroll down to select "is_active"
+             1. Type "0" and click on save to disable this property
+       3. To see the property you disabled, go back to the "Properties" tab, click on the menu icon next to the search box, select "Show disabled properties" and the property will show up in the list with a red label
+    3. **If you added properties to the overall account and then learned you need to assign them to a Portfolio (or move to another Portfolio)**, you can do it in two ways:
+       1. **Option 1:** follow [ 796131349](#Howto:AddPropertiesintheLatchelConsoletoaNewAccount-step4) to create a Portfolio and use the "+Add Property" to assign an individual property to a Portfolio
+       2. **Option 2**:
+          1. If you need to create a new Portfolio, follow [ 796131349](#Howto:AddPropertiesintheLatchelConsoletoaNewAccount-step4) (items 1 to 5) to create it
+          2. If you need to move the properties to an existing Portfolio, follow item 11 on [ 796131349](#Howto:AddPropertiesintheLatchelConsoletoaNewAccount-step4)
+    4. **If you added a property and then realize it was a duplicate**, use this SOP to merge duplicates: [How to: Merge duplicate properties](https://latchel.atlassian.net/wiki/spaces/TST/pages/795116246)
+
+## **Step 4** - **Upload Properties Information to a Portfolio**
+
+If you need to create the Portfolio, use this SOP as a guidance [How to: Create & Configure a Portfolio](https://latchel.atlassian.net/wiki/spaces/TST/pages/796623197)
+
+Once the spreadsheet has all of the property information matching the template described on [ 796131349](#Howto:AddPropertiesintheLatchelConsoletoaNewAccount-step2), follow this process to upload the information into the Property Manager account in the Latchel Console:
+
+1.  Go to the "People" menu and click on "Property Managers:
+2. Search the name of the new Property Manager account
+3. Click on the Property Manager account name to open the account
+4. Click on the "Portfolio" tab and you will see the list of Portfolios for this company in the Portfolio tab
+5. Click on the Portfolio name to open the Portfolio profile and configure it. To add properties, go to the "properties" tab.
+6. **There will be two options to add properties to a Portfolio:**
+   1. **Option 1**: "+Add Property" - In this option, you will be able to search for a property already added to the Property Management account and assign it to a Portfolio.  This option works when the property is already created in the system and you just need to assign one property to a Portfolio. 
+   2. **Option 2**: "Import Properties" - In this option, you can import new properties directly into a Portfolio. This option works best when you have multiple properties being added to a Portfolio.
+      1. This option works the same way to the "upload" process explained in [ 796131349](#Howto:AddPropertiesintheLatchelConsoletoaNewAccount-2)[7961313.49](#Howto:AddPropertiesintheLatchelConsoletoaNewAccount-step3) You will click on "Select CSV file", select the spreadsheet with the properties organized by Portfolio, make sure all of the field names in the Latchel Console and spreadsheet match, delete lines that don't have property information (including the spreadsheet heater or line with the field names) and click on "save properties" 
+      2. The difference is that your spreadsheet should have multiple tabs with property information. Each tab should have information for one Portfolio.
+      3. Once you select that spreadsheet in the import tool, the system will show the properties in the tab that you were at when the spreadsheet was last saved. Therefore, as you finish uploading one Portfolio, go back to the spreadsheet, click on the tab with the information for the next Portfolio and save the spreadsheet. 
+         1. If you prefer, you can also save each Portfolio into separate spreadsheets
+7. You will see the list of properties being added to the Portfolio page under "properties"
+8. **If you assigned a property to a Portfolio by mistake**, you can remove it from that Portfolio by clicking on the three dots on the right side of the property information and clicking on "remove property"
+   1. Click on "submit" to remove this property from the Portfolio. 
+      1. Note that the property is still in the property management account, but no longer assigned to a Portfolio
+9. **If you want to move properties from a few portfolios into another,** you can use the "bulk update" function.
+   1. First, go to the profile page of the Portfolio you want the properties to be moved to and find the Portfolio_ID number in the browser address bar. In this example, the Portfolio_ID is 12.
+   2. Go to the property manager profile, click on "properties" tab, select the properties you want to move to another Portfolio, click on "Bulk update" and select "Update Field"
+      1. Note that the "Bulk update"  drop-down menu will only appear after the properties are selected
+         1.   <img src="blob:https://media.staging.atl-paas.net/?type=file&localId=null&id=612a67d3-7dc1-47a3-ac08-9dde3fe360a1&&collection=contentId-795934730&height=826&occurrenceKey=null&width=1804&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null" />
+      2. Select the "portfolio_id" option, type the number you got in the prior step, and click on "save"
+10. **If you added a property and then realize it was a duplicate**, use this SOP to merge duplicates: [How to: Merge duplicate properties](https://latchel.atlassian.net/wiki/spaces/TST/pages/795116246)
+
+## **Step 5 - Check status of your import/upload**
+
+If you don't see the information that you have just uploaded reflecting in the Property Manager profile, it may be that there is a queue of imports being processed.
+
+1. To check on the status of your import, go to the admin menu and click on "imports". You will see a list of all imports that are being processed and their status. You can also use this link ([https://stage.latchel.com/admin/imports](https://stage.latchel.com/admin/imports)) <img src="blob:https://media.staging.atl-paas.net/?type=file&localId=null&id=e81eca19-6742-42ca-bf10-fa522c995d8b&&collection=contentId-795934730&height=428&occurrenceKey=null&width=1901&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null" />
+2. The last column will show errors in the upload. To see details of the errors, click on the filename link to open a page  <img src="blob:https://media.staging.atl-paas.net/?type=file&localId=null&id=f9578e68-4cb8-47c4-8842-fa100756fd94&&collection=contentId-795934730&height=821&occurrenceKey=null&width=1913&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null" />
+
+## **Step 6** - **Configure Additional Property Information**
+
+1. There is other property information that cannot be included in the importer tool, so you will need to enter them manually by going to the property profile and editing the fields. To learn how to navigate and edit the property profiles, use this SOP\*\*:\*\* [**↔ How to: Navigate Properties Tab in the Latchel Console**](https://latchel.atlassian.net/wiki/spaces/OPS/pages/464388136)
+2. If you added properties to a Portfolio, you will need to configure the Portfolio. Use this SOP to guide you through it: [**How to: Create & Configure a Portfolio**](https://latchel.atlassian.net/wiki/spaces/TST/pages/796623197)
+3. For properties that include the Resident Benefit Package (Home Assistant), you will need to edit the properties that are opted in for the package. At the property level click on the ellipses and select "Opt in RBP"
+   1. [(HOME ASSISTANT) How to: Manage Property Opt-in/Out Status within the Home Assistant Program](https://latchel.atlassian.net/wiki/spaces/LTG/pages/965608133)
+
+![](blob:https://media.staging.atl-paas.net/?type=file&localId=null&id=29c0212c-191d-4614-9a9e-cf532f061dec&&collection=contentId-795934730&height=208&occurrenceKey=null&width=1335&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null)

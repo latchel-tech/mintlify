@@ -1,0 +1,92 @@
+---
+title: "plugin-failed-sync-data-support-process"
+groups:
+  - "latchel"
+---
+
+### What is the Product Release?
+
+We are introducing a new process to proactively monitor and help customers when their chrome plugin sync fails. At a high level, when a sync issue occurs and we determine it can be actioned by TS (or the customer), we’ll send an alert to a slack channel monitored by the TS team. The TS team will use the information provided in the alert to investigate the issue and determine if it can be solved so that the customer can successfully run their next sync without issues.
+
+### Who Is Impacted?
+
+The following groups are impacted:
+
+- **TS team**: They will need to staff resources to monitor and action the alerts
+- **PMs**: They may receive notification and outreach when TS has a question or clarification needed to solve a sync issue. They will also see more syncs without errors! Woo!
+
+### When Is It Relevant?
+
+This product applies when a customer runs their sync and receives an error message. Similar to the one below:
+
+![](blob:https://media.staging.atl-paas.net/?type=file&localId=null&id=8af67e2e-8dcf-4e77-bc9d-a14bede9e2ba&&collection=contentId-2629533767&height=524&occurrenceKey=null&width=669&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null)
+
+### What was the Previous State?
+
+Prior to this product release, PMs were expected to monitor and take action on sync issues on their own. However we’ve found this is not a very good customer experience. Ultimately, we want to make this process so easy that PMs can resolve these issues on their own. By sending the process through TS, we’ll learn a lot about how to make that possible
+
+### How Is It Used?
+
+#### Slack Alert
+
+Slack alerts will be published in the #appfolio-sync-failures and will look similar to the below:
+
+![](blob:https://media.staging.atl-paas.net/?type=file&localId=null&id=8fd2f96d-8b5a-43aa-90f0-f48e580ff060&&collection=contentId-2629533767&height=441&occurrenceKey=null&width=567&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null)
+
+#### Error types
+
+To start, there will only be three types of errors the CS team will see:
+
+- Unable to find property with ref_property_id: {ref_property_id}
+- No units associated with ref_property_id: {ref_property_id}
+- Unable to find property with ref_unit_id: {ref_unit_id}
+
+These errors can all be root-caused to essentially the same issue! Basically a work order was created that was linked to a property in Latchel where we don’t have reference ids. Reference ids are the key data link between Latchel and the integration platform. Without it, we can’t know for sure which property to properly update in the PMs system or Latchel. This is a detailed article on how these failures can occur: <custom data-type="smartlink" data-id="id-0">[https://latchel.atlassian.net/wiki/spaces/PROD/pages/2636742685](https://latchel.atlassian.net/wiki/spaces/PROD/pages/2636742685)</custom>
+
+#### How to fix
+
+Fortunately, fixing these issues usually involves the same process
+
+- search for a property in Latchel with the same/similar address
+- confirm the address does have ref ids
+- re-assign the WO to that address
+
+##### Search for the property in Latchel
+
+- Find the PM company
+- Go to their “Properties” page
+- Search for the address and see if there are other ones with similar names
+- Once you find a property that could be the right one, copy the property_id from the url
+
+![](blob:https://media.staging.atl-paas.net/?type=file&localId=null&id=30f7eac5-0047-4e56-ba09-21681d113437&&collection=contentId-2629533767&height=68&occurrenceKey=null&width=354&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null)
+
+##### Confirm the new address has ref IDs
+
+- Enter the property ID in this query:
+
+```sql
+SELECT property_id, address1, address2, city, state, zip, ref_property_id, ref_unit_id
+FROM property
+WHERE property_id = 335113
+```
+
+- Confirm ref ids are present
+
+##### Re-assign the WO to the new address
+
+- On the WO page, re-assign the WO to the new address
+
+![](blob:https://media.staging.atl-paas.net/?type=file&localId=null&id=bd2aa778-297f-4428-9622-c8c468680531&&collection=contentId-2629533767&height=384&occurrenceKey=null&width=499&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null)
+
+- Determine if the old address should be disabled in Latchel (may have to ask PM)
+
+### What Are Some Risks or Ways Things Could Go Wrong?
+
+We’ve identified the following risks with this P0 launch:
+
+- We don’t know the volume of these issues so we don’t know the staffing requirement. For now, we’ll work closely with TS to maintain current staffing levels and monitor feedback on this process.
+- We know some issues are likely to come up that are not covered in the SOP. Taylor and the engineering team will be monitoring the slack channel & available to help the team with each initial instance and make adjustments to the SOP as we discover new edge cases.
+
+### When Will This Change Be Effective?
+
+We plan to roll this out by November 30, 2022!

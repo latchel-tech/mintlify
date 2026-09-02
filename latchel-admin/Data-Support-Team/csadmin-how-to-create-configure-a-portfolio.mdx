@@ -1,0 +1,91 @@
+---
+title: "csadmin-how-to-create-configure-a-portfolio"
+groups:
+  - "latchel"
+---
+
+# Objective
+
+**Purpose**
+
+At Latchel we use portfolios to organize groups of properties under a Property Manager's account. A portfolio is a collection of properties that are subject to the same rules and configurations within our system. Several different company level configurations can be overridden at the Portfolio level (excluding emergency definitions, as they are applied to the entire company). Portfolio configurations can be overridden at the property level. 
+
+# Content
+
+**What is happening prior to this process?**
+
+You have collected a list of the different Portfolios from the Property Manager and a list of what is different about this portfolio (e.g. escalations points are different, uses different preferred Service Providers).
+
+First, run through this list with the Property Manager to see if there are specific differences or customizations for each portfolio.
+
+1. Who is the primary Property Manager responsible for this portfolio?
+2. Does the Property Manager have a list of contacts for the Portfolio that they want to be called before dispatching of a service provider occurs?
+3. **OWNER NOTIFICATIONS:** Is this portfolio a specific owner's portfolio or something else (e.g. a specific region)? 
+4. **(PREMIUM PLAN) PERMISSION TO ENTER:** Does this portfolio have common access instructions?
+5. For Service Providers or groups of Service Providers, determine if the priority order applies to the entire property management company or if there are specific rules or preferences for individual portfolios.
+6. What is the emergency budget limit before we need to escalate to the Property Manager's team?
+   1. We use a soft budget limit of \$200 or your max limit, whichever is lower.
+   2. You do not need to add budget limits if the portfolio has the same budget limits set at the company level. Configuration left unused at the Portfolio Level will default to the Company Level settings. 
+
+Let the customer know they can always update their Portfolios via self-service tools in Latchel. **Link to Customer Guide:** [https://latchel.com/blog/how-to-create-manage-portfolios/](https://latchel.com/blog/how-to-create-manage-portfolios/)
+
+## Step-by-Step Guide
+
+### **Step 1 - Create the Portfolio**
+
+1. Go to the Property Manager profile page: [How to: Access the Property Manager Profile Page](https://latchel.atlassian.net/wiki/spaces/TST/pages/813729656)
+2. Click on the "Portfolio" tab and on the "+Portfolio" button to add a new portfolio
+3. Type the Portfolio name and select the Property Management staff person that was assigned as responsible for this Portfolio. Click on "Create" to save this Portfolio
+
+### **Step 2 - Upload Properties to the Portfolio**
+
+Use this the step 4 of this SOP: [How to: Add Properties in the Latchel Console to a New Account](https://latchel.atlassian.net/wiki/spaces/TST/pages/795934730/How+to+Add+Properties+in+the+Latchel+Console+to+a+New+Account#Howto:AddPropertiesintheLatchelConsoletoaNewAccount-step4Step4-UploadPropertiesInformationtoaPortfolio)
+
+### **Step 3 - Configure the Portfolio Settings (if applicable)**  
+
+1. Who is the primary Property Manager responsible for this portfolio?
+   1. See [Step 2- Assign an Account Member as the Primary Property Manager for a Portfolio](https://latchel.atlassian.net/wiki/spaces/CS/pages/796362256/How+to+Enter+Property+Management+Members+Information#Howto:EnterPropertyManagementMembersInformation-step2Step2-AssignanAccountMemberasthePrimaryPropertyManagerforaPortfolio)
+2. Does the Property Manager have a list of contacts for the Portfolio that they want to be called before dispatching of a service provider occurs?
+   1. See [Step 2 - How to add Pre-Dispatch Instructions at the Portfolio Level](https://latchel.atlassian.net/wiki/spaces/CS/pages/795116337/How+to+Add+Pre-dispatch+Notes#Howto:AddPre-dispatchNotes-step2Step2-HowtoaddPre-DispatchInstructionsatthePortfolioLevel)
+3. **OWNER NOTIFICATIONS:** Is this portfolio a specific owner's portfolio or something else (e.g. a specific region)? 
+   1. [How to: Configure Owner and Communication Preferences](https://latchel.atlassian.net/wiki/spaces/TST/pages/838501535)
+4. **(PREMIUM PLAN) PERMISSION TO ENTER:** Does this portfolio have common access instructions?
+   1. See [Step 2 - How to add Default Access Instructions at the Portfolio Level](https://latchel.atlassian.net/wiki/spaces/CS/pages/795377753/How+to+Add+Default+Access+Instructions#Howto:AddDefaultAccessInstructions-step2Step2-HowtoaddDefaultAccessInstructionsatthePortfolioLevel)
+5. For Service Providers or groups of Service Providers, determine if the priority order applies to the entire property management company or if there are specific rules or preferences for individual portfolios.
+   1. See How to prioritize service providers (and their skills) at the Portfolio Level on step 5 of this SOP: [How to: Configure Preferred Service Providers to a New Account#step5Step5-AddPreferredServiceProviderstoaPortfolio](https://latchel.atlassian.net/wiki/spaces/TST/pages/794198095/How+to+Configure+Preferred+Service+Providers+to+a+New+Account#Howto:ConfigurePreferredServiceProviderstoaNewAccount-step5Step5-AddPreferredServiceProviderstoaPortfolio)
+6. What is the emergency budget limit before we need to escalate to the Property Manager's team?
+   1. We use a soft budget limit of \$200 or your max limit, whichever is lower.
+   2. You do not need to add budget limits if the portfolio has the same budget limits set at the company level. Configuration left unused at the Portfolio Level will default to the Company Level settings. 
+   3. [Jump to the next section to see how to set budget limits at the portfolio level ](#id-\(CS/Admin\)Howto:Create&ConfigureaPortfolio-step4)
+
+### **Step 4 - How to Set Budget Limits at the Portfolio Level** 
+
+1. Click on the Portfolio name to open the Portfolio profile and configure it. 
+2. Under the Details tab, scroll down until you see Work Order Budget Limits. Click on this section to expand the editable budget limit fields.
+3.  Enter the customer's budget limits for Emergency and (**PREMIUM ONLY**) Non-Emergency work orders. Click **Save**.
+   1.  
+   2. The **Emergency Soft Budget Limit** is the default budget limit shared with Service Providers when a Work Order is sent to them. If a job will go over the Soft Budget Limit then the Service Provider contacts Latchel first for approval.
+   3. The **Emergency Hard Budget** **Limit** is the maximum budget limit that the Property Manager allows Latchel to approve up to. For example, assume a soft limit is $$200 and a hard limit is $$500. The Service Provider contacts Latchel when the job will exceed $$200. Latchel will automatically approve the cost if it is below $$500. Anything over $$500 will be escalated using your escalation contacts list for approval._\*\*Please note, to use our 24/7 Emergency service, the Emergency hard budget limit must be $$250 at minimum.\*\*\_
+   4. The \*\*Normal Soft Budget Limit \*\*is the default budget limit shared with Service Providers when a Work Order is sent to them. If a job will go over the Soft Budget Limit then the Service Provider contacts Latchel first for approval.
+   5. The \*\*Normal Hard Budget Limit \*\*is the maximum budget limit that the Property Manager allows Latchel to approve up to. For example, assume a soft limit is $$150 and a hard limit is $$250. The Service Provider contacts Latchel when the job will exceed $$150. Latchel will automatically approve the cost if it is below $$250. Anything over \$250 will be escalated using your escalation contacts list for approval.
+
+### **Step 4 - How to Configure a "Blanket Portfolio"**
+
+**What are "Blanket Portfolios"**
+
+During Phase 1 of the onboarding process, our team may need to create "Blanket" portfolios to group properties that need specific configurations that will be done during phase 2. Examples of those are: 
+
+- “Blanket Home Warranty” Portfolio - We will group properties with home warranties under one portfolio and further configure property specific home warranties in phase 2 
+- "Blanket Owner Approval Required Portfolio"  - We will create this portfolio when we have properties owned by different owners and the Property Manager requested to set-up owner approval for those owners. 
+- "Blanket Section 8 portfolio" - This is for Home Assistant customers. We will create this portfolio and **opt-out** all section 8 properties in the portfolio. 
+  - See [Section 5. How to Opt Property Out](https://latchel.atlassian.net/wiki/spaces/LTG/pages/965574844/HOME+ASSISTANT+How+To+Opt+Properties+In+or+Out+of+the+Resident+Benefit+Package#id-\(HOMEASSISTANT\)HowTo:OptPropertiesInorOutoftheResidentBenefitPackage-step5Section5.HowtoOptPropertyOut) for steps on opting these properties out of the resident benefit package. 
+
+All work orders for properties under a "blanket portfolio" will be forwarded to the Property Manager for approval during phase 1. In phase 2, as we add more details for those properties, we will move them to a better fit portfolio or configure property-specific notes and remove the property from a portfolio altogether. 
+
+1. Refer to Step 1 & Step 2 above on how to create the portfolio and assign the proper properties to the portfolio. 
+2. Pre-dispatch instruction should indicate that the property is under home warranty.
+   1. Use this template to add to the portfolio's pre-dispatch instructions if the property manager wants all work orders escalated to their team:
+      1.  "_Emergency & Non-Emergency Instructions: This property is under home warranty. Do NOT dispatch a Service Provider. Forward to PM for approval_"
+   2. (PREMIUM ONLY) Use this template if the property manager wants only non-emergency work orders escalated to their team,:
+      1. "Non-e_mergency Instructions: This property is under home warranty. Do NOT dispatch a Service Provider for non-emergency work orders. Forward to PM for approval\_". 
+   3. See [Step 2 - How to add Pre-Dispatch Instructions at the Portfolio Level](https://latchel.atlassian.net/wiki/spaces/CS/pages/795116337/How+to+Add+Pre-dispatch+Notes#Howto:AddPre-dispatchNotes-step2Step2-HowtoaddPre-DispatchInstructionsatthePortfolioLevel)

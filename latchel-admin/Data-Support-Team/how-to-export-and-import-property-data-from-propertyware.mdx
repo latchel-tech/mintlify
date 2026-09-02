@@ -1,0 +1,80 @@
+---
+title: "how-to-export-and-import-property-data-from-propertyware"
+groups:
+  - "latchel"
+---
+
+# Objective
+
+**Purpose**
+
+The purpose of this document is to provide an overview process on how to pull necessary property data from PropertyWare, convert to the standard data entry template, and import this data to a new Property Manager account.
+
+# Content
+
+**What is happening prior to this process?**
+
+The Property Manager has provided login credentials to access their PropertyWare account.  The initial request for login information is done by the Sales team before the onboarding meeting and should be added to this [tracker](https://docs.google.com/spreadsheets/d/16B1d5acwDRvx6w8BkSuL4_QAOZmcXKYwf5HFpMcwRdU/edit?ts=5d3f560b#gid=0). If this information is not received, please follow the process and templates outlined in this SOP to follow-up with the Property Manager: [(Draft) Job-Aid: Onboarding Flow & Communications](https://latchel.atlassian.net/wiki/spaces/CS/pages/851247114)
+
+## Step-by-Step Guide
+
+### **Process Overview**
+
+Once the Property Management account has been set-up into the Latchel Console, you will be able to start adding and configuring properties. The process starts with logging into the customer's PropertyWare account and exporting a full property report. That information will be exported from PropertyWare and converted into a format that can be imported into the system. After all properties have been imported, you will be able to finalize configuration and customizations. 
+
+### **Step 1 - Export Property Information**
+
+Note: Skip to Step 2 if you need to export additional information besides resident information and property information. 
+
+1. Log into PropertyWare here: [https://www.propertyware.com/login/](https://www.propertyware.com/login/)
+2. Click **Reports** tab and then click **New Report** in the upper-right corner. 
+3. Use the "Search Report" field at the top of the sidebar to search for "**Lease Reports**". 
+4. Click on the "+" sign to expand the report folder to select “**Tenant Contacts**”.
+5. On the same page, to the right of the search report (as pictured above), you will see a section to name the template, add a description and choose the proper folder for the new report.
+   1. **Name** This defaults to "Copy of [REPORT NAME]," but you can change it to "Latchel - Property Data for [COMPANY NAME]".
+   2. **Description** - This is optional. You can leave this blank. 
+   3. **Folder** Select "Default Folder" to save the report in the same folder as the default report. 
+   4. Click **Apply** to create the template.
+6. Once you click Apply, this generates the report in the "Lease Reports" folder. To customize this report, expand the Lease Reports folder and then click on the report name. From here, click **View Report**.
+7. The Columns section is available in the left sidebar of open reports. The columns are organized into folders by information category. The categories and columns that are available depend on the type of report you are working with. In the report template you just created, you are able to "check" the boxes on the items that should be included in the report, or uncheck the ones that should be excluded from the report. Uncheck all columns except the ones listed below (and highlighted in the image below). 
+   1. Address
+   2. Address Cont
+   3. City
+   4. State
+   5. Zip
+   6. Full Name
+   7. E-mail
+   8. Mobile Phone #
+
+<img src="blob:https://media.staging.atl-paas.net/?type=file&localId=null&id=720e8ea1-8613-4c28-b12d-28830ce4b2d7&&collection=contentId-795148635&height=1124&occurrenceKey=null&width=294&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null" />      5. To export or print a report:
+
+a. In the open report, click \*\*Export/Print \*\*on the toolbar.
+
+b. Use the drop-down list to select **MS Excel** as the export format.
+
+<img src="blob:https://media.staging.atl-paas.net/?type=file&localId=null&id=c8bd2037-8439-4b64-9fda-ff4e642d0d75&&collection=contentId-795148635&height=154&occurrenceKey=null&width=313&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null" />       6. Once saved, open this file and download it in an "MS Excel" format. In step 3, you will learn how to convert it to Google sheets and the format required for upload into the Latchel Console
+
+### **Step 2 - Export Property/Unit Specific Notes**
+
+This export can replace step 1 if you also need additional information on the property, as the report below will include the property/unit-specific information in addition to the address and resident information.
+
+1. Click **Reports** tab and then click **New Report** in the upper-right corner. 
+2. Scroll down on the lefthand side until you see Property Report and click to expand this section. 
+   1. Click Units and then Apply.
+3. The Columns section is available in the left sidebar of open reports and you are able to "check" the boxes on the items that should be included in the report, or uncheck the ones that should be excluded from the report. The columns are organized into folders by information category.
+   1. Under the **Building Summary** folder, you will be able to check columns such as property address, Home Warranty status, and Primary Property Manager.
+   2. Under the **Lease: Summary** folder, you will be able to check columns such as Resident ID (AKA Resident Name), Resident Phone Number, Resident move-in date, Resident move-out date, and lease status. 
+   3. Under the **Portfolio Summary** folder, you will be able to check columns to gather owner information and the name of the portfolio that the property is grouped in. 
+   4. Under the **Unit Summary** folder, you will be able to check columns such as status (occupied/vacant).
+4. Once you have selected the columns you wish to add to your report, you are ready to export. 
+   1. In the open report, click \*\*Export/Print \*\*on the toolbar
+   2. Use the drop-down list to select **MS Excel** as the export format.
+5. Once saved, open this file and download it in an "MS Excel" format. In the next step, you will learn how to convert it to Google sheets and the format required for upload into the Latchel Console.
+
+**Note**: not all of the information you will extract from this report will be uploaded into the Latchel Console via the import tool and will need to be entered in the system manually
+
+### [**Step 3 - Covert the file to .CSV format**](https://latchel.atlassian.net/wiki/spaces/CS/pages/795148345/How+to+Export+and+Import+Data+from+Buildium#Howto:ExportandImportDatafromBuildium-step3Step2-Covertthefileto.CSVformat) 
+
+### **Step 4 –** **Prepare and Upload Data**
+
+**See SOP How to: Add Properties in the Latchel Console to a New Account** for remaining steps on how to [Prepare Properties Data for Upload](https://latchel.atlassian.net/wiki/spaces/CS/pages/795934730/How+to+Add+Properties+in+the+Latchel+Console+to+a+New+Account#Howto:AddPropertiesintheLatchelConsoletoaNewAccount-step2Step2-PreparePropertiesDataforUpload), [Upload Properties Information to Property Manager Account](https://latchel.atlassian.net/wiki/spaces/CS/pages/795934730/How+to+Add+Properties+in+the+Latchel+Console+to+a+New+Account#Howto:AddPropertiesintheLatchelConsoletoaNewAccount-step3Step3-UploadPropertiesInformationtoPropertyManagerAccount), and [Check the status of your import/upload](https://latchel.atlassian.net/wiki/spaces/CS/pages/795934730/How+to+Add+Properties+in+the+Latchel+Console+to+a+New+Account#Howto:AddPropertiesintheLatchelConsoletoaNewAccount-step5Step5-Checkstatusofyourimport/upload).

@@ -1,0 +1,104 @@
+---
+title: "how-to-handle-property-and-resident-information-update"
+groups:
+  - "latchel"
+---
+
+# Objective
+
+Although customers have access to upload new properties or change resident data on their account, they often reach out to us for help. This document will guide you on how to handle updates to property and resident information
+
+# Content
+
+## Step-by-Step Guide
+
+### **Step 1. Receive and Assess the Property Manager Request**
+
+1. The customer will reach out via [onboarding@latchel.com](mailto:onboarding@latchel.com), [success@latchel.com](mailto:success@latchel.com) or [team@latchel.com](mailto:team@latchel.com). 
+   1. These emails will be viewable as tickets in Zendesk ([https://latchel.zendesk.com/](https://latchel.zendesk.com/))
+   2. Use the SOP [(Draft) How to: Handle Customer Success emails in Zendesk](https://latchel.atlassian.net/wiki/spaces/CS/pages/849314225) to learn how to handle those emails appropriately in Zendesk
+2. For emails requesting updates to property and resident information, assess the request:
+   1. If the Property Manager is asking for a clear and simple update (i.e update resident living on an existing property, or add a new property to their account, use the SOPs below. 
+      1. Add new properties →[How to: Add Properties in the Latchel Console to a New Account](https://latchel.atlassian.net/wiki/spaces/TST/pages/795934730)
+      2. Update resident information → [How to: Handle Customer Information Updates](https://latchel.atlassian.net/wiki/spaces/OPS/pages/778108994) → see request type 1
+   2. If the Property Manager is sending us an updated list of residents and properties, we will need to do an analysis to understand what needs to be updated. Go to [step 2 ](#Howto:HandlePropertyandResidentInformationUpdate-step2)(only Customer Success Team)
+      1. If you are not part of the Customer Success team (i.e. an ops agent supporting Customer Success team or a VA helping with data entry), you will transfer this email to a member of the CS team -  [(Draft) How to: Handle Customer Success emails in Zendesk](https://latchel.atlassian.net/wiki/spaces/CS/pages/849314225)
+3. Once the updates were made, return to Zendesk to respond to the customer and close the ticket - [(Draft) How to: Handle Customer Success emails in Zendesk](https://latchel.atlassian.net/wiki/spaces/CS/pages/849314225) 
+
+### **Step 2. Run a resident and property list from our database (Customer Success Team ONLY)**
+
+**ATTENTION**
+
+This section should only be executed by the members of the Customer Success Team. If you are not part of the Customer Success team, you will transfer -[(Draft) How to: Handle Customer Success emails in Zendesk](https://latchel.atlassian.net/wiki/spaces/CS/pages/849314225)
+
+1. This process will require using Pg_Admin software to pull resident and property data from our database.
+   1. If you haven't installed Pg_Admin yet, go to [How to: Install Pg_Admin4 and Set-up the Server](https://latchel.atlassian.net/wiki/spaces/CS/pages/838469072)
+2. Go to the Pg_Admin main page 
+   1. This will be an application installed in your computer. To access it, go to your computer menu (Start button in Windows) and search for the application
+3. On the left side of the screen, under "Browse", click on the server drop-down menu until you see "latchelstage". Click on it.
+4. Click on the SQL tab and in the query tool icon
+5. A new blank page will open for you to type your query
+6. Go to [Job-Aid: SQL Queries](https://latchel.atlassian.net/wiki/spaces/CS/pages/848855280) to find the query template
+   1. Use template "Get all tenants with **no** ref_ids for a specific company" to get resident and property information
+7. Copy and paste the query below into the query Editor
+   1. Each query needs to be run separately. Start with resident and later repeat the same steps to get property information
+8. Replace the company_id number (template has 9999) with the company_id for the Property Manager account you want to pull data for
+   1. To find the company_id number for the Property Manager, go to the property manager profile page [How to: Access the Property Manager Profile Page](https://latchel.atlassian.net/wiki/spaces/TST/pages/813729656)
+   2. In the browser search bar, you will see the web address of that property manager profile page. The number at the end is the company_id
+9. Back to Pg_Admin, click on the "play" symbol to execute the query
+10. The output of the query will be listed below
+11. Click in the arrow down symbol to download the data in a csv file
+12. Go to your download folder to find the new file and open it
+
+### **Step 3. Compare the Query Output with Information Sent by the Property Manager** 
+
+1. You will need to compare the information you downloaded from the database with the list provided by the Property Manager to:
+   1. **Analysis 1** - Identify which residents are not in our system and if we have duplicated or outdated information 
+   2. **Analysis 2** - Identify which properties are not in our system, which properties exist in our system but the resident information changed and needs to be updated, and verify if we have duplicated properties that need to be removed
+2. To start the comparison, first "clean up" the spreadsheet resulting from the database query that you downloaded in [step 2](#Howto:HandlePropertyandResidentInformationUpdate-step2)
+   1. Select and hide all columns, except the five columns titled as: (1) name, (2) address1; (3) address2; (4) city; (5) State
+   2. In google sheets, to hide columns, right-click on the letter identifying the columns you want to hide, then left-click on them, and select "hide columns... " 
+   3. Add another column and label it as "Provided by" and add "Latchel" under that column for each row
+   4. You will end up with a spreadsheet similar to the one below
+   5. Next, you will copy the information provided by the property manager into this spreadsheet in a way the information will be organized in the same way as this spreadsheet, i.e. the first column, you will paste the resident or tenant name, second column, you will paste the address, etc.
+      1. To copy, right click your mouse on the cell you want to copy and drag it to select all the cells you want to copy. Then, left click your mouse and select "Copy"
+      2. To paste, left-click on a blank cell where you want to copy the information and select "paste" 
+   6. Under the column you created called "Provided by", for each row with the information provided by the property manager, write "PM"
+   7. Your spreadsheet will look similar to this. The information provided by the Property Manager is highlighted in yellow
+   8. Click on the corner of the spreadsheet to select all data within the spreadsheet
+   9. Go to the "Data" menu and select "Create a filter"
+3. **Analysis 1: Identify which residents are not in our system and if we have duplicated or outdated information** 
+   1. Click on the filter icon on the "name" column and "sort A→Z"
+   2. Add another column to the spreadsheet and label it as "action"
+   3. Line by line in the spreadsheet, check if there is a name repeating. If so, check if the address information is the same. If so, look at the "Provided by" column to see where the information in that line came from. 
+      1. If one is coming from the "PM" and one from Latchel, then write "**skip**" under the "action" column for both lines. This means that we have in our system the same information as the Property Manager has in their system. See example below:
+      2. If the information is exactly the same on both lines and both (or more than one) is coming from "Latchel", write "**merge**" on both lines under the "action" column. This means that we have that information duplicated in our system and we need to merge it. See example below:
+         1. Note that this example also shows that the Property Manager had that same information in the data provided to us, which means this information is still updated. If all of the Property Manager information matches what we have in the system, write "**skip**" under the "action". If there is a difference in the address, for example, write "Update Address" under the "Action" column
+      3. If there is no name repeating, it means the information in our system is different than what the Property Manager provided and most likely the information that the Property Manager provided contains new residents and/or properties and we need to add them to the system. If we have the property in the system, but the resident is different, we will need to update the resident information. If we don't have that property in the system, then we need to add the property and the resident. In both of these cases, write "**Add/update**" under the "action" column. See example below:
+      4. For the ones that we have in the system and that were not in the Property Manager spreadsheet, we will write "**potential removal**" under the action column. As we do the analysis 2 below, we will see if we need to remove the resident or the property information.
+4. **Analysis 2: Identify which properties are not in our system, which properties exist in our system but the resident information changed and needs to be updated, and verify if we have duplicated properties that need to be removed**
+   1. Use the filter to sort the "address1" column from "A → Z"
+   2. Line by line in the spreadsheet, check if there is an address repeating. If so, check if this property has different "unit or suite numbers" on column "address2"
+      1. If the address2 column is different, it is a different address and it should have a different resident.
+         1. Check who provided the information in those lines:
+            1. If both lines were provided by Latchel, keep "potential removal" written under the "action" column, as we don't know if those residents or property is still active
+            2. If both lines were provided by the PM, update the "action" column to say "**add**", as these are new units with new residents
+            3. If one line was provided by Latchel and one by the PM, keep "potential removal" in the line provided by Latchel and update to "add" in the line provided by the PM. 
+      2. If all of the address information match (i.e. those are the exact same unit), but the resident name is different: 
+         1. Check who provided the information in those lines:
+            1. If both lines were provided by Latchel, keep "potential removal" written under the "action" column, as we don't know if those residents or property are still active
+            2. If both lines were provided by the PM, keep "add" written under the "action" column, as this is a new unit with new residents (multiple residents)
+            3. If one line was provided by Latchel and one by the PM, change the "action" to "**update resident**" for both lines
+      3. If all of the address information match and the resident name is the same, we should have already caught that in the Analysis 1 and the "action" for those lines should have already been filled wither with "merge" or "skip"
+
+### **Step 4. Take Action in the Property Manager Account**
+
+1. At the end of both analyses, we should have all of the lines under the "Action" column filled with either "merge", "skip", "Add', "Add/update", or "potential removal". If there are lines without an action, reach out to the Customer Success team for help — [↔ How to: Trigger a Deep-Dive Investigation by Customer Success](https://latchel.atlassian.net/wiki/spaces/LTG/pages/792822006)
+   1. Use the filter in the "action" column to sort A → Z
+   2. Action "**Add/Update**" → Change it to "Add", as those are brand new units with new residents
+   3. Action **"Add"** → Use this SOP to add these properties and residents to the Latchel Console ([How to: Add Properties in the Latchel Console to a New Account](https://latchel.atlassian.net/wiki/spaces/TST/pages/795934730)). This can be done via upload or manually (one-by-one). If this Property Manager account has Portfolios and their spreadsheet is not specifying if these properties below to a certain portfolio, escalate this to the Customer Success team as we may need to clarify with the Property Manager if these units should be added to the overall company account or a specific portfolio.   [↔ How to: Trigger a Deep-Dive Investigation by Customer Success](https://latchel.atlassian.net/wiki/spaces/LTG/pages/792822006)
+   4. Action "**Merge**: → Use this SOP to merge properties in the Latchel Console ([How to: Merge duplicate properties](https://latchel.atlassian.net/wiki/spaces/TST/pages/795116246))
+   5. Action "**Potential Removal**" → provide this list to the Customer Success team for further assessment. We may need to double-check with the Property Manager if those units are still active--  
+      1.   [↔ How to: Trigger a Deep-Dive Investigation by Customer Success](https://latchel.atlassian.net/wiki/spaces/LTG/pages/792822006)
+   6. Action "**skip**" → leave as is, i.e., nothing needs to be done with this information
+   7. Action "**update resident**" → use this SOP (request type 1) to update the resident information in that property [How to: Handle Customer Information Updates](https://latchel.atlassian.net/wiki/spaces/OPS/pages/778108994) 

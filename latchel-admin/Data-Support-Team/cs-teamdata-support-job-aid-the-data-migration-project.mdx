@@ -1,0 +1,115 @@
+---
+title: "cs-teamdata-support-job-aid-the-data-migration-project"
+groups:
+  - "latchel"
+---
+
+‌
+
+**What is Data Migration Project?**
+
+The Data Migration task is usually performed for any Latchel customers that started service before activating their third-party software integration since doing so would create duplicate records in the Latchel database. To fix this, we need to collect and assign the “reference IDs” of the properties and residents from the customer’s third-party property management software into our system, so that the integration knows which data needs to be created or updated.
+
+**ATTENTION:**
+
+The estimated time of completion of this project is between 2-3 weeks depending on the amount of records for matching. It is important that the customer is reminded of this ETA to avoid future escalation.
+
+# CONTENTS
+
+## **OBJECTIVE**
+
+The objective of this document is to provide a step-by-step guide to a Data Support Associate on how to find and assign “ref_ids” of properties and residents to the matching record of it in the Latchel console.
+
+**Who should be reading this document?**
+
+- Customer Success Team
+- Data Support Team
+
+## **THE PROCESS**
+
+### **PART 1: HOW TO MATCH RECORDS**
+
+- Export report from Latchel via pgAdmin using the R4 query. You can copy the query from <custom data-type="smartlink" data-id="id-0">[https://latchel.atlassian.net/wiki/spaces/CS/pages/848855280/Job-Aid+SQL+Queries#Residents-Data](https://latchel.atlassian.net/wiki/spaces/CS/pages/848855280/Job-Aid+SQL+Queries#Residents-Data)</custom>.
+- Check the file attachment in the request. Make sure it has the resident report with ref_user_id, and the property report with ref_property_id and ref_unit_id. If the reports are incomplete, escalate the ticket and inform the requester of the missing information needed.
+- Go down the list of the properties in the Latchel Property Report sheet and check the Property Manager Property Report sheet for a matching record. Pay close attention to the “address 1” and “address 2” fields, and make the best match you can. 
+- For each match you find, copy the “ref_property_id” and “ref_unit_id” columns from the property manager’s property report into the corresponding columns in the Latchel property report. If you cannot find a matching property or are unsure of a match, leave the “ref_property_id” and “ref_unit_id” fields blank in the Latchel property report.
+- Next, go down the list of tenants in the Latchel Tenant report then check the customer tenant report for a matching record. Some of the tenant names may be misspelled in either file, so do your best to make the most educated decision you can on a match, taking into account the name, email, and phone number of the resident.
+- For each match, copy the “ref_user_id” column from the customer tenant report into the corresponding column in the Latchel Tenant report. If you cannot find a match or are unsure of a match, leave the “ref_user_id” blank in the Latchel tenant file.
+
+**Attention:** There will be instances that a ref_property_id is assigned to multiple properties, it is an indication that the property is a multi-unit address. On the other hand, ref_unit_ids should be **_unique_** in every unit.
+
+- Any unmatched residents and/or properties **must be disabled** in the Latchel console. While Latchel residents with matching records in the customer resident report but are assigned to incorrect properties, **must be moved or transferred** to the correct properties if applicable.
+
+**PRO-TIP:**
+
+You may use different conditional formatting or create sets of formulas in the spreadsheet to find any matching properties or residents. You may use “VLOOKUP” and/or “INDEX + MATCH” as a few of the common formulas that can help you find these matches easily.
+
+The assignee of the task is not required to update the resident contact information that is outdated at the time of the data migration task. The reporter must be advised of these discrepancies. A separate task must be posted to update the residents’ contact details using the Task Title “Update Resident Contact Information”.
+
+For more information about these task titles, please refer to the job-aid: “Task Share Program: Standardized Task Titles”
+
+‌
+
+**PART 1 VIDEO OVERVIEW:**
+
+<custom data-type="smartlink" data-id="id-1">[https://www.loom.com/share/cdc6dd652d9b44d48506790018d5f3bf?sharedAppSource=team_library](https://www.loom.com/share/cdc6dd652d9b44d48506790018d5f3bf?sharedAppSource=team_library)</custom>
+
+<img src="blob:https://media.staging.atl-paas.net/?type=file&localId=47fcafea-2f05-4ef1-a41e-882c3cf84b66&id=5563991f-fc09-4eb9-b034-13e820d35a19&&collection=contentId-2507866123&height=720&occurrenceKey=null&width=1280&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null" /> ‌
+
+### **PART 2: HOW TO CREATE THE CSV FILES WITH THE MATCHED RECORDS**
+
+- Once all residents and properties have been sorted and all reference ids of the matching records have been placed in the right column, the assignee must create 2 CSV files. The first (.)csv file contains the Latchel “user_id” of the residents with their corresponding “ref_user_id” copied from the property manager tenant report. The second (.)csv file contains the Latchel “property_id” with their corresponding “ref_property_id” and “ref_unit_id” copied from the property manager report.
+- From the data migration spreadsheet, go to the Latchel Tenant report and copy the Latchel "user_id" column and the “ref_user_id” column. Make sure you are only including residents that have matching records. Paste these columns in a separate spreadsheet.
+- Save it as a (.)csv format file and rename it to indicate that the file contains the residents' reference IDs.
+
+![](blob:https://media.staging.atl-paas.net/?type=file&localId=327bc71e-c164-4b04-833a-1c1dceec33f8&id=979a8546-8c5e-4807-8777-9ac85507272b&&collection=contentId-2507866123&height=616&occurrenceKey=null&width=952&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null)
+
+- Once done with the residents' reference ID (.)csv file, proceed on doing the same with the properties.
+- From the data migration spreadsheet, go to the Latchel Property report and copy the "property_id", “ref_property_id”, and “ref_unit_id” columns into another spreadsheet.
+- Save it as a (.)csv format file and rename it to indicate that the file contains the properties' reference IDs.
+
+<img src="blob:https://media.staging.atl-paas.net/?type=file&localId=7e18cc7f-2dea-45e6-ad57-49ad820ee656&id=a07ea8b1-b4c2-47ce-8ded-0c6c3868a230&&collection=contentId-2507866123&height=736&occurrenceKey=null&width=989&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null" /> <img src="blob:https://media.staging.atl-paas.net/?type=file&localId=664e8039-f2ac-4d95-8d71-2c45cc62a4af&id=0035c3dd-21fc-4067-b911-ca8131e0e04c&&collection=contentId-2507866123&height=779&occurrenceKey=null&width=1409&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null" /> ‌
+
+**PART 2 VIDEO OVERVIEW:**
+
+<custom data-type="smartlink" data-id="id-2">[https://www.loom.com/share/90685891f1b24e16b83a562a206dd7d6](https://www.loom.com/share/90685891f1b24e16b83a562a206dd7d6)</custom>
+
+<img src="blob:https://media.staging.atl-paas.net/?type=file&localId=12bbc56d-73af-4847-bb7b-ed54b94af019&id=e332beaf-238e-4381-b2a5-b5c67a17c8bc&&collection=contentId-2507866123&height=720&occurrenceKey=null&width=1280&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null" /> ‌
+
+**Please refer to the sample spreadsheet below as a reference of the final (.)csv output.**
+
+| **Type of File** | **Sample Spreadsheets** |
+| --- | --- |
+| Appfolio Property Reference IDs |  |
+| Rent Manager Property Reference IDs |  |
+| Propertyware Property Reference IDs |  |
+| Appfolio Resident Reference User IDs |  |
+| Rent Manager Resident Reference User IDs |  |
+| Propertyware Resident Reference User IDs |  |
+
+‌
+
+### **PART 3: HOW TO REQUEST TECH TO ASSIGN THE REF_IDS and ACTIVATE INTEGRATION**
+
+1. Go to <custom data-type="smartlink" data-id="id-3">[https://latchel.slack.com/archives/C03P9VB4JK1](https://latchel.slack.com/archives/C03P9VB4JK1)</custom>  channel and access the workflow [Activate Integration](https://slack.com/shortcuts/Ft09MTRCBQ0L/a7e601023f58555dee9ddc2143de2460).
+
+<img src="blob:https://media.staging.atl-paas.net/?type=file&localId=eeb559a8-a420-4039-baa5-7f027bdf9774&id=1b651aeb-7233-40d3-9171-0eb326921ad4&&collection=contentId-2507866123&height=322&occurrenceKey=null&width=677&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null" /> 2. Fill out the form with the necessary information needed. Copy and paste the customer’s integration details provided by the requester in the ticket. Then, attach the 2 CSV files that contains the matched reference IDs in the thread.
+
+<img src="blob:https://media.staging.atl-paas.net/?type=file&localId=0cec0b36-a7a1-4f9f-95e7-0cdd11699ade&id=09d41d2c-788b-416c-be65-5acf04bcfc83&&collection=contentId-2507866123&height=727&occurrenceKey=null&width=598&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null" /> To know more about the integration requirements, please visit **[Latchel Integrations Wiki](https://latchel.atlassian.net/wiki/spaces/PROD/pages/2609840129).**
+
+_Tech requires a **one**_-**_week heads up_**\_ that these tickets are coming in order to effectively manage their current sprint initiatives.\_
+
+3. Update the ASM ticket to Escalated. Add the link to the activation request you submitted in the <custom data-type="smartlink" data-id="id-4">[https://latchel.slack.com/archives/C03P9VB4JK1](https://latchel.slack.com/archives/C03P9VB4JK1)</custom> Slack channel. Also, inform the requester that the integration activation request has been submitted. You may mention the requester in the Slack post as well.
+4. Once the Tech confirms that the activation is complete, update the ASM ticket, then change the status to Closed. Inform the requester that the request is now complete.
+
+### **SAMPLES OF COMPLETED DATA MIGRATION PROJECTS**
+
+- <custom data-type="smartlink" data-id="id-5">[https://latchel.atlassian.net/browse/TS-1299](https://latchel.atlassian.net/browse/TS-1299)</custom>
+- <custom data-type="smartlink" data-id="id-6">[https://latchel.atlassian.net/browse/TS-149](https://latchel.atlassian.net/browse/TS-149)</custom>
+- <custom data-type="smartlink" data-id="id-7">[https://latchel.atlassian.net/browse/TS-679](https://latchel.atlassian.net/browse/TS-679)</custom>
+
+### **RELATED ARTICLES TO ACTIVATE A CUSTOMER’S THIRD-PARTY INTEGRATION**
+
+- <custom data-type="smartlink" data-id="id-8">[https://latchel.atlassian.net/wiki/spaces/CS/pages/813729953](https://latchel.atlassian.net/wiki/spaces/CS/pages/813729953)</custom>
+- <custom data-type="smartlink" data-id="id-9">[https://latchel.atlassian.net/wiki/spaces/PROD/pages/2653356033/Rent+Manager+Reference+Guide#Activating-the-Rent-Manager-Integration-(New-Customer)](https://latchel.atlassian.net/wiki/spaces/PROD/pages/2653356033/Rent+Manager+Reference+Guide#Activating-the-Rent-Manager-Integration-\(New-Customer\))</custom>
+- <custom data-type="smartlink" data-id="id-10">[https://latchel.atlassian.net/wiki/spaces/PROD/pages/2618261539/Propertyware+Reference+Guide#Step-3%3A-Activate-the-Propertyware-Integration---Latchel-(Internal)](https://latchel.atlassian.net/wiki/spaces/PROD/pages/2618261539/Propertyware+Reference+Guide#Step-3%3A-Activate-the-Propertyware-Integration---Latchel-\(Internal\))</custom>
