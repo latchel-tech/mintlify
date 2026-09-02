@@ -2624,7 +2624,12 @@
                       "latchel-admin/accounts-receivable/How-To-Terminate-Accounts-from-ARs-Perspective",
                       "latchel-admin/accounts-receivable/How-To-Handle-Desire-to-Churn-Alerts"
                     ]
-                  },
+                  }
+                ]
+              },
+              {
+                "dropdown": "Latchel People Ops",
+                "pages": [
                   {
                     "group": "Latchel People Ops Pages",
                     "pages": [
@@ -2700,9 +2705,19 @@
                       },
                       "latchel-admin/Latchel-People-Ops/onboarding-flow-communications"
                     ]
-                  },
+                  }
+                ]
+              },
+              {
+                "dropdown": "HR Documents",
+                "pages": [
                   "latchel-admin/HR-Documents/hr-documents-overview",
-                  "latchel-admin/HR-Documents/Employee-Attrition-Announcement",
+                  "latchel-admin/HR-Documents/Employee-Attrition-Announcement"
+                ]
+              },
+              {
+                "dropdown": "Latchel Library",
+                "pages": [
                   {
                     "group": "Latchel Library",
                     "pages": [
