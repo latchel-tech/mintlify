@@ -1,6 +1,7 @@
 ---
 title: "How to: Troubleshoot a Sync on the Latchel Cloud Device"
-groups: ["latchel"]
+groups:
+  - "latchel"
 ---
 
 <Note>
@@ -14,24 +15,18 @@ groups: ["latchel"]
 ## Overview
 
 <Tip>
-  **TIP:** To identify the last sync date, open the [**Integration Health Metrics**](https://docs.google.com/spreadsheets/d/1lqN_yI3vZUehb9BZylCvXK0KU-PFfpJCkDvw1_sgWug/edit?gid=186001220#gid=186001220) dashboard, go to the **PM Metrics** tab, and filter column **Q — Is the integration run by Latchel?** to show only rows marked **Yes**. Then check column **J — Last import date**. **If you don’t have editor access, you can review the [Latchel Internal Sync PMs list](https://docs.google.com/spreadsheets/d/1FZQ_gcofCAjOcqk4Sb9_lIKlRK_3zUIEAUon-PA40q0/edit?gid=0#gid=0) and compare it with the Integration Health Metrics Dashboard** (_You can use CTRL \+ F to search for each PM_).
+  **TIP:** To identify the last sync date, open the [**Integration Health Metrics**](https://docs.google.com/spreadsheets/d/1lqN_yI3vZUehb9BZylCvXK0KU-PFfpJCkDvw1_sgWug/edit?gid=186001220#gid=186001220) dashboard, go to the **PM Metrics** tab, and filter column **Q — Is the integration run by Latchel?** to show only rows marked **Yes**. Then check column **AS — Last sync date**. **If you don’t have editor access, you can review the [Latchel Internal Sync PMs list](https://docs.google.com/spreadsheets/d/1FZQ_gcofCAjOcqk4Sb9_lIKlRK_3zUIEAUon-PA40q0/edit?gid=0#gid=0) and compare it with the Integration Health Metrics Dashboard** (_You can use CTRL + F to search for each PM_).
 </Tip>
 
 <Tip>
-  **Monitor the internal Latchel syncs daily.** The PM Metrics query runs every day between 7–8 a.m. and 7–8 p.m CST. If you notice a PM whose date isn’t updated to today’s date in the **Last import date** column, you will need to troubleshoot the sync. **It’s best to troubleshoot the sync before the alerts are triggered in the #integration-sync-issues-internal channel**.
+  **Monitor the internal Latchel syncs daily.** The PM Metrics query runs every hour. If you notice a PM whose date isn’t updated to today’s date in the **Last sync** column, you will need to troubleshoot the sync. **It’s best to troubleshoot the sync before the alerts are triggered in the #integration-sync-issues-internal channel**.
 </Tip>
 
 ## Step by step
 
-<Accordion title="For the Weekend Internal Sync check, please review this step before you begin.">
-  1. Wait for the Integration Sync Check Reminder to trigger in the [#operations\_support](https://latchel.slack.com/archives/CUMBLQDRU). Once it is triggered, acknowledge the notification by using a check mark ✔️
-  2. In the Integration Metrics Dashboard, identify the PMs whose syncs are run internally by Latchel, as mentioned in the Loom video and the Overview section above. If you identify any sync that is behind today’s date, proceed with Step 1 or Step 2 accordingly.
-  3. Don’t forget to mark the notification with the **“Done”** emoji once you’ve completed all the steps. If no sync was needed, you can simply reply in the notification thread with:**“No manual sync was needed.”**
-</Accordion>
-
 ### **Step 1: Review and Acknowledge Integration Alerts**
 
-a. If, for any reason, an alert notification for the following triggers in [#integration-sync-issues-internal](https://latchel.slack.com/archives/C096E7A625U) (\_The script for these alerts runs every day between 9–10 a.m. and 9–10 p.m. CS\_T):
+a. If, for any reason, an alert notification for the following triggers in [#integration-sync-issues-internal](https://latchel.slack.com/archives/C096E7A625U) (\_The script for these alerts runs every day between 9–10 a.m. and 9–10 p.m. CST):
 
 - Integration hasn’t run in 2 days
 - Integration hasn’t run in 4 days
@@ -45,7 +40,7 @@ you will need to acknowledge the notification and proceed to step 2. **If this i
 <Note>
   Other notifications, such as:
 
-  - Integration hasn’t run in \+4 days
+  - Integration hasn’t run in +4 days
   - Data Sync Error: Properties, Tenant, Work Orders
   - Latchel Sync Request
 
@@ -54,11 +49,7 @@ you will need to acknowledge the notification and proceed to step 2. **If this i
 
 ### Step 2: Log in to the Remote Server Cloud
 
-a. Log in to the designated **Latchel cloud account** where syncs are managed. b. Log in using the credentials provided
-
-<Tip>
-  Currently, only members of the **Latchel Integration Team and Ops Support** have access to the Latchel cloud account. If you have been approved for access, reach out to Trisha to request login credentials.
-</Tip>
+a. Log in to the designated **Latchel cloud account** where syncs are managed. Log in using the credentials provided
 
 ### **Step 3: Connect to the TeamViewer Virtual Desktop**
 
@@ -90,26 +81,21 @@ b. **Select the specific PM profile** you need to check and identify the issue:
 </Frame>
 
 3. To confirm the sync was completed successfully, go to Latchel and open the PM’s profile.
-4. Then, go to the Integrations tab and, under Latest CSVs received for import, **check the syncs for Property and Tenant**. **The date should be updated to today’s date**.
+4. Then, go to the Integrations dashboard and, **check the Last sync column**. **The date should be updated to today’s date**.
+   ![Image](/images/image-142.png "Image")
 
 <Warning>
-  The sync for **owners** and **work orders (jobs)** doesn’t always run daily, as it depends on whether the PM has work orders to sync and on the subscription type. Also, _owner syncing is being enabled gradually by the Engineering team._
+  The last import (column J) for **owners, property, tenant** and **work orders (jobs)** doesn’t always run daily, as it depends on whether the PM has new information to sync and on the subscription type. Also, _owner importing is being enabled gradually by the Engineering team._
 </Warning>
 
 <Frame>
-  ![image-20251216-191834.png](/images/Intg-76.png)
 </Frame>
 
 <Frame>
-  ![image-20251216-191932.png](/images/Intg-77.png)
 </Frame>
 
-<Note>
-  The sync date that appears in Latchel is in the format **DD/MM/YYYY**.
-</Note>
-
 <Tip>
-  If, for any reason, the sync doesn’t go through, review whether the PM removed report access. You can check the following [job aid](https://help.latchel.com/how-to-grant-report-permissions-to-latchel-in-appfolio) to learn which reports are required for the sync. **If this is the root cause of the sync issue, communicate it to Trisha**. The alerts will continue to trigger, and once they reach **“Integration hasn’t run in \+4 days,”** the CSM will be notified.
+  If, for any reason, the sync doesn’t go through, review whether the PM removed report access. You can check the following [job aid](https://help.latchel.com/how-to-grant-report-permissions-to-latchel-in-appfolio) to learn which reports are required for the sync. 
 </Tip>
 
 ### **Step 6: Keep the Session Active.**
