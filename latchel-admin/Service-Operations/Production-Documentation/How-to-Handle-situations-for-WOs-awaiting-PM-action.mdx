@@ -1,23 +1,24 @@
 ---
 title: "How to: Handle situations for WOs awaiting PM action"
-groups: ["latchel"]
+groups:
+  - "latchel"
 ---
 
 ## 🧠 What This Process Is Trying to Solve
 
 <Info>
-We want to prevent delays, missed follow-ups, and miscommunication when work orders are awaiting Property Manager (PM) action. The goal is to ensure timely updates, avoid unresolved maintenance issues, and maintain clear accountability between Latchel, residents, and PMs—ultimately reducing risk, improving customer satisfaction, and ensuring that no work order is left unaddressed due to lack of PM response.
+  We want to prevent delays, missed follow-ups, and miscommunication when work orders are awaiting Property Manager (PM) action. The goal is to ensure timely updates, avoid unresolved maintenance issues, and maintain clear accountability between Latchel, residents, and PMs—ultimately reducing risk, improving customer satisfaction, and ensuring that no work order is left unaddressed due to lack of PM response.
 </Info>
 
 <Info>
-**What are WOs Awaiting PM Action?**
+  **What are WOs Awaiting PM Action?**
 
-These are work orders that either:
+  These are work orders that either:
 
-- Have a status of **“Forwarded to PM”** or **“Waiting for PM”**,**“Needs Approval”**, **or**
-- Have **a status where we are awaiting the Property Manager’s input, approval, or response before we can proceed**, including work orders with open tasks assigned to the Property Manager.
+  - Have a status of **“Forwarded to PM”** or **“Waiting for PM”**,**“Needs Approval”**, **or**
+  - Have **a status where we are awaiting the Property Manager’s input, approval, or response before we can proceed**, including work orders with open tasks assigned to the Property Manager.
 
-**Note: For scenarios where a Non-emergency WO in Needs Approval status (due to initial intake) escalated to an emergency, please follow the guidelines outlined in**[How to: Properly Diagnose Emergency Situations](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2475851825/How+to+Properly+Diagnose+Emergency+Situations).
+  **Note: For scenarios where a Non-emergency WO in Needs Approval status (due to initial intake) escalated to an emergency, please follow the guidelines outlined in** [How to: Properly Diagnose Emergency Situations](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Properly-Diagnose-Emergency-Situations#how-to-properly-diagnose-emergency-situations).
 </Info>
 
 **Content**
@@ -27,99 +28,98 @@ These are work orders that either:
 ### **📤The WO was “Forwarded to PM” (also applicable to “Waiting for PM” status) because the resident(s) was unresponsive to our troubleshooting attempts.**
 
 1. If the resident contacts Latchel to follow up on the missed troubleshooting attempts:
-  1. Proceed to call back the resident to troubleshoot.
-    1. Attempt up to 3 times to get in contact.
-      1. New issues
-        1. If the resident responds, proceed to Step B.
-        2. If the resident remains unresponsive after multiple attempts, there is no need to create a task—leave the work order as is.
-      2. Recall WOs
-        1. Refer to [How to: Identify and Handle a Recall WO](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2643296257/How+to+Identify+and+Handle+a+Recall+WO)
-  2. Based on the call outcome, reassess the work order and proceed with the appropriate next steps:
-    1. To evaluate and reassess the situation during the return call, refer to the guidelines [How to: Properly Diagnose Emergency Situations](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2475851825/How+to+Properly+Diagnose+Emergency+Situations)
-    2. **📝** **NOTE:***Update the work order description based on the Intake Settings.*
-  3. **‼️IMPORTANT:** The step above is not applicable if the PM is on an after-hours subscription and it’s between 9:00 am-5:00 pm Monday through Friday Property time.
-    1. Refer to Informational: Latchel Customers & Customer Subscriptions
+   1. Proceed to call back the resident to troubleshoot.
+      1. Attempt up to 3 times to get in contact.
+         1. New issues
+            1. If the resident responds, proceed to Step B.
+            2. If the resident remains unresponsive after multiple attempts, there is no need to create a task—leave the work order as is.
+         2. Recall WOs
+            1. Refer to [How to: Identify and Handle a Recall WO](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2643296257/How+to+Identify+and+Handle+a+Recall+WO)
+   2. Based on the call outcome, reassess the work order and proceed with the appropriate next steps:
+      1. To evaluate and reassess the situation during the return call, refer to the guidelines [How to: Properly Diagnose Emergency Situations](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Properly-Diagnose-Emergency-Situations#how-to-properly-diagnose-emergency-situations)
+      2. **📝** **NOTE**: _Update the work order description based on the Intake Settings._
+      3. **‼️IMPORTANT:** The step above is not applicable if the PM is on an after-hours subscription and it’s between 9:00 am-5:00 pm Monday through Friday Property time.
+         1. Refer to Informational: [Latchel Customers & Customer Subscriptions](https://help.latchel.com/latchel-admin/Service-Operations/Latchel-Library/Informational-Latchel-Customers-Customer-Subscriptions#informational-latchel-customers-and-customer-subscriptions)
 
 ### Handling Other Scenarios of WOs Awaiting PM Action
 
 <Note>
-To determine whether the PM is actively managing a work order, follow the guidelines in [Service Ops: Guidelines in Determining Active PM Management on a Work Order](https://latchel.atlassian.net/wiki/spaces/OPS/pages/3805478920/Service+Ops+Guidelines+in+Determining+Active+PM+Management+on+a+Work+Order).
+  To determine whether the PM is actively managing a work order, follow the guidelines in [Service Ops: Guidelines in Determining Active PM Management on a Work Order](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Service-Ops-Guidelines-in-Determining-Active-PM-Management-on-a-Work-Order#service-ops-guidelines-in-determining-active-pm-management-on-a-work-order).
 </Note>
 
 #### **A. The service provider, resident or owner wants a general update/reached out about the WO.**
 
-*Applicable when someone reaches out for a status update **with no new information** or **changes in the resident’s situation**. In this case, simply **create a task for the PM**.*
+_Applicable when someone reaches out for a status update **with no new information** or **changes in the resident’s situation**. In this case, simply **create a task for the PM**._
 
-*For **PD/EH** situations, always review the*[*SOP **Key Reminders***](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2537652248/Job+Aid+PM+Outbound+Communication+for+Emergency+WOs)*. If any new information that will change the severity is provided, move to **Scenario B**.*
+_For **PD/EH** situations, always review the[SOP **Key Reminders**](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs#key-reminders). If any new information that will change the severity is provided, move to **Scenario B**._
 
 1. Review the WO and provide the customer with the status.
-  1. If the customer is looking for information that is not in Latchel
-    1. For example: how long until X happens? how long until my PM does Y?
-  2. Create a task for the PM with the customer’s question.
-    1. **‼️IMPORTANT:** If the customer is following up multiple times a day and there’s already a task created within the last 1 business day for the same request, do not create a new task. Limit to **one task per day** to ensure the PM is notified without being overwhelmed.
-    2. Subject: [Resident/Owner/Service Provider] reached to follow up on this WO
-    3. Who is this task about? Leave as is
-    4. Select a Date an Time: Leave as is
-    5. Assign to a User Group: PM user group
-    6. Assign to a User: Leave as is
-    7. Priority: Leave as is
-    8. Complete task on any job state change.
-    9. Description: The [resident/owner/service provider] reached out for [question or inquiry from the resident].
-      1. The sample below shows when a resident has reached out. Just select one of the three subjects based on who reached out.
-        1.
-          <Frame>
-            ![image-20251124-215842.png](/images/SVC-84.png)
-          </Frame>
-  3. Inform the customer that we’ll notify the property manager:
-    1. **Say something like:** *“The Work Order you've asked about is currently on [status of the work order] and [reason the WO was placed in waiting for PM]. We understand how important it is for you to stay informed. We've gone ahead and notified the appropriate team that you've followed up regarding [request from the customer]. In the meantime, is there anything else I can help with?"*
-      1. **💡TIPS**
-        1. “Let the customer know you’re looping in the appropriate team because [reason].”
-        2. “Do not mention that you are reaching out to the PM, unless the customer insists who you are reaching out to directly.”
-        3. “Reassure them you’ve already sent the appropriate team their request or update.”
-        4. “Express understanding that staying updated is important to them.”
-        5. “Invite them to share any other questions or needs.”
+   1. If the customer is looking for information that is not in Latchel
+      1. For example: how long until X happens? how long until my PM does Y?
+   2. Create a task for the PM with the customer’s question.
+      1. **‼️IMPORTANT:** If the customer is following up multiple times a day and there’s already a task created within the last 1 business day for the same request, do not create a new task. Limit to **one task per day** to ensure the PM is notified without being overwhelmed.
+      2. Subject: [Resident/Owner/Service Provider] reached to follow up on this WO
+      3. Who is this task about? Leave as is
+      4. Select a Date an Time: Leave as is
+      5. Assign to a User Group: PM user group
+      6. Assign to a User: Leave as is
+      7. Priority: Leave as is
+      8. Complete task on any job state change.
+      9. Description: The [resident/owner/service provider] reached out for [question or inquiry from the resident].
+         1. The sample below shows when a resident has reached out. Just select one of the three subjects based on who reached out.
+         2. ![Download 1](/images/download-1.png "Download 1")
+   3. Inform the customer that we’ll notify the property manager:
+      1. **Say something like:** _“The Work Order you've asked about is currently on [status of the work order] and [reason the WO was placed in waiting for PM]. We understand how important it is for you to stay informed. We've gone ahead and notified the appropriate team that you've followed up regarding [request from the customer]. In the meantime, is there anything else I can help with?"_
+         1. **💡TIPS**
+         2. “Let the customer know you’re looping in the appropriate team because [reason].”
+         3. “Do not mention that you are reaching out to the PM, unless the customer insists who you are reaching out to directly.”
+         4. “Reassure them you’ve already sent the appropriate team their request or update.”
+         5. “Express understanding that staying updated is important to them.”
+         6. “Invite them to share any other questions or needs.”
 
 #### **B. At any point of the WO, the severity of the issue changes—whether it escalates to an emergency (as per the PM settings) or is de-escalated based on new information shared with Latchel**
 
-1. Proceed to follow the steps described in [<u>Guidelines for Evaluating and Reassessing Work Order Information</u>](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2475851825/How+to+Properly+Diagnose+Emergency+Situations).
-  1. **If your next steps involves escalating/creating a task to the Property Manager, follow the below task guidelines:**
-    1. **Issue is Property Damaging or Extreme habitability or has escalated**
-      1. Subject: Issue was reported to get worse
-      2. Who is this task about? Leave as is
-      3. Select a Date an Time: Leave as is
-      4. Assign to a User Group: PM user group
-      5. Assign to a User: Leave as is
-      6. Priority: Leave as is
-      7. Complete task on any job state change.
-      8. Description: The [resident/SP/owner] reached out to inform that X issue got worse and could be considered an emergency as per your intake settings. Please let us know if you want Latchel to escalate to an emergency and handle? Or, if you would rather continue handling this issue directly? Thank you
-    2. Issue is **NOT**Property Damaging or Extreme Habitability or **nonemergency**:
-      1. Subject: Issue was reported to get worse
-      2. Who is this task about? Leave as is
-      3. Select a Date an Time: Leave as is
-      4. Assign to a User Group: PM user group
-      5. Assign to a User: Leave as is
-      6. Priority: Leave as is
-      7. Complete task on any job state change.
-      8. Description: The [resident/SP/owner] reached out to inform that X issue got worse and could be considered an emergency as per your intake settings. Please let us know if you want Latchel to escalate to an emergency and handle? Or, if you would rather continue handling this issue directly? Thank you
+1. Proceed to follow the steps described in [<u>Guidelines for Evaluating and Reassessing Work Order Information</u>](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Properly-Diagnose-Emergency-Situations#guidelines-for-evaluating-and-reassessing-work-order-information).
+   1. **If your next steps involves escalating/creating a task to the Property Manager, follow the below task guidelines:**
+      1. **Issue is Property Damaging or Extreme habitability or has escalated**
+         1. Subject: Issue was reported to get worse
+         2. Who is this task about? Leave as is
+         3. Select a Date an Time: Leave as is
+         4. Assign to a User Group: PM user group
+         5. Assign to a User: Leave as is
+         6. Priority: Leave as is
+         7. Complete task on any job state change.
+         8. Description: The [resident/SP/owner] reached out to inform that X issue got worse and could be considered an emergency as per your intake settings. Please let us know if you want Latchel to escalate to an emergency and handle? Or, if you would rather continue handling this issue directly? Thank you
+      2. Issue is **NOT** Property Damaging or Extreme Habitability or **nonemergency**:
+         1. Subject: Issue was reported to get worse
+         2. Who is this task about? Leave as is
+         3. Select a Date an Time: Leave as is
+         4. Assign to a User Group: PM user group
+         5. Assign to a User: Leave as is
+         6. Priority: Leave as is
+         7. Complete task on any job state change.
+         8. Description: The [resident/SP/owner] reached out to inform that X issue got worse and could be considered an emergency as per your intake settings. Please let us know if you want Latchel to escalate to an emergency and handle? Or, if you would rather continue handling this issue directly? Thank you
 
 #### C. Vendor Calls Back After Work Order Is Forwarded to PM
 
 1. If a previously unresponsive vendor calls back after the work order has been forwarded to the Property Manager, asking whether the job is still available:
-  1. **If the work order is already assigned:**
-    1. Inform the service provider that the work order has already been assigned.
-  2. **If the work order has not yet been assigned:****a. If there is evidence that the Property Manager is actively managing the work order:****b. If there is no evidence that the Property Manager is managing the work order:**
-    1. **Property-damaging or extreme habitability situations:**
-      1. Call the escalation contacts.
-      2. Follow the steps outlined in the [PM Outbound Communication Job Aid for Emergency WOs](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2537652248/Job+Aid+PM+Outbound+Communication+for+Emergency+WOs).
-        1. If escalation contacts are unresponsive, create a task for the Property Manager.
-    2. **Non-property-damaging or non-extreme habitability situations:**
-      1. Create a task for the Property Manager.
-    1. Proceed to assign the work order and secure an appointment with the service provider.
+   1. **If the work order is already assigned:**
+      1. Inform the service provider that the work order has already been assigned.
+   2. **If the work order has not yet been assigned:**
+      1. **If there is evidence that the Property Manager is actively managing the work order:**
+         1. **Property-damaging or extreme habitability situations:**
+            1. Call the escalation contacts.
+            2. Follow the steps outlined in the [PM Outbound Communication Job Aid for Emergency WOs](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs#job-aid-pm-outbound-communication-for-emergency-wos).
+               1. If escalation contacts are unresponsive, create a task for the Property Manager.
+         2. **Non-property-damaging or non-extreme habitability situations:**
+            1. Create a task for the Property Manager.
+      2. **If there is no evidence that the Property Manager is managing the work order:**
+         1. Proceed to assign the work order and secure an appointment with the service provider.
 
 #### D. Resident Non-Maintenance Inquiries
 
 1. A non-maintenance request would be a request that is not related to a Work Order.
-  1. Refer to [How to: Intake Non-Resident Caller Requests (Non-maintenance Requests)](https://latchel.atlassian.net/wiki/spaces/OPS/pages/908066817/How+to+Intake+Non+Resident+Requests+Non+maintenance+Requests+)
+2. Refer to [How to: Intake Non-Resident Caller Requests (Non-maintenance Requests)](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Intake-Non-Resident-Requests-Non-maintenance-Requests#how-to-handle-a-non-resident-caller)
 
 ## 🎯 When to Break This SOP
 
@@ -127,7 +127,7 @@ Break this SOP in the following situations:
 
 - The **PM has already provided specific instructions** on how to handle similar situations (e.g., always escalate certain types of issues or skip task creation for known delays). In such cases, follow the PM’s guidance instead.
 - The **resident’s request or behavior violates Latchel policies** (e.g., abusive behavior, illegal requests). Follow Latchel’s escalation and reporting protocol instead of proceeding with normal task creation or callbacks.
-- The **property is on an after-hours subscription** and the situation occurs **during business hours (9:00 AM–5:00 PM PT, M–F)** — do not follow this SOP; instead, defer to the PM per standard after-hours subscription guidance → Informational: Latchel Customers & Customer Subscriptions
+- The **property is on an after-hours subscription** and the situation occurs **during business hours (9:00 AM–5:00 PM PT, M–F)** — do not follow this SOP; instead, defer to the PM per standard after-hours subscription guidance → [Informational: Latchel Customers & Customer Subscriptions](https://help.latchel.com/latchel-admin/Service-Operations/Latchel-Library/Informational-Latchel-Customers-Customer-Subscriptions#informational-latchel-customers-and-customer-subscriptions)
 - The issue has already been **escalated via a different SOP** (e.g., emergency escalation protocols, special handling for high-risk properties).
 
 ---
@@ -136,4 +136,4 @@ Break this SOP in the following situations:
 
 Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work?
 
- 👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**
+👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**
