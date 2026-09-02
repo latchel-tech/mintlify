@@ -2706,14 +2706,24 @@
                       "latchel-admin/Latchel-People-Ops/onboarding-flow-communications"
                     ]
                   }
-                ]
+                ],
+                "icon": "people-roof",
+                "color": {
+                  "light": "#ff9b8a",
+                  "dark": "#ff9b8a"
+                }
               },
               {
                 "dropdown": "HR Documents",
                 "pages": [
                   "latchel-admin/HR-Documents/hr-documents-overview",
                   "latchel-admin/HR-Documents/Employee-Attrition-Announcement"
-                ]
+                ],
+                "icon": "file-doc",
+                "color": {
+                  "light": "#ff9b8a",
+                  "dark": "#ff9b8a"
+                }
               },
               {
                 "dropdown": "Latchel Library",
@@ -2822,7 +2832,12 @@
                       }
                     ]
                   }
-                ]
+                ],
+                "icon": "books",
+                "color": {
+                  "light": "#ff9b8a",
+                  "dark": "#ff9b8a"
+                }
               }
             ]
           }
