@@ -1,6 +1,7 @@
 ---
 title: "How to: Handle Emergency Work Orders"
-groups: ["latchel"]
+groups:
+  - "latchel"
 ---
 
 ## 🧠 What This Process Is Trying to Solve
@@ -14,13 +15,20 @@ groups: ["latchel"]
 
   Reminder– the Property Manager sees and reads the information that is input into this form:
 
+  <img
+    src="/images/ba3e4486-4f52-4f89-9f75-6fa0839bc14e.png"
+    alt="Ba3e4486 4f52 4f89 9f75 6fa0839bc14e"
+    title="Ba3e4486 4f52 4f89 9f75 6fa0839bc14e"
+    style={{ width:"26%" }}
+  />
+
   Be efficient and clear about what is going on and what has been done.
 </Note>
 
 <Note>
   ## 🎓**Training Content**
 
-  The contents of this page have been included in the \*\*Troubleshooting refresher \*\*Coassemble course.
+  The contents of this page have been included in the Troubleshooting refresher Coassemble course.
 </Note>
 
 # Content
@@ -29,92 +37,100 @@ groups: ["latchel"]
 
 ## **Step 1 - Troubleshooting and defining next steps**
 
-1. Assign the troubleshooter task to yourself: [https://latchel.atlassian.net/wiki/spaces/OPS/pages/2559639553](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2559639553)
+1. Assign the troubleshooter task to yourself: [How to: Work the Tasks Queue](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Work-the-Tasks-Queue#how-to-work-the-tasks-queue)
 2. Begin on the Existing Work Order Interface:
-3. **Confirm whether this WO is part of a project.**<br />Before you start troubleshooting or dispatching, check if the emergency WO is grouped in a **project** with other WOs (for example, multiple issues created from a single Harmonia intake).
-
-- Review all WOs in the project so you catch every emergency and avoid double‑dispatching.
-- If the WO is part of a Harmonia-created project, refer to [https://latchel.atlassian.net/wiki/spaces/OPS/pages/3945529346](https://latchel.atlassian.net/wiki/spaces/OPS/pages/3945529346) for the correct handling expectations.
-
-2. **📝** **NOTE**: There are some automations that allow Work Orders to be automatically assigned to a Service Provider by the time the troubleshooter gets to review the Work Order, in such instances, you will see a note on the Work Order similar to the screenshots below and the Work Order will no longer be in Troubleshooting state. When this is the case, no action is required from the Troubleshooter and you can just close your Troubleshooting task.
-
-<Frame>
-  ![image-20240522-233847.png](/images/SVC-679.png)
-</Frame>
-
-<Frame>
-  ![image-20240522-233922.png](/images/SVC-680.png)
-</Frame>
-
-1. Skip to Step 2. Closing the task
-2. Click “Action” and choose “Troubleshoot” (_see red box in the screenshot below_). 
-
-<Frame>
-  ![image-20251223-182820.png](/images/SVC-681.png)
-</Frame>
-
-2. Options for Troubleshooting Result outcomes will then appear. 
-
-<Frame>
-  ![image-20251223-182901.png](/images/SVC-682.png)
-</Frame>
-
-2. **Confirm you’ve completed the “How do I fulfill this mission?” review**.
-3. Before calling the resident or completing TS prompts, make sure you have already done the required review from the [**How to Properly Diagnose Emergency Situations SOP (How do I fulfill this mission?)**](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Properly-Diagnose-Emergency-Situations).
-4. Once the issue is confirmed (via resident, secondary resident, or WO details), classify severity per the PM's intake settings.
-5. **Call the resident** to troubleshoot, refer to [(TECH 101) How to: Make Outbound Calls Within the Latchel Console](https://latchel.atlassian.net/wiki/spaces/OPS/pages/757235750).
-6. **‼️IMPORTANT**<br />**You must attempt to call the resident within 20 minutes of the work order being created or escalated to emergency. This ensures we meet our service level agreement (SLA) and resident expectations.**
-7. If you cannot reach the resident on the first attempt, continue with the required follow-up call attempts as outlined below.
-8. If the call disconnects, call the customer back until you have obtained enough details to move the Work Order forward.
-9. **‼️IMPORTANT:** If the WO is for a\*\* common area\*\*, do not ask the resident to troubleshoot the issue itself — they can't fix a common-area problem. Instead, call the resident (or any other active resident in the unit) for two things:
-10. Access info — ask if they can grant entry themselves, or whether they know the entry code/instructions.
-11. Clarification — if the situation is ambiguous, use the Troubleshooter Question Bank to clarify the issue before deciding severity.
-12. Say something like: _“We received a maintenance request for a common area at your property — \[brief issue\]. \[Clarify anything ambiguous; see if they can verify the emergency.\] Can you confirm: do you have access to that area, or do you know the entry code/instructions?”_
-
-- If they don't have that information, do not ask them who to contact — escalate to the PM instead.
-
-4. To identify common area related work orders:
-5. The Work Order summary reads “This Work Order is for a common area, do not contact the resident”.
-6. The service provider or access instructions indicate that the issue is in a common area. (**Note**: If a resident's work order suggests the issue is in a common area (even if not labeled as such), you can confirm the location with the resident during troubleshooting, if they're available for a call, or by reviewing the work order details.)
-7. Proceed to use [Option 3- Can’t reach resident](https://latchel.atlassian.net/wiki/spaces/OPS/pages/edit-v2/759332893#Option-3--Can%E2%80%99t-reach-resident) instead to escalate to the property manager. The goal is to obtain permission to enter and access instructions to be able to dispatch a Service Provider or follow any other PM instructions.
-8. **Troubleshoot the Maintenance Request**
-9. **‼️VERY IMPORTANT** Troubleshoot the issue with the resident as far as they are willing to follow your instructions, don't force residents into doing troubleshooting steps that they may not feel comfortable doing.
-10. The following documents will explain how to assess an emergency situation and determine if emergency dispatch is required or if the emergency can be de-escalated. It is also important to check for any potential duplicates to avoid double dispatch of vendors and determine if there's potential for property damage.
-11. How to Diagnose Emergency Situations: [Job Aid: How to Properly Diagnose Emergency Situations](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Properly-Diagnose-Emergency-Situations)
-12. Refer to [Job Aid: Troubleshooter Question Bank](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-Troubleshooter-Question-Bank) for a guide on what kind of questions will help you to understand the situation.
-13. For definitions and examples of how Critical Notes, Pre‑Dispatch Instructions, and Emergency Escalation Contacts (EEC) affect emergency handling, see:<br />[https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-Critical-Pre-dispatch-Warranty-Special-Notes-Emergency-Escalation-Contacts](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-Critical-Pre-dispatch-Warranty-Special-Notes-Emergency-Escalation-Contacts)
-14. Determine if the Work Order is a duplicate: [(⛑EMERGENCY) How to: Handle Duplicate Work Orders](https://latchel.atlassian.net/wiki/spaces/OPS/pages/778174469)
-15. Determine if there's potential for property damage: [↔ Job Aid: Defining Property Damage](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-Property-Damage-and-Extreme-Habitability-Situations)
-16. If it’s a utility issue, refer to: [(Emergency) How to: Handle a Utility Issue](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Emergency-How-to-Handle-a-Utility-Issue)
-17. Latchel offers the capability to do Video Troubleshooting! Use this capability to get visual of the Work Order request.
-18. How to Use Video Calling Technology SOP: [(TECH 101) How to: Use Video Call for Troubleshooting](https://latchel.atlassian.net/wiki/spaces/OPS/pages/1058242752)
-19. How to Handle Video Calling SOP: [(⛑🏡SOP) How to: Handle Video Calls for Emergency Troubleshooting](https://latchel.atlassian.net/wiki/spaces/OPS/pages/1065779373)
-20. **📝** **NOTE**: We can’t force residents to troubleshoot, therefore, if the resident is uncooperative and refuses to troubleshoot:
-21. Select “Troubleshooting did not resolve the issue”
-22. Note on the WO that the resident \[refused/ couldn’t complete/didn’t feel comfortable /etc\] to troubleshoot the issue.
-23. Proceed to [Option 2 - "No" (Troubleshooting did NOT resolve the issue)](#) and follow the system prompts accordingly.
-24. **📝** **NOTE:** Residents are prompted to rate the troubleshooting experience!
-25. After you complete the troubleshooting phone call with the resident, the resident is automatically sent a text message to rate the troubleshooting service. Residents can rate your services on a scale from 1 to 5.
-26. Troubleshooting agents should feel free to inform the resident that they will be receiving that message.
-27. 🗨️ **Say something like**: \*“In a few minutes, you’ll receive a text message with a link to a short survey to rate our call. We’d appreciate any feedback about your experience. Thank you, and have a great rest of your day!” \*
-28. **Ask the Resident if the Issue Can Wait (Non-PD/EH Emergencies Only)**
-29. ⚠️ \*This step applies ONLY to non-Property Damaging and non-Extreme Habitability emergencies **and only for calls received between 5:00 PM and 9:00 AM**. For true PD or EH emergencies, skip this step and proceed with standard immediate dispatch flow, \*
-30. After completing troubleshooting with the resident, and before escalating to pre-dispatch contacts or proceeding with dispatch, proactively ask the resident whether the issue can wait: 🗨️ _"Based on what you've described, this isn't something that poses an immediate safety risk. Would you be comfortable waiting until \[tomorrow morning / next available time\] for a service provider, or would you prefer we try to get someone out tonight?"_
-31. **If resident agrees to wait** → Select "Work order does not need immediate dispatch" and document the resident's agreement in notes (e.g., "Resident confirmed the issue can wait until \[time\]. Dispatch deferred per resident preference.").
-32. **If resident needs service tonight** → Proceed with standard emergency dispatch flow.
-33. **Do NOT ask this question for PD or EH emergencies** — dispatch immediately per standard flow.
-34. \*\*Decide the Job Category \*\*- Is the maintenance request an Emergency or a Non-Emergency?
-35. If it's been determined to be an **Emergency**, you must:
-36. Confirm that the Resident or someone over the age of 18 years of age will be home to let Service Provider in. 
-37. Confirm attempting to dispatch tonight (some will want to wait until next day depending on emergency and time of day they place call).
-38. If it's been determined to be a **Non-Emergency**,
-39. Let them know they will be contacted for further repair. You can do this by following the script below:
-40. \*\*Verify that the WO title corresponds to the actual issue occurring. \*\*
-41. Sometimes the title of the WO is created via automation which may lead to an inaccurate title. If the current title doesn't correspond to the issue reported on the WO, proceed to update it to provide a brief description of the actual problem. This helps other users quickly understand what the issue is about.
-42. **Then. based on your conversation with your customer, choose one of the following options**:
-43. [Option 1 - "Yes" (Troubleshooting resolved the issue)](#)
-44. [Option 2 - "No" (Troubleshooting did NOT resolve the issue)](#)
-45. [Option 3 - Can't reach resident](#)
+   1. **Confirm whether this WO is part of a project.**<br />Before you start troubleshooting or dispatching, check if the emergency WO is grouped in a **project** with other WOs (for example, multiple issues created from a single Harmonia intake).
+   2. Review all WOs in the project so you catch every emergency and avoid double‑dispatching.
+   3. If the WO is part of a Harmonia-created project, refer to [Service Ops: Handling Multiple Work Orders Generated by Harmonia Intake](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Service-Ops-Handling-Multiple-Work-Orders-Generated-by-Harmonia-Intake#service-ops-handling-multiple-work-orders-generated-by-harmonia-intake) for the correct handling expectations.
+   4. **📝** **NOTE**: There are some automations that allow Work Orders to be automatically assigned to a Service Provider by the time the troubleshooter gets to review the Work Order, in such instances, you will see a note on the Work Order similar to the screenshots below and the Work Order will no longer be in Troubleshooting state. When this is the case, no action is required from the Troubleshooter and you can just close your Troubleshooting task.
+      1. <img
+           src="/images/download-(6).png"
+           alt="Download (6)"
+           title="Download (6)"
+           style={{ width:"68%" }}
+         />
+      2. <img
+           src="/images/download-(7).png"
+           alt="Download (7)"
+           title="Download (7)"
+           style={{ width:"67%" }}
+         />
+      3. Skip to Step 2. Closing the task
+   5. Click “Action” and choose “Troubleshoot” (_see red box in the screenshot below_). 
+      1. <img
+           src="/images/b232cae0-8aea-476a-a67a-81575a53b6be.png"
+           alt="B232cae0 8aea 476a A67a 81575a53b6be"
+           title="B232cae0 8aea 476a A67a 81575a53b6be"
+           style={{ width:"63%" }}
+         />
+      2. Options for Troubleshooting Result outcomes will then appear. 
+         1. <img
+              src="/images/b306cec3-5815-4b73-9c46-94fefc8ed59b.png"
+              alt="B306cec3 5815 4b73 9c46 94fefc8ed59b"
+              title="B306cec3 5815 4b73 9c46 94fefc8ed59b"
+              style={{ width:"68%" }}
+            />
+   6. **Confirm you’ve completed the “How do I fulfill this mission?” review**.
+      1. Before calling the resident or completing TS prompts, make sure you have already done the required review from the [**How to Properly Diagnose Emergency Situations SOP (How do I fulfill this mission?)**](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Properly-Diagnose-Emergency-Situations).
+   7. Once the issue is confirmed (via resident, secondary resident, or WO details), classify severity per the PM's intake settings.
+   8. **Complete Intake Transcript** — Open the full intake conversation in the Latchel Console or Service Ops Assistant plug-in. Do not rely solely on the work order description or summary. The full transcript may contain details about the severity, resident statements, or prior troubleshooting attempts that are not captured in the summary.
+   9. **Lucia Transcript (if applicable)** — If the work order was initiated or transferred by Lucia, review the complete Lucia conversation before contacting the resident or dispatching a service provider. The Lucia transcript may reveal context, resident-reported details, or responses to troubleshooting prompts that affect how the emergency should be classified and handled.
+3. **Call the resident** to troubleshoot. Refer to [(TECH 101) How to: Make Outbound Calls Within the Latchel Console](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/TECH-101-How-to-Make-Outbound-Calls-Within-the-Latchel-Console#tech-101-how-to-make-outbound-calls-within-the-latchel-console).
+   1. **‼️IMPORTANT**<br />**You must attempt to call the resident within 20 minutes of the work order being created or escalated to emergency. This ensures we meet our service level agreement (SLA) and resident expectations.**
+   2. If you cannot reach the resident on the first attempt, continue with the required follow-up call attempts as outlined below.
+   3. If the call disconnects, call the customer back until you have obtained enough details to move the Work Order forward.
+4. **‼️IMPORTANT:** If the WO is for a **common area**, do not ask the resident to troubleshoot the issue itself — they can't fix a common-area problem. Instead, call the resident (or any other active resident in the unit) for two things:
+   1. Access info — ask if they can grant entry themselves, or whether they know the entry code/instructions.
+   2. Clarification — if the situation is ambiguous, use the Troubleshooter Question Bank to clarify the issue before deciding severity.
+   3. Say something like: _“We received a maintenance request for a common area at your property — (brief issue). (Clarify anything ambiguous; see if they can verify the emergency.) Can you confirm: do you have access to that area, or do you know the entry code/instructions?”_
+      1. If they don't have that information, do not ask them who to contact — escalate to the PM instead.
+   4. To identify common area related work orders:
+      1. The Work Order summary reads “This Work Order is for a common area, do not contact the resident”.
+      2. The service provider or access instructions indicate that the issue is in a common area. (**Note**: If a resident's work order suggests the issue is in a common area (even if not labeled as such), you can confirm the location with the resident during troubleshooting, if they're available for a call, or by reviewing the work order details.)
+      3. Follow the standard resident-contact process (see Steps 5–12 above/below) — call the resident or any other active resident in the unit for access info and clarification. Only escalate to the Property Manager if unreachable after all required attempts, or if no access information is available (see 'Updated Routing Logic' table).
+5. **Troubleshoot the Maintenance Request**
+   1. **‼️VERY IMPORTANT** Troubleshoot the issue with the resident as far as they are willing to follow your instructions, don't force residents into doing troubleshooting steps that they may not feel comfortable doing.
+   2. The following documents will explain how to assess an emergency situation and determine if emergency dispatch is required or if the emergency can be de-escalated. It is also important to check for any potential duplicates to avoid double dispatch of vendors and determine if there's potential for property damage.
+   3. How to Diagnose Emergency Situations: [Job Aid: How to Properly Diagnose Emergency Situations](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Properly-Diagnose-Emergency-Situations)
+   4. Refer to [Job Aid: Troubleshooter Question Bank](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-Troubleshooter-Question-Bank) for a guide on what kind of questions will help you to understand the situation.
+   5. For definitions and examples of how Critical Notes, Pre‑Dispatch Instructions, and Emergency Escalation Contacts (EEC) affect emergency handling, see:<br />[Job Aid: Critical, Pre-dispatch, Warranty, Special Notes & Emergency Escalation Contacts](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-Critical-Pre-dispatch-Warranty-Special-Notes-Emergency-Escalation-Contacts)
+   6. Determine if the Work Order is a duplicate: [(⛑EMERGENCY) How to: Handle Duplicate Work Orders](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/EMERGENCY-How-to-Handle-Duplicate-Work-Orders#emergency-how-to-handle-duplicate-work-orders)
+   7. Determine if there's potential for property damage: See [How to: Identify Property Damage and Extreme Habitability Situations](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-Property-Damage-and-Extreme-Habitability-Situations)
+   8. If it’s a utility issue, refer to: [(Emergency) How to: Handle a Utility Issue](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Emergency-How-to-Handle-a-Utility-Issue)
+   9. Latchel offers the capability to do Video Troubleshooting! Use this capability to get visual of the Work Order request.
+      1. Refer to  [(TECH 101) How to: Use Video Call for Troubleshooting](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Use-Video-Call-for-Troubleshooting#how-to-use-video-call-for-troubleshooting) and [(⛑🏡SOP) How to: Handle Video Calls for Emergency Troubleshooting](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Video-Calls-for-Emergency-Troubleshooting#how-to-handle-video-calls-for-emergency-troubleshooting)
+6. **📝** **NOTE**: We can’t force residents to troubleshoot, therefore, if the resident is uncooperative and refuses to troubleshoot:
+   1. Select “Troubleshooting did not resolve the issue”
+   2. Note on the WO that the resident [refused/ couldn’t complete/didn’t feel comfortable /etc] to troubleshoot the issue.
+   3. Proceed to [Option 2 - "No" (Troubleshooting did NOT resolve the issue)](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Emergency-Work-Orders#option-2-“no”-troubleshooting-did-not-resolve-the-issue) and follow the system prompts accordingly.
+7. **📝** **NOTE:** Residents are prompted to rate the troubleshooting experience!
+   1. After you complete the troubleshooting phone call with the resident, the resident is automatically sent a text message to rate the troubleshooting service. Residents can rate your services on a scale from 1 to 5.
+   2. Troubleshooting agents should feel free to inform the resident that they will be receiving that message.
+   3. 🗨️ **Say something like**: “In a few minutes, you’ll receive a text message with a link to a short survey to rate our call. We’d appreciate any feedback about your experience. Thank you, and have a great rest of your day!”
+8. **Ask the Resident if the Issue Can Wait (Non-PD/EH Emergencies Only)**
+   1. ⚠️ _This step applies ONLY to non-Property Damaging and non-Extreme Habitability emergencies **and only for calls received between 5:00 PM and 9:00 AM**. For true PD or EH emergencies, skip this step and proceed with standard immediate dispatch flow._
+   2. After completing troubleshooting with the resident, and before escalating to pre-dispatch contacts or proceeding with dispatch, proactively ask the resident whether the issue can wait: 
+      1. 🗨️ _"Based on what you've described, this isn't something that poses an immediate safety risk. Would you be comfortable waiting until [tomorrow morning / next available time] for a service provider, or would you prefer we try to get someone out tonight?"_
+      2. **If resident agrees to wait** → Select "Work order does not need immediate dispatch" and document the resident's agreement in notes (e.g., "Resident confirmed the issue can wait until [time]. Dispatch deferred per resident preference.").
+      3. **If resident needs service tonight** → Proceed with standard emergency dispatch flow.
+      4. **Do NOT ask this question for PD or EH emergencies** — dispatch immediately per standard flow.
+9. **Decide the Job Category** - Is the maintenance request an Emergency or a Non-Emergency?
+   1. If it's been determined to be an **Emergency**, you must:
+      1. Confirm that the Resident or someone over the age of 18 years of age will be home to let Service Provider in. 
+      2. Confirm attempting to dispatch tonight (some will want to wait until next day depending on emergency and time of day they place call).
+   2. If it's been determined to be a **Non-Emergency**,
+      1. Let them know they will be contacted for further repair. You can do this by following the script below:
+      2. <Check>
+           ### **Additional Contact Script**
+           Ok, thank you for that information. I am going to complete these notes in your work order and send this to the appropriate team **as soon as we get off the phone.** You will also receive a system generated message stating, “We will contact you within 24 hours. That is us sending your work order to the appropriate team for instruction to dispatch."  
+           **Add this if applicable**: If this situation gets worse and you start to experience a situation that you're unable to control (flooding, no power at all, uncontrollable leak), please contact the emergency line and we can go from there. At this time, I am going to make notes in your work order and when we get off the phone I am going to send this information to your property management directly. 
+         </Check>
+10. **Verify that the WO title corresponds to the actual issue occurring.**
+    1. Sometimes the title of the WO is created via automation which may lead to an inaccurate title. If the current title doesn't correspond to the issue reported on the WO, proceed to update it to provide a brief description of the actual problem. This helps other users quickly understand what the issue is about.
+11. **Then. based on your conversation with your customer, choose one of the following options**:
+    1. [Option 1 - "Yes" (Troubleshooting resolved the issue)](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Emergency-Work-Orders#option-1-“yes”-troubleshooting-resolved-the-issue)
+    2. [Option 2 - "No" (Troubleshooting did NOT resolve the issue)](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Emergency-Work-Orders#option-2-“no”-troubleshooting-did-not-resolve-the-issue)
+    3. [Option 3 - Can't reach resident](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Emergency-Work-Orders#option-3-can’t-reach-resident)
 
 <Note>
   A work order may be created with the property listed as “**Vacant**” in this event the resident widget may still have additional residents. Troubleshooters should review this area of the work order as well as check for additional residents on the property page before proceeding. If there are residents in either of these areas the troubleshooter should treat them as though they are the resident who called in the work order. If there are none, proceed directly to Option 3 “could not reach resident” and follow the procedures to escalate to the Property Manager.
@@ -122,197 +138,194 @@ groups: ["latchel"]
   If the Property Manager submitted the work order and it includes complete information (such as access instructions and service provider assignment), proceed with the next applicable steps. However, if a Property Manager–submitted work order for a vacant property is missing required information, escalate it back to the Property Manager for clarification before proceeding. Refer to **Option 3: “Could Not Reach Resident”** for the appropriate workflow.
 </Note>
 
-7. \*\*Assess for any severe damage escalations. \*\*Severe damage escalation refers to situations where immediate action is necessary due to safety risks, structural damage, or issues that could worsen significantly if not addressed promptly.
-8. Check the **work order summary details** for any triggers.
-9. Confirm with the resident by asking about unsafe conditions or worsening issues.
-10. Follow the **Severe Damage Escalation Guidelines** if triggers are identified. Refer to [https://latchel.atlassian.net/wiki/spaces/OPS/pages/edit-v2/2537652248#Severe-Damage-Escalation](https://latchel.atlassian.net/wiki/spaces/OPS/pages/edit-v2/2537652248#Severe-Damage-Escalation)
+7. **Assess for any severe damage escalations.** Severe damage escalation refers to situations where immediate action is necessary due to safety risks, structural damage, or issues that could worsen significantly if not addressed promptly.
+   1. Check the **work order summary details** for any triggers.
+   2. Confirm with the resident by asking about unsafe conditions or worsening issues.
+   3. Follow the **Severe Damage Escalation Guidelines** if triggers are identified. Refer to [Job Aid: PM Outbound Communication for Emergency WOs](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs#job-aid-pm-outbound-communication-for-emergency-wos)
 
 ### **Option 1 - "Yes" (Troubleshooting resolved the issue)**
 
 1. Click "Action" primary action button on the Existing Work Order Interface 
 2. **"Troubleshooting resolved issue"** - Excellent! Click this option if you solved the issue of the resident over the phone. It's a huge goal of ours to help solve problems on-the-spot- great job.
-3. Options for what to do as the "Troubleshooting Result" will appear.
-
-<Frame>
-  ![image-20251223-183819.png](/images/SVC-683.png)
-</Frame>
-
-1. According to the outcome with the customer, **_which option best describes what to do now, as a result of resolving the issue through troubleshooting?_**
-2. **"Keep work order open"** - Click this option if an additional action is required to fully resolve the Work Order (i.e. need to make an additional small purchase to try to resolve the issue, like batteries, air filters, light bulbs)
-3. Fill in the information from your troubleshooting session with the resident.
-
-<Frame>
-  ![image-20251223-183946.png](/images/SVC-684.png)
-</Frame>
-
-2. Click "Submit"
-3. We are done with this Work Order (for now)
-4. Proceed to **Step 2. Closing the task**
-5. **"Close work order"** - Click this option if nothing else needs to be done with this Work Order. 
-6. Fill in the information from your troubleshooting session with the resident.
-7. Note: The Work Order will move into "Completed" status and the Work Order priority will be downgraded to normal. 
-
-<Frame>
-  ![image-20251223-184021.png](/images/SVC-685.png)
-</Frame>
-
-2. Click "Submit"
-3. We are done with this Work Order.
-4. Proceed to **Step 2. Closing the task**
+   1. Options for what to do as the "Troubleshooting Result" will appear.
+   2. <img
+        src="/images/download-(8).png"
+        alt="Download (8)"
+        title="Download (8)"
+        style={{ width:"54%" }}
+      />
+   3. According to the outcome with the customer, **_which option best describes what to do now, as a result of resolving the issue through troubleshooting?_**
+      1. **"Keep work order open"** - Click this option if an additional action is required to fully resolve the Work Order (i.e. need to make an additional small purchase to try to resolve the issue, like batteries, air filters, light bulbs)
+         1. Fill in the information from your troubleshooting session with the resident.
+         2. <img
+              src="/images/download-(9).png"
+              alt="Download (9)"
+              title="Download (9)"
+              style={{ width:"47%" }}
+            />
+         3. Click "Submit"
+         4. We are done with this Work Order (for now)
+         5. Proceed to **Step 2. Closing the task**
+      2. **"Close work order"** - Click this option if nothing else needs to be done with this Work Order. 
+         1. Fill in the information from your troubleshooting session with the resident.
+         2. Note: The Work Order will move into "Completed" status and the Work Order priority will be downgraded to normal. 
+         3. Click "Submit"
+         4. We are done with this Work Order.
+         5. Proceed to **Step 2. Closing the task**
 
 ### **Option 2 - "No" (Troubleshooting did NOT resolve the issue)**
 
 1. **"No"** - Click this option if you and the resident have tried troubleshooting, but it did not work.
-2. Next you will be asked if the current Skill is correct for the Work Order, given the result of the troubleshooting call.
-
-<Frame>
-  ![image-20251223-184251.png](/images/SVC-686.png)
-</Frame>
-
-2. In order to determine if the Skill is correct, refer to: [https://latchel.atlassian.net/wiki/spaces/OPS/pages/2690088963](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2690088963).
-3. Once you have answered all the questions, you will determine the severity of the Work Order based on the PM’s Intake settings and there will be five (5) main outcomes:
-4. **Needs PM Approval, Severity: Normal & Severity: Urgent**
-5. We are done with this Work Order.
-6. Proceed to **Step 2. Closing the task**
-7. **Severity: Emergency**
-8. Proceed to **Step c: "How urgently does this work order need a Service Provider dispatched?"**
-9. **Resident Responsible**
-10. Proceed to **Step 2. Closing the task**
-11. Refer to [https://latchel.atlassian.net/wiki/spaces/OPS/pages/2748317710](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2748317710)
-12. **"How urgently does this work order need a Service Provider dispatched?" will appear.**
-
-<Frame>
-  ![image-20251223-185147.png](/images/SVC-687.png)
-</Frame>
-
+   1. Next you will be asked if the current Skill is correct for the Work Order, given the result of the troubleshooting call.
+      1. <img
+           src="/images/download-(11).png"
+           alt="Download (11)"
+           title="Download (11)"
+           style={{ width:"59%" }}
+         />
+      2. In order to determine if the Skill is correct, refer to: [How to: Choose a Skill](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Choose-a-Skill#how-to-choose-a-skill).
+2. Once you have answered all the questions, you will determine the severity of the Work Order based on the PM’s Intake settings and there will be five (5) main outcomes:
+   1. **Needs PM Approval, Severity: Normal & Severity: Urgent**
+      1. We are done with this Work Order.
+      2. Proceed to **Step 2. Closing the task**
+   2. **Severity: Emergency**
+      1. Proceed to **Step c: "How urgently does this work order need a Service Provider dispatched?"**
+   3. **Resident Responsible**
+      1. Proceed to **Step 2. Closing the task**
+      2. Refer to [How to: Handle Resident Responsible WOs](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Resident-Responsible-WOs#how-to-handle-resident-responsible-wos)
+3. **"How urgently does this work order need a Service Provider dispatched?" will appear.**
+   1. <img
+        src="/images/download-(12).png"
+        alt="Download (12)"
+        title="Download (12)"
+        style={{ width:"54%" }}
+      />
 4. Choose one of the 3 options below that best describes your experience:
-5. **Emergency timing vs. emergency rates and budgets**
-6. When you confirm an appointment for an emergency work order, remember that **emergency pricing and higher emergency budgets are intended for same‑day or within 24 hours appointments**.
-7. If dispatch is **deferred and the appointment is scheduled more than 24 hours out** (for example, due to resident availability or Service Provider capacity), the visit should be treated as a **standard (non‑emergency)** appointment for rates and soft budget.
-8. When speaking with the Service Provider, follow the guidelines outlined in [**How to: Set expectations with Service Providers when dispatching**](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2600337430)<br />to clearly set expectations that **non‑emergency rates and budgets apply** when the appointment is more than 24 hours out.
-9. **"Work order needs immediate dispatch"** - Click this option if the emergency request DOES meet the thresholds in for immediate dispatch. 
-10. Fill in the information from your troubleshooting session with the resident.
-11. Note: The Work Order will be moved to "Finding Service Provider" status and dispatching will begin immediately.
-
-<Frame>
-  ![image-20251223-190029.png](/images/SVC-688.png)
-</Frame>
-
-2. Click "Submit"
-3. A **Pre‑Dispatch Instructions** box from the Property Manager _may_ pop‑up.
-4. **‼️VERY IMPORTANT!** Remember to ALWAYS utilize the \*\*Automated dispatching of Preferred Service Providers using the Auto-Assignment option when applicable. \*\*On June 7, 2022, Latchel launched Preferred Service Provider Auto Assign for Emergency Work Orders to provide 2 key benefits:
-5. Get a Service Provider assigned more quickly, by broadcasting work orders to multiple Service Providers automatically, and
-6. Reduce time spent by troubleshooters reaching out to Service Providers.
-7. Questions? Please check out the [**Service Provider Auto-Assign on Emergency Work Orders - FAQs**](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2547548257)!<br />More details regarding the automated dispatching of preferred service providers can be found [here](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/EMERGENCY-How-to-Assign-a-Preferred-Latchel-Network-Service-Provider)
-8. Proceed with dispatching a Service Provider for this emergency.
-9. **📝 NOTE – Preferred Service Providers (Emergencies Only)**
-10. If the work order has **Preferred Service Providers listed**, follow the **Standardized Outreach Attempts to Preferred Service Providers** before moving on to LCN or PM escalation.
-11. Refer to Step 4 under “**(EMERGENCY) Rules for Calling the Service Provider**” of this [SOP](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/EMERGENCY-How-to-Assign-a-Preferred-Latchel-Network-Service-Provider) to review the guidelines.
-12. **📝 NOTE – Resident Availability and Entry Permission**
-13. In case the resident doesn't have availability within the dispatch timeframe \*\*and \*\*permission to enter was not granted, proceed to **"PM Input needed before dispatch."**
-14. If the issue **is** property-damaging or extreme habitability, an appointment should be scheduled for that same day.
-15. While manually dispatching a work order and the **auto-assign process** are running for Preferred Service Providers, please refer to [https://latchel.atlassian.net/wiki/spaces/OPS/pages/2547548257when](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2547548257when) a job is accepted via public screens and conflicts with an earlier appointment.
-16. If the issue \*\*is not \*\*property damaging or extreme habitability, an appointment should be scheduled for that same day or the next day.
-17. If the issue is reported after 5 PM property time, troubleshooters must first attempt to dispatch a Service Provider.<br />:warning: **IMPORTANT:** The step below does **not** apply if the PM is on an **After-Hours Subscription** and the work order was received **after hours from Sunday to Thursday**. If the PM is on an\*\* After-Hours Subscription\*\* and **no service provider accepted the job on the advised days**, please proceed with **forwarding the work order to the PM**. The steps below only apply if the work order was received on **Friday or Saturday for an After-Hours PM**.
-18. If the troubleshooter is unable to dispatch, update the work order status to ‘Finding Service Provider’. Then, create a follow-up task for the next day to retry dispatching in the morning.
-19. Subject Line: _Dispatching Required for this Emergency_
-20. Task Subject: _Select the Resident_
-21. Due: _Schedule the task for 9 AM current property time._
-22. User Group: _Troubleshooter_
-23. Priority: _Highest_
-24. Set the task to “_Never complete on any job state change_”
-25. Description: _An initial attempt was made to dispatch a Service Provider, but it was unsuccessful. Please try sourcing a Service Provider again in the morning. If the second attempt is also unsuccessful, escalate the issue to the Operations Support Specialists for further assistance._
-26. If the attempt to source a Service Provider is unsuccessful the next day, the Troubleshooting team member should escalate the issue to the Operations Support Specialists. (refer to [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-Between-Teams](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-Between-Teams))
-27. **Operations Support Specialists**: Upon receiving the escalation, move the work order status to ‘Waiting for PM’ for further handling.
-28. Refer to [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/EMERGENCY-How-to-Assign-a-Preferred-Latchel-Network-Service-Provider](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/EMERGENCY-How-to-Assign-a-Preferred-Latchel-Network-Service-Provider).
-29. We are done with this Work Order.
-30. Proceed to **Step 2. Closing the task**
-31. \*\*"Work order does not need immediate dispatch" \*\*- Select this option if troubleshooting did not resolve the issue but the situation qualifies as an emergency. Dispatch can be deferred only if the resident has no availability or **the resident was asked during the troubleshooting call (see Step 1.5) and explicitly agreed** to delay the dispatch until the following morning. This applies to same-day requests received before 9:00 AM. This option applies when the emergency's severity is mild enough to wait assign a Service Provider.
-32. This option should only be used between 5:00pm to 9:00am. Any eligible same-day work order received before 9:00 AM will be automatically deferred at 9:00 AM.
-33. The only exceptions to this rule is when the WO falls under the scenario outlined in [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Emergency-How-to-Handle-a-Utility-Issue](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Emergency-How-to-Handle-a-Utility-Issue).
-34. If the issue is property damaging or an extreme habitability, this option should not be used.
-35. Refer to [↔ Job Aid: Defining Property Damage](#)
-36. If the property is under a PM subscription with After Hours service, ensure proper expectations are communicated to the resident.
-37. _"Hi \[Resident Name\]! We’ve updated your work order accordingly and your request will be handled by the appropriate team moving forward. If the issue changes or worsens, feel free to contact us, and we will be happy to assist."_
-38. Fill in the information from your troubleshooting session with the resident.
-39. Note: Dispatching will be deferred until the following morning at 9:00am (the status will become "Finding Service Provider" status because a Service Provider will be assigned by a troubleshooter agent who is on shift at 9am of the property)
-
-<Frame>
-  ![image-20251223-190614.png](/images/SVC-689.png)
-</Frame>
-
-6. Click "Submit"
-7. We are done with this Work Order (for now).
-8. Proceed to **Step 2. Closing the task**
-9. \*\*"PM Input needed before dispatch" \*\*
-10. This option is applicable for:
-11. 911 Emergencies
-12. Learn more about handling 911 situations [here](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-911-Severity-Type-Work-Orders).
-13. Validate Unclear Situations for a Property Damaging or Extreme Habitability Issue
-14. Unclear situations are ones for which we need the Escalation Contacts’ input to handle a property damaging or extreme habitability issue. This means **_the only person who can answer the question blocking us from moving the WO forward is the PM_**. Some examples include:
-15. There is a leak coming from a different unit and we need to confirm if that unit is part of the PM company.
-16. The resident has no water and doesn’t know which utility company they have because it’s included in their rent.
-17. Vehicle or Driveway Blocked by Another Vehicle - another vehicle is parked in one of their assigned parking spaces, blocking their access and use of the spot. (Only applies if a Property Management setting exists for “Vehicle or Driveway Blocked by Another Vehicle.” Otherwise, it is not a maintenance request and residents must contact their Property Manager directly.)
-18. Access information is needed to proceed with dispatch — this applies to common area lockouts where building entry authorization is required, or to individual tenant lockouts **where the access method itself is the issue** (e.g., a newly issued code that is not working, a changed lockbox combination). **This does not apply to lockouts caused by resident error or negligence** (e.g., lost keys, forgotten code) — those are not escalated to the PM.
-19. A resident answered the call but had to hang up before providing further details, or they stated they were not at home and unable to offer additional information about the issue.
-20. The resident does not have availability within the dispatch timeframe **and** permission to enter was not granted — regardless of whether the issue is PD/EH or non-PD/EH.
-21. You will be asked if there is a potential property damage or extreme habitability issue.
-
-<Frame>
-  ![image-20251223-190820.png](/images/SVC-690.png)
-</Frame>
-
-2. If **Yes**, the "Who Ya Gonna Call" AI suggestion will now appear at this point, showing the recommended contact and order based on the scenario and time. The original EEC list is still shown below for reference
-3. Follow instructions and scripting in Scenario 2 of [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs)
-4. Take further instructions from the PM to take care of the Emergency Work Order.
-
-- **If the Property Manager was successfully contacted, but wants Latchel to dispatch a vendor:**
-  - Go "← Back". Do **NOT** click "Successful contact".
-    <Frame>
-      ![image-20260604-014743.png](/images/SVC-691.png)
-    </Frame>
-  - Make sure you are writing your notes in the work order "notes" 
-    1. See: [↔ How to: Write Effective Notes](https://latchel.atlassian.net/wiki/spaces/OM/pages/763363368)
-  - Proceed to follow the steps for **"Work order needs immediate dispatch" detailed above.**
-- **If the property manager states they will take over the work order and nothing further is needed from Latchel:**
-  1. Click "Successful contact"
-  <Frame>
-    ![image-20251223-192527.png](/images/SVC-692.png)
-  </Frame>
-  2. Call to update the resident about your actions with the Work Order and Service Provider.
-- We are done with this Work Order.
-- Proceed to **Step 2. Closing the task**
-
-3. \*\*If the property manager does not answer, leave a voicemail and send SMS using scripting in Scenario 2 of \*\*[https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs) .
-4. If there are multiple contacts, call the second contact listed. Repeat above described sequence.
-5. If nobody on the list answers, click "Could not reach escalation contacts"
-
-<Frame>
-  ![image-20251223-192715.png](/images/SVC-693.png)
-</Frame>
-
-1. Fill in information to send a message to the Property Manager
-
-<Frame>
-  ![image-20251223-192812.png](/images/SVC-694.png)
-</Frame>
-
-2. Click "Submit"
-3. Call to update the resident about your actions with the Work Order and Service Provider
-4. We are done with this Work Order.
-5. Proceed to **Step 2. Closing the task**
-6. If there is no potential for property damage, **Click "No".**
-
-- Fill in the information summarizing your action: (Why did you escalate this?) (What are the recommended next steps?).
-- Click "Submit". Submitting moves the Work Order to "Waiting for PM" status.
-- We are done with this Work Order.
-  1. Proceed to **Step 2. Closing the task.**
+   1. **Remember: Emergency timing vs. emergency rates and budgets**
+      1. When you confirm an appointment for an emergency work order, remember that **emergency pricing and higher emergency budgets are intended for same‑day or within 24 hours appointments**.
+      2. If dispatch is **deferred and the appointment is scheduled more than 24 hours out** (for example, due to resident availability or Service Provider capacity), the visit should be treated as a **standard (non‑emergency)** appointment for rates and soft budget.
+      3. When speaking with the Service Provider, follow the guidelines outlined in [**How to: Set expectations with Service Providers when dispatching**](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Set-expectations-with-Service-Providers-when-dispatching#how-to-set-expectations-with-service-providers-when-dispatching)<br />to clearly set expectations that **non‑emergency rates and budgets apply** when the appointment is more than 24 hours out.
+   2. **"Work order needs immediate dispatch"** - Click this option if the emergency request DOES meet the thresholds in for immediate dispatch. 
+      1. Fill in the information from your troubleshooting session with the resident.
+         1. Note: The Work Order will be moved to "Finding Service Provider" status and dispatching will begin immediately.
+         2. <img
+              src="/images/download-(13).png"
+              alt="Download (13)"
+              title="Download (13)"
+              style={{ width:"46%" }}
+            />
+         3. Click "Submit"
+      2. A **Pre‑Dispatch Instructions** box from the Property Manager _may_ pop‑up.
+         1. **‼️VERY IMPORTANT!** Remember to ALWAYS utilize the A**utomated dispatching of Preferred Service Providers using the Auto-Assignment option when applicable.** On June 7, 2022, Latchel launched Preferred Service Provider Auto Assign for Emergency Work Orders to provide 2 key benefits:
+         2. Get a Service Provider assigned more quickly, by broadcasting work orders to multiple Service Providers automatically, and
+         3. Reduce time spent by troubleshooters reaching out to Service Providers.
+            1. Questions? Please check out the [FAQ: Service Provider Auto-Assign for Emergency Work Orders](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/FAQ-Service-Provider-Auto-Assign-for-Emergency-Work-Orders#faq-service-provider-auto-assign-for-emergency-work-orders)!<br />More details regarding the automated dispatching of preferred service providers can be found [here](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/EMERGENCY-How-to-Assign-a-Preferred-Latchel-Network-Service-Provider#emergency-how-to-assign-a-preferred-latchel-network-service-provider)
+      3. Proceed with dispatching a Service Provider for this emergency.
+         1. **📝 NOTE – Preferred Service Providers (Emergencies Only)**
+         2. If the work order has **Preferred Service Providers listed**, follow the **Standardized Outreach Attempts to Preferred Service Providers** before moving on to LCN or PM escalation.
+            1. Refer to Step 4 under “**(EMERGENCY) Rules for Calling the Service Provider**” of this [SOP](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/EMERGENCY-How-to-Assign-a-Preferred-Latchel-Network-Service-Provider) to review the guidelines.
+         3. **📝 NOTE – Resident Availability and Entry Permission**
+            1. In case the resident doesn't have availability within the dispatch timeframe **and** permission to enter was not granted, proceed to **"PM Input needed before dispatch."**
+         4. While manually dispatching a work order and the **auto-assign process** are running for Preferred Service Providers, please refer to [this guide](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/FAQ-Service-Provider-Auto-Assign-for-Emergency-Work-Orders#faq-service-provider-auto-assign-for-emergency-work-orders) a job is accepted via public screens and conflicts with an earlier appointment.
+      4. If the issue **is** property-damaging or extreme habitability, an appointment should be scheduled for that same day.
+      5. If the issue **is not** property damaging or extreme habitability, an appointment should be scheduled for that same day or the next day.
+      6. If the issue is reported after 5 PM property time, troubleshooters must first attempt to dispatch a Service Provider.
+         1. **IMPORTANT:** The step below does **not** apply if the PM is on an **After-Hours Subscription** and the work order was received **after hours from Sunday to Thursday**.
+         2. If the PM is on an **After-Hours Subscription** and **no service provider accepted the job on the advised days**, please proceed with **forwarding the work order to the PM**.
+         3. The steps below only apply if the work order was received on **Friday or Saturday for an After-Hours PM**.
+            1. If the troubleshooter is unable to dispatch, update the work order status to ‘Finding Service Provider’. Then, create a follow-up task for the next day to retry dispatching in the morning.
+            2. Subject Line: _Dispatching Required for this Emergency_
+            3. Task Subject: _Select the Resident_
+            4. Due: _Schedule the task for 9 AM current property time._
+            5. User Group: _Troubleshooter_
+            6. Priority: _Highest_
+            7. Set the task to “_Never complete on any job state change_”
+            8. Description: _An initial attempt was made to dispatch a Service Provider, but it was unsuccessful. Please try sourcing a Service Provider again in the morning. If the second attempt is also unsuccessful, escalate the issue to the Operations Support Specialists for further assistance._
+      7. If the attempt to source a Service Provider is unsuccessful the next day, the Troubleshooting team member should escalate the issue to the Operations Support Specialists. (refer to [How to: Escalate Between Teams](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-Between-Teams))
+         1. **Operations Support Specialists**: Upon receiving the escalation, move the work order status to ‘Waiting for PM’ for further handling. See [(EMERGENCY) How to: Assign a Preferred + Latchel Network Service Provider](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/EMERGENCY-How-to-Assign-a-Preferred-Latchel-Network-Service-Provider).
+      8. We are done with this Work Order.
+      9. Proceed to **Step 2. Closing the task**
+   3. **"Work order does not need immediate dispatch"** - Select this option if troubleshooting did not resolve the issue but the situation qualifies as an emergency. Dispatch can be deferred only if the resident has no availability or **the resident was asked during the troubleshooting call (see Step 1.5) and explicitly agreed** to delay the dispatch until the following morning. This applies to same-day requests received before 9:00 AM. This option applies when the emergency's severity is mild enough to wait assign a Service Provider.
+      1. This option should only be used between 5:00pm to 9:00am. Any eligible same-day work order received before 9:00 AM will be automatically deferred at 9:00 AM.
+      2. The only exceptions to this rule is when the WO falls under the scenario outlined in [(Emergency) How to: Handle a Utility Issue](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Emergency-How-to-Handle-a-Utility-Issue).
+      3. If the issue is property damaging or an extreme habitability, this option should not be used. See [How to: Identify Property Damage and Extreme Habitability Situations](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-Property-Damage-and-Extreme-Habitability-Situations#defining-property-damage-and-extreme-habitability)
+      4. If the property is under a PM subscription with After Hours service, ensure proper expectations are communicated to the resident.
+         1. _"Hi (Resident Name)! We’ve updated your work order accordingly and your request will be handled by the appropriate team moving forward. If the issue changes or worsens, feel free to contact us, and we will be happy to assist."_
+      5. Fill in the information from your troubleshooting session with the resident.
+      6. Note: Dispatching will be deferred until the following morning at 9:00am (the status will become "Finding Service Provider" status because a Service Provider will be assigned by a troubleshooter agent who is on shift at 9am of the property)
+         1. <img
+              src="/images/download-2.png"
+              alt="Download 2"
+              title="Download 2"
+              style={{ width:"45%" }}
+            />
+      7. Click "Submit"
+      8. We are done with this Work Order (for now).
+      9. Proceed to **Step 2. Closing the task**
+5. **"PM Input needed before dispatch" -** 
+   1. This option is applicable for:
+      1. 911 Emergencies
+         1. Learn more about handling 911 situations [here](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-911-Severity-Type-Work-Orders).
+      2. Validate Unclear Situations for a Property Damaging or Extreme Habitability Issue
+         1. Unclear situations are ones for which we need the Escalation Contacts’ input to handle a property damaging or extreme habitability issue. This means **_the only person who can answer the question blocking us from moving the WO forward is the PM_**. Some examples include:
+            1. There is a leak coming from a different unit and we need to confirm if that unit is part of the PM company.
+            2. The resident has no water and doesn’t know which utility company they have because it’s included in their rent.
+            3. Vehicle or Driveway Blocked by Another Vehicle - another vehicle is parked in one of their assigned parking spaces, blocking their access and use of the spot. (Only applies if a Property Management setting exists for “Vehicle or Driveway Blocked by Another Vehicle.” Otherwise, it is not a maintenance request and residents must contact their Property Manager directly.)
+      3. Access information is needed to proceed with dispatch — this applies to common area lockouts where building entry authorization is required, or to individual tenant lockouts **where the access method itself is the issue** (e.g., a newly issued code that is not working, a changed lockbox combination). **This does not apply to lockouts caused by resident error or negligence** (e.g., lost keys, forgotten code) — those are not escalated to the PM.
+      4. A resident answered the call but had to hang up before providing further details, or they stated they were not at home and unable to offer additional information about the issue.
+      5. The resident does not have availability within the dispatch timeframe **and** permission to enter was not granted — regardless of whether the issue is PD/EH or non-PD/EH.
+   2. You will be asked if there is a potential property damage or extreme habitability issue.
+      1. ![Download (15)](/images/download-\(15\).png "Download (15)")
+      2. If **Yes**, the "Who Ya Gonna Call" AI suggestion will now appear at this point, showing the recommended contact and order based on the scenario and time. The original EEC list is still shown below for reference
+         1. Follow instructions and scripting in Scenario 2 of [Job Aid: PM Outbound Communication for Emergency WOs](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs)
+         2. Take further instructions from the PM to take care of the Emergency Work Order.
+         3. **If the Property Manager was successfully contacted, but wants Latchel to dispatch a vendor:**
+            1. Go "← Back". Do **NOT** click "Successful contact".
+               1. <img
+                    src="/images/download-(16).png"
+                    alt="Download (16)"
+                    title="Download (16)"
+                    style={{ width:"58%" }}
+                  />
+            2. Make sure you are writing your notes in the work order "notes". See: [How to: Write Effective Notes](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Write-Effective-Notes#how-to-write-effective-notes)
+            3. Proceed to follow the steps for **"Work order needs immediate dispatch" detailed above.**
+         4. **If the property manager states they will take over the work order and nothing further is needed from Latchel:**
+            1. Click "Successful contact"
+               1. ![Download (17)](/images/download-\(17\).png "Download (17)")
+            2. Call to update the resident about your actions with the Work Order and Service Provider.
+            3. We are done with this Work Order.
+            4. Proceed to **Step 2. Closing the task**
+         5. **If the property manager does not answer, leave a voicemail and send SMS using scripting in Scenario 2 of** [Job Aid: PM Outbound Communication for Emergency WOs](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs) .
+            1. If there are multiple contacts, call the second contact listed. Repeat above described sequence.
+            2. If nobody on the list answers, click "Could not reach escalation contacts"
+               1. <img
+                    src="/images/download-(18).png"
+                    alt="Download (18)"
+                    title="Download (18)"
+                    style={{ width:"68%" }}
+                  />
+               2. Fill in information to send a message to the Property Manager
+                  1. <img
+                       src="/images/download-(19).png"
+                       alt="Download (19)"
+                       title="Download (19)"
+                       style={{ width:"52%" }}
+                     />
+               3. Click "Submit"
+               4. Call to update the resident about your actions with the Work Order and Service Provider
+               5. We are done with this Work Order.
+               6. Proceed to **Step 2. Closing the task**
+      3. If there is no potential for property damage, **Click "No".**
+         1. Fill in the information summarizing your action: (Why did you escalate this?) (What are the recommended next steps?).
+         2. Click "Submit". Submitting moves the Work Order to "Waiting for PM" status.
+         3. We are done with this Work Order.
+         4. Proceed to **Step 2. Closing the task.**
 
 ### **Option 3- Can’t reach resident**
 
 Sometimes residents report an emergency work order but are unreachable. This could be due to a variety of issues, such as the resident is not at their phone anymore or the resident phone number is incorrect. 
 
-\*\*‼️IMPORTANT: \*\*This option applies only when the associate genuinely cannot reach any resident after all required call attempts (3 calls to primary resident \+ attempts to all other active residents on the property). Common-area work orders should follow the same resident-contact and severity-classification process as any other emergency.
+‼️**IMPORTANT**: This option applies only when the associate genuinely cannot reach any resident after all required call attempts (3 calls to primary resident + attempts to all other active residents on the property). Common-area work orders should follow the same resident-contact and severity-classification process as any other emergency.
 
 <Note>
   Always make 3 call attempts to contact the residents before moving on
@@ -325,134 +338,141 @@ Sometimes residents report an emergency work order but are unreachable. This cou
   2. Check for additional resident phone numbers.
   3. Check for additional residents on the property.
   4. If a different resident makes contact, change the Work Order's resident contact (as needed).
-  5. If no other numbers or residents exist, escalate to the Property Manager if the issue can cause property damage OR if EEC/pre-dispatch instructions direct you to contact EEC for the current scenario (e.g., "call EEC if resident is unreachable").
-  6. Manually update the work order severity based on your assessment.
+     1. If no other numbers or residents exist, escalate to the Property Manager if the issue can cause property damage OR if EEC/pre-dispatch instructions direct you to contact EEC for the current scenario (e.g., "call EEC if resident is unreachable").
+  5. Manually update the work order severity based on your assessment.
 </Note>
 
 **Steps**
 
-1. \*\*Call the resident 3 times. \*\*
+1. **Call the resident 3 times.** 
 2. **"Can’t reach resident"** - Click this option if you tried calling 3 times and the resident did not pick up.
-3. Leave a voicemail and send an SMS to the resident (if enabled).
-4. 🗨️ \*\*Say something like: \*\*“_Hello, \[resident name\]. This is \[your name\], calling from Latchel, the maintenance intake team for \[PM Company Name\] regarding your recent maintenance request. I’ve been trying to reach you regarding the work order you submitted for \[WO title\]. I will now contact any other active residents listed for your property. If I am also unable to reach them, your work order will be forwarded to the appropriate team for proper handling. Please reach out to them directly for next steps. Thank you, and don’t hesitate to send us a text if there’s anything else we can help you with!”_
-5. 🗨️\* **SMS Blurb**: “Hello, \[resident’s name\]! This is \[your name\], _calling from Latchel, the maintenance intake team for \[PM Company Name\] regarding your recent maintenance request_. We’ve tried to call you to gather further information regarding the \[issue\] in order to further assist you. Let us know as soon as you are available for a callback! If you think the issue has worsened or require further assistance, please call us at \[provide the PM’s Latchel Communication Phone Number\]. Thank you!”\*
-6. Refer to [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Informational-Basic-Service-Ops-Guidelines-and-Rules](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Informational-Basic-Service-Ops-Guidelines-and-Rules)  for guidance on how to locate the Latchel Communication Phone Number for the specific resident.
-7. Check for additional phone numbers with the resident.
-8. If there are additional phone numbers, they will appear under the resident’s name.
-
-<Frame>
-  ![image-20251223-193741.png](/images/SVC-695.png)
-</Frame>
-
-2. If the resident has no additional phone numbers, check to see if there are other residents on the property you can call.
-
-<Frame>
-  ![image-20251223-193828.png](/images/SVC-696.png)
-</Frame>
-
-3. Try all other resident phone numbers and/or residents on the property before escalating to the PM.
-4. If you are able to reach a different resident, make sure to make that resident the primary contact on the work order.
-5. Go to the work order page and scroll to the "Resident" section.
-6. Select the three dots
-7. Click "Edit Resident"
-
-<Frame>
-  ![image-20251223-193949.png](/images/SVC-697.png)
-</Frame>
-
-2. Select the appropriate resident.
-
-<Frame>
-  ![image-20251223-194034.png](/images/SVC-698.png)
-</Frame>
-
-<Frame>
-  ![image-20251223-194109.png](/images/SVC-699.png)
-</Frame>
-
-3. Click "Submit" to confirm.
-4. If you still cannot reach any resident or no other residents exist on the property, select the "Can't Reach Resident" option.
-
-<Frame>
-  ![image-20251223-194520.png](/images/SVC-700.png)
-</Frame>
-
-3. Check the PM’s intake settings: If the confirmed issue matches an emergency definition, dispatch the work order. If access information is needed, follow the PM escalation policy. 
-4. ‼️ Access-related exception: if access information (lockbox code, building entry authorization) is needed to move forward — whether for a common area or an individual tenant lockout — use the existing PM Input process to obtain the necessary details before dispatch can proceed.
-5. Select the appropriate option based on the emergency's potential for property damage. 
-6. Refer to [↔ Job Aid: Defining Property Damage](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-Property-Damage-and-Extreme-Habitability-Situations).
-
-<Frame>
-  ![image-20251223-194557.png](/images/SVC-701.png)
-</Frame>
-
-2. If **Yes**, the "Who a Gonna Call" AI suggestion will now appear at this point, showing the recommended contact and order based on the scenario and time. The original EEC list is still shown below for reference
-
-<Frame>
-  ![image-20260604-014840.png](/images/SVC-702.png)
-</Frame>
-
-2. Follow instructions and scripting in Scenario 2 of [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs).
-
-- Take further instructions from the PM to take care of the Emergency Work Order.
-  1. **If the Property Manager was successfully contacted, but wants Latchel to dispatch a vendor:**
-  2. Go "← Back". Do **NOT** click "Successful contact".
-  <Frame>
-    ![image-20260604-014743.png](/images/SVC-691.png)
-  </Frame>
-  3. Make sure you are writing your notes in the work order "notes" 
-  4. See: [↔ How to: Write Effective Notes](https://latchel.atlassian.net/wiki/spaces/OM/pages/763363368)
-  5. Proceed to follow the steps for **"Work order needs immediate dispatch" detailed above.**
-  6. **If the property manager states they will take over the work order and nothing further is needed from Latchel:**
-  7. Click "Successful contact"
-  <Frame>
-    ![image-20251223-192527.png](/images/SVC-692.png)
-  </Frame>
-  2. Call to update the resident about your actions with the Work Order and Service Provider.
-  3. We are done with this Work Order.
-  4. Proceed to **Step 2. Closing the task**
-  5. \*\*If the property manager does not answer, leave a voicemail and send SMS using scripting in Scenario 2 of \*\*[https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs) .
-  6. If there are multiple contacts, call the second contact listed. Repeat above described sequence.
-  7. If nobody on the list answers, click "Could not reach escalation contacts"
-
-<Frame>
-  ![image-20251223-192715.png](/images/SVC-693.png)
-</Frame>
-
-1. Fill in information to send a message to the Property Manager
-
-<Frame>
-  ![image-20251223-192812.png](/images/SVC-694.png)
-</Frame>
-
-2. Click "Submit"
-3. Call to update the resident about your actions with the Work Order and Service Provider
-4. We are done with this Work Order.
-5. Proceed to **Step 2. Closing the task**
-6. If there is no potential for property damage, **Click "No".**
-7. Fill in the information summarizing your action: (could not contact the resident/resident) (describe the original maintenance request from Step 2 and how it does not seem like there is a potential for property damage).
-
-<Frame>
-  ![image-20251223-202030.png](/images/SVC-707.png)
-</Frame>
-
-2. Click "Submit". Submitting moves the Work Order to "Waiting for PM" status.
-3. **Update the work order severity based on your initial assessment.**
-4. Compare any photos or videos against the original work order description.
-5. **Apply severity guidelines** – Refer to Step 2 in [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Properly-Diagnose-Emergency-Situations](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Properly-Diagnose-Emergency-Situations).
-6. 📝 **Note:** Skip resident contact in this case, as they are already unresponsive.
-7. We are done with this Work Order.
-8. Proceed to **Step 2. Closing the task**
+   1. Leave a voicemail and send an SMS to the resident (if enabled).
+   2. 🗨️ Say something like: “_Hello, [resident name]. This is [your name], calling from Latchel, the maintenance intake team for [PM Company Name] regarding your recent maintenance request. I’ve been trying to reach you regarding the work order you submitted for [WO title]. I will now contact any other active residents listed for your property. If I am also unable to reach them, your work order will be forwarded to the appropriate team for proper handling. Please reach out to them directly for next steps. Thank you, and don’t hesitate to send us a text if there’s anything else we can help you with!”_
+   3. 🗨️ **SMS Blurb**: _“Hello, [resident’s name]! This is [your name], calling from Latchel, the maintenance intake team for [PM Company Name] regarding your recent maintenance request. We’ve tried to call you to gather further information regarding the [issue] in order to further assist you. Let us know as soon as you are available for a callback! If you think the issue has worsened or require further assistance, please call us at [provide the PM’s Latchel Communication Phone Number]. Thank you!”_
+   4. Refer to [Informational: Basic Service Ops Guidelines and Rules](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Informational-Basic-Service-Ops-Guidelines-and-Rules)  for guidance on how to locate the Latchel Communication Phone Number for the specific resident.
+3. Check for additional phone numbers with the resident.
+   1. If there are additional phone numbers, they will appear under the resident’s name.
+      1. <img
+           src="/images/download-(20).png"
+           alt="Download (20)"
+           title="Download (20)"
+           style={{ width:"58%" }}
+         />
+   2. If the resident has no additional phone numbers, check to see if there are other residents on the property you can call.
+      1. <img
+           src="/images/download-(21).png"
+           alt="Download (21)"
+           title="Download (21)"
+           style={{ width:"59%" }}
+         />
+   3. Try all other resident phone numbers and/or residents on the property before escalating to the PM.
+      1. If you are able to reach a different resident, make sure to make that resident the primary contact on the work order.
+         1. Go to the work order page and scroll to the "Resident" section.
+         2. Select the three dots
+         3. Click "Edit Resident"
+            1. <img
+                 src="/images/download-(22).png"
+                 alt="Download (22)"
+                 title="Download (22)"
+                 style={{ width:"67%" }}
+               />
+         4. Select the appropriate resident.
+            1. <img
+                 src="/images/download-(23).png"
+                 alt="Download (23)"
+                 title="Download (23)"
+                 style={{ width:"65%" }}
+               />
+         5. Click "Submit" to confirm.
+   4. If you still cannot reach any resident or no other residents exist on the property, select the "Can't Reach Resident" option.
+      1. <img
+           src="/images/download-(24).png"
+           alt="Download (24)"
+           title="Download (24)"
+           style={{ width:"64%" }}
+         />
+   5. Check the PM’s intake settings: If the confirmed issue matches an emergency definition, dispatch the work order. If access information is needed, follow the PM escalation policy. 
+      1. ‼️ Access-related exception: if access information (lockbox code, building entry authorization) is needed to move forward — whether for a common area or an individual tenant lockout — use the existing PM Input process to obtain the necessary details before dispatch can proceed.
+   6. Select the appropriate option based on the emergency's potential for property damage. See [How to: Identify Property Damage and Extreme Habitability Situations](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-Property-Damage-and-Extreme-Habitability-Situations).
+      1. <img
+           src="/images/download-(25).png"
+           alt="Download (25)"
+           title="Download (25)"
+           style={{ width:"61%" }}
+         />
+      2. If **Yes**, the "Who a Gonna Call" AI suggestion will now appear at this point, showing the recommended contact and order based on the scenario and time. The original EEC list is still shown below for reference
+         1. <img
+              src="/images/download-(26).png"
+              alt="Download (26)"
+              title="Download (26)"
+              style={{ width:"53%" }}
+            />
+         2. Follow instructions and scripting in Scenario 2 of [Job Aid: PM Outbound Communication for Emergency WOs](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs).
+         3. Take further instructions from the PM to take care of the Emergency Work Order.
+            1. **If the Property Manager was successfully contacted, but wants Latchel to dispatch a vendor:**
+               1. Go "← Back". Do **NOT** click "Successful contact".
+               2. Make sure you are writing your notes in the work order "notes" . See: [How to: Write Effective Notes](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Write-Effective-Notes#how-to-write-effective-notes)
+               3. Proceed to follow the steps for **"Work order needs immediate dispatch" detailed above.**
+            2. **If the property manager states they will take over the work order and nothing further is needed from Latchel:**
+               1. Click "Successful contact"
+                  1. <img
+                       src="/images/download-(28).png"
+                       alt="Download (28)"
+                       title="Download (28)"
+                       style={{ width:"77%" }}
+                     />
+               2. Call to update the resident about your actions with the Work Order and Service Provider.
+               3. We are done with this Work Order.
+               4. Proceed to **Step 2. Closing the task**
+            3. **If the property manager does not answer, leave a voicemail and send SMS using scripting in Scenario 2 of** [Job Aid: PM Outbound Communication for Emergency WOs](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs) .
+               1. If there are multiple contacts, call the second contact listed. Repeat above described sequence.
+                  1. If nobody on the list answers, click "Could not reach escalation contacts"
+                     1. <img
+                          src="/images/download-(29).png"
+                          alt="Download (29)"
+                          title="Download (29)"
+                          style={{ width:"66%" }}
+                        />
+                  2. Fill in information to send a message to the Property Manager
+                     1. <img
+                          src="/images/download-(30).png"
+                          alt="Download (30)"
+                          title="Download (30)"
+                          style={{ width:"67%" }}
+                        />
+                  3. Click "Submit"
+                  4. Call to update the resident about your actions with the Work Order and Service Provider
+                  5. We are done with this Work Order.
+                  6. Proceed to **Step 2. Closing the task**
+      3. If there is no potential for property damage, **Click "No".**
+         1. Fill in the information summarizing your action: (could not contact the resident/resident) (describe the original maintenance request from Step 2 and how it does not seem like there is a potential for property damage).
+         2. <img
+              src="/images/download-(31).png"
+              alt="Download (31)"
+              title="Download (31)"
+              style={{ width:"71%" }}
+            />
+         3. Click "Submit". Submitting moves the Work Order to "Waiting for PM" status.
+4. **Update the work order severity based on your initial assessment.**
+   1. Compare any photos or videos against the original work order description.
+   2. **Apply severity guidelines** – Refer to Step 2 in [How to: Properly Diagnose Emergency Situations](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Properly-Diagnose-Emergency-Situations).
+      1. 📝 **Note:** Skip resident contact in this case, as they are already unresponsive.
+5. We are done with this Work Order.
+6. Proceed to **Step 2. Closing the task**
 
 ## Step 2. Closing the task
 
 1. Close the task by clicking “Action” then “Complete Task”.
 
 <Frame>
-  ![image-20251223-203452.png](/images/SVC-708.png)
+  <img
+    src="/images/SVC-708.png"
+    alt="image-20251223-203452.png"
+    style={{ width:"43%" }}
+  />
 </Frame>
 
-2. Go back to the task queue: [https://latchel.atlassian.net/wiki/spaces/OPS/pages/2559639553](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2559639553)
+2. Go back to the task queue: [How to: Work the Tasks Queue](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Work-the-Tasks-Queue#how-to-work-the-tasks-queue)
 
 <Note>
   For guidelines on handling customer responses when a resident reaches out after unsuccessful troubleshooting call attempts, please refer to the below guidelines in the FAQ.
@@ -461,38 +481,34 @@ Sometimes residents report an emergency work order but are unreachable. This cou
 ## **📋**Handling Work Orders with Home Warranty Information
 
 <Note>
-  Refer to this guide on how to locate warranty information: [https://latchel.atlassian.net/wiki/spaces/LTG/pages/440074480](https://latchel.atlassian.net/wiki/spaces/LTG/pages/440074480)
+  Refer to this guide on how to locate warranty information: [How to: Navigate the Work Order Interface](https://help.latchel.com/latchel-admin/Service-Operations/Latchel-Library/How-to-Navigate-the-Work-Order-Interface#how-to-navigate-the-work-order-interface)
 </Note>
 
 <Warning>
   **Non-Emergency Work Orders:**
 
-  \*\*If a property has a Home Warranty note, all non-emergency work orders require Property Manager approval before dispatching and are therefore automatically forwarded to the Property Manager. \*\*
+  **If a property has a Home Warranty note, all non-emergency work orders require Property Manager approval before dispatching and are therefore automatically forwarded to the Property Manager.** 
 
   If an emergency WO is de-escalated to non-emergency and the property has a warranty note, the system will automatically place the WO in Pending with a task to PM to review warranty. Ops should not move the WO forward or override this status.
 
   1. Notify the PM/Owner that the WO has been de-escalated and moved to Pending due to the warranty note on file.
   2. If the reported issue does not match the warranty note, submit a PS ticket to flag the mismatch. In the PS ticket:
-
-  - Note the specific WO ID and the mismatch between the reported issue and the warranty note.
-  - Request that PS verify with the PM/Owner whether they want to update their intake settings to specify the exact warranty details so that only matching WOs are automatically held for warranty on non-emergency cases.
-    - Refer to [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-to-Product-Supporton](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-to-Product-Supporton) how to submit a ticket.
-
-  3. Document in\* the WO notes that the reported issue does not align with the warranty information on file and that the PM/Owner has been notified.\*
+     1. Note the specific WO ID and the mismatch between the reported issue and the warranty note.
+     2. Request that PS verify with the PM/Owner whether they want to update their intake settings to specify the exact warranty details so that only matching WOs are automatically held for warranty on non-emergency cases. Refer to [How to: Escalate to Product Support](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-Between-Teams#escalate-to-product-support) how to submit a ticket.
+  3. Document in the WO notes that the reported issue does not align with the warranty information on file and that the PM/Owner has been notified.
 </Warning>
 
 Latchel **does not coordinate with Home Warranty companies** for emergencies or non-emergencies. Emergencies are handled **directly by Latchel** regardless of warranty status. For emergencies covered by warranty, Latchel attempts to resolve the issue directly.
 
-Proceed to handle the emergency work order as usual following our guidelines in [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Emergency-Work-Orders](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Emergency-Work-Orders).
+Proceed to handle the emergency work order as usual following our guidelines above.
 
 If a Property Manager reaches out and asks Latchel to contact a Home Warranty company for an emergency work order, follow these steps:
 
 1. Inform the Property Manager that Latchel does not coordinate directly with Home Warranty companies.
 2. Advise the Property Manager that if they want Latchel to consider a Home Warranty company for emergency dispatching, they must add that company as a Service Provider in their account.
-3. 🗨️ **Say something like:**\* "Hi \[PM name\], Latchel does not directly coordinate with Home Warranty companies. If you’d like us to consider dispatching to a warranty company for emergencies, please add them as a Service Provider in your account. This will allow us to include them in our dispatch process."\*
-4. Explain that once added, Latchel can treat the Home Warranty company like any other listed Service Provider and may dispatch to them for emergencies when appropriate.
-5. If the Property Manager agrees, proceed with assigning the Home Warranty service provider and schedule the work order accordingly.
-6. See [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Emergency-How-to-Handle-Scheduling-Requests](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Emergency-How-to-Handle-Scheduling-Requests)
+   1. 🗨️ **Say something like:** _"Hi [PM name], Latchel does not directly coordinate with Home Warranty companies. If you’d like us to consider dispatching to a warranty company for emergencies, please add them as a Service Provider in your account. This will allow us to include them in our dispatch process."_
+3. Explain that once added, Latchel can treat the Home Warranty company like any other listed Service Provider and may dispatch to them for emergencies when appropriate.
+4. If the Property Manager agrees, proceed with assigning the Home Warranty service provider and schedule the work order accordingly. See [(Emergency) How to Handle Scheduling Requests](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Emergency-How-to-Handle-Scheduling-Requests)
 
 ## **Updated Routing Logic After Resident Contact (Common Area WOs)**
 
@@ -501,9 +517,9 @@ If a Property Manager reaches out and asks Latchel to contact a Home Warranty co
 | Reached (resident or other active resident in the unit), access confirmed, issue clearly meets emergency criteria | Dispatch a Service Provider immediately. |
 | Reached, but the situation is ambiguous | Ask clarifying questions using the Troubleshooter Question Bank before deciding. Once clear: dispatch if access is confirmed, otherwise follow the escalation path below. |
 | Reached, but no access info available — OR unreachable after 3 attempts (resident and any other active resident in the unit) | **Go to the escalation path:** |
-| → Escalation path: property damaging or extreme habitability? | \*\*Yes — \*\*escalate to the PM's Emergency Escalation Contact (existing “PM Input needed before dispatch” flow). \*\*No — \*\*standard process: move the WO to “Waiting for PM and assign the task to PM.” No EEC call needed. |
+| → Escalation path: property damaging or extreme habitability? | **Yes** — escalate to the PM's Emergency Escalation Contact (existing “PM Input needed before dispatch” flow). <br /><br />**No** — standard process: move the WO to “Waiting for PM and assign the task to PM.” No EEC call needed. |
 
-\*\*Before escalating: \*\*review all notes on the account — not just critical notes (includes pre-dispatch instructions, EEC notes, and general notes). If notes already provide enough information to dispatch, proceed instead of escalating.
+**Before escalating**: review all notes on the account — not just critical notes (includes pre-dispatch instructions, EEC notes, and general notes). If notes already provide enough information to dispatch, proceed instead of escalating.
 
 ## ❓Frequently Asked Questions:
 
@@ -516,129 +532,129 @@ If a Property Manager reaches out and asks Latchel to contact a Home Warranty co
   2. The PM must have a 24/7, After-Hours or Autopilot subscription.
   3. Go to the Service Provider section inside the WO.
   4. Click the three dots.
-  5. If the WO has a SP assigned, click “Edit SP”.
-
-  <Frame>
-    ![image-20260628-001638.png](/images/SVC-709.png)
-  </Frame>
-
-  2. If the WO doesn’t have a SP assigned, click “Add SP”.
-
-  <Frame>
-    ![image-20260628-001805.png](/images/SVC-710.png)
-  </Frame>
+     1. If the WO has a SP assigned, click “Edit SP”.
+        1. <img
+             src="/images/download-(32).png"
+             alt="Download (32)"
+             title="Download (32)"
+             style={{ width:"64%" }}
+           />
+     2. If the WO doesn’t have a SP assigned, click “Add SP”.
+        1. <img
+             src="/images/download-(33).png"
+             alt="Download (33)"
+             title="Download (33)"
+             style={{ width:"65%" }}
+           />
 
   5. Follow the “Find Service Provider” guided workflow.
-  6. **‼️IMPORTANT: Do not change or assign a SP.**
-  7. If the PM is not opted into LCN:
-  8. Click “Escalate to Property Manager”
-
-  <Frame>
-    ![image-20260628-002136.png](/images/SVC-711.png)
-  </Frame>
-
-  2. If the PM is opted into LCN:
-  3. Click “Search for Latchel Service Provider”.
-
-  <Frame>
-    ![image-20260628-002432.png](/images/SVC-712.png)
-  </Frame>
-
-  2. In the next screen, click “Cannot Find Nearby Service Provider”:
-
-  <Frame>
-    ![image-20260628-002512.png](/images/SVC-713.png)
-  </Frame>
-
-  3. In the next screen, click “No”:
-
-  <Frame>
-    ![](/images/SVC-714.png)
-  </Frame>
-
-  4. Fill out the questions accordingly explaining why you took this action.
-
-  <Frame>
-    ![](/images/SVC-715.png)
-  </Frame>
+     1. **‼️IMPORTANT: Do not change or assign a SP.**
+     2. If the PM is not opted into LCN, click “Escalate to Property Manager”
+        1. <img
+             src="/images/download-(34).png"
+             alt="Download (34)"
+             title="Download (34)"
+             style={{ width:"57%" }}
+           />
+     3. If the PM is opted into LCN, click “Search for Latchel Service Provider”.
+        1. <img
+             src="/images/download-(35).png"
+             alt="Download (35)"
+             title="Download (35)"
+             style={{ width:"60%" }}
+           />
+        2. In the next screen, click “Cannot Find Nearby Service Provider”:
+           1. <img
+                src="/images/download-(36).png"
+                alt="Download (36)"
+                title="Download (36)"
+                style={{ width:"46%" }}
+              />
+        3. Click “No” then fill out the questions accordingly explaining why you took this action.
+           1. <img
+                src="/images/download-(38).png"
+                alt="Download (38)"
+                title="Download (38)"
+                style={{ width:"56%" }}
+              />
 </Accordion>
 
 <Accordion title="What to do when the Resident reached back after unsuccessful Troubleshooting call attempts and the resident has issues taking the TS callback?">
   1. If the resident reaches back and explains that they were unable to answer the phone call, inform the resident that our emergency team would need to speak to them over the phone.
-  2. The resident mentioned they are unable to take the call and will notify us when they are available.
-  3. 🗨️ **Say something like**: “_Hi (Resident Name)._ _Thank you for reaching out. We're here to assist you anytime and look forward to your response. We hope to resolve the issue soon!”_
-  4. The resident requests a callback. _“**I am available now**”, “**I missed your call**”, “**Can someone call me again**?”, “**Someone called me about my emergency request, but I was unavailable**”_
-  5. 🗨️ **Say something like:** “_Hi (Resident Name). Thank you for responding. I'll notify our emergency team to call you back promptly. Please keep your lines open. Thank you!”_
-  6. Navigate to the Existing Work Order Interface
-  7. If the TS member that made the troubleshooting attempts is still handling the request
-  8. Verify that the TS task is still open and assigned to the TS member
-  9. Create a Slack post in the\* #ops\_info\_center\* channel to notify the troubleshooting member and ensure acknowledgment of the resident's request.
-  10. If there is currently no one assigned to this request
-  11. Create a task for TS to call the resident back following the [**SOP: Work Order Follow-ups and Updates**](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/SOP-Work-Order-Follow-ups-and-Updates)
-  12. The resident says they have issues with their phone or insist on proceeding with SMS. _“**Something’s wrong with my phone**”_
-  13. 🗨️ **Say something like**: “_Hi \[Resident Name\], thanks for getting back to us! For us to assist you effectively, our troubleshooter needs to speak with you over the phone to assess and resolve your issue. Please  provide us with an alternative contact number if available.”_
-  14. If the resident provided valuable information that would suggest a change in their emergency situation
-  15. Escalate to Operations Support Specialists. Refer to [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-Between-Teams](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-Between-Teams)
-  16. The troubleshooter/Operations Support Specialist will then assess the resident’s issue and proceed accordingly as outlined in [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Properly-Diagnose-Emergency-Situations](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Properly-Diagnose-Emergency-Situations).
+     1. The resident mentioned they are unable to take the call and will notify us when they are available.
+        1. 🗨️ **Say something like**: “_Hi (Resident Name)._ _Thank you for reaching out. We're here to assist you anytime and look forward to your response. We hope to resolve the issue soon!”_
+     2. The resident requests a callback. _“**I am available now**”, “**I missed your call**”, “**Can someone call me again**?”, “**Someone called me about my emergency request, but I was unavailable**”_
+        1. 🗨️ **Say something like:** “_Hi (Resident Name). Thank you for responding. I'll notify our emergency team to call you back promptly. Please keep your lines open. Thank you!”_
+        2. Navigate to the Existing Work Order Interface
+           1. If the TS member that made the troubleshooting attempts is still handling the request
+              1. Verify that the TS task is still open and assigned to the TS member
+              2. Create a Slack post in the #ops_info_center channel to notify the troubleshooting member and ensure acknowledgment of the resident's request.
+           2. If there is currently no one assigned to this request
+              1. Create a task for TS to call the resident back following the [**SOP: Work Order Follow-ups and Updates**](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/SOP-Work-Order-Follow-ups-and-Updates)
+        3. The resident says they have issues with their phone or insist on proceeding with SMS. _“**Something’s wrong with my phone**”_
+           1. 🗨️ **Say something like**: “_Hi [Resident Name], thanks for getting back to us! For us to assist you effectively, our troubleshooter needs to speak with you over the phone to assess and resolve your issue. Please  provide us with an alternative contact number if available.”_
+           2. If the resident provided valuable information that would suggest a change in their emergency situation
+              1. Escalate to Operations Support Specialists. Refer to [How to: Escalate to Product Support](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-to-Product-Support#how-to-escalate-to-product-support)
+  2. The troubleshooter/Operations Support Specialist will then assess the resident’s issue and proceed accordingly as outlined in [How to: Properly Diagnose Emergency Situations](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Properly-Diagnose-Emergency-Situations).
 
   <Warning>
-    **🔔_Reminder:_**_\*\* Please make sure that all calls and responses related to when the resident gets back to us are linked to the work order. This ensures all updates are documented properly. There’s no need to create a new task to notify PM; the notes will be sufficient._
+    **🔔Reminder: **_ Please make sure that all calls and responses related to when the resident gets back to us are linked to the work order. This ensures all updates are documented properly. There’s no need to create a new task to notify PM; the notes will be sufficient._
   </Warning>
 </Accordion>
 
 <Accordion title="What if the resident requests a callback for a later time when we contact them for troubleshooting?">
-  1. If the issue is property damaging or extreme habitability, call escalation contacts. Refer to [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs)
-  2. If successful, follow the instructions from the Property Manager
-  3. If unsuccessful, follow the \*\*"PM Input needed before dispatch" \*\*path under [Option 2   "No" (Troubleshooting did NOT resolve the issue)](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Emergency-Work-Orders).
-  4. If the issue is NOT property damaging or extreme habitability,
-  5. Defer the troubleshooting task to the requested time, but only once. Educate the resident to provide the best possible callback time to ensure successful contact.
-  6. After the follow-up call, proceed with the appropriate next steps based on the outcome.
-  7. If unable to reach the resident, follow the process outlined here: [Option 3 – Can’t reach resident](https://latchel.atlassian.net/wiki/spaces/OPS/pages/edit-v2/759332893#Option-3--Can%E2%80%99t-reach-resident).
+  1. If the issue is property damaging or extreme habitability, call escalation contacts. Refer to [Job Aid: PM Outbound Communication for Emergency WOs](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs)
+     1. If successful, follow the instructions from the Property Manager
+     2. If unsuccessful, follow the "**PM Input needed before dispatch**" path 
+  2. If the issue is NOT property damaging or extreme habitability,
+     1. Defer the troubleshooting task to the requested time, but only once. Educate the resident to provide the best possible callback time to ensure successful contact.
+     2. After the follow-up call, proceed with the appropriate next steps based on the outcome.
+     3. If unable to reach the resident, follow the process outlined here: [How to: Handle Emergency Work Orders](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Emergency-Work-Orders#how-to-handle-emergency-work-orders).
 </Accordion>
 
 <Accordion title="What If I Come Across a Work Order That Was Created for Documentation Only?">
   1. For PD/EH issues, attempt to reach the escalation contacts before placing the work order in Waiting for PM (especially if the PM is unresponsive)
-
-  - Refer to [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs)
+     1. Refer to [Job Aid: PM Outbound Communication for Emergency WOs](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs)
 
   2. For non-PD/EH issues, move the work order to Pending with a task for the Property Manager
-  3. Subject: **Action Required: PM Instructions or Information Needed**\*.\*
-  4. Who is this task about? _Select the PM_
-  5. Select a Date and Time: _Leave as is_
-  6. Assign to a User Group: _PM user group_
-  7. Assign to a User: _Leave as is_
-  8. Priority:\* Leave as is\*
-  9. _Complete task only on Completed or Cancelled job States_
-  10. Description: _We’ve created this task for the Property Manager to \[insert specific information or instructions needed\]. The current status of the work order is \[insert status\]. Kindly provide the requested information or guidance at your earliest convenience to help ensure a smooth continuation of the process. If you have any questions or need further clarification, please don’t hesitate to reach out. Thank you!_
+     1. Subject: **Action Required: PM Instructions or Information Needed**.
+     2. Who is this task about? _Select the PM_
+     3. Select a Date and Time: _Leave as is_
+     4. Assign to a User Group: _PM user group_
+     5. Assign to a User: _Leave as is_
+     6. Priority: Leave as is
+     7. _Complete task only on Completed or Cancelled job States_
+     8. Description: _We’ve created this task for the Property Manager to [insert specific information or instructions needed]. The current status of the work order is [insert status]. Kindly provide the requested information or guidance at your earliest convenience to help ensure a smooth continuation of the process. If you have any questions or need further clarification, please don’t hesitate to reach out. Thank you!_
 </Accordion>
 
 <Accordion title="What to Do if the Property Manager Updates Severity or Completes the Troubleshooting steps but Leaves the Work Order in Troubleshooting or Maintains it as an Emergency Despite Potential De-escalation?">
-  1. There are instances where a Property Manager completes the troubleshooting task or reduces the severity of a work order without documenting the troubleshooting steps. In such cases, the Emergency team does \*\*NOT \*\*need to call the resident for troubleshooting. We can reasonably assume the Property Manager has already communicated with the resident and determined the severity of the issue. To ensure the work order is properly updated.
+  1. There are instances where a Property Manager completes the troubleshooting task or reduces the severity of a work order without documenting the troubleshooting steps. In such cases, the Emergency team does NOT need to call the resident for troubleshooting. We can reasonably assume the Property Manager has already communicated with the resident and determined the severity of the issue. To ensure the work order is properly updated.
   2. In some cases, the Property Manager may keep the work order at Emergency severity and proceed with vendor assignment while troubleshooting is ongoing. If, based on your discussion with the resident, the issue seems appropriate for de-escalation, you must first verify the Property Manager’s intake settings for the property before adjusting the severity. Refer to [**How to: Properly Diagnose Emergency Situations** ](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Properly-Diagnose-Emergency-Situations)for guidance.
-  3. Perform the Troubleshooting steps. **If no troubleshooting call was completed, retain the severity level set by the Property Manager. If the resident has already been contacted and the work order can be deescalated, select the severity based on the Property Manager’s intake settings.**
-
-  <Frame>
-    ![image-20250507-225245.png](/images/SVC-716.png)
-  </Frame>
-
-  2. **Emergency**
-  3. **Work order needs immediate dispatch** - Select this option if there is a need for an immediate dispatch for a service provider.
-  4. Proceed with the succeeding prompts then proceed with Steps d and e.
-  5. Applicable for Premium or Autopilot subscriptions.
-  6. **Work order does not need immediate dispatch** - Select this option if it meets the criteria for _“[Work order does not need immediate dispatch](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Emergency-Work-Orders)”_ (refer to Option 2, Step 1.d.ii).
-  7. Proceed to Steps d and e.
-  8. Automation will update the work order state and progress accordingly.
-  9. **PM Input Needed Before Dispatch** - Select this option if there are indications that the Property Manager is handling the issue internally.
-  10. This will forward the work order to the Property Manager for review before dispatch.
-  11. **Non-emergency**
-  12. Proceed to Steps d and e.
-  13. The work order will automatically progress to the appropriate next state.
-  14. \*\*Fill in the required fields with the provided information. \*\*
-  15. For the **“What troubleshooting was done or attempted?”** section, enter the following note:
-  16. Leave this note: “_The Property Manager has completed the troubleshooting. No call was made to the resident as it is no longer required._”
+     1. Perform the Troubleshooting steps. **If no troubleshooting call was completed, retain the severity level set by the Property Manager. If the resident has already been contacted and the work order can be deescalated, select the severity based on the Property Manager’s intake settings.**
+     2. <img
+          src="/images/download-(39).png"
+          alt="Download (39)"
+          title="Download (39)"
+          style={{ width:"72%" }}
+        />
+     3. **Emergency**
+        1. **Work order needs immediate dispatch** - Select this option if there is a need for an immediate dispatch for a service provider.
+        2. Proceed with the succeeding prompts then proceed with Steps d and e.
+        3. Applicable for Premium or Autopilot subscriptions.
+     4. **Work order does not need immediate dispatch** - Select this option if it meets the criteria for _“[Work order does not need immediate dispatch](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Emergency-Work-Orders)”_ (refer to Option 2, Step 1.d.ii).
+        1. Proceed to Steps d and e.
+        2. Automation will update the work order state and progress accordingly.
+     5. **PM Input Needed Before Dispatch** - Select this option if there are indications that the Property Manager is handling the issue internally.
+        1. This will forward the work order to the Property Manager for review before dispatch.
+     6. **Non-emergency**
+        1. Proceed to Steps d and e.
+        2. The work order will automatically progress to the appropriate next state.
+  3. Fill in the required fields with the provided information. 
+  4. For the **“What troubleshooting was done or attempted?”** section, enter the following note:
+  5. Leave this note: “_The Property Manager has completed the troubleshooting. No call was made to the resident as it is no longer required._”
 
   <Warning>
-    **📝** **NOTE**: If the resident provides new information that was not part of the original issue assessed by the property manager and this impacts the severity of the work order, please refer to [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Properly-Diagnose-Emergency-Situations](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Properly-Diagnose-Emergency-Situations).
+    **📝** **NOTE**: If the resident provides new information that was not part of the original issue assessed by the property manager and this impacts the severity of the work order, please refer to [How to: Properly Diagnose Emergency Situations](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Properly-Diagnose-Emergency-Situations).
   </Warning>
 </Accordion>
 
@@ -653,7 +669,7 @@ If a Property Manager reaches out and asks Latchel to contact a Home Warranty co
   - Leave the work order in the _Troubleshooting_ state.
   - Complete the initial Troubleshooting task that reflects your first call attempt and the contact with the EEC.
   - Create a new task for the follow-up call, including clear instructions to contact the resident again at the time frame provided by the EEC / Property Manager.
-  - Notify Operations Support Specialists in the \*#ops\_info\_center channel \*to give them a heads-up about the work order and the delayed follow-up.
+  - Notify Operations Support Specialists in the #ops_info_center channel to give them a heads-up about the work order and the delayed follow-up.
 
   This ensures the work order stays active in the correct status while documenting both the initial and follow-up steps.
 </Accordion>
@@ -662,23 +678,22 @@ If a Property Manager reaches out and asks Latchel to contact a Home Warranty co
   If a resident has moved to a new unit but submitted a work order under their **previous unit**, follow these steps:
 
   1. **If the resident is already listed under the new unit/property address:**
-  2. Confirm the **new address and Property Management company** with the resident.
-  3. Reassign the work order to the correct property address.
-  4. In the **Console**, go to the **Property** view, click the **three dots**, select **Edit Property**, and update the property address to the correct unit where the work order should be assigned.
-
-  <Frame>
-    ![image-20260311-234817.png](/images/SVC-717.png)
-  </Frame>
-
-  <Frame>
-    ![image-20260309-202652.png](/images/SVC-718.png)
-  </Frame>
+     1. Confirm the **new address and Property Management company** with the resident.
+     2. Reassign the work order to the correct property address.
+     3. In the **Console**, go to the **Property** view, click the **three dots**, select **Edit Property**, and update the property address to the correct unit where the work order should be assigned.
+        1. <img
+             src="/images/download-(40).png"
+             alt="Download (40)"
+             title="Download (40)"
+             style={{ width:"61%" }}
+           />
+        2. ![Download (41)](/images/download-\(41\).png "Download (41)")
 
   2. **If the resident is not yet listed under the new unit:**
-  3. Refer to [**Step 4 of “How to: Handle ‘Need to Verify’ Emails**](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Need-to-Verify-Emails)\*\* \*\*to verify the information and check PM integrations.
-  4. If the resident can be added to the new unit, reassign the work order to the correct property address by following the instructions above **(1.b.i).**
-  5. If the resident cannot be added and **PM intervention is required** (e.g., PMs with active integrations), set the tenant’s expectations and cancel the work order submitted under the incorrect property address to prevent it from moving to another status. Once the PM confirms that the tenant should be added to the correct address, resubmit the work order.
-  6. **Write Effective Notes**
+     1. Refer to [**Step 4 of “How to: Handle ‘Need to Verify’ Emails**](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Need-to-Verify-Emails) to verify the information and check PM integrations.
+        1. If the resident can be added to the new unit, reassign the work order to the correct property address by following the instructions above **(1.b.i).**
+        2. If the resident cannot be added and **PM intervention is required** (e.g., PMs with active integrations), set the tenant’s expectations and cancel the work order submitted under the incorrect property address to prevent it from moving to another status. Once the PM confirms that the tenant should be added to the correct address, resubmit the work order.
+  3. **Write Effective Notes**
 </Accordion>
 
 <Accordion title="Wrong Person Answered the Phone (Suspected Incorrect Number on File)  When does this apply?">
@@ -694,44 +709,40 @@ If a Property Manager reaches out and asks Latchel to contact a Home Warranty co
 
   **Step 1 — Confirm the mismatch**
 
-  1. Politely verify: _"I'm looking for \[Resident Name\] regarding a maintenance request at \[Property Address\]. Is this the correct number for them?"_
+  1. Politely verify: _"I'm looking for [Resident Name] regarding a maintenance request at [Property Address]. Is this the correct number for them?"_
   2. If the person confirms they are **not** the resident and have no connection to the property, treat the number as incorrect.
-
-  - Do **not** continue troubleshooting with this person.
-  - Do **not** send SMS communications to this number.
+     1. Do **not** continue troubleshooting with this person.
+     2. Do **not** send SMS communications to this number.
 
   **Step 2 — Attempt alternate contacts**
 
   1. Check for **additional phone numbers** on the resident's profile.
-
-  - If available, call those numbers (up to 3 attempts each).
+     1. If available, call those numbers (up to 3 attempts each).
 
   2. Check for **other residents listed on the same property**.
-
-  - If available, call them to verify the issue still exists and gather information.
+     1. If available, call them to verify the issue still exists and gather information.
 
   3. If you reach the correct resident on a different number:
-
-  - Confirm their updated contact number.
-  - **Update their profile** with the correct number.
-  - Proceed with standard troubleshooting.
+     1. Confirm their updated contact number.
+     2. **Update their profile** with the correct number.
+     3. Proceed with standard troubleshooting.
 
   **Step 3 — Attempt email contact**
 
   If no alternate phone numbers are available or all attempts are unsuccessful:
 
   1. Send an **email** to the resident (if an email address is on file) using the following blurb:
-  2. _🗨️ **Email Blurb:**_\* \*\*\*_"Hello \[Resident Name\], this is \[Your Name\] from Latchel, the maintenance intake team for \[PM Company Name\]. We attempted to reach you by phone regarding your recent maintenance request for \[WO Title\], but were unable to connect with you at the number on file. Please reply to this email or call us at \[PM's Latchel Communication Phone Number\] so we can assist you. If the issue has worsened, please call us immediately. Thank you!"_
+  2. _🗨️ **Email Blurb:**_ _"Hello [Resident Name], this is [Your Name] from Latchel, the maintenance intake team for [PM Company Name]. We attempted to reach you by phone regarding your recent maintenance request for [WO Title], but were unable to connect with you at the number on file. Please reply to this email or call us at [PM's Latchel Communication Phone Number] so we can assist you. If the issue has worsened, please call us immediately. Thank you!"_
   3. Document in the WO notes that the phone number on file appears incorrect and that email was used as a fallback.
 
   **Step 4 — Escalate if all contact methods fail**
 
   If no email is on file **and** no alternate contacts exist:
 
-  - **For PD/EH (Property Damaging / Extreme Habitability) issues:** Proceed with EEC escalation per the standard [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs). In the escalation notes, include:
-    - _"Phone number on file appears incorrect — person who answered denied creating the WO and does not match the resident profile. Unable to reach resident via alternate methods."_
-    - Recommend the PM confirm/update resident contact information.
-  - **For non-PD/EH issues:** Forward the WO to the PM by following the same steps in the PM Input Needed path.
+  1. **For PD/EH (Property Damaging / Extreme Habitability) issues:** Proceed with EEC escalation per the standard [Job Aid: PM Outbound Communication for Emergency WOs](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs). In the escalation notes, include:
+     - _"Phone number on file appears incorrect — person who answered denied creating the WO and does not match the resident profile. Unable to reach resident via alternate methods."_
+     - Recommend the PM confirm/update resident contact information.
+  2. **For non-PD/EH issues:** Forward the WO to the PM by following the same steps in the PM Input Needed path.
 
   **📝 Documentation Requirements**
 
