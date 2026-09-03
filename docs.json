@@ -1285,10 +1285,7 @@
                   "dark": "#ff9b8a"
                 },
                 "pages": [
-                  "latchel-admin/Data-Support-Team/data-support-overview",
                   "latchel-admin/Data-Support-Team/Latchel-Data-Support-Tool-Guide",
-                  "latchel-admin/Data-Support-Team/account-creation-and-configuration-new-version",
-                  "latchel-admin/Data-Support-Team/account-update-flowchart",
                   "latchel-admin/Data-Support-Team/assembly-ticket-workflow-on-bulk-update-requests",
                   "latchel-admin/Data-Support-Team/assembly",
                   "latchel-admin/Data-Support-Team/calibration-guidelines-help-guide-audit",
