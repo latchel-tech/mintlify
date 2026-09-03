@@ -3,7 +3,7 @@ title: "How to: Run the CX Audits"
 ---
 
 <Note>
-  The purpose of this SOP is to provide a step-by-step guide for setting up the CX Audits project in Claude, running SMS and Email audits, and updating the project files and instructions when changes are required. Following this process helps ensure that audits are run consistently and that future prompt iterations are managed from a single source of truth.
+  The purpose of this SOP is to provide a step-by-step guide for setting up the CX Audits project in Claude, running SMS and Email audits, and updating the project files and instructions when changes are required. Following this process helps ensure that audits are run consistently and that future prompt iterations are managed from a single source of truth. 
 </Note>
 
 ### Prerequisites
@@ -35,7 +35,9 @@ e. Once the project has been created, go to **Google Drive** and download all of
 
 f. Create a folder on your computer using the same project name and save all downloaded files there.
 
-Keeping a local project folder is important because these files will be used in future iterations when Claude needs to make updates to the audit prompts or supporting documentation.
+<Check>
+  Keeping a local project folder is important because these files will be used in future iterations when Claude needs to make updates to the audit prompts or supporting documentation.
+</Check>
 
 g. Return to the Claude project. Under **Context**, upload all of the project files **except the Claude Project System Prompt file**.
 
@@ -43,11 +45,13 @@ h. Open the **Claude Project System Prompt** Markdown file. Copy the instruction
 
 i. Click **Share** and add the email address of the person who should have access to the project.
 
-Grant that person **Editor** access. Editor access allows them to view the project and its prompts as well as make adjustments when necessary.
+<Check>
+  Grant that person **Editor** access. Editor access allows them to view the project and its prompts as well as make adjustments when necessary.
+</Check>
 
-**⚠️ Important:** It is recommended that only **one person creates the project and uploads the project files**, then shares that project with the other team member.
-
-Avoid having multiple people create or maintain separate versions of the same CX Audits project. Doing so can result in two different Claude projects with different files or prompt versions, making future updates more difficult to manage.
+<Warning>
+  **Important:** It is recommended that only **one person creates the project and uploads the project files**, then shares that project with the other team member. Avoid having multiple people create or maintain separate versions of the same CX Audits project. Doing so can result in two different Claude projects with different files or prompt versions, making future updates more difficult to manage.
+</Warning>
 
 ---
 
@@ -64,13 +68,17 @@ For example:
 
 c. Claude will ask for the **auditor's name** and whether you want the audit results written directly into the audit sheet or returned in the chat.
 
-Whenever possible, have Claude **write the audit results directly into the sheet**. This is the recommended option because it helps reduce unnecessary delays and additional prompting.
+<Check>
+  Whenever possible, have Claude **write the audit results directly into the sheet**. This is the recommended option because it helps reduce unnecessary delays and additional prompting.
+</Check>
 
 d. Provide the requested information and allow Claude to proceed with the audit.
 
 Claude will review the applicable conversations or samples and complete the audit based on the project instructions.
 
-**⚠️ Important:** As with any AI tool, Claude may occasionally encounter inconsistencies or roadblocks while running an audit. For example, it may report that it cannot find a conversation, cannot see the required samples, or may stop to request additional information.
+<Warning>
+  **Important:** As with any AI tool, Claude may occasionally encounter inconsistencies or roadblocks while running an audit. For example, it may report that it cannot find a conversation, cannot see the required samples, or may stop to request additional information.
+</Warning>
 
 If Claude stops during the audit:
 
@@ -86,14 +94,12 @@ In most cases, this will resolve the issue and allow Claude to continue from whe
 
 a. Open the **CX Audits** project in Claude and start a **new chat in Cowork mode**.
 
-Upload the current project files stored in the local project folder on your computer.
+b. Upload the current project files stored in the local project folder on your computer. Explain the changes that need to be made and ask Claude to update the appropriate files and **save the updated versions when finished**.
 
-Explain the changes that need to be made and ask Claude to update the appropriate files and **save the updated versions when finished**.
+c. Once the changes are complete, return to the main Claude project.
 
-b. Once the changes are complete, return to the main Claude project.
+d. Remove the existing files from **Context** and replace them with the newly updated versions.
 
-Remove the existing files from **Context** and replace them with the newly updated versions.
-
-If the **Claude Project System Prompt** was updated, also replace the existing content in the project's **Instructions** field with the latest version from the updated Markdown file.
+e. If the **Claude Project System Prompt** was updated, also replace the existing content in the project's **Instructions** field with the latest version from the updated Markdown file.
 
 This ensures that the Claude project always uses the most current audit files and instructions.
