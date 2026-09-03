@@ -1,0 +1,99 @@
+---
+title: "How to: Run the CX Audits"
+---
+
+<Note>
+  The purpose of this SOP is to provide a step-by-step guide for setting up the CX Audits project in Claude, running SMS and Email audits, and updating the project files and instructions when changes are required. Following this process helps ensure that audits are run consistently and that future prompt iterations are managed from a single source of truth.
+</Note>
+
+### Prerequisites
+
+- Access to Claude with permission to create and share Projects.
+- Access to the Google Drive folder containing the CX Audit project files.
+- A local folder on your computer where the project files can be stored and maintained for future iterations.
+- The **Claude Project System Prompt** Markdown file containing the project instructions.
+
+## Step by Step
+
+### Step 1: Create the CX Audits Project in Claude
+
+a. Open **Claude**, navigate to **Projects**, and click **New Project**.
+
+b. In the **What are you working on?** field, enter the name of the project.
+
+For example: **CX Audits**
+
+c. You can leave the **What are you trying to achieve?** field blank.
+
+d. Under **Visibility**, select:
+
+**Private — Only invited members can view and use this project**
+
+Then click **Create Project**.
+
+e. Once the project has been created, go to **Google Drive** and download all of the CX Audit project files.
+
+f. Create a folder on your computer using the same project name and save all downloaded files there.
+
+Keeping a local project folder is important because these files will be used in future iterations when Claude needs to make updates to the audit prompts or supporting documentation.
+
+g. Return to the Claude project. Under **Context**, upload all of the project files **except the Claude Project System Prompt file**.
+
+h. Open the **Claude Project System Prompt** Markdown file. Copy the instructions from the file and paste them into the project's **Instructions** field.
+
+i. Click **Share** and add the email address of the person who should have access to the project.
+
+Grant that person **Editor** access. Editor access allows them to view the project and its prompts as well as make adjustments when necessary.
+
+**⚠️ Important:** It is recommended that only **one person creates the project and uploads the project files**, then shares that project with the other team member.
+
+Avoid having multiple people create or maintain separate versions of the same CX Audits project. Doing so can result in two different Claude projects with different files or prompt versions, making future updates more difficult to manage.
+
+---
+
+### Step 2: Run a CX Audit
+
+a. Open the **CX Audits** project in Claude and make sure the chat is running in **Cowork** mode.
+
+b. Start a **new chat** and tell Claude which audit you want it to run.
+
+For example:
+
+- **Run the SMS audit**
+- **Run the Email audit**
+
+c. Claude will ask for the **auditor's name** and whether you want the audit results written directly into the audit sheet or returned in the chat.
+
+Whenever possible, have Claude **write the audit results directly into the sheet**. This is the recommended option because it helps reduce unnecessary delays and additional prompting.
+
+d. Provide the requested information and allow Claude to proceed with the audit.
+
+Claude will review the applicable conversations or samples and complete the audit based on the project instructions.
+
+**⚠️ Important:** As with any AI tool, Claude may occasionally encounter inconsistencies or roadblocks while running an audit. For example, it may report that it cannot find a conversation, cannot see the required samples, or may stop to request additional information.
+
+If Claude stops during the audit:
+
+1. Review the question or issue Claude is reporting.
+2. Provide the requested information or clarification.
+3. Tell Claude to **continue the audit**.
+
+In most cases, this will resolve the issue and allow Claude to continue from where it stopped.
+
+---
+
+### Step 3: Update the CX Audits Prompt or Project Files
+
+a. Open the **CX Audits** project in Claude and start a **new chat in Cowork mode**.
+
+Upload the current project files stored in the local project folder on your computer.
+
+Explain the changes that need to be made and ask Claude to update the appropriate files and **save the updated versions when finished**.
+
+b. Once the changes are complete, return to the main Claude project.
+
+Remove the existing files from **Context** and replace them with the newly updated versions.
+
+If the **Claude Project System Prompt** was updated, also replace the existing content in the project's **Instructions** field with the latest version from the updated Markdown file.
+
+This ensures that the Claude project always uses the most current audit files and instructions.
