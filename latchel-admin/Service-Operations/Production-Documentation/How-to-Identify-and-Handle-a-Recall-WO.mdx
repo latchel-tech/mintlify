@@ -9,12 +9,10 @@ groups: ["latchel"]
   We want to prevent confusion, delays, and unnecessary costs when a maintenance issue reoccurs after a previous repair. The goal is to ensure that recall work orders are correctly identified and handled according to warranty terms and service provider agreements. This process matters for our customers and Latchel because it ensures residents get timely resolutions for recurring issues, avoids double-billing or dispatching, and maintains clear communication between residents, service providers, and property managers. By following this SOP, we reduce frustration, save time and money, and uphold Latchel’s standards for reliable service
 </Note>
 
-**Content**
-
 ## 🔄What is a Recall?
 
 <Warning>
-  This process is not applicable to Non-Emergency Autopilot WOs. Refer to [https://latchel.atlassian.net/wiki/spaces/OPS/pages/2999812097](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2999812097) on how to handle these types of requests.
+  This process is not applicable to Non-Emergency Autopilot WOs. Refer to [How to: Handle Autopilot WOs](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Autopilot-WOs#how-to-handle-autopilot-wos) on how to handle these types of requests.
 </Warning>
 
 A recall is when a previous issue was reported as fixed and the exact same issue reoccurs within a given period of time.
@@ -23,169 +21,129 @@ A recall is when a previous issue was reported as fixed and the exact same issue
 
 Once this requirement is met, the **final acceptance of a recall** will depend on the Service Provider’s diagnosis and any applicable warranty terms.
 
-For guidance on duplicates, refer to [https://latchel.atlassian.net/wiki/spaces/OPS/pages/778174469](https://latchel.atlassian.net/wiki/spaces/OPS/pages/778174469)
+For guidance on duplicates, refer to [(⛑EMERGENCY) How to: Handle Duplicate Work Orders](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/EMERGENCY-How-to-Handle-Duplicate-Work-Orders#emergency-how-to-handle-duplicate-work-orders)
 
 ## 📋 Step-by-step process
 
 <Warning>
-  For all confirmed recall requests where a new work order is created, ensure you follow the new additional step outlined inhttps://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-and-Handle-a-Recall-WO
+  For all confirmed recall requests where a new work order is created, ensure you follow the new additional step outlined in  [Step 4 - Adding the work orders (original and new) to a Project](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-and-Handle-a-Recall-WO#step-4-adding-the-work-orders-original-and-new-to-a-project)
 </Warning>
 
 The resident will report a maintenance issue via any inbound communication (e.g. SMS) or by submitting a new WO.
 
 **When a tenant reports an issue, first search for any existing or recently completed work orders related to the same problem at the property.**
 
-- If a related work order is found, proceed with the recall identification steps outlined in [Step 1](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-and-Handle-a-Recall-WO).
+- If a related work order is found, proceed with the recall identification steps outlined in [Step 1](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-and-Handle-a-Recall-WO#step-1-identify-if-the-issue-can-be-considered-as-recall).
 - If no related work order is found, this is not a recall.
-  - Create/handle the request as a **new work order** per the standard intake SOP (see [https://latchel.atlassian.net/wiki/spaces/OPS/pages/781647909](https://latchel.atlassian.net/wiki/spaces/OPS/pages/781647909))..
+  - Create/handle the request as a **new work order** per the standard intake SOP (see [How to: Create a New Work Order from "Incognito Mode" (All Submissions)](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Create-a-New-Work-Order-from-Incognito-Mode-All-Submissions#how-to-create-a-new-work-order-from-incognito-mode-all-submissions)
     - **Do not proceed to Step 2**; Step 2 only applies when a related, previously completed WO exists.
 
 ### Step 1 - Identify if the issue can be considered as recall
 
 1. Identify if the issue is a recall:
-2. If the issue is coming via inbound communication, understand what the resident is requesting.
-3. If a new WO was submitted, review the WO title, problem and description to understand what is being reported.
-4. Refer to [https://latchel.atlassian.net/wiki/spaces/LTG/pages/440074480](https://latchel.atlassian.net/wiki/spaces/LTG/pages/440074480)
-5. Navigate to the Property’s maintenance history.
-6. **📝 NOTE**\*: \*There are also cases when there are duplicate Work Orders that have already been archived. We may not be able to see this right away through the Property Maintenance tab but here is one way you can check for it. Refer to the guide on [How to Search for Archived Work Orders](https://latchel.atlassian.net/wiki/spaces/OPS/pages/759562243).
+   1. If the issue is coming via inbound communication, understand what the resident is requesting.
+   2. If a new WO was submitted, review the WO title, problem and description to understand what is being reported. Refer to [How to: Navigate the Work Order Interface](https://help.latchel.com/latchel-admin/Service-Operations/Latchel-Library/How-to-Navigate-the-Work-Order-Interface#how-to-navigate-the-work-order-interface)
+2. Navigate to the Property’s maintenance history.
+   1. **📝 NOTE**: There are also cases when there are duplicate Work Orders that have already been archived. We may not be able to see this right away through the Property Maintenance tab but here is one way you can check for it. Refer to the guide on [How to Search for Archived Work Orders](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-Finding-an-Existing-Work-Order-vs.-When-to-Create-a-new-Work-Order#how-to-search-for-archived-work-orders).
 7. Evaluate for WOs only in “Awaiting Invoice” or “Completed” status in the last 180 days (6 months).
-
-<Frame>
-  ![](/images/SVC-875.png)
-</Frame>
-
-1. Identify if the same issue had been reported and fixed before.
+4. Identify if the same issue had been reported and fixed before.
 
 ### Step 2 - Take action based on your review **(only if a related completed WO was found)**
 
 1. **If the same issue is being reported:**
-2. **Note: If you’re unsure if it’s the same issue or not, err on the side of considering it a recall.**
-3. Proceed as follows:
-4. Create a new Work Order. If one (new WO) already exists, please manage that Work Order instead.
-5. ⚠️ **Recall Exception — New WO Auto-Canceled as Resident Responsible** If the newly created work order is automatically classified as **Resident Responsible** by the PM's Intake Settings and canceled by the system, but the **Service Provider has already confirmed this is a recall**, refer to the guidelines in the FAQ section on how to handle this scenario.
-6. _Emergency severity:_
-7. Escalate to the emergency team
-8. Refer to [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-Between-Teams](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-Between-Teams)
-9. Proceed to[ Step 3 - Attempting to dispatch the same service provider](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-and-Handle-a-Recall-WO)
-10. _Non emergency severity:_
-11. Proceed to[ Step 3 - Attempting to dispatch the same service provider](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-and-Handle-a-Recall-WO)
+   1. **Note: If you’re unsure if it’s the same issue or not, err on the side of considering it a recall.**
+2. Create a new Work Order. If one (new WO) already exists, please manage that Work Order instead.
+   1. ⚠️**Recall Exception — New WO Auto-Canceled as Resident Responsible** If the newly created work order is automatically classified as **Resident Responsible** by the PM's Intake Settings and canceled by the system, but the **Service Provider has already confirmed this is a recall**, refer to the guidelines in the FAQ section on how to handle this scenario.
+   2. _Emergency severity:_
+      1. Escalate to the emergency team. Refer to [How to: Escalate Between Teams](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-Between-Teams)
+      2. Proceed to [Step 3 - Attempting to dispatch the same service provider](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-and-Handle-a-Recall-WO#step-3-attempting-to-dispatch-the-same-service-provider)
+   3. _Non emergency severity:_
+      1. Proceed to [Step 3 - Attempting to dispatch the same service provider](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-and-Handle-a-Recall-WO#step-3-attempting-to-dispatch-the-same-service-provider)
 
 ### Step 3 - Attempting to dispatch the same service provider
 
 1. Associates/Troubleshooter should attempt once to dispatch the same SP on the **new work order**.
-2. Call the SP to schedule a new appointment per emergency/non-emergency standards.
-3. **Emergencies: Say something like: _“We’re calling because we’ve been informed by the resident at \[property address\] that the \[issue\] you repaired on \[date of SP’s last visit\] has reoccurred. As you completed the work less than 180 days ago, we’re hoping that you’d be able to return to the job and see if this falls under warranty._**\* Would you happen to have availability for this today?”\*\*\*
-4. Refer to [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Emergency-Work-Orders](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Emergency-Work-Orders)
-5. **Non-emergencies:**\*\* Say something like\*\*: _“**We’re calling because we’ve been informed by the resident at \[property address\] that the \[issue\] you repaired on \[date of SP’s last visit\] has reoccurred. As you completed the work less than 180 days ago, we’re hoping that you’d be able to return to the job and see if this falls under warranty**._\*\*\*\*\* Would you happen to have availability to schedule this work order?”\*\*\*
-6. **The SP accepted the recall request and confirms a new appointment:**
-7. \*\*Add “(RECALL)” to the title of the \*\*\*\*\*new \*\*\***WO.**
-
-<Frame>
-  ![](/images/SVC-876.png)
-</Frame>
-
-2. Ensure the **new work order** severity is updated.
-3. Refer to Intake Settings for Harmonia customers - [https://latchel.atlassian.net/wiki/spaces/OPS/pages/3576627319](https://latchel.atlassian.net/wiki/spaces/OPS/pages/3576627319)
-4. Assign and Lock-in the Service Provider to the **new WO**.
-
-<Frame>
-  ![image-20241024-180055.png](/images/SVC-877.png)
-</Frame>
-
-5. Take action and update the \*\*new WO \*\*with the new appointment if the service provider confirms a schedule.
-
-<Frame>
-  ![](/images/SVC-878.png)
-</Frame>
-
-6. Ensure the resident is informed of the updates made to the work order to avoid confusion.
-7. **Say something like:** **“_We’re just letting you know we’ve \[action taken\] regarding your work order. This is to ensure the issue is handled efficiently. If anything has changed or you have more details to share, feel free to reach out—thank you!_”**
-8. Proceed to adding the work orders to a project.
-9. Refer to [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-and-Handle-a-Recall-WO](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-and-Handle-a-Recall-WO).
-10. **The SP accepted the recall request but could not confirm a new appointment:**
-11. \*\*Add “(RECALL)” to the title of the \*\*\*\*\*new \*\*\***WO.**
-
-<Frame>
-  ![](/images/SVC-876.png)
-</Frame>
-
-2. Ensure the **new work order** severity is updated.
-3. Refer to Intake Settings for Harmonia customers - [https://latchel.atlassian.net/wiki/spaces/OPS/pages/3576627319](https://latchel.atlassian.net/wiki/spaces/OPS/pages/3576627319)
-4. \*\*Emergencies: \*\*
-5. **_Issue IS property damaging or extreme habitability_**\*:\*
-6. Refer to [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs)
-7. If you’ve successfully reached the PM, follow their instructions. Refer to [this guide](https://latchel.atlassian.net/wiki/spaces/OPS/pages/786859062) if the PM wants to reassign.
-8. If the **PM is unresponsive**
-9. Escalate to the Operations Support Specialists, refer to [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-Between-Teams](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-Between-Teams), to update the \*\*new \*\*WO as follows:
-10. Move the WO to “Waiting for PM” status. Refer to [https://latchel.atlassian.net/wiki/spaces/OPS/pages/766378165](https://latchel.atlassian.net/wiki/spaces/OPS/pages/766378165)
-11. Fill out the task accordingly:
-12. Status: “Waiting for PM”
-13. Add a description of why you moved the WO to this status:\*\* \*\***_The resident reported an issue with a previously completed WO \[original work order\] which might be a recall, but the service provider \[can’t confirm an appointment\]. We need to escalate this to the Property Manager._**
-14. Select the SP as the contact.
-15. Date and time: No need to modify
-16. Task priority: No need to modify
-17. User group: Select the PM user group
-18. User: No need to modify
-19. When should this cancel: No need to modify
-20. Describe what is the action required from the PM. **_This work order was identified as a potential recall for \[original work order\], but the service provider \[can’t confirm an appointment within the required timeframe\]. Please advise if you would like us to reassign it to another service provider. Thank you._**
-21. \*\*\*Issue IS NOT property damaging or extreme habitability, \*\*\*move the new work order to Pending status and assign the task to the Property Manager with the same task description above.
-22. **Non-emergencies:** From the take action button, click “Reschedule This Work Order”.
-
-<Frame>
-  ![](/images/SVC-880.png)
-</Frame>
-
-5. Proceed to adding the work orders to a project.
-6. Refer to [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-and-Handle-a-Recall-WO](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-and-Handle-a-Recall-WO).
-7. **The Service Provider was responsive; however, recall status and appointment confirmation are pending further coordination with the resident, service manager, or technician.**
-8. **_Issue IS property damaging or extreme habitability_**\*:\*
-9. Refer to [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs)
-10. If you’ve successfully reached the PM, follow their instructions. Refer to [this guide](https://latchel.atlassian.net/wiki/spaces/OPS/pages/786859062) if the PM wants to reassign.
-11. If the **PM is unresponsive**
-12. Escalate to the Operations Support Specialists, refer to [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-Between-Teams](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-Between-Teams), to update the \*\*new \*\*WO as follows:
-13. Move the WO to “Waiting for PM” status. Refer to [https://latchel.atlassian.net/wiki/spaces/OPS/pages/766378165](https://latchel.atlassian.net/wiki/spaces/OPS/pages/766378165)
-14. Fill out the task accordingly:
-15. Status: “Waiting for PM”
-16. Add a description of why you moved the WO to this status:\*\* \*\***_The resident reported an issue related to a previously completed work order, which may qualify as a recall. Although the service provider responded to our follow-up attempt, they are unable to confirm whether this is a recall or schedule a return visit at this time, as they first need to coordinate with the technician and/or service manager._**
-17. Select the SP as the contact.
-18. Date and time: No need to modify
-19. Task priority: No need to modify
-20. User group: Select the PM user group
-21. User: No need to modify
-22. When should this cancel: No need to modify
-23. Describe what is the action required from the PM. **_This work order was identified as a potential recall for \[original work order\], but the service provider \[can’t confirm an appointment within the required timeframe\]. Although the service provider responded to our follow-up attempt, they are unable to confirm whether this is a recall or schedule a return visit at this time, as they first need to coordinate with the technician and/or service manager._** **_Please advise if you would like us to reassign it to another service provider. Thank you._**
-24. \*\*\*Issue IS NOT property damaging or extreme habitability, \*\*\*
-25. Create a follow-up task for the service provider to confirm whether the work order is a recall. Refer to:[Job Aid: What is a task?https://latchel.atlassian.net/wiki/spaces/OPS/pages/2528083973](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2528083973)
-26. **📝** **Note:** Do not update the work order title unless the recall has been confirmed.
-27. If the Service Provider confirmed during the follow-up call that it’s a recall, update the work order title and proceed to Step 4 to add it to a project. Refer to\*\* [**Handling Recall Requests After Provider Confirmation**](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-and-Handle-a-Recall-WO).\*\*
-28. If the service provider becomes unresponsive to follow-up attempts, proceed to the instructions outlined below for an unresponsive SP.
-29. **The Service Provider is unresponsive:**
-30. **NOTE: Do not update the work order title unless it is a confirmed recall. If the service provider later on responds and confirms it, you may then update the work order title and proceed to Step 4 to add it to a project. Refer to [Handling Recall Requests After Provider Confirmation](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-and-Handle-a-Recall-WO).**
-31. **_Issue IS property damaging or extreme habitability_**\*:\*
-32. Refer to [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs)
-33. If you’ve successfully reached the PM, follow their instructions. Refer to [this guide](https://latchel.atlassian.net/wiki/spaces/OPS/pages/786859062) if the PM wants to reassign.
-34. If the **PM is unresponsive**
-35. Escalate to the Operations Support Specialists, refer to [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-Between-Teams](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-Between-Teams), to update the \*\*new \*\*WO as follows:
-36. Move the WO to “Waiting for PM” status. Refer to [https://latchel.atlassian.net/wiki/spaces/OPS/pages/766378165](https://latchel.atlassian.net/wiki/spaces/OPS/pages/766378165)
-37. Fill out the task accordingly:
-38. Status: “Waiting for PM”
-39. Add a description of why you moved the WO to this status: **_The resident reported an issue with a previously completed WO \[original work order\] which might be a recall, but the service provider is unresponsive. We need to escalate this to the Property Manager._**
-40. Select the SP as the contact.
-41. Date and time: No need to modify
-42. Task priority: No need to modify
-43. User group: Select the PM user group
-44. User: No need to modify
-45. When should this cancel: No need to modify
-46. Describe what is the action required from the PM. **_This work order was identified as a potential recall for \[original work order\], but the service provider is unresponsive. Please advise if you would like us to reassign it to another service provider. Thank you._**
-47. \*\*\*Issue IS NOT property damaging or extreme habitability, \*\*\*move the new work order to Pending status and assign the task to the Property Manager with the same task description above.
-48. Send a text message or email to the Service Provider letting them know that the WO is a recall:
-49. **Say something like:** \*\*“\*\***_Hello \[SP name\]! We’ve been informed by the resident at \[property address\] that the \[issue\] you repaired on \[date of SP’s last visit\] has reoccurred. As you completed work order # \[insert WO # here\] less than 6 months ago, we’re hoping that you’d be able to return to the job and see if this falls under warranty. A new work order \[new work order number\] has been submitted for this recall request. Would you happen to have availability for this on \[insert resident’s availability windows\]? Please let us know if the job doesn’t fall under warranty or if we can help you with anything else. Have a great day!”_**
-50. Refer to [https://latchel.atlassian.net/wiki/spaces/OPS/pages/2028634993](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2028634993)
-51. Ensure the resident is informed of the updates made to the work order to avoid confusion.
-52. **Say something like:** **“_We’re just letting you know we’ve \[action taken\] regarding your work order. This is to ensure the issue is handled efficiently. If anything has changed or you have more details to share, feel free to reach out—thank you!_”**
+   1. Call the SP to schedule a new appointment per emergency/non-emergency standards.
+   2. **Emergencies: Say something like: _“We’re calling because we’ve been informed by the resident at (property address) that the (issue) you repaired on (date of SP’s last visit) has reoccurred. As you completed the work less than 180 days ago, we’re hoping that you’d be able to return to the job and see if this falls under warranty._** Would you happen to have availability for this today?”. Refer to [How to: Handle Emergency Work Orders](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Emergency-Work-Orders)
+   3. **Non-emergencies:**  Say something like: _“**We’re calling because we’ve been informed by the resident at (property address) that the (issue) you repaired on (date of SP’s last visit) has reoccurred. As you completed the work less than 180 days ago, we’re hoping that you’d be able to return to the job and see if this falls under warranty**._ **_Would you happen to have availability to schedule this work order?”_**
+2. **The SP accepted the recall request and confirms a new appointment:**
+   1. Add “(RECALL)” to the title of the new **WO.**
+   2. Ensure the **new work order** severity is updated. See [**Service Ops: Handling Work Order Severity via Harmonia & Harmonia X Intake Settings.**](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Service-Ops-Handling-Work-Order-Severity-via-Harmonia-Harmonia-X-Intake-Settings#harmonia-x-overview)
+   3. Assign and Lock-in the Service Provider to the **new WO**.
+   4. Take action and update the new WO with the new appointment if the service provider confirms a schedule.
+   5. Ensure the resident is informed of the updates made to the work order to avoid confusion.
+   6. **Say something like:** **“_We’re just letting you know we’ve (action taken) regarding your work order. This is to ensure the issue is handled efficiently. If anything has changed or you have more details to share, feel free to reach out—thank you!_”**
+   7. Proceed to adding the work orders to a project. Refer to [Step 4 - Adding the work orders (original and new) to a Project](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-and-Handle-a-Recall-WO#step-4-adding-the-work-orders-original-and-new-to-a-project).
+3. **The SP accepted the recall request but could not confirm a new appointment:**
+   1. Add “(RECALL)” to the title of the new **WO.**
+   2. Ensure the **new work order** severity is updated. Refer to [**Service Ops: Handling Work Order Severity via Harmonia & Harmonia X Intake Settings.**](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Service-Ops-Handling-Work-Order-Severity-via-Harmonia-Harmonia-X-Intake-Settings#harmonia-x-overview)
+   3. **Emergencies**:
+      1. **_Issue IS property damaging or extreme habitability_**: See  [Job Aid: PM Outbound Communication for Emergency WOs](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs)
+         1. If you’ve successfully reached the PM, follow their instructions. Refer to [this guide](https://latchel.atlassian.net/wiki/spaces/OPS/pages/786859062) if the PM wants to reassign.
+         2. If the **PM is unresponsive**
+            1. Escalate to the Operations Support Specialists, refer to [How to: Escalate Between Teams](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-Between-Teams), to update the new WO as follows:
+            2. Move the WO to “Waiting for PM” status. Refer to [https://latchel.atlassian.net/wiki/spaces/OPS/pages/766378165](https://latchel.atlassian.net/wiki/spaces/OPS/pages/766378165)
+            3. Fill out the task accordingly:
+               1. Status: “Waiting for PM”
+               2. Add a description of why you moved the WO to this status: **_The resident reported an issue with a previously completed WO (original work order) which might be a recall, but the service provider (can’t confirm an appointment). We need to escalate this to the Property Manager._**
+               3. Select the SP as the contact.
+               4. Date and time: No need to modify
+               5. Task priority: No need to modify
+               6. User group: Select the PM user group
+               7. User: No need to modify
+               8. When should this cancel: No need to modify
+               9. Describe what is the action required from the PM. **_This work order was identified as a potential recall for (original work order), but the service provider (can’t confirm an appointment within the required timeframe). Please advise if you would like us to reassign it to another service provider. Thank you._**
+      2. Issue IS NOT property damaging or extreme habitability, move the new work order to Pending status and assign the task to the Property Manager with the same task description above.
+   4. **Non-emergencies:** From the take action button, click “Reschedule This Work Order”.
+   5. Proceed to adding the work orders to a project. Refer to [Step 4 - Adding the work orders (original and new) to a Project](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-and-Handle-a-Recall-WO#step-4-adding-the-work-orders-original-and-new-to-a-project).
+4. **The Service Provider was responsive; however, recall status and appointment confirmation are pending further coordination with the resident, service manager, or technician.**
+   1. **_Issue IS property damaging or extreme habitability_**: Refer to [Job Aid: PM Outbound Communication for Emergency WOs](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs)
+      1. If you’ve successfully reached the PM, follow their instructions. Refer to [this guide](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Reassign-a-Service-Provider#how-to-reassign-a-service-provider) if the PM wants to reassign.
+      2. If the **PM is unresponsive**
+         1. Escalate to the Operations Support Specialists, refer to [How to: Escalate Between Teams](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-Between-Teams), to update the new WO as follows:
+         2. Move the WO to “Waiting for PM” status. Refer to [How to: Put a Job on Hold](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Put-a-Job-on-Hold#how-to-put-a-job-on-hold)
+         3. Fill out the task accordingly:
+            1. Status: “Waiting for PM”
+            2. Add a description of why you moved the WO to this status: **_The resident reported an issue related to a previously completed work order, which may qualify as a recall. Although the service provider responded to our follow-up attempt, they are unable to confirm whether this is a recall or schedule a return visit at this time, as they first need to coordinate with the technician and/or service manager._**
+            3. Select the SP as the contact.
+            4. Date and time: No need to modify
+            5. Task priority: No need to modify
+            6. User group: Select the PM user group
+            7. User: No need to modify
+            8. When should this cancel: No need to modify
+            9. Describe what is the action required from the PM. **_This work order was identified as a potential recall for (original work order), but the service provider (can’t confirm an appointment within the required timeframe). Although the service provider responded to our follow-up attempt, they are unable to confirm whether this is a recall or schedule a return visit at this time, as they first need to coordinate with the technician and/or service manager._** **_Please advise if you would like us to reassign it to another service provider. Thank you._**
+   2. **_Issue IS NOT property damaging or extreme habitability,_**
+      1. Create a follow-up task for the service provider to confirm whether the work order is a recall. Refer to: [Job Aid: What is a task](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-What-is-a-task#job-aid-what-is-a-task)
+      2. **📝** **Note:** Do not update the work order title unless the recall has been confirmed.
+      3. If the Service Provider confirmed during the follow-up call that it’s a recall, update the work order title and proceed to Step 4 to add it to a project. Refer to [**Handling Recall Requests After Provider Confirmation**](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-and-Handle-a-Recall-WO).
+5. **The Service Provider is unresponsive:**
+   1. **NOTE: Do not update the work order title unless it is a confirmed recall. If the service provider later on responds and confirms it, you may then update the work order title and proceed to Step 4 to add it to a project. Refer to [Handling Recall Requests After Provider Confirmation](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-and-Handle-a-Recall-WO).**
+   2. **_Issue IS property damaging or extreme habitability_**:
+      1. Refer to [Job Aid: PM Outbound Communication for Emergency WOs](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs)
+      2. If you’ve successfully reached the PM, follow their instructions. Refer to [this guide](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Reassign-a-Service-Provider#how-to-reassign-a-service-provider) if the PM wants to reassign.
+      3. If the **PM is unresponsive**
+         1. **Call the PM** using the following script:
+            1. _"Hi, (Escalation Contact name)! This is (your name) calling from Latchel regarding WO number (WO #) at (property address, including unit #) for a (brief WO description) issue. This is a recall of a previously completed job, and it's been (time since first contact) since we first reached out to the original service provider — they haven't responded yet, but they can still call back and accept while we look for another SP. Since this is a Property Damage/Extreme Habitability situation, we're moving forward to source a replacement provider now so there's no further delay to the resident. We just wanted to keep you informed — please let us know if you'd like us to handle this differently."_
+         2. Do not build in a fixed wait time before making this call — the elapsed time referenced is simply how long it's actually been since the first attempt.
+         3. **Do not move the WO to "Waiting for PM."** Instead, escalate to the Operations Support Specialists [How to: Escalate Between Teams](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-Between-Teams#how-to-escalate-between-teams) to create a task assigned to the PM:
+            1. Select the SP as the contact.
+            2. Date and time: No need to modify
+            3. Task priority: No need to modify
+            4. User group: Select the PM user group
+            5. User: No need to modify
+            6. When should this cancel: No need to modify
+            7. Describe what is the action required from the PM: _"The resident reported an issue with a previously completed WO (original work order) which might be a recall. The service provider was unresponsive after escalation. Since this is a Property Damage/Extreme Habitability situation, we're proceeding to source a replacement provider now to avoid further delay. The original provider can still call back and accept while we look for another SP. We wanted to keep you informed — no action is needed from you unless you'd like something different."_
+         4. **Continue sourcing and dispatching a replacement service provider** — do not wait for the PM's response. Refer to [(EMERGENCY) How to: Assign a Preferred + Latchel Network Service Provider](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/EMERGENCY-How-to-Assign-a-Preferred-Latchel-Network-Service-Provider#emergency-how-to-assign-a-preferred-latchel-network-service-provider). If sourcing is ultimately unsuccessful, follow the standard "unable to source a service provider" handling in that SOP.
+         5. **If the original SP calls back and accepts before a replacement is confirmed:** stop sourcing, assign the original SP back to the WO, and update the WO notes and PM task to reflect that the original vendor has reaccepted.
+   3. **_Issue IS NOT property damaging or extreme habitability_**, move the new work order to Pending status and assign the task to the Property Manager with the same task description above.
+   4. Send a text message or email to the Service Provider letting them know that the WO is a recall:
+      1. **Say something like:** “**_Hello (SP name)! We’ve been informed by the resident at (property address) that the (issue) you repaired on (date of SP’s last visit) has reoccurred. As you completed work order # (insert WO # here) less than 6 months ago, we’re hoping that you’d be able to return to the job and see if this falls under warranty. A new work order (new work order number) has been submitted for this recall request. Would you happen to have availability for this on (insert resident’s availability windows)? Please let us know if the job doesn’t fall under warranty or if we can help you with anything else. Have a great day!”_**
+      2. Refer to [Job-Aid: Guide to write SMS/Webchat or email to customers](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-Guide-to-write-SMS-Webchat-or-email-to-customers#job-aid-guide-to-write-sms-webchat-or-email-to-customers)
+   5. Ensure the resident is informed of the updates made to the work order to avoid confusion.
+      1. **Say something like:** **“_We’re just letting you know we’ve (action taken) regarding your work order. This is to ensure the issue is handled efficiently. If anything has changed or you have more details to share, feel free to reach out—thank you!_”**
 
 <Warning>
-  Add a note to the \*\*original/old \*\*work order stating that a new work order has been submitted in response to the resident’s report, and that all updates should be referenced in the new work order.
+  Add a note to the original/old work order stating that a new work order has been submitted in response to the resident’s report, and that all updates should be referenced in the new work order.
 </Warning>
 
 ### **Step 4 - Adding the work orders (original and new) to a Project**
@@ -201,38 +159,35 @@ To ensure proper tracking and visibility, create a project that contains both th
 </Warning>
 
 1. **Ops associates should create the project and add both work orders (original and new recall) to it.**
-2. Navigate to the **PM's Company Profile** in the Latchel Console.
-3. Click on the **"Projects"** tab.
-4. Create a new project for the recall if neither work order is already in a project. Use a clear name (e.g., “Recall – \[Service Provider Name\] – \[Maintenance Issue\]”).
-
-<Frame>
-  ![image-20260628-125039.png](/images/SVC-881.png)
-</Frame>
-
-4. Fill out the required information by associating the property address.
-
-<Frame>
-  ![image-20260628-125142.png](/images/SVC-882.png)
-</Frame>
-
-5. Select “Maintenance”.
-
-<Frame>
-  ![image-20260628-125223.png](/images/SVC-883.png)
-</Frame>
-
-6. Enter the project name using the naming convention: **"Recall – \[Service Provider Name\] – \[Maintenance Issue\]"**
-7. **Add both work orders to the project**
-8. Include the original work order and the newly created recall work order.
-9. **Document the action**
-10. Add a note in both work orders indicating that a project was created for recall handling and that both WOs have been linked.
+   1. Navigate to the **PM's Company Profile** in the Latchel Console.
+   2. Click on the **"Projects"** tab.
+   3. Create a new project for the recall if neither work order is already in a project. Use a clear name (e.g., “Recall – (Service Provider Name) – (Maintenance Issue)”). 1.
+      <img
+        src="/images/download-(49).png"
+        alt="Download (49)"
+        title="Download (49)"
+        style={{ width:"56%" }}
+      />
+   4. Fill out the required information by associating the property address. 1.
+      <img
+        src="/images/download-(50).png"
+        alt="Download (50)"
+        title="Download (50)"
+        style={{ width:"62%" }}
+      />
+   5. Select “Maintenance”.
+   6. Enter the project name using the naming convention: **"Recall – (Service Provider Name) – (Maintenance Issue)"**
+2. **Add both work orders to the project**
+   1. Include the original work order and the newly created recall work order.
+3. **Document the action**
+   1. Add a note in both work orders indicating that a project was created for recall handling and that both WOs have been linked.
 
 ### **🤝How to handle recalls for LVN SPs?**
 
 <Note>
   **Internal Note:** Latchel Vendor Network (LVN) partners hold exclusive agreements with Latchel. It’s important to note that these agreements involve large parent companies **that hire subcontractor technicians to perform job tasks.**
 
-  Learn more about Latchel’s Vendor Network [here](https://latchel.atlassian.net/wiki/spaces/PROD/pages/2978775044).
+  Learn more about Latchel’s Vendor Network [here](https://help.latchel.com/latchel-admin/Product-Engineering/latchel-vendor-network-faqs#latchel-vendor-network-faqs).
 </Note>
 
 <Warning>
@@ -240,42 +195,42 @@ To ensure proper tracking and visibility, create a project that contains both th
 </Warning>
 
 1. **Latchel Agent triggers the recall process or the PM wants a recall for a job assigned to an LVN company without changing the company or technician:**
-2. Proceed to follow the procedure outlined above, in the main section of this document.
-3. If the LVN company is unresponsive/declines the recall:
-4. **Note: Keep the current status of the work order.**
-5. Create a summary of your findings indicating that a recall request was initiated however the LVN company was unresponsive/declined the request.
-6. Escalate to Operations Support Specialists. Refer to [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-Between-Teams](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-Between-Teams).
-7. Operations Support Specialists will cater to the request from here and provide instructions to the associates if necessary. Refer to [https://latchel.atlassian.net/wiki/spaces/OPS/pages/edit-v2/3203203103#Operations-Support-Escalation-to-LVN-SP%E2%80%99s-channel](https://latchel.atlassian.net/wiki/spaces/OPS/pages/edit-v2/3203203103#Operations-Support-Escalation-to-LVN-SP%E2%80%99s-channel).
-8. **The LVN Service Provider advised that they need a new work order for recall:**
-9. **Confirm Recall Eligibility**
-10. Verify that the issue qualifies as a recall (i.e., it is the same issue and within 180 days of the original completed work order).
-11. **Create a New Work Order**
-12. Add “(RECALL)” to the title of the new WO.
-13. Clearly note in the new work order that this is a recall for a previously completed job (reference the original WO number).
-14. **Set Approved Budget to \$0**
-15. Update the approved budget for the new recall work order to \$1, as recalls are covered under warranty by LVN partners.
-16. **‼️IMPORTANT:** Add a note that if the service provider determines the issue is not a recall (e.g., it’s a new or unrelated problem), a dispatch fee or additional charges may apply.
-17. **Owner/PM Notification and Approval**
-18. If the new work order status is “Needs Owner Approval,” contact the owner/PM to:
-19. Inform them that a recall is being scheduled at \$1 budget.
-20. Explain that if the service provider finds the issue is not a recall, they may request approval for a dispatch fee or additional work.
-21. Obtain explicit approval before proceeding, if required by the system or PM settings.
-22. **Say something like:** \*\*“\*\***_Hi \[Owner/PM Name\]. We are scheduling a recall visit with \[Service Provider Name\] for the issue at \[property address\].The recall work order has been created with a \$1 approved budget, as warranty terms typically apply. Since the service provider will be returning to the property, if they determine on-site that the issue is not related to the original repair (i.e., it is not a recall), they may charge a visit or dispatch fee for their time. Any additional work or charges beyond the visit fee will not be authorized without your explicit approval. Please let us know if you have any questions or concerns before we proceed. Thank you for helping us ensure a smooth and transparent process!”_**
-23. **Service Provider Communication**
-24. When dispatching the LVN service provider, clearly communicate:
-25. This is a recall visit and should be billed at \$1 unless it is determined not to be a recall.
-26. They must contact Latchel/PM for approval before performing any work that would require a budget or incur charges.
-27. **Say something like**: \*\*“\*\***_Hi \[Service Provider Name\]. This is a recall visit for the issue at \[property address\], related to the original work order completed within the last 180 days. The approved budget for this recall is \$1, as warranty terms apply. Please do not perform any additional work or incur any charges without first contacting us for explicit approval. Thank you for your partnership and for helping us ensure a smooth process for our customers!”_**
-28. **Documentation**
-29. Document all communications with the owner/PM and service provider in the work order notes.
-30. Note the recall status, budget set to \$1, and any instructions or approvals received.
-31. If the Issue is a Recall and a new work order is created, proceed with the steps below → [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-and-Handle-a-Recall-WO](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-and-Handle-a-Recall-WO).
-32. **If the Issue is Not a Recall**
-33. If the service provider determines on-site that the issue is not a recall:
-34. They must notify Latchel before proceeding with any billable work.
-35. Latchel will contact the owner/PM for approval of any new charges or dispatch fees.
+   1. Proceed to follow the procedure outlined above, in the main section of this document.
+   2. If the LVN company is unresponsive/declines the recall:
+      1. **Note: Keep the current status of the work order.**
+   3. Create a summary of your findings indicating that a recall request was initiated however the LVN company was unresponsive/declined the request.
+   4. Escalate to Operations Support Specialists. Refer to [How to: Escalate Between Teams](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-Between-Teams).
+   5. Operations Support Specialists will cater to the request from here and provide instructions to the associates if necessary. Refer to [Handling Work Orders Assigned to LVN Service Providers](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Handling-Work-Orders-Assigned-to-LVN-Service-Providers#handling-work-orders-assigned-to-lvn-service-providers).
+2. **The LVN Service Provider advised that they need a new work order for recall:**
+   1. **Confirm Recall Eligibility**
+      1. Verify that the issue qualifies as a recall (i.e., it is the same issue and within 180 days of the original completed work order).
+   2. **Create a New Work Order**
+      1. Add “(RECALL)” to the title of the new WO.
+      2. Clearly note in the new work order that this is a recall for a previously completed job (reference the original WO number).
+   3. **Set Approved Budget to \$1**
+      1. Update the approved budget for the new recall work order to \$1, as recalls are covered under warranty by LVN partners.
+      2. **‼️IMPORTANT:** Add a note that if the service provider determines the issue is not a recall (e.g., it’s a new or unrelated problem), a dispatch fee or additional charges may apply.
+   4. **Owner/PM Notification and Approval**
+      1. If the new work order status is “Needs Owner Approval,” contact the owner/PM to:
+         1. Inform them that a recall is being scheduled at \$1 budget.
+         2. Explain that if the service provider finds the issue is not a recall, they may request approval for a dispatch fee or additional work.
+         3. Obtain explicit approval before proceeding, if required by the system or PM settings.
+            1. **Say something like:** “**_Hi (Owner/PM Name). We are scheduling a recall visit with (Service Provider Name) for the issue at (property address).The recall work order has been created with a \$1 approved budget, as warranty terms typically apply. Since the service provider will be returning to the property, if they determine on-site that the issue is not related to the original repair (i.e., it is not a recall), they may charge a visit or dispatch fee for their time. Any additional work or charges beyond the visit fee will not be authorized without your explicit approval. Please let us know if you have any questions or concerns before we proceed. Thank you for helping us ensure a smooth and transparent process!”_**
+   5. **Service Provider Communication**
+      1. When dispatching the LVN service provider, clearly communicate:
+         1. This is a recall visit and should be billed at \$1 unless it is determined not to be a recall.
+         2. They must contact Latchel/PM for approval before performing any work that would require a budget or incur charges.
+         3. **Say something like**: “**_Hi (Service Provider Name). This is a recall visit for the issue at (property address), related to the original work order completed within the last 180 days. The approved budget for this recall is \$1, as warranty terms apply. Please do not perform any additional work or incur any charges without first contacting us for explicit approval. Thank you for your partnership and for helping us ensure a smooth process for our customers!”_**
+   6. **Documentation**
+      1. Document all communications with the owner/PM and service provider in the work order notes.
+         1. Note the recall status, budget set to \$1, and any instructions or approvals received.
+   7. If the Issue is a Recall and a new work order is created, proceed with the steps below → [Step 4 - Adding the work orders (original and new) to a Project](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Identify-and-Handle-a-Recall-WO#step-4-adding-the-work-orders-original-and-new-to-a-project).
+   8. **If the Issue is Not a Recall**
+      1. If the service provider determines on-site that the issue is not a recall:
+         1. They must notify Latchel before proceeding with any billable work.
+         2. Latchel will contact the owner/PM for approval of any new charges or dispatch fees.
 
-For other LVN-related concerns, Refer to [https://latchel.atlassian.net/wiki/spaces/OPS/pages/3203203103](https://latchel.atlassian.net/wiki/spaces/OPS/pages/3203203103).
+For other LVN-related concerns, Refer to [Handling Work Orders Assigned to LVN Service Providers](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Handling-Work-Orders-Assigned-to-LVN-Service-Providers#handling-work-orders-assigned-to-lvn-service-providers).
 
 ### **📋How to handle recall requests when the issue was previously managed by the PM?**
 
@@ -287,25 +242,25 @@ For other LVN-related concerns, Refer to [https://latchel.atlassian.net/wiki/spa
 
 1. Keep the new WO or if no new one is existing, create one.
 2. Proceed to escalate to the PM to confirm next steps:
-3. **_Issue IS property damaging or extreme habitability_**\*:\*
-4. Refer to [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs)
-5. If you’ve successfully reached the PM, follow their instructions.
-6. Refer to [this guide](https://latchel.atlassian.net/wiki/spaces/OPS/pages/786859062) if the PM wants to reassign.
-7. If the **PM is unresponsive**
-8. Escalate to the Operations Support Specialists, refer to [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-Between-Teams](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-Between-Teams), to update the \*\*new \*\*WO as follows:
-9. Move the WO to “Waiting for PM” status. Refer to [https://latchel.atlassian.net/wiki/spaces/OPS/pages/766378165](https://latchel.atlassian.net/wiki/spaces/OPS/pages/766378165)
-10. Fill out the task accordingly:
-11. Status: “Waiting for PM”
-12. Add a description of why you moved the WO to this status: **_The resident reported an issue related to a previously completed work order that may qualify as a recall. Since the original work was handled by the Property Manager, we are escalating this concern to confirm the next steps._**
-13. Select the SP as the contact.
-14. Date and time: No need to modify
-15. Task priority: No need to modify
-16. User group: Select the PM user group
-17. User: No need to modify
-18. When should this cancel: No need to modify
-19. Describe what is the action required from the PM. **_This work order has been identified as a potential recall for the original work order \[work order number\], which was previously managed by your team. Please advise on how you would like us to proceed or if you prefer that we reassign this to another service provider. Thank you._**
-20. \*\*\*Issue IS NOT property damaging or extreme habitability, \*\*\*move the new work order to Pending status and assign the task to the Property Manager with the same task description above.
-21. When contacting the Property Manager or creating a task, clearly indicate that the issue **may qualify as a recall**. Since the original work order was **PM-managed**, forward the request to the Property Manager so they can coordinate with the original service provider or advise if they prefer reassignment. Proceed based on their direction.
+   1. **_Issue IS property damaging or extreme habitability_**:
+      1. Refer to [Job Aid: PM Outbound Communication for Emergency WOs](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-PM-Outbound-Communication-for-Emergency-WOs)
+         1. If you’ve successfully reached the PM, follow their instructions.
+         2. Refer to [this guide](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Reassign-a-Service-Provider#how-to-reassign-a-service-provider) if the PM wants to reassign.
+      2. If the **PM is unresponsive**
+         1. Escalate to the Operations Support Specialists, refer to [How to: Escalate Between Teams](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Escalate-Between-Teams), to update the new WO as follows:
+            1. Move the WO to “Waiting for PM” status. Refer to [How to: Put a Job on Hold](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Put-a-Job-on-Hold#how-to-put-a-job-on-hold)
+         2. Fill out the task accordingly:
+            1. Status: “Waiting for PM”
+            2. Add a description of why you moved the WO to this status: **_The resident reported an issue related to a previously completed work order that may qualify as a recall. Since the original work was handled by the Property Manager, we are escalating this concern to confirm the next steps._**
+            3. Select the SP as the contact.
+            4. Date and time: No need to modify
+            5. Task priority: No need to modify
+            6. User group: Select the PM user group
+            7. User: No need to modify
+            8. When should this cancel: No need to modify
+            9. Describe what is the action required from the PM. **_This work order has been identified as a potential recall for the original work order (work order number), which was previously managed by your team. Please advise on how you would like us to proceed or if you prefer that we reassign this to another service provider. Thank you._**
+   2. **_Issue IS NOT property damaging or extreme habitability_**, move the new work order to Pending status and assign the task to the Property Manager with the same task description above.
+   3. When contacting the Property Manager or creating a task, clearly indicate that the issue **may qualify as a recall**. Since the original work order was **PM-managed**, forward the request to the Property Manager so they can coordinate with the original service provider or advise if they prefer reassignment. Proceed based on their direction.
 22. If the Property Manager **confirms the issue is a recall**, update the work order title to include **“Recall”** and add the work order to a project. This applies **regardless of whether the PM explicitly confirms that the same service provider will be dispatched**.
 23. If the Property Manager **does not confirm recall status** or does not clarify whether the same service provider will be used, **do not assume it is a recall**. In these cases, continue forwarding the request and allow the PM to coordinate directly, proceeding based on their instruction once provided. 
 24. If this isn’t a recall, proceed with handling the issue as a newly reported one.
@@ -319,67 +274,55 @@ For other LVN-related concerns, Refer to [https://latchel.atlassian.net/wiki/spa
 </Warning>
 
 1. Contact the SP to gather information as to why it is not a recall.
-2. Leave detailed notes on the WO.
-3. Refer to [https://latchel.atlassian.net/wiki/spaces/OPS/pages/1058211367](https://latchel.atlassian.net/wiki/spaces/OPS/pages/1058211367)
+2. Leave detailed notes on the WO. Refer to [How to: Write Effective Notes](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Write-Effective-Notes#how-to-write-effective-notes)
 4. Ask the SP if they would be able to fix the new issue.
-5. Treat the issue as a separate problem and create a new WO:
-6. Refer to [https://latchel.atlassian.net/wiki/spaces/OPS/pages/781647909](https://latchel.atlassian.net/wiki/spaces/OPS/pages/781647909)
+5. Treat the issue as a separate problem and create a new WO. Refer to [How to: Create a New Work Order from "Incognito Mode" (All Submissions)](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Create-a-New-Work-Order-from-Incognito-Mode-All-Submissions#how-to-create-a-new-work-order-from-incognito-mode-all-submissions)
 7. While creating the new WO, add the information provided by the SP in the previous steps explaining that the issue was not a recall.
 8. **If the same SP can go to the property,** assign them to the WO and schedule an appointment.
-9. Emergency severity:
-10. Refer to [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Emergency-Work-Orders](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Emergency-Work-Orders) for how to handle the WO and appropriate appointment timeframes.
-11. _Non emergency severity:_
-12. Let the automation of the system handle the Work Order.
-13. **If the same SP can’t go to the property**
-14. Follow the steps for handling work orders that are **not considered a recall**.
-15. **If the SP determines the new issue was caused by the resident** (e.g., resident damaged a pipe, misuse of appliance, etc.):
-16. Document the SP's findings on the WO, including specifics of the damage and how the SP determined it was caused by the resident.
-
-- Refer to [https://latchel.atlassian.net/wiki/spaces/OPS/pages/1058211367](https://latchel.atlassian.net/wiki/spaces/OPS/pages/1058211367)
-
-2. Check the PM's Intake Settings for the new issue type.
-
-- Refer to [https://latchel.atlassian.net/wiki/spaces/OPS/pages/3576627319](https://latchel.atlassian.net/wiki/spaces/OPS/pages/3576627319)
-
-3. Apply the appropriate outcome based on Intake Settings:
-
-- **If Intake Settings indicate "Stop: Resident Responsible":** Follow the Resident Responsible WO SOP.
-- **If Intake Settings indicate a different severity or no rules match:** Escalate to the PM with a task documenting the SP's findings that the damage was resident-caused. **Do not proceed with repairs without PM direction**, as responsibility and billing may need to be determined first.
-  - Task Description: _"The service provider visited \[property address\] for \[original issue/recall\] and determined that \[describe new issue\] was caused by the resident. \[Include SP's specific findings\]. Please advise on how you would like us to proceed with this resident-caused issue."_
+   1. Emergency severity:
+      1. Refer to [How to: Handle Emergency Work Orders](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Emergency-Work-Orders) for how to handle the WO and appropriate appointment timeframes.
+   2. _Non emergency severity:_
+      1. Let the automation of the system handle the Work Order.
+9. **If the same SP can’t go to the property**
+   1. Follow the steps for handling work orders that are **not considered a recall**.
+10. **If the SP determines the new issue was caused by the resident** (e.g., resident damaged a pipe, misuse of appliance, etc.):
+    1. Document the SP's findings on the WO, including specifics of the damage and how the SP determined it was caused by the resident. See [How to: Write Effective Notes](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Write-Effective-Notes#samples-of-effective-notes)
+11. Check the PM's Intake Settings for the new issue type. See [Service Ops: Handling Work Order Severity via Harmonia & Harmonia X Intake Settings](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Service-Ops-Handling-Work-Order-Severity-via-Harmonia-Harmonia-X-Intake-Settings#harmonia-x-overview)
+12. Apply the appropriate outcome based on Intake Settings:
+    1. **If Intake Settings indicate "Stop: Resident Responsible":** Follow the Resident Responsible WO SOP.
+    2. **If Intake Settings indicate a different severity or no rules match:** Escalate to the PM with a task documenting the SP's findings that the damage was resident-caused. **Do not proceed with repairs without PM direction**, as responsibility and billing may need to be determined first.
+       - Task Description: _"The service provider visited (property address) for (original issue/recall) and determined that (describe new issue) was caused by the resident. (Include SP's specific findings). Please advise on how you would like us to proceed with this resident-caused issue."_
 
 ### 2. What happens if the original SP confirms a recall, but the new work order is auto-canceled as Resident Responsible based on the PM's Intake Settings?
 
 Do not proceed with the recall or the Resident Responsible WO SOP on your own. Escalate to the PM first.
 
 1. **Escalate to the PM** to advise them of the situation. Inform them that:
-
-- The SP has confirmed a recall for a previously completed repair.
-- A new WO was created for the recall but was auto-canceled as Resident Responsible based on their current Intake Settings.
-- Request that the PM review their Intake Settings to determine if the classification is correct for this scenario.
-- For PD/EH situation, call escalation contacts
-  - If the PM is unresponsive, create a task to the PM on the original WO following the Action Required task guidelines
-- For non-PD/EH, create a task to the PM on the original WO following the Action Required task guidelines
-
+   1. The SP has confirmed a recall for a previously completed repair.
+   2. A new WO was created for the recall but was auto-canceled as Resident Responsible based on their current Intake Settings.
+   3. Request that the PM review their Intake Settings to determine if the classification is correct for this scenario.
+   4. For PD/EH situation, call escalation contacts
+      - If the PM is unresponsive, create a task to the PM on the original WO following the Action Required task guidelines
+   5. For non-PD/EH, create a task to the PM on the original WO following the Action Required task guidelines
 2. **Based on the PM's response:**
 
-- **If the PM confirms the recall should proceed** (i.e., the Resident Responsible classification should not apply):
-  1. ⚠️ **This is an exemption to the standard Recall process — do not create a project for this recall.**
-  2. Use the **original work order** to schedule the recall appointment with the SP.
-  3. Add **(RECALL)** to the title of the original WO.
-  4. Add a note to the original WO documenting the situation:
-  - _"A new work order \[new WO#\] was created for a confirmed recall; however, it was auto-canceled as Resident Responsible per Intake Settings. PM was advised and confirmed the recall should proceed. The recall appointment is being managed through this work order."_
-  5. Proceed to **Step 3 — Attempting to dispatch the same service provider**, using the original WO.
-- **If the PM confirms the Resident Responsible classification is correct** (i.e., the issue is not covered under recall):
-  1. Follow the [https://latchel.atlassian.net/wiki/spaces/OPS/pages/2748317710](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2748317710).
-  2. Inform the SP that the recall will not be proceeding and the WO has been classified as Resident Responsible per the PM's direction.
+   1. **If the PM confirms the recall should proceed** (i.e., the Resident Responsible classification should not apply):
+      1. ⚠️ **This is an exemption to the standard Recall process — do not create a project for this recall.**
+      2. Use the **original work order** to schedule the recall appointment with the SP.
+      3. Add **(RECALL)** to the title of the original WO.
+      4. Add a note to the original WO documenting the situation:
+         1. _"A new work order (new WO#) was created for a confirmed recall; however, it was auto-canceled as Resident Responsible per Intake Settings. PM was advised and confirmed the recall should proceed. The recall appointment is being managed through this work order."_
+      5. Proceed to **Step 3 — Attempting to dispatch the same service provider**, using the original WO.
+3. **If the PM confirms the Resident Responsible classification is correct** (i.e., the issue is not covered under recall):
+
+   1. Follow the [How to: Handle Resident Responsible WOs](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Resident-Responsible-WOs#how-to-handle-resident-responsible-wos).
+   2. Inform the SP that the recall will not be proceeding and the WO has been classified as Resident Responsible per the PM's direction.
 
 ### **3. What happens if the original SP can return to the property but the repair would exceed the approved budget?**
 
 1. Refer to if the repair would exceed the “Approved Budget” considering the total of existing invoices.
-2. _Emergency severity:_
-3. Refer to [https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/EMERGENCY-How-to-Handle-Changes-to-the-Approved-Budget](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/EMERGENCY-How-to-Handle-Changes-to-the-Approved-Budget)
-4. _Non emergency:_
-5. Refer tohttps://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Non-Emergency-How-to-Handle-Over-Approved-Budget-aka-Estimate
+2. _Emergency severity: See_ [**(⛑EMERGENCY) How to: Handle Changes to the Approved Budget**](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/EMERGENCY-How-to-Handle-Changes-to-the-Approved-Budget)
+3. _Non emergency: See_ [(Non-Emergency) How to: Handle Over Approved Budget (aka Estimate)](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Non-Emergency-How-to-Handle-Over-Approved-Budget-aka-Estimate)
 
 ### **4. What happens if the PM asks us to create a recall outside of 180 day period?**
 
@@ -389,25 +332,23 @@ Do not proceed with the recall or the Resident Responsible WO SOP on your own. E
 
 1. Complete the **TS form** and forward the **WO to the PM**.
 2. Use the **standard task notes** currently used by the Operations Support team when moving the WO to “Waiting for PM.”
-3. Task Notes to Use: _This work order has been identified as a potential recall for the original work order \[work order number\], which was previously managed by your team. Please advise on how you would like us to proceed, or if you prefer that we reassign this to another service provider. Thank you._
-4. Place full notes on the work order to explain the reason for this action.
-5. Suggested Notes: _Forwarded the WO to the PM by completing the TS form. No Support was available to move the WO to “Waiting for PM” status._
+   1. Task Notes to Use: _This work order has been identified as a potential recall for the original work order (work order number), which was previously managed by your team. Please advise on how you would like us to proceed, or if you prefer that we reassign this to another service provider. Thank you._
+3. Place full notes on the work order to explain the reason for this action.
+   1. Suggested Notes: _Forwarded the WO to the PM by completing the TS form. No Support was available to move the WO to “Waiting for PM” status._
 
 ### **6. Handling Recall Requests After Provider Confirmation**
 
 When a service provider later responds to a recall request, Ops should follow the steps below:
 
 1. **If the service provider confirms it is a recall:**
-
-- Proceed with **Step 3 – Attempting to dispatch the same service provider**, depending on whether they are available to schedule.
-
+   1. Proceed with **Step 3 – Attempting to dispatch the same service provider**, depending on whether they are available to schedule.
 2. **If the service provider advises it is not a recall:**
 
-- Follow the steps for handling work orders that are **not considered a recall**.
+   1. Follow the steps for handling work orders that are **not considered a recall**.
 
 ### **7. Managing Service Provider Non-Invoicing**
 
-Refer to the steps outlined  in this SOP: [https://latchel.atlassian.net/wiki/spaces/OPS/pages/3256221699](https://latchel.atlassian.net/wiki/spaces/OPS/pages/3256221699) .
+Refer to the steps outlined  in this SOP: [Service Ops: How to Handle Payment Related Inquiries](https://help.latchel.com/latchel-admin/Service-Operations/Production-Documentation/Service-Ops-How-to-Handle-Payment-Related-Inquiries#-what-this-process-is-trying-to-solve) .
 
 ### **8. What should we do if the recall-eligible work order is archived but there is already active work happening on it (e.g., SP assigned, notifications sent, work already in progress)?**
 
@@ -427,5 +368,7 @@ If you must break this SOP, document your actions and reasoning in the work orde
 ---
 
 ## 💡 If You Think This SOP Could Be Improved...
+
+!\[Download (51)\](
 
 Noticed something clunky or confusing in this process? Or had a situation that wasn’t covered here? Or tried something new that didn’t work?<br />👉 Share your suggestion in the [SOP Feedback Form](https://slack.com/shortcuts/Ft07C0TDU4N9/9439ee41aae76a4a602b6c186ce4a6cd) or tell your manager— **we want your input!**
