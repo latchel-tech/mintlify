@@ -780,13 +780,6 @@
                             ]
                           },
                           {
-                            "group": "Emergency Contact and Pre-Dispatch Reminder Dashboard",
-                            "pages": [
-                              "latchel-admin/Service-Operations/Ops-Integrations/emergency-contact-and-pre-dispatch-reminder-dashboard",
-                              "latchel-admin/Service-Operations/Ops-Integrations/how-the-automated-seasonal-reminders-process-works-for-pre-dispatch-and-emergency-contact-list-settings"
-                            ]
-                          },
-                          {
                             "group": "Common Area/Building Properties for Non-Recurring Work Orders",
                             "pages": [
                               "latchel-admin/Service-Operations/Ops-Integrations/common-area-building-properties-for-non-recurring-work-orders",
@@ -798,14 +791,6 @@
                             "pages": [
                               "latchel-admin/Service-Operations/Ops-Integrations/churn-alerts-ticket-reports-review-tracker",
                               "latchel-admin/Service-Operations/Ops-Integrations/how-to-conduct-the-monthly-review-for-the-churn-alerts-and-tickets-reports"
-                            ]
-                          },
-                          {
-                            "group": "Latchel Intake Monitoring Dashboard",
-                            "pages": [
-                              "latchel-admin/Service-Operations/Ops-Integrations/latchel-intake-monitoring-dashboard",
-                              "latchel-admin/Service-Operations/Ops-Integrations/how-to-escalate-a-property-manager-at-10-days-below-target",
-                              "latchel-admin/Service-Operations/Ops-Integrations/how-the-latchel-intake-monitoring-process-works"
                             ]
                           },
                           {

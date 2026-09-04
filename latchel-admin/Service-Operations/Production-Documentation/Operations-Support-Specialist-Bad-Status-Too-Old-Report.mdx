@@ -129,6 +129,7 @@ The one exception is a PM critical note that instructs us to forward everything 
 | **PM-mandated emergencies** | If the PM asks us to treat a WO as an emergency **and** allows a confirmed appointment or alternative provider, treat it as an Emergency. If the PM requires one unavailable provider and won't authorize an alternative, escalate the conflict to the PS team and de-escalate to Urgent. |
 | **Budget drops automatically** | Emergency → Urgent automatically lowers the approved budget limit, because budget ceilings are tied to severity. Expected system behavior. No separate action needed. |
 | **On-Call customers are different** | The status guidance in Section 4 does **not** apply to On-Call customers. See the On-Call scenarios in the playbook. |
+| **Forward to PM isn't complete on its own** | For live emergency work orders, forwarding to the PM must result in an actual notification reaching them — not just a status change. After any "Forward to PM" action, confirm the Property Manager was notified. If not, manually notify the property's [**Default Notification User Group**](https://latchel.atlassian.net/wiki/spaces/OPS/pages/2741108810/How+to+Locate+the+Default+Notification+User+Group+contact+s). |
 
 ## 4. Status lookup: what to do by status
 
@@ -349,12 +350,13 @@ Each heading below carries the short answer — expand only when you need the de
 </Expandable>
 
 <Expandable title="Resident follows up on a WO that was already de-escalated to Urgent.">
-  Ask the resident to describe the **current condition**, then:
+  Ask the resident to describe the current condition, then check two things: what they're reporting, and _why_ the WO was originally de-escalated.
 
-  - **New or worsening emergency condition** (leak spread, structural damage, total loss of power/heat in severe weather): **re-escalate to Emergency.** Resume standard emergency dispatch/follow-up immediately and post an internal note: _"Re-escalated to Emergency due to new resident report: \[details\]."_
-  - **Unchanged or stable condition** (resident is asking for status or expressing urgency, but nothing has changed): **maintain Urgent.** Reassure the resident, give current status/ETA, create a PM task as needed, and log the contact attempt in an internal note.
+  - **New or worsening emergency condition**: **re-escalate to Emergency**, regardless of why it was de-escalated. Resume standard emergency dispatch/follow-up immediately and post an internal note like: _"Re-escalated to Emergency due to new resident report: [details]."_
+  - **Unchanged / stable condition, originally de-escalated because the condition itself had resolved or stabilized** (e.g., the immediate emergency had passed): **maintain Urgent.** Reassure the resident, give current status/ETA, create a PM task as needed, and log the contact attempt in an internal note.
+  - **Unchanged / stable condition, originally de-escalated for a handling reason** (the PM took ownership, an intentional or open-ended delay, PM-imposed scheduling/provider constraints, or follow-up that produced no forward progress): **re-escalate to Emergency.** The resident reporting no change confirms active handling never resumed after de-escalation, which on its own is sufficient grounds to re-escalate — do not wait for a new or worsening detail. Post an internal note: _"Re-escalated to Emergency — originally de-escalated for [handling reason], resident confirms issue remains unresolved and no active handling has occurred since."_
 
-  Do not re-escalate solely because the initial intake was an emergency.
+  Do not re-escalate solely because the initial intake was an emergency — the test above still applies. But do not withhold re-escalation just because the resident's report sounds "unchanged," if the original de-escalation was for a handling reason rather than the condition improving.
 </Expandable>
 
 <Expandable title="On-Call customer tasks.">
