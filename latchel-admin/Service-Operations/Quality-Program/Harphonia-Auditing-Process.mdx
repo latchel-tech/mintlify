@@ -150,6 +150,12 @@ For audits triggered by the Work Order Review flag, follow these steps:
 1. Open the Work Order linked in the audit notification.
 2. Review the intake conversation to understand the reported issue.
 3. Confirm AI selected the correct outcome based on the PM's settings.
+4. Check for an Empty Rule Set before treating the flag as a bug
+
+   1. If the audit flag reads "No rules matched" or "No rules processed," first check the property's Intake Settings for the number of configured rules.
+      - If the property has an Empty Rule Set (0 emergency rules configured), this is expected behavior, not a bug. The property's fallback outcome (commonly Needs Approval) is correct by design.
+      - Do not create a TS task or trigger TS reassessment based on this flag alone.
+      - Confirm the applied outcome matches the property's configured fallback outcome. If it does, mark "Did AI select the correct outcome based on PM settings?" as Yes and do not submit a critical bug.
 4. If AI selected the wrong outcome:
    - **Escalate the WO to an EMG** or **create an On-Call Alert**, depending on what should have happened.
    - Report the issue as a critical bug in the audit form (this will trigger an alert in [#harphonia-prod-feedback](https://latchel.slack.com/archives/C09SKP5SPRA)). The Critical Bugs field should still remain available even if AI selected the correct outcome, in case another critical bug or major system failure is identified.
@@ -203,3 +209,5 @@ These questions are no longer needed because:
 **Q: What triggers an alert in #harphonia-prod-feedback?**<br />A: Critical bugs trigger alerts in [#harphonia-prod-feedback](https://latchel.slack.com/archives/C09SKP5SPRA). The Critical Bugs field should always be available for both audit form branches and all audit types, so auditors can report any critical bug or major system failure immediately. Improvement opportunities are tracked in the spreadsheet only and do not trigger alerts.
 
 **Q: What if the PM's intake settings say non-emergency, but the issue looks like property damage?**<br />A: When a PM's intake settings conflict with PD/EH criteria, escalate to the PM. The PM needs to be made aware that their settings conflict with an active PD/EH situation so they can confirm the appropriate action. Do not simply accept the PM's non-emergency classification when PD/EH criteria are met.
+
+**Q: What if a Work Order Review flag says "no rules matched" or "no rules processed"?**<br />A: Check the property's Intake Settings first. If the property has an Empty Rule Set (0 emergency rules), this is expected — the fallback outcome applies by design, it is not a bug, and it does not require TS reassessment.
