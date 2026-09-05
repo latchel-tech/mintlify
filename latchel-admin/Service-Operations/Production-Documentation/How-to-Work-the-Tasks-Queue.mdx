@@ -9,7 +9,9 @@ groups: ["latchel"]
   We want to prevent missed tasks, duplicate work, and delays in resolving customer issues. The goal is to ensure every associate efficiently filters, claims, and completes tasks in the queue—so nothing falls through the cracks and customers get timely, accurate service from Latchel
 </Note>
 
-Note: You can refer to [Job Aid: What is a task?](/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-What-is-a-task) for a brief overview of what is a task and its components.
+<Note>
+  Note: You can refer to [Job Aid: What is a task?](/latchel-admin/Service-Operations/Production-Documentation/Job-Aid-What-is-a-task) for a brief overview of what is a task and its components.
+</Note>
 
 ## 📋 Step-by-Step Process
 
@@ -23,39 +25,20 @@ Note: You can refer to [Job Aid: What is a task?](/latchel-admin/Service-Operati
   Tasks may occasionally be assigned to the wrong Work Order. If you identify a mismatch, ensure to take the action on the correct work order.
 </Note>
 
-### How to filter tasks
+### **How to pick up your next task**
 
-1. From the main Latchel homepage.
-2. Click the tasks icon next to your initials at the top right corner.
-3. Open the filters menu.
-4. Set up the task filter as follows:
-   1. Due: Overdue
-   2. For: Work Orders
-   3. Sort: Age
-   4. User group: see table below
-   5. Assignee: Unassigned
-   6. Hit “Save Current Filters” and choose a name for your filter, this will ensure that you won’t have to repeat this process each time you work on the tasks queue and the filter will be saved for easy access.
-      <Frame>
-        ![SVC 438a](/images/SVC-438a.png "SVC 438a")
-      </Frame>
+Associates no longer need to manually set up Console filters to find and claim tasks — this is now handled by the Latchel Service Ops Assistant plugin.
 
-| **User Group for Associates working on Emergency Queue** | **User Groups for Associates working on Non-Emergency Queue** |
-| --- | --- |
-| Troubleshooter | <ul><li>Assign Service Provide</li><li>Service Provider Followup</li><li>Resident Followup</li><li>Resident Responsible</li><li>Source Outside Network</li><li>Operations Associate</li><li>Scheduling</li></ul> |
+1. Confirm your Latchel status matches the work you're covering (e.g., Non-Emergency Tasks, Emergency Tasks) — the plugin uses this to decide which queues you're shown.
+2. Open the Latchel Service Ops Assistant and go to **Next Task**.
+3. Review the task's urgency, due date, and work order context.
+4. Click **Assign me & Go** to claim the task and jump directly into the work order.
 
-### How to assign a task to myself
+The plugin applies the correct priority order automatically (Troubleshooter queue, then emergency status, then Urgent flag, then Priority, then age) — you no longer need to manually sort by age or filter by "Due: Overdue."
 
-1. Open the most recent task (task at the top of the queue) and before doing any work, assign it to yourself! This will prevent multiple associates from working on the same task.
-   1. Click the “Assign To Me” option.
-      <Frame>
-        ![SVC 438b](/images/SVC-438b.png "SVC 438b")
-      </Frame>
-      <Frame>
-        ![SVC 438c](/images/SVC-438c.png "SVC 438c")
-      </Frame>
-      <Frame>
-        ![SVC 438d](/images/SVC-438d.png "SVC 438d")
-      </Frame>
+**If Next Task comes up empty:** check **Future Tasks** on the queue card before assuming there's nothing to do. Future Tasks includes both deferred tasks and tasks that were freshly created with a later due time. If the task description doesn't give a specific reason for the later due time and you have the time and ability to act, work it now — not-yet-due doesn't mean don't touch. If the description does give a reason (e.g., "resident asked to be contacted tomorrow"), that reason still applies and you should wait.
+
+See [<u>\[(Operations Associate) Job-Aid: Latchel Service Ops Assistant Plug-in\]</u>](https://help.latchel.com/latchel-admin/Service-Operations/Operations-Associate-Job-Aid-Latchel-Service-Ops-Assistant-Plug-in#operations-associate-job-aid-latchel-service-ops-assistant-plug-in "https://latchel.atlassian.net/wiki/spaces/OPS/pages/4227629058") for the full walkthrough.
 
 #### What do you do next?
 
@@ -63,26 +46,18 @@ Note: You can refer to [Job Aid: What is a task?](/latchel-admin/Service-Operati
 2. For other types of tasks, refer to the individual instructions of the task.
 3. When you’re done with the task, and before taking another one, be sure to refresh the task queue by clicking the refresh button:
 
-<Frame>
-  ![](/images/SVC-438.png)
-</Frame>
-
 <Warning>
   If the task has to be deferred, please ensure that you unassign the task by clicking the 'x' button after your name so that it returns to the unassigned group and can be handled again when the time is due.
 </Warning>
 
-<Frame>
-  ![SVC 439a](/images/SVC-439a.png "SVC 439a")
-</Frame>
-
 ### Handling the Task
 
 <Note>
-  The tasks tab will show all pending available tasks that need action. Please note that a property or resident may have multiple maintenance requests. As a result, Residents, Service Providers, and Owners can each have multiple tasks associated with different work orders assigned to them at any given time. This is applicable for both emergency and non-emergency work orders.
+  Once you've claimed a task via **Next Task**, you're taken directly into that work order — but don't act on it in isolation. A property or resident may have multiple maintenance requests, and Residents, Service Providers, and Owners can each have multiple open tasks across different work orders at the same time. This applies to both emergency and non-emergency work orders.
 </Note>
 
 <Warning>
-  It’s crucial to follow each step in this guideline, especially when handling multiple tasks, to ensure that all open tasks for the customer are properly addressed. Make sure to review and discuss all **pending tasks for the day** for the **_specific contact_** that you are calling. This approach helps resolve everything in a single interaction, providing a more efficient and seamless experience for the customer.
+  Before taking action, use the **View Open Tasks** button under the contact to see everything else open for that same person. Review and discuss all pending tasks for the day for the specific contact you're calling — this resolves everything in a single interaction and gives the customer a more efficient, seamless experience.
 </Warning>
 
 <Warning>
@@ -98,21 +73,14 @@ Note: You can refer to [Job Aid: What is a task?](/latchel-admin/Service-Operati
   For Autopilot WOs, refer to [How to: Handle Autopilot WOs](/latchel-admin/Service-Operations/Production-Documentation/how-to-handle-autopilot-wos).
 </Warning>
 
-1. Go to the Task List in the Latchel Console and click on the task you want to pick up to expand it (see red arrow in the screenshot below).
+1. Open the Latchel Service Ops Assistant, go to **Next Task**, and click **Assign me & Go** — this claims the task and takes you directly into the work order.
+2. Once inside the work order, locate the Contact section for the person you're following up on and press the **View Open Tasks** button (see the button boxed in red in the screenshot below).
+3. After expanding the task, press the “View Open Tasks” button under the Contact (see the button boxed in red in the screenshot below).
 
-<Frame>
-  ![](/images/SVC-439.png)
-</Frame>
-
-<Frame>
-  ![](/images/SVC-440.png)
-</Frame>
-
-2. After expanding the task, press the “View Open Tasks” button under the Contact (see the button boxed in red in the screenshot below).
    <Frame>
      ![SVC 440a](/images/SVC-440a.png "SVC 440a")
    </Frame>
-3. You are then taken to the user work summary page
+4. You are then taken to the user work summary page
 
 <Frame>
   ![SVC 441](/images/SVC-441.png "SVC 441")
@@ -122,12 +90,10 @@ Note: You can refer to [Job Aid: What is a task?](/latchel-admin/Service-Operati
   First, check the top right corner of the page to ensure no one else is working on this user (see red arrow in the screenshot below). This step is very important so that we don’t duplicate deep dive efforts or unnecessarily call the user too many times in one day. If you see someone else on the same page as you, ping them to ensure only one of you works on the tasks.
 </Warning>
 
-4. The tasks section is overall broken out into two buckets. Click on the drop down to the right of the task to expand it and see more information.
-
-- **Open Tasks for Today** - These are defined as tasks that have a due date of today or before today (overdue tasks).
-- **Open Tasks for Later** - These are defined as tasks that have a due date beyond today.
-
-5. The following three filter and sort functionalities are available if you’d like to change the priority order or filter for specific items. The default priority logic for tasks on this page are: 1) Task Priority (high to low), 2) Severity (Emergency to Normal), and then 3) Task Due Date or Age (Oldest to Newest).
+5. The tasks section is overall broken out into two buckets. Click on the drop down to the right of the task to expand it and see more information.
+   1. **Open Tasks for Today** - These are defined as tasks that have a due date of today or before today (overdue tasks).
+   2. **Open Tasks for Later** - These are defined as tasks that have a due date beyond today.
+6. The following three filter and sort functionalities are available if you’d like to change the priority order or filter for specific items. The default priority logic for tasks on this page are: 1) Task Priority (high to low), 2) Severity (Emergency to Normal), and then 3) Task Due Date or Age (Oldest to Newest).
    <Frame>
      ![SVC 442a](/images/SVC-442a.png "SVC 442a")
    </Frame>
@@ -179,10 +145,10 @@ Note: You can refer to [Job Aid: What is a task?](/latchel-admin/Service-Operati
 This typically occurs when there's a language barrier (e.g. an English-speaking associate encountering a Spanish-speaking Resident), or the associate encounters a system issue that prevents them from completing the assignment.
 
 1. The associate needs to notify Operations Support Specialists by posting the work order, detailing the actions they've taken and the problems they're facing, in the #ops-troubleshooter channel for emergency work orders and in the #ops\_associate\_escalations channel for non-emergency work orders.
-2. Refer to [How to: Escalate Between Teams](/latchel-admin/Service-Operations/Production-Documentation/how-to-escalate-between-teams)
-3. Unassign the ticket task from yourself by editing the task as shown above.
-4. The work order returns to the task queue, and anyone available should pick it up.
-5. Note: If there's a language barrier, the Operations Support Specialist team may tag associates who can handle the task.
+   1. Refer to [How to: Escalate Between Teams](/latchel-admin/Service-Operations/Production-Documentation/how-to-escalate-between-teams)
+2. Unassign the ticket task from yourself by editing the task as shown above.
+   1. The work order returns to the task queue, and anyone available should pick it up — it'll surface automatically via Next Task to available associates.
+   2. Note: If there's a language barrier, the Operations Support Specialist team may tag associates who can handle the task.
 
 <Note>
   **Actions to Take When Associates are Working on Non-Emergency Tasks:**
@@ -190,17 +156,15 @@ This typically occurs when there's a language barrier (e.g. an English-speaking 
   Whenever you work on a task, kindly remember the following steps:
 
   1. **Always Call First (**_Unless SOP states otherwise or there's a clear indication in the task that a call may be inappropriate, do not skip this step.**)**_
-
-  - **For Residents:** Call between 8:00 am and 7:00 pm property time is allowed.
-  - **For Service Providers:** Call between 8:00 am and 5:00 pm property time. Always check critical notes (e.g., Puls' office hours start at 7 am, so you can call them already).
-  - **For Owners (Nomad & RentRedi only):** Call between 8:00 am and 5:00 pm property time.
-
+     1. **For Residents:** Call between 8:00 am and 7:00 pm property time is allowed.
+     2. **For Service Providers:** Call between 8:00 am and 5:00 pm property time. Always check critical notes (e.g., Puls' office hours start at 7 am, so you can call them already).
+     3. **For Owners (Nomad & RentRedi only):** Call between 8:00 am and 5:00 pm property time.
   2. **If You Tried to Contact Them via Phone Call and the Contact Didn’t Answer:**
 
-  - Always leave a voicemail if applicable.
-  - Then attempt to reach the contact via text message and email.
-  - **For Service Providers:** Outside business hours, send an email only for non-emergency situations.
-  - **Note:** Only after completing these steps can you defer the task. Note that in some cases, tasks should not be deferred and must continue to follow the corresponding process or SOP.
+     1. Always leave a voicemail if applicable.
+     2. Then attempt to reach the contact via text message and email.
+     3. **For Service Providers:** Outside business hours, send an email only for non-emergency situations.
+     4. **Note:** Only after completing these steps can you defer the task. Note that in some cases, tasks should not be deferred and must continue to follow the corresponding process or SOP.
 
   FOR **EMERGENCY WORK ORDERS** please refer to: [How to: Handle Emergency Work Orders](/latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Emergency-Work-Orders)
 </Note>
