@@ -1,0 +1,144 @@
+---
+title: "(Operations Associate) Job-Aid: Latchel Service Ops Assistant Plug-in"
+sidebarTitle: "Job-Aid: Ops Assistant Plug-in"
+description: "Day-to-day guide for Operations Associates using the Latchel Service Ops Assistant plugin: status, Next Task, work order context, and what to do when your queue looks empty."
+---
+
+## Purpose
+
+This job aid is for Service Ops associates who use the Latchel Service Ops Assistant during daily work. The goal is not just to know what the plugin does, but to use it as your day-to-day guide for choosing the right work, understanding the work order faster, and avoiding missed context.
+
+The assistant is most helpful when you use it consistently: start from the right status, use **Next Task** to pick up work, and review the work order guidance before taking action.
+
+_This job aid reflects plugin version **0.6.0** (current as of 8/19/26)._
+
+## Why Your Status and Queue Matter
+
+Your Latchel status tells the assistant what kind of work you are available to handle. If you are in the wrong status, the assistant may show the wrong queues or hide the queues you actually need.
+
+- **Correct status = correct work.** The plugin uses your live status and user-group membership to decide which queues to show.
+- **Wrong status = missed or mismatched tasks.** You may not see the right work, or you may be routed toward tasks that do not match your current assignment.
+- **Queue accuracy supports team coverage.** Leads and Ops Support can better understand where help is needed when associates are working from the correct status.
+
+_Before starting a shift, returning from break, or switching assignments, confirm your status first. Then use the assistant to guide your next task._
+
+## Daily Workflow: How Associates Should Use the Assistant
+
+### 1. Start in the Right Status
+
+At the beginning of your shift or whenever your assignment changes, make sure your Latchel status matches the work you are expected to handle, such as **Inbound Calls**, **SMS Webchat**, **Emergency Tasks**, **Non-Emergency Tasks**, or another assigned status.
+
+<Note>
+If your queues look wrong, do not immediately assume the plugin is broken. First check your status and confirm that you are in the correct user group for that queue.
+</Note>
+
+### 2. Use Next Task as Your Main Work Driver
+
+**Next Task** should be your default way to pick up work. It applies the prioritization logic for you so you do not have to manually compare queues, aging bars, or task types.
+
+1. Open the Latchel Service Ops Assistant.
+2. Go to **Next Task**.
+3. Review the task title, urgency, due date, and work order context.
+4. Click **Assign me & Go** when you are ready to take the task.
+5. Work the task using the context and reminders shown inside the assistant.
+
+Do not choose tasks only because they appear older in one queue. Next Task considers emergency status, urgency, priority, and age in the correct order.
+
+### 3. Let the Assistant Work For You
+
+Before calling, messaging, assigning, or making changes on a work order, let the assistant do the legwork. It automatically surfaces the status, critical notes, callback numbers, related jobs, and more — see **Everything the Assistant Surfaces For You** below for the full breakdown.
+
+## Everything the Assistant Surfaces For You
+
+You shouldn't have to dig for this information — the assistant puts it in front of you automatically on every work order.
+
+- **Status and Managed By** — The assistant tells you who's actually managing the work order and flags it if the status doesn't line up, so you're not guessing or hunting through the property record.
+- **Critical notes** — The assistant pulls critical notes from both the vendor and the PM Company automatically and puts them in one place, so you're not missing instructions buried on either side.
+- **Emergency Escalation Contacts** — the assistant pulls the designated emergency contacts from both the vendor and the PM Company automatically and surfaces them in one place, so you always know who to call first when a job is flagged Emergency, without digging through either side's records.
+- **Pre-dispatch instructions** — Any special steps required before dispatching or escalating are surfaced right in the assistant, so you don't have to remember or look them up separately.
+- **Resident and vendor callback numbers** — The right callback number is already there, with a one-click copy button, so you're never fumbling to find or retype it mid-call.
+- **Special Notes** — Jot a note straight into the work order without committing it to the Activity log yet. It saves locally, survives you navigating away, and sticks around for 30 days — so you can step away mid-task without losing your train of thought.
+- **Intake transcript** — The full intake conversation is right there, so you get the complete picture of what the resident reported without piecing it together from scratch.
+- **Related jobs** — The assistant checks the past 6 months for duplicates or connected issues automatically, cutting down on unnecessary follow-up work before you even have to think to look. Still worth a manual double-check at the property if nothing surfaces.
+- **Quality CX call tips** — Reminders for call quality and customer experience are built right in, so the standard is always in front of you, not something you have to remember separately.
+- **Go to Task** — A one-click shortcut card that jumps you straight to the active task on a work order (e.g., "Emergency Troubleshooting Required"), showing which team owns it and letting you claim it with **Assign to me**.
+- **Subscription Tags** — Shown under the PM's info, these tags (Autopilot, Home Assistant, 24/7 Emergency, etc.) tell you what the PM Company has actually signed up for, so you know what you can and can't promise the resident on their behalf.
+- **Photos** — Any photos attached to the work order (from the resident, vendor, or tech) are pulled into one gallery on the job, so you don't have to dig through texts or emails to see what the issue looks like.
+- **Templates Panel** — A searchable library of pre-written SMS, call notes, and task notes (54+ available), sorted by Relevance/Most Used/A-Z, triggered by typing `;;` in any message or note box. Templates support merge fields (like WO number, resident name, job cost) so the same snippet auto-fills with the right details per job.
+- **Common-Area WO Flag** — Flags a work order as being for a common area rather than a resident's unit, so calls to the resident are for access info only — you're not meant to troubleshoot the issue with them since it's not their space. Pulls in any on-file **Access Instructions** for the area so you know how to get in.
+- **Weather Check** — For weather-sensitive jobs, a live forecast for the property's location is surfaced right on the work order, so you can check conditions before scheduling or dispatching.
+
+**The more of this you lean on, the less digging, guessing, and double-checking you have to do yourself.**
+
+## What's New: Recent Plugin Changes to Your Daily Workflow
+
+The plugin updates frequently, and some updates change how you work day to day. Here's what's changed recently that affects associates:
+
+- **No separate plugin login required.** You no longer need to log into the plugin on its own — it now uses your existing app.latchel.com session automatically.
+- **Special Notes.** Save a note locally to a work order before committing it to the Activity log. See the "Everything the Assistant Surfaces For You" section above for details.
+- **Quick copy for callback numbers.** Resident and vendor callback numbers now have a one-click copy button instead of manually selecting and copying the number.
+- **PM Company Critical Notes now surfaced.** Critical notes from the Property Management company — not just vendor notes — now show automatically. Make sure you're checking both.
+- **More reliable duplicate detection.** Related Jobs now correctly looks back a full 6 months, and a bug that was hiding some duplicates on non-Troubleshooting jobs has been fixed. You can trust this section more than before — but always still double-check at the property if nothing appears.
+- **Faster refresh.** When your queue is empty, the plugin now checks for new tasks every 5 seconds instead of every 30–45 seconds. A bug that could get the Next Task bar stuck after going idle has also been fixed.
+
+## Common Day-to-Day Scenarios
+
+### If You Are Working Inbound Calls
+
+- Confirm your status is set for inbound call coverage.
+- Use Next Task for work surfaced during that assignment.
+- Use Quality CX call tips while speaking with residents, vendors, or property managers.
+
+### If You Are Working SMS or Webchat
+
+- Confirm your status and queue access are correct for your current assignment.
+- Use the assistant for the work that applies to your team. For SMS associates, this is often secondary Ops task work; some associates may also flex into TS depending on coverage needs.
+- When a work order or related task is involved, check the work order context before responding or taking action so you do not miss critical notes, escalation details, related jobs, or the intake transcript.
+
+### If You Are Working Emergency Tasks
+
+- Make sure you are in the correct emergency-related status.
+- Use Next Task so emergency and urgent work is surfaced correctly.
+- Review emergency context, managed-by details, escalation contacts, and pre-dispatch instructions before acting.
+
+### If Your Queue Looks Empty
+
+- **Check Future Tasks.** Click the future tasks link on any queue card to see what's coming up. Not-yet-due doesn't mean don't touch — if you have the time and ability to act now, go ahead and work it. (If it requires a call, confirm you're within calling hours at the property's local time before dialing.)
+- Check that your status is correct.
+- Confirm you are in the correct Latchel user group for the queue you expect.
+- Look for any plugin banner explaining that standard queues are empty and the assistant is pulling from available skills.
+- If it still looks wrong, ask a lead to confirm your access before reporting it as a bug.
+
+## Good Habits for Associates
+
+- Start every work block by checking your status.
+- Use **Next Task** as your default way to pick up work. Avoid browsing **All Queues** to choose tasks manually; when you click **Next Task**, the assistant will surface the next task that should be picked up.
+- Read the work order context before calling, messaging, dispatching, or escalating.
+- Check critical notes, escalation details, related jobs, and intake transcript when needed.
+- Use the assistant's callback numbers and quality reminders to reduce missed steps.
+- Return from breaks or meetings by updating your status before taking work.
+- Report issues only after checking status, user-group access, and plugin version.
+
+## Common Mistakes to Avoid
+
+- Working from the wrong status after a break, meeting, or assignment change.
+- Choosing a task manually because it looks older instead of using Next Task.
+- Skipping critical notes or escalation instructions before taking action.
+- Assuming a missing queue is a bug before checking user-group membership.
+- Using All Queues as the daily task picker instead of a visibility tool.
+- Ignoring related jobs and accidentally duplicating work.
+
+## Quick Troubleshooting
+
+| Issue | What to check first |
+| --- | --- |
+| You do not see the queue you expected | Check your Latchel status and confirm your user-group membership with a lead. |
+| You are unsure what to work next | Use **Next Task**. It applies the correct priority order automatically. |
+| The plugin seems outdated | Check the version in Settings, restart Chrome, and log back in. |
+| You returned from break but tasks look wrong | Update your Latchel status first, then reopen or refresh the assistant. |
+| A task seems out of order | Check whether another task has emergency, urgent, or higher-priority status before assuming there is an issue. |
+| Next Task bar seems stuck after you were idle | This was a known bug, fixed as of version 0.6.0. Restart Chrome and confirm you're on the latest version in Settings. |
+
+## Key Takeaway
+
+The Latchel Service Ops Assistant is meant to help associates work faster and more consistently every day. Stay in the right status, use **Next Task** as your main workflow, and rely on the work order context to make better decisions before taking action.
