@@ -861,7 +861,8 @@
                           "latchel-admin/Service-Operations/Announcements/Operations-Weekly-Newsletter-07-10-2026",
                           "latchel-admin/Service-Operations/Announcements/Operations-Weekly-Newsletter-07-17-2026",
                           "latchel-admin/Service-Operations/Announcements/Operations-Weekly-Newsletter-07-24-2026",
-                          "latchel-admin/Service-Operations/Announcements-Newsletter-Aug28"
+                          "latchel-admin/Service-Operations/Announcements-Newsletter-Aug28",
+                          "latchel-admin/Service-Operations/Announcements/Operations-Weekly-Newsletter-Process-Update-Edition-09-04-2026"
                         ]
                       },
                       {
@@ -1066,8 +1067,7 @@
                               "latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-Ops-Request-Ticket-Assembly",
                               "latchel-admin/Service-Operations/Production-Documentation/Operations-Documentation-and-Training-Coordinator-Cadence",
                               "latchel-admin/Service-Operations/Production-Documentation/Major-Releases-and-Training",
-                              "untitled-page",
-                              "untitled-page-3"
+                              "untitled-page"
                             ]
                           },
                           {
@@ -3159,5 +3159,12 @@
   },
   "interaction": {
     "drilldown": false
-  }
+  },
+  "redirects": [
+    {
+      "source": "/untitled-page-3",
+      "destination": "/latchel-admin/Service-Operations/Announcements/Operations-Weekly-Newsletter-Process-Update-Edition-09-04-2026",
+      "permanent": true
+    }
+  ]
 }
