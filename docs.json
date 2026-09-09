@@ -1106,7 +1106,15 @@
                           "latchel-admin/Service-Operations/Production-Documentation/How-to-Use-the-Serv-Ops-Intake-Workflows",
                           "latchel-admin/Service-Operations/Production-Documentation/How-to-Handle-situations-for-WOs-awaiting-PM-action",
                           "latchel-admin/Service-Operations/Production-Documentation/Job-Aid-AI-Summarize-Feature-for-Work-Orders",
-                          "latchel-admin/Service-Operations/Production-Documentation/How-to-Submit-Associate-Feedback-Tickets"
+                          "latchel-admin/Service-Operations/Production-Documentation/How-to-Submit-Associate-Feedback-Tickets",
+                          {
+                            "group": "Training Contents",
+                            "pages": [
+                              "latchel-admin/Service-Operations/Production-Documentation/Coassemble-Training-Course-Guidelines",
+                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Perform-Cross-trainings-and-Refreshers",
+                              "latchel-admin/Service-Operations/Production-Documentation/How-to-Submit-Training-Content-Tickets"
+                            ]
+                          }
                         ]
                       },
                       "latchel-admin/Service-Operations/SOP-Reporting-Suspected-Account-Compromise",
